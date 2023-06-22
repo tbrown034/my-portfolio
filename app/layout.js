@@ -1,7 +1,6 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import Footer from "./Components/UI/footer";
+import Header from "./Components/UI/header";
 
 export const metadata = {
   title: "Trevor Brown: Copy + Code",
@@ -11,7 +10,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="p-4 bg-slate-800 text-slate-200">{children}</body>
+      <body className="px-2 bg-slate-200 text-slate-800 dark:bg-slate-800 dark:text-slate-200">
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

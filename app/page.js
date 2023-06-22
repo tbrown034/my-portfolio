@@ -1,5 +1,9 @@
-import Image from "next/image";
+import Hero from "../app/Components/Home/Hero.jsx";
 
 export default function Home() {
-  return <main>h1</main>;
+  return (
+    <main>
+      <Hero />
+    </main>
+  );
 }
