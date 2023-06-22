@@ -7,7 +7,10 @@ export default function Header() {
       <Image width={120} src={logo} alt="logo"></Image>
 
       <div className="hidden gap-8 sm:flex opacity-80">
-        <Link className="flex gap-1" href="/">
+        <Link
+          className="flex gap-1 p-1 rounded-lg hover:bg-slate-300 active:bg-slate-400"
+          href="/"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -24,7 +27,10 @@ export default function Header() {
           </svg>
           <p>Coding</p>
         </Link>
-        <Link className="flex gap-1" href="/">
+        <Link
+          className="flex gap-1 p-1 rounded-lg hover:bg-slate-300 active:bg-slate-400"
+          href="/"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -42,7 +48,10 @@ export default function Header() {
           <p>Journalism</p>
         </Link>
 
-        <Link className="flex gap-1" href="/">
+        <Link
+          className="flex gap-1 p-1 rounded-lg hover:bg-slate-300 active:bg-slate-400"
+          href="/"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -77,7 +86,7 @@ export default function Header() {
           />
         </svg>
       </div>
-      <div className="hidden gap-1 p-1 border-2 border-opacity-50 rounded-lg opacity-80 border-slate-800 sm:flex">
+      <button className="hidden gap-1 p-1 border-2 border-opacity-50 rounded-lg opacity-80 border-slate-800 sm:flex hover:bg-slate-300 active:bg-slate-400">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -93,7 +102,7 @@ export default function Header() {
           />
         </svg>
         <p>Dark Mode</p>
-      </div>
+      </button>
     </header>
   );
 }
