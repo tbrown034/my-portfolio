@@ -8,8 +8,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        inter: ["Inter", "sans-serif"],
-        rowdies: ["Rowdies", "cursive"],
+        inter: ["var(--font-inter)"],
+        mono: ["var(--font-roboto-mono)"],
+        shadows: ["var(--font-shadows-into-light)"],
+        penScript: ["var(--font-nanum-pen-script)"],
+        majorMono: ["var(--font-major-mono-display)"],
       },
     },
   },

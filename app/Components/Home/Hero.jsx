@@ -1,7 +1,6 @@
 // app > Components > Home > Hero.jsx
 
 import Intro from "./Intro";
-import IntroCards from "./IntroCards";
 
 export default function Hero() {
   return (

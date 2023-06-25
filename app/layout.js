@@ -1,6 +1,48 @@
 import "./globals.css";
 import Footer from "./Components/UI/footer";
 import Header from "./Components/UI/header";
+import {
+  Inter,
+  Roboto_Mono,
+  Shadows_Into_Light,
+  Nanum_Pen_Script,
+  Major_Mono_Display,
+} from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
+const roboto_mono = Roboto_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-roboto-mono",
+});
+
+const shadows_into_light = Shadows_Into_Light({
+  subsets: ["latin"],
+  display: "swap",
+  weight: "400",
+
+  variable: "--font-shadows-into-light",
+});
+
+const nanum_pen_script = Nanum_Pen_Script({
+  subsets: ["latin"],
+  display: "swap",
+  weight: "400",
+
+  variable: "--font-nanum-pen-script",
+});
+
+const major_mono_display = Major_Mono_Display({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-major-mono-display",
+  weight: "400",
+});
 
 export const metadata = {
   title: "Trevor Brown: Copy + Code",
@@ -9,8 +51,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className="px-2 bg-slate-200 text-slate-800 dark:bg-slate-800 dark:text-slate-200">
+    <html
+      lang="en"
+      className={`${inter.variable} ${roboto_mono.variable} ${shadows_into_light.variable} ${nanum_pen_script.variable} ${major_mono_display.variable}`}
+    >
+      <body className="text-blue-800 bg-blue-200 dark:bg-blue-800 dark:text-blue-200">
         <Header />
         {children}
         <Footer />

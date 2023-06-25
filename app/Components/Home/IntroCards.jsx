@@ -7,7 +7,7 @@ import { ChartBarIcon } from "@heroicons/react/24/outline";
 export default function IntroCards() {
   return (
     <div className="grid grid-rows-3 gap-3 sm:grid-cols-3">
-      <div className="flex flex-col justify-between p-6 transition-transform duration-500 transform rounded-lg shadow-md bg-gradient-to-br from-slate-300 to-slate-400 hover:scale-105 hover:shadow-lg">
+      <div className="flex flex-col justify-between p-6 transition-transform duration-500 transform rounded-lg shadow-md bg-gradient-to-br from-blue-300 to-blue-400 hover:scale-105 hover:shadow-lg">
         <div className="flex items-center mb-4 space-x-2">
           <CodeBracketIcon className="w-6 h-6" />
           <h2 className="text-2xl font-semibold">Coding</h2>
@@ -34,7 +34,7 @@ export default function IntroCards() {
       </div>
 
       {/* Journalism Card */}
-      <div className="p-6 transition-transform duration-500 transform rounded-lg shadow-md bg-gradient-to-br from-slate-300 to-slate-400 hover:scale-105 hover:shadow-lg">
+      <div className="p-6 transition-transform duration-500 transform rounded-lg shadow-md bg-gradient-to-br from-blue-300 to-blue-400 hover:scale-105 hover:shadow-lg">
         <div className="flex items-center mb-4 space-x-2">
           <NewspaperIcon className="w-6 h-6" />
           <h2 className="text-2xl font-semibold">Journalism</h2>
@@ -57,7 +57,7 @@ export default function IntroCards() {
       </div>
 
       {/* Data Viz Card */}
-      <div className="flex flex-col justify-between p-6 transition-transform duration-500 transform rounded-lg shadow-md bg-gradient-to-br from-slate-300 to-slate-400 hover:scale-105 hover:shadow-lg">
+      <div className="flex flex-col justify-between p-6 transition-transform duration-500 transform rounded-lg shadow-md bg-gradient-to-br from-blue-300 to-blue-400 hover:scale-105 hover:shadow-lg">
         <div className="flex items-center mb-4 space-x-2">
           <ChartBarIcon className="w-6 h-6" />
           <h2 className="text-2xl font-semibold">Data Vizs</h2>
