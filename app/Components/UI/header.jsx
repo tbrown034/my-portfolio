@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <header className="flex items-center justify-between p-2 text-2xl">
       <h1
-        className={`font-majorMono text-3xl`}
+        className=" font-majorMono"
         style={{ textShadow: "rgba(0, 0, 0, 0.5) 1px 0px 0px" }}
       >
         &lt;TrevorBrown /&gt;
