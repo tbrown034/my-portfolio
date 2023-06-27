@@ -28,15 +28,15 @@ export default function Intro() {
           className="text-2xl font-bold leading-relaxed font-robotoSlab"
         >
           I'm a{" "}
-          <span className="inline px-1 py-0.5 text-xl underline bg-blue-300 rounded shadow-md font-firaCode">
+          <span className="inline px-1 py-0.5 text-xl underline dark:bg-blue-600 bg-blue-300 rounded shadow-md font-firaCode">
             full-stack web developer
           </span>{" "}
           with a knack for{" "}
-          <span className="inline px-1 py-0.5 text-xl underline bg-blue-300 rounded shadow-md font-firaCode">
+          <span className="inline px-1 py-0.5 text-xl  dark:bg-blue-600 underline bg-blue-300 rounded shadow-md font-firaCode">
             data-driven
           </span>{" "}
           programming and storytelling. After more than a decade as an{" "}
-          <span className="inline px-1 py-0.5 text-xl underline bg-blue-300 rounded shadow-md font-firaCode">
+          <span className="inline px-1 py-0.5 text-xl underline  dark:bg-blue-600 bg-blue-300 rounded shadow-md font-firaCode">
             award-winning investigative journalist
           </span>
           , I'm now looking for new opportunities in the world of tech. Let's
