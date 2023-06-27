@@ -11,9 +11,9 @@ import { motion } from "framer-motion";
 
 export default function Intro() {
   return (
-    <section className="flex flex-col p-4 ">
-      <div className="grid-cols-6 sm:grid ">
-        <div className="flex flex-col justify-around col-span-4 gap-4">
+    <section className="flex flex-col p-4 sm:px-8 ">
+      <div className="grid-cols-12 space-x-6 sm:grid ">
+        <div className="flex flex-col justify-around col-span-8 gap-4">
           <motion.h1
             className="text-6xl font-montserrat"
             initial={{ y: -100, opacity: 0 }}
@@ -27,10 +27,10 @@ export default function Intro() {
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
-            className="col-span-2 "
+            className="flex justify-center sm:hidden"
           >
             <Image
-              className="flex rounded-3xl sm:hidden"
+              className="flex w-1/2 rounded-3xl "
               src={photo}
               alt="Trevor Brown"
             />
@@ -76,7 +76,7 @@ export default function Intro() {
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
-          className="col-span-2 "
+          className="flex items-center justify-center col-span-4 "
         >
           <Image
             className="hidden rounded-3xl sm:flex"
@@ -85,7 +85,7 @@ export default function Intro() {
           />
         </motion.div>
       </div>
-      <div className="flex justify-between pt-20">
+      <div className="flex justify-between pt-20 text-sm lg:text-2xl sm:text-lg">
         <Link href="/" className="flex items-center space-x-2">
           <CodeBracketIcon className="w-6 h-6" />
           <span>Coding</span>
