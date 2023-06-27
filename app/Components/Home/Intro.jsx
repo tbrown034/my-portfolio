@@ -86,11 +86,13 @@ export default function Intro() {
         </motion.div>
       </div>
       <div className="flex justify-between pt-20 text-sm lg:text-2xl sm:text-lg">
-        <Link href="/" className="flex items-center space-x-2">
-          <CodeBracketIcon className="w-6 h-6" />
-          <span>Coding</span>
-          <ChevronDoubleDownIcon className="w-4 h-4 " />
-        </Link>
+        <div className="flex flex-col">
+          <div href="/" className="flex items-center space-x-2">
+            <CodeBracketIcon className="w-6 h-6" />
+            <span>Coding</span>
+            <ChevronDoubleDownIcon className="w-4 h-4 " />
+          </div>
+        </div>
         <Link href="/" className="flex items-center space-x-2 ">
           <NewspaperIcon className="w-6 h-6" />
           <span>Journalism</span>
