@@ -11,17 +11,22 @@ import { motion } from "framer-motion";
 
 export default function Intro() {
   return (
-    <section className="flex flex-col justify-between min-h-screen px-4">
+    <section className="flex flex-col justify-between min-h-screen px-4 py-8">
       <div className="">
         <motion.h1
           className="text-6xl font-montserrat sm:text-8xl"
-          initial={{ y: -150, opacity: 0 }}
+          initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 2 }}
+          transition={{ duration: 1 }}
         >
           Hello👋, I'm Trevor
         </motion.h1>
-        <h3 className="text-2xl font-bold leading-relaxed font-robotoSlab">
+        <motion.h3
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="text-2xl font-bold leading-relaxed font-robotoSlab"
+        >
           I'm a{" "}
           <span className="inline px-1 py-0.5 text-xl underline bg-blue-300 rounded shadow-md font-firaCode">
             full-stack web developer
@@ -36,10 +41,20 @@ export default function Intro() {
           </span>
           , I'm now looking for new opportunities in the world of tech. Let's
           build something cool.
-        </h3>
+        </motion.h3>
       </div>
       <div>
-        <motion.div className="w-1/2 mx-auto ">
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ rotate: 360, scale: 1 }}
+          transition={{
+            delay: 1,
+            type: "spring",
+            stiffness: 260,
+            damping: 20,
+          }}
+          className="w-1/2 mx-auto "
+        >
           <Image className=" rounded-3xl" src={photo} alt="Trevor Brown" />
         </motion.div>
 
