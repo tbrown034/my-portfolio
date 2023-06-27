@@ -6,35 +6,37 @@ import { CodeBracketIcon } from "@heroicons/react/24/outline";
 import { NewspaperIcon } from "@heroicons/react/24/outline";
 import { ChartBarIcon } from "@heroicons/react/24/outline";
 import { ChevronDoubleDownIcon } from "@heroicons/react/24/outline";
+import { useState } from "react";
 
 import { motion } from "framer-motion";
 
 export default function Intro() {
+  const [isFlipped, setIsFlipped] = useState(false);
+
   return (
     <section className="flex flex-col p-4 sm:px-8 ">
       <div className="grid-cols-12 space-x-6 sm:grid ">
         <div className="flex flex-col justify-around col-span-8 gap-4">
+          <motion.div
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="flex justify-center p-2 border-2 border-blue-800 border-dashed rounded-full border-opacity-70 sm:hidden"
+          >
+            <Image
+              className="flex w-1/2 p-2 border-2 border-blue-800 border-opacity-50 border-dashed rounded-full "
+              src={photo}
+              alt="Trevor Brown"
+            />
+          </motion.div>
           <motion.h1
-            className="text-6xl font-montserrat"
+            className="text-6xl text-center sm:text-start font-montserrat"
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
             Hello, I'm Trevor
           </motion.h1>
-
-          <motion.div
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1 }}
-            className="flex justify-center sm:hidden"
-          >
-            <Image
-              className="flex w-1/2 rounded-3xl "
-              src={photo}
-              alt="Trevor Brown"
-            />
-          </motion.div>
 
           <motion.h3
             initial={{ x: -100, opacity: 0 }}
@@ -76,10 +78,10 @@ export default function Intro() {
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
-          className="flex items-center justify-center col-span-4 "
+          className="flex items-center justify-center col-span-4 rounded-3xl "
         >
           <Image
-            className="hidden rounded-3xl sm:flex"
+            className="hidden border-2 border-gray-300 shadow-lg rounded-3xl sm:flex "
             src={photo}
             alt="Trevor Brown"
           />

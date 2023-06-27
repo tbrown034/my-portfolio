@@ -6,18 +6,18 @@ import brew from "../../public/images/brew.png";
 import campaign from "../../public/images/campaign.png";
 import dental from "../../public/images/dental.png";
 import dentalgpt from "../../public/images/dentalgpt.png";
+import { CodeBracketIcon } from "@heroicons/react/24/outline";
 
 export default function code() {
   return (
-    <section className="flex flex-col min-h-screen p-4 pt-8 bg-blue-400">
-      <div className="grid grid-cols-12">
-        <div className="flex items-center col-span-2 ">
-          <h1 className="text-6xl font-montserrat">Code</h1>
-        </div>
-        <div className="col-span-10">
+    <section className="flex flex-col min-h-screen p-4 pt-8 bg-blue-300 dark:bg-blue-700">
+      <div className="">
+        <div className="">
           <div className="flex flex-col gap-4 ">
             <div>
-              <h1 className="text-4xl font-montserrat">Background and Aim</h1>
+              <h1 className="text-4xl font-extrabold font-montserrat">
+                From Copy to Code
+              </h1>
               <h3 className="text-2xl font-roboto">
                 After more than a decade in journalism, I decided to carve a new
                 career path in 2022. Leaving my job as an investigative reporter
