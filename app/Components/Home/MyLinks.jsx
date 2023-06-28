@@ -1,36 +1,34 @@
-import { DiGithubBadge } from "react-icons/di";
-import { AiFillLinkedin } from "react-icons/ai";
+import {
+  AiFillLinkedin,
+  AiFillTwitterCircle,
+  AiFillGithub,
+  AiFillMail,
+  AiFillCopy,
+} from "react-icons/ai";
 import Link from "next/link";
 
 export default function MyLinks() {
   return (
-    <section className="text-xl">
-      <div className="inline-block">
-        <div className="flex gap-4">
-          <Link
-            href="#about"
-            className="p-2 bg-blue-800 rounded-lg text-blue-50 hover:bg-blue-300 active:bg-blue-400"
-          >
-            About
+    <section className="text-xl rounded-lg ">
+      <div className="inline-block p-2 space-y-2 border-opacity-50 rounded-lg ">
+        <div className="flex justify-center gap-8">
+          <Link href="/">
+            {" "}
+            <AiFillTwitterCircle className="w-16 h-16" />
+          </Link>
+          <Link href="/">
+            {" "}
+            <AiFillGithub className="w-16 h-16" />
           </Link>
 
-          <Link
-            href="/resume"
-            className="p-2 bg-blue-800 rounded-lg text-blue-50 hover:bg-blue-300 active:bg-blue-400"
-          >
-            Resume
+          <Link href="/">
+            {" "}
+            <AiFillLinkedin className="w-16 h-16" />
           </Link>
-
-          <Link
-            href="#contact"
-            className="p-2 bg-blue-800 rounded-lg text-blue-50 hover:bg-blue-300 active:bg-blue-400"
-          >
-            Contact
+          <Link href="#contact">
+            {" "}
+            <AiFillMail className="w-16 h-16" />
           </Link>
-        </div>
-        <div className="flex justify-center gap-4">
-          <DiGithubBadge className="w-16 h-16" />
-          <AiFillLinkedin className="w-16 h-16" />
         </div>
       </div>
     </section>
