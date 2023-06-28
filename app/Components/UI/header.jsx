@@ -6,6 +6,7 @@ import { NewspaperIcon } from "@heroicons/react/24/outline";
 import { ChartBarIcon } from "@heroicons/react/24/outline";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import { MoonIcon } from "@heroicons/react/24/outline";
+import { SunIcon } from "@heroicons/react/24/outline";
 import { DarkModeContext } from "../utilities/DarkModeContext";
 
 export default function Header() {
@@ -18,7 +19,7 @@ export default function Header() {
   };
 
   return (
-    <header className="flex items-center justify-between p-2 text-2xl dark:text-blue-200 dark:bg-blue-800">
+    <header className="flex items-center justify-between p-2 text-2xl">
       <h1
         className="font-majorMono sm:hidden"
         style={{ textShadow: "rgba(0, 0, 0, 0.5) 1px 0px 0px" }}
@@ -57,10 +58,19 @@ export default function Header() {
       </div>
       <button
         onClick={handleToggle}
-        className="items-center justify-center hidden gap-1 p-1 border-2 border-blue-800 border-opacity-50 rounded-lg opacity-80 sm:flex hover:bg-blue-300 active:bg-blue-400"
+        className="items-center justify-center hidden gap-1 p-1 text-blue-100 bg-blue-800 rounded-lg opacity-80 hover:bg-blue-700 active:bg-blue-900 sm:flex"
       >
-        <MoonIcon className="w-6 h-6 text-blue-300 fill-blue-800" />
-        <p>Dark Mode</p>
+        {isDarkMode ? (
+          <>
+            <SunIcon className="w-6 h-6 text-yellow-300" />
+            <p className="text-base ">Light Mode</p>
+          </>
+        ) : (
+          <>
+            <MoonIcon className="w-6 h-6 text-blue-300" />
+            <p className="text-base">Dark Mode</p>
+          </>
+        )}
       </button>
     </header>
   );

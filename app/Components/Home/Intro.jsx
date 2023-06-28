@@ -8,7 +8,7 @@ export default function Intro() {
   return (
     <section className="flex flex-col justify-center p-4 sm:px-12 lg:px-20">
       <div className="grid-cols-12 space-x-6 sm:grid ">
-        <div className="flex flex-col justify-around col-span-8 gap-4">
+        <div className="flex flex-col justify-around col-span-8 gap-8">
           <motion.div
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -23,14 +23,14 @@ export default function Intro() {
           </motion.div>
           <div className="flex flex-col gap-2 ">
             <motion.h1
-              className="text-6xl font-bold text-center sm:text-start font-montserrat"
+              className="text-6xl font-bold text-center lg:text-8xl sm:text-start font-montserrat"
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1 }}
             >
               Hello, I'm Trevor.
             </motion.h1>
-            <div>
+            <div className="">
               <h2 className="text-3xl text-blue-800 font-montserrat">
                 I'm a FullStack Developer &
               </h2>
@@ -64,16 +64,16 @@ export default function Intro() {
             web. Let’s create something impactful.
           </motion.h3>
 
-          <div className="flex gap-4">
-            <button className="p-2 border-2 border-blue-800 rounded-lg hover:bg-blue-300 active:bg-blue-400">
+          <div className="flex gap-4 text-xl">
+            <button className="p-2 bg-blue-800 rounded-lg text-blue-50 hover:bg-blue-300 active:bg-blue-400">
               About
             </button>
 
-            <button className="p-2 border-2 border-blue-800 rounded-lg hover:bg-blue-300 active:bg-blue-400">
+            <button className="p-2 bg-blue-800 rounded-lg text-blue-50 hover:bg-blue-300 active:bg-blue-400">
               Resume
             </button>
 
-            <button className="p-2 border-2 border-blue-800 rounded-lg hover:bg-blue-300 active:bg-blue-400">
+            <button className="p-2 bg-blue-800 rounded-lg text-blue-50 hover:bg-blue-300 active:bg-blue-400">
               Contact
             </button>
           </div>
