@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function Intro() {
   return (
-    <section className="flex flex-col justify-center p-4 sm:px-8">
+    <section className="flex flex-col justify-center p-4 sm:px-12 lg:px-20">
       <div className="grid-cols-12 space-x-6 sm:grid ">
         <div className="flex flex-col justify-around col-span-8 gap-4">
           <motion.div
@@ -49,23 +49,21 @@ export default function Intro() {
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
-            className="text-2xl leading-relaxed font-robotoSlab"
+            className="text-2xl leading-normal font-robotoSlab"
           >
-            I'm a{" "}
+            Blending{" "}
+            <span className="inline px-1 py-0.5 text-xl  underline dark:bg-blue-600 bg-blue-300 rounded shadow-md font-firaCode">
+              cutting-edge web development
+            </span>{" "}
+            skills with insights I’ve cultivated from more than a decade’s worth
+            of experience as an{" "}
             <span className="inline px-1 py-0.5 text-xl underline dark:bg-blue-600 bg-blue-300 rounded shadow-md font-firaCode">
-              full-stack web developer
-            </span>{" "}
-            with a knack for{" "}
-            <span className="inline px-1 py-0.5 text-xl  dark:bg-blue-600 underline bg-blue-300 rounded shadow-md font-firaCode">
-              data-driven
-            </span>{" "}
-            programming and storytelling. After more than a decade as an{" "}
-            <span className="inline px-1 py-0.5 text-xl underline  dark:bg-blue-600 bg-blue-300 rounded shadow-md font-firaCode">
-              award-winning investigative journalist
+              investigative reporter
             </span>
-            , I'm now looking for new opportunities in the world of tech. Let's
-            build something cool.
+            , I tell compelling stories and build powerful application for the
+            web. Let’s create something impactful.
           </motion.h3>
+
           <div className="flex gap-4">
             <button className="p-2 border-2 border-blue-800 rounded-lg hover:bg-blue-300 active:bg-blue-400">
               About
