@@ -1,12 +1,12 @@
-import Hero from "../app/Components/Home/Hero.jsx";
+import Home from "./Components/Home/page.jsx";
 import Code from "./code/page.jsx";
 import Journalism from "./journalism/page.jsx";
 import DataViz from "./dataViz/page.jsx";
 
-export default function Home() {
+export default function Page() {
   return (
     <main>
-      <Hero />
+      <Home />
       <Code />
       <Journalism />
       <DataViz />

@@ -43,7 +43,7 @@ export default function code() {
         </p>
       </div>
       <div className="flex flex-col gap-2">
-        <h1 className="text-4xl font-montserrat">Tech Stack</h1>
+        <h1 className="text-4xl underline font-montserrat">Tech Stack</h1>
         <h3 className="text-lg font-roboto">
           I specialize in a NERD stack (Node.js, Express, React, Databases using
           SQL), but I'm most home currently with React. I'm always learning
@@ -51,10 +51,12 @@ export default function code() {
         </h3>
       </div>
       <div className="flex flex-col gap-2">
-        <h1 className="text-4xl font-montserrat">My Web Dev Projects</h1>
+        <h1 className="text-4xl underline font-montserrat">
+          My Web Dev Projects
+        </h1>
 
         <div className="grid grid-cols-1 gap-4 py-4 space-y-1 md:grid-cols-2 lg:grid-cols-3">
-          <div className="flex flex-col justify-between gap-2 pb-4 border-4 border-blue-900 rounded-lg bg-slate-300 ">
+          <div className="flex flex-col justify-between gap-4 pb-4 border-4 border-blue-900 rounded-lg bg-slate-300 ">
             <Image src={dental}></Image>
             <h1 className="px-2 text-4xl font-montserrat">Keith Brown DDS</h1>
 

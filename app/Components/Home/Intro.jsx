@@ -1,20 +1,12 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import photo from "../../../public/images/Trevor1crop.JPG";
-import { CodeBracketIcon } from "@heroicons/react/24/outline";
-import { NewspaperIcon } from "@heroicons/react/24/outline";
-import { ChartBarIcon } from "@heroicons/react/24/outline";
-import { ChevronDoubleDownIcon } from "@heroicons/react/24/outline";
-import { useState } from "react";
 
 import { motion } from "framer-motion";
 
 export default function Intro() {
-  const [isFlipped, setIsFlipped] = useState(false);
-
   return (
-    <section className="flex flex-col p-4 sm:px-8 ">
+    <section className="flex flex-col justify-center p-4 sm:px-8">
       <div className="grid-cols-12 space-x-6 sm:grid ">
         <div className="flex flex-col justify-around col-span-8 gap-4">
           <motion.div
@@ -29,14 +21,29 @@ export default function Intro() {
               alt="Trevor Brown"
             />
           </motion.div>
-          <motion.h1
-            className="text-6xl text-center sm:text-start font-montserrat"
-            initial={{ y: -100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1 }}
-          >
-            Hello, I'm Trevor
-          </motion.h1>
+          <div className="flex flex-col gap-2 ">
+            <motion.h1
+              className="text-6xl font-bold text-center sm:text-start font-montserrat"
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
+              Hello, I'm Trevor.
+            </motion.h1>
+            <div>
+              <h2 className="text-3xl text-blue-800 font-montserrat">
+                I'm a FullStack Developer &
+              </h2>
+
+              <h2 className="text-3xl text-blue-700 font-montserrat">
+                Investigative Reporter &
+              </h2>
+
+              <h2 className="text-3xl text-blue-600 font-montserrat">
+                Data Visualizer
+              </h2>
+            </div>
+          </div>
 
           <motion.h3
             initial={{ x: -100, opacity: 0 }}
@@ -86,25 +93,6 @@ export default function Intro() {
             alt="Trevor Brown"
           />
         </motion.div>
-      </div>
-      <div className="flex justify-between pt-20 text-sm lg:text-2xl sm:text-lg">
-        <div className="flex flex-col">
-          <div href="/" className="flex items-center space-x-2">
-            <CodeBracketIcon className="w-6 h-6" />
-            <span>Coding</span>
-            <ChevronDoubleDownIcon className="w-4 h-4 " />
-          </div>
-        </div>
-        <Link href="/" className="flex items-center space-x-2 ">
-          <NewspaperIcon className="w-6 h-6" />
-          <span>Journalism</span>
-          <ChevronDoubleDownIcon className="w-4 h-4 " />
-        </Link>
-        <Link href="/" className="flex items-center space-x-2 ">
-          <ChartBarIcon className="w-6 h-6 " />
-          <span>Data</span>
-          <ChevronDoubleDownIcon className="w-4 h-4" />
-        </Link>
       </div>
     </section>
   );

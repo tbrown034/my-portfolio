@@ -199,7 +199,7 @@ export default function RootLayout({ children }) {
         lang="en"
       >
         <body>
-          <div className="text-blue-800 bg-blue-200 dark:bg-blue-800 dark:text-blue-200">
+          <div className="text-blue-900 bg-blue-200 dark:bg-blue-800 dark:text-blue-200">
             <Header />
             {children}
             <Footer />
