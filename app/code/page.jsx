@@ -1,4 +1,3 @@
-import { CodeBracketIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 import weather from "../../public/images/weather.png";
@@ -12,7 +11,7 @@ import { DiGithubBadge } from "react-icons/di";
 
 export default function code() {
   return (
-    <section className="flex flex-col min-h-screen gap-8 p-4 pt-8 bg-blue-300 dark:bg-blue-700">
+    <section className="flex flex-col justify-around min-h-screen gap-4 p-4 bg-blue-200 sm:px-12 lg:px-20">
       <div className="flex flex-col gap-2">
         <div className="bg-purple-100 text-purple-800 text-sm font-medium inline-flex items-center px-2.5 py-0.5 rounded-md dark:bg-gray-700 dark:text-purple-400 mb-2 self-start">
           <svg

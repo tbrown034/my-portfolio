@@ -8,6 +8,12 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      height: {
+        "1/2-screen": "50vh", // 50% of the viewport height
+        "110-screen": "110vh", // 110% of the viewport height
+        "90-screen": "90vh", // 50% of the viewport height
+        "95-screen": "95vh", // 110% of the viewport height
+      },
       fontFamily: {
         inter: ["var(--font-inter)"],
         mono: ["var(--font-roboto-mono)"],

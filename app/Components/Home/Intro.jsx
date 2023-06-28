@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function Intro() {
   return (
-    <section className="flex flex-col justify-center p-4 sm:px-12 lg:px-20">
+    <section className="flex flex-col justify-center ">
       <div className="grid-cols-12 space-x-6 sm:grid ">
         <div className="flex flex-col justify-around col-span-8 gap-8">
           <motion.div
@@ -63,20 +63,6 @@ export default function Intro() {
             , I tell compelling stories and build powerful application for the
             web. Let’s create something impactful.
           </motion.h3>
-
-          <div className="flex gap-4 text-xl">
-            <button className="p-2 bg-blue-800 rounded-lg text-blue-50 hover:bg-blue-300 active:bg-blue-400">
-              About
-            </button>
-
-            <button className="p-2 bg-blue-800 rounded-lg text-blue-50 hover:bg-blue-300 active:bg-blue-400">
-              Resume
-            </button>
-
-            <button className="p-2 bg-blue-800 rounded-lg text-blue-50 hover:bg-blue-300 active:bg-blue-400">
-              Contact
-            </button>
-          </div>
         </div>
 
         <motion.div
