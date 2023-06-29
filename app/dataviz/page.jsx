@@ -55,7 +55,7 @@ export default function dataViz() {
 
         <div className="grid grid-cols-1 gap-4 py-4 space-y-1 md:grid-cols-2 lg:grid-cols-3">
           <div className="flex flex-col justify-between gap-2 pb-4 border-4 border-blue-900 rounded-lg bg-slate-300 ">
-            <Image src={dental}></Image>
+            <Image alt="alt" src={dental}></Image>
             <h1 className="px-2 text-4xl font-montserrat">Keith Brown DDS</h1>
 
             <div className="flex gap-1 px-2">
@@ -100,7 +100,7 @@ export default function dataViz() {
             </div>
           </div>
           <div className="flex flex-col gap-2 pb-4 border-4 border-blue-900 rounded-lg bg-slate-300 ">
-            <Image src={weather}></Image>
+            <Image alt="alt" src={weather}></Image>
             <h1 className="px-2 text-4xl font-montserrat">MyWeatherApp</h1>
 
             <div className="flex gap-1 px-2">
@@ -145,7 +145,7 @@ export default function dataViz() {
             </div>
           </div>
           <div className="flex flex-col justify-between gap-2 pb-4 border-4 border-blue-900 rounded-lg bg-slate-300 ">
-            <Image src={campaign}></Image>
+            <Image alt="alt" src={campaign}></Image>
             <h1 className="px-2 text-4xl font-montserrat">MyCampaignApp</h1>
 
             <div className="flex gap-1 px-2">
@@ -190,7 +190,7 @@ export default function dataViz() {
             </div>
           </div>
           <div className="flex flex-col justify-between gap-2 pb-4 border-4 border-blue-900 rounded-lg bg-slate-300 ">
-            <Image src={shipit}></Image>
+            <Image alt="alt" src={shipit}></Image>
             <h1 className="px-2 text-4xl font-montserrat">MyShipItApp</h1>
 
             <div className="flex gap-1 px-2">
@@ -235,7 +235,7 @@ export default function dataViz() {
             </div>
           </div>
           <div className="flex flex-col justify-between gap-2 pb-4 border-4 border-blue-900 rounded-lg bg-slate-300 ">
-            <Image src={dentalgpt}></Image>
+            <Image alt="alt" src={dentalgpt}></Image>
             <h1 className="px-2 text-4xl font-montserrat">MyDentalGPTApp</h1>
 
             <div className="flex gap-1 px-2">
@@ -280,7 +280,7 @@ export default function dataViz() {
             </div>
           </div>
           <div className="flex flex-col justify-between gap-2 pb-4 border-4 border-blue-900 rounded-lg bg-slate-300 ">
-            <Image src={brew}></Image>
+            <Image alt="alt" src={brew}></Image>
             <h1 className="px-2 text-4xl font-montserrat">MyBrewApp</h1>
 
             <div className="flex gap-1 px-2">

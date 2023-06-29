@@ -15,6 +15,7 @@ export default function MobileMug() {
           className="flex w-1/2 p-2 border-2 border-blue-800 border-opacity-50 border-dashed rounded-full "
           src={photo}
           alt="Trevor Brown"
+          priority={true}
         />
       </motion.div>
     </>

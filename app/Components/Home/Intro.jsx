@@ -9,20 +9,26 @@ export default function Intro() {
     <section className="flex flex-col justify-center ">
       <div className="grid-cols-12 space-x-6 sm:grid ">
         <div className="flex flex-col justify-around col-span-8 gap-8">
-          <div className="flex flex-col gap-2 ">
-            <div className="">
-              <h2 className="text-3xl text-blue-800 font-montserrat">
-                I'm a FullStack Developer &
-              </h2>
+          <motion.h1
+            className="text-6xl font-bold text-center lg:text-8xl sm:text-start font-montserrat"
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            Hello, I'm Trevor.
+          </motion.h1>
+          <div className="flex flex-col gap-1 ">
+            <h2 className="text-3xl text-blue-800 font-montserrat">
+              I'm a FullStack Developer &
+            </h2>
 
-              <h2 className="text-3xl text-blue-700 font-montserrat">
-                Investigative Reporter &
-              </h2>
+            <h2 className="text-3xl text-blue-700 font-montserrat">
+              Investigative Reporter &
+            </h2>
 
-              <h2 className="text-3xl text-blue-600 font-montserrat">
-                Data Visualizer
-              </h2>
-            </div>
+            <h2 className="text-3xl text-blue-600 font-montserrat">
+              Data Visualizer
+            </h2>
           </div>
 
           <motion.h3
@@ -45,8 +51,8 @@ export default function Intro() {
           </motion.h3>
           <MyLinks />
         </div>
-        <div className="flex items-center col-span-4">
-          <WideMug c />
+        <div className="items-center hidden col-span-4 sm:flex">
+          <WideMug />
         </div>
       </div>
     </section>

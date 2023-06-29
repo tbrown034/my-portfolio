@@ -14,6 +14,7 @@ export default function WideMug() {
           className="hidden border-2 border-gray-300 shadow-lg rounded-3xl sm:flex "
           src={photo}
           alt="Trevor Brown"
+          priority={true}
         />
       </motion.div>
     </>
