@@ -1,4 +1,3 @@
-// app > Components > Home > Hero.jsx
 "use client";
 import Intro from "./Intro.jsx";
 import BottomNav from "./BottomNav.jsx";
@@ -7,12 +6,16 @@ import MobileMug from "./MobileMug";
 
 export default function Home() {
   return (
-    <section className="flex flex-col justify-around gap-4 p-4 sm:h-95-screen sm:px-12 lg:px-20">
-      <div className="hidden sm:flex">
+    <section className="flex flex-col justify-between gap-4 px-4 sm:h-95-screen sm:px-12 lg:px-20">
+      <div className="flex sm:hidden">
         <MobileMug />
       </div>
-      <Intro />
-      <BottomNav />
+      <div className="flex items-center justify-center flex-grow">
+        <Intro />
+      </div>
+      <div className="">
+        <BottomNav />
+      </div>
     </section>
   );
 }

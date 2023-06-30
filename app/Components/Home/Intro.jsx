@@ -18,23 +18,38 @@ export default function Intro() {
             Hello, I'm Trevor.
           </motion.h1>
           <div className="flex flex-col gap-1 ">
-            <h2 className="text-3xl text-blue-800 font-montserrat">
+            <motion.h2
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.5, duration: 1 }}
+              className="text-3xl text-blue-500 font-montserrat"
+            >
               I'm a FullStack Developer &
-            </h2>
+            </motion.h2>
 
-            <h2 className="text-3xl text-blue-700 font-montserrat">
+            <motion.h2
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 1, duration: 1 }}
+              className="text-3xl text-blue-400 font-montserrat"
+            >
               Investigative Reporter &
-            </h2>
+            </motion.h2>
 
-            <h2 className="text-3xl text-blue-600 font-montserrat">
+            <motion.h2
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 1.5, duration: 1 }}
+              className="text-3xl text-blue-300 font-montserrat"
+            >
               Data Visualizer
-            </h2>
+            </motion.h2>
           </div>
 
           <motion.h3
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 1, delay: 2.5 }}
             className="text-2xl leading-normal font-robotoSlab"
           >
             Blending{" "}
