@@ -1,7 +1,6 @@
 import Home from "./Components/Home/page.jsx";
 import Code from "./code/page.jsx";
 import Journalism from "./journalism/page.jsx";
-import DataViz from "./dataViz/page.jsx";
 
 export default function Page() {
   return (
@@ -9,7 +8,6 @@ export default function Page() {
       <Home />
       <Code />
       <Journalism />
-      <DataViz />
     </main>
   );
 }
