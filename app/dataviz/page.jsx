@@ -1,4 +1,3 @@
-import { CodeBracketIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 import weather from "../../public/images/weather.png";
@@ -20,15 +19,13 @@ export default function dataViz() {
           Data & Graphics
         </div>
 
-        <h2 className="text-6xl font-extrabold ">From Copy to Code</h2>
+        <h2 className="text-6xl font-extrabold ">Data + Design</h2>
         <p className="text-lg font-roboto">
-          After more than a decade in journalism, I decided to carve a new
-          career path in 2022. Leaving my job as an investigative reporter with
-          Oklahoma Watch, I soon after enroleld and when later graduate from
-          University of Oklahoma's Outreach Coding Bootcamp, a nearly
-          three-month, five-day-a-week course powered by FullStack Academy.
-          Since them I've been doing freelance, continuing my learning journey
-          and seeing what I can build next.
+          I also was our newsroom lead in designing data visualizations. I
+          produced dozens of charts, maps and databases to enhance my reporting
+          and others. Even though I was largely self-taught (outside of some
+          Investigative Reporters and Editors workshops), I learned and used
+          several technologies including Tableau, DataWrapper and Flourish.
         </p>
       </div>
       <div className="flex flex-col gap-2">

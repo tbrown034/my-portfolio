@@ -19,15 +19,19 @@ export default function code() {
           <p> Journalism</p>
         </div>
 
-        <h2 className="text-6xl font-extrabold ">From Copy to Code</h2>
+        <h2 className="text-6xl font-extrabold ">
+          Award-Winning Investigavie Journalism
+        </h2>
         <p className="text-lg font-roboto">
-          After more than a decade in journalism, I decided to carve a new
-          career path in 2022. Leaving my job as an investigative reporter with
-          Oklahoma Watch, I soon after enroleld and when later graduate from
-          University of Oklahoma's Outreach Coding Bootcamp, a nearly
-          three-month, five-day-a-week course powered by FullStack Academy.
-          Since them I've been doing freelance, continuing my learning journey
-          and seeing what I can build next.
+          I bring nearly two decades of reporting experience, including most
+          recently working as an investigative journalist with Oklahoma Watch, a
+          nonprofit newsroom just a bit north of you all. I covered politics,
+          Oklahoma’s legislature and vulnerable populations before I created a
+          new beat reporting on voting rights and democracy. In those roles, I
+          was awarded Oklahoma Society of Professional Journalists' Reporter of
+          the Year in 2020, The Great Plains Newspaper Writer of the Year in
+          2021 and Oklahoma SPJ’s first place awards for In-depth Enterprise and
+          Investigative Reporting and Government Reporting in 2022.
         </p>
       </div>
       <div className="flex flex-col gap-2">
