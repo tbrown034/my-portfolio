@@ -10,7 +10,7 @@ import { GlobeAltIcon } from "@heroicons/react/24/outline";
 import { DiGithubBadge } from "react-icons/di";
 import { ChartBarIcon } from "@heroicons/react/24/outline";
 
-export default function dataViz() {
+export default function DataViz() {
   return (
     <section className="flex flex-col justify-around min-h-screen p-4 sm:px-12 lg:px-20">
       <div className="flex flex-col gap-2">
