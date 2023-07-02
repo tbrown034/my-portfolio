@@ -6,7 +6,6 @@ import {
   Inter,
   Roboto_Mono,
   Shadows_Into_Light,
-  Nanum_Pen_Script,
   Major_Mono_Display,
   Patrick_Hand,
   Playfair_Display,
@@ -104,14 +103,6 @@ const shadows_into_light = Shadows_Into_Light({
   variable: "--font-shadows-into-light",
 });
 
-const nanum_pen_script = Nanum_Pen_Script({
-  subsets: ["latin"],
-  display: "swap",
-  weight: "400",
-
-  variable: "--font-nanum-pen-script",
-});
-
 const major_mono_display = Major_Mono_Display({
   subsets: ["latin"],
   display: "swap",
@@ -191,7 +182,7 @@ export default function RootLayout({ children }) {
       <html
         className={`
       ${inter.variable} ${roboto_mono.variable} ${hand.variable} ${shadows_into_light.variable}
-      ${nanum_pen_script.variable} ${major_mono_display.variable} ${playfair_display.variable}
+       ${major_mono_display.variable} ${playfair_display.variable}
       ${lato.variable} ${montserrat.variable} ${open_sans.variable} ${poppins.variable}
       ${nunito.variable} ${raleway.variable} ${roboto.variable} ${firaCode.variable} ${bree_serif.variable}
       ${alegreya_sans.variable} ${josefin_sans.variable} ${josefin_slab.variable} ${roboto_slab.variable} ${nunito_sans.variable}

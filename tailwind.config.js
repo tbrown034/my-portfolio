@@ -12,13 +12,12 @@ module.exports = {
         "1/2-screen": "50vh", // 50% of the viewport height
         "110-screen": "110vh", // 110% of the viewport height
         "90-screen": "90vh", // 50% of the viewport height
-        "95-screen": "95vh", // 110% of the viewport height
+        "95-screen": "vh", // 110% of the viewport height
       },
       fontFamily: {
         inter: ["var(--font-inter)"],
         mono: ["var(--font-roboto-mono)"],
         shadows: ["var(--font-shadows-into-light)"],
-        penScript: ["var(--font-nanum-pen-script)"],
         majorMono: ["var(--font-major-mono-display)"],
         hand: ["var(--font-patrick-hand)"],
         playfair: ["var(--font-playfair-display)"],
