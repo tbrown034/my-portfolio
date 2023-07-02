@@ -1,7 +1,7 @@
 import "./globals.css";
 import Footer from "./Components/UI/footer";
 import Header from "./Components/UI/header";
-import { DarkModeProvider } from "./Components/utilities/DarkModeContext";
+import { DarkModeProvider } from "./Components/utilities/DarkModeContext.jsx";
 import {
   Inter,
   Roboto_Mono,

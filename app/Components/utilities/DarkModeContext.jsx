@@ -1,5 +1,5 @@
 "use client";
-import React, { createContext, useState, useEffect, useContext } from "react";
+import React, { createContext, useState, useEffect } from "react";
 
 // Create a context
 export const DarkModeContext = createContext();
