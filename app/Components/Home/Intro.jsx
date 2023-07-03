@@ -10,14 +10,14 @@ export default function Intro() {
       <div className="grid-cols-12 space-x-6 sm:grid ">
         <div className="flex flex-col justify-around col-span-8 gap-8">
           <motion.h1
-            className="text-6xl font-bold text-center lg:text-8xl sm:text-start font-montserrat"
+            className="text-6xl font-bold text-center sm:text-start font-montserrat lg:text-8xl"
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
             Hello, I'm Trevor.
           </motion.h1>
-          <div className="flex flex-col flex-wrap gap-1 text-2xl">
+          <div className="flex flex-col flex-wrap gap-1 text-2xl sm:text-3xl lg:text-4xl">
             <motion.h2
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -50,7 +50,7 @@ export default function Intro() {
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 2.5 }}
-            className="text-xl leading-normal font-robotoSlab"
+            className="text-xl leading-normal sm:text-2xl lg:text-3xl font-robotoSlab"
           >
             Blending{" "}
             <span className="inline px-1 py-0.5  underline dark:bg-blue-600 bg-blue-300 rounded shadow-md     font-inter font-semibold ">

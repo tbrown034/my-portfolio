@@ -51,7 +51,7 @@ export default function journalism() {
                   <h3>
                     By <span className="font-bold">Trevor Brown</span>
                   </h3>
-                  <h3>{clip.date}</h3>
+                  <h3 className="text-xs">{clip.date}</h3>
                 </div>
                 <div className="flex gap-1 px-2">
                   {" "}
