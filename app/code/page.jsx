@@ -58,12 +58,10 @@ export default function code() {
         </h3>
       </div>
       <div className="flex flex-col gap-2">
-        <h1 className="text-4xl underline font-montserrat">
-          My Web Dev Projects
-        </h1>
+        <h1 className="text-2xl font-semibold font-montserrat">Projects</h1>
 
         <div className="grid grid-cols-1 gap-4 py-4 space-y-1 md:grid-cols-2 lg:grid-cols-3">
-          <div className="flex flex-col justify-between gap-4 pb-4 border-4 border-blue-900 rounded-lg bg-slate-300 ">
+          {/* <div className="flex flex-col justify-between gap-4 pb-4 border-4 border-blue-900 rounded-lg bg-slate-300 ">
             <Image alt="alt" src={dental}></Image>
             <h1 className="px-2 text-4xl font-montserrat">Keith Brown DDS</h1>
 
@@ -332,7 +330,7 @@ export default function code() {
                 <GlobeAltIcon className="w-16 h-16" />
               </Link>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
