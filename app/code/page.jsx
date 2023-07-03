@@ -12,26 +12,45 @@ import { CodeBracketIcon } from "@heroicons/react/24/outline";
 
 export default function code() {
   return (
-    <section className="flex flex-col justify-around min-h-screen gap-4 p-4 bg-blue-200 sm:px-12 lg:px-20">
+    <section className="flex flex-col justify-between gap-4 p-8 bg-sky-100">
       <div className="flex flex-col gap-2">
-        <div className="bg-purple-100 text-purple-800 text-sm font-medium inline-flex items-center px-2.5 py-0.5 rounded-md dark:bg-gray-700 dark:text-purple-400 mb-2 self-start">
+        <div className="bg-blue-100 text-blue-800 text-sm font-medium inline-flex items-center px-2.5 py-0.5 rounded-md dark:bg-gray-700 dark:text-blue-400  self-start">
           <CodeBracketIcon className="w-6 h-6" />
           <p>Code </p>
         </div>
 
-        <h2 className="text-6xl font-extrabold ">From Copy to Code</h2>
-        <p className="text-lg font-roboto">
+        <h2 className="text-3xl font-semibold font-montserrat ">
+          From Copy to Code
+        </h2>
+        <p className="text-xl leading-normal font-robotoSlab">
           After more than a decade in journalism, I decided to carve a new
           career path in 2022. Leaving my job as an investigative reporter with
-          Oklahoma Watch, I soon after enroleld and when later graduate from
-          University of Oklahoma's Outreach Coding Bootcamp, a nearly
-          three-month, five-day-a-week course powered by FullStack Academy.
-          Since them I've been doing freelance, continuing my learning journey
+          <Link
+            href="/"
+            className="inline px-1 py-0.5  underline rounded shadow-md     font-inter font-semibold "
+          >
+            Oklahoma Watch
+          </Link>
+          , I soon after enroleld and when later graduate from
+          <Link
+            href="/"
+            className="inline px-1 py-0.5  underline rounded shadow-md     font-inter font-semibold "
+          >
+            University of Oklahoma's Outreach Coding Bootcamp
+          </Link>
+          , a three-month, five-day-a-week course led by{" "}
+          <Link
+            href="/"
+            className="inline px-1 py-0.5  underline rounded shadow-md     font-inter font-semibold "
+          >
+            FullStack Academy
+          </Link>
+          . Since them I've been doing freelance, continuing my learning journey
           and seeing what I can build next.
         </p>
       </div>
       <div className="flex flex-col gap-2">
-        <h1 className="text-4xl underline font-montserrat">Tech Stack</h1>
+        <h1 className="text-2xl font-semibold font-montserrat">Tech Stack</h1>
         <h3 className="text-lg font-roboto">
           I specialize in a NERD stack (Node.js, Express, React, Databases using
           SQL), but I'm most home currently with React. I'm always learning

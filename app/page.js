@@ -7,7 +7,6 @@ export default function Page() {
     <main>
       <Home />
       <Code />
-      <Journalism />
     </main>
   );
 }

@@ -7,7 +7,7 @@ import { NewspaperIcon } from "@heroicons/react/24/outline";
 
 export default function code() {
   return (
-    <section className="flex flex-col justify-around min-h-screen p-4 sm:px-12 lg:px-20">
+    <section className="flex flex-col justify-between gap-4 p-10">
       <div className="flex flex-col gap-2">
         <div className="bg-purple-100 text-purple-800 text-sm gap-2 font-medium inline-flex items-center px-2.5 py-0.5 rounded-md dark:bg-gray-700 dark:text-purple-400 mb-2 self-start">
           <NewspaperIcon className="w-6 h-6" />

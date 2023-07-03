@@ -3,15 +3,14 @@ import {
   AiFillTwitterCircle,
   AiFillGithub,
   AiFillMail,
-  AiFillCopy,
 } from "react-icons/ai";
 import Link from "next/link";
 
 export default function MyLinks() {
   return (
-    <section className="text-xl rounded-lg ">
+    <section className="text-lg rounded-lg ">
       <div className="inline-block p-2 space-y-2 border-opacity-50 rounded-lg ">
-        <div className="flex justify-center gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           <Link className="p-1 rounded-lg hover:bg-blue-300" href="/">
             {" "}
             <AiFillTwitterCircle className="w-16 h-16" />

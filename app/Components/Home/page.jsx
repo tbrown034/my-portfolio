@@ -5,7 +5,7 @@ import MobileMug from "./MobileMug";
 
 export default function Home() {
   return (
-    <section className="flex flex-col justify-between gap-4 px-4 py-8 sm:h-95-screen sm:px-12 lg:px-20">
+    <section className="flex flex-col justify-between gap-4 p-8">
       <div className="flex sm:hidden">
         <MobileMug />
       </div>
