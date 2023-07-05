@@ -7,7 +7,7 @@ import { ChartBarIcon } from "@heroicons/react/24/outline";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import { MoonIcon } from "@heroicons/react/24/outline";
 import { SunIcon } from "@heroicons/react/24/outline";
-import { DarkModeContext } from "../utilities/DarkModeContext.jsx";
+import { DarkModeContext } from "../../utilities/DarkModeContext.jsx";
 
 export default function Header() {
   // Use the context to get the dark mode state and setter function

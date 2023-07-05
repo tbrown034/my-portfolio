@@ -1,11 +1,11 @@
 // clips.js
 
-import misinfo from "../../../public/images/misinfo.webp";
-import profling from "../../../public/images/profling.webp";
-import comment from "../../../public/images/noComment.webp";
-import hospitals from "../../../public/images/hospitals.webp";
-import darkMoney from "../../../public/images/darkMoney.webp";
-import okcBombing from "../../../public/images/BombingMemorial_11.webp";
+import misinfo from "../../public/images/misinfo.webp";
+import profling from "../../public/images/profling.webp";
+import comment from "../../public/images/noComment.webp";
+import hospitals from "../../public/images/hospitals.webp";
+import darkMoney from "../../public/images/darkMoney.webp";
+import okcBombing from "../../public/images/BombingMemorial_11.webp";
 
 export const clips = [
   {

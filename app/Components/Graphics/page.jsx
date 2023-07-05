@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { graphics } from "../Components/data/graphics.js";
+import { graphics } from "../../resources/graphics.js";
 import { GlobeAltIcon } from "@heroicons/react/24/outline";
 import { CodeBracketIcon } from "@heroicons/react/24/outline";
-import mug from "../../public/images/trevorPhoto2.jpeg";
+import mug from "../../../public/images/trevorPhoto2.jpeg";
 
 export default function journalism() {
   return (

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import TechStack from "./techStack";
-import { projects } from "../Components/data/projects.js";
+import { projects } from "../../resources/projects.js";
 import { GlobeAltIcon } from "@heroicons/react/24/outline";
 import { DiGithubBadge } from "react-icons/di";
 import { CodeBracketIcon } from "@heroicons/react/24/outline";

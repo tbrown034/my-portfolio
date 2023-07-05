@@ -1,11 +1,11 @@
 // projects.js
 
-import weather from "../../../public/images/weather.png";
-import brew from "../../../public/images/beer.png";
-import campaign from "../../../public/images/campaign.png";
-import dental from "../../../public/images/kabdds.png";
-import dentalgpt from "../../../public/images/dentalgpt.png";
-import shipit from "../../../public/images/shipit1.png";
+import weather from "../../public/images/weather.png";
+import brew from "../../public/images/beer.png";
+import campaign from "../../public/images/campaign.png";
+import dental from "../../public/images/kabdds.png";
+import dentalgpt from "../../public/images/dentalgpt.png";
+import shipit from "../../public/images/shipit1.png";
 
 export const projects = [
   {

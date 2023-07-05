@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import photo from "../../../public/images/Trevor1crop.JPG";
+import photo from "../../../public/images/trevorPhoto2.jpeg";
 import { useState } from "react";
 
 export default function WideMug() {
