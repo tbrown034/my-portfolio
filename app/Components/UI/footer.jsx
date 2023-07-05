@@ -10,27 +10,27 @@ export default function BottomNav() {
       <hr className="w-2/3 p-4 mx-auto border-t-2 border-blue-800 dark:border-blue-200" />
 
       <div className="flex flex-wrap justify-around gap-4">
-        <Link href="#coding" className="flex items-center gap-1">
+        <a href="#coding" className="flex items-center gap-1">
           <CodeBracketIcon className="w-4 sm:w-6 lg:w-8" />
           <span className="">Coding</span>
           <ChevronDoubleUpIcon className="w-4 h-4" />
-        </Link>
+        </a>
 
-        <Link href="#journalism" className="flex items-center gap-1">
+        <a href="#journalism" className="flex items-center gap-1">
           <NewspaperIcon className="w-4 sm:w-6 lg:w-8" />
           <span className="">Journalism</span>
           <ChevronDoubleUpIcon className="w-4 h-4" />
-        </Link>
-        <Link href="#data" className="flex items-center gap-1">
+        </a>
+        <a href="#dataviz" className="flex items-center gap-1">
           <ChartBarIcon className="w-4 sm:w-6 lg:w-8" />
           <span className="">Data</span>
           <ChevronDoubleUpIcon className="w-4 h-4" />
-        </Link>
-        <Link href="#about" className="flex items-center gap-1">
+        </a>
+        <a href="#about" className="flex items-center gap-1">
           <UserIcon className="w-4 sm:w-6 lg:w-8" />
           <span className="">About</span>
           <ChevronDoubleUpIcon className="w-4 h-4" />
-        </Link>
+        </a>
       </div>
     </nav>
   );

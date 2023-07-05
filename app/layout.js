@@ -180,7 +180,8 @@ export default function RootLayout({ children }) {
   return (
     <DarkModeProvider>
       <html
-        className={`
+        className={`  scroll-smooth
+
       ${inter.variable} ${roboto_mono.variable} ${hand.variable} ${shadows_into_light.variable}
        ${major_mono_display.variable} ${playfair_display.variable}
       ${lato.variable} ${montserrat.variable} ${open_sans.variable} ${poppins.variable}
@@ -190,7 +191,7 @@ export default function RootLayout({ children }) {
         lang="en"
       >
         <body>
-          <div className="text-blue-900 bg-blue-50 dark:bg-blue-900 dark:text-blue-100 ">
+          <div className="text-blue-900 bg-blue-50 dark:bg-blue-900 dark:text-blue-100 scroll-smooth ">
             <Header />
             {children}
             <Footer />

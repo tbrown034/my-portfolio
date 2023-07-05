@@ -49,7 +49,7 @@ export default function Intro() {
           <motion.h3
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 2.5 }}
+            transition={{ duration: 1 }}
             className="text-xl leading-normal sm:text-2xl lg:text-3xl font-robotoSlab"
           >
             Blending{" "}

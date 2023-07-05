@@ -5,11 +5,17 @@ import DataViz from "./dataviz/pages.jsx";
 
 export default function Page() {
   return (
-    <main>
+    <main className=" scroll-smooth">
       <Home />
-      <Code />
-      <Journalism />
-      <DataViz />
+      <div id="coding">
+        <Code />
+      </div>
+      <div id="journalism">
+        <Journalism />
+      </div>
+      <div id="dataviz">
+        <DataViz />
+      </div>
     </main>
   );
 }

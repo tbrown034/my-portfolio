@@ -34,24 +34,24 @@ export default function Header() {
       </h1>
 
       <div className="hidden gap-8 text-base lg:text-2xl sm:flex opacity-80">
-        <Link href="/">
+        <a href="#coding">
           <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 active:bg-blue-400">
             <CodeBracketIcon className="w-6 h-6" />
             <p>Coding</p>
           </div>
-        </Link>
-        <Link href="/">
+        </a>
+        <a href="#journalism">
           <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 active:bg-blue-400">
             <NewspaperIcon className="w-6 h-6" />
             <p>Journalism</p>
           </div>
-        </Link>
-        <Link href="/">
+        </a>
+        <a href="#dataviz">
           <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 active:bg-blue-400">
             <ChartBarIcon className="w-6 h-6" />
             <p>Data Viz</p>
           </div>
-        </Link>
+        </a>
       </div>
       <div className="sm:hidden">
         <Bars3Icon className="w-8 h-8" />
