@@ -1,4 +1,4 @@
-// projects.js
+// webProjects.js
 
 import weather from "../../public/images/weather.png";
 import brew from "../../public/images/beer.png";
@@ -7,7 +7,7 @@ import dental from "../../public/images/kabdds.png";
 import dentalgpt from "../../public/images/dentalgpt.png";
 import shipit from "../../public/images/shipit1.png";
 
-export const projects = [
+export const webProjects = [
   {
     id: 1,
     title: "Keith Brown DDS",

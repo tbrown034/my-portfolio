@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { graphics } from "../../resources/graphics.js";
+import { graphics } from "../../resources/datavizProjects.js";
 import { GlobeAltIcon } from "@heroicons/react/24/outline";
 import { CodeBracketIcon } from "@heroicons/react/24/outline";
 import mug from "../../../public/images/trevorPhoto2.jpeg";

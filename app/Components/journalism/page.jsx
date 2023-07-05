@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { clips } from "../../resources/clips.js";
+import { clips } from "../../resources/journalismClips.js";
 import { GlobeAltIcon } from "@heroicons/react/24/outline";
 import { CodeBracketIcon } from "@heroicons/react/24/outline";
 import mug from "../../../public/images/trevorPhoto2.jpeg";
