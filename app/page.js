@@ -1,7 +1,7 @@
 import Home from "./Components/Home/page.jsx";
 import Code from "./code/page.jsx";
 import Journalism from "./journalism/page.jsx";
-import DataViz from "./dataviz/pages.jsx";
+import DataViz from "./dataviz/page.jsx";
 
 export default function Page() {
   return (
