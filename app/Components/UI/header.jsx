@@ -8,6 +8,7 @@ import { Bars3Icon } from "@heroicons/react/24/outline";
 import { MoonIcon } from "@heroicons/react/24/outline";
 import { SunIcon } from "@heroicons/react/24/outline";
 import { DarkModeContext } from "../../utilities/DarkModeContext.jsx";
+import { UserIcon } from "@heroicons/react/24/outline";
 
 export default function Header() {
   // Use the context to get the dark mode state and setter function
@@ -50,6 +51,12 @@ export default function Header() {
           <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 active:bg-blue-400">
             <ChartBarIcon className="w-6 h-6" />
             <p>Data Viz</p>
+          </div>
+        </a>
+        <a href="#about">
+          <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 active:bg-blue-400">
+            <UserIcon className="w-6 h-6" />
+            <p>About</p>
           </div>
         </a>
       </div>

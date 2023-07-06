@@ -2,6 +2,7 @@ import Home from "./Components/Home/page.jsx";
 import Code from "./Components/Coding/page.jsx";
 import Journalism from "./Components/journalism/page.jsx";
 import DataViz from "./Components/Graphics/page.jsx";
+import About from "./Components/About/page.jsx";
 
 export default function Page() {
   return (
@@ -15,6 +16,9 @@ export default function Page() {
       </div>
       <div id="dataviz">
         <DataViz />
+      </div>
+      <div id="about">
+        <About />
       </div>
     </main>
   );

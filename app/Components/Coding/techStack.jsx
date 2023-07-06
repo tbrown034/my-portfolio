@@ -1,19 +1,72 @@
-import { NodejsOriginalWordmark } from "devicons-react";
+import {
+  JavascriptPlain,
+  ReactOriginal,
+  NodejsPlain,
+  NextjsOriginal,
+  PostgresqlPlain,
+  TailwindcssPlain,
+} from "devicons-react";
 
 export default function techStack() {
   return (
-    <>
-      <div className="flex flex-col gap-2">
-        <h1 className="text-2xl font-semibold font-montserrat">Tech Stack</h1>
-        <h3 className="text-lg font-roboto">
-          I specialize in a NERD stack (Node.js, Express, React, Databases using
-          SQL), but I'm most home currently with React. I'm always learning
-          more, but here are the main technologies I have used.
-        </h3>
-        <div className="h-20">
-          <NodejsOriginalWordmark />
-        </div>
+    <section className="flex flex-col gap-4">
+      <h1 className="text-2xl font-semibold font-montserrat ">
+        Tech Stack and Skills{" "}
+      </h1>
+      <p className="text-xl font-robotoSlab">
+        I specialize in a tech stack that features{" "}
+        <span className="p-1 text-sm bg-blue-800 rounded-lg text-blue-50 ">
+          JavaScript,
+        </span>{" "}
+        <span className="p-1 text-sm bg-blue-800 rounded-lg text-blue-50 ">
+          Node.js,
+        </span>{" "}
+        <span className="p-1 text-sm bg-blue-800 rounded-lg text-blue-50 ">
+          React,
+        </span>{" "}
+        <span className="p-1 text-sm bg-blue-800 rounded-lg text-blue-50 ">
+          Next.js,
+        </span>{" "}
+        <span className="p-1 text-sm bg-blue-800 rounded-lg text-blue-50 ">
+          PostgreSQL,
+        </span>{" "}
+        and{" "}
+        <span className="p-1 text-sm bg-blue-800 rounded-lg text-blue-50 ">
+          Tailwind CSS.
+        </span>
+      </p>
+      <p className="text-xl font-robotoSlab">
+        I also have experience using JS libraries that includes{" "}
+        <span className="p-1 text-sm bg-blue-800 rounded-lg text-blue-50 ">
+          Framer Motion,
+        </span>{" "}
+        <span className="p-1 text-sm bg-blue-800 rounded-lg text-blue-50 ">
+          Chart.js,
+        </span>{" "}
+        <span className="p-1 text-sm bg-blue-800 rounded-lg text-blue-50 ">
+          React Bootstrap,
+        </span>{" "}
+        <span className="p-1 text-sm bg-blue-800 rounded-lg text-blue-50 ">
+          MUI,
+        </span>{" "}
+        <span className="p-1 text-sm bg-blue-800 rounded-lg text-blue-50 ">
+          Semantic UI,
+        </span>{" "}
+        and{" "}
+        <span className="p-1 text-sm bg-blue-800 rounded-lg text-blue-50 ">
+          Axios.
+        </span>
+      </p>
+      <div className="flex flex-wrap gap-2">
+        <JavascriptPlain size={100} />
+        <NodejsPlain size={100} />
+
+        <ReactOriginal size={100} />
+        <NextjsOriginal size={100} />
+        <TailwindcssPlain size={100} />
+
+        <PostgresqlPlain size={100} />
       </div>
-    </>
+    </section>
   );
 }
