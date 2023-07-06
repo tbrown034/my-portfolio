@@ -43,11 +43,9 @@ export default function code() {
         </p>
       </div>
 
-      <div className="">
-        <TechStack />
+      <TechStack />
 
-        <Projects />
-      </div>
+      <Projects />
     </section>
   );
 }

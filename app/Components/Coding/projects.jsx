@@ -6,12 +6,12 @@ import { DiGithubBadge } from "react-icons/di";
 
 export default function Projects() {
   return (
-    <section className="flex flex-col gap-4">
+    <section className="flex flex-col gap-8">
       <h1 className="text-2xl font-semibold underline font-montserrat underline-offset-6 ">
-        Projects
+        Projects and Freelance Work
       </h1>
 
-      <div className="grid grid-cols-1 gap-4 py-4 space-y-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 space-y-1 md:grid-cols-2 lg:grid-cols-3">
         {webProjects.map((project, index) => (
           <div
             key={index}
