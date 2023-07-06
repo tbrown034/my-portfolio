@@ -53,17 +53,17 @@ export default function Intro() {
             className="text-xl leading-normal sm:text-2xl lg:text-3xl font-robotoSlab"
           >
             Blending{" "}
-            <span className="inline px-1 py-0.5  hover:underline dark:bg-blue-600 bg-blue-300 rounded shadow-md     font-inter font-semibold ">
+            <span className=" px-0.5 bg-blue-300 rounded shadow-md dark:bg-blue-600 font-robotoSlab hover:underline">
               cutting-edge web development
             </span>{" "}
             skills with insights I’ve cultivated from more than a decade’s worth
             of experience as an{" "}
-            <span className="inline px-1 py-0.5  hover:underline dark:bg-blue-600 bg-blue-300 rounded shadow-md  font-inter font-semibold">
+            <span className=" px-0.5 bg-blue-300 rounded shadow-md dark:bg-blue-600 font-robotoSlab hover:underline">
               award-winning investigative reporter
             </span>
             , I tell compelling stories and build powerful application for the
             web.{" "}
-            <span className="inline px-1 py-0.5  hover:underline dark:bg-blue-600 bg-blue-300 rounded shadow-md  font-inter font-semibold">
+            <span className=" px-0.5 bg-blue-300 rounded shadow-md dark:bg-blue-600 font-robotoSlab hover:underline">
               Let's connect
             </span>{" "}
             and create something impactful.

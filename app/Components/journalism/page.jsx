@@ -34,7 +34,7 @@ export default function journalism() {
           {clips.map((clip, index) => (
             <div
               key={index}
-              className="flex flex-col justify-between gap-4 pb-4 border-4 border-blue-900 rounded-lg bg-slate-300 "
+              className="flex flex-col justify-between gap-4 pb-4 border-4 border-blue-900 rounded-lg "
             >
               <Image alt="alt" src={clip.image}></Image>
               <div className="flex flex-col gap-4">

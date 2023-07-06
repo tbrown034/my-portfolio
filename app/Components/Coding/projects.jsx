@@ -6,19 +6,19 @@ import { DiGithubBadge } from "react-icons/di";
 
 export default function Projects() {
   return (
-    <section className="flex flex-col gap-8">
+    <section className="flex flex-col gap-4">
       <h1 className="text-2xl font-semibold underline font-montserrat underline-offset-6 ">
         Projects and Freelance Work
       </h1>
 
-      <div className="grid grid-cols-1 gap-4 space-y-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {webProjects.map((project, index) => (
           <div
             key={index}
-            className="flex flex-col justify-between gap-4 pb-4 border-4 border-blue-900 rounded-lg bg-slate-300 "
+            className="flex flex-col justify-between gap-4 pb-4 border-4 border-blue-900 rounded-lg "
           >
             <Image alt="alt" src={project.image}></Image>
-            <h1 className="px-2 text-xl font-montserrat">{project.title}</h1>
+            <h1 className="px-2 font-montserrat">{project.title}</h1>
 
             <div className="flex gap-1 px-2">
               {project.technologies.map((tech, techIndex) => (
@@ -50,7 +50,7 @@ export default function Projects() {
                 href={project.siteLink}
               >
                 <p>View Site</p>
-                <GlobeAltIcon className="w-16 h-16" />
+                <GlobeAltIcon className="w-12 h-12" />
               </Link>
             </div>
           </div>
