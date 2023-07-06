@@ -1,16 +1,16 @@
 import {
-  JavascriptPlain,
-  ReactOriginal,
-  NodejsPlain,
-  NextjsOriginal,
-  PostgresqlPlain,
-  TailwindcssPlain,
-} from "devicons-react";
+  SiNextdotjs,
+  SiTailwindcss,
+  SiPostgresql,
+  SiJavascript,
+  SiNodedotjs,
+  SiReact,
+} from "react-icons/si";
 
 export default function techStack() {
   return (
     <section className="flex flex-col gap-4">
-      <h1 className="text-2xl font-semibold font-montserrat ">
+      <h1 className="text-xl font-semibold underline font-montserrat ">
         Tech Stack and Skills{" "}
       </h1>
       <p className="text-xl font-robotoSlab">
@@ -57,15 +57,25 @@ export default function techStack() {
           Axios.
         </span>
       </p>
-      <div className="flex flex-wrap gap-2">
-        <JavascriptPlain size={100} />
-        <NodejsPlain size={100} />
-
-        <ReactOriginal size={100} />
-        <NextjsOriginal size={100} />
-        <TailwindcssPlain size={100} />
-
-        <PostgresqlPlain size={100} />
+      <div className="flex flex-wrap justify-center gap-4 py-4">
+        <div className="">
+          <SiJavascript className="" size={50} />
+        </div>
+        <div className="">
+          <SiNodedotjs size={50} />
+        </div>
+        <div className="">
+          <SiReact size={50} />
+        </div>
+        <div className="">
+          <SiNextdotjs size={50} />
+        </div>
+        <div className="">
+          <SiTailwindcss size={50} />
+        </div>
+        <div className="">
+          <SiPostgresql size={50} />
+        </div>
       </div>
     </section>
   );

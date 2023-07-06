@@ -16,24 +16,25 @@ export default function code() {
         </h2>
         <p className="text-xl leading-normal font-robotoSlab">
           After more than a decade in journalism, I decided to carve a new
-          career path in 2022. Leaving my job as an investigative reporter with
+          career path in 2022. Leaving my job as an investigative reporter with{" "}
           <Link
             href="/"
-            className="inline px-1 py-0.5  underline rounded shadow-md     font-inter font-semibold "
+            c
+            className=" px-0.5 bg-blue-300 rounded shadow-md dark:bg-blue-600 font-robotoSlab hover:underline"
           >
             Oklahoma Watch,
-          </Link>
-          I soon after enroleld and when later graduate from
+          </Link>{" "}
+          I soon after enroleld and when later graduate from{" "}
           <Link
             href="/"
-            className="inline px-1 py-0.5  underline rounded shadow-md     font-inter font-semibold "
+            className="px-0.5 bg-blue-300 rounded shadow-md dark:bg-blue-600 font-robotoSlab hover:underline"
           >
             University of Oklahoma's Outreach Coding Bootcamp,
-          </Link>
+          </Link>{" "}
           a three-month, five-day-a-week course led by{" "}
           <Link
             href="/"
-            className="inline px-1 py-0.5  underline rounded shadow-md     font-inter font-semibold "
+            className="px-0.5 bg-blue-300 rounded shadow-md dark:bg-blue-600 font-robotoSlab hover:underline"
           >
             FullStack Academy
           </Link>{" "}
