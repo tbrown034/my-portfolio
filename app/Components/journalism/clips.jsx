@@ -21,6 +21,7 @@ export default function Clips() {
               <Image alt="Oklahoma Watch logo" src={okWatch}></Image>
             </div>
             <h1 className="px-2 text-xl font-montserrat">{clip.headline}</h1>
+
             <div className="flex items-center gap-2 px-2">
               <Image
                 className="rounded-full"
@@ -28,13 +29,13 @@ export default function Clips() {
                 src={mug}
                 alt="mug"
               ></Image>
-              <h3>
-                By <span className="font-bold">Trevor Brown</span>
-              </h3>
-              <h3 className="text-xs">{clip.date}</h3>
+              <div className="flex flex-col justify-start gap-2 text ">
+                <h3>
+                  By <span className="font-semibold">Trevor Brown</span>{" "}
+                </h3>
+                <h3 className="text-sm">Published: {clip.date}</h3>
+              </div>{" "}
             </div>
-            <div className="flex gap-1 px-2"></div>
-
             <p className="px-2">{clip.text}</p>
 
             <div className="flex w-1/2 gap-4 px-2 py-4 border-t-2 border-blue-600">

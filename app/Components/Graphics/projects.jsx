@@ -30,10 +30,12 @@ export default function projects() {
                   src={mug}
                   alt="mug"
                 ></Image>
-                <h3>
-                  By <span className="font-bold">Trevor Brown</span>
-                </h3>
-                <h3 className="text-xs">{viz.date}</h3>
+                <div className="flex flex-col justify-start gap-2 text ">
+                  <h3>
+                    By <span className="font-semibold">Trevor Brown</span>{" "}
+                  </h3>
+                  <h3 className="text-sm">Published: {viz.date}</h3>
+                </div>{" "}
               </div>
               <div className="flex gap-1 px-2">
                 {" "}

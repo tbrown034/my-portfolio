@@ -65,7 +65,7 @@ export default function Header() {
       </div>
       <button
         onClick={handleToggle}
-        className="items-center justify-center hidden gap-1 p-1 text-blue-100 bg-blue-800 rounded-lg opacity-80 hover:bg-blue-700 active:bg-blue-900 sm:flex"
+        className="items-center justify-center hidden gap-1 p-1 bg-blue-800 rounded-lg text-blue-50 opacity-80 hover:bg-blue-700 active:bg-blue-900 sm:flex"
       >
         {isDarkMode ? (
           <>
