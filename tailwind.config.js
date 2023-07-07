@@ -36,6 +36,16 @@ module.exports = {
         robotoSlab: ["var(--font-roboto-slab)"],
         nunitoSans: ["var(--font-nunito-sans)"],
       },
+      width: {
+        "icon-sm": "4rem", // Small icon size
+        "icon-md": "5rem", // Large icon size
+        "icon-lg": "6rem", // Large icon size
+      },
+      height: {
+        "icon-sm": "4rem", // Small icon size
+        "icon-md": "5rem", // Large icon size
+        "icon-lg": "6rem", // Large icon size
+      },
     },
   },
   plugins: [],
