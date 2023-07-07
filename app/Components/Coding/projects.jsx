@@ -20,7 +20,7 @@ export default function Projects() {
             <Image alt="alt" src={project.image}></Image>
             <h1 className="px-2 font-montserrat">{project.title}</h1>
 
-            <div className="flex gap-1 px-2">
+            <div className="flex flex-wrap gap-1 px-2">
               {project.technologies.map((tech, techIndex) => (
                 <span
                   key={techIndex}

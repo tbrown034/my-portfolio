@@ -1,4 +1,5 @@
 import Image from "next/image";
+import okWatch from "../../../public/images/okWatch.webp";
 import Link from "next/link";
 import { clips } from "../../resources/journalismClips.js";
 import { GlobeAltIcon } from "@heroicons/react/24/outline";
@@ -16,27 +17,23 @@ export default function Clips() {
             className="flex flex-col justify-between gap-4 pb-4 border-4 border-blue-900 rounded-lg "
           >
             <Image alt="alt" src={clip.image}></Image>
-            <div className="flex flex-col gap-4">
-              <h1 className="px-2 text-xl font-montserrat">{clip.headline}</h1>
-              <div className="flex items-center gap-2 px-2">
-                <Image
-                  className="rounded-full"
-                  height={75}
-                  src={mug}
-                  alt="mug"
-                ></Image>
-                <h3>
-                  By <span className="font-bold">Trevor Brown</span>
-                </h3>
-                <h3 className="text-xs">{clip.date}</h3>
-              </div>
-              <div className="flex gap-1 px-2">
-                {" "}
-                <h2 className="p-1 text-sm bg-blue-800 rounded-lg text-blue-50 font-firaCode">
-                  {clip.publication}
-                </h2>
-              </div>
+            <div className="px-6">
+              <Image alt="Oklahoma Watch logo" src={okWatch}></Image>
             </div>
+            <h1 className="px-2 text-xl font-montserrat">{clip.headline}</h1>
+            <div className="flex items-center gap-2 px-2">
+              <Image
+                className="rounded-full"
+                height={75}
+                src={mug}
+                alt="mug"
+              ></Image>
+              <h3>
+                By <span className="font-bold">Trevor Brown</span>
+              </h3>
+              <h3 className="text-xs">{clip.date}</h3>
+            </div>
+            <div className="flex gap-1 px-2"></div>
 
             <p className="px-2">{clip.text}</p>
 

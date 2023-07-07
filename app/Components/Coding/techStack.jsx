@@ -11,7 +11,6 @@ import {
   SiAxios,
   SiMui,
   SiSemanticuireact,
-  SiMotion,
 } from "react-icons/si";
 
 export default function techStack() {

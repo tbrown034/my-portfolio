@@ -117,8 +117,7 @@ export default function Timeline() {
           </time>
           <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
             {" "}
-            After resignign from my role as a journalist (at least temporarily),
-            I enrolled in this three-month web development bootcamp.
+            Graduated Winter 2022
           </p>
         </li>
       </ul>
