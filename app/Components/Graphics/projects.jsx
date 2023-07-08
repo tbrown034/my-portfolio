@@ -1,10 +1,10 @@
 import Image from "next/image";
-import photo from "../../../public/images/okWatch.webp";
-
 import Link from "next/link";
+import photo from "../../../public/images/okWatch.webp";
+import mug from "../../../public/images/trevorPhoto2.jpeg";
+
 import { graphics } from "../../resources/datavizProjects.js";
 import { GlobeAltIcon } from "@heroicons/react/24/outline";
-import mug from "../../../public/images/trevorPhoto2.jpeg";
 export default function projects() {
   return (
     <section className="flex flex-col gap-2">
