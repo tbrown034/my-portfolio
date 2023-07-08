@@ -1,6 +1,7 @@
 "use client";
 import { useContext } from "react";
-import Link from "next/link";
+import Link from "next/link.js";
+
 import { CodeBracketIcon } from "@heroicons/react/24/outline";
 import { NewspaperIcon } from "@heroicons/react/24/outline";
 import { ChartBarIcon } from "@heroicons/react/24/outline";
@@ -21,20 +22,22 @@ export default function Header() {
 
   return (
     <header className="flex items-center justify-between p-2 text-2xl">
-      <h1
+      <Link
+        href="/"
         className="font-majorMono sm:hidden"
         style={{ textShadow: "rgba(0, 0, 0, 0.5) 1px 0px 0px" }}
       >
         &lt;TrevorBrown /&gt;
-      </h1>
-      <h1
+      </Link>
+      <Link
+        href="/"
         className="hidden sm:flex font-majorMono"
         style={{ textShadow: "rgba(0, 0, 0, 0.5) 1px 0px 0px" }}
       >
         &lt;TB /&gt;
-      </h1>
+      </Link>
 
-      <div className="hidden gap-8 text-base lg:text-2xl sm:flex opacity-80">
+      <div className="hidden gap-8 text-base md:text-4xl lg:text-2xl sm:flex opacity-80">
         <a href="#coding">
           <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 active:bg-blue-400">
             <CodeBracketIcon className="w-6 h-6" />

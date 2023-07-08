@@ -8,6 +8,10 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      screens: {
+        xs: "375px",
+      },
+
       minHeight: {
         "1/2-screen": "50vh",
         "110-screen": "110vh",

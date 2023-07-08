@@ -1,6 +1,6 @@
 export default function contact() {
   return (
-    <section>
+    <section id="contact">
       <form className="flex flex-col gap-4 p-4 border-4 border-blue-800 rounded-lg ">
         <h1 className="text-xl font-semibold">Get in Contact Today</h1>
 

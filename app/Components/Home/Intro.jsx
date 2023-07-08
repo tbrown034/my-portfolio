@@ -17,10 +17,10 @@ export default function Intro() {
           >
             Hello, I'm Trevor.
           </motion.h1>
-          <div className="flex flex-col flex-wrap gap-1 text-2xl sm:text-3xl lg:text-4xl">
+          <div className="flex flex-col flex-wrap gap-1 text-xl xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl">
             <motion.h2
-              initial={{ y: -100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
+              initial={{ x: -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
               className="text-blue-600 font-montserrat"
             >
@@ -28,8 +28,8 @@ export default function Intro() {
             </motion.h2>
 
             <motion.h2
-              initial={{ y: -100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
+              initial={{ x: -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 1, duration: 1 }}
               className="text-blue-500 font-montserrat"
             >
@@ -37,8 +37,8 @@ export default function Intro() {
             </motion.h2>
 
             <motion.h2
-              initial={{ y: -100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
+              initial={{ x: -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 1.5, duration: 1 }}
               className="text-blue-400 font-montserrat"
             >
@@ -49,7 +49,7 @@ export default function Intro() {
           <motion.h3
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1 }}
+            transition={{ delay: 2, duration: 1 }}
             className="text-xl leading-normal sm:text-2xl lg:text-3xl font-robotoSlab"
           >
             Blending{" "}
