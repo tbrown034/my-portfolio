@@ -22,12 +22,12 @@ export default function Header() {
 
   return (
     <header className="flex items-center justify-between p-2 ">
-      <a href="/" className="font-majorMono sm:hidden">
+      <a href="/" className="text-lg font-majorMono sm:hidden">
         &lt;TrevorBrown /&gt;
       </a>
       <Link
         href="/"
-        className="hidden sm:flex font-majorMono"
+        className="hidden text-lg lg:text-2xl sm:flex font-majorMono"
         style={{ textShadow: "rgba(0, 0, 0, 0.5) 1px 0px 0px" }}
       >
         &lt;TB /&gt;
@@ -70,12 +70,12 @@ export default function Header() {
         {isDarkMode ? (
           <>
             <SunIcon className="w-6 h-6 text-yellow-300" />
-            <p className="text-base ">Light Mode</p>
+            <p className="">Light Mode</p>
           </>
         ) : (
           <>
             <MoonIcon className="w-6 h-6 text-blue-300" />
-            <p className="text-base">Dark Mode</p>
+            <p className="">Dark Mode</p>
           </>
         )}
       </button>
