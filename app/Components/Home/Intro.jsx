@@ -15,7 +15,7 @@ export default function Intro() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            Hello, I'm Trevor.
+            Hello World, I'm Trevor.
           </motion.h1>
           <div className="flex flex-col flex-wrap gap-1 text-xl xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl">
             <motion.h2
