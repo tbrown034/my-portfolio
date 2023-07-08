@@ -10,7 +10,7 @@ export default function Intro() {
       <div className="grid-cols-12 space-x-6 sm:grid ">
         <div className="flex flex-col justify-around col-span-8 gap-8">
           <motion.h1
-            className="text-6xl font-bold text-center sm:text-start font-montserrat lg:text-8xl"
+            className="text-6xl font-bold text-center sm:text-start font-montserrat lg:text-6xl xl:text-8xl"
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}

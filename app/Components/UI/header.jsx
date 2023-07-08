@@ -21,14 +21,10 @@ export default function Header() {
   };
 
   return (
-    <header className="flex items-center justify-between p-2 text-2xl">
-      <Link
-        href="/"
-        className="font-majorMono sm:hidden"
-        style={{ textShadow: "rgba(0, 0, 0, 0.5) 1px 0px 0px" }}
-      >
+    <header className="flex items-center justify-between p-2 ">
+      <a href="/" className="font-majorMono sm:hidden">
         &lt;TrevorBrown /&gt;
-      </Link>
+      </a>
       <Link
         href="/"
         className="hidden sm:flex font-majorMono"
@@ -36,32 +32,33 @@ export default function Header() {
       >
         &lt;TB /&gt;
       </Link>
-
-      <div className="hidden gap-8 text-xs xl:gap-24 lg:gap-20 mdlg:gap-16 md:text-sm mdlg:text-lg lg:text-2xk xl:text-3xl sm:flex opacity-80">
-        <a href="#coding">
-          <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 active:bg-blue-400">
-            <CodeBracketIcon className="w-6 h-6" />
-            <p>Coding</p>
-          </div>
-        </a>
-        <a href="#journalism">
-          <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 active:bg-blue-400">
-            <NewspaperIcon className="w-6 h-6" />
-            <p>Journalism</p>
-          </div>
-        </a>
-        <a href="#dataviz">
-          <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 active:bg-blue-400">
-            <ChartBarIcon className="w-6 h-6" />
-            <p>Data</p>
-          </div>
-        </a>
-        <a href="#about">
-          <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 active:bg-blue-400">
-            <UserIcon className="w-6 h-6" />
-            <p>About</p>
-          </div>
-        </a>
+      <div>
+        <div className="hidden gap-4 p-2 lg:gap-16 sm:flex opacity-80">
+          <a href="#coding">
+            <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 active:bg-blue-400">
+              <CodeBracketIcon className="w-6 h-6" />
+              <p>Coding</p>
+            </div>
+          </a>
+          <a href="#journalism">
+            <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 active:bg-blue-400">
+              <NewspaperIcon className="w-6 h-6" />
+              <p>Journalism</p>
+            </div>
+          </a>
+          <a href="#dataviz">
+            <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 active:bg-blue-400">
+              <ChartBarIcon className="w-6 h-6" />
+              <p>Data</p>
+            </div>
+          </a>
+          <a href="#about">
+            <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 active:bg-blue-400">
+              <UserIcon className="w-6 h-6" />
+              <p>About</p>
+            </div>
+          </a>
+        </div>
       </div>
       <div className="sm:hidden">
         <Bars3Icon className="w-8 h-8" />
