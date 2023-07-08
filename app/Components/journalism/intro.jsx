@@ -1,6 +1,6 @@
 import { NewspaperIcon } from "@heroicons/react/24/outline";
 
-export default function intro() {
+export default function Intro() {
   return (
     <section>
       <div className="flex flex-col gap-2">

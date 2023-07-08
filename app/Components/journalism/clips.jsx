@@ -1,5 +1,5 @@
 import Image from "next/image";
-import photo from "../../../public/images/okWatch.webp";
+import photo from "../../../public/images/okwatch.png";
 import Link from "next/link";
 import { clips } from "../../resources/journalismClips.js";
 import { GlobeAltIcon } from "@heroicons/react/24/outline";

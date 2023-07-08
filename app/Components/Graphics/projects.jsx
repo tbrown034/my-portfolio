@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import photo from "../../../public/images/okWatch.webp";
+import photo from "../../../public/images/okwatch.png";
 import mug from "../../../public/images/trevorPhoto2.jpeg";
 
 import { graphics } from "../../resources/datavizProjects.js";
 import { GlobeAltIcon } from "@heroicons/react/24/outline";
-export default function projects() {
+export default function Projects() {
   return (
     <section className="flex flex-col gap-2">
       <h1 className="text-2xl font-semibold underline font-montserrat">
