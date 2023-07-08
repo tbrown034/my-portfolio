@@ -37,7 +37,7 @@ export default function Header() {
         &lt;TB /&gt;
       </Link>
 
-      <div className="hidden gap-8 text-base md:text-4xl lg:text-2xl sm:flex opacity-80">
+      <div className="hidden gap-8 text-xs xl:gap-24 lg:gap-20 mdlg:gap-16 md:text-sm mdlg:text-lg lg:text-2xk xl:text-3xl sm:flex opacity-80">
         <a href="#coding">
           <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 active:bg-blue-400">
             <CodeBracketIcon className="w-6 h-6" />
@@ -53,7 +53,7 @@ export default function Header() {
         <a href="#dataviz">
           <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 active:bg-blue-400">
             <ChartBarIcon className="w-6 h-6" />
-            <p>Data Viz</p>
+            <p>Data</p>
           </div>
         </a>
         <a href="#about">

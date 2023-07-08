@@ -23,7 +23,7 @@ export default function BottomNav() {
         </a>
         <a href="#dataviz" className="flex items-center gap-1">
           <ChartBarIcon className="w-4 sm:w-6 lg:w-8" />
-          <span className="">Data</span>
+          <span className="">Data Visualizations</span>
           <ChevronDoubleDownIcon className="w-4 h-4" />
         </a>
         <Link href="#about" className="flex items-center gap-1">

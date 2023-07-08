@@ -10,6 +10,8 @@ module.exports = {
     extend: {
       screens: {
         xs: "375px",
+        mdlg: "896px", // new breakpoint between md (768px) and lg (1024px)
+        xl: "1400px", // new breakpoint for xl
       },
 
       minHeight: {
