@@ -1,5 +1,5 @@
 import Image from "next/image";
-import okWatch from "../../../public/images/okWatch.webp";
+import photo from "../../../public/images/okWatch.webp";
 
 import Link from "next/link";
 import { graphics } from "../../resources/datavizProjects.js";
@@ -20,7 +20,7 @@ export default function projects() {
           >
             <Image alt="alt" src={viz.image}></Image>
             <div className="px-6">
-              <Image alt="Oklahoma Watch logo" src={okWatch}></Image>
+              <Image alt="Oklahoma Watch logo" src={photo}></Image>
             </div>
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-2 px-2">

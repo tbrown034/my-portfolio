@@ -1,5 +1,5 @@
 import Image from "next/image";
-import okWatch from "../../../public/images/okWatch.webp";
+import photo from "../../../public/images/okWatch.webp";
 import Link from "next/link";
 import { clips } from "../../resources/journalismClips.js";
 import { GlobeAltIcon } from "@heroicons/react/24/outline";
@@ -18,7 +18,7 @@ export default function Clips() {
           >
             <Image alt="alt" src={clip.image}></Image>
             <div className="px-6">
-              <Image alt="Oklahoma Watch logo" src={okWatch}></Image>
+              <Image alt="Oklahoma Watch logo" src={photo}></Image>
             </div>
             <h1 className="px-2 text-xl font-montserrat">{clip.headline}</h1>
 
