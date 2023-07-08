@@ -1,11 +1,11 @@
-import { CodeBracketIcon } from "@heroicons/react/24/outline";
+import { NewspaperIcon } from "@heroicons/react/24/outline";
 
 export default function intro() {
   return (
     <section>
       <div className="flex flex-col gap-2">
         <div className="bg-blue-100 text-blue-800 text-sm font-medium inline-flex items-center px-2.5 py-0.5 rounded-md dark:bg-gray-700 dark:text-blue-400 gap-2 self-start">
-          <CodeBracketIcon className="w-6 h-6" />
+          <NewspaperIcon className="w-6 h-6" />
           <p>Journalism </p>
         </div>
 
