@@ -15,7 +15,7 @@ import {
 
 export default function techStack() {
   return (
-    <section className="flex flex-col gap-4">
+    <section className="flex flex-col gap-8">
       <h1 className="text-2xl font-semibold underline font-montserrat ">
         Tech Stack and Skills{" "}
       </h1>
@@ -41,7 +41,7 @@ export default function techStack() {
           Tailwind CSS.
         </span>
       </p>
-      <div className="flex flex-wrap justify-center gap-8 p-4">
+      <div className="flex flex-wrap justify-center gap-8 p-4 py-6 lg:px-16 sm:py-16">
         <SiJavascript className="w-icon-sm h-icon-sm md:w-icon-md md:h-icon-md lg:w-icon-lg lg:h-icon-lg " />
         <SiNodedotjs className="w-icon-sm h-icon-sm md:w-icon-md md:h-icon-md lg:w-icon-lg lg:h-icon-lg " />
         <SiReact className="w-icon-sm h-icon-sm md:w-icon-md md:h-icon-md lg:w-icon-lg lg:h-icon-lg " />

@@ -10,51 +10,55 @@ export default function Intro() {
       <div className="grid-cols-12 space-x-6 sm:grid ">
         <div className="flex flex-col justify-around col-span-8 gap-8">
           <motion.h1
-            className="text-6xl font-bold text-center sm:text-start font-montserrat lg:text-6xl xl:text-8xl"
+            className="text-6xl font-bold text-center text-blue-900 sm:text-start font-montserrat lg:text-6xl xl:text-8xl"
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
             Hello World, I'm Trevor.
           </motion.h1>
-          <div className="flex flex-col flex-wrap gap-1 text-xl xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl">
+          <div className="flex flex-col flex-wrap gap-1 text-xl text-blue-800 xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl font-montserrat">
             <motion.h2
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
-              className="text-blue-600 font-montserrat"
             >
-              I'm a FullStack Developer &
+              I'm a FullStack Developer,
             </motion.h2>
 
             <motion.h2
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 1, duration: 1 }}
-              className="text-blue-500 font-montserrat"
             >
-              Investigative Reporter &
+              Investigative Reporter,
             </motion.h2>
 
             <motion.h2
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 1.5, duration: 1 }}
-              className="text-blue-400 font-montserrat"
             >
-              Data Visualizer
+              Data Visualizer &
+            </motion.h2>
+            <motion.h2
+              initial={{ x: -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 2, duration: 1 }}
+            >
+              Builder
             </motion.h2>
           </div>
 
           <motion.h3
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 2, duration: 1 }}
+            transition={{ delay: 2.5, duration: 1 }}
             className="text-xl leading-normal sm:text-2xl lg:text-3xl font-robotoSlab"
           >
             Blending{" "}
             <span className=" px-0.5 bg-blue-300 rounded shadow-md dark:bg-blue-600 font-robotoSlab hover:underline">
-              cutting-edge web development
+              modern web development
             </span>{" "}
             skills with insights I’ve cultivated from more than a decade’s worth
             of experience as an{" "}

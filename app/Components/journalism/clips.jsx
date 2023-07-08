@@ -8,7 +8,7 @@ export default function Clips() {
   return (
     <section className="flex flex-col gap-4">
       <h1 className="text-2xl font-semibold underline font-montserrat underline-offset-6 ">
-        Selected Clips
+        Selected Articles Written in the Past Few Years
       </h1>
       <div className="grid grid-cols-1 gap-4 py-4 space-y-1 md:grid-cols-2 lg:grid-cols-3">
         {clips.map((clip, index) => (

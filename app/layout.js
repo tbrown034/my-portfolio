@@ -191,7 +191,7 @@ export default function RootLayout({ children }) {
         lang="en"
       >
         <body>
-          <div className="text-blue-900 bg-blue-50 dark:bg-blue-900 dark:text-blue-100 scroll-smooth ">
+          <div className="text-blue-950 bg-blue-50 dark:bg-blue-900 dark:text-blue-100 scroll-smooth ">
             <Header />
             {children}
             <Footer />
