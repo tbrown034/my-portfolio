@@ -89,18 +89,16 @@ export default function techIcon() {
   ];
 
   return (
-    <div className="flex flex-wrap justify-center gap-8 p-4 py-6 lg:px-16 sm:py-16">
-      <section className="grid grid-cols-2 gap-4 rounded-xl md:grid-cols-4">
-        {techs.map((tech) => (
-          <div
-            key={tech.name}
-            className="flex flex-col items-center p-4 m-2 space-x-4 transition-all duration-300 ease-in-out transform bg-white rounded-md cursor-pointer hover:scale-105 hover:shadow-lg"
-          >
-            <tech.Icon className="w-icon-lg h-icon-lg" />
-            <h3 className="text-xl font-semibold">{tech.name}</h3>
-          </div>
-        ))}
-      </section>
-    </div>
+    <section className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+      {techs.map((tech) => (
+        <div
+          key={tech.name}
+          className="flex flex-col items-center justify-center px-1 py-2 transition-all duration-300 ease-in-out transform bg-white rounded-lg cursor-pointer hover:scale-105 hover:shadow-lg"
+        >
+          <tech.Icon className="w-icon-sm h-icon-sm" />
+          <h3 className="text-sm font-semibold text-center">{tech.name}</h3>
+        </div>
+      ))}
+    </section>
   );
 }
