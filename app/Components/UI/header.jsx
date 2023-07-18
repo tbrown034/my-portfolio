@@ -4,6 +4,7 @@ import Link from "next/link.js";
 
 import { CodeBracketIcon } from "@heroicons/react/24/outline";
 import { NewspaperIcon } from "@heroicons/react/24/outline";
+
 import { ChartBarIcon } from "@heroicons/react/24/outline";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import { MoonIcon } from "@heroicons/react/24/outline";
@@ -33,7 +34,7 @@ export default function Header() {
         &lt;TB /&gt;
       </Link>
       <div>
-        <div className="hidden gap-4 p-2 lg:gap-16 sm:flex opacity-80">
+        <div className="hidden gap-4 p-2 font-semibold xl:gap-24 lg:gap-16 lg:text-lg sm:flex opacity-80">
           <a href="#coding">
             <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 active:bg-blue-400">
               <CodeBracketIcon className="w-6 h-6" />
