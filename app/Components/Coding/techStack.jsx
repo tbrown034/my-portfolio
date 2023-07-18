@@ -1,17 +1,4 @@
-import {
-  SiNextdotjs,
-  SiTailwindcss,
-  SiPostgresql,
-  SiJavascript,
-  SiNodedotjs,
-  SiReact,
-  SiFramer,
-  SiChartdotjs,
-  SiBootstrap,
-  SiAxios,
-  SiMui,
-  SiSemanticuireact,
-} from "react-icons/si";
+import TechIcon from "./techIcons";
 
 export default function techStack() {
   return (
@@ -41,20 +28,8 @@ export default function techStack() {
           Tailwind CSS.
         </span>
       </p>
-      <div className="flex flex-wrap justify-center gap-8 p-4 py-6 lg:px-16 sm:py-16">
-        <SiJavascript className="w-icon-sm h-icon-sm md:w-icon-md md:h-icon-md lg:w-icon-lg lg:h-icon-lg " />
-        <SiNodedotjs className="w-icon-sm h-icon-sm md:w-icon-md md:h-icon-md lg:w-icon-lg lg:h-icon-lg " />
-        <SiReact className="w-icon-sm h-icon-sm md:w-icon-md md:h-icon-md lg:w-icon-lg lg:h-icon-lg " />
-        <SiNextdotjs className="w-icon-sm h-icon-sm md:w-icon-md md:h-icon-md lg:w-icon-lg lg:h-icon-lg " />
-        <SiTailwindcss className="w-icon-sm h-icon-sm md:w-icon-md md:h-icon-md lg:w-icon-lg lg:h-icon-lg " />
-        <SiPostgresql className="w-icon-sm h-icon-sm md:w-icon-md md:h-icon-md lg:w-icon-lg lg:h-icon-lg " />
-        <SiFramer className="w-icon-sm h-icon-sm md:w-icon-md md:h-icon-md lg:w-icon-lg lg:h-icon-lg " />
-        <SiChartdotjs className="w-icon-sm h-icon-sm md:w-icon-md md:h-icon-md lg:w-icon-lg lg:h-icon-lg " />
-        <SiBootstrap className="w-icon-sm h-icon-sm md:w-icon-md md:h-icon-md lg:w-icon-lg lg:h-icon-lg " />
-        <SiMui className="w-icon-sm h-icon-sm md:w-icon-md md:h-icon-md lg:w-icon-lg lg:h-icon-lg " />
-        <SiSemanticuireact className="w-icon-sm h-icon-sm md:w-icon-md md:h-icon-md lg:w-icon-lg lg:h-icon-lg " />
-        <SiAxios className="w-icon-sm h-icon-sm md:w-icon-md md:h-icon-md lg:w-icon-lg lg:h-icon-lg " />
-      </div>
+      <TechIcon />
+
       <p className="text-xl leading-normal font-robotoSlab">
         I also have experience using JS libraries that includes{" "}
         <span className="p-1 text-base bg-blue-800 rounded-lg text-blue-50 whitespace-nowrap">
