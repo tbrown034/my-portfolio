@@ -24,7 +24,7 @@ export const clips = [
     id: 2,
     headline:
       "Twenty Years After It Became a Crime, Racial Profiling Charges Remain Scarce",
-    text: "As protests over racial policing practices continue to rage across Oklahoma and the nation, a milestone in Oklahoma’s racial history will quietly pass later this week. Friday will mark the 20th anniversary of the passage of a state law that for the first time explicitly banned racial profiling by law enforcement agencies.",
+    text: "Friday will mark the 20th anniversary of the passage of a state law that for the first time explicitly banned racial profiling by law enforcement agencies.",
     image: profling,
     publication: "Oklahoma Watch",
     date: "June 2, 2020",

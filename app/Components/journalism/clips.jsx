@@ -1,20 +1,31 @@
 import Image from "next/image";
 import photo from "../../../public/images/okwatch.png";
 import Link from "next/link";
-import { clips } from "../../resources/journalismClips.js";
+import { clips } from "../../data/journalismClips.js";
 import { GlobeAltIcon } from "@heroicons/react/24/outline";
 import mug from "../../../public/images/trevorPhoto2.jpeg";
 export default function Clips() {
   return (
     <section className="flex flex-col gap-4">
-      <h1 className="text-2xl font-semibold underline font-montserrat underline-offset-6 ">
-        Selected Articles Written in the Past Few Years
+      <h1 className="text-3xl font-bold lg:text-center font-montserrat sm:text-4xl">
+        Selected Articles
       </h1>
-      <div className="grid grid-cols-1 gap-4 py-4 space-y-1 md:grid-cols-2 lg:grid-cols-3">
+      <p className="text-xl font-robotoSlab ">
+        As data-driven investigative reporter for more than 15 years, I have
+        written hundreds, if not thousands, of articles about politics,
+        government corruption or inefficenes and stories that matter to the
+        community.
+      </p>
+      <p className="text-xl font-robotoSlab ">
+        I pride myself in well-researched, well-sourced articles explain, reveal
+        or uncover something that would otherwise remain hidden. Here are some
+        of my top work in the past years.
+      </p>
+      <section className="grid grid-cols-1 gap-4 py-4 space-y-1 md:grid-cols-2 lg:grid-cols-3">
         {clips.map((clip, index) => (
           <div
             key={index}
-            className="flex flex-col justify-between gap-4 pb-4 border-4 border-blue-900 rounded-lg "
+            className="flex flex-col justify-between gap-4 pb-4 bg-white border-4 border-blue-900 rounded-lg "
           >
             <Image alt="alt" src={clip.image}></Image>
             <div className="px-6">
@@ -49,7 +60,7 @@ export default function Clips() {
             </div>
           </div>
         ))}
-      </div>
+      </section>
     </section>
   );
 }

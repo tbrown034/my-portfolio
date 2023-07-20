@@ -1,21 +1,32 @@
 import Image from "next/image";
 import Link from "next/link";
-import { webProjects } from "../../resources/webProjects.js";
+import { webProjects } from "../../data/webProjects.js";
 import { GlobeAltIcon } from "@heroicons/react/24/outline";
 import { DiGithubBadge } from "react-icons/di";
 
 export default function Projects() {
   return (
     <section className="flex flex-col gap-4">
-      <h1 className="text-2xl font-semibold underline font-montserrat underline-offset-6 ">
+      <h1 className="text-3xl font-bold lg:text-center font-montserrat sm:text-4xl ">
         Projects and Freelance Work
       </h1>
+      <p className="text-xl font-robotoSlab ">
+        I specialize in building responsive, dynamic websites that focus on
+        clean UI and UX. As I found as journalist, a good site should be
+        consistent, clear and able to attract and retain user's attention in
+        ever increaszingy busy digital landscape.{" "}
+      </p>
+      <p className="text-xl font-robotoSlab ">
+        In addition to fetching, sorting and presenting data and information
+        with the use of databases and API endpoints, here a sample of the
+        projects I have built in 2023.
+      </p>
 
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <section className="grid grid-cols-1 gap-4 px-2 py-2 lg:px-4 sm:grid-cols-2 lg:grid-cols-3 ">
         {webProjects.map((project, index) => (
           <div
             key={index}
-            className="flex flex-col justify-between gap-4 pb-4 border-4 border-blue-900 rounded-lg "
+            className="flex flex-col justify-between gap-4 pb-4 border-4 border-blue-900 rounded-lg bg-sky-50 "
           >
             <Image alt="alt" src={project.image}></Image>
             <h1 className="px-2 font-montserrat">{project.title}</h1>
@@ -55,7 +66,7 @@ export default function Projects() {
             </div>
           </div>
         ))}
-      </div>
+      </section>
     </section>
   );
 }

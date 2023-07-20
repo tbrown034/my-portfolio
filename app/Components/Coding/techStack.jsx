@@ -3,7 +3,7 @@ import TechIcon from "./techIcons";
 export default function techStack() {
   return (
     <section className="flex flex-col gap-4">
-      <h1 className="text-3xl underline sm: font-montserrat ">
+      <h1 className="text-3xl font-semibold font-montserrat sm:text-4xl lg:text-center">
         Tech Stack and Skills{" "}
       </h1>
       <p className="text-xl leading-normal font-robotoSlab ">
@@ -28,7 +28,7 @@ export default function techStack() {
           Tailwind CSS.
         </span>
       </p>
-      <div className="px-4 py-2 lg:px-16">
+      <div className="px-6 py-2 lg:px-16">
         <TechIcon />
       </div>
 

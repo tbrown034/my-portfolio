@@ -3,12 +3,12 @@ import Link from "next/link";
 import photo from "../../../public/images/okwatch.png";
 import mug from "../../../public/images/trevorPhoto2.jpeg";
 
-import { graphics } from "../../resources/datavizProjects.js";
+import { graphics } from "../../data/datavizProjects.js";
 import { GlobeAltIcon } from "@heroicons/react/24/outline";
 export default function Projects() {
   return (
     <section className="flex flex-col gap-2">
-      <h1 className="text-2xl font-semibold underline font-montserrat">
+      <h1 className="text-3xl font-bold lg:text-center font-montserrat sm:text-4xl ">
         Selected Data Visualization Projects
       </h1>
 
@@ -16,7 +16,7 @@ export default function Projects() {
         {graphics.map((viz, index) => (
           <div
             key={index}
-            className="flex flex-col justify-between gap-4 pb-4 border-4 border-blue-900 rounded-lg "
+            className="flex flex-col justify-between gap-4 pb-4 border-4 border-blue-900 rounded-lg bg-blue-50 "
           >
             <Image alt="alt" src={viz.image}></Image>
             <div className="px-6">

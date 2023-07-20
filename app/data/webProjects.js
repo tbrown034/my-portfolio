@@ -1,5 +1,4 @@
 // webProjects.js
-
 import weather from "../../public/images/weather.png";
 import brew from "../../public/images/beer.png";
 import campaign from "../../public/images/campaign.png";
@@ -22,7 +21,7 @@ export const webProjects = [
       "GoogleMaps",
     ],
     description:
-      "Built with Next.JS for SEO optimization, I created this storefront website for a dentist as a freelance project. The app features about, fianicng, location, FAQ, Services and a contact/make an appointment form.",
+      "A Next.js storefront for a dentist. Features include about, financing, location, FAQ, services, and appointment booking.",
     githubLink: "https://github.com/tbrown034/kab-dental",
     siteLink: "https://kab-dental.vercel.app/",
   },
@@ -41,7 +40,7 @@ export const webProjects = [
       "Framer Motion",
     ],
     description:
-      "MyWeatherApp, a project I created for fun, harnesses the power of WeatherAPI to fetch accurate, real-time weather data based on user-input zip codes. The interface is designed with Tailwind CSS, HeroIcons, and Headless UI for a sleek, modern user experience with Smooth scrolling, countdown timers and future weather forecasting .",
+      "A playful project that uses WeatherAPI for real-time weather forecasts. Tailwind CSS and HeroIcons were used for interface design.",
     githubLink: "https://my-weather-app-silk-six.vercel.app/",
     siteLink: "https://github.com/tbrown034/my-weather-app",
   },
@@ -58,8 +57,7 @@ export const webProjects = [
       "Fetch",
     ],
     description:
-      "As a project to test out visualzing api data, I created this simple, but powerful and fast, tool for tracking campaign finance data and visualizing the influence of money in politics. The app allows users to search for politicians and view detailed FEC data, including total funds raised over the last three election cycles, also represented in an interactive line graph crated with Chart.js for data visualization, styled with Tailwind CSS for a modern UI.",
-
+      "A tool for visualizing campaign finance data using Chart.js. Allows detailed views of FEC data and tracks election cycle funds.",
     githubLink: "https://github.com/tbrown034/campaign-finance-tracker",
     siteLink: "https://campaign-finance-tracker.vercel.app/",
   },
@@ -78,8 +76,7 @@ export const webProjects = [
       "Tailwind CSS",
     ],
     description:
-      "MyShipItApp is (work in process) app idea that leverages Chat GPT's API to estimate a users'moving needs based on their response to a few simple questions. The site offers a clean interface, responsive design and an easy UX.",
-
+      "A WIP app that estimates moving needs using Chat GPT's API. It offers a clean interface and responsive design.",
     githubLink: "https://github.com/tbrown034/moving-cost-estimator",
     siteLink: "https://moving-cost-estimator.vercel.app/about",
   },
@@ -96,7 +93,7 @@ export const webProjects = [
       "Open AI",
     ],
     description:
-      "Another project showing how to leverage the power of AI for a simple use. This also uses Chat-GTP's API to receive input (a questions about dental care) and then provide an answer with guardrails that prevent it from talking about non-dental issues.",
+      "An AI-powered application that uses Chat-GTP's API to answer dental care questions, with guardrails for topic relevance.",
     githubLink: "https://github.com/tbrown034/dental-gpt-second-try",
     siteLink: "https://dental-gpt-second-try.vercel.app/",
   },
@@ -106,7 +103,7 @@ export const webProjects = [
     image: brew,
     technologies: ["JavaScript", "React", "Next.js", "Fetch", "Tailwind CSS"],
     description:
-      "Another simple Fetch website made over one night that allows user to select and learn about random breweries.",
+      "A simple Fetch site, built overnight, that allows users to learn about random breweries.",
     githubLink: "https://github.com/tbrown034/brewery",
     siteLink: "https://brewery-taupe.vercel.app/",
   },
