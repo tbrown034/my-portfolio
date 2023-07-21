@@ -1,4 +1,5 @@
 import { UserIcon } from "@heroicons/react/24/outline";
+import AboutMe from "./aboutMe";
 
 export default function intro() {
   return (
@@ -11,14 +12,7 @@ export default function intro() {
       <h2 className="text-3xl font-bold lg:text-center font-montserrat sm:text-4xl">
         Let's Connect and Build
       </h2>
-      <p className="text-xl leading-normal font-robotoSlab sm:text-2xl"></p>
-      <p className="text-xl leading-normal font-robotoSlab sm:text-2xl">
-        Outside of work, you might find me with a book in hand – I'm an avid
-        reader who believes that stories not only entertain but also teach us
-        empathy and broaden our horizons. But even more likely, I'll be hanging
-        out with my lovely girlfriend, Lauren, my golden doodle, Indy, and
-        perhaps a nice IPA.
-      </p>
+      <AboutMe />
     </section>
   );
 }

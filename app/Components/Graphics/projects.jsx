@@ -12,7 +12,7 @@ export default function Projects() {
         Selected Data Visualization Projects
       </h1>
 
-      <div className="grid grid-cols-1 gap-4 py-4 space-y-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 py-4 space-y-1 sm:grid-cols-2 lg:grid-cols-3">
         {graphics.map((viz, index) => (
           <div
             key={index}

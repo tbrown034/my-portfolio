@@ -26,7 +26,7 @@ export default function Projects() {
         {webProjects.map((project, index) => (
           <div
             key={index}
-            className="flex flex-col justify-between gap-4 pb-4 border-4 border-blue-900 rounded-lg bg-sky-50 "
+            className="flex flex-col justify-between gap-4 pb-4 border-4 border-blue-900 rounded-lg sm:gap-8 bg-sky-50 "
           >
             <Image alt="alt" src={project.image}></Image>
             <h1 className="px-2 font-montserrat">{project.title}</h1>

@@ -8,35 +8,46 @@ import Link from "next/link";
 
 export default function Links() {
   return (
-    <section className="text-lg rounded-lg ">
+    <section className="flex text-lg rounded-lg sm:justify-center">
       <div className="inline-block p-2 space-y-2 border-opacity-50 rounded-lg ">
         <div className="flex flex-wrap justify-center gap-8">
-          <button className="p-1 rounded-lg hover:bg-blue-300" href="/">
-            {" "}
-            <AiFillTwitterCircle className="w-16 h-16" />
-          </button>
+          <Link
+            className="flex flex-col items-center justify-center p-1 transition-all duration-300 ease-in-out transform rounded-lg cursor-pointer hover:bg-blue-300 hover:scale-105 hover:shadow-lg"
+            href="#contact"
+          >
+            <AiFillMail className="w-icon-sm h-icon-sm" />
+            <p className="text-sm font-semibold text-center">E-Mail</p>
+          </Link>
+
           <a
-            className="p-1 rounded-lg hover:bg-blue-300"
+            className="flex flex-col items-center justify-center p-1 transition-all duration-300 ease-in-out transform rounded-lg cursor-pointer hover:bg-blue-300 hover:scale-105 hover:shadow-lg"
             href="https://github.com/tbrown034/"
             target="_blank"
             rel="noopener noreferrer"
           >
             {" "}
-            <AiFillGithub className="w-16 h-16" />
+            <AiFillGithub className="w-icon-sm h-icon-sm" />
+            <p className="text-sm font-semibold text-center">Github</p>
           </a>
 
           <a
-            className="p-1 rounded-lg hover:bg-blue-300"
+            className="flex flex-col items-center justify-center p-1 transition-all duration-300 ease-in-out transform rounded-lg cursor-pointer hover:bg-blue-300 hover:scale-105 hover:shadow-lg"
             href="https://www.linkedin.com/in/trevorabrown/"
             target="_blank"
             rel="noopener noreferrer"
           >
             {" "}
-            <AiFillLinkedin className="w-16 h-16" />
+            <AiFillLinkedin className="w-icon-sm h-icon-sm" />
+            <p className="text-sm font-semibold text-center">LinkedIn</p>
           </a>
-          <Link className="p-1 rounded-lg hover:bg-blue-300" href="#contact">
-            <AiFillMail className="w-16 h-16" />
-          </Link>
+          <button
+            className="flex flex-col items-center justify-center p-1 transition-all duration-300 ease-in-out transform rounded-lg cursor-pointer hover:bg-blue-300 hover:scale-105 hover:shadow-lg"
+            href="/"
+          >
+            {" "}
+            <AiFillTwitterCircle className="w-icon-sm h-icon-sm" />
+            <p className="text-sm font-semibold text-center">Twitter</p>
+          </button>
         </div>
       </div>
     </section>

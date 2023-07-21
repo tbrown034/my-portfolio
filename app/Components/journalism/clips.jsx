@@ -21,7 +21,7 @@ export default function Clips() {
         or uncover something that would otherwise remain hidden. Here are some
         of my top work in the past years.
       </p>
-      <section className="grid grid-cols-1 gap-4 py-4 space-y-1 md:grid-cols-2 lg:grid-cols-3">
+      <section className="grid grid-cols-1 gap-4 py-4 space-y-1 sm:grid-cols-2 lg:grid-cols-3">
         {clips.map((clip, index) => (
           <div
             key={index}
