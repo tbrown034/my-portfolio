@@ -1,14 +1,12 @@
 "use client";
-import { useState } from "react";
+
 import Image from "next/image";
 import Link from "next/link";
 import { webProjects } from "../../data/webProjects.js";
 import { GlobeAltIcon } from "@heroicons/react/24/outline";
 import { DiGithubBadge } from "react-icons/di";
 
-export default function Projects() {
-  const [displayCount, setDisplayCount] = useState(4);
-
+export default function ProjectsDesktop() {
   return (
     <section className="flex flex-col gap-4">
       <h1 className="text-3xl font-bold lg:text-center font-montserrat sm:text-4xl ">
@@ -18,7 +16,7 @@ export default function Projects() {
         I specialize in building responsive, dynamic websites that focus on
         clean UI and UX. As a journalist, I found that a good site should be
         consistent, clear and able to attract and retain user's attention in an
-        increasingly busy digital landscape.{" "}
+        increasingly busy digital landscape.
       </p>
       <p className="text-xl font-robotoSlab ">
         In addition to fetching, sorting, and presenting data and information
@@ -27,7 +25,7 @@ export default function Projects() {
       </p>
 
       <section className="grid grid-cols-1 gap-4 px-2 py-2 lg:px-4 sm:grid-cols-2 lg:grid-cols-3 ">
-        {webProjects.slice(0, displayCount).map((project, index) => (
+        {webProjects.map((project, index) => (
           <div
             key={index}
             className="flex flex-col justify-between gap-4 pb-4 border-4 border-blue-900 rounded-lg sm:gap-8 bg-sky-50 "
@@ -71,26 +69,6 @@ export default function Projects() {
           </div>
         ))}
       </section>
-      {displayCount < webProjects.length && (
-        <div className="flex justify-center p-2">
-          <button
-            className="p-2 px-4 text-xl font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-500"
-            onClick={() => setDisplayCount((prevCount) => prevCount + 4)}
-          >
-            Show More
-          </button>
-        </div>
-      )}
-      {displayCount > 4 && (
-        <div className="flex justify-center p-2">
-          <button
-            className="p-2 px-4 text-xl font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-500"
-            onClick={() => setDisplayCount(4)}
-          >
-            Show Less
-          </button>
-        </div>
-      )}
     </section>
   );
 }

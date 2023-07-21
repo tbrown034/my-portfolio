@@ -6,7 +6,7 @@ import { webProjects } from "../../data/webProjects.js";
 import { GlobeAltIcon } from "@heroicons/react/24/outline";
 import { DiGithubBadge } from "react-icons/di";
 
-export default function Projects() {
+export default function ProjectsMobile() {
   const [displayCount, setDisplayCount] = useState(4);
 
   return (
@@ -18,7 +18,7 @@ export default function Projects() {
         I specialize in building responsive, dynamic websites that focus on
         clean UI and UX. As a journalist, I found that a good site should be
         consistent, clear and able to attract and retain user's attention in an
-        increasingly busy digital landscape.{" "}
+        increasingly busy digital landscape.
       </p>
       <p className="text-xl font-robotoSlab ">
         In addition to fetching, sorting, and presenting data and information
@@ -75,17 +75,17 @@ export default function Projects() {
         <div className="flex justify-center p-2">
           <button
             className="p-2 px-4 text-xl font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-500"
-            onClick={() => setDisplayCount((prevCount) => prevCount + 4)}
+            onClick={() => setDisplayCount((prevCount) => prevCount + 2)}
           >
             Show More
           </button>
         </div>
       )}
-      {displayCount > 4 && (
+      {displayCount > 2 && (
         <div className="flex justify-center p-2">
           <button
             className="p-2 px-4 text-xl font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-500"
-            onClick={() => setDisplayCount(4)}
+            onClick={() => setDisplayCount(2)}
           >
             Show Less
           </button>

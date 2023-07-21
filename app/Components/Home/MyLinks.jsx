@@ -11,7 +11,10 @@ export default function MyLinks() {
     <section className="text-lg rounded-lg ">
       <div className="inline-block p-2 space-y-2 border-opacity-50 rounded-lg ">
         <div className="flex flex-wrap justify-center gap-8">
-          <Link className="p-1 rounded-lg hover:bg-blue-300" href="/">
+          <Link
+            className="p-1 transition-all duration-300 ease-in-out transform rounded-lg hover:bg-blue-300 "
+            href="/"
+          >
             {" "}
             <AiFillTwitterCircle className="w-16 h-16" />
           </Link>

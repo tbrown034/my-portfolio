@@ -6,7 +6,7 @@ import { UserIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 export default function BottomNav() {
   return (
-    <nav className="sm:text-2xl lg:text-3xl">
+    <nav className="p-10 sm:text-2xl lg:text-3xl">
       <hr className="w-2/3 p-4 mx-auto border-t-2 border-blue-800 dark:border-blue-200" />
 
       <div className="flex flex-wrap justify-around gap-4">
