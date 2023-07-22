@@ -18,7 +18,7 @@ export default function Projects() {
         I specialize in building responsive, dynamic websites that focus on
         clean UI and UX. As a journalist, I found that a good site should be
         consistent, clear and able to attract and retain user's attention in an
-        increasingly busy digital landscape.{" "}
+        increasingly busy digital landscape.
       </p>
       <p className="text-xl font-robotoSlab ">
         In addition to fetching, sorting, and presenting data and information
@@ -26,11 +26,15 @@ export default function Projects() {
         projects I have built in 2023.
       </p>
 
-      <section className="grid grid-cols-1 gap-4 px-2 py-2 lg:px-4 sm:grid-cols-2 lg:grid-cols-3 ">
+      <section className="grid grid-cols-1 gap-4 px-2 py-2 lg:px-8 sm:grid-cols-2 lg:grid-cols-3 ">
         {webProjects.slice(0, displayCount).map((project, index) => (
           <div
             key={index}
-            className="flex flex-col justify-between gap-4 pb-4 border-4 border-blue-900 rounded-lg sm:gap-8 bg-sky-50 "
+            className={`flex flex-col justify-between gap-4 pb-4 border-4 border-blue-900 rounded-lg sm:gap-8 bg-sky-50 ${
+              index === displayCount - 1 && displayCount === 4
+                ? "lg:col-start-2 lg:col-end-3"
+                : ""
+            }`}
           >
             <Image alt="alt" src={project.image}></Image>
             <h1 className="px-2 font-montserrat">{project.title}</h1>

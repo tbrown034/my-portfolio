@@ -1,10 +1,15 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 import photo from "../../../public/images/okwatch.png";
 import Link from "next/link";
 import { clips } from "../../data/journalismClips.js";
 import { GlobeAltIcon } from "@heroicons/react/24/outline";
 import mug from "../../../public/images/trevorPhoto2.jpeg";
+
 export default function Clips() {
+  const [displayCount, setDisplayCount] = useState(4);
+
   return (
     <section className="flex flex-col gap-4">
       <h1 className="text-3xl font-bold lg:text-center font-montserrat sm:text-4xl">
@@ -21,11 +26,15 @@ export default function Clips() {
         or uncover something that would otherwise remain hidden. Here are some
         of my top work in the past years.
       </p>
-      <section className="grid grid-cols-1 gap-4 py-4 space-y-1 sm:grid-cols-2 lg:grid-cols-3">
-        {clips.map((clip, index) => (
+      <section className="grid grid-cols-1 gap-4 px-2 py-2 lg:px-8 sm:grid-cols-2 lg:grid-cols-3 ">
+        {clips.slice(0, displayCount).map((clip, index) => (
           <div
             key={index}
-            className="flex flex-col justify-between gap-4 pb-4 bg-white border-4 border-blue-900 rounded-lg "
+            className={`flex flex-col justify-between gap-4 pb-4 border-4 border-blue-900 rounded-lg sm:gap-8 bg-sky-50 ${
+              index === displayCount - 1 && displayCount === 4
+                ? "lg:col-start-2 lg:col-end-3"
+                : ""
+            }`}
           >
             <Image alt="alt" src={clip.image}></Image>
             <div className="px-6">
@@ -61,6 +70,26 @@ export default function Clips() {
           </div>
         ))}
       </section>
+      {displayCount < clips.length && (
+        <div className="flex justify-center p-2">
+          <button
+            className="p-2 px-4 text-xl font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-500"
+            onClick={() => setDisplayCount((prevCount) => prevCount + 4)}
+          >
+            Show More
+          </button>
+        </div>
+      )}
+      {displayCount > 4 && (
+        <div className="flex justify-center p-2">
+          <button
+            className="p-2 px-4 text-xl font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-500"
+            onClick={() => setDisplayCount(4)}
+          >
+            Show Less
+          </button>
+        </div>
+      )}
     </section>
   );
 }
