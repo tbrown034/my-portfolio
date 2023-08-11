@@ -12,7 +12,7 @@ export default function about() {
       <div className="flex flex-col items-center justify-center gap-8 sm:flex-row">
         {" "}
         <Mug />
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 sm:gap-8 lg:gap-16">
           <Resume />
           <Links />
         </div>

@@ -5,6 +5,7 @@ import campaign from "../../public/images/campaign.png";
 import dental from "../../public/images/kabdds.png";
 import dentalgpt from "../../public/images/dentalgpt.png";
 import shipit from "../../public/images/shipit1.png";
+import RocketClicker from "../../public/images/Screen Shot 2023-08-11 at 1.35.59 PM.png";
 
 export const webProjects = [
   {
@@ -63,8 +64,8 @@ export const webProjects = [
   },
   {
     id: 4,
-    title: "ShipIt",
-    image: shipit,
+    title: "RocketClicker",
+    image: RocketClicker,
     technologies: [
       "JavaScript",
       "React",
@@ -76,9 +77,9 @@ export const webProjects = [
       "Tailwind CSS",
     ],
     description:
-      "A WIP app that estimates moving needs using Chat GPT's API. It offers a clean interface and responsive design.",
+      "A fun idle cookie-clicker style game that let's you explore the skies through the eyes of Rocky Racoon.",
     githubLink: "https://github.com/tbrown034/moving-cost-estimator",
-    siteLink: "https://moving-cost-estimator.vercel.app/about",
+    siteLink: "https://rocket-clicker.vercel.app/",
   },
   {
     id: 5,

@@ -30,13 +30,17 @@ export default function Clips() {
         {clips.slice(0, displayCount).map((clip, index) => (
           <div
             key={index}
-            className={`flex flex-col justify-between gap-4 pb-4 border-4 border-blue-900  dark:bg-blue-800 dark:text-blue-100 rounded-lg sm:gap-8 bg-sky-50 ${
+            className={`flex flex-col justify-between gap-2 pb-4 "border border-white shadow-lg rounded-t-2xl dark:border-gray-500" dark:text-blue-950 dark:bg-blue-100  rounded-2xl   bg-sky-50 ${
               index === displayCount - 1 && displayCount === 4
                 ? "lg:col-start-2 lg:col-end-3"
                 : ""
             }`}
           >
-            <Image alt="alt" src={clip.image}></Image>
+            <Image
+              className="border border-white shadow-lg rounded-t-2xl dark:border-gray-500"
+              alt="alt"
+              src={clip.image}
+            ></Image>
             <div className="px-6">
               <Image alt="Oklahoma Watch logo" src={photo}></Image>
             </div>

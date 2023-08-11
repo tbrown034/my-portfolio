@@ -26,11 +26,11 @@ export default function Projects() {
         projects I have built in 2023.
       </p>
 
-      <section className="grid grid-cols-1 gap-4 px-2 py-2 lg:px-8 sm:grid-cols-2 lg:grid-cols-3 ">
+      <section className="grid grid-cols-1 gap-8 px-2 py-2 lg:px-8 sm:grid-cols-2 lg:grid-cols-3 ">
         {webProjects.slice(0, displayCount).map((project, index) => (
           <div
             key={index}
-            className={`flex flex-col justify-between gap-2 pb-4  dark:bg-blue-50 dark:text-blue-950  rounded-2xl  sm:gap-8 bg-sky-50 ${
+            className={`flex flex-col justify-between gap-2 pb-4 "border border-white shadow-lg rounded-t-2xl dark:border-gray-500" dark:text-blue-950 dark:bg-blue-100  rounded-2xl   bg-sky-50 ${
               index === displayCount - 1 && displayCount === 4
                 ? "lg:col-start-2 lg:col-end-3"
                 : ""
@@ -38,8 +38,7 @@ export default function Projects() {
           >
             <Image
               alt="alt"
-              height={200}
-              className=" rounded-t-2xl"
+              className="border border-white shadow-lg rounded-t-2xl dark:border-gray-500" // Added border and shadow here
               src={project.image}
             ></Image>
             <h1 className="px-2 font-montserrat">{project.title}</h1>

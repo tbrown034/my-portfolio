@@ -19,13 +19,17 @@ export default function Projects() {
         {graphics.slice(0, displayCount).map((viz, index) => (
           <div
             key={index}
-            className={`flex flex-col justify-between gap-4 pb-4 border-4 border-blue-900 rounded-lg sm:gap-8 bg-sky-50 ${
+            className={`flex flex-col justify-between gap-2 pb-4 "border border-white shadow-lg rounded-t-2xl dark:border-gray-500" dark:text-blue-950 dark:bg-blue-100  rounded-2xl   bg-sky-50 ${
               index === displayCount - 1 && displayCount === 4
                 ? "lg:col-start-2 lg:col-end-3"
                 : ""
             }`}
           >
-            <Image alt="alt" className=" rounded-t-2xl" src={viz.image}></Image>
+            <Image
+              alt="alt"
+              className="border border-white shadow-lg rounded-t-2xl dark:border-gray-500"
+              src={viz.image}
+            ></Image>
             <div className="px-6">
               <Image alt="Oklahoma Watch logo" src={photo}></Image>
             </div>
