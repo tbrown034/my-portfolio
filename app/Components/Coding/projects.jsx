@@ -30,13 +30,18 @@ export default function Projects() {
         {webProjects.slice(0, displayCount).map((project, index) => (
           <div
             key={index}
-            className={`flex flex-col justify-between gap-4 pb-4 border-4 border-blue-900 rounded-lg sm:gap-8 bg-sky-50 ${
+            className={`flex flex-col justify-between gap-2 pb-4  dark:bg-blue-50 dark:text-blue-950  rounded-2xl  sm:gap-8 bg-sky-50 ${
               index === displayCount - 1 && displayCount === 4
                 ? "lg:col-start-2 lg:col-end-3"
                 : ""
             }`}
           >
-            <Image alt="alt" src={project.image}></Image>
+            <Image
+              alt="alt"
+              height={200}
+              className=" rounded-t-2xl"
+              src={project.image}
+            ></Image>
             <h1 className="px-2 font-montserrat">{project.title}</h1>
 
             <div className="flex flex-wrap gap-1 px-2">

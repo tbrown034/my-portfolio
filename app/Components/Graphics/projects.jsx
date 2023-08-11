@@ -25,7 +25,7 @@ export default function Projects() {
                 : ""
             }`}
           >
-            <Image alt="alt" src={viz.image}></Image>
+            <Image alt="alt" className=" rounded-t-2xl" src={viz.image}></Image>
             <div className="px-6">
               <Image alt="Oklahoma Watch logo" src={photo}></Image>
             </div>

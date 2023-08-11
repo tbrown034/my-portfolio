@@ -93,7 +93,7 @@ export default function techIcon() {
       {techs.map((tech) => (
         <div
           key={tech.name}
-          className="flex flex-col items-center justify-center px-1 py-2 transition-all duration-300 ease-in-out transform bg-white rounded-lg cursor-pointer hover:scale-105 hover:shadow-lg"
+          className="flex flex-col items-center justify-center px-1 py-2 transition-all duration-300 ease-in-out transform bg-white rounded-lg cursor-pointer hover:scale-105 hover:shadow-lg dark:bg-blue-100 dark:text-blue-800"
         >
           <tech.Icon className="w-icon-sm h-icon-sm" />
           <h3 className="text-sm font-semibold text-center">{tech.name}</h3>

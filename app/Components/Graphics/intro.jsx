@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Intro() {
   return (
     <section className="flex flex-col gap-4">
-      <div className="bg-blue-100 text-sm font-medium inline-flex items-center px-2.5 py-0.5 rounded-md dark:bg-gray-700  dark:text-blue-400 lg:self-center self-start gap-2">
+      <div className="bg-blue-100 text-sm font-medium inline-flex items-center px-2.5 py-0.5 rounded-md dark:bg-blue-300  dark:text-blue-800  lg:self-center self-start gap-2">
         <ChartBarIcon className="w-6 h-6 font-bold" />
         <p className="text-lg">Graphics</p>
       </div>
@@ -18,7 +18,7 @@ export default function Intro() {
         Reporting{" "}
         <Link
           href="/"
-          className="px-0.5 bg-blue-300 rounded shadow-md dark:bg-blue-600 font-robotoSlab hover:underline whitespace-nowrap"
+          className="px-0.5 bg-blue-300 rounded shadow-md font-robotoSlab hover:underline whitespace-nowrap dark:bg-blue-500  dark:text-blue-100"
         >
           (IRE and NICAR){" "}
         </Link>

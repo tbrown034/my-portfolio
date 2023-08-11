@@ -25,14 +25,14 @@ export default function Header() {
     <header className="flex items-center justify-between p-2 ">
       <a
         href="/"
-        className="text-lg font-semibold text-blue-900 opacity-90 font-majorMono sm:hidden"
+        className="text-lg font-semibold text-blue-900 opacity-90 dark:text-blue-100 font-majorMono sm:hidden"
         style={{ textShadow: "rgba(0, 0, 0, 0.5) 1px 0px 0px" }}
       >
         &lt;TrevorBrown /&gt;
       </a>
       <Link
         href="/"
-        className="hidden text-lg font-semibold text-blue-900 opacity-90 lg:text-2xl sm:flex font-majorMono"
+        className="hidden text-lg font-semibold text-blue-900 dark:text-blue-100 opacity-90 lg:text-2xl sm:flex font-majorMono"
         style={{ textShadow: "rgba(0, 0, 0, 0.5) 1px 0px 0px" }}
       >
         &lt;TB /&gt;
