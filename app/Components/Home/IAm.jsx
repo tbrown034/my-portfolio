@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 export default function IAm() {
   return (
     <>
-      <div className="flex flex-col flex-wrap gap-1 text-xl text-blue-800 dark:text-blue-200 xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-montserrat">
+      <div className="flex flex-col flex-wrap gap-1 text-xl font-bold text-blue-800 dark:text-blue-200 xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-montserrat">
         <motion.h2
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}

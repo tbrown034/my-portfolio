@@ -12,7 +12,7 @@ export default function Timeline() {
             <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-4 ring-white ">
               <AcademicCapIcon />
             </span>
-            <h3 className="flex items-center mb-1 text-lg font-semibold text-blue-900 dark:text-white">
+            <h3 className="flex items-center mb-1 text-lg font-semibold ">
               Indiana University
             </h3>
             <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">

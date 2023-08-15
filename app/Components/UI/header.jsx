@@ -8,6 +8,7 @@ import { NewspaperIcon } from "@heroicons/react/24/outline";
 import { ChartBarIcon } from "@heroicons/react/24/outline";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import { MoonIcon } from "@heroicons/react/24/outline";
+
 import { SunIcon } from "@heroicons/react/24/outline";
 import { DarkModeContext } from "../../utilities/DarkModeContext.jsx";
 import { UserIcon } from "@heroicons/react/24/outline";
@@ -22,43 +23,43 @@ export default function Header() {
   };
 
   return (
-    <header className="flex items-center justify-between p-2 ">
+    <header className="flex items-center justify-between p-2 text-blue-900 dark:text-blue-100 ">
       <a
         href="/"
-        className="text-lg font-semibold text-blue-900 opacity-90 dark:text-blue-100 font-majorMono sm:hidden"
+        className="text-lg font-semibold font-majorMono sm:hidden"
         style={{ textShadow: "rgba(0, 0, 0, 0.5) 1px 0px 0px" }}
       >
         &lt;TrevorBrown /&gt;
       </a>
       <Link
         href="/"
-        className="hidden text-lg font-semibold text-blue-900 dark:text-blue-100 opacity-90 lg:text-2xl sm:flex font-majorMono"
+        className="hidden text-lg font-semibold lg:text-2xl sm:flex font-majorMono"
         style={{ textShadow: "rgba(0, 0, 0, 0.5) 1px 0px 0px" }}
       >
         &lt;TB /&gt;
       </Link>
       <div>
-        <div className="hidden gap-4 p-2 font-semibold xl:gap-24 lg:gap-16 lg:text-lg sm:flex opacity-80">
+        <div className="hidden gap-4 p-2 font-semibold xl:gap-24 lg:gap-16 lg:text-lg sm:flex opacity-90">
           <a href="#coding">
-            <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 active:bg-blue-400">
+            <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 dark:hover:bg-blue-700 focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 active-blue-600 ">
               <CodeBracketIcon className="w-6 h-6" />
               <p>Coding</p>
             </div>
           </a>
           <a href="#journalism">
-            <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 active:bg-blue-400">
+            <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 dark:hover:bg-blue-700 focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 active-blue-600">
               <NewspaperIcon className="w-6 h-6" />
               <p>Journalism</p>
             </div>
           </a>
           <a href="#dataviz">
-            <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 active:bg-blue-400">
+            <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 dark:hover:bg-blue-700 focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 active-blue-600">
               <ChartBarIcon className="w-6 h-6" />
               <p>Data</p>
             </div>
           </a>
           <a href="#about">
-            <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 active:bg-blue-400">
+            <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 dark:hover:bg-blue-700 focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 active-blue-600">
               <UserIcon className="w-6 h-6" />
               <p>About</p>
             </div>
@@ -70,16 +71,16 @@ export default function Header() {
       </div>
       <button
         onClick={handleToggle}
-        className="items-center justify-center hidden gap-1 p-1 bg-blue-800 rounded-lg text-blue-50 opacity-80 hover:bg-blue-700 active:bg-blue-900 sm:flex"
+        className="items-center justify-center hidden gap-1 p-1 text-blue-100 bg-blue-800 rounded-lg dark:text-blue-900 dark:bg-blue-100 sm:flex "
       >
         {isDarkMode ? (
           <>
-            <SunIcon className="w-6 h-6 text-yellow-300" />
+            <SunIcon className="w-6 h-6" />
             <p className="">Light Mode</p>
           </>
         ) : (
           <>
-            <MoonIcon className="w-6 h-6 text-blue-300" />
+            <MoonIcon className="w-5 h-5 " />
             <p className="">Dark Mode</p>
           </>
         )}

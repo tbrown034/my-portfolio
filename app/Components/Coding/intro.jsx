@@ -18,7 +18,7 @@ export default function intro() {
         applying and being accepted into the{" "}
         <Link
           href="/"
-          className="px-0.5 bg-blue-300 rounded shadow-md dark:bg-blue-500 font-robotoSlab hover:underline whitespace-nowrap   dark:text-blue-100"
+          className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100"
         >
           University of Oklahoma's
         </Link>{" "}
@@ -29,7 +29,7 @@ export default function intro() {
         course led by{" "}
         <Link
           href="/"
-          className="px-0.5 bg-blue-300 rounded shadow-md dark:bg-blue-500 font-robotoSlab hover:underline whitespace-nowrap  dark:text-blue-100"
+          className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100"
         >
           FullStack Academy
         </Link>

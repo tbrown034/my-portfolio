@@ -17,7 +17,7 @@ export default function Intro() {
           threats to democracy, health issues and policies and just about
           everythign else in between. Most recently, I was an investigative
           journalist with{" "}
-          <span className=" px-0.5 bg-blue-300 rounded shadow-md dark:bg-blue-600 font-robotoSlab hover:underline whitespace-nowrap  dark:text-blue-100">
+          <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
             Oklahoma Watch
           </span>
           , a non-profit newsroom based in Oklahoam City. In addition to writing
@@ -28,15 +28,15 @@ export default function Intro() {
         <p className="text-xl leading-normal font-robotoSlab">
           During my time there, I was awarded Oklahoma Society of Professional
           Journalists'{" "}
-          <span className="px-0.5 bg-blue-300 rounded shadow-md dark:bg-blue-600 whitespace-nowrap font-robotoSlab hover:underline ">
+          <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100 ">
             Reporter of the Year
           </span>{" "}
           in 2020 , The Great Plains Newspaper{" "}
-          <span className="whitespace-nowrap px-0.5 bg-blue-300 rounded shadow-md  dark:text-blue-100 dark:bg-blue-600 font-robotoSlab hover:underline">
+          <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
             Writer of the Year
           </span>{" "}
           in 2021 and Oklahoma SPJʼs{" "}
-          <span className=" px-0.5 whitespace-nowrap bg-blue-300 rounded shadow-md dark:bg-blue-600 font-robotoSlab hover:underline  dark:text-blue-100">
+          <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
             first place awards
           </span>{" "}
           in 2022 for In-depth Enterprise and Investigative Reporting and

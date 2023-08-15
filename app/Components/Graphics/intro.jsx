@@ -15,14 +15,14 @@ export default function Intro() {
         {" "}
         Through a mix of self-learning and training through the Investiative
         Reporters and Editors' National Institute for Computer Assisted
-        Reporting{" "}
+        Reporting (
         <Link
           href="/"
-          className="px-0.5 bg-blue-300 rounded shadow-md font-robotoSlab hover:underline whitespace-nowrap dark:bg-blue-500  dark:text-blue-100"
+          className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100"
         >
-          (IRE and NICAR){" "}
+          IRE and NICAR
         </Link>
-        , I became a newsroom leader at Oklahoma Watch for our graphics and
+        ), I became a newsroom leader at Oklahoma Watch for our graphics and
         visualzing work.
       </p>
       <p className="text-xl leading-normal font-robotoSlab">

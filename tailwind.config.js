@@ -10,15 +10,14 @@ module.exports = {
     extend: {
       screens: {
         xs: "375px",
-        mdlg: "896px", // new breakpoint between md (768px) and lg (1024px)
-        xl: "1400px", // new breakpoint for xl
+        mdlg: "896px",
+        xl: "1400px",
       },
-
       minHeight: {
         "1/2-screen": "50vh",
         "110-screen": "110vh",
         "90-screen": "90vh",
-        "95-screen": "95vh", // corrected from vh to 95vh
+        "95-screen": "95vh",
       },
       fontFamily: {
         inter: ["var(--font-inter)"],
@@ -43,14 +42,21 @@ module.exports = {
         nunitoSans: ["var(--font-nunito-sans)"],
       },
       width: {
-        "icon-sm": "4rem", // Small icon size
-        "icon-md": "5rem", // Large icon size
-        "icon-lg": "6rem", // Large icon size
+        "icon-sm": "4rem",
+        "icon-md": "5rem",
+        "icon-lg": "6rem",
       },
       height: {
-        "icon-sm": "4rem", // Small icon size
-        "icon-md": "5rem", // Large icon size
-        "icon-lg": "6rem", // Large icon size
+        "icon-sm": "4rem",
+        "icon-md": "5rem",
+        "icon-lg": "6rem",
+      },
+      borderWidth: {
+        3: "3px",
+      },
+      textDecoration: ["responsive", "hover", "focus"], // This enables responsive, hover, and focus variants
+      textDecorationThickness: {
+        3: "3px", // This adds the decoration-3 utility
       },
     },
   },
