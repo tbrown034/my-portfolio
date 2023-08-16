@@ -30,7 +30,7 @@ export default function Projects() {
         {webProjects.slice(0, displayCount).map((project, index) => (
           <div
             key={index}
-            className={`flex flex-col justify-between gap-2 pb-4 "border border-white shadow-lg rounded-t-2xl dark:border-gray-500" dark:text-blue-950 dark:bg-blue-100  rounded-2xl   bg-sky-50 ${
+            className={`flex flex-col justify-between gap-2 pb-4 border-4 :border-white shadow-lg rounded-t-2xl  dark:text-blue-950 dark:bg-blue-100  rounded-2xl   bg-white ${
               index === displayCount - 1 && displayCount === 4
                 ? "lg:col-start-2 lg:col-end-3"
                 : ""
@@ -82,7 +82,7 @@ export default function Projects() {
       {displayCount < webProjects.length && (
         <div className="flex justify-center p-2">
           <button
-            className="p-2 px-4 text-xl font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-500"
+            className="p-2 px-4 text-xl font-bold text-white bg-blue-800 rounded-lg sm:px-8 dark:text-blue-900 dark:bg-blue-100 sm:flex hover:bg-blue-700 dark:hover:bg-blue-300"
             onClick={() => setDisplayCount((prevCount) => prevCount + 4)}
           >
             Show More
@@ -92,7 +92,7 @@ export default function Projects() {
       {displayCount > 4 && (
         <div className="flex justify-center p-2">
           <button
-            className="p-2 px-4 text-xl font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-500"
+            className="p-2 px-4 text-xl font-bold text-white bg-blue-800 rounded-lg sm:px-8 dark:text-blue-900 dark:bg-blue-100 sm:flex hover:bg-blue-700 dark:hover:bg-blue-300"
             onClick={() => setDisplayCount(4)}
           >
             Show Less

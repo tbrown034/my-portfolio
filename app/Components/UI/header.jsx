@@ -41,7 +41,7 @@ export default function Header() {
       <div>
         <div className="hidden gap-4 p-2 font-semibold xl:gap-24 lg:gap-16 lg:text-lg sm:flex opacity-90">
           <a href="#coding">
-            <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 dark:hover:bg-blue-700 focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 active-blue-600 ">
+            <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 dark:hover:bg-blue-600 focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 active-blue-600 ">
               <CodeBracketIcon className="w-6 h-6" />
               <p>Coding</p>
             </div>
@@ -71,7 +71,7 @@ export default function Header() {
       </div>
       <button
         onClick={handleToggle}
-        className="items-center justify-center hidden gap-1 p-1 text-blue-100 bg-blue-800 rounded-lg dark:text-blue-900 dark:bg-blue-100 sm:flex "
+        className="items-center justify-center hidden gap-1 p-1 text-blue-100 bg-blue-900 rounded-lg dark:text-blue-900 dark:bg-blue-100 sm:flex hover:bg-blue-700 dark:hover:bg-blue-300 "
       >
         {isDarkMode ? (
           <>

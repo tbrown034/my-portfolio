@@ -4,7 +4,7 @@ import Image from "next/image";
 import photo from "../../../public/images/okwatch.png";
 import Link from "next/link";
 import { clips } from "../../data/journalismClips.js";
-import { GlobeAltIcon } from "@heroicons/react/24/outline";
+import { NewspaperIcon } from "@heroicons/react/24/outline";
 import mug from "../../../public/images/trevorPhoto2.jpeg";
 
 export default function Clips() {
@@ -30,7 +30,7 @@ export default function Clips() {
         {clips.slice(0, displayCount).map((clip, index) => (
           <div
             key={index}
-            className={`flex flex-col justify-between gap-2 pb-4 "border border-white shadow-lg rounded-t-2xl dark:border-gray-500" dark:text-blue-950 dark:bg-blue-100  rounded-2xl   bg-sky-50 ${
+            className={`flex flex-col justify-between gap-2 pb-4 border-4 :border-white shadow-lg rounded-t-2xl  dark:text-blue-950 dark:bg-blue-100  rounded-2xl   bg-white${
               index === displayCount - 1 && displayCount === 4
                 ? "lg:col-start-2 lg:col-end-3"
                 : ""
@@ -68,7 +68,7 @@ export default function Clips() {
                 href={clip.siteLink}
               >
                 <p>Full Article</p>
-                <GlobeAltIcon className="w-12 h-12" />
+                <NewspaperIcon className="w-12 h-12" />
               </Link>
             </div>
           </div>
@@ -77,7 +77,7 @@ export default function Clips() {
       {displayCount < clips.length && (
         <div className="flex justify-center p-2">
           <button
-            className="p-2 px-4 text-xl font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-500"
+            className="p-2 px-4 text-xl font-bold text-white bg-blue-800 rounded-lg sm:px-8 dark:text-blue-900 dark:bg-blue-100 sm:flex hover:bg-blue-700 dark:hover:bg-blue-300"
             onClick={() => setDisplayCount((prevCount) => prevCount + 4)}
           >
             Show More
@@ -87,7 +87,7 @@ export default function Clips() {
       {displayCount > 4 && (
         <div className="flex justify-center p-2">
           <button
-            className="p-2 px-4 text-xl font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-500"
+            className="p-2 px-4 text-xl font-bold text-white bg-blue-800 rounded-lg sm:px-8 dark:text-blue-900 dark:bg-blue-100 sm:flex hover:bg-blue-700 dark:hover:bg-blue-300"
             onClick={() => setDisplayCount(4)}
           >
             Show Less

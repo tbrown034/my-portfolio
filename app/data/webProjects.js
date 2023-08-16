@@ -28,23 +28,22 @@ export const webProjects = [
   },
   {
     id: 2,
-    title: "Weather Forecast",
-    image: weather,
+    title: "DentalGPT",
+    image: dentalgpt,
     technologies: [
       "JavaScript",
       "React",
       "Next.js",
-      "Tailwind CSS",
-      "HeroIcons",
-      "Headless UI",
-      "Fetch",
       "Framer Motion",
+      "Tailwind CSS",
+      "Open AI",
     ],
     description:
-      "A playful project that uses WeatherAPI for real-time weather forecasts. Tailwind CSS and HeroIcons were used for interface design.",
-    githubLink: "https://my-weather-app-silk-six.vercel.app/",
-    siteLink: "https://github.com/tbrown034/my-weather-app",
+      "An AI-powered application that uses Chat-GTP's API to answer dental care questions, with guardrails for topic relevance.",
+    githubLink: "https://github.com/tbrown034/dental-gpt-second-try",
+    siteLink: "https://dental-gpt-second-try.vercel.app/",
   },
+
   {
     id: 3,
     title: "Campaign Finance Visualizer",
@@ -83,21 +82,24 @@ export const webProjects = [
   },
   {
     id: 5,
-    title: "DentalGPT",
-    image: dentalgpt,
+    title: "Weather Forecast",
+    image: weather,
     technologies: [
       "JavaScript",
       "React",
       "Next.js",
-      "Framer Motion",
       "Tailwind CSS",
-      "Open AI",
+      "HeroIcons",
+      "Headless UI",
+      "Fetch",
+      "Framer Motion",
     ],
     description:
-      "An AI-powered application that uses Chat-GTP's API to answer dental care questions, with guardrails for topic relevance.",
-    githubLink: "https://github.com/tbrown034/dental-gpt-second-try",
-    siteLink: "https://dental-gpt-second-try.vercel.app/",
+      "A playful project that uses WeatherAPI for real-time weather forecasts. Tailwind CSS and HeroIcons were used for interface design.",
+    githubLink: "https://github.com/tbrown034/my-weather-app",
+    siteLink: "https://my-weather-app-silk-six.vercel.app",
   },
+
   {
     id: 6,
     title: "MyBrewApp",

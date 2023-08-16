@@ -7,18 +7,18 @@ import vaccination from "../../public/images/vaccination.png";
 export const graphics = [
   {
     id: 1,
-    headline:
-      "In Three Days, Oklahoma Sees Number of Mass Shooting Since 2009 Increase from Five to Seven",
-    text: "Since 2009, there have been 7 mass shootings in Oklahoma, resulting in 27 people shot and killed and 12 people shot and wounded, according to the Everytown Research & Policy, a gun-control advocacy group. Two of those shooting have occurred since Monday.",
-    image: shootings,
+    headline: "Which State Lawmakers Have the Biggest Campaign War Chests?",
+    text: "Many Oklahoma lawmakers will be in a good position financially come re-election time. State lawmakers reported an average of $32,800.",
+    image: donations,
+    date: "Nov 4, 2019",
+    program: "Tableau",
     publication: "Oklahoma Watch",
-    program: "DataWrapper",
-    date: "June 3, 2022",
     summary:
-      "Graphic illustrating the increase of mass shootings in Oklahoma, highlighting a surge in recent incidents.",
+      "Infographic displaying campaign financial statuses of Oklahoma lawmakers in anticipation of re-election.",
     siteLink:
-      "https://oklahomawatch.org/2022/06/03/how-oklahoma-lawmakers-have-loosened-gun-regulations-the-past-decade%EF%BF%BC/",
+      "https://oklahomawatch.org/2021/02/08/oklahoma-lawmakers-report-large-campaign-reserves-after-2020-races/",
   },
+
   {
     id: 2,
     headline: "ICE Detainers Issued in Oklahoma",
@@ -73,17 +73,19 @@ export const graphics = [
     siteLink:
       "https://oklahomawatch.org/2021/07/30/as-other-governors-pull-out-vaccine-media-blitz-oklahomas-stitt-largely-silent/",
   },
+
   {
     id: 6,
-    headline: "Which State Lawmakers Have the Biggest Campaign War Chests?",
-    text: "Many Oklahoma lawmakers will be in a good position financially come re-election time. State lawmakers reported an average of $32,800.",
-    image: donations,
-    date: "Nov 4, 2019",
-    program: "Tableau",
+    headline:
+      "In Three Days, Oklahoma Sees Number of Mass Shooting Since 2009 Increase from Five to Seven",
+    text: "Since 2009, there have been 7 mass shootings in Oklahoma, resulting in 27 people shot and killed and 12 people shot and wounded, according to the Everytown Research & Policy, a gun-control advocacy group. Two of those shooting have occurred since Monday.",
+    image: shootings,
     publication: "Oklahoma Watch",
+    program: "DataWrapper",
+    date: "June 3, 2022",
     summary:
-      "Infographic displaying campaign financial statuses of Oklahoma lawmakers in anticipation of re-election.",
+      "Graphic illustrating the increase of mass shootings in Oklahoma, highlighting a surge in recent incidents.",
     siteLink:
-      "https://oklahomawatch.org/2021/02/08/oklahoma-lawmakers-report-large-campaign-reserves-after-2020-races/",
+      "https://oklahomawatch.org/2022/06/03/how-oklahoma-lawmakers-have-loosened-gun-regulations-the-past-decade%EF%BF%BC/",
   },
 ];

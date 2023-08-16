@@ -8,23 +8,23 @@ export default function techStack() {
       </h1>
       <p className="text-xl leading-normal font-robotoSlab ">
         I specialize in a tech stack that features{" "}
-        <span className="px-0.5 bg-blue-800 rounded shadow-md text-blue-50 whitespace-nowrap dark:bg-blue-500">
+        <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
           JavaScript,
         </span>{" "}
-        <span className="px-0.5 bg-blue-800  dark:bg-blue-500 rounded shadow-md text-blue-50 whitespace-nowrap">
+        <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
           Node.js,
         </span>{" "}
-        <span className="px-0.5 bg-blue-800    dark:bg-blue-500 rounded shadow-md text-blue-50 whitespace-nowrap ">
+        <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100 ">
           React,
         </span>{" "}
-        <span className="px-0.5  dark:bg-blue-500 bg-blue-800 rounded shadow-md text-blue-50 whitespace-nowrap">
+        <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
           Next.js,
         </span>{" "}
-        <span className="px-0.5  dark:bg-blue-500 bg-blue-800 rounded shadow-md text-blue-50 whitespace-nowrap">
+        <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
           PostgreSQL,
         </span>{" "}
         and{" "}
-        <span className="px-0.5  dark:bg-blue-500 bg-blue-800 rounded shadow-md text-blue-50 whitespace-nowrap">
+        <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100p">
           Tailwind CSS.
         </span>
       </p>
@@ -34,23 +34,23 @@ export default function techStack() {
 
       <p className="text-xl leading-normal font-robotoSlab">
         I also have experience using JS libraries that includes{" "}
-        <span className="px-0.5 bg-blue-800 rounded shadow-md text-blue-50 whitespace-nowrap dark:bg-blue-500">
+        <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
           Framer Motion,
         </span>{" "}
-        <span className="px-0.5 bg-blue-800 rounded shadow-md text-blue-50 whitespace-nowrap dark:bg-blue-500">
+        <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
           Chart.js,
         </span>{" "}
-        <span className="px-0.5 bg-blue-800 rounded shadow-md text-blue-50 whitespace-nowrap dark:bg-blue-500">
+        <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
           React Bootstrap,
         </span>{" "}
-        <span className="px-0.5 bg-blue-800 rounded shadow-md text-blue-50 whitespace-nowrap dark:bg-blue-500">
+        <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
           MUI,
         </span>{" "}
-        <span className="px-0.5 bg-blue-800 rounded shadow-md text-blue-50 whitespace-nowrap dark:bg-blue-500">
-          Semantic UI,
+        <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
+          Semantic UI
         </span>{" "}
         and{" "}
-        <span className="px-0.5 bg-blue-800 rounded shadow-md text-blue-50 whitespace-nowrap dark:bg-blue-500">
+        <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
           Axios.
         </span>
       </p>
