@@ -56,7 +56,7 @@ export default function Projects() {
       {displayCount < graphics.length && (
         <div className="flex justify-center p-2">
           <button
-            className="p-2 px-4 text-xl font-bold text-white bg-blue-800 rounded-lg sm:px-8 dark:text-blue-900 dark:bg-blue-100 sm:flex hover:bg-blue-700 dark:hover:bg-blue-300"
+            className="p-2 px-4 text-xl font-bold text-white bg-blue-900 rounded-lg sm:px-8 dark:text-blue-950 dark:bg-blue-50 hover:bg-blue-700 active:bg-blue-800 focus:bg-blue-500 dark:hover:bg-blue-200 focus:outline-none focus:ring focus:ring-blue-400"
             onClick={() => setDisplayCount((prevCount) => prevCount + 4)}
           >
             Show More
@@ -66,10 +66,10 @@ export default function Projects() {
       {displayCount > 4 && (
         <div className="flex justify-center p-2">
           <button
-            className="p-2 px-4 text-xl font-bold text-white bg-blue-800 rounded-lg sm:px-8 dark:text-blue-900 dark:bg-blue-100 sm:flex hover:bg-blue-700 dark:hover:bg-blue-300"
+            className="p-2 px-4 text-xl font-bold text-white bg-blue-900 rounded-lg sm:px-8 dark:text-blue-950 dark:bg-blue-50 hover:bg-blue-700 active:bg-blue-800 focus:bg-blue-500 dark:hover:bg-blue-200 focus:outline-none focus:ring focus:ring-blue-400"
             onClick={() => setDisplayCount(4)}
           >
-            Show Less
+            Show Fewer
           </button>
         </div>
       )}

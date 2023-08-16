@@ -9,19 +9,23 @@ export default function techStack() {
       <p className="text-xl leading-normal font-robotoSlab ">
         I specialize in a tech stack that features{" "}
         <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
-          JavaScript,
-        </span>{" "}
+          JavaScript
+        </span>
+        ,{" "}
         <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
-          Node.js,
-        </span>{" "}
+          Node.js
+        </span>
+        ,{" "}
         <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100 ">
-          React,
-        </span>{" "}
+          React
+        </span>
+        ,{" "}
         <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
-          Next.js,
-        </span>{" "}
+          Next.js
+        </span>
+        ,{" "}
         <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
-          PostgreSQL,
+          PostgreSQL
         </span>{" "}
         and{" "}
         <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100p">
@@ -35,17 +39,21 @@ export default function techStack() {
       <p className="text-xl leading-normal font-robotoSlab">
         I also have experience using JS libraries that includes{" "}
         <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
-          Framer Motion,
-        </span>{" "}
+          Framer Motion
+        </span>
+        ,{" "}
         <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
-          Chart.js,
-        </span>{" "}
+          Chart.js
+        </span>
+        ,{" "}
         <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
-          React Bootstrap,
-        </span>{" "}
+          React Bootstrap
+        </span>
+        ,{" "}
         <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
-          MUI,
-        </span>{" "}
+          MUI
+        </span>
+        ,{" "}
         <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
           Semantic UI
         </span>{" "}
