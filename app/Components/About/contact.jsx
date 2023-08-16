@@ -26,11 +26,16 @@ export default function Contact() {
           placeholder="Let me know what you think!"
         ></textarea>
 
-        <div className="flex justify-center mt-4">
-          <button className="flex items-center gap-2 p-2 font-bold text-white transition-colors duration-200 bg-blue-800 border-2 border-blue-800 rounded-lg hover:bg-blue-400 active:bg-blue-500">
+        <div className="mt-4">
+          <a
+            className="flex flex-col items-center justify-center p-2 px-4 text-xl font-bold text-white bg-blue-800 rounded-2xl sm:px-8 dark:text-blue-950 dark:bg-blue-50 hover:bg-blue-600 active:bg-blue-950 focus:bg-blue-500 dark:hover:bg-blue-200 focus:outline-none focus:ring focus:ring-blue-400"
+            href="/trevorBrownResume.pdf"
+            download="trevorResume"
+          >
+            {" "}
             <AiOutlineMail className="w-icon-sm h-icon-sm" />
-            Send
-          </button>
+            <p className="text-sm font-semibold text-center">Send Message</p>
+          </a>
         </div>
       </form>
     </section>

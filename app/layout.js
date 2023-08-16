@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
         lang="en"
       >
         <body>
-          <div className="bg-slate-50 text-blue-950 dark:bg-blue-950 dark:text-blue-50 scroll-smooth ">
+          <div className=" text-blue-950 dark:bg-blue-950 dark:text-blue-50 scroll-smooth">
             <Header />
             {children}
             <Footer />

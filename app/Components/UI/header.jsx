@@ -40,28 +40,28 @@ export default function Header() {
       </Link>
       <div>
         <div className="hidden gap-4 p-2 font-semibold xl:gap-24 lg:gap-16 lg:text-lg sm:flex opacity-90">
-          <a href="#coding">
+          <a href="/#coding">
             <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 dark:hover:bg-blue-600 focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 active-blue-600 ">
               <CodeBracketIcon className="w-6 h-6" />
               <p>Coding</p>
             </div>
           </a>
-          <a href="#journalism">
+          <a href="/#journalism">
             <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 dark:hover:bg-blue-700 focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 active-blue-600">
               <NewspaperIcon className="w-6 h-6" />
               <p>Journalism</p>
             </div>
           </a>
-          <a href="#dataviz">
+          <a href="/#dataviz">
             <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 dark:hover:bg-blue-700 focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 active-blue-600">
               <ChartBarIcon className="w-6 h-6" />
               <p>Data</p>
             </div>
           </a>
-          <a href="#about">
+          <a href="/#about">
             <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 dark:hover:bg-blue-700 focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 active-blue-600">
               <UserIcon className="w-6 h-6" />
-              <p>About</p>
+              <p>Contact</p>
             </div>
           </a>
         </div>
