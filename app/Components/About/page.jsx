@@ -4,7 +4,6 @@ import Links from "./Links";
 import Resume from "./Resume";
 import AboutPhoto from "./AboutPhoto";
 import AboutText from "./AboutText";
-import JobText from "./jobText";
 
 export default function about() {
   return (

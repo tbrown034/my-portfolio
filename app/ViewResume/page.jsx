@@ -13,7 +13,7 @@ export default function Page() {
       <div className="flex flex-col items-center justify-center gap-4 sm:flex-row ">
         <a
           className="flex flex-col items-center justify-center w-2/3 p-2 px-4 font-bold text-white bg-blue-800 sm:w-1/3 rounded-2xl sm:px-8 dark:text-blue-950 dark:bg-blue-50 hover:bg-blue-600 active:bg-blue-950 focus:bg-blue-500 dark:hover:bg-blue-200 focus:outline-none focus:ring focus:ring-blue-400 "
-          href="/trevorBrownResume.pdf"
+          href="/"
           download="trevorResume"
         >
           <AiOutlineHome className="w-icon-sm h-icon-sm" />
@@ -21,8 +21,7 @@ export default function Page() {
         </a>
         <a
           className="flex flex-col items-center justify-center w-2/3 p-2 px-4 text-xl font-bold text-white bg-blue-800 sm:w-1/3 rounded-2xl sm:px-8 dark:text-blue-950 dark:bg-blue-50 hover:bg-blue-600 active:bg-blue-950 focus:bg-blue-500 dark:hover:bg-blue-200 focus:outline-none focus:ring focus:ring-blue-400"
-          href="/trevorBrownResume.pdf"
-          download="trevorResume"
+          href="/"
         >
           {" "}
           <AiOutlineMail className="w-icon-sm h-icon-sm" />
@@ -30,8 +29,7 @@ export default function Page() {
         </a>
         <a
           className="flex flex-col items-center justify-center w-2/3 p-2 px-4 text-xl font-bold text-white bg-blue-800 sm:w-1/3 rounded-2xl sm:px-8 dark:text-blue-950 dark:bg-blue-50 hover:bg-blue-600 active:bg-blue-950 focus:bg-blue-500 dark:hover:bg-blue-200 focus:outline-none focus:ring focus:ring-blue-400"
-          href="/trevorBrownResume.pdf"
-          download="trevorResume"
+          href="mailto:trevorbrown.web@gmail.com"
         >
           {" "}
           <AiOutlineDownload className="w-icon-sm h-icon-sm" />
