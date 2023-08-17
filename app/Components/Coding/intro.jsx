@@ -13,9 +13,10 @@ export default function intro() {
       </h2>
 
       <p className="text-xl leading-normal font-robotoSlab sm:text-2xl">
-        In 2022, after more than a decade in journalism, I decided to take a
-        leap and puruse my lifelong goal of expanding my tech knowlege. So after
-        applying and being accepted into the{" "}
+        After a decade and a half in journalism, feeling the burnout that many
+        experienced as of late, I took a leap in 2022. Leaving my job took a
+        leap. I left the job I'd held for the last seven years and enrolled in
+        the{" "}
         <a
           href="https://bootcamp.outreach.ou.edu/"
           target="_blank"
@@ -23,11 +24,11 @@ export default function intro() {
         >
           University of Oklahoma's
         </a>{" "}
-        Outreach Web Development Bootcamp.
+        Outreach Web Development Bootcamp in 2022.
       </p>
       <p className="text-xl leading-normal font-robotoSlab sm:text-2xl">
-        Since earning my certificate from the three-month, five-day-a-week
-        course led by{" "}
+        Despite the challenges, I fell in love with programing. And since
+        earning my certificate from the intensive{" "}
         <a
           href="https://www.fullstackacademy.com/"
           target="_blank"
@@ -35,7 +36,7 @@ export default function intro() {
         >
           FullStack Academy
         </a>
-        , I've been doing freelance, continuing my learning journey and seeing
+        -led course, I've ehnancing my skills, doing freelance work and seeing
         what I can build next.
       </p>
     </section>

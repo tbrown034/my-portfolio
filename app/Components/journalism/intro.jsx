@@ -10,23 +10,22 @@ export default function Intro() {
         </div>
 
         <h2 className="text-3xl font-bold lg:text-center font-montserrat sm:text-4xl ">
-          Award-Winning Investigavie Journalism
+          Award-Winning Investigative Journalism
         </h2>
         <p className="text-xl leading-normal font-robotoSlab">
-          I bring nearly two decades of reporting experience, covering politics,
-          threats to democracy, health issues and policies and just about
-          everythign else in between. Most recently, I was an investigative
-          journalist with{" "}
+          With nearly two decades of experience as a reporter, I've covered
+          politics, crime, the military, health policies and more. Most
+          recently, as an investigative journalist at{" "}
           <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
             Oklahoma Watch
           </span>
-          , a non-profit newsroom based in Oklahoam City. In addition to writing
-          a weekly newsletter that went out to thousands, freuqently being a
-          guest on our weekly podcast, my work was regularly picked up by the
-          largest papers in the state, including the Oklahoman and Tulsa World.
+          , an award-winning non-profit newsroom, my reach extended to thousands
+          through a weekly newsletter, regular podcast, radio and TV appearances
+          and reprints in state newspapers, including the Oklahoman and Tulsa
+          World."{" "}
         </p>
         <p className="text-xl leading-normal font-robotoSlab">
-          During my time there, I was awarded Oklahoma Society of Professional
+          In the past few years, I was awarded Oklahoma Society of Professional
           Journalists'{" "}
           <a
             href="https://oklahomawatch.org/2020/07/24/oklahoma-watch-journalists-earn-eight-first-place-awards-in-state-contest/"
