@@ -35,8 +35,8 @@ export default function Intro() {
         >
           FullStack Academy
         </a>
-        -led course, I've building up my skills, doing freelance work and seeing
-        what I can build next.
+        -led course, I've been building up my skills, doing freelance work and
+        seeing what I can build next.
       </p>
     </section>
   );

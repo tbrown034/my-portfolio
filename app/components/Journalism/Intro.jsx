@@ -16,23 +16,26 @@ export default function Intro() {
           With nearly two decades of experience as a reporter, I've covered
           politics, crime, the military, health policies and more. Most
           recently, as an investigative journalist at{" "}
-          <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
+          <a
+            href="https://oklahomawatch.org/"
+            className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100"
+          >
             Oklahoma Watch
-          </span>
+          </a>
           , an award-winning non-profit newsroom, my reach extended to thousands
           through a weekly newsletter, regular podcast, radio and TV appearances
           and reprints in state newspapers, including the Oklahoman and Tulsa
           World."{" "}
         </p>
         <p className="text-xl leading-normal font-robotoSlab">
-          In the past few years, I was awarded Oklahoma Society of Professional
+          In the past few years, I won the Oklahoma Society of Professional
           Journalists'{" "}
           <a
             href="https://oklahomawatch.org/2020/07/24/oklahoma-watch-journalists-earn-eight-first-place-awards-in-state-contest/"
             target="_blank"
             className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100 "
           >
-            Reporter of the Year in 2020
+            Reporter of the Year award in 2020
           </a>
           , The Great Plains Journalism Awards'{" "}
           <a

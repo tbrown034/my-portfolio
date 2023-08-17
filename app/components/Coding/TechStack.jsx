@@ -37,7 +37,7 @@ export default function TechStack() {
       </div>
 
       <p className="text-xl leading-normal font-robotoSlab">
-        I also have experience using JS libraries that includes{" "}
+        I also have experience using JS libraries that include{" "}
         <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
           Framer Motion
         </span>

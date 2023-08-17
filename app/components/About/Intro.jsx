@@ -25,8 +25,7 @@ export default function Intro() {
       <p className="text-xl leading-normal font-robotoSlab">
         If you're looking for someone with a unique blend of storytelling and
         technical skills, or just want to share ideas and collaborate, please
-        don't hesitate to reach out. I'm always open to new opportunities and
-        challenges.
+        don't hesitate to reach out!
       </p>
     </section>
   );

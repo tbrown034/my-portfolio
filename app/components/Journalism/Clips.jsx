@@ -16,15 +16,15 @@ export default function Clips() {
         Selected Articles
       </h1>
       <p className="text-xl font-robotoSlab ">
-        As data-driven investigative reporter for more than 15 years, I have
+        As a data-driven investigative reporter for more than 15 years, I have
         written hundreds, if not thousands, of articles about politics,
         government corruption or inefficiencies and stories that matter to the
         community.
       </p>
       <p className="text-xl font-robotoSlab ">
-        I pride myself on well-researched, well-sourced articles explain, reveal
-        or uncover something that would otherwise remain hidden. Here are some
-        of my top work in the past years.
+        I pride myself on well-researched, well-sourced articles that explain,
+        reveal or uncover something that would otherwise remain hidden. Here are
+        some of my top work in the past years.
       </p>
       <section className="grid grid-cols-1 gap-4 px-2 py-2 lg:px-8 sm:grid-cols-2 lg:grid-cols-3 ">
         {clips.slice(0, displayCount).map((clip, index) => (
