@@ -1,6 +1,6 @@
-import Intro from "./Intro";
-import TechStack from "./TechStack";
-import Projects from "./Projects";
+import Intro from "./Intro.jsx";
+import TechStack from "./TechStack.jsx";
+import Projects from "./Projects.jsx";
 
 export default function page() {
   return (

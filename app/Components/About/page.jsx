@@ -1,9 +1,9 @@
-import Intro from "./Intro";
-import Form from "./Form";
-import Links from "./Links";
-import Resume from "./Resume";
-import AboutPhoto from "./AboutPhoto";
-import AboutText from "./AboutText";
+import Intro from "./Intro.jsx";
+import Form from "./Form.jsx";
+import Links from "./Links.jsx";
+import Resume from "./Resume.jsx";
+import AboutPhoto from "./AboutPhoto.jsx";
+import AboutText from "./AboutText.jsx";
 
 export default function page() {
   return (

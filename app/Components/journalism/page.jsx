@@ -1,5 +1,5 @@
-import Intro from "./Intro";
-import Clips from "./Clips";
+import Intro from "./Intro.jsx";
+import Clips from "./Clips.jsx";
 
 import Timeline from "./Timeline.jsx";
 
