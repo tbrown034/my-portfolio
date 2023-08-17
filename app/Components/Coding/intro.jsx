@@ -27,7 +27,7 @@ export default function intro() {
       </p>
       <p className="text-xl leading-normal font-robotoSlab sm:text-2xl">
         Despite the challenges, I fell in love with programming. And since
-        earning my certificate from the intensive{" "}
+        earning my certificate from the{" "}
         <a
           href="https://www.fullstackacademy.com/"
           target="_blank"
@@ -35,7 +35,7 @@ export default function intro() {
         >
           FullStack Academy
         </a>
-        -led course, I've enhancing my skills, doing freelance work and seeing
+        -led course, I've building up my skills, doing freelance work and seeing
         what I can build next.
       </p>
     </section>

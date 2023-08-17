@@ -33,8 +33,8 @@ export default function Intro() {
             className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100 "
           >
             Reporter of the Year in 2020
-          </a>{" "}
-          in, The Great Plains Newspaper{" "}
+          </a>
+          , The Great Plains Newspaper{" "}
           <a
             href="https://oklahomawatch.org/2021/05/10/oklahoma-watchs-trevor-brown-earns-writer-of-year-honors-in-great-plains-journalism-contest/"
             target="_blank"

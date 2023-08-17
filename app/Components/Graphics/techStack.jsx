@@ -35,13 +35,13 @@ export default function TechStack() {
         <TechIcon />
       </div>
       <p className="text-xl leading-normal font-robotoSlab">
-        I am in the process of also seeing how new languages and technologies,
+        I am in the process of exploring new languages and technologies,
         including{" "}
         <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
           Python
         </span>{" "}
         and{" "}
-        <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-100 active:border-blue-100">
+        <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
           D3.
         </span>
       </p>

@@ -20,10 +20,10 @@ export default function Timeline() {
             </time>
             <p className="mb-4 text-base font-normal dark:text-blue-50">
               {" "}
-              Graduated with bachelor's of arts degrees in journalism and
-              political science. Served as editor in chief of the Indiana Daily
-              Student in addition to several other editorial and reporting
-              positions.
+              Graduated with Bachelor of Arts degrees in Journalism and
+              Political Science, and served as the Editor-in-Chief of the
+              Indiana Daily Student, in addition to holding several other key
+              editorial and reporting positions.
             </p>
           </li>
           <li className="pl-6 ">
