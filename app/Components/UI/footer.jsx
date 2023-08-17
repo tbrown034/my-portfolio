@@ -4,7 +4,7 @@ import { ChartBarIcon } from "@heroicons/react/24/outline";
 import { ChevronDoubleUpIcon } from "@heroicons/react/24/outline";
 import { UserIcon } from "@heroicons/react/24/outline";
 
-export default function BottomNav() {
+export default function Footer() {
   return (
     <nav className="p-10 sm:text-2xl lg:text-3xl">
       <hr className="w-2/3 p-4 mx-auto border-t-2 border-blue-800 dark:border-blue-200" />
