@@ -1,4 +1,4 @@
-import TechIcon from "./techIcons";
+import TechIcon from "./TechIcons";
 
 export default function techStack() {
   return (

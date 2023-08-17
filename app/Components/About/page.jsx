@@ -1,17 +1,22 @@
-import Intro from "./intro";
-import Contact from "./contact";
-import Links from "./links";
+import Intro from "./Intro";
+import Form from "./Form";
+import Links from "./Links";
 import Resume from "./Resume";
-import NicePhoto from "./Mug";
+import AboutPhoto from "./AboutPhoto";
+import AboutText from "./AboutText";
 
 export default function about() {
   return (
     <section className="flex flex-col justify-around gap-8 px-8 py-8 sm:gap-12 lg:gap-16 xl:gap-20 md:px-16 ">
       <Intro />
       <Resume />
-      <Contact />
-      <NicePhoto />
-
+      <Form />
+      <div className="flex flex-col justify-around gap-8 sm:gap-4 lg:gap-6 lg:flex-row ">
+        <AboutText />
+        <div className="lg:m-4 xl:m-10">
+          <AboutPhoto />
+        </div>
+      </div>
       <Links />
     </section>
   );

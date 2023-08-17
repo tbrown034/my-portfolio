@@ -1,6 +1,6 @@
 import "./globals.css";
-import Footer from "./Components/UI/footer";
-import Header from "./Components/UI/header";
+import Footer from "./Components/UI/Footer";
+import Header from "./Components/UI/Header";
 import { DarkModeProvider } from "./utilities/DarkModeContext.jsx";
 import { Roboto_Slab, Montserrat } from "next/font/google";
 

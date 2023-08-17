@@ -4,8 +4,6 @@ import {
   AiFillGithub,
   AiFillMail,
 } from "react-icons/ai";
-import Link from "next/link";
-import { FaDownload } from "react-icons/fa";
 
 export default function Links() {
   return (

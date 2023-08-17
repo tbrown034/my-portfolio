@@ -1,7 +1,7 @@
-import Intro from "./intro";
-import Clips from "./clips";
+import Intro from "./Intro";
+import Clips from "./Clips";
 
-import Timeline from "./timeline.jsx";
+import Timeline from "./Timeline.jsx";
 
 export default function Page() {
   return (

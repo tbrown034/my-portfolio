@@ -9,6 +9,7 @@ export default function Mug() {
 
   return (
     <motion.div
+      className="flex items-center justify-center"
       initial={{ x: -100, opacity: 0, scale: 0.3 }}
       animate={{
         x: 0,
@@ -21,7 +22,7 @@ export default function Mug() {
       onClick={() => setIsClicked(!isClicked)}
     >
       <Image
-        className="flex border-2 border-gray-300 shadow-lg rounded-3xl"
+        className="flex w-4/5 border-2 border-gray-300 shadow-lg sm:w-2/3 rounded-3xl"
         src={photo}
         alt="Trevor Brown"
         priority={true}

@@ -1,5 +1,5 @@
 import { UserIcon } from "@heroicons/react/24/outline";
-import AboutMe from "./aboutMe";
+import JobText from "./JobText";
 
 export default function intro() {
   return (
@@ -12,7 +12,7 @@ export default function intro() {
       <h2 className="text-3xl font-bold lg:text-center font-montserrat sm:text-4xl">
         Let's Connect and Build
       </h2>
-      <AboutMe />
+      <JobText />
     </section>
   );
 }
