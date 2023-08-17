@@ -4,7 +4,7 @@ import Image from "next/image";
 import photo from "../../../public/images/trevorall.jpeg";
 import { useState } from "react";
 
-export default function Mug() {
+export default function AboutPhoto() {
   const [isClicked, setIsClicked] = useState(false);
 
   return (

@@ -1,6 +1,6 @@
 import TechIcon from "./TechIcons";
 
-export default function techStack() {
+export default function TechStack() {
   return (
     <section className="flex flex-col gap-4">
       <h1 className="text-3xl font-semibold font-montserrat sm:text-4xl lg:text-center">

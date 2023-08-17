@@ -1,6 +1,6 @@
 import Home from "./Components/Home/page.jsx";
 import Code from "./Components/Coding/page.jsx";
-import Journalism from "./Components/journalism/page.jsx";
+import Journalism from "./Components/Journalism/page.jsx";
 import DataViz from "./Components/Graphics/page.jsx";
 import About from "./Components/About/page.jsx";
 
