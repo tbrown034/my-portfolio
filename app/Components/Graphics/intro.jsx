@@ -13,7 +13,7 @@ export default function Intro() {
       </h2>
       <p className="text-xl leading-normal font-robotoSlab">
         {" "}
-        Through a mix of self-learning and training through the Investiative
+        Through a mix of self-learning and training through the Investigative
         Reporters and Editors' National Institute for Computer Assisted
         Reporting (
         <Link
@@ -23,13 +23,13 @@ export default function Intro() {
           IRE and NICAR
         </Link>
         ), I became a newsroom leader at Oklahoma Watch for our graphics and
-        visualzing work.
+        visualizing work.
       </p>
       <p className="text-xl leading-normal font-robotoSlab">
         {" "}
         In addition to collaborating with fellow reporters and holding my own
         training sessions, I produced dozens of graphics, interactive databases
-        and other utilitiles with programs such as Tableau, Flourish and
+        and other utilities with programs such as Tableau, Flourish and
         DataWrapper.
       </p>
     </section>

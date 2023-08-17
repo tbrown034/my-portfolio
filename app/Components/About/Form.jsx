@@ -27,14 +27,14 @@ export default function Form() {
   };
 
   return (
-    <section id="contact" className="flex items-center justify-center">
+    <section id="contact" className="flex items-center justify-center ">
       {!formSubmitted ? (
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col items-start flex-1 w-full gap-6 p-6 text-sm font-bold bg-white border-2 border-blue-800 rounded-lg"
+          className="flex flex-col justify-between w-full gap-2 p-6 pb-4 text-sm font-bold bg-white border-4 shadow-lg sm:w-2/3 rounded-t-2xl dark:text-blue-950 dark:bg-blue-100 rounded-2xl"
         >
-          <h1 className="self-center text-2xl font-semibold text-center text-blue-900">
-            Let's Get in Contact Today!
+          <h1 className="self-center text-3xl font-semibold text-center text-blue-900">
+            Or Get in Contact With This Form!
           </h1>
 
           <label className="font-bold text-blue-800">Name:</label>
@@ -69,12 +69,9 @@ export default function Form() {
           </button>
         </form>
       ) : (
-        <>
-          <p className="p-8 text-2xl font-semibold">
-            Thank you for your message! I'll be sure to get back to you very
-            soon!
-          </p>
-        </>
+        <p className="p-8 text-2xl font-semibold">
+          Thank you for your message! I'll be sure to get back to you very soon!
+        </p>
       )}
     </section>
   );

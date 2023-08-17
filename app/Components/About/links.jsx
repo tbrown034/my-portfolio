@@ -12,7 +12,7 @@ export default function Links() {
         <div className="flex flex-wrap justify-center gap-8">
           <a
             className="flex flex-col items-center justify-center p-1 transition-all duration-300 ease-in-out transform rounded-lg cursor-pointer hover:bg-blue-300 dark:hover:bg-blue-700 hover:scale-105 hover:shadow-lg"
-            href="#contact"
+            href="mailto:trevorbrown.web@gmail.com"
           >
             <AiFillMail className="w-icon-sm h-icon-sm" />
             <p className="text-sm font-semibold text-center">E-Mail</p>
@@ -41,7 +41,7 @@ export default function Links() {
           </a>
           <a
             className="flex flex-col items-center justify-center p-1 transition-all duration-300 ease-in-out transform rounded-lg cursor-pointer hover:bg-blue-300 hover:scale-105 hover:shadow-lg"
-            href="/"
+            href="https://twitter.com/tbrownOKC"
           >
             {" "}
             <AiFillTwitterCircle className="w-icon-sm h-icon-sm" />

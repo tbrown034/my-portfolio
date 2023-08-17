@@ -4,6 +4,7 @@ import Links from "./Links";
 import Resume from "./Resume";
 import AboutPhoto from "./AboutPhoto";
 import AboutText from "./AboutText";
+import JobText from "./jobText";
 
 export default function about() {
   return (
@@ -11,12 +12,8 @@ export default function about() {
       <Intro />
       <Resume />
       <Form />
-      <div className="flex flex-col justify-around gap-8 sm:gap-4 lg:gap-6 lg:flex-row ">
-        <AboutText />
-        <div className="lg:m-4 xl:m-10">
-          <AboutPhoto />
-        </div>
-      </div>
+      <AboutText />
+      <AboutPhoto />
       <Links />
     </section>
   );

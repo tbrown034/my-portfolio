@@ -20,10 +20,10 @@ export default function Timeline() {
             </time>
             <p className="mb-4 text-base font-normal dark:text-blue-50">
               {" "}
-              Graduated with bachlelor's of arts degrees in journalism and
+              Graduated with bachelor's of arts degrees in journalism and
               political science. Served as editor in chief of the Indiana Daily
-              Student in additoin to several other editorial and reporting
-              positoins.
+              Student in addition to several other editorial and reporting
+              positions.
             </p>
           </li>
           <li className="pl-6 ">
@@ -39,7 +39,7 @@ export default function Timeline() {
             <p className="mb-4 text-base font-normal dark:text-blue-50">
               {" "}
               Earned the national Pulliam Fellowship to work at the Indianapolis
-              Star immediatley after college.
+              Star immediately after college.
             </p>
           </li>
           <li className="pl-6 ">
@@ -86,8 +86,8 @@ export default function Timeline() {
             </time>
             <p className="mb-4 text-base font-normal dark:text-blue-50">
               {" "}
-              Worked as the state governement and military beat reporter for
-              this daily newspaper in Cheyenne, Wyoming.
+              Worked as the state government and military beat reporter for this
+              daily newspaper in Cheyenne, Wyoming.
             </p>
           </li>
           <li className="pl-6 ">
@@ -103,7 +103,7 @@ export default function Timeline() {
             <p className="mb-4 text-base font-normal dark:text-blue-50">
               {" "}
               Served as the Capitol and Democracy beat reporter for this
-              non-profit investigasgive news group.
+              non-profit investigative news group.
             </p>
           </li>
           <li className="pl-6 ">

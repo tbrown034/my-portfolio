@@ -6,7 +6,6 @@ import { CodeBracketIcon } from "@heroicons/react/24/outline";
 import { NewspaperIcon } from "@heroicons/react/24/outline";
 
 import { ChartBarIcon } from "@heroicons/react/24/outline";
-import { Bars3Icon } from "@heroicons/react/24/outline";
 import { MoonIcon } from "@heroicons/react/24/outline";
 
 import { SunIcon } from "@heroicons/react/24/outline";
@@ -23,7 +22,7 @@ export default function Header() {
   };
 
   return (
-    <header className="flex items-center justify-between p-2 text-blue-900 dark:text-blue-100 ">
+    <header className="flex items-center justify-between p-4 text-blue-900 p- dark:text-blue-100 ">
       <a
         href="/"
         className="text-lg font-semibold font-majorMono sm:hidden"
@@ -66,12 +65,10 @@ export default function Header() {
           </a>
         </div>
       </div>
-      <div className="sm:hidden">
-        <Bars3Icon className="w-8 h-8" />
-      </div>
+
       <button
         onClick={handleToggle}
-        className="items-center justify-center hidden gap-1 p-1 text-blue-100 bg-blue-900 rounded-lg dark:text-blue-900 dark:bg-blue-100 sm:flex hover:bg-blue-700 dark:hover:bg-blue-300 "
+        className="flex items-center justify-center gap-1 p-1 text-blue-100 bg-blue-900 rounded-lg dark:text-blue-900 dark:bg-blue-100 sm:flex hover:bg-blue-700 dark:hover:bg-blue-300 "
       >
         {isDarkMode ? (
           <>

@@ -7,7 +7,7 @@ export default function TechStack() {
         Technologies and Skills{" "}
       </h1>
       <p className="text-xl leading-normal font-robotoSlab ">
-        I have experienced analyzing, sorting, cleaning and visualizing data
+        I have experience analyzing, sorting, cleaning and visualizing data
         using{" "}
         <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
           Excel & Google Sheets

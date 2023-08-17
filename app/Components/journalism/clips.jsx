@@ -18,7 +18,7 @@ export default function Clips() {
       <p className="text-xl font-robotoSlab ">
         As data-driven investigative reporter for more than 15 years, I have
         written hundreds, if not thousands, of articles about politics,
-        government corruption or inefficenes and stories that matter to the
+        government corruption or inefficiencies and stories that matter to the
         community.
       </p>
       <p className="text-xl font-robotoSlab ">

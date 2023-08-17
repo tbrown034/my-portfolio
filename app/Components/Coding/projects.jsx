@@ -17,7 +17,7 @@ export default function Projects() {
       <p className="text-xl font-robotoSlab ">
         I specialize in building responsive, dynamic websites that focus on
         clean UI and UX. As a journalist, I found that a good site should be
-        consistent, clear and able to attract and retain user's attention in an
+        consistent, clear and able to attract and retain users' attention in an
         increasingly busy digital landscape.
       </p>
       <p className="text-xl font-robotoSlab ">
