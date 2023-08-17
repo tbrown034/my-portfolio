@@ -13,7 +13,7 @@ export default function Intro() {
       </h2>
       <p className="text-xl leading-normal font-robotoSlab">
         I am available for full-time or freelance work in both journalism and
-        web development — or something involving both!
+        web development — or both!
       </p>
       <p className="text-xl leading-normal font-robotoSlab">
         I didn't know exactly what was in store for me when I decided to quit my
