@@ -4,7 +4,6 @@ import brew from "../../public/images/beer.png";
 import campaign from "../../public/images/campaign.png";
 import dental from "../../public/images/kabdds.png";
 import dentalgpt from "../../public/images/dentalgpt.png";
-import shipit from "../../public/images/shipit1.png";
 import RocketClicker from "../../public/images/Screen Shot 2023-08-11 at 1.35.59 PM.png";
 
 export const webProjects = [

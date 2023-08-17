@@ -3,7 +3,7 @@ export default function AboutText() {
     <section>
       <div className="flex flex-col gap-4 ">
         <h2 className="text-3xl font-bold lg:text-center font-montserrat sm:text-4xl ">
-          A Little About Me
+          About Me
         </h2>
         <div className="flex flex-col gap-4 ">
           <p className="text-xl leading-normal font-robotoSlab">
