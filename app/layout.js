@@ -3,6 +3,7 @@ import Footer from "./components/UI/Footer";
 import Header from "./components/UI/Header";
 import { DarkModeProvider } from "./utilities/DarkModeContext.jsx";
 import { Roboto_Slab, Montserrat } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
 const roboto_slab = Roboto_Slab({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function RootLayout({ children }) {
             {children}
             <Footer />
           </div>
+          <Analytics />
         </body>
       </html>
     </DarkModeProvider>
