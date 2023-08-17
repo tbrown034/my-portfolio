@@ -30,7 +30,8 @@ export default function MyLinks() {
 
           <Link
             className="p-1 rounded-lg hover:bg-blue-300 dark:hover:bg-blue-600 "
-            href="/"
+            target="_blank"
+            href="https://www.linkedin.com/in/trevorabrown/"
           >
             {" "}
             <AiFillLinkedin className="w-16 h-16" />
