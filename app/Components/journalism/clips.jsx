@@ -22,7 +22,7 @@ export default function Clips() {
         community.
       </p>
       <p className="text-xl font-robotoSlab ">
-        I pride myself in well-researched, well-sourced articles explain, reveal
+        I pride myself on well-researched, well-sourced articles explain, reveal
         or uncover something that would otherwise remain hidden. Here are some
         of my top work in the past years.
       </p>

@@ -16,11 +16,11 @@ export default function intro() {
         web development — or something involving both!
       </p>
       <p className="text-xl leading-normal font-robotoSlab">
-        I didn't know exactly what was in store for myself when I decided to
-        quit my journalism job in 2022 and chart a new career path for myself.
-        But I'm ready to build and continue my web development journey. With a
-        passion for storytelling and a knack for coding, I'm eager to merge
-        these worlds and create impactful digital experiences.
+        I didn't know exactly what was in store for me when I decided to quit my
+        journalism job in 2022 and chart a new career path for myself. But I'm
+        ready to build and continue my web development journey. With a passion
+        for storytelling and a knack for coding, I'm eager to merge these worlds
+        and create impactful digital experiences.
       </p>
       <p className="text-xl leading-normal font-robotoSlab">
         If you're looking for someone with a unique blend of storytelling and

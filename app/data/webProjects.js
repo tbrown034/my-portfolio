@@ -76,7 +76,7 @@ export const webProjects = [
       "Tailwind CSS",
     ],
     description:
-      "A fun idle cookie-clicker style game that let's you explore the skies through the eyes of Rocky Racoon.",
+      "A fun idle cookie-clicker style game that lets you explore the skies through the eyes of Rocky Racoon.",
     githubLink: "https://github.com/tbrown034/moving-cost-estimator",
     siteLink: "https://rocket-clicker.vercel.app/",
   },
