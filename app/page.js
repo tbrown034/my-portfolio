@@ -1,8 +1,8 @@
-import Home from "./Components/Home/page.jsx";
-import Code from "./Components/Coding/page.jsx";
-import Journalism from "./Components/Journalism/page.jsx";
-import DataViz from "./Components/Graphics/page.jsx";
-import About from "./Components/About/page.jsx";
+import Home from "./components/Home/page.jsx";
+import Code from "./components/Coding/page.jsx";
+import Journalism from "./components/Journalism/page.jsx";
+import DataViz from "./components/Graphics/page.jsx";
+import About from "./components/About/page.jsx";
 
 export default function Page() {
   return (
