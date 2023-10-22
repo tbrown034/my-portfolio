@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import photo from "../../../public/images/trevorall.jpeg";
+import photo from "../../../public/images/IndyandMe.jpg";
 import { useState } from "react";
 
 export default function AboutPhoto() {

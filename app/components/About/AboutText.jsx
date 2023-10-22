@@ -14,9 +14,9 @@ export default function AboutText() {
             Oklahoma City.
           </p>
           <p className="text-xl leading-normal font-robotoSlab">
-            I'm currently living in Bloomington, Indiana, with my lovely
-            girlfriend, Lauren, and my best friend, Indy. We love spending time
-            at dog parks, hiking and exploring new breweries and restaurants.
+            I'm currently living in Bloomington, Indiana, with my best friend,
+            Indy. We love spending time at dog parks, hiking and exploring new
+            breweries and restaurants.
           </p>
         </div>
       </div>
