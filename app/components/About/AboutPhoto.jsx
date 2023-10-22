@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import photo from "../../../public/images/IndyandMe.jpg";
+import photo2 from "../../../public/images/IndyandMe.jpg";
 import { useState } from "react";
 
 export default function AboutPhoto() {
@@ -23,7 +23,7 @@ export default function AboutPhoto() {
     >
       <Image
         className="flex w-4/5 border-2 border-gray-300 shadow-lg sm:w-2/3 rounded-3xl"
-        src={photo}
+        src={photo2}
         alt="Trevor Brown"
         priority={true}
       />
