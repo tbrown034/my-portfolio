@@ -1,67 +1,47 @@
 import TechIcon from "./TechIcons";
 
 export default function TechStack() {
+  const coreStack = [
+    "JavaScript", "React", "Next.js", "Node.js", "PostgreSQL", "Tailwind CSS"
+  ];
+  
+  const libraries = [
+    "Framer Motion", "Chart.js", "MUI", "Axios"
+  ];
+
   return (
-    <section className="flex flex-col gap-4">
-      <h1 className="text-3xl font-semibold font-montserrat sm:text-4xl lg:text-center">
-        Tech Stack and Skills{" "}
-      </h1>
-      <p className="text-xl leading-normal font-robotoSlab ">
-        I specialize in a tech stack that features{" "}
-        <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
-          JavaScript
-        </span>
-        ,{" "}
-        <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
-          Node.js
-        </span>
-        ,{" "}
-        <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100 ">
-          React
-        </span>
-        ,{" "}
-        <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
-          Next.js
-        </span>
-        ,{" "}
-        <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
-          PostgreSQL
-        </span>{" "}
-        and{" "}
-        <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100p">
-          Tailwind CSS.
-        </span>
-      </p>
-      <div className="px-6 py-2 lg:px-16">
-        <TechIcon />
+    <section className="max-w-7xl mx-auto px-6 py-16">
+      {/* Editorial Section Header */}
+      <div className="max-w-4xl mb-12">
+        <h2 className="text-4xl sm:text-5xl font-black font-montserrat text-gray-900 dark:text-gray-100 mb-6">
+          Tech Stack & Skills
+        </h2>
+        
+        <div className="prose prose-xl prose-gray dark:prose-invert leading-relaxed space-y-6">
+          <p className="text-xl text-gray-700 dark:text-gray-300">
+            My core stack: {coreStack.map((tech, index) => (
+              <span key={tech}>
+                <strong className="text-emerald-600 dark:text-emerald-400">{tech}</strong>
+                {index < coreStack.length - 1 && ", "}
+              </span>
+            ))}
+          </p>
+          
+          <p className="text-lg text-gray-600 dark:text-gray-400">
+            Libraries & tools: {libraries.map((lib, index) => (
+              <span key={lib}>
+                <span className="text-emerald-600 dark:text-emerald-400">{lib}</span>
+                {index < libraries.length - 1 && ", "}
+              </span>
+            ))}
+          </p>
+        </div>
       </div>
 
-      <p className="text-xl leading-normal font-robotoSlab">
-        I also have experience using JS libraries that include{" "}
-        <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
-          Framer Motion
-        </span>
-        ,{" "}
-        <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
-          Chart.js
-        </span>
-        ,{" "}
-        <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
-          React Bootstrap
-        </span>
-        ,{" "}
-        <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
-          MUI
-        </span>
-        ,{" "}
-        <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
-          Semantic UI
-        </span>{" "}
-        and{" "}
-        <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
-          Axios.
-        </span>
-      </p>
+      {/* Tech Icons Grid */}
+      <div className="mb-16">
+        <TechIcon />
+      </div>
     </section>
   );
 }

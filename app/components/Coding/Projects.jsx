@@ -39,10 +39,12 @@ export default function Projects() {
             }`}
           >
             <Image
-              alt="alt"
+              alt={`Screenshot of ${project.title}`}
               className="border border-white shadow-lg rounded-t-2xl dark:border-gray-500" // Added border and shadow here
               src={project.image}
-            ></Image>
+              width={1200}
+              height={800}
+            />
             <h1 className="px-2 font-montserrat">{project.title}</h1>
 
             <div className="flex flex-wrap gap-1 px-2">

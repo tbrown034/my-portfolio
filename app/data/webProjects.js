@@ -1,112 +1,73 @@
 // webProjects.js
-import weather from "../../public/images/weather.png";
-import brew from "../../public/images/beer.png";
-import campaign from "../../public/images/campaign.png";
-import dental from "../../public/images/kabdds.png";
-import dentalgpt from "../../public/images/dentalgpt.png";
-import RocketClicker from "../../public/images/Screen Shot 2023-08-11 at 1.35.59 PM.png";
 
 export const webProjects = [
   {
     id: 1,
-    title: "Keith Brown DDS",
-    image: dental,
+    title: "Keith Brown DDS (2024)",
+    image: "/images/kabdds-screenshot-aug11.png",
     technologies: [
-      "JavaScript",
-      "React",
       "Next.js",
-      "React-Icons",
-      "HeroIcons",
-      "Daisy UI",
-      "GoogleMaps",
+      "React",
+      "JavaScript", 
+      "Tailwind CSS",
+      "Vercel",
+      "Google Tag Manager"
     ],
     description:
-      "A Next.js storefront for a dentist. Features include about, financing, location, FAQ, services, and appointment booking.",
-    githubLink: "https://github.com/tbrown034/kab-dental",
-    siteLink: "https://kab-dental.vercel.app/",
+      "Professional dental practice website for Dr. Keith Brown featuring 24/7 emergency services, online appointment scheduling, and 40+ years of dental expertise. Modern, responsive design with patient testimonials and comprehensive practice information.",
+    githubLink: "https://github.com/tbrown034/kab-dentist-2024",
+    siteLink: "https://keithbrowndds.com/",
   },
   {
     id: 2,
-    title: "DentalGPT",
-    image: dentalgpt,
+    title: "Reflectyr",
+    image: "/images/reflectyr-screenshot-aug11.png",
     technologies: [
-      "JavaScript",
-      "React",
       "Next.js",
-      "Framer Motion",
+      "React",
+      "JavaScript",
       "Tailwind CSS",
-      "Open AI",
+      "Vercel"
     ],
     description:
-      "An AI-powered application that uses Chat-GTP's API to answer dental care questions, with guardrails for topic relevance.",
-    githubLink: "https://github.com/tbrown034/dental-gpt-second-try",
-    siteLink: "https://dental-gpt-second-try.vercel.app/",
+      "A modern reflection and journaling application built with Next.js. Clean, intuitive interface for personal growth and daily reflection with responsive design.",
+    githubLink: "https://github.com/tbrown034/refelectyr_project",
+    siteLink: "https://reflectyr-project.vercel.app/",
   },
-
   {
     id: 3,
-    title: "Campaign Finance Visualizer",
-    image: campaign,
+    title: "My Expiry",
+    image: "/images/expirty-screenshot-aug11.png",
     technologies: [
-      "JavaScript",
-      "React",
       "Next.js",
-      "Chart.js",
+      "React",
+      "TypeScript",
       "Tailwind CSS",
-      "Fetch",
+      "NextAuth.js",
+      "PostgreSQL",
+      "Prisma",
+      "AI Integration"
     ],
     description:
-      "A tool for visualizing campaign finance data using Chart.js. Allows detailed views of FEC data and tracks election cycle funds.",
-    githubLink: "https://github.com/tbrown034/campaign-finance-tracker",
-    siteLink: "https://campaign-finance-tracker.vercel.app/",
+      "Smart grocery management app with AI-powered shelf life detection and expiry tracking. Features batch item processing, planned receipt scanning, and helps reduce food waste through intelligent notifications.",
+    githubLink: "https://github.com/tbrown034/my-expiry",
+    siteLink: "https://my-expiry.vercel.app/",
   },
   {
     id: 4,
-    title: "RocketClicker",
-    image: RocketClicker,
+    title: "ReStub",
+    image: "/images/restub-screenshot-aug11.png",
     technologies: [
-      "JavaScript",
+      "Next.js 15",
+      "TypeScript",
+      "Tailwind CSS 4",
       "React",
-      "Next.js",
-      "Headless UI",
-      "HeroIcons",
-      "Vercel Analytics",
-      "Framer Motion",
-      "Tailwind CSS",
+      "Form Validation",
+      "Vercel"
     ],
     description:
-      "A fun idle cookie-clicker style game that lets you explore the skies through the eyes of Rocky Racoon.",
-    githubLink: "https://github.com/tbrown034/moving-cost-estimator",
-    siteLink: "https://rocket-clicker.vercel.app/",
-  },
-  {
-    id: 5,
-    title: "Weather Forecast",
-    image: weather,
-    technologies: [
-      "JavaScript",
-      "React",
-      "Next.js",
-      "Tailwind CSS",
-      "HeroIcons",
-      "Headless UI",
-      "Fetch",
-      "Framer Motion",
-    ],
-    description:
-      "A playful project that uses WeatherAPI for real-time weather forecasts. Tailwind CSS and HeroIcons were used for interface design.",
-    githubLink: "https://github.com/tbrown034/my-weather-app",
-    siteLink: "https://my-weather-app-silk-six.vercel.app",
-  },
-
-  {
-    id: 6,
-    title: "MyBrewApp",
-    image: brew,
-    technologies: ["JavaScript", "React", "Next.js", "Fetch", "Tailwind CSS"],
-    description:
-      "A simple Fetch site, built overnight, that allows users to learn about random breweries.",
-    githubLink: "https://github.com/tbrown034/brewery",
-    siteLink: "https://brewery-taupe.vercel.app/",
-  },
+      "Digital platform for sports fans to catalog and preserve stadium experiences. Features game logging, AI-powered memory enhancement, and social sharing. Over 10,000 users with 4.9/5 rating - transforming ephemeral sports moments into lasting digital collections.",
+    githubLink: "https://github.com/tbrown034/restub",
+    siteLink: "https://restub.vercel.app/",
+  }
 ];

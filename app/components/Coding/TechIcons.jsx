@@ -12,7 +12,7 @@ import {
   SiMui,
   SiSemanticuireact,
 } from "react-icons/si";
-export default function techIcon() {
+export default function TechIcon() {
   const techs = [
     {
       name: "JavaScript",
@@ -89,14 +89,17 @@ export default function techIcon() {
   ];
 
   return (
-    <section className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+    <section className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6">
       {techs.map((tech) => (
         <div
           key={tech.name}
-          className="flex flex-col items-center justify-center px-1 py-2 transition-all duration-300 ease-in-out transform bg-white rounded-lg cursor-pointer hover:scale-105 hover:shadow-lg dark:bg-blue-50 dark:text-blue-800"
+          className="group flex flex-col items-center justify-center p-4 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border border-gray-200/50 dark:border-gray-700/50 rounded-xl hover:shadow-lg transition-all duration-200 hover:scale-105 cursor-default"
+          title={tech.description}
         >
-          <tech.Icon className="w-icon-sm h-icon-sm" />
-          <h3 className="text-sm font-semibold text-center">{tech.name}</h3>
+          <tech.Icon className="w-8 h-8 mb-2 text-gray-700 dark:text-gray-300 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors duration-200" />
+          <span className="text-xs font-medium text-center text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-gray-100 transition-colors duration-200">
+            {tech.name}
+          </span>
         </div>
       ))}
     </section>

@@ -1,0 +1,93 @@
+# Claude Code Preferences - Trevor Brown
+
+## Design Ethos & Mission
+
+**Three words: intuition, clarity, focus.**
+
+Design experiences that are intuitive, clear, and focused—where every element earns its place.
+
+## Primary Influence
+
+**Editorial newspapers.**
+- Front-page mindset for landing pages (lede → dek → modules above the fold)
+- Hed/dek type hierarchy
+- Modular grid system
+- "Jump line" as progressive disclosure: peek → expand
+- Sections like beats
+- Pull-quote callouts used sparingly
+
+## Secondary Influences
+
+- **Architectural modernism**: Right angles for order, soft radii for welcome; interfaces should feel "placed," not stapled on
+- **Selective brutalism**: Honest structure, minimal ornament, grid/spacing/type carry meaning
+- **Glass as depth**: Dark, quiet canvas with frosted layers when they clarify hierarchy (never as a gimmick)
+
+## Design Principles
+
+- Clarity over clever
+- One center of gravity per screen
+- Everything earns its place (space, color, type as a budget)
+- **White space is selective**: Used strategically to guide attention, never as filler
+- **Above the fold priority**: Show relevant content and immediate entry points first
+- Accessibility & performance are table stakes
+- Respectful motion (confirm, guide, don't distract)
+- **Kill your darlings**: Remove any section, div, or element that doesn't add value—if it takes without giving, it goes
+
+## Interaction Philosophy
+
+**Progressive discovery / iceberg interactions**: Surface scans in seconds; depth is opt-in and complete when chosen.
+- "Iceberg": peek on hover/tap, expand on intent
+- Motion is respectful—confirmations and focus shifts, not choreography
+- Each screen has one center of gravity
+
+## Aesthetic System
+
+- **Canvas**: Dark, quiet backgrounds
+- **Modules**: Frosted cards, rounded rectangles
+- **Type**: Modern sans, clear weights, generous leading
+- **Typography details**: Always use spaced en dash ( – ) not em dash or hyphen
+- **Color**: Neutrals + one disciplined accent
+- **Rhythm**: Strict grid, consistent alignment, airy spacing
+
+Architecture shapes taste—strong right angles for order, soft radii for welcome. Masculine energy (confident lines, weight, restraint) tempered with warmth and softness.
+
+## Decision Filters
+
+- Can a new user state the purpose in 5 seconds?
+- Is anything competing with the primary action? Remove it.
+- Can I say this with fewer elements? Do it.
+- If I remove an effect, does meaning change? If not, cut it.
+- Would I want to live in this screen for an hour?
+
+## What Makes Me Unique
+
+Investigative journalist turned developer - I design like an editor and build like a reporter. The grid and spacing do most of the talking. Effects stay quiet.
+
+## Anti-Goals
+
+- Mystery-meat nav
+- Dark patterns  
+- Decorative motion
+- Style without purpose
+- If it needs a tooltip to make sense, it's not done
+- **Never use emojis** - Professional interfaces rely on typography and iconography, not emojis
+
+## Goal
+
+Interfaces that feel obvious at a glance and rewarding when explored—calm, purposeful, quietly premium.
+
+## Coding Ethos
+
+**Small, modular, clear.**
+
+- **Modular architecture**: Small, focused components that do one thing well
+- **Clear and consistent**: Predictable naming, structure, and patterns throughout
+- **Sensible organization**: Folder structure that reflects mental models and usage
+- **Rather over-engineer than under**: Build for maintainability, extensibility, and clarity over quick fixes
+- **Component clarity**: Each component has a clear purpose and clean interface
+- **Consistent patterns**: Establish patterns early and follow them religiously
+
+Code should read like well-organized journalism—clear hierarchy, logical flow, no wasted words.
+
+---
+*Updated with core design philosophy and coding ethos - reference this for all future work together.*

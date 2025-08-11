@@ -22,63 +22,59 @@ export default function Header() {
   };
 
   return (
-    <header className="flex items-center justify-between p-4 text-blue-900 p- dark:text-blue-100 ">
-      <a
-        href="/"
-        className="text-lg font-semibold font-majorMono sm:hidden"
-        style={{ textShadow: "rgba(0, 0, 0, 0.5) 1px 0px 0px" }}
-      >
-        &lt;TrevorBrown /&gt;
-      </a>
+    <header className="flex items-center justify-between px-6 py-4 border-b border-blue-200/20 dark:border-blue-800/20 backdrop-blur-sm">
       <Link
         href="/"
-        className="hidden text-lg font-semibold lg:text-2xl sm:flex font-majorMono"
-        style={{ textShadow: "rgba(0, 0, 0, 0.5) 1px 0px 0px" }}
+        className="text-xl font-bold tracking-tight text-blue-900 dark:text-blue-100 font-montserrat hover:text-blue-700 dark:hover:text-blue-200 transition-colors"
       >
-        &lt;TB /&gt;
+        Trevor Brown
       </Link>
-      <div>
-        <div className="hidden gap-4 p-2 font-semibold xl:gap-24 lg:gap-16 lg:text-lg sm:flex opacity-90">
-          <a href="/#coding">
-            <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 dark:hover:bg-blue-600 focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 active-blue-600 ">
-              <CodeBracketIcon className="w-6 h-6" />
-              <p>Coding</p>
-            </div>
-          </a>
-          <a href="/#journalism">
-            <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 dark:hover:bg-blue-700 focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 active-blue-600">
-              <NewspaperIcon className="w-6 h-6" />
-              <p>Journalism</p>
-            </div>
-          </a>
-          <a href="/#dataviz">
-            <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 dark:hover:bg-blue-700 focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 active-blue-600">
-              <ChartBarIcon className="w-6 h-6" />
-              <p>Data</p>
-            </div>
-          </a>
-          <a href="/#about">
-            <div className="flex items-center gap-1 p-1 rounded-lg cursor-pointer hover:bg-blue-300 dark:hover:bg-blue-700 focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400 active-blue-600">
-              <UserIcon className="w-6 h-6" />
-              <p>Contact</p>
-            </div>
-          </a>
-        </div>
-      </div>
+      
+      <nav className="hidden lg:flex items-center gap-8">
+        <a 
+          href="/#coding"
+          className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-blue-800 dark:text-blue-200 hover:text-blue-600 dark:hover:text-blue-100 transition-colors"
+        >
+          <CodeBracketIcon className="w-4 h-4" />
+          Coding
+        </a>
+        <a 
+          href="/#journalism"
+          className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-blue-800 dark:text-blue-200 hover:text-blue-600 dark:hover:text-blue-100 transition-colors"
+        >
+          <NewspaperIcon className="w-4 h-4" />
+          Journalism
+        </a>
+        <a 
+          href="/#dataviz"
+          className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-blue-800 dark:text-blue-200 hover:text-blue-600 dark:hover:text-blue-100 transition-colors"
+        >
+          <ChartBarIcon className="w-4 h-4" />
+          Data
+        </a>
+        <a 
+          href="/#about"
+          className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-blue-800 dark:text-blue-200 hover:text-blue-600 dark:hover:text-blue-100 transition-colors"
+        >
+          <UserIcon className="w-4 h-4" />
+          Contact
+        </a>
+      </nav>
 
       <button
         onClick={handleToggle}
-        className="flex items-center justify-center gap-1 p-1 text-blue-100 bg-blue-900 rounded-lg dark:text-blue-900 dark:bg-blue-100 sm:flex hover:bg-blue-700 dark:hover:bg-blue-300 "
+        className="flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-lg bg-blue-100 text-blue-900 dark:bg-blue-900 dark:text-blue-100 hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors"
+        aria-label="Toggle theme"
       >
         {isDarkMode ? (
           <>
-            <SunIcon className="w-6 h-6" />
-            <p className="">Light Mode</p>
+            <SunIcon className="w-4 h-4" />
+            <span className="hidden sm:inline">Light</span>
           </>
         ) : (
           <>
-            <MoonIcon className="w-5 h-5 " />
-            <p className="">Dark Mode</p>
+            <MoonIcon className="w-4 h-4" />
+            <span className="hidden sm:inline">Dark</span>
           </>
         )}
       </button>
