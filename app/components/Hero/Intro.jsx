@@ -22,7 +22,7 @@ export default function Intro() {
 
   return (
     <motion.section 
-      className="space-y-6 mt-8"
+      className="space-y-4 sm:space-y-5 mt-6 sm:mt-4"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}

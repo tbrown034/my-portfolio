@@ -14,10 +14,10 @@ export default function Hero() {
       <section className="flex flex-col gap-4 sm:hidden max-w-2xl mx-auto">
         <HelloWorld />
         <IAm />
+        <Intro />
         <div className="flex items-center justify-center my-4">
           <Mug />
         </div>
-        <Intro />
         {/* <BottomNav /> */}
         {/* <MyLinks /> */}
       </section>
