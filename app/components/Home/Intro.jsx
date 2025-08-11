@@ -1,37 +1,31 @@
 import { motion } from "framer-motion";
 
 export default function Intro() {
+  const linkClasses = "relative inline-block font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 transition-all duration-300 ease-out after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-gradient-to-r after:from-blue-500 after:to-purple-500 after:transition-all after:duration-300 hover:after:w-full focus:after:w-full";
+
   return (
-    <motion.p
-      initial={{ x: -100, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      transition={{ delay: 2, duration: 0.5 }}
-      // I don't know why's it's being weird with the line height - 8/15
-      className="text-xl leading:none sm:leading-normal md:leading-normal lg:leading-normal sm:text-2xl lg:text-3xl font-robotoSlab"
-    >
-      Blending{" "}
-      <a
-        href="#coding"
-        className="border-b-4 border-blue-800 dark:border-blue-200 dark:hover:border-blue-600 hover:border-blue-400 active:border-blue-100"
+    <section className="max-w-4xl">
+      <motion.p
+        initial={{ y: 30, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 1.4, duration: 0.8, ease: "easeOut" }}
+        className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-robotoSlab text-gray-700 dark:text-gray-300 leading-relaxed"
       >
-        modern web development
-      </a>{" "}
-      skills with insights I’ve cultivated from more than a decade’s worth of
-      experience as an{" "}
-      <a
-        href="#journalism"
-        className="border-b-4 border-blue-800 dark:border-blue-200 hover:border-blue-400 dark:hover:border-blue-600 active:border-blue-100 "
-      >
-        award-winning investigative reporter
-      </a>
-      , I tell compelling stories and build powerful applications for the web.{" "}
-      <a
-        href="#about"
-        className="border-b-4 border-blue-800 dark:border-blue-200 hover:border-blue-400 dark:hover:border-blue-600 active:border-blue-100"
-      >
-        Let's connect
-      </a>{" "}
-      and start building.
-    </motion.p>
+        Blending{" "}
+        <a href="#coding" className={linkClasses}>
+          modern web development
+        </a>{" "}
+        skills with insights I've cultivated from more than a decade's worth of
+        experience as an{" "}
+        <a href="#journalism" className={linkClasses}>
+          award-winning investigative reporter
+        </a>
+        , I tell compelling stories and build powerful applications for the web.{" "}
+        <a href="#about" className={linkClasses}>
+          Let's connect
+        </a>{" "}
+        and start building.
+      </motion.p>
+    </section>
   );
 }

@@ -1,32 +1,38 @@
 import { motion } from "framer-motion";
+
 export default function IAm() {
+  const roles = [
+    { text: "I'm a FullStack Developer,", delay: 0.5 },
+    { text: "Investigative Reporter &", delay: 0.8 },
+    { text: "Data Visualizer", delay: 1.1 }
+  ];
+
   return (
-    <>
-      <div className="flex flex-col flex-wrap gap-1 text-xl font-bold text-blue-800 dark:text-blue-200 xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-montserrat">
-        <motion.h2
-          initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
-        >
-          I'm a FullStack Developer,
-        </motion.h2>
-
-        <motion.h2
-          initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
-        >
-          Investigative Reporter &
-        </motion.h2>
-
-        <motion.h2
-          initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ delay: 1.5, duration: 0.5 }}
-        >
-          Data Visualizer
-        </motion.h2>
+    <section className="mb-6 sm:mb-8">
+      <div className="flex flex-col gap-3 sm:gap-4">
+        {roles.map((role, index) => (
+          <motion.h2
+            key={index}
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold font-montserrat text-slate-800 dark:text-slate-200 leading-tight"
+            initial={{ x: -60, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ 
+              delay: role.delay, 
+              duration: 0.6, 
+              ease: "easeOut",
+              type: "spring",
+              stiffness: 100
+            }}
+            whileHover={{ 
+              scale: 1.02, 
+              color: "#3b82f6",
+              transition: { duration: 0.2 }
+            }}
+          >
+            {role.text}
+          </motion.h2>
+        ))}
       </div>
-    </>
+    </section>
   );
 }

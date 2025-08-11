@@ -16,14 +16,16 @@ export default function Projects() {
       </h1>
       <p className="text-xl font-robotoSlab ">
         I specialize in building responsive, dynamic websites that focus on
-        clean UI and UX. As a journalist, I found that a good site should be
-        consistent, clear and able to attract and retain users' attention in an
-        increasingly busy digital landscape.
+        clean UI and UX. Drawing from my journalism background, I understand
+        that effective websites must be consistent, clear, and engaging to
+        capture and maintain user attention in today's competitive digital
+        landscape.
       </p>
       <p className="text-xl font-robotoSlab ">
-        In addition to fetching, sorting, and presenting data and information
-        with the use of databases and API endpoints, here is a sample of the
-        projects I have built in 2023.
+        Beyond creating visually appealing interfaces, I excel at integrating
+        databases and API endpoints to fetch, sort, and present data in
+        meaningful ways. Here's a showcase of recent projects that demonstrate
+        these capabilities.
       </p>
 
       <section className="grid grid-cols-1 gap-8 px-2 py-2 lg:px-8 sm:grid-cols-2 lg:grid-cols-3 ">
