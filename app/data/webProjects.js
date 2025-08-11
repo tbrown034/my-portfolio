@@ -3,7 +3,7 @@
 export const webProjects = [
   {
     id: 1,
-    title: "Keith Brown DDS (2024)",
+    title: "Keith Brown DDS",
     image: "/images/kabdds-screenshot-aug11.png",
     technologies: [
       "Next.js",
@@ -20,24 +20,27 @@ export const webProjects = [
   },
   {
     id: 2,
-    title: "Reflectyr",
-    image: "/images/reflectyr-screenshot-aug11.png",
+    title: "My Expiry",
+    image: "/images/expirty-screenshot-aug11.png",
     technologies: [
       "Next.js",
       "React",
-      "JavaScript",
+      "TypeScript",
       "Tailwind CSS",
-      "Vercel"
+      "NextAuth.js",
+      "PostgreSQL",
+      "Prisma",
+      "AI Integration"
     ],
     description:
-      "A modern reflection and journaling application built with Next.js. Clean, intuitive interface for personal growth and daily reflection with responsive design.",
-    githubLink: "https://github.com/tbrown034/refelectyr_project",
-    siteLink: "https://reflectyr-project.vercel.app/",
+      "Smart grocery management app with AI-powered shelf life detection and expiry tracking. Features batch item processing, planned receipt scanning, and helps reduce food waste through intelligent notifications.",
+    githubLink: "https://github.com/tbrown034/my-expiry",
+    siteLink: "https://my-expiry.vercel.app/",
   },
   {
     id: 3,
-    title: "My Expiry",
-    image: "/images/expirty-screenshot-aug11.png",
+    title: "Reflectyr",
+    image: "/images/reflectyr-screenshot-aug11.png",
     technologies: [
       "Next.js",
       "React",

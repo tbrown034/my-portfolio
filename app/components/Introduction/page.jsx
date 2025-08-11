@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Introduction() {
   return (
-    <section className="min-h-[50vh] flex flex-col justify-center px-6 py-12 sm:px-8 lg:px-12 xl:px-16 bg-gray-50 dark:bg-gray-900/50">
+    <section className="min-h-[50vh] flex flex-col justify-center px-6 py-12 sm:px-8 lg:px-12 xl:px-16 bg-gray-100 dark:bg-gray-800/50">
       <motion.div 
         className="max-w-7xl mx-auto w-full"
         initial={{ opacity: 0, y: 20 }}

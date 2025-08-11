@@ -4,7 +4,7 @@ import Intro from "./Intro.jsx";
 
 export default function page() {
   return (
-    <section className="bg-gray-50 dark:bg-gray-900/50">
+    <section className="">
       <Intro />
       <Projects />
       <TechStack />
