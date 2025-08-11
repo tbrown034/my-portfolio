@@ -4,7 +4,7 @@ import Intro from "./Intro.jsx";
 
 export default function page() {
   return (
-    <section className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <section className="bg-gray-50 dark:bg-gray-900/50">
       <Intro />
       <Projects />
       <TechStack />

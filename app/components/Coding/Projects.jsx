@@ -10,83 +10,86 @@ export default function Projects() {
   const [displayCount, setDisplayCount] = useState(4);
 
   return (
-    <section className="flex flex-col gap-4">
-      <h1 className="text-3xl font-bold lg:text-center font-montserrat sm:text-4xl ">
-        Projects and Freelance Work
-      </h1>
-      <p className="text-xl font-robotoSlab ">
-        I specialize in building responsive, dynamic websites that focus on
-        clean UI and UX. Drawing from my journalism background, I understand
-        that effective websites must be consistent, clear, and engaging to
-        capture and maintain user attention in today's competitive digital
-        landscape.
-      </p>
-      <p className="text-xl font-robotoSlab ">
-        Beyond creating visually appealing interfaces, I excel at integrating
-        databases and API endpoints to fetch, sort, and present data in
-        meaningful ways. Here's a showcase of recent projects that demonstrate
-        these capabilities.
-      </p>
+    <section className="max-w-7xl mx-auto px-6 py-8 sm:px-8 lg:px-12 xl:px-16">
+      {/* Kill the darlings - no repetitive intro text */}
 
-      <section className="grid grid-cols-1 gap-8 px-2 py-2 lg:px-8 sm:grid-cols-2 lg:grid-cols-3 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {webProjects.slice(0, displayCount).map((project, index) => (
           <div
             key={index}
-            className={`flex flex-col justify-between gap-2 pb-4 border-4 :border-white shadow-lg rounded-t-2xl  dark:text-blue-950 dark:bg-blue-100  rounded-2xl   bg-white ${
-              index === displayCount - 1 && displayCount === 4
-                ? "lg:col-start-2 lg:col-end-3"
-                : ""
-            }`}
+            className="group space-y-6"
           >
-            <Image
-              alt={`Screenshot of ${project.title}`}
-              className="border border-white shadow-lg rounded-t-2xl dark:border-gray-500" // Added border and shadow here
-              src={project.image}
-              width={1200}
-              height={800}
-            />
-            <h1 className="px-2 font-montserrat">{project.title}</h1>
-
-            <div className="flex flex-wrap gap-1 px-2">
-              {project.technologies.map((tech, techIndex) => (
-                <span
-                  key={techIndex}
-                  className="p-1 text-sm bg-blue-800 rounded-lg text-blue-50 font-firaCode"
+            {/* Content first */}
+            <div className="space-y-4">
+              <div className="space-y-2">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+                  {project.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                  {project.description}
+                </p>
+              </div>
+              
+              {/* Tech stack */}
+              <div className="flex flex-wrap gap-2">
+                {project.technologies.slice(0, 4).map((tech, techIndex) => (
+                  <span
+                    key={techIndex}
+                    className="px-2 py-1 text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-400 rounded font-medium"
+                  >
+                    {tech}
+                  </span>
+                ))}
+                {project.technologies.length > 4 && (
+                  <span className="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 rounded">
+                    +{project.technologies.length - 4} more
+                  </span>
+                )}
+              </div>
+              
+              {/* Links */}
+              <div className="flex gap-4">
+                <Link
+                  className="inline-flex items-center gap-1 text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                  href={project.githubLink}
+                  target="_blank"
                 >
-                  {tech}
-                </span>
-              ))}
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  Code
+                </Link>
+                <Link
+                  className="inline-flex items-center gap-1 text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                  href={project.siteLink}
+                  target="_blank"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                  Visit
+                </Link>
+              </div>
             </div>
 
-            <h3 className="px-2">{project.description}</h3>
-
-            <div className="flex w-1/2 gap-4 px-2 py-4 border-t-2 border-blue-600">
-              <Link
-                className="flex items-center gap-2 p-1 text-sm font-bold border-2 border-blue-800 rounded-lg hover:bg-blue-300 active:bg-blue-400"
-                href={project.githubLink}
-              >
-                <p>Github</p>
-
-                <div>
-                  <DiGithubBadge className="w-12 h-12" />
-                </div>
-              </Link>
-
-              <Link
-                className="flex items-center gap-2 p-1 font-bold border-2 border-blue-800 rounded-lg hover:bg-blue-300 active:bg-blue-400"
-                href={project.siteLink}
-              >
-                <p>View Site</p>
-                <GlobeAltIcon className="w-12 h-12" />
-              </Link>
+            {/* Image below content - smaller sample size */}
+            <div className="w-3/4 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden bg-white dark:bg-gray-800 shadow-sm">
+              <Image
+                alt={`Screenshot of ${project.title}`}
+                className="w-full h-auto object-top group-hover:opacity-90 transition-opacity duration-300"
+                src={project.image}
+                width={450}
+                height={563}
+              />
             </div>
           </div>
         ))}
-      </section>
+      </div>
+      
       {displayCount < webProjects.length && (
-        <div className="flex justify-center p-2">
+        <div className="flex justify-center mt-8">
           <button
-            className="w-3/4 p-2 px-4 text-xl font-bold text-white bg-blue-800 rounded-2xl sm:px-8 dark:text-blue-950 dark:bg-blue-50 hover:bg-blue-600 active:bg-blue-950 focus:bg-blue-500 dark:hover:bg-blue-200 focus:outline-none focus:ring focus:ring-blue-400 "
+            className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200"
             onClick={() => setDisplayCount((prevCount) => prevCount + 4)}
           >
             Show More
@@ -94,9 +97,9 @@ export default function Projects() {
         </div>
       )}
       {displayCount > 4 && (
-        <div className="flex justify-center p-2">
+        <div className="flex justify-center mt-8">
           <button
-            className="w-3/4 p-2 px-4 text-xl font-bold text-white bg-blue-800 rounded-2xl sm:px-8 dark:text-blue-950 dark:bg-blue-50 hover:bg-blue-600 active:bg-blue-950 focus:bg-blue-500 dark:hover:bg-blue-200 focus:outline-none focus:ring focus:ring-blue-400"
+            className="px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white text-sm font-medium rounded-lg transition-colors duration-200"
             onClick={() => setDisplayCount(4)}
           >
             Show Fewer
