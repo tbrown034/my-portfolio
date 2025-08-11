@@ -1,57 +1,117 @@
-import { NewspaperIcon } from "@heroicons/react/24/outline";
-
 export default function Intro() {
   return (
-    <section>
-      <div className="flex flex-col gap-4">
-        <div className="bg-blue-100 text-sm font-medium inline-flex items-center px-2.5 py-0.5 rounded-md dark:bg-blue-300  dark:text-blue-800   self-start gap-2">
-          <NewspaperIcon className="w-6 h-6 font-bold" />
-          <p className="text-lg">Journalism </p>
+    <section className="max-w-7xl mx-auto px-6 py-12 sm:px-8 lg:px-12 xl:px-16">
+      {/* Section header - matching Hero style */}
+      <div className="border-b border-gray-200 dark:border-gray-700 pb-2 mb-8">
+        <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400">
+          Journalism
+        </h2>
+      </div>
+
+      {/* Mobile layout */}
+      <div className="block lg:hidden max-w-4xl space-y-6">
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100">
+          Experience
+        </h1>
+        
+        <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
+          <p>
+            I was editor-in-chief of <em>The Indiana Daily Student</em> and graduated from Indiana University with a degree in political science and journalism. I spent the next 18 years covering government accountability and investigative stories, most recently with{" "}
+            <a 
+              href="https://oklahomawatch.org/" 
+              target="_blank" 
+              className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200 underline decoration-2 underline-offset-2"
+            >
+              Oklahoma Watch
+            </a>
+            , a nonprofit newsroom focused on democracy and transparency.
+          </p>
+          
+          <p>
+            Over nearly two decades, I won state and national awards for investigative reporting, covered everything from city council meetings to statewide campaigns, and specialized in stories that led to policy changes and government reform.
+          </p>
         </div>
 
-        <h2 className="text-3xl font-bold lg:text-center font-montserrat sm:text-4xl ">
-          Award-Winning Investigative Journalism
-        </h2>
-        <p className="text-xl leading-normal font-robotoSlab">
-          With nearly two decades of experience as a reporter, I've covered
-          politics, crime, the military, health policies and more. Most
-          recently, as an investigative journalist at{" "}
-          <a
-            href="https://oklahomawatch.org/"
-            className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100"
+        {/* Resume CTA */}
+        <div className="mt-6">
+          <a 
+            href="/resume" 
+            className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200"
           >
-            Oklahoma Watch
+            View Resume
           </a>
-          , an award-winning non-profit newsroom, my reach extended to thousands
-          through a weekly newsletter, regular podcast, radio and TV appearances
-          and reprints in state newspapers, including the Oklahoman and Tulsa
-          World."{" "}
-        </p>
-        <p className="text-xl leading-normal font-robotoSlab">
-          In the past few years, I won the Oklahoma Society of Professional
-          Journalists'{" "}
-          <a
-            href="https://oklahomawatch.org/2020/07/24/oklahoma-watch-journalists-earn-eight-first-place-awards-in-state-contest/"
-            target="_blank"
-            className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100 "
-          >
-            Reporter of the Year award in 2020
-          </a>
-          , The Great Plains Journalism Awards'{" "}
-          <a
-            href="https://oklahomawatch.org/2021/05/10/oklahoma-watchs-trevor-brown-earns-writer-of-year-honors-in-great-plains-journalism-contest/"
-            target="_blank"
-            className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100"
-          >
-            Writer of the Year in 2021
-          </a>{" "}
-          and Oklahoma SPJʼs{" "}
-          <span className="border-b-2 border-blue-800 dark:border-blue-200 hover:border-blue-400 active:border-blue-100">
-            first place awards in 2022
-          </span>{" "}
-          for In-depth Enterprise and Investigative Reporting and Government
-          Reporting.{" "}
-        </p>
+        </div>
+
+        {/* Awards highlights */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
+          <div className="border-l-2 border-blue-500 pl-4">
+            <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Work Experience</h4>
+            <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">Oklahoma Watch, Wyoming Tribune Eagle, CNHI Newspapers, Staunton News Leader, Indiana Daily Student</p>
+          </div>
+          <div className="border-l-2 border-blue-500 pl-4">
+            <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Recognition</h4>
+            <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">OK SPJ Reporter of Year (2020), Great Plains Writer of Year (2021), OK SPJ Investigative (2022)</p>
+          </div>
+          <div className="border-l-2 border-blue-500 pl-4">
+            <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Coverage</h4>
+            <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">Democracy, voting rights, state agencies, oversight, military, criminal justice, healthcare policy, budget analysis</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Large screen layout - broken out left column */}
+      <div className="hidden lg:grid lg:grid-cols-12 lg:gap-8 items-start">
+        <div className="lg:col-span-4">
+          <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+            Experience
+          </h1>
+
+          {/* Resume CTA */}
+          <div className="mb-8">
+            <a 
+              href="/resume" 
+              className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200"
+            >
+              View Resume
+            </a>
+          </div>
+
+          {/* Awards highlights */}
+          <div className="space-y-6">
+            <div className="border-l-2 border-blue-500 pl-4">
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Work Experience</h4>
+              <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">Oklahoma Watch, Wyoming Tribune Eagle, CNHI Newspapers, Staunton News Leader, Indiana Daily Student</p>
+            </div>
+            <div className="border-l-2 border-blue-500 pl-4">
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Recognition</h4>
+              <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">OK SPJ Reporter of Year (2020), Great Plains Writer of Year (2021), OK SPJ Investigative (2022)</p>
+            </div>
+            <div className="border-l-2 border-blue-500 pl-4">
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Coverage</h4>
+              <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">Democracy, voting rights, state agencies, oversight, military, criminal justice, healthcare policy, budget analysis</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="lg:col-span-8">
+          <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
+            <p>
+              I was editor-in-chief of <em>The Indiana Daily Student</em> and graduated from Indiana University with a degree in political science and journalism. I spent the next 18 years covering government accountability and investigative stories, most recently with{" "}
+              <a 
+                href="https://oklahomawatch.org/" 
+                target="_blank" 
+                className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200 underline decoration-2 underline-offset-2"
+              >
+                Oklahoma Watch
+              </a>
+              , a nonprofit newsroom focused on democracy and transparency.
+            </p>
+            
+            <p>
+              Over nearly two decades, I won state and national awards for investigative reporting, covered everything from city council meetings to statewide campaigns, and specialized in stories that led to policy changes and government reform.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );

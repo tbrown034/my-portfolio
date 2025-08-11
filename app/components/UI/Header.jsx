@@ -22,60 +22,50 @@ export default function Header() {
   };
 
   return (
-    <header className="flex items-center justify-between px-6 py-4 border-b border-blue-200/20 dark:border-blue-800/20 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 flex items-center justify-between px-6 py-4 sm:px-8 lg:px-12 xl:px-16 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-700/50">
       <Link
         href="/"
-        className="text-xl font-bold tracking-tight text-blue-900 dark:text-blue-100 font-montserrat hover:text-blue-700 dark:hover:text-blue-200 transition-colors"
+        className="text-lg font-semibold tracking-tight text-gray-900 dark:text-gray-100 hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-200"
       >
         Trevor Brown
       </Link>
       
-      <nav className="hidden lg:flex items-center gap-8">
+      <nav className="hidden md:flex items-center gap-8">
         <a 
           href="/#coding"
-          className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-blue-800 dark:text-blue-200 hover:text-blue-600 dark:hover:text-blue-100 transition-colors"
+          className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200 border-b-2 border-transparent hover:border-gray-300 dark:hover:border-gray-600 pb-1"
         >
-          <CodeBracketIcon className="w-4 h-4" />
-          Coding
+          Development
         </a>
         <a 
           href="/#journalism"
-          className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-blue-800 dark:text-blue-200 hover:text-blue-600 dark:hover:text-blue-100 transition-colors"
+          className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200 border-b-2 border-transparent hover:border-gray-300 dark:hover:border-gray-600 pb-1"
         >
-          <NewspaperIcon className="w-4 h-4" />
           Journalism
         </a>
         <a 
           href="/#dataviz"
-          className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-blue-800 dark:text-blue-200 hover:text-blue-600 dark:hover:text-blue-100 transition-colors"
+          className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200 border-b-2 border-transparent hover:border-gray-300 dark:hover:border-gray-600 pb-1"
         >
-          <ChartBarIcon className="w-4 h-4" />
-          Data
+          Data Stories
         </a>
         <a 
           href="/#about"
-          className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-blue-800 dark:text-blue-200 hover:text-blue-600 dark:hover:text-blue-100 transition-colors"
+          className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200 border-b-2 border-transparent hover:border-gray-300 dark:hover:border-gray-600 pb-1"
         >
-          <UserIcon className="w-4 h-4" />
           Contact
         </a>
       </nav>
 
       <button
         onClick={handleToggle}
-        className="flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-lg bg-blue-100 text-blue-900 dark:bg-blue-900 dark:text-blue-100 hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors"
+        className="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
         aria-label="Toggle theme"
       >
         {isDarkMode ? (
-          <>
-            <SunIcon className="w-4 h-4" />
-            <span className="hidden sm:inline">Light</span>
-          </>
+          <SunIcon className="w-5 h-5" />
         ) : (
-          <>
-            <MoonIcon className="w-4 h-4" />
-            <span className="hidden sm:inline">Dark</span>
-          </>
+          <MoonIcon className="w-5 h-5" />
         )}
       </button>
     </header>

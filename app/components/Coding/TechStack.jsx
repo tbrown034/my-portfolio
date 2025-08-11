@@ -49,8 +49,10 @@ export default function TechStack() {
           </div>
         </div>
 
-        {/* Tech Icons Grid */}
-        <TechIcon />
+        {/* Tech Icons Grid - hidden on mobile */}
+        <div className="hidden sm:block">
+          <TechIcon />
+        </div>
       </div>
     </section>
   );

@@ -11,7 +11,7 @@ export default function Intro() {
       {/* Clean header without repetitive content */}
       <div className="max-w-4xl space-y-3">
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100">
-          Recent Work
+          Selected Web Dev Work
         </h1>
         <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
           Web applications built with modern technologies and clean design principles.

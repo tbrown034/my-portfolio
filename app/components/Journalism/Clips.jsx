@@ -1,83 +1,90 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
-import photo from "../../../public/images/okwatch.png";
 import Link from "next/link";
+import Image from "next/image";
 import { clips } from "../../data/journalismClips.js";
-import { NewspaperIcon } from "@heroicons/react/24/outline";
-import mug from "../../../public/images/trevorPhoto2.jpeg";
 
 export default function Clips() {
   const [displayCount, setDisplayCount] = useState(4);
 
   return (
-    <section className="flex flex-col gap-4">
-      <h1 className="text-3xl font-bold lg:text-center font-montserrat sm:text-4xl">
-        Selected Articles
-      </h1>
-      <p className="text-xl font-robotoSlab ">
-        As a data-driven investigative reporter for more than 15 years, I have
-        written hundreds, if not thousands, of articles about politics,
-        government corruption or inefficiencies and stories that matter to the
-        community.
-      </p>
-      <p className="text-xl font-robotoSlab ">
-        I pride myself on well-researched, well-sourced articles that explain,
-        reveal or uncover something that would otherwise remain hidden. Here are
-        some of my top work in the past years.
-      </p>
-      <section className="grid grid-cols-1 gap-4 px-2 py-2 lg:px-8 sm:grid-cols-2 lg:grid-cols-3 ">
-        {clips.slice(0, displayCount).map((clip, index) => (
-          <div
-            key={index}
-            className={`flex flex-col justify-between gap-2 pb-4 border-4 :border-white shadow-lg rounded-t-2xl  dark:text-blue-950 dark:bg-blue-100  rounded-2xl   bg-white${
-              index === displayCount - 1 && displayCount === 4
-                ? "lg:col-start-2 lg:col-end-3"
-                : ""
-            }`}
-          >
-            <Image
-              className="border border-white shadow-lg rounded-t-2xl dark:border-gray-500"
-              alt="alt"
-              src={clip.image}
-            ></Image>
-            <div className="px-6">
-              <Image alt="Oklahoma Watch logo" src={photo}></Image>
-            </div>
-            <h1 className="px-2 text-xl font-montserrat">{clip.headline}</h1>
+    <section className="max-w-7xl mx-auto px-6 py-8 sm:px-8 lg:px-12 xl:px-16">
+      <div className="space-y-3 mb-8">
+        <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100">
+          Selected News Articles
+        </h3>
+        <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+          Investigative stories and in-depth reporting on government accountability and policy.
+        </p>
+      </div>
 
-            <div className="flex items-center gap-2 px-2">
-              <Image
-                className="rounded-full"
-                height={75}
-                src={mug}
-                alt="mug"
-              ></Image>
-              <div className="flex flex-col justify-start gap-2 text ">
-                <h3>
-                  By <span className="font-semibold">Trevor Brown</span>{" "}
-                </h3>
-                <h3 className="text-sm">Published: {clip.date}</h3>
-              </div>{" "}
-            </div>
-            <p className="px-2">{clip.text}</p>
+      {/* Articles grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {clips.slice(0, displayCount).map((article, index) => (
+          <div key={index} className="group relative">
+            {/* Gradient background glow */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-1000 group-hover:duration-200"></div>
+            
+            {/* Card content */}
+            <div className="relative bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700">
+              <div className="space-y-4">
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2 text-xs">
+                    <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-400 rounded font-medium">
+                      Oklahoma Watch
+                    </span>
+                    <span className="text-gray-500 dark:text-gray-400">{article.date}</span>
+                  </div>
+                  
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+                    {article.headline}
+                  </h3>
+                  
+                  <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
+                    {article.text}
+                  </p>
+                </div>
 
-            <div className="flex w-1/2 gap-4 px-2 py-4 border-t-2 border-blue-600">
-              <Link
-                className="flex items-center gap-2 p-1 font-bold border-2 border-blue-800 rounded-lg hover:bg-blue-300 active:bg-blue-400"
-                href={clip.siteLink}
-              >
-                <p>Full Article</p>
-                <NewspaperIcon className="w-12 h-12" />
-              </Link>
+                {/* Article image - left aligned for horizontal photos */}
+                {article.image && (
+                  <div className="w-2/3 border border-gray-200 dark:border-gray-600 rounded overflow-hidden shadow-sm bg-white dark:bg-gray-800">
+                    <Image
+                      alt={`Screenshot for ${article.headline}`}
+                      className="w-full h-auto object-center"
+                      src={article.image}
+                      width={300}
+                      height={200}
+                    />
+                  </div>
+                )}
+
+                <div className="flex items-center justify-between pt-2 border-t border-gray-100 dark:border-gray-700">
+                  <span className="text-sm text-gray-500 dark:text-gray-400 font-medium">
+                    By Trevor Brown
+                  </span>
+                  
+                  <Link
+                    className="inline-flex items-center gap-1 text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                    href={article.siteLink || "https://oklahomawatch.org"}
+                    target="_blank"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                    Read Article
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         ))}
-      </section>
+      </div>
+
+      {/* Show more/fewer buttons */}
       {displayCount < clips.length && (
-        <div className="flex justify-center p-2">
+        <div className="flex justify-center mt-8">
           <button
-            className="w-3/4 p-2 px-4 text-xl font-bold text-white bg-blue-800 rounded-2xl sm:px-8 dark:text-blue-950 dark:bg-blue-50 hover:bg-blue-600 active:bg-blue-950 focus:bg-blue-500 dark:hover:bg-blue-200 focus:outline-none focus:ring focus:ring-blue-400"
+            className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200"
             onClick={() => setDisplayCount((prevCount) => prevCount + 4)}
           >
             Show More
@@ -85,9 +92,9 @@ export default function Clips() {
         </div>
       )}
       {displayCount > 4 && (
-        <div className="flex justify-center p-2">
+        <div className="flex justify-center mt-8">
           <button
-            className="w-3/4 p-2 px-4 text-xl font-bold text-white bg-blue-800 rounded-2xl sm:px-8 dark:text-blue-950 dark:bg-blue-50 hover:bg-blue-600 active:bg-blue-950 focus:bg-blue-500 dark:hover:bg-blue-200 focus:outline-none focus:ring focus:ring-blue-400"
+            className="px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white text-sm font-medium rounded-lg transition-colors duration-200"
             onClick={() => setDisplayCount(4)}
           >
             Show Fewer

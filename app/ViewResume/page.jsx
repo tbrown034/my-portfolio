@@ -1,41 +1,68 @@
 import Image from "next/image";
-import resume from "../../public/images/Resume.jpg";
-import {
-  AiOutlineDownload,
-  AiOutlineHome,
-  AiOutlineMail,
-} from "react-icons/ai";
+import Link from "next/link";
 
 export default function Page() {
   return (
-    <section className="flex flex-col gap-4 px-8 dark:bg-blue-900 ">
-      <Image src={resume} alt="Resume for Trevor Brown"></Image>
-      <div className="flex flex-col items-center justify-center gap-4 sm:flex-row ">
-        <a
-          className="flex flex-col items-center justify-center w-2/3 p-2 px-4 font-bold text-white bg-blue-800 sm:w-1/3 rounded-2xl sm:px-8 dark:text-blue-950 dark:bg-blue-50 hover:bg-blue-600 active:bg-blue-950 focus:bg-blue-500 dark:hover:bg-blue-200 focus:outline-none focus:ring focus:ring-blue-400 "
-          href="/"
-        >
-          <AiOutlineHome className="w-icon-sm h-icon-sm" />
-          <p className="text-sm font-semibold text-center">Back to Home</p>
-        </a>
-        <a
-          className="flex flex-col items-center justify-center w-2/3 p-2 px-4 text-xl font-bold text-white bg-blue-800 sm:w-1/3 rounded-2xl sm:px-8 dark:text-blue-950 dark:bg-blue-50 hover:bg-blue-600 active:bg-blue-950 focus:bg-blue-500 dark:hover:bg-blue-200 focus:outline-none focus:ring focus:ring-blue-400"
-          href="mailto:trevorbrown.web@gmail.com"
-        >
-          {" "}
-          <AiOutlineMail className="w-icon-sm h-icon-sm" />
-          <p className="text-sm font-semibold text-center">Get in Contact</p>
-        </a>
-        <a
-          className="flex flex-col items-center justify-center w-2/3 p-2 px-4 text-xl font-bold text-white bg-blue-800 sm:w-1/3 rounded-2xl sm:px-8 dark:text-blue-950 dark:bg-blue-50 hover:bg-blue-600 active:bg-blue-950 focus:bg-blue-500 dark:hover:bg-blue-200 focus:outline-none focus:ring focus:ring-blue-400"
-          href="/trevorBrownResume.pdf"
-          download="trevorResume"
-        >
-          {" "}
-          <AiOutlineDownload className="w-icon-sm h-icon-sm" />
-          <p className="text-sm font-semibold text-center">Download Resume</p>
-        </a>
+    <main className="min-h-screen bg-white dark:bg-gray-900">
+      {/* Header */}
+      <div className="border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
+        <div className="max-w-4xl mx-auto px-6 py-8 sm:px-8">
+          <div className="border-b border-gray-200 dark:border-gray-700 pb-2 mb-6">
+            <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400">
+              Resume
+            </h2>
+          </div>
+          
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+            Trevor Brown
+          </h1>
+          <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+            Investigative journalist + developer with 18+ years of experience in government accountability reporting and modern web development.
+          </p>
+        </div>
       </div>
-    </section>
+
+      {/* Resume Content */}
+      <div className="max-w-4xl mx-auto px-6 py-12 sm:px-8">
+        {/* Resume Image */}
+        <div className="mb-8">
+          <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden shadow-sm bg-white dark:bg-gray-800">
+            <Image 
+              src="/images/Resume.jpg" 
+              alt="Trevor Brown Resume" 
+              width={800}
+              height={1000}
+              className="w-full h-auto"
+              priority
+            />
+          </div>
+        </div>
+
+        {/* Actions */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link
+            href="/"
+            className="inline-flex items-center justify-center px-6 py-3 border-2 border-gray-300 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 font-medium rounded-lg transition-colors duration-200"
+          >
+            ← Back to Portfolio
+          </Link>
+          
+          <a
+            href="mailto:trevorbrown.web@gmail.com"
+            className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200"
+          >
+            Get in Touch
+          </a>
+          
+          <a
+            href="/trevorBrownResume.pdf"
+            download="TrevorBrown-Resume"
+            className="inline-flex items-center justify-center px-6 py-3 border-2 border-blue-600 hover:bg-blue-600 text-blue-600 hover:text-white font-medium rounded-lg transition-colors duration-200"
+          >
+            Download PDF
+          </a>
+        </div>
+      </div>
+    </main>
   );
 }

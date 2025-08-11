@@ -10,7 +10,7 @@ export default function Projects() {
   const [displayCount, setDisplayCount] = useState(4);
 
   return (
-    <section className="max-w-7xl mx-auto px-6 py-8 sm:px-8 lg:px-12 xl:px-16">
+    <section className="max-w-7xl mx-auto px-6 pt-0 pb-8 sm:px-8 lg:px-12 xl:px-16">
       {/* Kill the darlings - no repetitive intro text */}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -74,15 +74,15 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* Smaller image with border */}
+              {/* Smaller image with border - left aligned */}
               <div className="relative">
-                <div className="w-1/2 mx-auto border-2 border-gray-200 dark:border-gray-600 rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800">
+                <div className="w-2/3 border-2 border-gray-200 dark:border-gray-600 rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800">
                   <Image
                     alt={`Screenshot of ${project.title}`}
                     className="w-full h-auto object-top group-hover:scale-105 transition-transform duration-300"
                     src={project.image}
-                    width={300}
-                    height={375}
+                    width={400}
+                    height={500}
                   />
                 </div>
               </div>
