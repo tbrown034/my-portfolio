@@ -17,7 +17,7 @@ export default function HelloWorld() {
       </p>
 
       <p className="text-sm font-mono text-gray-500 dark:text-gray-400 mt-1">
-        Building and shipping whether it's from the newsroom or terminal
+        Building and delivering whether it's from the newsroom or terminal
       </p>
     </motion.header>
   );

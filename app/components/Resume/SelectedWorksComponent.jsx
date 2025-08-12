@@ -316,7 +316,7 @@ export default function SelectedWorksComponent({ showGuides = false }) {
               <div className="work-item">
                 <div className="work-header">
                   <a
-                    href="https://oklahomawatch.org/2022/03/04/ice-holds-drop-as-immigrant-communities-law-enforcement-balance-policy-changes/"
+                    href="https://oklahomawatch.org/2021/11/19/redistricting-weighing-the-impact-of-splitting-oklahomas-largest-hispanic-community/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="work-title-link"
@@ -327,12 +327,12 @@ export default function SelectedWorksComponent({ showGuides = false }) {
                     </div>
                   </a>
                   <a
-                    href="https://oklahomawatch.org/2022/03/04/ice-holds-drop-as-immigrant-communities-law-enforcement-balance-policy-changes/"
+                    href="https://oklahomawatch.org/2021/11/19/redistricting-weighing-the-impact-of-splitting-oklahomas-largest-hispanic-community/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="work-url-link"
                   >
-                    oklahomawatch.org/2022/03/04/redistricting-impact
+                    oklahomawatch.org/2021/11/19/redistricting-impact
                   </a>
                 </div>
                 <div className="work-description">
@@ -345,7 +345,7 @@ export default function SelectedWorksComponent({ showGuides = false }) {
               <div className="work-item">
                 <div className="work-header">
                   <a
-                    href="https://inn.org/2020-community-champion-award-winners"
+                    href="https://oklahomawatch.org/oklahoma-covid-legacy-project/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="work-title-link"
@@ -356,12 +356,12 @@ export default function SelectedWorksComponent({ showGuides = false }) {
                     </div>
                   </a>
                   <a
-                    href="https://inn.org/2020-community-champion-award-winners"
+                    href="https://oklahomawatch.org/oklahoma-covid-legacy-project/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="work-url-link"
                   >
-                    inn.org/2020-community-champion-award-winners
+                    oklahomawatch.org/oklahoma-covid-legacy-project
                   </a>
                 </div>
                 <div className="work-description">

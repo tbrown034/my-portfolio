@@ -46,7 +46,7 @@ export const dataStories = [
     image: "/images/redistricting.png",
     alt: "Side-by-side maps comparing current and proposed congressional districts around Oklahoma City",
     dek: "Side-by-side maps estimate how a proposed congressional map would shift Hispanic/Latino representation across OKC’s districts.",
-    articleUrl: "https://oklahomawatch.org", // TODO: replace with the actual redistricting article URL
+    articleUrl: "https://oklahomawatch.org/2021/11/19/redistricting-weighing-the-impact-of-splitting-oklahomas-largest-hispanic-community/",
     tools: ["QGIS", "Illustrator"],
     type: "Redistricting",
     publication: "Oklahoma Watch",
