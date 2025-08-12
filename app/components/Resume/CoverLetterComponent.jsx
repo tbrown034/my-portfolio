@@ -5,14 +5,15 @@ import { useState, useRef } from "react";
 export default function CoverLetterComponent({ showGuides = false }) {
   const [isExporting, setIsExporting] = useState(false);
   const [exportType, setExportType] = useState('');
-  const [selectedType, setSelectedType] = useState('ap-elections-data-viz-dev');
+  const [selectedType, setSelectedType] = useState('elections-news-editor');
   const pageRef = useRef(null);
 
-  const coverLetterTypes = [
-    { value: 'ap-elections-data-viz-dev', label: 'AP - Elections Data Visualizations Developer' },
-    { value: 'ap-election-data-analyst', label: 'AP - Election Data Analyst' },
-    { value: 'ap-elections-quality-control', label: 'AP - Elections Quality Control Editor' },
-    { value: 'ap-elections-research-products', label: 'AP - Elections Research Products Editor' }
+  const jobTypes = [
+    { value: 'data-viz-dev', label: 'Elections Data Visualizations Developer (Newsperson) Position' },
+    { value: 'data-analyst', label: 'Election Data Analyst Position' },
+    { value: 'quality-control', label: 'Elections Quality Control Editor Position' },
+    { value: 'research-products', label: 'Elections Research Products Editor Position' },
+    { value: 'elections-news-editor', label: 'Elections News Editor Position' }
   ];
 
   const handleExportPDF = async () => {
@@ -21,11 +22,11 @@ export default function CoverLetterComponent({ showGuides = false }) {
     setExportType('pdf');
     try {
       const html2pdf = (await import("html2pdf.js")).default;
-      const typeLabel = coverLetterTypes.find(t => t.value === selectedType)?.label.replace(/\s+/g, '_') || 'Cover_Letter';
+      const jobLabel = jobTypes.find(t => t.value === selectedType)?.label.replace(/\s+/g, '_') || 'Cover_Letter';
       await html2pdf()
         .set({
           margin: 0,
-          filename: `Trevor_Brown_Cover_Letter_${typeLabel}.pdf`,
+          filename: `Trevor_Brown_Cover_Letter_${jobLabel}.pdf`,
           image: { type: "jpeg", quality: 1 },
           html2canvas: { scale: 3, useCORS: true, letterRendering: true },
           jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
@@ -53,12 +54,12 @@ export default function CoverLetterComponent({ showGuides = false }) {
         backgroundColor: '#ffffff'
       });
       
-      const typeLabel = coverLetterTypes.find(t => t.value === selectedType)?.label.replace(/\s+/g, '_') || 'Cover_Letter';
+      const jobLabel = jobTypes.find(t => t.value === selectedType)?.label.replace(/\s+/g, '_') || 'Cover_Letter';
       // Convert to PNG and download
       canvas.toBlob((blob) => {
         const url = URL.createObjectURL(blob);
         const link = document.createElement('a');
-        link.download = `Trevor_Brown_Cover_Letter_${typeLabel}.png`;
+        link.download = `Trevor_Brown_Cover_Letter_${jobLabel}.png`;
         link.href = url;
         link.click();
         URL.revokeObjectURL(url);
@@ -72,82 +73,46 @@ export default function CoverLetterComponent({ showGuides = false }) {
   };
 
   const getCoverLetterContent = () => {
-    // AP Elections Data Visualizations Developer
-    if (selectedType === 'ap-elections-data-viz-dev') {
+    const selectedJob = jobTypes.find(t => t.value === selectedType);
+    
+    if (selectedType === 'elections-news-editor') {
       return {
-        position: 'Elections Data Visualizations Developer Position',
+        position: 'Elections News Editor Position',
         body: [
-          "I combine award-winning political journalism with modern web development skills to build data visualizations that make complex election information clear and accessible. My track record of statehouse reporting, data analysis and interactive storytelling makes me ready to help the Associated Press deliver trusted election coverage with speed and accuracy.",
+          "I am writing to express my strong interest in the Elections News Editor position with the Associated Press. As an investigative journalist turned full-stack developer, I bring award-winning political reporting and modern technical skills.",
           
-          "I have covered every election since 2008, from presidential races to local government, including direct collaboration with Associated Press reporters in the Wyoming and Oklahoma state capitols. At Oklahoma Watch, I built award-winning election maps, charts, trend visualizations and interactive storytelling projects. This work included campaign finance maps, ICE detainer trend charts, color-coded vaccination maps and redistricting impact comparisons that required collecting, cleaning and analyzing complex datasets.",
+          "My journalism foundation runs deep through Wyoming and Oklahoma state capitals. I worked alongside AP reporters I respect for their accuracy and speed under pressure.",
           
-          "My technical skills include React, Next.js, Node.js, TypeScript, PostgreSQL and Tailwind CSS. I have experience with data visualization libraries including Chart.js and D3.js, and I'm comfortable quickly learning new technologies and documentation. I recently doubled revenue for a client site while keeping the same $2,000 ad budget through SEO optimization and GA4 tracking implementation.",
+          "At Oklahoma Watch, I led enterprise coverage that earned multiple first-place awards from the Oklahoma Society of Professional Journalists. My work exposed misinformation in political campaigns and revealed dark money influence in state races. I was named Great Plains Newspaper Writer of the Year in 2021.",
           
-          "I was recognized with multiple first-place awards from the Oklahoma Society of Professional Journalists for investigative work that included a statewide fact-checking investigation into disinformation patterns across 50+ primary races and analysis of 20 years of racial profiling complaint data revealing systemic enforcement gaps. I was named Great Plains Newspaper Writer of the Year in 2021 for work that consistently combined data analysis with clear storytelling.",
+          "I produced data-driven election projects including campaign finance maps and redistricting impact visualizations. These required collecting and analyzing complex datasets, then translating findings into clear stories.",
           
-          "I understand the importance of accuracy, data integrity and editorial standards that the Associated Press is known for. My experience fact-checking complex datasets and verifying source material, combined with my technical ability to build modern web applications, positions me to contribute immediately to your election data products and visualizations."
+          "I pivoted from journalism into development, working on consulting projects and launching web applications. Now I want to bring these technical skills back to journalism. This dual perspective makes me uniquely positioned for AP's election coverage.",
+          
+          "AP's race calls and election night coverage shape how millions understand our democracy. Our explanatory coverage must illuminate rather than confuse.",
+          
+          "I genuinely like working with newer reporters on complicated stories. Election mechanics and data analysis can be intimidating - I'd be happy to share what I've learned and help however I can.",
+          
+          "I would welcome the opportunity to discuss how my experience can strengthen AP's election journalism."
         ]
       };
     }
     
-    // AP Election Data Analyst
-    if (selectedType === 'ap-election-data-analyst') {
-      return {
-        position: 'Election Data Analyst Position',
-        body: [
-          "I bring award-winning investigative journalism experience and strong data analysis skills to help the Associated Press deliver accurate, insightful election coverage. My background analyzing complex datasets and translating findings into clear narratives makes me ready to contribute to your election data analysis efforts.",
-          
-          "I have covered every election since 2008, from presidential races to local government, with direct experience collaborating with Associated Press reporters in the Wyoming and Oklahoma state capitols. My investigative work required deep data analysis skills – from campaign finance patterns to demographic voting trends – and I consistently combined statistical analysis with editorial judgment to ensure accuracy.",
-          
-          "At Oklahoma Watch, I analyzed complex datasets including 20 years of racial profiling complaint data and 15,000+ court records for hospital debt investigations. I also led fact-checking investigations that required verifying candidate statements using court records and public data across 50+ primary races. This work required cleaning messy data, identifying statistical anomalies, and presenting findings in ways that both editors and readers could understand. I was named Great Plains Newspaper Writer of the Year in 2021 for work that consistently combined rigorous data analysis with clear storytelling.",
-          
-          "My technical skills include working with large datasets, statistical analysis, and data validation processes. I understand the critical importance of data integrity in election reporting and have experience with the editorial standards required for high-stakes political coverage. I'm comfortable with both technical analysis and explaining complex findings to editorial teams.",
-          
-          "I am eager to apply my data analysis experience and deep understanding of election processes to help maintain the Associated Press's reputation for accurate, trusted election coverage."
-        ]
-      };
-    }
-    
-    // AP Elections Quality Control Editor  
-    if (selectedType === 'ap-elections-quality-control') {
-      return {
-        position: 'Elections Quality Control Editor Position',
-        body: [
-          "I bring award-winning investigative journalism experience and modern technical skills to ensure accuracy, editorial quality and data integrity in election coverage. My background combining deep reporting expertise with data analysis makes me ready to uphold the editorial standards the Associated Press is known for.",
-          
-          "I have covered every election since 2008, from presidential races to local government, with direct experience collaborating with Associated Press reporters in the Wyoming and Oklahoma state capitols. At Oklahoma Watch, I conducted investigations that required rigorous fact-checking, cleaning datasets and verifying source material – work that won multiple first-place awards from the Oklahoma Society of Professional Journalists.",
-          
-          "My investigative work included a statewide fact-checking investigation into disinformation patterns across 50+ primary races and a comprehensive analysis of 20 years of racial profiling complaint data that revealed systemic enforcement gaps. This work required not only data analysis skills but also the editorial judgment to ensure accuracy and maintain credibility. I was named Great Plains Newspaper Writer of the Year in 2021 and received Community Champion recognition from the Institute for Nonprofit News.",
-          
-          "I understand that election data products must meet the highest editorial standards and that accuracy is paramount in this field. My technical skills – including React, Next.js, Node.js, TypeScript and PostgreSQL – enhance my ability to work with complex election data products while ensuring they meet editorial quality requirements.",
-          
-          "I am comfortable working with large datasets, identifying inconsistencies and ensuring data integrity throughout the editorial process. My record of investigative work demonstrates my commitment to accuracy and my ability to work under deadline pressure while maintaining the quality standards that readers expect from the Associated Press."
-        ]
-      };
-    }
-    
-    // AP Elections Research Products Editor
-    if (selectedType === 'ap-elections-research-products') {
-      return {
-        position: 'Elections Research Products Editor Position',
-        body: [
-          "I combine award-winning investigative journalism with research expertise to help the Associated Press develop comprehensive, accurate election research products. My experience analyzing political trends, voter data, and election processes positions me to contribute immediately to your elections research efforts.",
-          
-          "I have covered every election since 2008, conducting in-depth research on candidates, ballot measures, and electoral trends. My collaboration with Associated Press reporters in the Wyoming and Oklahoma state capitols gave me direct insight into the research standards and editorial processes that make AP election coverage trusted nationwide.",
-          
-          "At Oklahoma Watch, I produced research-driven investigations that required deep dives into complex datasets and court records. This work included a statewide fact-checking investigation into disinformation patterns across 50+ primary races, analysis of 20 years of racial profiling complaint data, and building a searchable database from 15,000+ court records tracking hospital lawsuits against patients. My research consistently met the rigorous editorial standards required for investigative work that won multiple first-place awards.",
-          
-          "I understand the critical importance of thorough, accurate research in election coverage. My investigative background has taught me to verify sources, cross-reference data, and maintain editorial objectivity while working under tight deadlines. I was named Great Plains Newspaper Writer of the Year in 2021 for research-driven work that consistently uncovered important stories.",
-          
-          "I am excited to bring my research expertise and deep understanding of election processes to help develop the comprehensive, trusted election research products that readers and news organizations rely on from the Associated Press."
-        ]
-      };
-    }
-    
-    // Default fallback (should not be reached with current AP-only options)
     return {
-      position: 'Position',
-      body: ['Default content']
+      position: selectedJob?.label || 'Elections Data Visualizations Developer (Newsperson) Position',
+      body: [
+        "I am writing to express my strong interest in the Elections Data Visualizations Developer (Newsperson) position with the Associated Press. I combine award-winning political journalism with modern web development skills, and I bring a record of statehouse reporting, data analysis and interactive storytelling that makes me ready to help AP cover elections with speed and accuracy.",
+        
+        "I have reported from the Wyoming and Oklahoma state capitals and worked alongside AP reporters I respect for their accuracy and speed. At Oklahoma Watch I produced data-driven projects such as campaign finance maps, ICE detainer trend charts, color-coded vaccination maps and redistricting impact comparisons. These pieces required collecting, cleaning and analyzing datasets, then designing accessible visualizations with tools like Datawrapper, Flourish and Tableau.",
+        
+        "I was also recognized with multiple first-place awards from the Oklahoma Society of Professional Journalists for in-depth enterprise, investigative, government and criminal justice reporting. My work included uncovering misinformation in political campaigns, exposing racial profiling enforcement failures and revealing the influence of dark money in state races. I was named Great Plains Newspaper Writer of the Year in 2021 and have been a finalist for other national and regional awards.",
+        
+        "In recent years I have pivoted into full-stack development. I built and shipped modern React and Next.js applications including ReStub, a platform for logging live sports experiences, and My Expiry, an AI-powered grocery tracker. I also rebuilt and optimized a high-traffic dental practice site, doubled revenue while keeping the same $2,000 ad budget, improved search rankings with SEO, and implemented GA4 event tracking.",
+        
+        "I work in React, Next.js, Node.js, TypeScript, PostgreSQL and Tailwind CSS. I have explored and used data visualization libraries like Chart.js and D3.js. I am always ready to pick up a new technology or dive into unfamiliar documentation to deliver results.",
+        
+        "I am eager to contribute to the trusted election data products AP is known for. I would welcome the chance to discuss how my skills and experience can strengthen your coverage."
+      ]
     };
   };
 
@@ -155,17 +120,17 @@ export default function CoverLetterComponent({ showGuides = false }) {
 
   return (
     <div className="mx-auto max-w-[calc(8.5in+6rem)] px-6 py-12 flex flex-col items-center">
-      {/* Cover Letter Type Selector */}
+      {/* Job Type Selector */}
       <div className="mb-6 no-print">
         <label className="block text-sm font-medium text-gray-700 mb-2">
-          Cover Letter Type:
+          Position:
         </label>
         <select
           value={selectedType}
           onChange={(e) => setSelectedType(e.target.value)}
           className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-900"
         >
-          {coverLetterTypes.map((type) => (
+          {jobTypes.map((type) => (
             <option key={type.value} value={type.value}>
               {type.label}
             </option>
@@ -188,7 +153,7 @@ export default function CoverLetterComponent({ showGuides = false }) {
           </header>
 
           {/* Date */}
-          <div className="letter-date">August 11, 2025</div>
+          <div className="letter-date">Aug. 11, 2025</div>
 
           {/* Recipient */}
           <div className="letter-recipient">

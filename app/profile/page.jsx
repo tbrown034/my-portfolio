@@ -25,10 +25,10 @@ export default function ProfilePage() {
             <a href="mailto:trevorbrown.web@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline">
               trevorbrown.web@gmail.com
             </a>
-            <a href="https://linkedin.com/in/trevorabrown" target="_blank" className="text-blue-600 dark:text-blue-400 hover:underline">
+            <a href="https://linkedin.com/in/trevorabrown" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
               LinkedIn: trevorabrown
             </a>
-            <a href="https://github.com/tbrown034" target="_blank" className="text-blue-600 dark:text-blue-400 hover:underline">
+            <a href="https://github.com/tbrown034" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
               GitHub: tbrown034
             </a>
           </div>
@@ -92,7 +92,7 @@ export default function ProfilePage() {
               <p className="text-xs text-gray-500 dark:text-gray-500 mb-2">
                 <strong>Technologies:</strong> Next.js, MongoDB, Tailwind CSS, Vercel deployment
               </p>
-              <a href="https://github.com/tbrown034/expirty" target="_blank" className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
+              <a href="https://github.com/tbrown034/expirty" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
                 View on GitHub →
               </a>
             </div>
@@ -107,7 +107,7 @@ export default function ProfilePage() {
               <p className="text-xs text-gray-500 dark:text-gray-500 mb-2">
                 <strong>Technologies:</strong> React, JavaScript, CSS3, responsive design
               </p>
-              <a href="https://github.com/tbrown034/restub" target="_blank" className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
+              <a href="https://github.com/tbrown034/restub" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
                 View on GitHub →
               </a>
             </div>
@@ -122,7 +122,7 @@ export default function ProfilePage() {
               <p className="text-xs text-gray-500 dark:text-gray-500 mb-2">
                 <strong>Technologies:</strong> Next.js, Firebase, Chart.js, Tailwind CSS
               </p>
-              <a href="https://github.com/tbrown034/reflectyr" target="_blank" className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
+              <a href="https://github.com/tbrown034/reflectyr" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
                 View on GitHub →
               </a>
             </div>
@@ -137,7 +137,7 @@ export default function ProfilePage() {
               <p className="text-xs text-gray-500 dark:text-gray-500 mb-2">
                 <strong>Technologies:</strong> Next.js, Tailwind CSS, contact form integration
               </p>
-              <a href="https://github.com/tbrown034/keith-brown-dds" target="_blank" className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
+              <a href="https://github.com/tbrown034/keith-brown-dds" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
                 View on GitHub →
               </a>
             </div>

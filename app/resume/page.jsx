@@ -1,14 +1,10 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
-import CoverLetterComponent from "../components/Resume/CoverLetterComponent";
 import ResumeComponent from "../components/Resume/ResumeComponent";
 import SelectedWorksComponent from "../components/Resume/SelectedWorksComponent";
 
 export default function ResumePage() {
-  const [showGuides, setShowGuides] = useState(false);
-
   return (
     <main className="min-h-screen bg-gray-50">
       {/* Toolbar */}
@@ -16,15 +12,6 @@ export default function ResumePage() {
         <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <h1 className="text-sm font-medium tracking-wider uppercase text-gray-600 letter-spacing-wide">Application Package</h1>
-            <label className="flex items-center gap-2 text-sm text-gray-600">
-              <input
-                type="checkbox"
-                checked={showGuides}
-                onChange={() => setShowGuides(v => !v)}
-                className="rounded"
-              />
-              Show guides
-            </label>
           </div>
           <div className="flex items-center gap-3">
             <Link
@@ -37,14 +24,11 @@ export default function ResumePage() {
         </div>
       </div>
 
-      {/* Cover Letter Component */}
-      <CoverLetterComponent showGuides={showGuides} />
-
       {/* Resume Component */}
-      <ResumeComponent showGuides={showGuides} />
+      <ResumeComponent showGuides={false} />
 
       {/* Selected Works Component */}
-      <SelectedWorksComponent showGuides={showGuides} />
+      <SelectedWorksComponent showGuides={false} />
 
       {/* Editorial-inspired Resume Styles */}
       <style jsx global>{`
@@ -439,98 +423,6 @@ export default function ResumePage() {
             );
         }
         
-        /* Cover Letter Specific Styles */
-        .cover-letter-content {
-          width: 100%;
-          height: 100%;
-          padding: 0.4in 0.75in 0.5in 0.75in;
-          box-sizing: border-box;
-          color: #111827;
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-          font-size: 10.5pt;
-          line-height: 1.5;
-        }
-
-        .letter-header {
-          text-align: center;
-          margin-bottom: 20px;
-          padding-bottom: 12px;
-          border-bottom: 1px solid #d1d5db;
-        }
-
-        .sender-name {
-          font-size: 26pt;
-          font-weight: 800;
-          letter-spacing: 0.06em;
-          color: #1f2937;
-          margin-bottom: 10px;
-          text-transform: uppercase;
-        }
-
-        .sender-contact {
-          font-size: 9.5pt;
-          color: #6b7280;
-          font-weight: 400;
-        }
-
-        .letter-date {
-          margin-bottom: 20px;
-          font-size: 10pt;
-          color: #374151;
-        }
-
-        .letter-recipient {
-          margin-bottom: 20px;
-          font-size: 10pt;
-          color: #111827;
-          line-height: 1.4;
-        }
-
-        .letter-subject {
-          margin-bottom: 16px;
-          font-size: 10.5pt;
-          font-weight: 700;
-          color: #111827;
-        }
-
-        .letter-salutation {
-          margin-bottom: 12px;
-          font-size: 10pt;
-          color: #111827;
-        }
-
-        .letter-body {
-          margin-bottom: 20px;
-        }
-
-        .letter-body p {
-          margin-bottom: 12px;
-          font-size: 10pt;
-          color: #374151;
-          line-height: 1.45;
-          text-align: left;
-        }
-
-        .letter-body p:last-child {
-          margin-bottom: 0;
-        }
-
-        .letter-closing {
-          margin-top: 24px;
-        }
-
-        .closing-text {
-          margin-bottom: 20px;
-          font-size: 10pt;
-          color: #111827;
-        }
-
-        .signature {
-          font-size: 10.5pt;
-          font-weight: 700;
-          color: #111827;
-        }
-
         /* Print styles */
         @page { 
           size: 8.5in 11in; 

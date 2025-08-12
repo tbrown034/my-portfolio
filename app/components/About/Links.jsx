@@ -42,6 +42,8 @@ export default function Links() {
           <a
             className="flex flex-col items-center justify-center p-1 transition-all duration-300 ease-in-out transform rounded-lg cursor-pointer hover:bg-blue-300 hover:scale-105 hover:shadow-lg"
             href="https://twitter.com/tbrownOKC"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             {" "}
             <AiFillTwitterCircle className="w-icon-sm h-icon-sm" />

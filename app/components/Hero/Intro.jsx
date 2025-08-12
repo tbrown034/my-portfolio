@@ -56,6 +56,7 @@ export default function Intro() {
         <a 
           href="https://github.com/tbrown034"
           target="_blank"
+          rel="noopener noreferrer"
           className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
         >
           GitHub
@@ -63,6 +64,7 @@ export default function Intro() {
         <a 
           href="https://www.linkedin.com/in/trevorabrown/"
           target="_blank"
+          rel="noopener noreferrer"
           className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
         >
           LinkedIn

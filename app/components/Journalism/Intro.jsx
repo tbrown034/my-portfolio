@@ -19,7 +19,8 @@ export default function Intro() {
             I was editor-in-chief of <em>The Indiana Daily Student</em> and graduated from Indiana University with a degree in political science and journalism. I spent the next 18 years covering government accountability and investigative stories, most recently with{" "}
             <a 
               href="https://oklahomawatch.org/" 
-              target="_blank" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200 underline decoration-2 underline-offset-2"
             >
               Oklahoma Watch
@@ -99,7 +100,8 @@ export default function Intro() {
               I was editor-in-chief of <em>The Indiana Daily Student</em> and graduated from Indiana University with a degree in political science and journalism. I spent the next 18 years covering government accountability and investigative stories, most recently with{" "}
               <a 
                 href="https://oklahomawatch.org/" 
-                target="_blank" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200 underline decoration-2 underline-offset-2"
               >
                 Oklahoma Watch

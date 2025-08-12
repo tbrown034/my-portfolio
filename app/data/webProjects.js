@@ -14,7 +14,7 @@ export const webProjects = [
       "Google Tag Manager"
     ],
     description:
-      "Professional dental practice website for Dr. Keith Brown featuring 24/7 emergency services, online appointment scheduling, and 40+ years of dental expertise. Modern, responsive design with patient testimonials and comprehensive practice information.",
+      "Fully rebuilt and manage the website for a dental practice, including SEO, content, and $2K/month ad campaigns that doubled revenue over the past year. Built with Next.js and optimized for performance, search visibility, and lead conversion.",
     githubLink: "https://github.com/tbrown034/kab-dentist-2024",
     siteLink: "https://keithbrowndds.com/",
   },
@@ -33,7 +33,7 @@ export const webProjects = [
       "AI Integration"
     ],
     description:
-      "Smart grocery management app with AI-powered shelf life detection and expiry tracking. Features batch item processing, planned receipt scanning, and helps reduce food waste through intelligent notifications.",
+      "AI-powered food freshness tracker with receipt scanning, expiry alerts, and waste analytics. Uses the OpenAI API for intelligent shelf-life detection and personalized suggestions to reduce waste and save money.",
     githubLink: "https://github.com/tbrown034/my-expiry",
     siteLink: "https://my-expiry.vercel.app/",
   },
@@ -52,7 +52,7 @@ export const webProjects = [
       "AI Integration"
     ],
     description:
-      "Smart grocery management app with AI-powered shelf life detection and expiry tracking. Features batch item processing, planned receipt scanning, and helps reduce food waste through intelligent notifications.",
+      "Modern platform for logging, enhancing, and sharing live sports game experiences. Built with Next.js 15, Tailwind CSS, and TypeScript. Features AI-assisted event completion, user authentication, and shareable digital collections.",
     githubLink: "https://github.com/tbrown034/my-expiry",
     siteLink: "https://my-expiry.vercel.app/",
   },
@@ -69,7 +69,7 @@ export const webProjects = [
       "Vercel"
     ],
     description:
-      "Digital platform for sports fans to catalog and preserve stadium experiences. Features game logging, AI-powered memory enhancement, and social sharing. Over 10,000 users with 4.9/5 rating - transforming ephemeral sports moments into lasting digital collections.",
+      "Modern platform for logging, enhancing, and sharing live sports game experiences. Built with Next.js 15, Tailwind CSS, and TypeScript. Features AI-assisted event completion, user authentication, and shareable digital collections.",
     githubLink: "https://github.com/tbrown034/restub",
     siteLink: "https://restub.vercel.app/",
   }

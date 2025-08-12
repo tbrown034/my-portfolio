@@ -41,6 +41,7 @@ export default function Contact() {
             <a 
               href="https://github.com/tbrown034"
               target="_blank"
+              rel="noopener noreferrer"
               className="block text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200"
             >
               github.com/tbrown034
@@ -52,6 +53,7 @@ export default function Contact() {
             <a 
               href="https://www.linkedin.com/in/trevorabrown/"
               target="_blank"
+              rel="noopener noreferrer"
               className="block text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200"
             >
               linkedin.com/in/trevorabrown
