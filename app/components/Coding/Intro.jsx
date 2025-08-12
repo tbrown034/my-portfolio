@@ -8,7 +8,7 @@ export default function Intro() {
         </h2>
       </div>
 
-      {/* Clean header without repetitive content */}
+      {/* Concise header */}
       <div className="max-w-4xl space-y-3">
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100">
           Selected Web Dev Work

@@ -1,8 +1,10 @@
 import Hero from "./components/Hero/page.jsx";
 import Introduction from "./components/Introduction/page.jsx";
 import Code from "./components/Coding/page.jsx";
-import Journalism from "./components/Journalism/page.jsx";
-import DataViz from "./components/Graphics/page.jsx";
+import DataVizIntro from "./components/Graphics/Intro.jsx";
+import DataVizClips from "./components/Graphics/Clips.jsx";
+import JournalismIntro from "./components/Journalism/JournalismIntro.jsx";
+import JournalismClips from "./components/Journalism/Clips.jsx";
 import About from "./components/About/page.jsx";
 
 export default function Page() {
@@ -13,11 +15,13 @@ export default function Page() {
       <div id="coding">
         <Code />
       </div>
+      <DataVizIntro />
       <div id="dataviz">
-        <DataViz />
+        <DataVizClips />
       </div>
+      <JournalismIntro />
       <div id="journalism">
-        <Journalism />
+        <JournalismClips />
       </div>
       <div id="about">
         <About />

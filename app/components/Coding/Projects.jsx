@@ -15,15 +15,25 @@ export default function Projects() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {webProjects.slice(0, displayCount).map((project, index) => (
-          <div key={index} className="group relative">
+          <div key={index} className={`group relative ${index % 2 === 1 ? 'md:mt-8' : ''}`}>
             {/* Gradient background glow */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-1000 group-hover:duration-200"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-1000 group-hover:duration-200"></div>
             
             {/* Card content */}
             <div className="relative bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700">
               {/* Content */}
               <div className="space-y-4 mb-6">
                 <div className="space-y-2">
+                  {/* Feature tag */}
+                  <div className="flex items-center gap-2 text-xs">
+                    <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-400 rounded font-medium">
+                      {project.id === 1 ? 'SEO & Marketing' : 
+                       project.id === 2 ? 'AI Integration' : 
+                       project.id === 3 ? 'Auth & Database' : 
+                       'Modern Stack'}
+                    </span>
+                  </div>
+                  
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
                     {project.title}
                   </h3>
@@ -77,13 +87,15 @@ export default function Projects() {
               {/* Smaller image with border - left aligned */}
               <div className="relative">
                 <div className="w-2/3 border-2 border-gray-200 dark:border-gray-600 rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800">
-                  <Image
-                    alt={`Screenshot of ${project.title}`}
-                    className="w-full h-auto object-top group-hover:scale-105 transition-transform duration-300"
-                    src={project.image}
-                    width={400}
-                    height={500}
-                  />
+                  <div className={`${index % 3 === 0 ? 'h-48' : index % 3 === 1 ? 'h-40' : 'h-56'} overflow-hidden`}>
+                    <Image
+                      alt={`Screenshot of ${project.title}`}
+                      className="w-full h-auto object-top group-hover:scale-105 transition-transform duration-300"
+                      src={project.image}
+                      width={400}
+                      height={500}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -94,7 +106,7 @@ export default function Projects() {
       {displayCount < webProjects.length && (
         <div className="flex justify-center mt-8">
           <button
-            className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200"
+            className="inline-flex items-center justify-center px-6 py-3 font-bold text-white bg-blue-800 border-2 border-blue-800 rounded-2xl dark:text-blue-950 dark:bg-blue-50 dark:border-blue-50 hover:bg-blue-600 hover:border-blue-600 active:bg-blue-950 focus:bg-blue-500 dark:hover:bg-blue-200 dark:hover:border-blue-200 focus:outline-none focus:ring focus:ring-blue-400 cursor-pointer"
             onClick={() => setDisplayCount((prevCount) => prevCount + 4)}
           >
             Show More
@@ -104,7 +116,7 @@ export default function Projects() {
       {displayCount > 4 && (
         <div className="flex justify-center mt-8">
           <button
-            className="px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white text-sm font-medium rounded-lg transition-colors duration-200"
+            className="inline-flex items-center justify-center px-6 py-3 font-bold text-blue-800 bg-gray-100 border-2 border-gray-300 rounded-2xl dark:text-blue-50 dark:bg-gray-700 dark:border-gray-600 hover:bg-gray-200 hover:border-gray-400 active:bg-gray-300 focus:bg-gray-200 dark:hover:bg-gray-600 dark:hover:border-gray-500 focus:outline-none focus:ring focus:ring-gray-400 cursor-pointer"
             onClick={() => setDisplayCount(4)}
           >
             Show Fewer

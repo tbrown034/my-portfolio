@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="mt-24 border-t border-gray-200 dark:border-gray-800">
+    <footer className="mt-24">
       <div className="px-6 py-12 sm:px-8 lg:px-12 xl:px-16 max-w-7xl mx-auto">
         {/* Main footer content */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
