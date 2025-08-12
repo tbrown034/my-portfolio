@@ -326,13 +326,6 @@ Oklahoma Watch (2016 – 2022)\\par
         >
           {isExporting && exportType === 'image' ? "Generating…" : "Download Image"}
         </button>
-        <button
-          onClick={handleExportWord}
-          disabled={isExporting}
-          className="px-4 py-2 text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50 rounded-lg border border-gray-300 transition-colors"
-        >
-          {isExporting && exportType === 'word' ? "Generating…" : "Download RTF"}
-        </button>
       </div>
     </div>
   );

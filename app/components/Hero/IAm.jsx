@@ -1,25 +1,30 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function IAm() {
   const [expandedItems, setExpandedItems] = useState(new Set());
+  
+  // Auto-expand all items on mount with staggered delay for gentle greeting
+  useEffect(() => {
+    const timer1 = setTimeout(() => setExpandedItems(new Set([0])), 500);
+    const timer2 = setTimeout(() => setExpandedItems(new Set([0, 1])), 900);
+    const timer3 = setTimeout(() => setExpandedItems(new Set([0, 1, 2])), 1300);
+    
+    return () => {
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+      clearTimeout(timer3);
+    };
+  }, []);
 
+  // Remove interactivity - these are always expanded after initial animation
+  // Keeping functions for potential future use
   const handleClick = (index) => {
-    const newExpanded = new Set(expandedItems);
-    if (newExpanded.has(index)) {
-      newExpanded.delete(index);
-    } else {
-      newExpanded.add(index);
-    }
-    setExpandedItems(newExpanded);
+    // Disabled - items auto-expand on load
   };
 
   const handleMouseEnter = (index) => {
-    const newExpanded = new Set(expandedItems);
-    if (!newExpanded.has(index)) {
-      newExpanded.add(index);
-      setExpandedItems(newExpanded);
-    }
+    // Disabled - no hover effects
   };
 
   const roles = [
@@ -56,22 +61,20 @@ export default function IAm() {
           return (
             <motion.div 
               key={index}
-              className="cursor-pointer px-4 py-3 -mx-4 rounded-lg"
-              onClick={() => handleClick(index)}
-              onMouseEnter={() => handleMouseEnter(index)}
+              className="px-4 py-3 -mx-4 rounded-lg"
               animate={{
                 backgroundColor: isExpanded 
                   ? "rgba(59, 130, 246, 0.03)" 
                   : "transparent"
               }}
-              transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
             >
               <motion.h3 
                 className="text-lg sm:text-xl font-semibold text-blue-600 dark:text-blue-400"
                 animate={{
                   x: isExpanded ? 2 : 0
                 }}
-                transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
               >
                 {role.title}
               </motion.h3>
@@ -80,13 +83,13 @@ export default function IAm() {
                 {isExpanded && (
                   <motion.p 
                     className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm sm:text-base mt-2 pl-4 border-l-2 border-blue-500/20"
-                    initial={{ opacity: 0, height: 0, y: -5 }}
-                    animate={{ opacity: 1, height: "auto", y: 0 }}
-                    exit={{ opacity: 0, height: 0, y: -5 }}
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
                     transition={{ 
-                      duration: 1.2, 
-                      ease: [0.25, 0.1, 0.25, 1],
-                      opacity: { duration: 0.8 }
+                      duration: 0.8, 
+                      ease: "easeInOut",
+                      opacity: { duration: 0.6, delay: 0.1 }
                     }}
                   >
                     {role.detail}

@@ -11,7 +11,7 @@ export default function ResumePage() {
       <div className="no-print sticky top-0 z-10 bg-white/90 backdrop-blur border-b border-gray-200">
         <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <h1 className="text-sm font-medium tracking-wider uppercase text-gray-600 letter-spacing-wide">Application Package</h1>
+            <h1 className="text-sm font-medium tracking-wider uppercase text-gray-600 letter-spacing-wide">Experience & Highlights</h1>
           </div>
           <div className="flex items-center gap-3">
             <Link
