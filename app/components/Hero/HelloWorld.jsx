@@ -13,7 +13,7 @@ export default function HelloWorld() {
       </h1>
       
       <p className="text-2xl sm:text-3xl font-light text-blue-600 dark:text-blue-400 leading-relaxed">
-        Investigative journalist + developer
+        Investigative journalist + developer + data visualizer
       </p>
 
       <p className="text-sm font-mono text-gray-500 dark:text-gray-400 mt-1">

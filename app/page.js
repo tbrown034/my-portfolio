@@ -10,10 +10,18 @@ export default function Page() {
     <main className=" flex flex-col gap-2 scroll-smooth">
       <Hero />
       <Introduction />
-      <Code />
-      <Journalism />
-      <DataViz />
-      <About />
+      <div id="coding">
+        <Code />
+      </div>
+      <div id="journalism">
+        <Journalism />
+      </div>
+      <div id="dataviz">
+        <DataViz />
+      </div>
+      <div id="about">
+        <About />
+      </div>
     </main>
   );
 }

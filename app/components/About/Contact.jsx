@@ -39,11 +39,11 @@ export default function Contact() {
           <div className="space-y-3">
             <h4 className="font-semibold text-gray-900 dark:text-gray-100">GitHub</h4>
             <a 
-              href="https://github.com/trevorbrown-dev"
+              href="https://github.com/tbrown034"
               target="_blank"
               className="block text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200"
             >
-              github.com/trevorbrown-dev
+              github.com/tbrown034
             </a>
           </div>
           

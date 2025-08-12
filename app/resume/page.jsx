@@ -1,644 +1,682 @@
 "use client";
-import { useState } from "react";
+
+import { useState, useRef } from "react";
 import Link from "next/link";
+
+/* Component Library - Editorial Resume Style */
+const Section = ({ title, children }) => (
+  <section>
+    <h3 className="section-title">{title}</h3>
+    {children}
+  </section>
+);
+
+const Job = ({ title, org, period, highlights }) => (
+  <div className="job-entry">
+    <div className="job-header">
+      <div>
+        <div className="job-title">{title}</div>
+        <div className="job-org">{org}</div>
+      </div>
+      <div className="job-period">{period}</div>
+    </div>
+    <ul className="job-highlights">
+      {highlights.map((highlight, i) => (
+        <li key={i}>{highlight}</li>
+      ))}
+    </ul>
+  </div>
+);
+
+const Credential = ({ degree, institution, detail, year }) => (
+  <div className="credential">
+    <div className="credential-degree">
+      {degree}{year && ` (${year})`}
+    </div>
+    <div className="credential-institution">{institution}</div>
+    {detail && <div className="credential-detail">{detail}</div>}
+  </div>
+);
+
+const SkillGroup = ({ category, skills }) => (
+  <div className="skill-group">
+    <div className="skill-category">{category}</div>
+    <div className="skill-list">{skills}</div>
+  </div>
+);
+
+const Project = ({ name, url, description }) => (
+  <div className="project">
+    <div>
+      <span className="project-name">{name}</span>
+      <a 
+        href={`https://${url}`} 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="project-url"
+      >
+        {url}
+      </a>
+    </div>
+    <div className="project-description">{description}</div>
+  </div>
+);
+
+const Award = ({ title, org, year, article }) => (
+  <div className="award">
+    <div className="award-title">
+      {title} ({year})
+    </div>
+    <div className="award-org">{org}</div>
+    {article && <div className="award-article">"{article}"</div>}
+  </div>
+);
+
+const DataProject = ({ title, description, impact, link }) => (
+  <div className="data-project">
+    <div className="data-project-title">{title}</div>
+    <div className="data-project-description">{description}</div>
+    <div className="data-project-impact">{impact}</div>
+    {link && (
+      <a 
+        href={`https://${link}`} 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="data-project-link"
+      >
+        {link}
+      </a>
+    )}
+  </div>
+);
 
 export default function ResumePage() {
   const [isExporting, setIsExporting] = useState(false);
+  const [showGuides, setShowGuides] = useState(false);
+  const pageRef = useRef(null);
 
   const handleExportPDF = async () => {
+    if (!pageRef.current) return;
     setIsExporting(true);
     try {
-      // Create a clean print environment
-      const printWindow = window.open('', '_blank');
-      const resumeContent = document.querySelector('.resume-content').innerHTML;
-      
-      printWindow.document.write(`
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <title>Trevor Brown - Resume</title>
-          <meta charset="utf-8">
-          <style>
-            @page {
-              margin: 0.5in;
-              size: 8.5in 11in;
-            }
-            
-            @page :first {
-              @top-left { content: ""; }
-              @top-center { content: ""; }
-              @top-right { content: ""; }
-              @bottom-left { content: ""; }
-              @bottom-center { content: ""; }
-              @bottom-right { content: ""; }
-            }
-            
-            @media print {
-              @page {
-                margin: 0.5in;
-              }
-              
-              body {
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-              }
-              
-              .no-print, 
-              header[role="banner"], 
-              nav, 
-              .header, 
-              .footer {
-                display: none !important;
-              }
-            }
-            
-            body {
-              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-              line-height: 1.4;
-              color: #000;
-              background: white;
-              margin: 0;
-              padding: 0;
-              font-size: 12px;
-            }
-            
-            .resume-content {
-              max-width: none !important;
-              padding: 0 !important;
-              margin: 0 !important;
-            }
-            
-            .print-header {
-              text-align: center;
-              margin-bottom: 1rem;
-            }
-            
-            .print-header h1 {
-              font-size: 20px;
-              font-weight: bold;
-              margin: 0 0 0.5rem 0;
-            }
-            
-            .print-header p {
-              font-size: 14px;
-              color: #2563eb;
-              font-weight: 500;
-              margin: 0 0 0.5rem 0;
-            }
-            
-            .print-header div {
-              font-size: 11px;
-              color: #666;
-            }
-            
-            .section-heading {
-              font-size: 11px;
-              font-weight: 700;
-              text-transform: uppercase;
-              letter-spacing: 0.05em;
-              color: #374151;
-              border-bottom: 1px solid #e5e7eb;
-              padding-bottom: 0.2rem;
-              margin: 0.8rem 0 0.4rem 0;
-            }
-            
-            .section-heading:first-child {
-              margin-top: 0;
-            }
-            
-            .job-entry {
-              margin-bottom: 0.4rem;
-            }
-            
-            .job-entry h3 {
-              font-weight: 600;
-              font-size: 12px;
-              margin: 0;
-            }
-            
-            .job-entry p {
-              font-size: 11px;
-              color: #2563eb;
-              font-weight: 500;
-              margin: 0;
-            }
-            
-            .job-entry ul {
-              margin: 0.2rem 0 0 0;
-              padding-left: 0;
-              list-style: none;
-            }
-            
-            .job-entry li {
-              font-size: 11px;
-              margin: 0.1rem 0;
-              padding-left: 0;
-              position: relative;
-            }
-            
-            .grid {
-              display: grid;
-              grid-template-columns: 2fr 1fr;
-              gap: 1.5rem;
-            }
-            
-            .space-y-4 > * + * {
-              margin-top: 0.8rem;
-            }
-            
-            .space-y-2 > * + * {
-              margin-top: 0.4rem;
-            }
-            
-            .space-y-0\\.5 > * + * {
-              margin-top: 0.2rem;
-            }
-            
-            .text-blue-600 {
-              color: #2563eb;
-            }
-            
-            .font-medium {
-              font-weight: 500;
-            }
-            
-            .font-semibold {
-              font-weight: 600;
-            }
-            
-            .text-center {
-              text-align: center;
-            }
-            
-            .flex {
-              display: flex;
-            }
-            
-            .justify-between {
-              justify-content: space-between;
-            }
-            
-            .items-start {
-              align-items: flex-start;
-            }
-            
-            .mb-1 {
-              margin-bottom: 0.25rem;
-            }
-            
-            .whitespace-nowrap {
-              white-space: nowrap;
-            }
-            
-            h4 {
-              font-size: 11px;
-              font-weight: 500;
-              margin: 0 0 0.2rem 0;
-            }
-            
-            p {
-              margin: 0;
-              font-size: 11px;
-            }
-            
-            ul {
-              list-style-type: none;
-              padding: 0;
-              margin: 0;
-            }
-            
-            li {
-              position: relative;
-              padding-left: 0;
-              text-indent: 0;
-            }
-            
-            span {
-              font-size: 11px;
-            }
-          </style>
-        </head>
-        <body>
-          <div class="resume-content">${resumeContent}</div>
-        </body>
-        </html>
-      `);
-      
-      printWindow.document.close();
-      printWindow.focus();
-      
-      setTimeout(() => {
-        // Try to hide browser headers/footers
-        printWindow.onbeforeprint = () => {
-          printWindow.document.title = '';
-        };
-        
-        printWindow.print();
-        printWindow.close();
-      }, 500);
-      
-    } catch (error) {
-      console.error("Export failed:", error);
-      // Fallback to regular print
-      window.print();
+      const html2pdf = (await import("html2pdf.js")).default;
+      await html2pdf()
+        .set({
+          margin: 0,
+          filename: "Trevor_Brown_Resume_AP.pdf",
+          image: { type: "jpeg", quality: 1 },
+          html2canvas: { scale: 3, useCORS: true, letterRendering: true },
+          jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+        })
+        .from(pageRef.current)
+        .save();
+    } catch (err) {
+      console.error(err);
     } finally {
-      setTimeout(() => setIsExporting(false), 1000);
+      setIsExporting(false);
     }
   };
 
   return (
-    <main className="min-h-screen bg-white dark:bg-gray-900">
-      {/* No-print header with actions */}
-      <div className="no-print border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
-        <div className="max-w-4xl mx-auto px-6 py-8 sm:px-8">
-          <div className="border-b border-gray-200 dark:border-gray-700 pb-2 mb-6">
-            <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400">
-              Resume
-            </h2>
+    <main className="min-h-screen bg-gray-50">
+      {/* Toolbar */}
+      <div className="no-print sticky top-0 z-10 bg-white/90 backdrop-blur border-b border-gray-200">
+        <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <h1 className="text-sm font-medium tracking-wider uppercase text-gray-600 letter-spacing-wide">Resume</h1>
+            <label className="flex items-center gap-2 text-sm text-gray-600">
+              <input
+                type="checkbox"
+                checked={showGuides}
+                onChange={() => setShowGuides(v => !v)}
+                className="rounded"
+              />
+              Show guides
+            </label>
           </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-center">
-            <div>
-              <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-2">
-                Trevor Brown
-              </h1>
-              <p className="text-gray-600 dark:text-gray-400">
-                Investigative journalist + developer with expertise in government accountability and modern web development.
-              </p>
-            </div>
-            
-            <div className="flex gap-3">
-              <Link
-                href="/"
-                className="inline-flex items-center px-5 py-2.5 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg transition-all duration-200 text-sm font-medium shadow-sm hover:shadow-md"
-              >
-                ← Back to Portfolio
-              </Link>
-              <button
-                onClick={handleExportPDF}
-                disabled={isExporting}
-                className="inline-flex items-center px-6 py-2.5 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 disabled:opacity-50 disabled:cursor-not-allowed text-white rounded-lg transition-all duration-200 text-sm font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0"
-              >
-                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-                {isExporting ? "Generating PDF..." : "Export as PDF"}
-              </button>
-            </div>
+          <div className="flex items-center gap-3">
+            <Link
+              href="/"
+              className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+            >
+              ← Back
+            </Link>
+            <button
+              onClick={handleExportPDF}
+              disabled={isExporting}
+              className="px-4 py-2 text-sm font-medium text-white bg-gray-900 hover:bg-gray-800 disabled:opacity-50 rounded-lg transition-colors"
+            >
+              {isExporting ? "Generating…" : "Download PDF"}
+            </button>
           </div>
         </div>
       </div>
 
-      {/* Resume Content - Print Optimized */}
-      <div className="resume-content max-w-3xl mx-auto px-6 py-8 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 my-8">
-        {/* Header */}
-        <header className="print-header text-center mb-6">
-          <h1 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
-            TREVOR BROWN
-          </h1>
-          <p className="text-blue-600 dark:text-blue-400 mb-3 font-medium text-sm">
-            Investigative Journalist + Full-Stack Developer
-          </p>
-          <div className="text-sm text-gray-600 dark:text-gray-400 flex flex-wrap justify-center gap-x-6 gap-y-2">
-            <span>630-301-0589</span>
-            <span>trevorbrown.web@gmail.com</span>
-            <span>trevorthewebdeveloper.com</span>
-          </div>
-        </header>
-
-        {/* Two Column Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {/* Left Column */}
-          <div className="md:col-span-2 space-y-5">
-            {/* Summary */}
-            <section>
-              <h2 className="section-heading">SUMMARY</h2>
-              <p className="text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-                Award-winning investigative journalist and full-stack developer with 15+ years in government accountability reporting. Expertise in web applications, data visualization, and digital marketing.
-              </p>
-            </section>
-
-            {/* Professional Experience */}
-            <section>
-              <h2 className="section-heading">PROFESSIONAL EXPERIENCE</h2>
-              
-              <div className="space-y-4">
-                {/* Digital Marketing & Web Development */}
-                <div className="job-entry">
-                  <div className="flex justify-between items-start mb-2">
-                    <div>
-                      <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">
-                        Digital Marketing Consultant & Web Developer
-                      </h3>
-                      <p className="text-blue-600 dark:text-blue-400 font-medium text-sm">
-                        Keith Brown DDS
-                      </p>
-                    </div>
-                    <span className="text-sm text-gray-600 dark:text-gray-400 whitespace-nowrap">
-                      2023 – Present
-                    </span>
-                  </div>
-                  <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1">
-                    <li>Developed modern, responsive website using Next.js, React, and Tailwind CSS</li>
-                    <li>Managed $2k+ monthly advertising budget, achieving 100% revenue increase with reduced spend</li>
-                    <li>Implemented SEO strategies and analytics tracking for improved online visibility</li>
-                  </ul>
-                </div>
-
-                {/* Oklahoma Watch */}
-                <div className="job-entry">
-                  <div className="flex justify-between items-start mb-2">
-                    <div>
-                      <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">
-                        Investigative Journalist
-                      </h3>
-                      <p className="text-blue-600 dark:text-blue-400 font-medium text-sm">
-                        Oklahoma Watch
-                      </p>
-                    </div>
-                    <span className="text-sm text-gray-600 dark:text-gray-400 whitespace-nowrap">
-                      2016 – 2022
-                    </span>
-                  </div>
-                  <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1">
-                    <li>Produced award-winning investigative journalism focused on politics and government accountability</li>
-                    <li>Created data visualizations, interactive databases, and multimedia storytelling</li>
-                    <li>Launched Democracy Watch newsletter, growing to 4,000+ subscribers</li>
-                  </ul>
-                </div>
-
-                {/* Wyoming Tribune Eagle */}
-                <div className="job-entry">
-                  <div className="flex justify-between items-start mb-2">
-                    <div>
-                      <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">
-                        State Capitol Reporter
-                      </h3>
-                      <p className="text-blue-600 dark:text-blue-400 font-medium text-sm">
-                        Wyoming Tribune Eagle
-                      </p>
-                    </div>
-                    <span className="text-sm text-gray-600 dark:text-gray-400 whitespace-nowrap">
-                      2011 – 2016
-                    </span>
-                  </div>
-                  <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1">
-                    <li>Wrote hundreds of articles covering Wyoming state government, including the legislature, governor's office and state agencies</li>
-                  </ul>
-                </div>
-
-                {/* CNHI */}
-                <div className="job-entry">
-                  <div className="flex justify-between items-start mb-2">
-                    <div>
-                      <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">
-                        State Government Reporter
-                      </h3>
-                      <p className="text-blue-600 dark:text-blue-400 font-medium text-sm">
-                        Community Newspaper Holding Inc.
-                      </p>
-                    </div>
-                    <span className="text-sm text-gray-600 dark:text-gray-400 whitespace-nowrap">
-                      2010 – 2011
-                    </span>
-                  </div>
-                  <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1">
-                    <li>Produced enterprise stories as the state capitol reporter for CNHI's 14 Oklahoma newspapers</li>
-                  </ul>
-                </div>
-
-                {/* Staunton News Leader */}
-                <div className="job-entry">
-                  <div className="flex justify-between items-start mb-2">
-                    <div>
-                      <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">
-                        Local Government Reporter
-                      </h3>
-                      <p className="text-blue-600 dark:text-blue-400 font-medium text-sm">
-                        Staunton News Leader
-                      </p>
-                    </div>
-                    <span className="text-sm text-gray-600 dark:text-gray-400 whitespace-nowrap">
-                      2008 – 2010
-                    </span>
-                  </div>
-                  <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1">
-                    <li>Covered Staunton, Waynesboro and Augusta County governments</li>
-                  </ul>
-                </div>
-
-                {/* Indianapolis Star */}
-                <div className="job-entry">
-                  <div className="flex justify-between items-start mb-2">
-                    <div>
-                      <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">
-                        Pulliam Fellow
-                      </h3>
-                      <p className="text-blue-600 dark:text-blue-400 font-medium text-sm">
-                        Indianapolis Star
-                      </p>
-                    </div>
-                    <span className="text-sm text-gray-600 dark:text-gray-400 whitespace-nowrap">
-                      2008
-                    </span>
-                  </div>
-                  <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1">
-                    <li>Awarded competitive fellowship for exceptional journalism students</li>
-                  </ul>
-                </div>
-
-                {/* Indiana Daily Student */}
-                <div className="job-entry">
-                  <div className="flex justify-between items-start mb-2">
-                    <div>
-                      <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">
-                        Editor-in-Chief
-                      </h3>
-                      <p className="text-blue-600 dark:text-blue-400 font-medium text-sm">
-                        Indiana Daily Student
-                      </p>
-                    </div>
-                    <span className="text-sm text-gray-600 dark:text-gray-400 whitespace-nowrap">
-                      2008
-                    </span>
-                  </div>
-                  <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1">
-                    <li>Oversaw editorial content for the five-day-a-week newspaper, managing staff of more than 50</li>
-                  </ul>
-                </div>
+      {/* Center the page on screen */}
+      <div className="mx-auto max-w-[calc(8.5in+6rem)] px-6 py-12 flex justify-center">
+        {/* Exact US Letter page */}
+        <div
+          ref={pageRef}
+          className={`resume-page ${showGuides ? "show-guides" : ""}`}
+        >
+          {/* Resume content */}
+          <div className="resume-content">
+            {/* Header - Editorial masthead style */}
+            <header className="header-section">
+              <h1 className="name-title">TREVOR BROWN</h1>
+              <div className="dek">Investigative Journalist & Full‑Stack Developer</div>
+              <div className="contact-line">
+                <span>630‑301‑0589</span>
+                <a href="https://trevorthewebdeveloper.com" target="_blank" rel="noopener noreferrer" className="contact-link">
+                  trevorthewebdeveloper.com
+                </a>
+                <a href="mailto:trevorbrown.web@gmail.com" className="contact-link">trevorbrown.web@gmail.com</a>
               </div>
-            </section>
+            </header>
+
+            {/* Main content - Two column layout */}
+            <div className="main-content">
+              {/* Primary column */}
+              <div className="primary-col">
+                <div className="summary-section">
+                  <Section title="Summary">
+                    <p className="summary-text">
+                      Award‑winning investigative journalist and full‑stack developer specializing in data‑driven applications and interactive storytelling. Builds dynamic visualizations and tools by combining deep reporting expertise with modern development skills to deliver accurate, engaging information on complex issues.
+                    </p>
+                  </Section>
+                </div>
+
+                <Section title="Professional Experience">
+                  <Job
+                    title="Web Developer & Digital Marketing"
+                    org={<><a href="https://keithbrowndds.com/" target="_blank" rel="noopener noreferrer" className="org-link">Keith Brown DDS</a> (Naperville, Ill.)</>}
+                    period="2023 – Present"
+                    highlights={[
+                      "Build and maintain responsive dental practice website with appointment booking system and search optimization using Next.js",
+                      "Manage $2,000 monthly advertising budget and triple new patient revenue through targeted search campaigns"
+                    ]}
+                  />
+                  <Job
+                    title="Investigative Journalist"
+                    org={<><a href="https://oklahomawatch.org/" target="_blank" rel="noopener noreferrer" className="org-link">Oklahoma Watch</a> (Oklahoma City)</>}
+                    period="2016 – 2022"
+                    highlights={[
+                      "Conducted long‑form investigations into government corruption, public policy issues and legislative accountability using data analysis",
+                      "Launched Democracy Watch newsletter to 4,000+ subscribers covering voting, elections, redistricting and government transparency"
+                    ]}
+                  />
+                  <Job
+                    title="State Capitol Reporter"
+                    org={<><a href="https://www.wyomingnews.com/" target="_blank" rel="noopener noreferrer" className="org-link">Wyoming Tribune Eagle</a> (Cheyenne)</>}
+                    period="2011 – 2016"
+                    highlights={[
+                      "Reported on legislature, elections, governor and state agencies with focus on budget data and policy analysis"
+                    ]}
+                  />
+                  <Job
+                    title="State Government Reporter"
+                    org={<><a href="https://www.cnhi.com/" target="_blank" rel="noopener noreferrer" className="org-link">CNHI</a> (Oklahoma City)</>}
+                    period="2010 – 2011"
+                    highlights={[
+                      "Functioned as sole statehouse correspondent, creating enterprise and election coverage for 14 newspapers"
+                    ]}
+                  />
+                  <Job
+                    title="Reporter"
+                    org={<><a href="https://www.newsleader.com/" target="_blank" rel="noopener noreferrer" className="org-link">Staunton News Leader</a> (Staunton, Va.)</>}
+                    period="2008 – 2010"
+                    highlights={[
+                      "Wrote about local government, courts and breaking news for daily newspaper"
+                    ]}
+                  />
+                  <Job
+                    title="Editor‑in‑Chief"
+                    org={<><a href="https://www.idsnews.com/" target="_blank" rel="noopener noreferrer" className="org-link">Indiana Daily Student</a> (Bloomington, Ind.)</>}
+                    period="2007 – 2008"
+                    highlights={[
+                      "Directed newsroom of 100+ student journalists"
+                    ]}
+                  />
+                </Section>
+              </div>
+
+              {/* Secondary column */}
+              <div className="secondary-col">
+                <Section title="Education">
+                  <Credential 
+                    degree="Web Development Certificate"
+                    institution={<><a href="https://bootcamp.outreach.ou.edu/programs/coding" target="_blank" rel="noopener noreferrer" className="org-link">University of Oklahoma</a></>}
+                    detail="Led by FullStack Academy"
+                    year="2022"
+                  />
+                  <Credential 
+                    degree="B.A. Journalism" 
+                    institution={<><a href="https://bloomington.iu.edu/index.html" target="_blank" rel="noopener noreferrer" className="org-link">Indiana University</a></>} 
+                    year="2008" 
+                  />
+                  <Credential 
+                    degree="B.A. Political Science" 
+                    institution={<><a href="https://bloomington.iu.edu/index.html" target="_blank" rel="noopener noreferrer" className="org-link">Indiana University</a></>} 
+                    year="2008" 
+                  />
+                </Section>
+
+                <Section title="Technical Skills">
+                  <SkillGroup 
+                    category="Core Web Technologies" 
+                    skills="Next.js, React, TypeScript, Node.js, PostgreSQL, Tailwind" 
+                  />
+                  <SkillGroup 
+                    category="Data Visualization & Analysis" 
+                    skills="Tableau, Datawrapper, D3.js, Chart.js, Excel, web scraping" 
+                  />
+                  <SkillGroup 
+                    category="AI & Automation" 
+                    skills="OpenAI API, Anthropic API, ChatGPT, Claude, prompt engineering, AI workflow automation" 
+                  />
+                </Section>
+
+                <Section title="Awards & Recognition">
+                  <Award 
+                    title="Newspaper Writer of the Year"
+                    org={<><a href="https://oklahomawatch.org/2021/05/10/oklahoma-watchs-trevor-brown-earns-writer-of-year-honors-in-great-plains-journalism-contest/" target="_blank" rel="noopener noreferrer" className="org-link">Great Plains Journalism Awards</a></>}
+                    year="2021"
+                  />
+                  <Award 
+                    title="Reporter of the Year"
+                    org={<><a href="https://okspj.com/" target="_blank" rel="noopener noreferrer" className="org-link">Oklahoma Society of Professional Journalists</a></>}
+                    year="2020"
+                  />
+                  <Award 
+                    title="First Place, Investigative Reporting"
+                    org={<><a href="https://okspj.com/" target="_blank" rel="noopener noreferrer" className="org-link">Oklahoma Society of Professional Journalists</a></>}
+                    year="2022"
+                  />
+                  <Award 
+                    title="Community Champion Award"
+                    org={<><a href="https://inn.org/" target="_blank" rel="noopener noreferrer" className="org-link">Institute for Nonprofit News</a></>}
+                    year="2020"
+                    article="A Digital Memorial to Oklahomans Who Died from COVID-19"
+                  />
+                </Section>
+              </div>
+            </div>
           </div>
 
-          {/* Right Column */}
-          <div className="space-y-5">
-            {/* Education */}
-            <section>
-              <h2 className="section-heading">EDUCATION</h2>
-              <div className="space-y-2">
-                <div>
-                  <h4 className="font-medium text-gray-900 dark:text-gray-100 text-xs">Web Development Certificate</h4>
-                  <p className="text-xs text-blue-600 dark:text-blue-400 font-medium">
-                    University of Oklahoma
-                  </p>
-                  <p className="text-xs text-gray-700 dark:text-gray-300">
-                    Led by FullStack Academy
-                  </p>
-                  <p className="text-xs text-gray-600 dark:text-gray-400">2022</p>
-                </div>
-                <div>
-                  <h4 className="font-medium text-gray-900 dark:text-gray-100 text-xs">B.A. Journalism</h4>
-                  <p className="text-xs text-blue-600 dark:text-blue-400 font-medium">
-                    Indiana University
-                  </p>
-                  <p className="text-xs text-gray-600 dark:text-gray-400">2008</p>
-                </div>
-                <div>
-                  <h4 className="font-medium text-gray-900 dark:text-gray-100 text-xs">B.A. Political Science</h4>
-                  <p className="text-xs text-blue-600 dark:text-blue-400 font-medium">
-                    Indiana University
-                  </p>
-                  <p className="text-xs text-gray-600 dark:text-gray-400">2008</p>
-                </div>
-              </div>
-            </section>
-
-            {/* Technical Skills */}
-            <section>
-              <h2 className="section-heading">TECHNICAL SKILLS</h2>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-medium text-gray-900 dark:text-gray-100 text-xs mb-1 border-b border-blue-200 dark:border-blue-800 pb-1">Frontend</h4>
-                  <p className="text-xs text-gray-700 dark:text-gray-300">
-                    React, Next.js, TypeScript, JavaScript, Tailwind CSS, HTML, CSS
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-medium text-gray-900 dark:text-gray-100 text-xs mb-1 border-b border-blue-200 dark:border-blue-800 pb-1">Backend</h4>
-                  <p className="text-xs text-gray-700 dark:text-gray-300">
-                    Node.js, Express, PostgreSQL, NextAuth.js, API Development
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-medium text-gray-900 dark:text-gray-100 text-xs mb-1 border-b border-blue-200 dark:border-blue-800 pb-1">AI & Machine Learning</h4>
-                  <p className="text-xs text-gray-700 dark:text-gray-300">
-                    OpenAI API, Anthropic Claude, LLM Integration
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-medium text-gray-900 dark:text-gray-100 text-xs mb-1 border-b border-blue-200 dark:border-blue-800 pb-1">Tools & Analytics</h4>
-                  <p className="text-xs text-gray-700 dark:text-gray-300">
-                    Git, Vercel, Google Analytics, Google Tag Manager, SEO
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-medium text-gray-900 dark:text-gray-100 text-xs mb-1 border-b border-blue-200 dark:border-blue-800 pb-1">Data Visualization</h4>
-                  <p className="text-xs text-gray-700 dark:text-gray-300">
-                    Tableau, DataWrapper, Flourish, Excel
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            {/* Recent Projects */}
-            <section>
-              <h2 className="section-heading">RECENT PROJECTS</h2>
-              <div className="space-y-2">
-                <div>
-                  <h4 className="font-medium text-gray-900 dark:text-gray-100 text-xs">Keith Brown DDS</h4>
-                  <p className="text-xs text-gray-700 dark:text-gray-300 mb-1">
-                    Professional dental practice website with 24/7 emergency services, online appointment scheduling, and 40+ years of trusted care in Naperville
-                  </p>
-                  <a href="https://keithbrowndds.com" target="_blank" rel="noopener noreferrer" className="text-xs text-blue-600 dark:text-blue-400 hover:underline">keithbrowndds.com</a>
-                </div>
-                <div>
-                  <h4 className="font-medium text-gray-900 dark:text-gray-100 text-xs">My Expiry</h4>
-                  <p className="text-xs text-gray-700 dark:text-gray-300 mb-1">
-                    AI-powered grocery freshness tracker that monitors food safety and prevents waste through smart alerts
-                  </p>
-                  <a href="https://my-expiry.vercel.app" target="_blank" rel="noopener noreferrer" className="text-xs text-blue-600 dark:text-blue-400 hover:underline">my-expiry.vercel.app</a>
-                </div>
-                <div>
-                  <h4 className="font-medium text-gray-900 dark:text-gray-100 text-xs">ReStub</h4>
-                  <p className="text-xs text-gray-700 dark:text-gray-300 mb-1">
-                    Sports memory keeper for logging stadium visits and preserving game experiences with AI enhancement
-                  </p>
-                  <a href="https://restub.vercel.app" target="_blank" rel="noopener noreferrer" className="text-xs text-blue-600 dark:text-blue-400 hover:underline">restub.vercel.app</a>
-                </div>
-              </div>
-            </section>
-          </div>
+          {/* Guides overlay */}
+          {showGuides && <div className="guides no-print" />}
         </div>
       </div>
 
-      {/* Print-specific styles */}
+      {/* Editorial-inspired Resume Styles */}
       <style jsx global>{`
+        /* Resume Page Container */
+        .resume-page {
+          position: relative;
+          width: 8.5in;
+          height: 11in;
+          background: #ffffff;
+          border: 1px solid #e5e7eb;
+          box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+          overflow: hidden;
+        }
+        
+        /* Content Area - Print-safe margins */
+        .resume-content {
+          width: 100%;
+          height: 100%;
+          padding: 0.6in 0.75in 0.4in 0.75in;
+          box-sizing: border-box;
+          color: #111827;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+          font-size: 10.5pt;
+          line-height: 1.5;
+        }
+
+        /* Header - Editorial masthead style */
+        .header-section {
+          text-align: center;
+          margin-bottom: 12px;
+          padding-bottom: 8px;
+          border-bottom: 2px solid #111827;
+        }
+        
+        .name-title {
+          font-size: 28pt;
+          font-weight: 900;
+          letter-spacing: 0.08em;
+          color: #111827;
+          margin-bottom: 8px;
+          text-transform: uppercase;
+        }
+        
+        .dek {
+          font-size: 12pt;
+          font-weight: 500;
+          color: #374151;
+          margin-bottom: 16px;
+          letter-spacing: 0.02em;
+        }
+        
+        .contact-line {
+          display: flex;
+          justify-content: center;
+          gap: 24px;
+          flex-wrap: wrap;
+          font-size: 9.5pt;
+          color: #6b7280;
+          font-weight: 400;
+        }
+        
+        .contact-link {
+          color: #6b7280;
+          text-decoration: none;
+        }
+        
+        .contact-link:hover {
+          color: #374151;
+        }
+        
+        .org-link {
+          color: inherit;
+          text-decoration: none;
+        }
+        
+        .org-link:hover {
+          color: #374151;
+        }
+        
+        /* Main content layout */
+        .main-content {
+          display: grid;
+          grid-template-columns: 2fr 1fr;
+          gap: 32px;
+        }
+        
+        /* Summary */
+        .summary-text {
+          font-size: 10pt;
+          line-height: 1.45;
+          color: #374151;
+          margin: 0;
+        }
+        
+        /* Section styling - Editorial hierarchy */
+        .section-title {
+          font-size: 11pt;
+          font-weight: 800;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: #111827;
+          border-bottom: 1px solid #d1d5db;
+          padding-bottom: 6px;
+          margin-bottom: 14px;
+          margin-top: 20px;
+        }
+        
+        .section-title:first-child {
+          margin-top: 0;
+        }
+        
+        /* Add space after Summary section */
+        .summary-section {
+          margin-bottom: 16px;
+        }
+        
+        /* Job entries */
+        .job-entry {
+          margin-bottom: 12px;
+          page-break-inside: avoid;
+        }
+        
+        .job-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          margin-bottom: 6px;
+          gap: 16px;
+        }
+        
+        .job-title {
+          font-size: 10.5pt;
+          font-weight: 700;
+          color: #111827;
+          line-height: 1.3;
+        }
+        
+        .job-org {
+          font-size: 10pt;
+          font-weight: 600;
+          color: #1f2937;
+          margin-top: 2px;
+        }
+        
+        .job-period {
+          font-size: 9pt;
+          font-weight: 500;
+          color: #6b7280;
+          white-space: nowrap;
+          text-align: right;
+        }
+        
+        .job-highlights {
+          margin-top: 8px;
+          padding-left: 0;
+          list-style: none;
+        }
+        
+        .job-highlights li {
+          margin-bottom: 4px;
+          padding-left: 12px;
+          position: relative;
+          font-size: 9.5pt;
+          line-height: 1.45;
+        }
+        
+        .job-highlights li::before {
+          content: "•";
+          position: absolute;
+          left: 0;
+          color: #6b7280;
+          font-weight: bold;
+        }
+        
+        /* Education entries */
+        .credential {
+          margin-bottom: 10px;
+        }
+        
+        .credential-degree {
+          font-size: 10pt;
+          font-weight: 700;
+          color: #111827;
+          line-height: 1.3;
+        }
+        
+        .credential-institution {
+          font-size: 9.5pt;
+          font-weight: 600;
+          color: #374151;
+          margin-top: 1px;
+        }
+        
+        .credential-detail {
+          font-size: 9pt;
+          color: #6b7280;
+          margin-top: 1px;
+          font-style: italic;
+        }
+        
+        .credential-year {
+          font-size: 9pt;
+          color: #9ca3af;
+          margin-top: 1px;
+        }
+        
+        /* Skills */
+        .skill-group {
+          margin-bottom: 8px;
+        }
+        
+        .skill-category {
+          font-size: 9.5pt;
+          font-weight: 700;
+          color: #111827;
+          margin-bottom: 4px;
+          border-bottom: 1px solid #e5e7eb;
+          padding-bottom: 2px;
+        }
+        
+        .skill-list {
+          font-size: 9pt;
+          color: #374151;
+          line-height: 1.4;
+        }
+        
+        /* Projects */
+        .project {
+          margin-bottom: 14px;
+        }
+        
+        .project-name {
+          font-size: 10pt;
+          font-weight: 700;
+          color: #111827;
+        }
+        
+        .project-url {
+          font-size: 8.5pt;
+          color: #1d4ed8;
+          text-decoration: none;
+          margin-left: 8px;
+        }
+        
+        .project-url:hover {
+          text-decoration: underline;
+        }
+        
+        .project-description {
+          font-size: 9pt;
+          color: #4b5563;
+          line-height: 1.4;
+          margin-top: 3px;
+        }
+        
+        /* Awards */
+        .award {
+          margin-bottom: 8px;
+        }
+        
+        .award-title {
+          font-size: 9.5pt;
+          font-weight: 700;
+          color: #111827;
+          line-height: 1.3;
+        }
+        
+        .award-org {
+          font-size: 9pt;
+          font-weight: 500;
+          color: #374151;
+          margin-top: 1px;
+        }
+        
+        .award-year {
+          font-size: 8.5pt;
+          color: #6b7280;
+          margin-top: 2px;
+        }
+        
+        .award-article {
+          font-size: 8.5pt;
+          color: #374151;
+          margin-top: 3px;
+          font-style: italic;
+        }
+        
+        /* Data Projects */
+        .data-project {
+          margin-bottom: 12px;
+        }
+        
+        .data-project-title {
+          font-size: 10pt;
+          font-weight: 700;
+          color: #111827;
+          line-height: 1.3;
+        }
+        
+        .data-project-description {
+          font-size: 9pt;
+          color: #374151;
+          line-height: 1.4;
+          margin-top: 2px;
+        }
+        
+        .data-project-impact {
+          font-size: 8.5pt;
+          color: #374151;
+          margin-top: 3px;
+        }
+        
+        .data-project-link {
+          display: block;
+          font-size: 8.5pt;
+          color: #1d4ed8;
+          text-decoration: none;
+          margin-top: 4px;
+        }
+        
+        .data-project-link:hover {
+          text-decoration: underline;
+        }
+        
+        /* Guides */
+        .guides {
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          box-shadow: inset 0 0 0 0.75in rgba(59, 130, 246, 0.08);
+          background-image:
+            repeating-linear-gradient(
+              to bottom,
+              rgba(0,0,0,0.05) 0,
+              rgba(0,0,0,0.05) 1px,
+              transparent 1px,
+              transparent 18px
+            ),
+            repeating-linear-gradient(
+              to right,
+              rgba(0,0,0,0.03) 0,
+              rgba(0,0,0,0.03) 1px,
+              transparent 1px,
+              transparent 18px
+            );
+        }
+        
+        /* Print styles */
+        @page { 
+          size: 8.5in 11in; 
+          margin: 0; 
+        }
         
         @media print {
-          body {
-            background: white !important;
-            color: black !important;
+          .no-print { display: none !important; }
+          html, body { background: #fff !important; }
+          .resume-page { 
+            border: none; 
+            box-shadow: none; 
+          }
+          .guides { display: none !important; }
+          
+          /* Ensure proper print breaks */
+          .section-title {
+            page-break-after: avoid;
           }
           
-          .no-print {
-            display: none !important;
+          .job-entry, .credential, .project {
+            page-break-inside: avoid;
           }
-          
-          .resume-content {
-            padding: 0.5in !important;
-            max-width: none !important;
-            margin: 0 !important;
-          }
-          
-          .resume-content::before,
-          .resume-content::after {
-            display: none !important;
-          }
-          
-          .print-header {
-            margin-bottom: 0.3in !important;
-          }
-          
-          .section-heading {
-            color: black !important;
-            border-color: black !important;
-            margin-top: 0.2in !important;
-            margin-bottom: 0.1in !important;
-          }
-          
-          .job-entry {
-            margin-bottom: 0.15in !important;
-          }
-          
-          * {
-            color: black !important;
-            background: transparent !important;
-          }
-          
-          .text-blue-600,
-          .text-blue-400 {
-            color: #2563eb !important;
-          }
-        }
-        
-        .section-heading {
-          font-size: 0.875rem;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-          color: #374151;
-          border-bottom: 1px solid #e5e7eb;
-          padding-bottom: 0.25rem;
-          margin-bottom: 0.75rem;
-        }
-        
-        .dark .section-heading {
-          color: #d1d5db;
-          border-color: #4b5563;
-        }
-        
-        .job-entry {
-          margin-bottom: 0.5rem;
         }
       `}</style>
     </main>

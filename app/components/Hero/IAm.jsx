@@ -24,16 +24,16 @@ export default function IAm() {
 
   const roles = [
     {
-      title: "Investigative Journalist",
-      detail: "18 years exposing corruption"
+      title: "Award-winning Reporter",
+      detail: "18 years covering government, politics, data analysis, and accountability journalism across multiple states"
     },
     {
       title: "Data-driven Developer", 
       detail: "Full-stack: Next.js, React, TypeScript, PostgreSQL"
     },
     {
-      title: "Ship-focused Builder",
-      detail: "Knows when to use AI. Focused on what ships"
+      title: "Data Visualizer",
+      detail: "Interactive charts, maps, and dashboards that tell stories"
     }
   ];
 
@@ -46,7 +46,7 @@ export default function IAm() {
     >
       <div className="border-b border-gray-200 dark:border-gray-700 pb-2 mb-4">
         <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400">
-          About
+          Three Disciplines
         </h2>
       </div>
       

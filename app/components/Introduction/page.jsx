@@ -46,7 +46,7 @@ export default function Introduction() {
               View Resume
             </a>
             <a 
-              href="https://github.com/trevorbrown-dev" 
+              href="https://github.com/tbrown034" 
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-4 py-2 border-2 border-blue-600 hover:bg-blue-600 text-blue-600 hover:text-white text-sm font-medium rounded-lg transition-colors duration-200"

@@ -27,11 +27,6 @@ export default function Intro() {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
     >
-      {/* Simple statement */}
-      <p className="text-base text-gray-600 dark:text-gray-400">
-        Award-winning investigative journalist turned full-stack developer. I bring stories and data to life.
-      </p>
-
       {/* Work sections - clean grid */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {work.map((item, index) => (
