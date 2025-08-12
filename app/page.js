@@ -13,11 +13,11 @@ export default function Page() {
       <div id="coding">
         <Code />
       </div>
-      <div id="journalism">
-        <Journalism />
-      </div>
       <div id="dataviz">
         <DataViz />
+      </div>
+      <div id="journalism">
+        <Journalism />
       </div>
       <div id="about">
         <About />

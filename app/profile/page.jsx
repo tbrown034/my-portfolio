@@ -129,7 +129,7 @@ export default function ProfilePage() {
 
             <div className="border-l-2 border-blue-500 pl-6">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-1">
-                Keith Brown DDS - Dental Practice Website <span className="text-sm font-normal text-gray-500">(2024)</span>
+                Keith Brown DDS, FAGD - Dental Practice Website <span className="text-sm font-normal text-gray-500">(2024)</span>
               </h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm mb-2">
                 Professional dental practice website with appointment booking, optimized for local SEO and mobile responsiveness.

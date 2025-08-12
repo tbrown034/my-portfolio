@@ -14,9 +14,9 @@ export default function Intro() {
       description: "Next.js, React, TypeScript"
     },
     { 
-      href: "#shipping", 
-      title: "Recent ships",
-      description: "Apps that solve real problems"
+      href: "/resume", 
+      title: "Resume",
+      description: "CV + selected clips"
     }
   ];
 

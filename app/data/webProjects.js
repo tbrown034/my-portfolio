@@ -3,7 +3,7 @@
 export const webProjects = [
   {
     id: 1,
-    title: "Keith Brown DDS",
+    title: "Keith Brown DDS, FAGD",
     image: "/images/kabdds-screenshot-aug11.png",
     technologies: [
       "Next.js",

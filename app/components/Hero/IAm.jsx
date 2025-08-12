@@ -28,11 +28,11 @@ export default function IAm() {
       detail: "18 years covering government, politics, data analysis, and accountability journalism across multiple states"
     },
     {
-      title: "Data-driven Developer", 
+      title: "Modern Stack Developer", 
       detail: "Full-stack: Next.js, React, TypeScript, PostgreSQL"
     },
     {
-      title: "Data Visualizer",
+      title: "Data-driven Visualizer",
       detail: "Interactive charts, maps, and dashboards that tell stories"
     }
   ];
@@ -46,7 +46,7 @@ export default function IAm() {
     >
       <div className="border-b border-gray-200 dark:border-gray-700 pb-2 mb-4">
         <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400">
-          Three Disciplines
+          About Me
         </h2>
       </div>
       
