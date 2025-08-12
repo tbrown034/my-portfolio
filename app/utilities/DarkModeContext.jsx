@@ -9,12 +9,12 @@ export const DarkModeProvider = ({ children }) => {
   // State to keep track of dark mode
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // useEffect to toggle the 'dark' class on the body element
+  // useEffect to toggle the 'dark' class on the html element
   useEffect(() => {
     if (isDarkMode) {
-      document.body.classList.add("dark");
+      document.documentElement.classList.add("dark");
     } else {
-      document.body.classList.remove("dark");
+      document.documentElement.classList.remove("dark");
     }
   }, [isDarkMode]);
 

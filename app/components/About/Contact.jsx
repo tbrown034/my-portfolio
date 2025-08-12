@@ -2,7 +2,7 @@ export default function Contact() {
   return (
     <section className="max-w-7xl mx-auto px-6 py-12 sm:px-8 lg:px-12 xl:px-16">
       {/* Section header - matching Hero style */}
-      <div className="border-b border-gray-200 dark:border-gray-700 pb-2 mb-8">
+      <div className="border-b border-gray-200 dark:border-gray-700 pb-2 mb-8 animate-gentleReveal opacity-0">
         <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400">
           Contact
         </h2>
@@ -10,11 +10,11 @@ export default function Contact() {
 
       {/* Clean header and content */}
       <div className="max-w-4xl space-y-6">
-        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100">
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100 animate-gentleRevealDelay1 opacity-0">
           Let's Work Together
         </h1>
         
-        <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
+        <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed animate-gentleRevealDelay2 opacity-0">
           <p>
             I'm available for freelance development projects, data visualization work, and consulting on digital strategy. Whether you need a website built, data analyzed, or stories told through interactive graphics, I'd love to help.
           </p>
@@ -25,7 +25,7 @@ export default function Contact() {
         </div>
 
         {/* Contact methods */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8 animate-gentleRevealDelay3 opacity-0">
           <div className="space-y-3">
             <h4 className="font-semibold text-gray-900 dark:text-gray-100">Email</h4>
             <a 
@@ -62,7 +62,7 @@ export default function Contact() {
         </div>
 
         {/* CTA */}
-        <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+        <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700 animate-gentleRevealDelay4 opacity-0">
           <div className="flex flex-col sm:flex-row gap-4">
             <a 
               href="mailto:trevorbrown.web@gmail.com"

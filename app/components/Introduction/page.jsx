@@ -1,15 +1,7 @@
-"use client";
-import { motion } from "framer-motion";
-
 export default function Introduction() {
   return (
     <section className="min-h-[50vh] flex flex-col justify-center px-6 py-12 sm:px-8 lg:px-12 xl:px-16 bg-gray-100 dark:bg-gray-800/50">
-      <motion.div 
-        className="max-w-7xl mx-auto w-full"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
+      <div className="max-w-7xl mx-auto w-full animate-fadeInUp">
         {/* Section header */}
         <div className="border-b border-gray-200 dark:border-gray-700 pb-2 mb-6">
           <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400">
@@ -71,7 +63,7 @@ export default function Introduction() {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }

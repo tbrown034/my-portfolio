@@ -11,21 +11,21 @@
   "dependencies": {
     "@heroicons/react": "^2.0.18",
     "@sendgrid/mail": "^7.7.0",
+    "@tailwindcss/postcss": "^4.1.11",
     "@vercel/analytics": "^1.0.2",
-    "autoprefixer": "10.4.14",
+    "autoprefixer": "^10.4.21",
     "devicons-react": "^1.2.6",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
-    "framer-motion": "^10.12.17",
     "html2canvas": "^1.4.1",
     "html2pdf.js": "^0.10.3",
     "next": "13.4.7",
-    "postcss": "8.4.24",
+    "postcss": "^8.5.6",
     "react": "18.2.0",
     "react-card-flip": "^1.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
-    "tailwindcss": "3.3.2"
+    "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.0.1",

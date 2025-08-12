@@ -1,5 +1,10 @@
-import { motion } from "framer-motion";
 import Link from "next/link";
+import {
+  EmailIcon,
+  GitHubIcon,
+  LinkedInIcon,
+  BlueskyIcon,
+} from "../Icons/SocialIcons";
 
 export default function Intro() {
   const work = [
@@ -21,19 +26,15 @@ export default function Intro() {
   ];
 
   return (
-    <motion.section 
-      className="space-y-4 sm:space-y-5 mt-6 sm:mt-4"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
-    >
+    <section className="space-y-4 sm:space-y-5 mt-6 sm:mt-4 animate-gentleRevealDelay2">
       {/* Work sections - clean grid */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {work.map((item, index) => (
           <Link
             key={index}
             href={item.href}
-            className="group block space-y-1 pb-3 border-b border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-colors duration-200"
+            className="group block space-y-1 pb-3 border-b border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300"
+            style={{ transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)' }}
           >
             <h3 className="font-medium text-gray-900 dark:text-gray-100 text-sm">
               {item.title}
@@ -49,27 +50,43 @@ export default function Intro() {
       <div className="flex gap-6 text-sm">
         <a 
           href="mailto:trevorbrown.web@gmail.com"
-          className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+          className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-300 transition-all duration-250"
+          style={{ transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)' }}
         >
+          <EmailIcon className="w-4 h-4" />
           Email
         </a>
         <a 
           href="https://github.com/tbrown034"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+          className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-300 transition-all duration-250"
+          style={{ transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)' }}
         >
+          <GitHubIcon className="w-4 h-4" />
           GitHub
         </a>
         <a 
           href="https://www.linkedin.com/in/trevorabrown/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+          className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-300 transition-all duration-250"
+          style={{ transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)' }}
         >
+          <LinkedInIcon className="w-4 h-4" />
           LinkedIn
         </a>
+        <a 
+          href="https://trevthewebdev.bsky.social"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-300 transition-all duration-250"
+          style={{ transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)' }}
+        >
+          <BlueskyIcon className="w-4 h-4" />
+          Bluesky
+        </a>
       </div>
-    </motion.section>
+    </section>
   );
 }

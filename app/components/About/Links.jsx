@@ -1,9 +1,9 @@
 import {
-  AiFillLinkedin,
-  AiFillTwitterCircle,
-  AiFillGithub,
-  AiFillMail,
-} from "react-icons/ai";
+  EmailIcon,
+  GitHubIcon,
+  LinkedInIcon,
+  BlueskyIcon,
+} from "../Icons/SocialIcons";
 
 export default function Links() {
   return (
@@ -14,40 +14,37 @@ export default function Links() {
             className="flex flex-col items-center justify-center p-1 transition-all duration-300 ease-in-out transform rounded-lg cursor-pointer hover:bg-blue-300 dark:hover:bg-blue-700 hover:scale-105 hover:shadow-lg"
             href="mailto:trevorbrown.web@gmail.com"
           >
-            <AiFillMail className="w-icon-sm h-icon-sm" />
+            <EmailIcon className="w-icon-sm h-icon-sm" />
             <p className="text-sm font-semibold text-center">E-Mail</p>
           </a>
 
           <a
-            className="flex flex-col items-center justify-center p-1 transition-all duration-300 ease-in-out transform rounded-lg cursor-pointer hover:bg-blue-300 hover:scale-105 hover:shadow-lg"
+            className="flex flex-col items-center justify-center p-1 transition-all duration-300 ease-in-out transform rounded-lg cursor-pointer hover:bg-blue-300 dark:hover:bg-blue-700 hover:scale-105 hover:shadow-lg"
             href="https://github.com/tbrown034/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            {" "}
-            <AiFillGithub className="w-icon-sm h-icon-sm" />
-            <p className="text-sm font-semibold text-center">Github</p>
+            <GitHubIcon className="w-icon-sm h-icon-sm" />
+            <p className="text-sm font-semibold text-center">GitHub</p>
           </a>
 
           <a
-            className="flex flex-col items-center justify-center p-1 transition-all duration-300 ease-in-out transform rounded-lg cursor-pointer hover:bg-blue-300 hover:scale-105 hover:shadow-lg"
+            className="flex flex-col items-center justify-center p-1 transition-all duration-300 ease-in-out transform rounded-lg cursor-pointer hover:bg-blue-300 dark:hover:bg-blue-700 hover:scale-105 hover:shadow-lg"
             href="https://www.linkedin.com/in/trevorabrown/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            {" "}
-            <AiFillLinkedin className="w-icon-sm h-icon-sm" />
+            <LinkedInIcon className="w-icon-sm h-icon-sm" />
             <p className="text-sm font-semibold text-center">LinkedIn</p>
           </a>
           <a
-            className="flex flex-col items-center justify-center p-1 transition-all duration-300 ease-in-out transform rounded-lg cursor-pointer hover:bg-blue-300 hover:scale-105 hover:shadow-lg"
-            href="https://twitter.com/tbrownOKC"
+            className="flex flex-col items-center justify-center p-1 transition-all duration-300 ease-in-out transform rounded-lg cursor-pointer hover:bg-blue-300 dark:hover:bg-blue-700 hover:scale-105 hover:shadow-lg"
+            href="https://trevthewebdev.bsky.social"
             target="_blank"
             rel="noopener noreferrer"
           >
-            {" "}
-            <AiFillTwitterCircle className="w-icon-sm h-icon-sm" />
-            <p className="text-sm font-semibold text-center">Twitter</p>
+            <BlueskyIcon className="w-icon-sm h-icon-sm" />
+            <p className="text-sm font-semibold text-center">Bluesky</p>
           </a>
         </div>
       </div>

@@ -1,3 +1,71 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-montserrat: var(--font-montserrat);
+  --font-roboto: var(--font-roboto);
+  
+  --breakpoint-xs: 375px;
+  --breakpoint-mdlg: 896px;
+  --breakpoint-xl: 1400px;
+  
+  --width-icon-sm: 4rem;
+  --width-icon-md: 5rem;
+  --width-icon-lg: 6rem;
+  
+  --height-icon-sm: 4rem;
+  --height-icon-md: 5rem;
+  --height-icon-lg: 6rem;
+  
+  --animate-fadeIn: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fadeInUp: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fadeInDelay1: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+  --animate-fadeInDelay2: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
+  --animate-fadeInDelay3: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
+  --animate-slideDown: slideDown 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-gentleReveal: gentleReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-gentleRevealDelay1: gentleReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+  --animate-gentleRevealDelay2: gentleReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both;
+  --animate-gentleRevealDelay3: gentleReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.26s both;
+  --animate-gentleRevealDelay4: gentleReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.34s both;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  0% { opacity: 0; transform: translateY(-4px); max-height: 0; }
+  100% { opacity: 1; transform: translateY(0); max-height: 200px; }
+}
+
+@keyframes gentleReveal {
+  0% { opacity: 0; transform: translateY(3px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@utility min-h-1/2-screen {
+  min-height: 50vh;
+}
+
+@utility min-h-110-screen {
+  min-height: 110vh;
+}
+
+@utility min-h-90-screen {
+  min-height: 90vh;
+}
+
+@utility min-h-95-screen {
+  min-height: 95vh;
+}
+
+@utility border-3 {
+  border-width: 3px;
+}
