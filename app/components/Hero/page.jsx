@@ -9,21 +9,21 @@ import IAm from "./IAm.jsx";
 
 export default function Hero() {
   return (
-    <main className="min-h-screen flex flex-col justify-center px-6 py-8 sm:px-8 lg:px-12 xl:px-16">
+    <main className="min-h-screen flex flex-col justify-start px-6 py-4 sm:px-8 lg:px-12 xl:px-16">
       {/* Mobile Screen */}
-      <section className="flex flex-col gap-4 sm:hidden max-w-2xl mx-auto">
+      <section className="flex flex-col gap-3 sm:hidden max-w-2xl mx-auto pt-8">
         <HelloWorld />
         <IAm />
-        <Intro />
         <div className="flex items-center justify-center my-4">
           <Mug />
         </div>
+        <Intro />
         {/* <BottomNav /> */}
         {/* <MyLinks /> */}
       </section>
 
       {/* Larger Screens */}
-      <section className="hidden sm:flex sm:flex-col sm:gap-4 max-w-7xl mx-auto">
+      <section className="hidden sm:flex sm:flex-col sm:gap-4 max-w-7xl mx-auto pt-12">
         <HelloWorld />
         <div className="sm:grid sm:grid-cols-12 sm:gap-6 lg:gap-8 items-start">
           <div className="flex flex-col col-span-8 gap-4">

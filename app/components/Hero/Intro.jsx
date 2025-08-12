@@ -46,45 +46,45 @@ export default function Intro() {
         ))}
       </div>
 
-      {/* Contact - simple */}
-      <div className="flex gap-6 text-sm">
+      {/* Contact - styled like about me sections */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         <a 
           href="mailto:trevorbrown.web@gmail.com"
-          className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-300 transition-all duration-250"
+          className="px-4 py-3 rounded-lg bg-gray-800/[0.08] dark:bg-gray-100/[0.12] hover:bg-gray-800/[0.12] dark:hover:bg-gray-100/[0.18] hover:-translate-y-0.5 transition-all duration-[2000ms] flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-300"
           style={{ transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)' }}
         >
           <EmailIcon className="w-4 h-4" />
-          Email
+          <span className="text-sm font-medium">Email</span>
         </a>
         <a 
           href="https://github.com/tbrown034"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-300 transition-all duration-250"
+          className="px-4 py-3 rounded-lg bg-gray-800/[0.08] dark:bg-gray-100/[0.12] hover:bg-gray-800/[0.12] dark:hover:bg-gray-100/[0.18] hover:-translate-y-0.5 transition-all duration-[2000ms] flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-300"
           style={{ transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)' }}
         >
           <GitHubIcon className="w-4 h-4" />
-          GitHub
+          <span className="text-sm font-medium">GitHub</span>
         </a>
         <a 
           href="https://www.linkedin.com/in/trevorabrown/"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-300 transition-all duration-250"
+          className="px-4 py-3 rounded-lg bg-gray-800/[0.08] dark:bg-gray-100/[0.12] hover:bg-gray-800/[0.12] dark:hover:bg-gray-100/[0.18] hover:-translate-y-0.5 transition-all duration-[2000ms] flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-300"
           style={{ transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)' }}
         >
           <LinkedInIcon className="w-4 h-4" />
-          LinkedIn
+          <span className="text-sm font-medium">LinkedIn</span>
         </a>
         <a 
           href="https://trevthewebdev.bsky.social"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-300 transition-all duration-250"
+          className="px-4 py-3 rounded-lg bg-gray-800/[0.08] dark:bg-gray-100/[0.12] hover:bg-gray-800/[0.12] dark:hover:bg-gray-100/[0.18] hover:-translate-y-0.5 transition-all duration-[2000ms] flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-700 dark:hover:text-blue-300"
           style={{ transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)' }}
         >
           <BlueskyIcon className="w-4 h-4" />
-          Bluesky
+          <span className="text-sm font-medium">Bluesky</span>
         </a>
       </div>
     </section>
