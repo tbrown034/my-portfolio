@@ -46,7 +46,7 @@ export default function Hero() {
           </div>
           
           {/* Let's build something together link */}
-          <a href="#about" className="flex items-center gap-2 text-sm font-semibold text-gray-900 dark:text-gray-100 group cursor-pointer mt-3">
+          <a href="#about" className="flex items-center gap-2 text-sm font-semibold text-gray-900 dark:text-gray-100 group cursor-pointer mt-6">
             <span className="border-b-2 border-gray-900 dark:border-gray-100 group-hover:border-blue-600 dark:group-hover:border-blue-400 transition-colors duration-200">
               Let's build something together
             </span>
