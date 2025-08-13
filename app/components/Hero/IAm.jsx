@@ -106,7 +106,7 @@ export default function IAm({ showDesktopLayout }) {
             </p>
           </div>
           
-          <div className="flex items-center gap-2 text-base font-semibold text-gray-900 dark:text-gray-100 group cursor-pointer">
+          <a href="#about" className="flex items-center gap-2 text-base font-semibold text-gray-900 dark:text-gray-100 group cursor-pointer">
             <span className="border-b-2 border-gray-900 dark:border-gray-100 group-hover:border-blue-600 dark:group-hover:border-blue-400 transition-colors duration-200">
               Let's build something together
             </span>
@@ -116,9 +116,9 @@ export default function IAm({ showDesktopLayout }) {
               stroke="currentColor" 
               viewBox="0 0 24 24"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h10v10M17 7L7 17" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 7v10m0 0H7m10 0L7 7" />
             </svg>
-          </div>
+          </a>
         </div>
       </div>
       
