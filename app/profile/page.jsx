@@ -252,7 +252,7 @@ export default function ProfilePage() {
               href="/ViewResume"
               className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200"
             >
-              View Resume + Selected Clips
+              View Resume
             </a>
           </div>
         </div>
