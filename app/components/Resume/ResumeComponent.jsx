@@ -302,6 +302,14 @@ Oklahoma Watch (2016 – 2022)\\par
                   article="A Digital Memorial to Oklahomans Who Died from COVID-19"
                 />
               </Section>
+
+              <Section title="Let's Work Together">
+                <div style={{ marginTop: '12px' }}>
+                  <p style={{ fontSize: '9.5pt', color: '#374151', lineHeight: '1.4' }}>
+                    I combine investigative rigor with modern development skills to build tools that matter. Whether it's data visualization, interactive storytelling, or full-stack applications, I deliver accurate, engaging solutions.
+                  </p>
+                </div>
+              </Section>
             </div>
           </div>
         </div>

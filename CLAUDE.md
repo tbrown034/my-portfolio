@@ -42,7 +42,7 @@ Design experiences that are intuitive, clear, and focused—where every element 
 
 ## Aesthetic System
 
-- **Canvas**: Dark, quiet backgrounds
+- **Canvas**: Adaptive contrast (light/dark mode) prioritizing readability
 - **Modules**: Frosted cards, rounded rectangles
 - **Type**: Modern sans, clear weights, generous leading
 - **Typography details**: Always use spaced en dash ( – ) not em dash or hyphen
@@ -50,6 +50,35 @@ Design experiences that are intuitive, clear, and focused—where every element 
 - **Rhythm**: Strict grid, consistent alignment, airy spacing
 
 Architecture shapes taste—strong right angles for order, soft radii for welcome. Masculine energy (confident lines, weight, restraint) tempered with warmth and softness.
+
+## Visual Language Strategy: Flat + Glass
+
+**Core Philosophy: Contrast, Readability, Compartmentalization, Structure**
+
+### **Flat Sections** (Newspaper-like)
+- **Purpose**: Editorial clarity for text-heavy content
+- **Usage**: Section headers, lead-in text blocks, headlines, "About Me" content
+- **Function**: Structural dividers that frame content areas
+- **Style**: Clean backgrounds, high contrast typography, minimal visual effects
+
+### **Glass Sections** (Apple-like)
+- **Purpose**: Interactive depth for tactile content
+- **Usage**: Portfolio cards, data examples, project highlights, role showcases
+- **Function**: Content modules that signal "click me" or "live content"
+- **Style**: Frosted backgrounds, subtle depth, contained within flat frameworks
+
+### **Application Rules**
+1. **Functional contrast, not decorative** – Style changes serve content hierarchy
+2. **Clear boundaries** – Flat areas introduce themes, glass cards contain artifacts
+3. **Editorial handoff** – Flat section headers "deck" the glass modules below
+4. **One hero per viewport** – If both styles appear together, one leads, other supports
+5. **Consistent typography** – Hierarchy remains constant across both visual languages
+
+### **Anti-Patterns to Avoid**
+- Overuse of glass (kills contrast and specialness)
+- Glass nested within glass (muddled layering)
+- Typography drift between styles (breaks brand consistency)
+- Random style swaps without structural logic
 
 ## Decision Filters
 
@@ -86,6 +115,7 @@ Interfaces that feel obvious at a glance and rewarding when explored—calm, pur
 - **Rather over-engineer than under**: Build for maintainability, extensibility, and clarity over quick fixes
 - **Component clarity**: Each component has a clear purpose and clean interface
 - **Consistent patterns**: Establish patterns early and follow them religiously
+- **NEVER add or delete whole sentences without explicit permission** – Do not make up content or remove existing content unless explicitly told to do so. Every sentence in the codebase was written intentionally.
 
 Code should read like well-organized journalism—clear hierarchy, logical flow, no wasted words.
 

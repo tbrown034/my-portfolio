@@ -50,6 +50,11 @@
   100% { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes slowBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
 @utility min-h-1/2-screen {
   min-height: 50vh;
 }

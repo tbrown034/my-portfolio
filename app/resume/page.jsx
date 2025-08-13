@@ -113,6 +113,7 @@ export default function ResumePage() {
           display: grid;
           grid-template-columns: 2fr 1fr;
           gap: 32px;
+          align-items: start;
         }
         
         /* Summary */
@@ -121,6 +122,7 @@ export default function ResumePage() {
           line-height: 1.45;
           color: #374151;
           margin: 0;
+          text-align: justify;
         }
         
         /* Section styling - Editorial hierarchy */
@@ -136,7 +138,8 @@ export default function ResumePage() {
           margin-top: 20px;
         }
         
-        .section-title:first-child {
+        .primary-col .section-title:first-child,
+        .secondary-col .section-title:first-child {
           margin-top: 0;
         }
         
@@ -193,6 +196,7 @@ export default function ResumePage() {
           position: relative;
           font-size: 9.5pt;
           line-height: 1.45;
+          text-align: justify;
         }
         
         .job-highlights li::before {
@@ -285,6 +289,44 @@ export default function ResumePage() {
           color: #374151;
           margin-top: 3px;
           font-style: italic;
+        }
+
+        /* CTA Section */
+        .cta-section {
+          background: #f3f4f6;
+          padding: 12px;
+          border-radius: 4px;
+          margin-top: 8px;
+        }
+
+        .cta-text {
+          font-size: 9.5pt;
+          color: #374151;
+          line-height: 1.45;
+          margin-bottom: 8px;
+          text-align: justify;
+        }
+
+        .cta-action {
+          text-align: center;
+        }
+
+        .cta-link {
+          font-size: 10pt;
+          font-weight: 700;
+          color: #1d4ed8;
+          text-decoration: none;
+          display: inline-block;
+          padding: 6px 12px;
+          background: #ffffff;
+          border: 1px solid #1d4ed8;
+          border-radius: 3px;
+          transition: all 0.2s;
+        }
+
+        .cta-link:hover {
+          background: #1d4ed8;
+          color: #ffffff;
         }
 
         /* Selected Works Specific Styles */

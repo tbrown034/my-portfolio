@@ -1,9 +1,6 @@
 "use client";
 import React from "react";
-import Intro from "./Intro.jsx";
-// import BottomNav from "./BottomNav.jsx";
 import Mug from "./Mug.jsx";
-// import MyLinks from "./MyLinks.jsx";
 import HelloWorld from "./HelloWorld.jsx";
 import IAm from "./IAm.jsx";
 
@@ -11,31 +8,43 @@ export default function Hero() {
   return (
     <main className="min-h-screen flex flex-col justify-start px-6 py-4 sm:px-8 lg:px-12 xl:px-16">
       {/* Mobile Screen */}
-      <section className="flex flex-col gap-3 sm:hidden max-w-2xl mx-auto pt-8">
+      <section className="flex flex-col gap-4 sm:hidden max-w-2xl mx-auto pt-8">
         <HelloWorld />
         <IAm />
-        <div className="flex items-center justify-center my-4">
-          <Mug />
-        </div>
-        <Intro />
-        {/* <BottomNav /> */}
-        {/* <MyLinks /> */}
       </section>
 
-      {/* Larger Screens */}
-      <section className="hidden sm:flex sm:flex-col sm:gap-4 max-w-7xl mx-auto pt-12">
+      {/* Medium Screens - 2 columns */}
+      <section className="hidden sm:flex lg:hidden sm:flex-col sm:gap-6 max-w-5xl mx-auto pt-12">
         <HelloWorld />
-        <div className="sm:grid sm:grid-cols-12 sm:gap-6 lg:gap-8 items-start">
-          <div className="flex flex-col col-span-8 gap-4">
-            <IAm />
-            <Intro />
-            {/* <BottomNav /> */}
-          </div>
-          <div className="flex items-start justify-center col-span-4 pt-4">
-            <Mug />
+        <div className="space-y-6">
+          <h2 className="text-xs font-bold uppercase tracking-[0.15em] text-gray-500 dark:text-gray-500">
+            About Me
+          </h2>
+          <div className="grid grid-cols-2 gap-8 items-start">
+            <div className="col-span-1">
+              <IAm showDesktopLayout="medium" />
+            </div>
+            <div className="col-span-1 flex justify-center">
+              <Mug />
+            </div>
           </div>
         </div>
-        {/* <MyLinks /> */}
+      </section>
+
+      {/* Large Screens - 3 columns */}
+      <section className="hidden lg:flex lg:flex-col lg:gap-6 max-w-7xl mx-auto pt-12">
+        <HelloWorld />
+        <div className="space-y-6">
+          <h2 className="text-xs font-bold uppercase tracking-[0.15em] text-gray-500 dark:text-gray-500">
+            About Me
+          </h2>
+          <div className="grid grid-cols-3 gap-8 items-start">
+            <IAm showDesktopLayout="large" />
+            <div className="col-span-1 flex justify-center">
+              <Mug />
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );
