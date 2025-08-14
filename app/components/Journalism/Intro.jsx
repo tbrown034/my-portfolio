@@ -45,16 +45,16 @@ export default function Intro() {
 
         {/* Awards highlights */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
-          <div className="border-l-2 border-blue-500 pl-4">
-            <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Work Experience</h4>
+          <div className="border-l-2 border-blue-500 pl-4 transition-all duration-300 hover:pl-6 hover:border-blue-800 hover:scale-105 group cursor-default">
+            <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors duration-300">Work Experience</h4>
             <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">Oklahoma Watch, Wyoming Tribune Eagle, CNHI Newspapers, Staunton News Leader, Indiana Daily Student</p>
           </div>
-          <div className="border-l-2 border-blue-500 pl-4">
-            <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Recognition</h4>
+          <div className="border-l-2 border-blue-500 pl-4 transition-all duration-300 hover:pl-6 hover:border-blue-800 hover:scale-105 group cursor-default">
+            <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors duration-300">Recognition</h4>
             <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">OK SPJ Reporter of Year (2020), Great Plains Writer of Year (2021), OK SPJ Investigative (2022)</p>
           </div>
-          <div className="border-l-2 border-blue-500 pl-4">
-            <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Coverage</h4>
+          <div className="border-l-2 border-blue-500 pl-4 transition-all duration-300 hover:pl-6 hover:border-blue-800 hover:scale-105 group cursor-default">
+            <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors duration-300">Coverage</h4>
             <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">Democracy, voting rights, state agencies, oversight, military, criminal justice, healthcare policy, budget analysis</p>
           </div>
         </div>
@@ -79,16 +79,16 @@ export default function Intro() {
 
           {/* Awards highlights */}
           <div className="space-y-6">
-            <div className="border-l-2 border-blue-800 pl-4">
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Work Experience</h4>
+            <div className="border-l-2 border-blue-800 pl-4 transition-all duration-300 hover:pl-6 hover:border-blue-800 hover:scale-105 group cursor-default">
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors duration-300">Work Experience</h4>
               <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">Oklahoma Watch, Wyoming Tribune Eagle, CNHI Newspapers, Staunton News Leader, Indiana Daily Student</p>
             </div>
-            <div className="border-l-2 border-blue-800 pl-4">
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Recognition</h4>
+            <div className="border-l-2 border-blue-800 pl-4 transition-all duration-300 hover:pl-6 hover:border-blue-800 hover:scale-105 group cursor-default">
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors duration-300">Recognition</h4>
               <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">OK SPJ Reporter of Year (2020), Great Plains Writer of Year (2021), OK SPJ Investigative (2022)</p>
             </div>
-            <div className="border-l-2 border-blue-800 pl-4">
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Coverage</h4>
+            <div className="border-l-2 border-blue-800 pl-4 transition-all duration-300 hover:pl-6 hover:border-blue-800 hover:scale-105 group cursor-default">
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors duration-300">Coverage</h4>
               <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">Democracy, voting rights, state agencies, oversight, military, criminal justice, healthcare policy, budget analysis</p>
             </div>
           </div>

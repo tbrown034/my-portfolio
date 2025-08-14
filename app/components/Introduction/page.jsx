@@ -31,16 +31,16 @@ export default function Introduction() {
 
           {/* Key achievements */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
-            <div className="border-l-4 border-blue-800 pl-4 py-2">
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-base">Award-winning</h4>
+            <div className="border-l-4 border-blue-800 pl-4 py-2 transition-all duration-300 hover:pl-6 hover:scale-105 hover:border-blue-600 group cursor-default">
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-base group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors duration-300">Award-winning</h4>
               <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">State reporter, investigative journalist</p>
             </div>
-            <div className="border-l-4 border-blue-800 pl-4 py-2">
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-base">Technical Skills</h4>
+            <div className="border-l-4 border-blue-800 pl-4 py-2 transition-all duration-300 hover:pl-6 hover:scale-105 hover:border-blue-600 group cursor-default">
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-base group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors duration-300">Technical Skills</h4>
               <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Full-stack development, SEO, PPC</p>
             </div>
-            <div className="border-l-4 border-blue-800 pl-4 py-2">
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-base">Unique Perspective</h4>
+            <div className="border-l-4 border-blue-800 pl-4 py-2 transition-all duration-300 hover:pl-6 hover:scale-105 hover:border-blue-600 group cursor-default">
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-base group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors duration-300">Unique Perspective</h4>
               <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Journalist's eye for detail and story</p>
             </div>
           </div>

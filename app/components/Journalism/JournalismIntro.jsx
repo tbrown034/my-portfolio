@@ -28,16 +28,16 @@ export default function JournalismIntro() {
 
           {/* Key achievements */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
-            <div className="border-l-2 border-blue-500 pl-4">
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Awards</h4>
+            <div className="border-l-2 border-blue-500 pl-4 transition-all duration-300 hover:pl-6 hover:border-blue-800 group">
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors duration-300">Awards</h4>
               <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">OK SPJ Reporter of Year, Great Plains Writer of Year</p>
             </div>
-            <div className="border-l-2 border-blue-500 pl-4">
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Expertise</h4>
+            <div className="border-l-2 border-blue-500 pl-4 transition-all duration-300 hover:pl-6 hover:border-blue-800 group">
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors duration-300">Expertise</h4>
               <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">Government accountability, investigative reporting</p>
             </div>
-            <div className="border-l-2 border-blue-500 pl-4">
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Impact</h4>
+            <div className="border-l-2 border-blue-500 pl-4 transition-all duration-300 hover:pl-6 hover:border-blue-800 group">
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors duration-300">Impact</h4>
               <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">Policy changes, government reform</p>
             </div>
           </div>

@@ -10,17 +10,30 @@ export default function Projects() {
   const [displayCount, setDisplayCount] = useState(4);
 
   return (
-    <section className="max-w-7xl mx-auto px-6 pt-0 pb-8 sm:px-8 lg:px-12 xl:px-16">
-      {/* Kill the darlings - no repetitive intro text */}
+    <section className="w-full bg-gray-50 dark:bg-gray-900/50 py-12">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
+        {/* Section header */}
+        <div className="border-b border-gray-200 dark:border-gray-700 pb-2 mb-6">
+          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400">
+            Selected Projects
+          </h2>
+        </div>
+        
+        <div className="space-y-3 mb-8">
+          <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100">
+            Web Development
+          </h3>
+          <p className="text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl">
+            Full-stack applications built with modern frameworks and best practices.
+          </p>
+        </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Projects grid - indented */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 md:pl-8 lg:pl-12">
         {webProjects.slice(0, displayCount).map((project, index) => (
-          <div key={index} className={`group relative ${index % 2 === 1 ? 'md:mt-8' : ''}`}>
-            {/* Gradient background glow */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-800 to-blue-900 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-1000 group-hover:duration-200"></div>
-            
-            {/* Card content */}
-            <div className="relative bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700">
+          <div key={index} className="group relative">
+            {/* Card content - simplified */}
+            <div className="relative bg-white dark:bg-gray-800 rounded-lg p-5 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-700">
               {/* Content */}
               <div className="space-y-4 mb-6">
                 <div className="space-y-2">
@@ -107,10 +120,10 @@ export default function Projects() {
             </div>
           </div>
         ))}
-      </div>
-      
-      {displayCount < webProjects.length && (
-        <div className="flex justify-center mt-8">
+        </div>
+        
+        {displayCount < webProjects.length && (
+          <div className="flex justify-center mt-8">
           <button
             className="inline-flex items-center justify-center px-6 py-3 font-bold text-white bg-blue-800 border-2 border-blue-800 rounded-2xl dark:text-blue-950 dark:bg-blue-50 dark:border-blue-50 hover:bg-blue-600 hover:border-blue-600 active:bg-blue-950 focus:bg-blue-500 dark:hover:bg-blue-200 dark:hover:border-blue-200 focus:outline-none focus:ring focus:ring-blue-400 cursor-pointer"
             onClick={() => setDisplayCount((prevCount) => prevCount + 4)}
@@ -119,16 +132,17 @@ export default function Projects() {
           </button>
         </div>
       )}
-      {displayCount > 4 && (
-        <div className="flex justify-center mt-8">
+        {displayCount > 4 && (
+          <div className="flex justify-center mt-8">
           <button
             className="inline-flex items-center justify-center px-6 py-3 font-bold text-blue-800 bg-gray-100 border-2 border-gray-300 rounded-2xl dark:text-blue-50 dark:bg-gray-700 dark:border-gray-600 hover:bg-gray-200 hover:border-gray-400 active:bg-gray-300 focus:bg-gray-200 dark:hover:bg-gray-600 dark:hover:border-gray-500 focus:outline-none focus:ring focus:ring-gray-400 cursor-pointer"
             onClick={() => setDisplayCount(4)}
           >
             Show Fewer
           </button>
-        </div>
-      )}
+          </div>
+        )}
+      </div>
     </section>
   );
 }

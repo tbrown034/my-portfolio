@@ -27,16 +27,16 @@ export default function Intro() {
 
           {/* Key achievements */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
-            <div className="border-l-2 border-blue-800 pl-4">
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Tools</h4>
+            <div className="border-l-2 border-blue-800 pl-4 transition-all duration-300 hover:pl-6 hover:border-green-700 hover:scale-105 group cursor-default">
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm group-hover:text-green-800 dark:group-hover:text-green-400 transition-colors duration-300">Tools</h4>
               <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">D3.js, Python, Observable, Tableau</p>
             </div>
-            <div className="border-l-2 border-blue-800 pl-4">
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Focus</h4>
+            <div className="border-l-2 border-blue-800 pl-4 transition-all duration-300 hover:pl-6 hover:border-green-700 hover:scale-105 group cursor-default">
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm group-hover:text-green-800 dark:group-hover:text-green-400 transition-colors duration-300">Focus</h4>
               <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">Interactive charts, maps, storytelling</p>
             </div>
-            <div className="border-l-2 border-blue-800 pl-4">
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Approach</h4>
+            <div className="border-l-2 border-blue-800 pl-4 transition-all duration-300 hover:pl-6 hover:border-green-700 hover:scale-105 group cursor-default">
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm group-hover:text-green-800 dark:group-hover:text-green-400 transition-colors duration-300">Approach</h4>
               <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">Data-driven narratives, accessibility</p>
             </div>
           </div>
