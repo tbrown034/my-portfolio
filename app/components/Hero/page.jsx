@@ -6,7 +6,7 @@ import IAm from "./IAm.jsx";
 
 export default function Hero() {
   return (
-    <main className="flex flex-col px-6 pb-0 pt-4 sm:px-8 lg:px-12 xl:px-16 min-h-[calc(100vh-5rem)]">
+    <main className="flex flex-col px-6 pb-0 pt-4 sm:px-8 lg:px-12 xl:px-16">
       {/* Vertical layout for mobile only */}
       <section className="flex flex-col gap-4 sm:hidden max-w-3xl mx-auto pt-8">
         <HelloWorld />
@@ -14,8 +14,8 @@ export default function Hero() {
       </section>
 
       {/* 3-column layout for small screens and up */}
-      <section className="hidden sm:flex sm:flex-col max-w-7xl mx-auto sm:pb-0 sm:pt-4 flex-1 w-full">
-        <div className="flex-1 flex flex-col justify-center">
+      <section className="hidden sm:flex sm:flex-col max-w-7xl mx-auto sm:pb-8 sm:pt-4 w-full">
+        <div className="flex flex-col">
           <HelloWorld />
           <div className="space-y-3">
             <h2 className="text-xs font-bold uppercase tracking-[0.15em] text-gray-500 dark:text-gray-500">

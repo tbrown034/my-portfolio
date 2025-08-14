@@ -10,26 +10,17 @@ export default function Projects() {
   const [displayCount, setDisplayCount] = useState(4);
 
   return (
-    <section className="w-full bg-gray-50 dark:bg-gray-900/50 py-12">
+    <section className="w-full py-12">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* Section header */}
-        <div className="border-b border-gray-200 dark:border-gray-700 pb-2 mb-6">
+        <div className="border-b border-gray-200 dark:border-gray-700 pb-2 mb-8">
           <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400">
-            Selected Projects
+            Selected Web Development Projects
           </h2>
-        </div>
-        
-        <div className="space-y-3 mb-8">
-          <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100">
-            Web Development
-          </h3>
-          <p className="text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl">
-            Full-stack applications built with modern frameworks and best practices.
-          </p>
         </div>
 
         {/* Projects grid - indented */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 md:pl-8 lg:pl-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 md:pl-12 lg:pl-20 md:pr-8 lg:pr-12">
         {webProjects.slice(0, displayCount).map((project, index) => (
           <div key={index} className="group relative">
             {/* Card content - simplified */}
