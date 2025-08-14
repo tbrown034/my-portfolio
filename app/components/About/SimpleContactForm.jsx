@@ -1,0 +1,198 @@
+'use client';
+
+import { useState } from 'react';
+
+export default function SimpleContactForm() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [status, setStatus] = useState('idle'); // idle, loading, success, error
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('loading');
+    setErrorMessage('');
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: `Subject: ${formData.subject}\n\n${formData.message}`
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
+      setStatus('success');
+      // Reset form after successful submission
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+    } catch (error) {
+      setStatus('error');
+      setErrorMessage('Failed to send message. Please try again.');
+      console.error('Error sending message:', error);
+    }
+  };
+
+  // Show success message after form submission
+  if (status === 'success') {
+    return (
+      <div className="mt-8 max-w-2xl animate-fadeIn">
+        <div className="bg-green-50 dark:bg-green-900/20 p-8 rounded-2xl border-2 border-green-200 dark:border-green-800 animate-slideUp">
+          <div className="flex items-start gap-4">
+            <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900/40 animate-scaleIn">
+              <svg className="w-6 h-6 text-green-600 dark:text-green-400 animate-checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div className="flex-1 animate-fadeInDelayed">
+              <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-2">
+                Message Sent Successfully!
+              </h3>
+              <p className="text-green-700 dark:text-green-300 mb-4">
+                Thank you for reaching out. I've received your message and will get back to you within 24 hours.
+              </p>
+              <button
+                onClick={() => {
+                  setStatus('idle');
+                  setFormData({
+                    name: '',
+                    email: '',
+                    subject: '',
+                    message: ''
+                  });
+                }}
+                className="text-sm font-medium text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 underline transition-colors"
+              >
+                Send another message
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <form 
+      id="contact-form"
+      onSubmit={handleSubmit}
+      className="mt-8 space-y-6 max-w-2xl"
+    >
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div>
+          <label 
+            htmlFor="name" 
+            className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+          >
+            Name
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            value={formData.name}
+            onChange={handleChange}
+            className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors"
+            placeholder="Your name"
+          />
+        </div>
+        
+        <div>
+          <label 
+            htmlFor="email" 
+            className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+          >
+            Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            value={formData.email}
+            onChange={handleChange}
+            className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors"
+            placeholder="your@email.com"
+          />
+        </div>
+      </div>
+
+      <div>
+        <label 
+          htmlFor="subject" 
+          className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+        >
+          Subject
+        </label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          required
+          value={formData.subject}
+          onChange={handleChange}
+          className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors"
+          placeholder="What is this about?"
+        />
+      </div>
+
+      <div>
+        <label 
+          htmlFor="message" 
+          className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+        >
+          Message
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          rows={6}
+          required
+          value={formData.message}
+          onChange={handleChange}
+          className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors resize-none"
+          placeholder="Tell me about your project or how I can help..."
+        />
+      </div>
+
+      {/* Error Messages */}
+      {status === 'error' && (
+        <div className="text-sm text-red-700 dark:text-red-300 bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-200 dark:border-red-800">
+          <p>{errorMessage}</p>
+        </div>
+      )}
+
+      <button
+        type="submit"
+        disabled={status === 'loading'}
+        className="w-full sm:w-auto px-8 py-3 font-bold text-white bg-blue-800 border-2 border-blue-800 rounded-2xl dark:text-blue-950 dark:bg-blue-50 dark:border-blue-50 hover:bg-blue-600 hover:border-blue-600 active:bg-blue-950 focus:bg-blue-500 dark:hover:bg-blue-200 dark:hover:border-blue-200 focus:outline-none focus:ring focus:ring-blue-400 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        {status === 'loading' ? 'Sending...' : 'Send Message'}
+      </button>
+    </form>
+  );
+}

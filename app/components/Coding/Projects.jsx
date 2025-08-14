@@ -32,6 +32,12 @@ export default function Projects() {
                        project.id === 3 ? 'Auth & Database' : 
                        'Modern Stack'}
                     </span>
+                    {/* Hobby Project tag for specific projects */}
+                    {(project.id === 2 || project.id === 3 || project.id === 4) && (
+                      <span className="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-400 rounded font-medium">
+                        Hobby Project
+                      </span>
+                    )}
                   </div>
                   
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">

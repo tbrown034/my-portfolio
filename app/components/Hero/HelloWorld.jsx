@@ -5,7 +5,7 @@ export default function HelloWorld() {
         Trevor Brown
       </h1>
       
-      <p className="text-xl sm:text-2xl font-light text-blue-700 dark:text-blue-300 leading-relaxed">
+      <p className="text-xl sm:text-2xl font-light text-blue-800 dark:text-blue-300 leading-relaxed">
         Investigative journalist + developer + data visualizer
       </p>
 
