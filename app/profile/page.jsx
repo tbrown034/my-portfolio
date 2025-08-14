@@ -153,7 +153,7 @@ export default function ProfilePage() {
           </div>
           
           <div className="space-y-6">
-            <div className="border-l-2 border-green-500 pl-6">
+            <div className="border-l-2 border-green-700 pl-6">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">Staff Writer</h3>
               <p className="text-blue-600 dark:text-blue-400 text-sm font-medium">Oklahoma Watch | 2020-2024</p>
               <p className="text-gray-600 dark:text-gray-400 text-sm mt-2">
@@ -164,7 +164,7 @@ export default function ProfilePage() {
               </p>
             </div>
 
-            <div className="border-l-2 border-green-500 pl-6">
+            <div className="border-l-2 border-green-700 pl-6">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">Staff Writer</h3>
               <p className="text-blue-600 dark:text-blue-400 text-sm font-medium">Wyoming Tribune Eagle | 2018-2020</p>
               <p className="text-gray-600 dark:text-gray-400 text-sm mt-2">
@@ -172,7 +172,7 @@ export default function ProfilePage() {
               </p>
             </div>
 
-            <div className="border-l-2 border-green-500 pl-6">
+            <div className="border-l-2 border-green-700 pl-6">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">Reporter</h3>
               <p className="text-blue-600 dark:text-blue-400 text-sm font-medium">CNHI Newspapers | 2014-2018</p>
               <p className="text-gray-600 dark:text-gray-400 text-sm mt-2">
@@ -180,7 +180,7 @@ export default function ProfilePage() {
               </p>
             </div>
 
-            <div className="border-l-2 border-green-500 pl-6">
+            <div className="border-l-2 border-green-700 pl-6">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">Reporter</h3>
               <p className="text-blue-600 dark:text-blue-400 text-sm font-medium">Staunton News Leader | 2012-2014</p>
               <p className="text-gray-600 dark:text-gray-400 text-sm mt-2">

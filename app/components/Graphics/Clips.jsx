@@ -30,7 +30,7 @@ export default function Clips() {
         {dataStories.slice(0, displayCount).map((story) => (
           <div key={story.id} className="group relative">
             {/* Gradient background glow */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-1000 group-hover:duration-200"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-green-700 to-emerald-700 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-1000 group-hover:duration-200"></div>
             
             {/* Card content */}
             <div className="relative bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700">
@@ -45,7 +45,7 @@ export default function Clips() {
                     <span className="text-gray-500 dark:text-gray-400">{story.publication}</span>
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors duration-200">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-green-800 dark:group-hover:text-green-400 transition-colors duration-200">
                     {story.title}
                   </h3>
                   
@@ -83,7 +83,7 @@ export default function Clips() {
                   </span>
                   
                   <Link
-                    className="inline-flex items-center gap-1 text-sm text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 transition-colors duration-200"
+                    className="inline-flex items-center gap-1 text-sm text-gray-600 dark:text-gray-400 hover:text-green-800 dark:hover:text-green-400 transition-colors duration-200"
                     href={story.articleUrl}
                     target="_blank"
                   >

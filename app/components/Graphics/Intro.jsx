@@ -27,15 +27,15 @@ export default function Intro() {
 
           {/* Key achievements */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
-            <div className="border-l-2 border-blue-500 pl-4">
+            <div className="border-l-2 border-blue-800 pl-4">
               <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Tools</h4>
               <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">D3.js, Python, Observable, Tableau</p>
             </div>
-            <div className="border-l-2 border-blue-500 pl-4">
+            <div className="border-l-2 border-blue-800 pl-4">
               <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Focus</h4>
               <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">Interactive charts, maps, storytelling</p>
             </div>
-            <div className="border-l-2 border-blue-500 pl-4">
+            <div className="border-l-2 border-blue-800 pl-4">
               <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Approach</h4>
               <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">Data-driven narratives, accessibility</p>
             </div>

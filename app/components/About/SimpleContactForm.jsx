@@ -63,7 +63,7 @@ export default function SimpleContactForm() {
         <div className="bg-green-50 dark:bg-green-900/20 p-8 rounded-2xl border-2 border-green-200 dark:border-green-800 animate-slideUp">
           <div className="flex items-start gap-4">
             <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900/40 animate-scaleIn">
-              <svg className="w-6 h-6 text-green-600 dark:text-green-400 animate-checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-green-800 dark:text-green-400 animate-checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
@@ -71,7 +71,7 @@ export default function SimpleContactForm() {
               <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-2">
                 Message Sent Successfully!
               </h3>
-              <p className="text-green-700 dark:text-green-300 mb-4">
+              <p className="text-green-800 dark:text-green-300 mb-4">
                 Thank you for reaching out. I've received your message and will get back to you within 24 hours.
               </p>
               <button
@@ -84,7 +84,7 @@ export default function SimpleContactForm() {
                     message: ''
                   });
                 }}
-                className="text-sm font-medium text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 underline transition-colors"
+                className="text-sm font-medium text-green-800 dark:text-green-400 hover:text-green-900 dark:hover:text-green-300 underline transition-colors"
               >
                 Send another message
               </button>

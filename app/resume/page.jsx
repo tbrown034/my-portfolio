@@ -314,18 +314,18 @@ export default function ResumePage() {
         .cta-link {
           font-size: 10pt;
           font-weight: 700;
-          color: #1d4ed8;
+          color: #1e40af;
           text-decoration: none;
           display: inline-block;
           padding: 6px 12px;
           background: #ffffff;
-          border: 1px solid #1d4ed8;
+          border: 1px solid #1e40af;
           border-radius: 3px;
           transition: all 0.2s;
         }
 
         .cta-link:hover {
-          background: #1d4ed8;
+          background: #1e40af;
           color: #ffffff;
         }
 
@@ -361,7 +361,7 @@ export default function ResumePage() {
         }
 
         .text-link {
-          color: #1d4ed8;
+          color: #1e40af;
           text-decoration: none;
           font-weight: 500;
         }
@@ -407,7 +407,7 @@ export default function ResumePage() {
         }
 
         .work-title-link:hover .work-title {
-          color: #1d4ed8;
+          color: #1e40af;
         }
 
         .work-title {
@@ -432,7 +432,7 @@ export default function ResumePage() {
         }
         
         .work-url-link:hover {
-          color: #1d4ed8;
+          color: #1e40af;
           text-decoration: underline;
         }
 

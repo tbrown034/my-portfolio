@@ -40,7 +40,7 @@ export default function Projects() {
             </div>
 
             <p className="px-2 text-sm">Published: {viz.date}</p>
-            <div className="flex w-1/2 gap-4 px-2 py-4 border-t-2 border-blue-600">
+            <div className="flex w-1/2 gap-4 px-2 py-4 border-t-2 border-blue-800">
               <Link
                 className="flex items-center gap-2 p-1 font-bold border-2 border-blue-800 rounded-lg hover:bg-blue-300 active:bg-blue-400"
                 href={viz.siteLink}

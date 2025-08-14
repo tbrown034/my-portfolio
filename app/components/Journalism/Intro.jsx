@@ -21,7 +21,7 @@ export default function Intro() {
               href="https://oklahomawatch.org/" 
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200 underline decoration-2 underline-offset-2"
+              className="text-blue-800 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-300 transition-colors duration-200 underline decoration-2 underline-offset-2"
             >
               Oklahoma Watch
             </a>
@@ -79,15 +79,15 @@ export default function Intro() {
 
           {/* Awards highlights */}
           <div className="space-y-6">
-            <div className="border-l-2 border-blue-500 pl-4">
+            <div className="border-l-2 border-blue-800 pl-4">
               <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Work Experience</h4>
               <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">Oklahoma Watch, Wyoming Tribune Eagle, CNHI Newspapers, Staunton News Leader, Indiana Daily Student</p>
             </div>
-            <div className="border-l-2 border-blue-500 pl-4">
+            <div className="border-l-2 border-blue-800 pl-4">
               <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Recognition</h4>
               <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">OK SPJ Reporter of Year (2020), Great Plains Writer of Year (2021), OK SPJ Investigative (2022)</p>
             </div>
-            <div className="border-l-2 border-blue-500 pl-4">
+            <div className="border-l-2 border-blue-800 pl-4">
               <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm">Coverage</h4>
               <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">Democracy, voting rights, state agencies, oversight, military, criminal justice, healthcare policy, budget analysis</p>
             </div>
@@ -102,7 +102,7 @@ export default function Intro() {
                 href="https://oklahomawatch.org/" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200 underline decoration-2 underline-offset-2"
+                className="text-blue-800 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-300 transition-colors duration-200 underline decoration-2 underline-offset-2"
               >
                 Oklahoma Watch
               </a>

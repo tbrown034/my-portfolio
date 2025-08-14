@@ -17,7 +17,7 @@ export default function Projects() {
         {webProjects.slice(0, displayCount).map((project, index) => (
           <div key={index} className={`group relative ${index % 2 === 1 ? 'md:mt-8' : ''}`}>
             {/* Gradient background glow */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-1000 group-hover:duration-200"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-blue-800 to-blue-900 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-1000 group-hover:duration-200"></div>
             
             {/* Card content */}
             <div className="relative bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700">
@@ -40,7 +40,7 @@ export default function Projects() {
                     )}
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors duration-200">
                     {project.title}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
@@ -68,7 +68,7 @@ export default function Projects() {
                 {/* Links */}
                 <div className="flex gap-4">
                   <Link
-                    className="inline-flex items-center gap-1 text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                    className="inline-flex items-center gap-1 text-sm text-gray-600 dark:text-gray-400 hover:text-blue-800 dark:hover:text-blue-400 transition-colors duration-200"
                     href={project.githubLink}
                     target="_blank"
                   >
@@ -78,7 +78,7 @@ export default function Projects() {
                     Code
                   </Link>
                   <Link
-                    className="inline-flex items-center gap-1 text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                    className="inline-flex items-center gap-1 text-sm text-gray-600 dark:text-gray-400 hover:text-blue-800 dark:hover:text-blue-400 transition-colors duration-200"
                     href={project.siteLink}
                     target="_blank"
                   >
