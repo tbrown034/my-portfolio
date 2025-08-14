@@ -6,6 +6,7 @@ import DataVizClips from "./components/Graphics/Clips.jsx";
 import JournalismIntro from "./components/Journalism/JournalismIntro.jsx";
 import JournalismClips from "./components/Journalism/Clips.jsx";
 import About from "./components/About/page.jsx";
+//
 
 export default function Page() {
   return (
