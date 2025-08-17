@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import photo from "../../../public/images/okwatch.png";
 import { graphics } from "@content/datavizProjects.js";
-import { NewspaperIcon } from "@/components/icons";
+// Icon defined inline if needed
 
 export default function Projects() {
   const [displayCount, setDisplayCount] = useState(4);
@@ -46,7 +46,9 @@ export default function Projects() {
                 href={viz.siteLink}
               >
                 <p>Full Article</p>
-                <NewspaperIcon className="w-12 h-12" />
+                <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                </svg>
               </Link>
             </div>
           </div>

@@ -11,7 +11,7 @@ import {
   SiAxios,
   SiMui,
   SiSemanticuireact,
-} from "@/components/icons";
+} from "react-icons/si";
 export default function TechIcon() {
   const techs = [
     {

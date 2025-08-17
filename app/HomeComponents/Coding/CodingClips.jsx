@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { webProjects } from "@content/webProjects.js";
-import { GlobeAltIcon, DiGithubBadge } from "@/components/icons";
+// Icons defined inline below
 
 export default function Projects() {
   const [displayCount, setDisplayCount] = useState(4);

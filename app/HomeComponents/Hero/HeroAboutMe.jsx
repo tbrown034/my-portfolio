@@ -8,7 +8,7 @@ import {
   GitHubIcon,
   LinkedInIcon,
   BlueskyIcon,
-} from "@components/icons/SocialIcons";
+} from "@/components/Icons/SocialIcons";
 import { SOCIAL_LINKS, PERSONAL_INFO } from "@/app/constants";
 
 export default function IAm({ showDesktopLayout }) {

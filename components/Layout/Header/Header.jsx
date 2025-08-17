@@ -9,7 +9,7 @@ import {
   MoonIcon,
   SunIcon,
   UserIcon 
-} from "@/components/icons";
+} from "@heroicons/react/24/outline";
 import { DarkModeContext } from "../../Utilities/DarkModeContext.jsx";
 
 export default function Header() {

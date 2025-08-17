@@ -5,7 +5,7 @@ import {
   SiPython,
   SiChartdotjs,
   SiD3Dotjs,
-} from "@/components/icons";
+} from "react-icons/si";
 
 export default function TechIcon() {
   const techs = [
