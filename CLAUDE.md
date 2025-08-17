@@ -9,6 +9,7 @@ Design experiences that are intuitive, clear, and focused—where every element 
 ## Primary Influence
 
 **Editorial newspapers.**
+
 - Front-page mindset for landing pages (lede → dek → modules above the fold)
 - Hed/dek type hierarchy
 - Modular grid system
@@ -31,11 +32,11 @@ Design experiences that are intuitive, clear, and focused—where every element 
 - **Above the fold priority**: Show relevant content and immediate entry points first
 - Accessibility & performance are table stakes
 - Respectful motion (confirm, guide, don't distract)
-- **Kill your darlings**: Remove any section, div, or element that doesn't add value—if it takes without giving, it goes
 
 ## Interaction Philosophy
 
 **Progressive discovery / iceberg interactions**: Surface scans in seconds; depth is opt-in and complete when chosen.
+
 - "Iceberg": peek on hover/tap, expand on intent
 - Motion is respectful—confirmations and focus shifts, not choreography
 - Each screen has one center of gravity
@@ -56,18 +57,21 @@ Architecture shapes taste—strong right angles for order, soft radii for welcom
 **Core Philosophy: Contrast, Readability, Compartmentalization, Structure**
 
 ### **Flat Sections** (Newspaper-like)
+
 - **Purpose**: Editorial clarity for text-heavy content
 - **Usage**: Section headers, lead-in text blocks, headlines, "About Me" content
 - **Function**: Structural dividers that frame content areas
 - **Style**: Clean backgrounds, high contrast typography, minimal visual effects
 
 ### **Glass Sections** (Apple-like)
+
 - **Purpose**: Interactive depth for tactile content
 - **Usage**: Portfolio cards, data examples, project highlights, role showcases
 - **Function**: Content modules that signal "click me" or "live content"
 - **Style**: Frosted backgrounds, subtle depth, contained within flat frameworks
 
 ### **Application Rules**
+
 1. **Functional contrast, not decorative** – Style changes serve content hierarchy
 2. **Clear boundaries** – Flat areas introduce themes, glass cards contain artifacts
 3. **Editorial handoff** – Flat section headers "deck" the glass modules below
@@ -75,6 +79,7 @@ Architecture shapes taste—strong right angles for order, soft radii for welcom
 5. **Consistent typography** – Hierarchy remains constant across both visual languages
 
 ### **Anti-Patterns to Avoid**
+
 - Overuse of glass (kills contrast and specialness)
 - Glass nested within glass (muddled layering)
 - Typography drift between styles (breaks brand consistency)
@@ -95,7 +100,7 @@ Investigative journalist turned developer - I design like an editor and build li
 ## Anti-Goals
 
 - Mystery-meat nav
-- Dark patterns  
+- Dark patterns
 - Decorative motion
 - Style without purpose
 - If it needs a tooltip to make sense, it's not done
@@ -116,6 +121,7 @@ Interfaces that feel obvious at a glance and rewarding when explored—calm, pur
 - **Component clarity**: Each component has a clear purpose and clean interface
 - **Consistent patterns**: Establish patterns early and follow them religiously
 - **NEVER add or delete whole sentences without explicit permission** – Do not make up content or remove existing content unless explicitly told to do so. Every sentence in the codebase was written intentionally.
+- **NEVER fabricate URLs, social media handles, or links** – Do not make up or guess at URLs, usernames, or social media handles. Only use links and handles that are explicitly provided or already exist in the codebase. If unsure, ask for clarification.
 
 Code should read like well-organized journalism—clear hierarchy, logical flow, no wasted words.
 
@@ -151,5 +157,44 @@ Code should read like well-organized journalism—clear hierarchy, logical flow,
 
 **Status:** Core resume system complete and production-ready. Cover letter component developed but currently hidden.
 
+### August 17, 2025 - Content Refinement & Consistency Updates
+
+**Today's major work:**
+
+- **Introduction & Journalism sections restored** – Reverted to original editorial newspaper-style formatting with proper section headers, typography hierarchy, and interactive achievement cards
+
+- **Content formatting standardization** – Unified formatting across Introduction, Journalism Experience, and Data Visualization sections:
+  - Consistent 2px left borders with hover animations
+  - Standardized text sizing (text-sm headers, text-xs descriptions)
+  - Uniform grid spacing and color transitions
+
+- **Selected Works centering** – Fixed indentation issue by centering the works-content container with max-width and auto margins
+
+- **Copy editing improvements**:
+  - Removed Oxford comma from freelance description
+  - Added hyperlinks to Indiana Daily Student and Wyoming Tribune Eagle
+  - Removed unnecessary italics from publication names
+  - Fixed "Both demand" sentence structure to "Each field demands"
+
+- **Desktop navigation enhancement** – Added "Let's build something together" CTA link to desktop view in the About Me section's second column
+
+- **Constants file creation** – Centralized all social links and personal information:
+  - Created `/app/constants/index.js` with PERSONAL_INFO and SOCIAL_LINKS
+  - Updated location to "Bloomington, IN"
+  - Fixed LinkedIn URL to correct profile: `https://www.linkedin.com/in/trevorabrown/`
+  - Removed fabricated links and unnecessary constants
+
+- **Link corrections**:
+  - Fixed Reflectyr project links (site: `https://reflectyr.vercel.app/`, GitHub: `https://github.com/tbrown034/ReflectYr`)
+
+- **Background color consistency** – Fixed My Journey section background from `bg-gray-50 dark:bg-gray-900/50` to `bg-white dark:bg-blue-950` to match site theme
+
+- **Documentation updates** – Added explicit instruction to CLAUDE.md: "NEVER fabricate URLs, social media handles, or links"
+
+**Technical approach:** Focus on consistency, accuracy, and maintainability. All changes preserve the editorial newspaper design philosophy while improving user experience and code organization.
+
+**Status:** UI consistency improvements complete, all links verified and corrected, constants centralized for easier maintenance.
+
 ---
-*Updated with core design philosophy, coding ethos, and development progress - reference this for all future work together.*
+
+_Updated with core design philosophy, coding ethos, and development progress - reference this for all future work together._

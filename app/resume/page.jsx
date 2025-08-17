@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import ResumeComponent from "../components/Resume/ResumeComponent";
-import SelectedWorksComponent from "../components/Resume/SelectedWorksComponent";
+import ResumeComponent from "./ResumeComponents/ResumeComponent";
+import SelectedWorksComponent from "./ResumeComponents/SelectedWorksComponent";
 
 export default function ResumePage() {
   return (
@@ -374,6 +374,8 @@ export default function ResumePage() {
           display: flex;
           flex-direction: column;
           gap: 8px;
+          max-width: 600px;
+          margin: 0 auto;
         }
 
         .work-section {
