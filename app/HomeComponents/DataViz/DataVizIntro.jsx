@@ -1,4 +1,10 @@
+import TechIcon from "./TechIcons";
+
 export default function Intro() {
+  const techStack = [
+    "Data Analysis", "Interactive Graphics", "Statistical Modeling", "Geospatial Mapping", "Dashboard Design", "Story Development"
+  ];
+
   return (
     <section className="min-h-[50vh] flex flex-col justify-center px-6 py-12 sm:px-8 lg:px-12 xl:px-16 bg-gray-50 dark:bg-gray-900/50">
       <div className="max-w-7xl mx-auto w-full animate-fadeInUp">
@@ -39,6 +45,28 @@ export default function Intro() {
               <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm group-hover:text-green-800 dark:group-hover:text-green-400 transition-colors duration-300">Approach</h4>
               <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">Data-driven narratives, accessibility</p>
             </div>
+          </div>
+
+          {/* Tech Stack section */}
+          <div className="mt-10 pt-8 border-t border-gray-200 dark:border-gray-700">
+            <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
+              Skills & Technologies
+            </h4>
+            
+            {/* Tech badges */}
+            <div className="flex flex-wrap gap-3 mb-8">
+              {techStack.map((tech) => (
+                <span 
+                  key={tech}
+                  className="px-4 py-2 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-400 rounded-lg text-sm font-medium"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            {/* Tech Icons Grid */}
+            <TechIcon />
           </div>
         </div>
       </div>

@@ -103,6 +103,9 @@ export default function Projects() {
                       src={project.image}
                       width={400}
                       height={500}
+                      sizes="(max-width: 768px) 66vw, (max-width: 1024px) 33vw, 25vw"
+                      loading="lazy"
+                      quality={85}
                     />
                   </div>
                 </div>

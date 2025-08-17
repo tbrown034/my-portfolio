@@ -1,16 +1,23 @@
+import TechIcon from "../Coding/TechIcons";
+
 export default function Introduction() {
+  const techStack = [
+    "LLM Integration", "Analytics", "Marketing", "Full-Stack Dev", "Data Visualization", "SEO/PPC"
+  ];
+
   return (
-    <section className="min-h-[50vh] flex flex-col justify-center px-6 py-12 sm:px-8 lg:px-12 xl:px-16 bg-white dark:bg-blue-950">
+    <section className="min-h-[50vh] flex flex-col justify-center px-6 py-12 sm:px-8 lg:px-12 xl:px-16 bg-gray-50 dark:bg-gray-900/50">
       <div className="max-w-7xl mx-auto w-full animate-fadeInUp">
-        {/* Section header */}
-        <div className="border-b border-gray-200 dark:border-gray-700 pb-2 mb-6">
-          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400">
-            My Journey
+        {/* Section header - indented */}
+        <div className="md:pl-12 lg:pl-20 md:pr-8 lg:pr-12">
+          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400 border-b border-gray-200 dark:border-gray-700 pb-2 mb-6">
+            My Coding Journey
           </h2>
         </div>
 
-        {/* Main content */}
-        <div className="space-y-6 max-w-4xl">
+        {/* Main content - indented */}
+        <div className="md:pl-12 lg:pl-20 md:pr-8 lg:pr-12">
+          <div className="space-y-6 max-w-4xl">
           <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100">
             From Copy to Code
           </h3>
@@ -44,6 +51,29 @@ export default function Introduction() {
               <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">Journalist's eye for detail and story</p>
             </div>
           </div>
+
+          {/* Tech Stack section */}
+          <div className="mt-10 pt-8 border-t border-gray-200 dark:border-gray-700">
+            <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
+              Skills & Technologies
+            </h4>
+            
+            {/* Tech badges */}
+            <div className="flex flex-wrap gap-3 mb-8">
+              {techStack.map((tech) => (
+                <span 
+                  key={tech}
+                  className="px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-400 rounded-lg text-sm font-medium"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            {/* Tech Icons Grid */}
+            <TechIcon />
+          </div>
+        </div>
         </div>
       </div>
     </section>

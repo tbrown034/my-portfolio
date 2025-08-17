@@ -7,7 +7,6 @@ export default function page() {
     <section className="">
       <Intro />
       <Projects />
-      <TechStack />
     </section>
   );
 }

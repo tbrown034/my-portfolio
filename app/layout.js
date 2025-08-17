@@ -20,6 +20,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://trevorthewebdeveloper.com"),
   title: "Trevor Brown: Copy + Code",
   description: "Investigative journalist turned developer. Building thoughtful digital experiences with editorial precision and technical expertise.",
   openGraph: {
@@ -29,10 +30,10 @@ export const metadata = {
     siteName: "Trevor Brown Portfolio",
     images: [
       {
-        url: "/images/trevorPhoto2.jpeg",
+        url: "/images/Aug17desktopview.png",
         width: 1200,
         height: 630,
-        alt: "Trevor Brown - Copy + Code",
+        alt: "Trevor Brown Portfolio - Copy + Code",
       },
     ],
     locale: "en_US",
@@ -42,7 +43,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Trevor Brown: Copy + Code",
     description: "Investigative journalist turned developer. Building thoughtful digital experiences with editorial precision and technical expertise.",
-    images: ["/images/trevorPhoto2.jpeg"],
+    images: ["/images/Aug17desktopview.png"],
   },
 };
 

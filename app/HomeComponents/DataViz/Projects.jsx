@@ -26,12 +26,21 @@ export default function Projects() {
             }`}
           >
             <Image
-              alt="alt"
+              alt={`${viz.program} data visualization`}
               className="border border-white shadow-lg rounded-t-2xl dark:border-gray-500"
               src={viz.image}
-            ></Image>
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              loading="lazy"
+              quality={85}
+            />
             <div className="px-6">
-              <Image alt="Oklahoma Watch logo" src={photo}></Image>
+              <Image 
+                alt="Oklahoma Watch logo" 
+                src={photo}
+                width={150}
+                height={50}
+                loading="lazy"
+              />
             </div>
             <div className="flex flex-wrap gap-1 px-2">
               <div className="p-1 px-2 text-sm bg-blue-800 rounded-lg text-blue-50 font-firaCode">

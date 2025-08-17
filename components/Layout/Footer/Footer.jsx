@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="mt-24">
@@ -16,36 +18,36 @@ export default function Footer() {
 
           {/* Right side - Navigation */}
           <nav className="flex flex-wrap gap-6 text-sm">
-            <a 
+            <Link 
               href="/#coding"
               className="font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200"
             >
               Development
-            </a>
-            <a 
+            </Link>
+            <Link 
               href="/#journalism"
               className="font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200"
             >
               Journalism
-            </a>
-            <a 
+            </Link>
+            <Link 
               href="/#dataviz"
               className="font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200"
             >
               Data Stories
-            </a>
-            <a 
+            </Link>
+            <Link 
               href="/#about"
               className="font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200"
             >
               Contact
-            </a>
-            <a 
+            </Link>
+            <Link 
               href="/resume"
               className="font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200"
             >
               Resume
-            </a>
+            </Link>
           </nav>
         </div>
 

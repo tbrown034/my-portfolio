@@ -195,6 +195,52 @@ Code should read like well-organized journalism—clear hierarchy, logical flow,
 
 **Status:** UI consistency improvements complete, all links verified and corrected, constants centralized for easier maintenance.
 
+### August 17, 2025 (Evening) - Next.js 15 Upgrade & Dependency Audit
+
+**Major upgrade to Next.js 15:**
+
+- **Next.js 15 image optimization improvements:**
+  - Added `sizes` prop to responsive images for better srcset generation
+  - Implemented lazy loading with `loading="lazy"` for non-priority images
+  - Set optimal quality (85) for balance between file size and visual quality
+  - Created `OptimizedImage` utility component with sensible defaults
+  - Installed `sharp` for advanced image processing (AVIF/WebP support)
+  - Enhanced `next.config.js` with:
+    - AVIF and WebP format support for modern browsers
+    - Optimized device sizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840]
+    - Image sizes for thumbnails: [16, 32, 48, 64, 96, 128, 256, 384]
+    - Minimum cache TTL (60 seconds) for better performance
+  - Fixed alt text for better accessibility across all Image components
+
+- **Dependency audit and cleanup:**
+  - **Removed 4 unused dependencies:**
+    - `@react-email/render` – Not used in any source files
+    - `devicons-react` – Replaced by react-icons
+    - `dotenv` – Next.js has built-in env support
+    - `react-card-flip` – Not used, was causing React 19 peer dependency conflicts
+  
+  - **Verified 19 active dependencies:**
+    - Core framework: `next`, `react`, `react-dom`
+    - Styling: `tailwindcss`, `@tailwindcss/postcss`, `autoprefixer`, `postcss`
+    - Icons: `@heroicons/react`, `react-icons`
+    - Features: `resend` (contact form), `html2canvas` & `html2pdf.js` (resume export)
+    - Analytics: `@vercel/analytics`
+    - Image optimization: `sharp`
+    - Development: `eslint`, `eslint-config-next`, `typescript`, `@types/*`, `@svgr/webpack`
+  
+  - **Resolved TypeScript setup:**
+    - Added `typescript` as dev dependency (v5.9.2)
+    - Maintained existing tsconfig.json for future TypeScript migration
+
+- **Performance improvements identified:**
+  - Large PNG images need conversion (some over 1MB)
+  - Recommendation: Convert to WebP format for 60-80% size reduction
+  - Next.js 15 now automatically serves WebP/AVIF to supported browsers
+
+**Technical approach:** Systematic dependency analysis using code search, removal of unused packages, optimization of image loading strategy for Next.js 15's enhanced capabilities.
+
+**Status:** Next.js 15 upgrade complete, unused dependencies removed, image optimization enhanced. Project runs cleanly with React 19.
+
 ---
 
 _Updated with core design philosophy, coding ethos, and development progress - reference this for all future work together._

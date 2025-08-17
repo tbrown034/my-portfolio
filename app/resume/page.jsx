@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import ResumeComponent from "./ResumeComponents/ResumeComponent";
-import SelectedWorksComponent from "./ResumeComponents/SelectedWorksComponent";
+import ResumeComponentResponsive from "./ResumeComponents/ResumeComponentResponsive";
+import SelectedWorksResponsive from "./ResumeComponents/SelectedWorksResponsive";
 
 export default function ResumePage() {
   return (
@@ -25,10 +25,10 @@ export default function ResumePage() {
       </div>
 
       {/* Resume Component */}
-      <ResumeComponent showGuides={false} />
+      <ResumeComponentResponsive showGuides={false} />
 
       {/* Selected Works Component */}
-      <SelectedWorksComponent showGuides={false} />
+      <SelectedWorksResponsive showGuides={false} />
 
       {/* Editorial-inspired Resume Styles */}
       <style jsx global>{`
@@ -289,44 +289,6 @@ export default function ResumePage() {
           color: #374151;
           margin-top: 3px;
           font-style: italic;
-        }
-
-        /* CTA Section */
-        .cta-section {
-          background: #f3f4f6;
-          padding: 12px;
-          border-radius: 4px;
-          margin-top: 8px;
-        }
-
-        .cta-text {
-          font-size: 9.5pt;
-          color: #374151;
-          line-height: 1.45;
-          margin-bottom: 8px;
-          text-align: justify;
-        }
-
-        .cta-action {
-          text-align: center;
-        }
-
-        .cta-link {
-          font-size: 10pt;
-          font-weight: 700;
-          color: #1e40af;
-          text-decoration: none;
-          display: inline-block;
-          padding: 6px 12px;
-          background: #ffffff;
-          border: 1px solid #1e40af;
-          border-radius: 3px;
-          transition: all 0.2s;
-        }
-
-        .cta-link:hover {
-          background: #1e40af;
-          color: #ffffff;
         }
 
         /* Selected Works Specific Styles */
