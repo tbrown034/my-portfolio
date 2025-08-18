@@ -1,6 +1,6 @@
 import "./globals.css";
-import Footer from "@/components/layout/footer/Footer";
-import Header from "@/components/layout/header/Header";
+import Footer from "@/components/Layout/Footer/Footer";
+import Header from "@/components/Layout/Header/Header";
 import { DarkModeProvider } from "@/components/providers/DarkModeContext";
 import { Roboto_Slab, Montserrat } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
