@@ -2,7 +2,7 @@ import TechIcon from "./TechIcons";
 
 export default function Intro() {
   const techStack = [
-    "Data Analysis", "Interactive Graphics", "Statistical Modeling", "Geospatial Mapping", "Dashboard Design", "Story Development"
+    "Data Analysis", "Interactive Graphics", "Dashboard Design", "Story Development"
   ];
 
   return (

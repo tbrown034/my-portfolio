@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { clips } from "@content/journalismClips.js";
+import { clips } from "@content/journalismProjects.js";
 
 export default function Clips() {
   const [displayCount, setDisplayCount] = useState(4);

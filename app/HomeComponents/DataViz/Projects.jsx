@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import photo from "../../../public/images/okwatch.png";
-import { graphics } from "@content/datavizProjects.js";
+import { graphics } from "@content/dataProjects.js";
 // Icon defined inline if needed
 
 export default function Projects() {

@@ -2,7 +2,6 @@ import {
   SiJavascript,
   SiTableau,
   SiD3Dotjs,
-  SiR,
   SiChartdotjs,
   SiMicrosoftexcel,
   SiPython,
@@ -27,12 +26,6 @@ export default function TechIcon() {
       Icon: SiD3Dotjs,
       description:
         "Powerful JavaScript library for creating custom, interactive data visualizations.",
-    },
-    {
-      name: "R",
-      Icon: SiR,
-      description:
-        "Statistical computing language for data analysis and visualization.",
     },
     {
       name: "Chart.js",

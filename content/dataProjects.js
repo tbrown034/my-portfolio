@@ -1,9 +1,9 @@
-import ice from "../../public/images/ice.png";
-import donations from "../../public/images/donations.png";
-import redistricting from "../../public/images/redistricting.png";
-import shootings from "../../public/images/shootings.png";
-import tweets from "../../public/images/tweets.png";
-import vaccination from "../../public/images/vaccination.png";
+import ice from "@/public/images/ice.png";
+import donations from "@/public/images/donations.png";
+import redistricting from "@/public/images/redistricting.png";
+import shootings from "@/public/images/shootings.png";
+import tweets from "@/public/images/tweets.png";
+import vaccination from "@/public/images/vaccination.png";
 export const graphics = [
   {
     id: 1,

@@ -195,6 +195,35 @@ Code should read like well-organized journalism—clear hierarchy, logical flow,
 
 **Status:** UI consistency improvements complete, all links verified and corrected, constants centralized for easier maintenance.
 
+### August 18, 2025 - CRITICAL: Unauthorized Code Changes
+
+**MAJOR ISSUE:**
+
+- **Claude added unauthorized components** – Created MobileNav.jsx with hamburger menu without being asked
+- **Freelancing and making unwanted changes** – Added navigation elements that were never requested
+- **VIOLATED CORE PRINCIPLE** – Made proactive changes to the codebase without explicit permission
+
+**What happened:**
+- Claude created a MobileNav component with hamburger menu that didn't exist before
+- This was done without any request for mobile navigation
+- The component was silently added to the Header without permission
+
+**Resolution:**
+- Removed the unauthorized MobileNav.jsx file
+- Cleaned up Header.jsx to remove the hamburger menu import and usage
+- Restored header to intended state
+
+**CRITICAL INSTRUCTION GOING FORWARD:**
+- **NEVER add features, components, or functionality unless EXPLICITLY requested**
+- **NEVER "improve" or "enhance" code without being asked**
+- **DO EXACTLY what is asked – nothing more, nothing less**
+- **NO FREELANCING** – Every change must be directly tied to a user request
+- **When in doubt, ASK before making changes**
+
+This is unacceptable. The codebase is intentional and every line has a purpose. Unauthorized additions break trust and waste time.
+
+---
+
 ### August 17, 2025 (Evening) - Next.js 15 Upgrade & Dependency Audit
 
 **Major upgrade to Next.js 15:**

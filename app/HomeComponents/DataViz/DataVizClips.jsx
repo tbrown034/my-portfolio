@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { dataStories } from "@content/data-stories.js";
+import { graphics } from "@content/dataProjects.js";
 
 export default function Clips() {
   const [displayCount, setDisplayCount] = useState(4);
@@ -18,8 +18,8 @@ export default function Clips() {
         </div>
 
         {/* Visualizations grid - indented */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 md:pl-12 lg:pl-20 md:pr-8 lg:pr-12">
-        {dataStories.slice(0, displayCount).map((story) => (
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 lg:pl-20 lg:pr-12">
+        {graphics.slice(0, displayCount).map((story) => (
           <div key={story.id} className="group relative">
             {/* Card content - simplified */}
             <div className="relative bg-white dark:bg-gray-800 rounded-lg p-5 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-green-300 dark:hover:border-green-700">
@@ -27,25 +27,25 @@ export default function Clips() {
                 <div className="space-y-2">
                   <div className="flex items-center gap-2 text-xs">
                     <span className="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-400 rounded font-medium">
-                      {story.type}
+                      {story.program || "Data Viz"}
                     </span>
-                    <span className="text-gray-500 dark:text-gray-400">{story.year}</span>
+                    <span className="text-gray-500 dark:text-gray-400">{new Date(story.date).getFullYear()}</span>
                     <span className="text-gray-500 dark:text-gray-400">•</span>
                     <span className="text-gray-500 dark:text-gray-400">{story.publication}</span>
                   </div>
                   
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-green-800 dark:group-hover:text-green-400 transition-colors duration-200">
-                    {story.title}
+                    {story.headline}
                   </h3>
                   
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
-                    {story.dek}
+                    {story.summary || story.text}
                   </p>
                 </div>
 
                 {/* Tools */}
                 <div className="flex flex-wrap gap-2">
-                  {story.tools.map((tool, toolIndex) => (
+                  {[story.program].map((tool, toolIndex) => (
                     <span
                       key={toolIndex}
                       className="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded font-medium"
@@ -58,7 +58,7 @@ export default function Clips() {
                 {/* Visualization preview */}
                 <div className="w-2/3 border border-gray-200 dark:border-gray-600 rounded overflow-hidden shadow-sm bg-white dark:bg-gray-800">
                   <Image
-                    alt={story.alt}
+                    alt={story.headline || "Data visualization"}
                     className="w-full h-auto object-center group-hover:scale-105 transition-transform duration-300"
                     src={story.image}
                     width={300}
@@ -73,7 +73,7 @@ export default function Clips() {
                   
                   <Link
                     className="inline-flex items-center gap-1 text-sm text-gray-600 dark:text-gray-400 hover:text-green-800 dark:hover:text-green-400 transition-colors duration-200"
-                    href={story.articleUrl}
+                    href={story.siteLink}
                     target="_blank"
                   >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -89,7 +89,7 @@ export default function Clips() {
         </div>
 
         {/* Show more/fewer buttons */}
-        {displayCount < dataStories.length && (
+        {displayCount < graphics.length && (
           <div className="flex justify-center mt-8">
           <button
             className="inline-flex items-center justify-center px-6 py-3 font-bold text-white bg-blue-800 border-2 border-blue-800 rounded-2xl dark:text-blue-950 dark:bg-blue-50 dark:border-blue-50 hover:bg-blue-600 hover:border-blue-600 active:bg-blue-950 focus:bg-blue-500 dark:hover:bg-blue-200 dark:hover:border-blue-200 focus:outline-none focus:ring focus:ring-blue-400 cursor-pointer"

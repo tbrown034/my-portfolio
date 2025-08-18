@@ -12,29 +12,125 @@ import {
 import { SOCIAL_LINKS, PERSONAL_INFO } from "@/lib/constants";
 
 export default function IAm({ showDesktopLayout }) {
+  // Medium layout for tablets (simplified single column)
+  if (showDesktopLayout === "medium") {
+    return (
+      <div className="space-y-6">
+        {/* Main content in single column */}
+        <div className="space-y-4">
+          <h3 className="text-3xl font-bold text-gray-900 dark:text-gray-100 leading-tight">
+            I spent 15+ years chasing public records and holding power accountable.
+          </h3>
+          <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+            Now I build{" "}
+            <Link href="#journey" className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200">
+              interactive tools
+            </Link>{" "}
+            that transform complex data into clear insights. I turn government databases, public records, and raw information into stories people can actually understand and use.
+          </p>
+          <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+            My work bridges{" "}
+            <Link href="#journalism" className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200">
+              investigative reporting
+            </Link>{" "}
+            and{" "}
+            <Link href="#coding" className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200">
+              modern web development
+            </Link> – 
+            building responsive sites,{" "}
+            <Link href="#graphics" className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200">
+              data visualizations
+            </Link>, 
+            and applications that turn raw data into understanding.
+            Each field demands deep research, precision, and an instinct for discovery.
+          </p>
+          <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+            Whether I'm digging into public records or architecting a React application, 
+            my guiding principle is the same: make truth and information accessible, 
+            and make the experience seamless.
+          </p>
+        </div>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-row gap-3">
+          <Link 
+            href="/resume" 
+            className="inline-flex items-center justify-center px-6 py-3 font-semibold text-white bg-blue-800 dark:bg-blue-600 rounded-lg hover:bg-blue-900 dark:hover:bg-blue-700 transition-colors duration-200"
+          >
+            View Resume
+          </Link>
+          <a 
+            href="#about"
+            className="inline-flex items-center justify-center px-6 py-3 font-semibold text-gray-900 dark:text-gray-100 border-2 border-gray-900 dark:border-gray-100 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
+          >
+            Contact
+          </a>
+        </div>
+
+        {/* Three section cards */}
+        <div className="grid grid-cols-3 gap-4">
+          <Link href="#journalism" className="group p-4 border-b-2 border-gray-200 dark:border-gray-700 hover:border-blue-800 dark:hover:border-blue-300 transition-colors">
+            <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">Investigations</h3>
+            <p className="text-sm text-gray-500 dark:text-gray-500">Public records, data analysis</p>
+          </Link>
+          
+          <Link href="#coding" className="group p-4 border-b-2 border-gray-200 dark:border-gray-700 hover:border-blue-800 dark:hover:border-blue-300 transition-colors">
+            <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">Development</h3>
+            <p className="text-sm text-gray-500 dark:text-gray-500">Next.js, React, TypeScript</p>
+          </Link>
+          
+          <Link href="/resume" className="group p-4 border-b-2 border-gray-200 dark:border-gray-700 hover:border-blue-800 dark:hover:border-blue-300 transition-colors">
+            <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">Resume</h3>
+            <p className="text-sm text-gray-500 dark:text-gray-500">CV + work samples</p>
+          </Link>
+        </div>
+
+        {/* Contact links */}
+        <div className="flex gap-6">
+          <a href={`mailto:${PERSONAL_INFO.email}`} className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            <EmailIcon className="w-5 h-5" />
+            <span className="text-sm">Email</span>
+          </a>
+          <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            <GitHubIcon className="w-5 h-5" />
+            <span className="text-sm">GitHub</span>
+          </a>
+          <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            <LinkedInIcon className="w-5 h-5" />
+            <span className="text-sm">LinkedIn</span>
+          </a>
+          <a href={SOCIAL_LINKS.bluesky} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            <BlueskyIcon className="w-5 h-5" />
+            <span className="text-sm">Bluesky</span>
+          </a>
+        </div>
+      </div>
+    );
+  }
+
   // Desktop layout for large screens (2 columns)
   if (showDesktopLayout === "large") {
     return (
       <div className="space-y-6">
-        {/* Main content in 2 columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Main content in 2 columns - aligned with space-between */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
           {/* Column 1: Subhead and Lede */}
-          <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 leading-tight">
+          <div className="flex flex-col justify-between h-full">
+            <h3 className="text-3xl font-bold text-gray-900 dark:text-gray-100 leading-tight">
               I spent 15+ years chasing public records and holding power accountable.
             </h3>
-            <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+            <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mt-4">
               Now I build{" "}
               <Link href="#journey" className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200">
                 interactive tools
               </Link>{" "}
-              that transform complex data into clear insights – turning government databases, public records, and raw information into stories people can actually understand and use.
+              that transform complex data into clear insights. I turn government databases, public records, and raw information into stories people can actually understand and use.
             </p>
           </div>
 
           {/* Column 2: Nutgraph and body */}
-          <div className="space-y-4">
-            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+          <div className="flex flex-col justify-between h-full">
+            <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
               My work bridges{" "}
               <Link href="#journalism" className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200">
                 investigative reporting
@@ -153,7 +249,7 @@ export default function IAm({ showDesktopLayout }) {
             <Link href="#journey" className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200">
               interactive tools
             </Link>{" "}
-            that transform complex data into clear insights – turning government databases, public records, and raw information into stories people can actually understand and use.
+            that transform complex data into clear insights. I turn government databases, public records, and raw information into stories people can actually understand and use.
           </p>
           
           {/* Nutgraph */}
