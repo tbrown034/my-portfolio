@@ -8,8 +8,8 @@ import {
   GitHubIcon,
   LinkedInIcon,
   BlueskyIcon,
-} from "@/components/Icons/SocialIcons";
-import { SOCIAL_LINKS, PERSONAL_INFO } from "@/app/constants";
+} from "@/components/icons/SocialIcons";
+import { SOCIAL_LINKS, PERSONAL_INFO } from "@/lib/constants";
 
 export default function IAm({ showDesktopLayout }) {
   // Desktop layout for large screens (2 columns)

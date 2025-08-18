@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import SimpleContactForm from "../Contact/ContactForm";
-import { SOCIAL_LINKS, PERSONAL_INFO } from "@/app/constants";
+import { SOCIAL_LINKS, PERSONAL_INFO } from "@/lib/constants";
 
 export default function Contact() {
   const [copiedItem, setCopiedItem] = useState("");
@@ -30,13 +30,13 @@ export default function Contact() {
           <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
             <p>
               I'm available for freelance development projects, data
-              visualization work and consulting on digital strategy. Whether
-              you need a website built, data analyzed, or stories told through
+              visualization work and consulting on digital strategy. Whether you
+              need a website built, data analyzed, or stories told through
               interactive graphics, I'd love to help.
             </p>
 
             <p>
-              With my background bridging journalism and technology, I bring a
+              Withd my background bridging journalism and technology, I bring a
               unique perspective to projects that need both technical execution
               and clear communication.
             </p>
@@ -120,9 +120,7 @@ export default function Contact() {
                   </div>
                 </a>
                 <button
-                  onClick={() =>
-                    copyToClipboard(PERSONAL_INFO.email, "email")
-                  }
+                  onClick={() => copyToClipboard(PERSONAL_INFO.email, "email")}
                   className="p-2 text-gray-500 hover:text-blue-800 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
                   title="Copy email"
                 >
@@ -184,10 +182,7 @@ export default function Contact() {
                 </a>
                 <button
                   onClick={() =>
-                    copyToClipboard(
-                      SOCIAL_LINKS.linkedin,
-                      "linkedin"
-                    )
+                    copyToClipboard(SOCIAL_LINKS.linkedin, "linkedin")
                   }
                   className="p-2 text-gray-500 hover:text-blue-800 dark:text-gray-400 dark:hover:text-blue-400 transition-colors"
                   title="Copy LinkedIn URL"
