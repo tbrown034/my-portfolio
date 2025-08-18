@@ -141,3 +141,13 @@
 @utility border-3 {
   border-width: 3px;
 }
+
+@layer components {
+  .fullSubsection {
+    @apply bg-gray-50 dark:bg-gray-900/50 py-16 sm:py-20;
+  }
+  
+  .subSection {
+    @apply bg-white dark:bg-blue-950 py-16 sm:py-20;
+  }
+}

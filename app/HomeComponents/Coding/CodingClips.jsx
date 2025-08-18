@@ -9,7 +9,7 @@ export default function Projects() {
   const [displayCount, setDisplayCount] = useState(4);
 
   return (
-    <section className="w-full py-12">
+    <section className="w-full fullSubsection">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* Section header */}
         <div className="border-b border-gray-200 dark:border-gray-700 pb-2 mb-8">
@@ -18,8 +18,8 @@ export default function Projects() {
           </h2>
         </div>
 
-        {/* Projects grid - indented */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 md:pl-12 lg:pl-20 md:pr-8 lg:pr-12">
+        {/* Projects grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
         {webProjects.slice(0, displayCount).map((project, index) => (
           <div key={index} className="group relative">
             {/* Card content - simplified */}

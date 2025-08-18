@@ -8,7 +8,7 @@ export default function Clips() {
   const [displayCount, setDisplayCount] = useState(4);
 
   return (
-    <section className="w-full py-12">
+    <section className="w-full fullSubsection">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* Section header */}
         <div className="border-b border-gray-200 dark:border-gray-700 pb-2 mb-8">
@@ -17,8 +17,8 @@ export default function Clips() {
           </h2>
         </div>
 
-        {/* Visualizations grid - indented */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 lg:pl-20 lg:pr-12">
+        {/* Visualizations grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
         {graphics.slice(0, displayCount).map((story) => (
           <div key={story.id} className="group relative">
             {/* Card content - simplified */}

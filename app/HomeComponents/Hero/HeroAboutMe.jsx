@@ -26,7 +26,7 @@ export default function IAm({ showDesktopLayout }) {
             <Link href="#journey" className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200">
               interactive tools
             </Link>{" "}
-            that transform complex data into clear insights. I turn government databases, public records, and raw information into stories people can actually understand and use.
+            that transform complex data into clear insights. I turn government databases, public records and raw information into stories people can actually understand and use.
           </p>
           <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
             My work bridges{" "}
@@ -52,7 +52,7 @@ export default function IAm({ showDesktopLayout }) {
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-row gap-3">
+        <div className="flex flex-row gap-3 mt-4">
           <Link 
             href="/resume" 
             className="inline-flex items-center justify-center px-6 py-3 font-semibold text-white bg-blue-800 dark:bg-blue-600 rounded-lg hover:bg-blue-900 dark:hover:bg-blue-700 transition-colors duration-200"
@@ -124,7 +124,7 @@ export default function IAm({ showDesktopLayout }) {
               <Link href="#journey" className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200">
                 interactive tools
               </Link>{" "}
-              that transform complex data into clear insights. I turn government databases, public records, and raw information into stories people can actually understand and use.
+              that transform complex data into clear insights. I turn government databases, public records and raw information into stories people can actually understand and use.
             </p>
           </div>
 
@@ -142,12 +142,12 @@ export default function IAm({ showDesktopLayout }) {
               building responsive sites,{" "}
               <Link href="#graphics" className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200">
                 data visualizations
-              </Link>, 
+              </Link>{" "}
               and applications that turn raw data into understanding.
-              Each field demands deep research, precision, and an instinct for discovery.
+              Each field demands deep research, precision and an instinct for discovery.
             </p>
             
-            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mt-4">
               Whether I'm digging into public records or architecting a React application, 
               my guiding principle is the same: make truth and information accessible, 
               and make the experience seamless.
@@ -171,7 +171,7 @@ export default function IAm({ showDesktopLayout }) {
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-row gap-3">
+        <div className="flex flex-row gap-3 mt-4">
           <Link 
             href="/resume" 
             className="inline-flex items-center justify-center px-6 py-3 font-semibold text-white bg-blue-800 dark:bg-blue-600 rounded-lg hover:bg-blue-900 dark:hover:bg-blue-700 transition-colors duration-200"
@@ -249,7 +249,7 @@ export default function IAm({ showDesktopLayout }) {
             <Link href="#journey" className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200">
               interactive tools
             </Link>{" "}
-            that transform complex data into clear insights. I turn government databases, public records, and raw information into stories people can actually understand and use.
+            that transform complex data into clear insights. I turn government databases, public records and raw information into stories people can actually understand and use.
           </p>
           
           {/* Nutgraph */}
@@ -266,9 +266,9 @@ export default function IAm({ showDesktopLayout }) {
               building responsive sites,{" "}
               <Link href="#graphics" className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200">
                 data visualizations
-              </Link>, 
+              </Link>{" "}
               and applications that turn raw data into understanding.
-              Each field demands deep research, precision, and an instinct for discovery.
+              Each field demands deep research, precision and an instinct for discovery.
             </p>
             
             {/* Body */}

@@ -6,7 +6,7 @@ import Mug from "./Mug.jsx";
 
 export default function Hero() {
   return (
-    <main className="flex flex-col px-6 pb-0 pt-4 sm:px-8 lg:px-12 xl:px-16">
+    <main className="flex flex-col px-6 pb-0 pt-4 sm:px-8 lg:px-12 xl:px-16 fullSubsection">
       {/* Vertical layout for mobile only (below sm breakpoint) */}
       <section className="flex flex-col gap-4 sm:hidden max-w-3xl mx-auto pt-8">
         <HeroHeader />

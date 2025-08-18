@@ -12,7 +12,7 @@ export default function Contact() {
     setTimeout(() => setCopiedItem(""), 2000);
   };
   return (
-    <section className="w-full bg-gray-50 dark:bg-gray-900/50 min-h-[50vh] flex flex-col justify-center px-6 py-12 sm:px-8 lg:px-12 xl:px-16">
+    <section className="w-full subSection min-h-[50vh] flex flex-col justify-center px-6 sm:px-8 lg:px-12 xl:px-16">
       <div className="max-w-7xl mx-auto w-full animate-fadeInUp">
         {/* Section header */}
         <div className="border-b border-gray-200 dark:border-gray-700 pb-2 mb-6">

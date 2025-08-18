@@ -6,18 +6,17 @@ export default function Introduction() {
   ];
 
   return (
-    <section className="min-h-[50vh] flex flex-col justify-center px-6 py-12 sm:px-8 lg:px-12 xl:px-16 bg-gray-50 dark:bg-gray-900/50">
+    <section className="min-h-[50vh] flex flex-col justify-center px-6 sm:px-8 lg:px-12 xl:px-16 subSection">
       <div className="max-w-7xl mx-auto w-full animate-fadeInUp">
-        {/* Section header - indented */}
-        <div className="md:pl-12 lg:pl-20 md:pr-8 lg:pr-12">
-          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400 border-b border-gray-200 dark:border-gray-700 pb-2 mb-6">
+        {/* Section header - indented on larger screens */}
+        <div className="md:pl-12 lg:pl-16 mb-6">
+          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400 border-b border-gray-200 dark:border-gray-700 pb-2 inline-block">
             My Coding Journey
           </h2>
         </div>
 
-        {/* Main content - indented */}
-        <div className="md:pl-12 lg:pl-20 md:pr-8 lg:pr-12">
-          <div className="space-y-6 max-w-4xl">
+        {/* Main content - indented on larger screens */}
+        <div className="md:pl-12 lg:pl-16 space-y-6 max-w-4xl">
           <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100">
             From Copy to Code
           </h3>
@@ -73,7 +72,6 @@ export default function Introduction() {
             {/* Tech Icons Grid */}
             <TechIcon />
           </div>
-        </div>
         </div>
       </div>
     </section>
