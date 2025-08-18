@@ -8,14 +8,14 @@ import { Analytics } from "@vercel/analytics/react";
 const roboto_slab = Roboto_Slab({
   subsets: ["latin"],
   display: "swap",
-  weight: "400",
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-roboto-slab",
 });
 
 const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
-  weight: "700",
+  weight: ["400", "500", "600", "700", "800"],
   variable: "--font-montserrat",
 });
 

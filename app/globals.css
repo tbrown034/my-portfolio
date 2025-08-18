@@ -1,6 +1,19 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Font rendering optimizations for crisp text */
+@layer base {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  body {
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+}
+
 @theme {
   --font-montserrat: var(--font-montserrat);
   --font-roboto: var(--font-roboto);
