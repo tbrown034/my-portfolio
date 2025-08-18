@@ -23,11 +23,11 @@ export default function Intro() {
         
         <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
           <p>
-            Data visualization bridges my journalism and development skills. I create charts, maps, and interactive graphics that make complex information accessible and compelling for readers.
+            I've always thought of myself as a data-driven reporter through the years – whether teaching myself the cooler parts of Excel, or learning Datawrapper, Tableau, and other visualization tools. Data storytelling has been a constant thread in my journalism career.
           </p>
           
           <p>
-            Using tools like D3.js, Python, and Observable, I transform datasets into stories that reveal patterns, trends, and insights that might otherwise remain hidden in spreadsheets.
+            Now I use tools like D3.js, Python, and Observable to transform datasets into stories that reveal patterns, trends, and insights that might otherwise remain hidden in spreadsheets. Every chart and graphic is another way to hold power accountable.
           </p>
         </div>
 
