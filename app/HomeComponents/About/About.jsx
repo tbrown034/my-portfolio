@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import SimpleContactForm from "../Contact/ContactForm";
+import SimpleContactForm from "../contact/ContactForm";
 import { SOCIAL_LINKS, PERSONAL_INFO } from "@/lib/constants";
 
 export default function Contact() {

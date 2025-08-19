@@ -23,7 +23,7 @@ export default function IAm({ showDesktopLayout }) {
           </h3>
           <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
             Now I build{" "}
-            <Link href="#journey" className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200">
+            <Link href="#coding" className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200">
               interactive tools
             </Link>{" "}
             that transform complex data into clear insights. I turn government databases, public records and raw information into stories people can actually understand and use.
@@ -140,7 +140,7 @@ export default function IAm({ showDesktopLayout }) {
                 modern web development
               </Link> – 
               building responsive sites,{" "}
-              <Link href="#graphics" className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200">
+              <Link href="#dataviz" className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200">
                 data visualizations
               </Link>{" "}
               and applications that turn raw data into understanding.
@@ -246,7 +246,7 @@ export default function IAm({ showDesktopLayout }) {
           {/* Lede */}
           <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
             Now I build{" "}
-            <Link href="#journey" className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200">
+            <Link href="#coding" className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200">
               interactive tools
             </Link>{" "}
             that transform complex data into clear insights. I turn government databases, public records and raw information into stories people can actually understand and use.
@@ -264,7 +264,7 @@ export default function IAm({ showDesktopLayout }) {
                 modern web development
               </Link> – 
               building responsive sites,{" "}
-              <Link href="#graphics" className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200">
+              <Link href="#dataviz" className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200">
                 data visualizations
               </Link>{" "}
               and applications that turn raw data into understanding.

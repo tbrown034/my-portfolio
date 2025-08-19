@@ -6,6 +6,7 @@ export default function page() {
   return (
     <section className="">
       <Intro />
+      <TechStack />
       <Projects />
     </section>
   );

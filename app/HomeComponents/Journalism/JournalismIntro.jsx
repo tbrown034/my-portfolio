@@ -1,4 +1,9 @@
 export default function JournalismIntro() {
+  const skills = [
+    "Investigative Reporting", "Breaking News", "Data Journalism", "Public Records", "AP Style", "Source Development"
+  ];
+  
+
   return (
     <section className="min-h-[50vh] flex flex-col justify-center px-6 sm:px-8 lg:px-12 xl:px-16 subSection">
       <div className="max-w-7xl mx-auto w-full animate-fadeInUp">
@@ -23,6 +28,26 @@ export default function JournalismIntro() {
             <p>
               Over nearly two decades, I won state and national awards for investigative reporting, covered everything from city council meetings to statewide campaigns, and specialized in stories that led to policy changes and government reform.
             </p>
+          </div>
+
+          {/* Skills section */}
+          <div className="mt-10 pt-8 border-t border-gray-200 dark:border-gray-700">
+            {/* Skills Section */}
+            <div>
+              <h4 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400 mb-4">
+                Core Skills
+              </h4>
+              <div className="flex flex-wrap gap-2">
+                {skills.map((skill) => (
+                  <span 
+                    key={skill}
+                    className="px-3 py-1.5 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-400 rounded-lg text-sm font-medium"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Key achievements */}

@@ -1,11 +1,11 @@
-import Hero from "./HomeComponents/Hero/Hero.jsx";
-import Introduction from "./HomeComponents/Introduction/Introduction.jsx";
-import Code from "./HomeComponents/Coding/Coding.jsx";
-import DataVizIntro from "./HomeComponents/DataViz/DataVizIntro.jsx";
-import DataVizClips from "./HomeComponents/DataViz/DataVizClips.jsx";
-import JournalismIntro from "./HomeComponents/Journalism/JournalismIntro.jsx";
-import JournalismClips from "./HomeComponents/Journalism/JournalismClips.jsx";
-import About from "./HomeComponents/About/About.jsx";
+import Hero from "./homecomponents/hero/Hero.jsx";
+import Introduction from "./homecomponents/introduction/Introduction.jsx";
+import Code from "./homecomponents/coding/Coding.jsx";
+import DataVizIntro from "./homecomponents/dataviz/DataVizIntro.jsx";
+import DataVizClips from "./homecomponents/dataviz/DataVizClips.jsx";
+import JournalismIntro from "./homecomponents/journalism/JournalismIntro.jsx";
+import JournalismClips from "./homecomponents/journalism/JournalismClips.jsx";
+import About from "./homecomponents/about/About.jsx";
 
 export default function Page() {
   return (

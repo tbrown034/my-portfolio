@@ -1,9 +1,8 @@
-import TechIcon from "./TechIcons";
-
 export default function Intro() {
-  const techStack = [
-    "Data Analysis", "Interactive Graphics", "Dashboard Design", "Story Development"
+  const skills = [
+    "Data Analysis", "Interactive Graphics", "Dashboard Design", "Statistical Analysis", "Data Storytelling", "Chart Optimization"
   ];
+  
 
   return (
     <section className="min-h-[50vh] flex flex-col justify-center px-6 sm:px-8 lg:px-12 xl:px-16 subSection">
@@ -47,26 +46,24 @@ export default function Intro() {
             </div>
           </div>
 
-          {/* Tech Stack section */}
+          {/* Skills section */}
           <div className="mt-10 pt-8 border-t border-gray-200 dark:border-gray-700">
-            <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
-              Skills & Technologies
-            </h4>
-            
-            {/* Tech badges */}
-            <div className="flex flex-wrap gap-3 mb-8">
-              {techStack.map((tech) => (
-                <span 
-                  key={tech}
-                  className="px-4 py-2 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-400 rounded-lg text-sm font-medium"
-                >
-                  {tech}
-                </span>
-              ))}
+            {/* Skills Section */}
+            <div>
+              <h4 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400 mb-4">
+                Core Skills
+              </h4>
+              <div className="flex flex-wrap gap-2">
+                {skills.map((skill) => (
+                  <span 
+                    key={skill}
+                    className="px-3 py-1.5 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-400 rounded-lg text-sm font-medium"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
-
-            {/* Tech Icons Grid */}
-            <TechIcon />
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ import {
   SiPostgresql,
   SiTailwindcss,
 } from "react-icons/si";
+
 export default function TechIcon() {
   const techs = [
     {
@@ -47,19 +48,19 @@ export default function TechIcon() {
   ];
 
   return (
-    <section className="grid grid-cols-3 md:grid-cols-6 gap-4">
+    <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
       {techs.map((tech) => (
         <div
           key={tech.name}
-          className="group flex flex-col items-center justify-center p-4 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border border-gray-200/50 dark:border-gray-700/50 rounded-xl hover:shadow-lg transition-all duration-200 hover:scale-105 cursor-default"
+          className="group flex flex-col items-center justify-center p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-md transition-all duration-200"
           title={tech.description}
         >
-          <tech.Icon className="w-8 h-8 mb-2 text-gray-700 dark:text-gray-300 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors duration-200" />
-          <span className="text-xs font-medium text-center text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-gray-100 transition-colors duration-200">
+          <tech.Icon className="w-8 h-8 mb-2 text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200" />
+          <span className="text-xs font-medium text-center text-gray-600 dark:text-gray-400">
             {tech.name}
           </span>
         </div>
       ))}
-    </section>
+    </div>
   );
 }
