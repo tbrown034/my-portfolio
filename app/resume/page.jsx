@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import ResumeComponentResponsive from "./resumecomponents/ResumeComponentResponsive";
-import SelectedWorksResponsive from "./resumecomponents/SelectedWorksResponsive";
+import ResumeComponentResponsive from "./resumecomponents/ResumeComponentResponsive.jsx";
+import SelectedWorksResponsive from "./resumecomponents/SelectedWorksResponsive.jsx";
 
 export default function ResumePage() {
   return (
