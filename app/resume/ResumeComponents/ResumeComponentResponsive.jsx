@@ -117,15 +117,15 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
   };
 
   return (
-    <div className="mx-auto max-w-4xl px-4 sm:px-6 py-8 sm:py-12 flex flex-col items-center">
-      {/* Responsive resume container - fixed aspect ratio for print */}
+    <div className="resume-container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 flex flex-col items-center">
+      {/* Fixed letter-size resume container - 8.5 × 11 inches */}
       <div
         ref={pageRef}
-        className="w-full max-w-[850px] bg-white shadow-xl print:shadow-none"
-        style={{ aspectRatio: '8.5/11' }}
+        className="bg-white shadow-xl print:shadow-none"
+        style={{ width: '8.5in', height: '11in' }}
       >
         {/* Resume content with responsive padding */}
-        <div className="p-4 sm:p-6 md:p-8 h-full overflow-auto print:overflow-visible">
+        <div className="p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 h-full overflow-auto print:overflow-visible">
           {/* Header - Editorial masthead style */}
           <header className="text-center mb-3 pb-2 border-b-2 border-gray-900">
             <h1 className="text-xl sm:text-2xl font-black tracking-wider text-gray-900 mb-1 uppercase">

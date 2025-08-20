@@ -1,4 +1,4 @@
-import Link from "next/link";
+import FooterNavBar from "./FooterNavBar";
 
 export default function Footer() {
   return (
@@ -17,38 +17,7 @@ export default function Footer() {
           </div>
 
           {/* Right side - Navigation */}
-          <nav className="flex flex-wrap gap-6 text-sm">
-            <Link 
-              href="/#coding"
-              className="font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200"
-            >
-              Development
-            </Link>
-            <Link 
-              href="/#journalism"
-              className="font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200"
-            >
-              Journalism
-            </Link>
-            <Link 
-              href="/#dataviz"
-              className="font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200"
-            >
-              Data Stories
-            </Link>
-            <Link 
-              href="/#about"
-              className="font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200"
-            >
-              Contact
-            </Link>
-            <Link 
-              href="/resume"
-              className="font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200"
-            >
-              Resume
-            </Link>
-          </nav>
+          <FooterNavBar />
         </div>
 
         {/* Bottom copyright */}

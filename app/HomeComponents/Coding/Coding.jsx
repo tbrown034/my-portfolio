@@ -1,13 +1,17 @@
-import Projects from "./CodingClips.jsx";
-import TechStack from "./CodingTechStack.jsx";
-import Intro from "./CodingIntro.jsx";
+import Clips from "./Clips";
+import Intro from "./Intro";
+import TechStack from "./TechStack.jsx";
 
-export default function page() {
+import React from "react";
+
+const Coding = () => {
   return (
-    <section className="">
+    <div>
       <Intro />
       <TechStack />
-      <Projects />
-    </section>
+      <Clips />
+    </div>
   );
-}
+};
+
+export default Coding;

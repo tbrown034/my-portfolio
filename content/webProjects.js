@@ -4,14 +4,17 @@ export const webProjects = [
   {
     id: 1,
     title: "Keith Brown DDS, FAGD",
+    type: "Professional",
+    tag: "SEO & Marketing",
     image: "/images/kabdds-screenshot-aug11.png",
     technologies: [
       "Next.js",
       "React",
-      "JavaScript", 
+      "JavaScript",
       "Tailwind CSS",
       "Vercel",
-      "Google Tag Manager"
+      "Google Tag Manager",
+      "Google Ads",
     ],
     description:
       "Fully rebuilt and manage the website for a dental practice, including SEO, content, and $2K/month ad campaigns that doubled revenue over the past year. Built with Next.js and optimized for performance, search visibility, and lead conversion.",
@@ -21,6 +24,8 @@ export const webProjects = [
   {
     id: 2,
     title: "My Expiry",
+    type: "Hobby",
+    tag: "AI Integration",
     image: "/images/expirty-screenshot-aug11.png",
     technologies: [
       "Next.js",
@@ -30,7 +35,7 @@ export const webProjects = [
       "NextAuth.js",
       "PostgreSQL",
       "Prisma",
-      "AI Integration"
+      "AI Integration",
     ],
     description:
       "AI-powered food freshness tracker with receipt scanning, expiry alerts, and waste analytics. Uses the OpenAI API for intelligent shelf-life detection and personalized suggestions to reduce waste and save money.",
@@ -40,6 +45,8 @@ export const webProjects = [
   {
     id: 3,
     title: "Reflectyr",
+    type: "Hobby",
+    tag: "Auth & Database",
     image: "/images/reflectyr-screenshot-aug11.png",
     technologies: [
       "Next.js",
@@ -49,7 +56,7 @@ export const webProjects = [
       "NextAuth.js",
       "PostgreSQL",
       "Prisma",
-      "AI Integration"
+      "AI Integration",
     ],
     description:
       "Modern platform for logging, enhancing, and sharing live sports game experiences. Built with Next.js 15, Tailwind CSS, and TypeScript. Features AI-assisted event completion, user authentication, and shareable digital collections.",
@@ -59,6 +66,8 @@ export const webProjects = [
   {
     id: 4,
     title: "ReStub",
+    type: "Hobby",
+    tag: "Modern Stack",
     image: "/images/restub-screenshot-aug11.png",
     technologies: [
       "Next.js 15",
@@ -66,11 +75,11 @@ export const webProjects = [
       "Tailwind CSS 4",
       "React",
       "Form Validation",
-      "Vercel"
+      "Vercel",
     ],
     description:
       "Modern platform for logging, enhancing, and sharing live sports game experiences. Built with Next.js 15, Tailwind CSS, and TypeScript. Features AI-assisted event completion, user authentication, and shareable digital collections.",
     githubLink: "https://github.com/tbrown034/restub",
     siteLink: "https://restub.vercel.app/",
-  }
+  },
 ];

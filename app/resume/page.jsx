@@ -6,7 +6,7 @@ import SelectedWorksResponsive from "./resumecomponents/SelectedWorksResponsive"
 
 export default function ResumePage() {
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-white text-black dark:bg-white dark:text-black">
       {/* Toolbar */}
       <div className="no-print sticky top-0 z-10 bg-white/90 backdrop-blur border-b border-gray-200">
         <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
@@ -43,6 +43,13 @@ export default function ResumePage() {
           overflow: hidden;
         }
         
+        /* Dark mode override for resume page - always white background */
+        @media (prefers-color-scheme: dark) {
+          .resume-page {
+            background: #ffffff;
+          }
+        }
+        
         /* Content Area - Print-safe margins */
         .resume-content {
           width: 100%;
@@ -53,6 +60,13 @@ export default function ResumePage() {
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
           font-size: 10.5pt;
           line-height: 1.5;
+        }
+        
+        /* Dark mode override - ensure black text on white background */
+        @media (prefers-color-scheme: dark) {
+          .resume-content {
+            color: #111827;
+          }
         }
 
         /* Header - Editorial masthead style */
