@@ -22,7 +22,7 @@ export default function Hero() {
       {/* Tablet layout (md to lg) - exactly like mobile but with 2-column About Me */}
       <section className="hidden md:flex lg:hidden md:flex-col gap-4 max-w-3xl mx-auto md:pt-8">
         <HeroHeader />
-        
+
         {/* About Me section with 2-column intro */}
         <div className="space-y-3">
           <h2 className="text-xs font-bold uppercase tracking-[0.15em] text-gray-500 dark:text-gray-500">
@@ -30,14 +30,13 @@ export default function Hero() {
           </h2>
           <Intro showDesktopLayout="large" />
         </div>
-        
+
         {/* Mug - centered like mobile */}
         <div className="flex justify-center my-6">
           <Mug />
         </div>
-        
+
         <HeroCTA />
-        <HeroBuildSomething />
         <HeroLinks />
       </section>
 
@@ -47,7 +46,7 @@ export default function Hero() {
           <HeroHeader />
 
           {/* 3-column grid */}
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-3 gap-4">
             {/* Left column: About content */}
             <div className="col-span-2 space-y-6 order-1">
               <div className="space-y-3">
@@ -56,7 +55,6 @@ export default function Hero() {
                 </h2>
                 <Intro showDesktopLayout="large" />
               </div>
-              <HeroCTA />
             </div>
 
             {/* Right column: Photo */}
@@ -65,7 +63,10 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <HeroLinks />
+        <div className="flex mt-8 flex-col gap-8">
+          <HeroCTA />
+          <HeroLinks />
+        </div>
       </section>
     </main>
   );

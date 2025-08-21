@@ -327,6 +327,28 @@ Today's session highlighted a fundamental tension in AI-assisted development –
 
 **The fundamental truth:** This portfolio has an intentional, opinionated design philosophy. Every line of code, every spacing decision, every typography choice is deliberate. The goal isn't to make it look like every other portfolio – it's to create something that reflects the unique intersection of journalism and development, with editorial sensibilities and architectural modernism as guiding principles.
 
+### August 21, 2025 - Hero Photo Enhancement
+
+**Tonight's refinement:**
+
+- **Hero photo redesign** – Transformed the profile photo component to be more prominent and professional:
+  - Mobile/Tablet: Circular format (192px → 256px) with gradient border framing
+  - Desktop: Larger rectangular format (288px → 320px) with architectural framing
+  - Added subtle animated glow effects using slow pulse animation (4s cycle)
+  - Stronger shadows and ring effects for better visual hierarchy
+  
+- **Animation system expansion** – Added `pulse-slow` keyframe animation to globals.css for gentle breathing effects
+
+- **Visual presence improvements**:
+  - Increased photo sizes across all breakpoints for better visibility
+  - Enhanced border and shadow treatments for professional appearance
+  - Added gradient backgrounds with blur for depth without distraction
+  - Container now uses `w-fit` to prevent unnecessary width consumption
+
+**Technical approach:** Maintained editorial restraint while adding visual prominence through size, subtle animation, and careful use of shadows rather than decorative elements.
+
+**Status:** Hero photo now commands appropriate attention while respecting the overall design philosophy.
+
 ---
 
 _Updated with core design philosophy, coding ethos, and development progress - reference this for all future work together._

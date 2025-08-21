@@ -16,14 +16,21 @@ const Job = ({ title, org, period, highlights }) => (
   <div className="mb-2">
     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1 gap-0.5 sm:gap-4">
       <div>
-        <div className="text-xs sm:text-sm font-bold text-gray-900 leading-tight">{title}</div>
+        <div className="text-xs sm:text-sm font-bold text-gray-900 leading-tight">
+          {title}
+        </div>
         <div className="text-xs font-semibold text-gray-800 mt-0.5">{org}</div>
       </div>
-      <div className="text-[10px] sm:text-xs font-medium text-gray-600 sm:whitespace-nowrap sm:text-right">{period}</div>
+      <div className="text-[10px] sm:text-xs font-medium text-gray-600 sm:whitespace-nowrap sm:text-right">
+        {period}
+      </div>
     </div>
     <ul className="mt-1 pl-0 list-none">
       {highlights.map((highlight, i) => (
-        <li key={i} className="mb-0.5 pl-3 relative text-[10px] sm:text-xs leading-relaxed text-justify before:content-['•'] before:absolute before:left-0 before:text-gray-600 before:font-bold">
+        <li
+          key={i}
+          className="mb-0.5 pl-3 relative text-[10px] sm:text-xs leading-relaxed text-justify before:content-['•'] before:absolute before:left-0 before:text-gray-600 before:font-bold"
+        >
           {highlight}
         </li>
       ))}
@@ -34,17 +41,26 @@ const Job = ({ title, org, period, highlights }) => (
 const Credential = ({ degree, institution, detail, year }) => (
   <div className="mb-1.5">
     <div className="text-xs font-bold text-gray-900 leading-tight">
-      {degree}{year && ` (${year})`}
+      {degree}
+      {year && ` (${year})`}
     </div>
-    <div className="text-[10px] sm:text-xs font-semibold text-gray-700 mt-0.5">{institution}</div>
-    {detail && <div className="text-[10px] text-gray-600 mt-0.5 italic">{detail}</div>}
+    <div className="text-[10px] sm:text-xs font-semibold text-gray-700 mt-0.5">
+      {institution}
+    </div>
+    {detail && (
+      <div className="text-[10px] text-gray-600 mt-0.5 italic">{detail}</div>
+    )}
   </div>
 );
 
 const SkillGroup = ({ category, skills }) => (
   <div className="mb-1.5">
-    <div className="text-[10px] sm:text-xs font-bold text-gray-900 mb-0.5 border-b border-gray-200 pb-0.5">{category}</div>
-    <div className="text-[10px] sm:text-xs text-gray-700 leading-relaxed">{skills}</div>
+    <div className="text-[10px] sm:text-xs font-bold text-gray-900 mb-0.5 border-b border-gray-200 pb-0.5">
+      {category}
+    </div>
+    <div className="text-[10px] sm:text-xs text-gray-700 leading-relaxed">
+      {skills}
+    </div>
   </div>
 );
 
@@ -53,20 +69,24 @@ const Award = ({ title, org, year, article }) => (
     <div className="text-[10px] sm:text-xs font-bold text-gray-900 leading-tight">
       {title} ({year})
     </div>
-    <div className="text-[10px] sm:text-xs font-medium text-gray-700 mt-0.5">{org}</div>
-    {article && <div className="text-[10px] text-gray-700 mt-0.5 italic">"{article}"</div>}
+    <div className="text-[10px] sm:text-xs font-medium text-gray-700 mt-0.5">
+      {org}
+    </div>
+    {article && (
+      <div className="text-[10px] text-gray-700 mt-0.5 italic">"{article}"</div>
+    )}
   </div>
 );
 
 export default function ResumeComponentResponsive({ showGuides = false }) {
   const [isExporting, setIsExporting] = useState(false);
-  const [exportType, setExportType] = useState('');
+  const [exportType, setExportType] = useState("");
   const pageRef = useRef(null);
 
   const handleExportPDF = async () => {
     if (!pageRef.current) return;
     setIsExporting(true);
-    setExportType('pdf');
+    setExportType("pdf");
     try {
       const html2pdf = (await import("html2pdf.js")).default;
       await html2pdf()
@@ -83,36 +103,40 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
       console.error(err);
     } finally {
       setIsExporting(false);
-      setExportType('');
+      setExportType("");
     }
   };
 
   const handleExportImage = async () => {
     if (!pageRef.current) return;
     setIsExporting(true);
-    setExportType('image');
+    setExportType("image");
     try {
       const html2canvas = (await import("html2canvas")).default;
       const canvas = await html2canvas(pageRef.current, {
         scale: 3,
         useCORS: true,
         letterRendering: true,
-        backgroundColor: '#ffffff'
+        backgroundColor: "#ffffff",
       });
-      
-      canvas.toBlob((blob) => {
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.download = 'Trevor_Brown_Resume.png';
-        link.href = url;
-        link.click();
-        URL.revokeObjectURL(url);
-      }, 'image/png', 1.0);
+
+      canvas.toBlob(
+        (blob) => {
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement("a");
+          link.download = "Trevor_Brown_Resume.png";
+          link.href = url;
+          link.click();
+          URL.revokeObjectURL(url);
+        },
+        "image/png",
+        1.0
+      );
     } catch (err) {
       console.error(err);
     } finally {
       setIsExporting(false);
-      setExportType('');
+      setExportType("");
     }
   };
 
@@ -122,7 +146,7 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
       <div
         ref={pageRef}
         className="bg-white shadow-xl print:shadow-none"
-        style={{ width: '8.5in', height: '11in' }}
+        style={{ width: "8.5in", height: "11in" }}
       >
         {/* Resume content with responsive padding */}
         <div className="p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 h-full overflow-auto print:overflow-visible">
@@ -136,10 +160,18 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
             </div>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-1 sm:gap-4 text-xs text-gray-600 font-normal">
               <span>630‑301‑0589</span>
-              <a href="https://trevorthewebdeveloper.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-800 transition-colors">
+              <a
+                href="https://trevorthewebdeveloper.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-gray-800 transition-colors"
+              >
                 trevorthewebdeveloper.com
               </a>
-              <a href="mailto:trevorbrown.web@gmail.com" className="text-gray-600 hover:text-gray-800 transition-colors">
+              <a
+                href="mailto:trevorbrown.web@gmail.com"
+                className="text-gray-600 hover:text-gray-800 transition-colors"
+              >
                 trevorbrown.web@gmail.com
               </a>
             </div>
@@ -152,7 +184,12 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
               <div className="mb-2">
                 <Section title="Summary">
                   <p className="text-[10px] sm:text-xs text-gray-700 leading-relaxed text-justify">
-                    Award‑winning investigative journalist and full‑stack developer specializing in data‑driven applications and interactive storytelling. Builds dynamic visualizations and tools by combining deep reporting expertise with modern development skills to deliver accurate, engaging information on complex issues.
+                    Award‑winning investigative journalist and full‑stack
+                    developer specializing in data‑driven applications and
+                    interactive storytelling. Builds dynamic visualizations and
+                    tools by combining deep reporting expertise with modern
+                    development skills to deliver accurate, engaging information
+                    on complex issues.
                   </p>
                 </Section>
               </div>
@@ -160,53 +197,123 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
               <Section title="Professional Experience">
                 <Job
                   title="Web Developer & Digital Marketing"
-                  org={<><a href="https://keithbrowndds.com/" target="_blank" rel="noopener noreferrer" className="text-inherit hover:text-gray-600">Keith Brown DDS, FAGD</a> (Naperville, Ill.)</>}
+                  org={
+                    <>
+                      <a
+                        href="https://keithbrowndds.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-inherit hover:text-gray-600"
+                      >
+                        Keith Brown DDS
+                      </a>{" "}
+                      (Naperville, Ill.)
+                    </>
+                  }
                   period="2023 – Present"
                   highlights={[
                     "Build and maintain responsive dental practice website with appointment booking system and search optimization using Next.js",
-                    "Manage $2,000 monthly advertising budget and triple new patient revenue through targeted search campaigns"
+                    "Manage $2,000 monthly advertising budget and triple new patient revenue through targeted search campaigns",
                   ]}
                 />
                 <Job
                   title="Investigative Journalist"
-                  org={<><a href="https://oklahomawatch.org/" target="_blank" rel="noopener noreferrer" className="text-inherit hover:text-gray-600">Oklahoma Watch</a> (Oklahoma City)</>}
+                  org={
+                    <>
+                      <a
+                        href="https://oklahomawatch.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-inherit hover:text-gray-600"
+                      >
+                        Oklahoma Watch
+                      </a>{" "}
+                      (Oklahoma City)
+                    </>
+                  }
                   period="2016 – 2022"
                   highlights={[
                     "Conducted long‑form investigations into government corruption, public policy issues and legislative accountability using data analysis",
-                    "Launched Democracy Watch newsletter to 4,000+ subscribers covering voting, elections, redistricting and government transparency"
+                    "Launched Democracy Watch newsletter to 4,000+ subscribers covering voting, elections, redistricting and government transparency",
                   ]}
                 />
                 <Job
                   title="State Capitol Reporter"
-                  org={<><a href="https://www.wyomingnews.com/" target="_blank" rel="noopener noreferrer" className="text-inherit hover:text-gray-600">Wyoming Tribune Eagle</a> (Cheyenne)</>}
+                  org={
+                    <>
+                      <a
+                        href="https://www.wyomingnews.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-inherit hover:text-gray-600"
+                      >
+                        Wyoming Tribune Eagle
+                      </a>{" "}
+                      (Cheyenne)
+                    </>
+                  }
                   period="2011 – 2016"
                   highlights={[
-                    "Reported on legislature, elections, governor and state agencies with focus on budget data and policy analysis"
+                    "Reported on legislature, elections, governor and state agencies with focus on budget data and policy analysis",
                   ]}
                 />
                 <Job
                   title="State Government Reporter"
-                  org={<><a href="https://www.cnhi.com/" target="_blank" rel="noopener noreferrer" className="text-inherit hover:text-gray-600">CNHI</a> (Oklahoma City)</>}
+                  org={
+                    <>
+                      <a
+                        href="https://www.cnhi.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-inherit hover:text-gray-600"
+                      >
+                        CNHI
+                      </a>{" "}
+                      (Oklahoma City)
+                    </>
+                  }
                   period="2010 – 2011"
                   highlights={[
-                    "Functioned as sole statehouse correspondent, creating enterprise and election coverage for 14 newspapers"
+                    "Functioned as sole statehouse correspondent, creating enterprise and election coverage for 14 newspapers",
                   ]}
                 />
                 <Job
                   title="Reporter"
-                  org={<><a href="https://www.newsleader.com/" target="_blank" rel="noopener noreferrer" className="text-inherit hover:text-gray-600">Staunton News Leader</a> (Staunton, Va.)</>}
+                  org={
+                    <>
+                      <a
+                        href="https://www.newsleader.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-inherit hover:text-gray-600"
+                      >
+                        Staunton News Leader
+                      </a>{" "}
+                      (Staunton, Va.)
+                    </>
+                  }
                   period="2008 – 2010"
                   highlights={[
-                    "Wrote about local government, courts and breaking news for daily newspaper"
+                    "Wrote about local government, courts and breaking news for daily newspaper",
                   ]}
                 />
                 <Job
                   title="Editor‑in‑Chief"
-                  org={<><a href="https://www.idsnews.com/" target="_blank" rel="noopener noreferrer" className="text-inherit hover:text-gray-600">Indiana Daily Student</a> (Bloomington, Ind.)</>}
+                  org={
+                    <>
+                      <a
+                        href="https://www.idsnews.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-inherit hover:text-gray-600"
+                      >
+                        Indiana Daily Student
+                      </a>{" "}
+                      (Bloomington, Ind.)
+                    </>
+                  }
                   period="2007 – 2008"
-                  highlights={[
-                    "Directed newsroom of 100+ student journalists"
-                  ]}
+                  highlights={["Directed newsroom of 100+ student journalists"]}
                 />
               </Section>
             </div>
@@ -214,58 +321,135 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
             {/* Secondary column */}
             <div>
               <Section title="Education">
-                <Credential 
+                <Credential
                   degree="Web Development Certificate"
-                  institution={<><a href="https://bootcamp.outreach.ou.edu/programs/coding" target="_blank" rel="noopener noreferrer" className="text-inherit hover:text-gray-600">University of Oklahoma</a></>}
+                  institution={
+                    <>
+                      <a
+                        href="https://bootcamp.outreach.ou.edu/programs/coding"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-inherit hover:text-gray-600"
+                      >
+                        University of Oklahoma
+                      </a>
+                    </>
+                  }
                   detail="Led by FullStack Academy"
                   year="2022"
                 />
-                <Credential 
-                  degree="B.A. Journalism" 
-                  institution={<><a href="https://bloomington.iu.edu/index.html" target="_blank" rel="noopener noreferrer" className="text-inherit hover:text-gray-600">Indiana University</a></>} 
-                  year="2008" 
+                <Credential
+                  degree="B.A. Journalism"
+                  institution={
+                    <>
+                      <a
+                        href="https://bloomington.iu.edu/index.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-inherit hover:text-gray-600"
+                      >
+                        Indiana University
+                      </a>
+                    </>
+                  }
+                  year="2008"
                 />
-                <Credential 
-                  degree="B.A. Political Science" 
-                  institution={<><a href="https://bloomington.iu.edu/index.html" target="_blank" rel="noopener noreferrer" className="text-inherit hover:text-gray-600">Indiana University</a></>} 
-                  year="2008" 
+                <Credential
+                  degree="B.A. Political Science"
+                  institution={
+                    <>
+                      <a
+                        href="https://bloomington.iu.edu/index.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-inherit hover:text-gray-600"
+                      >
+                        Indiana University
+                      </a>
+                    </>
+                  }
+                  year="2008"
                 />
               </Section>
 
               <Section title="Technical Skills">
-                <SkillGroup 
-                  category="Core Web Technologies" 
-                  skills="Next.js, React, TypeScript, Node.js, PostgreSQL, Tailwind" 
+                <SkillGroup
+                  category="Core Web Technologies"
+                  skills="Next.js, React, TypeScript, Node.js, PostgreSQL, Tailwind"
                 />
-                <SkillGroup 
-                  category="Data Visualization & Analysis" 
-                  skills="Tableau, Datawrapper, D3.js, Chart.js, Excel, web scraping" 
+                <SkillGroup
+                  category="Data Visualization & Analysis"
+                  skills="Tableau, Datawrapper, D3.js, Chart.js, Excel, web scraping"
                 />
-                <SkillGroup 
-                  category="AI & Automation" 
-                  skills="OpenAI API, Anthropic API, ChatGPT, Claude, prompt engineering, AI workflow automation" 
+                <SkillGroup
+                  category="AI & Automation"
+                  skills="OpenAI API, Anthropic API, ChatGPT, Claude, prompt engineering, AI workflow automation"
                 />
               </Section>
 
               <Section title="Awards & Recognition">
-                <Award 
+                <Award
                   title="Newspaper Writer of the Year"
-                  org={<><a href="https://oklahomawatch.org/2021/05/10/oklahoma-watchs-trevor-brown-earns-writer-of-year-honors-in-great-plains-journalism-contest/" target="_blank" rel="noopener noreferrer" className="text-inherit hover:text-gray-600">Great Plains Journalism Awards</a></>}
+                  org={
+                    <>
+                      <a
+                        href="https://oklahomawatch.org/2021/05/10/oklahoma-watchs-trevor-brown-earns-writer-of-year-honors-in-great-plains-journalism-contest/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-inherit hover:text-gray-600"
+                      >
+                        Great Plains Journalism Awards
+                      </a>
+                    </>
+                  }
                   year="2021"
                 />
-                <Award 
+                <Award
                   title="Reporter of the Year"
-                  org={<><a href="https://okspj.com/" target="_blank" rel="noopener noreferrer" className="text-inherit hover:text-gray-600">Oklahoma Society of Professional Journalists</a></>}
+                  org={
+                    <>
+                      <a
+                        href="https://okspj.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-inherit hover:text-gray-600"
+                      >
+                        Oklahoma Society of Professional Journalists
+                      </a>
+                    </>
+                  }
                   year="2020"
                 />
-                <Award 
+                <Award
                   title="First Place, Investigative Reporting"
-                  org={<><a href="https://okspj.com/" target="_blank" rel="noopener noreferrer" className="text-inherit hover:text-gray-600">Oklahoma Society of Professional Journalists</a></>}
+                  org={
+                    <>
+                      <a
+                        href="https://okspj.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-inherit hover:text-gray-600"
+                      >
+                        Oklahoma Society of Professional Journalists
+                      </a>
+                    </>
+                  }
                   year="2022"
                 />
-                <Award 
+                <Award
                   title="Community Champion Award"
-                  org={<><a href="https://inn.org/" target="_blank" rel="noopener noreferrer" className="text-inherit hover:text-gray-600">Institute for Nonprofit News</a></>}
+                  org={
+                    <>
+                      <a
+                        href="https://inn.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-inherit hover:text-gray-600"
+                      >
+                        Institute for Nonprofit News
+                      </a>
+                    </>
+                  }
                   year="2020"
                   article="A Digital Memorial to Oklahomans Who Died from COVID-19"
                 />
@@ -287,14 +471,16 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
           disabled={isExporting}
           className="px-4 py-2 text-sm font-medium text-white bg-gray-900 hover:bg-gray-800 disabled:opacity-50 rounded-lg transition-colors"
         >
-          {isExporting && exportType === 'pdf' ? "Generating…" : "Download PDF"}
+          {isExporting && exportType === "pdf" ? "Generating…" : "Download PDF"}
         </button>
         <button
           onClick={handleExportImage}
           disabled={isExporting}
           className="px-4 py-2 text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50 rounded-lg border border-gray-300 transition-colors"
         >
-          {isExporting && exportType === 'image' ? "Generating…" : "Download Image"}
+          {isExporting && exportType === "image"
+            ? "Generating…"
+            : "Download Image"}
         </button>
       </div>
     </div>

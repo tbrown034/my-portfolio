@@ -64,7 +64,7 @@ export default function Intro({ showDesktopLayout }) {
             </p>
 
             {/* Let's build something together link - desktop only */}
-            <div className="mt-4 hidden lg:block">
+            <div className="mt-8 hidden lg:block">
               <HeroBuildSomething />
             </div>
           </div>
@@ -81,6 +81,11 @@ export default function Intro({ showDesktopLayout }) {
         <h2 className="text-xs font-bold uppercase tracking-[0.15em] text-gray-500 dark:text-gray-500">
           About Me
         </h2>
+
+        {/* Mobile image placement */}
+        <div className="flex justify-center my-6 md:hidden">
+          <Mug />
+        </div>
 
         {/* Main content */}
         <div className="space-y-4 max-w-4xl">
@@ -140,11 +145,6 @@ export default function Intro({ showDesktopLayout }) {
             </p>
           </div>
         </div>
-      </div>
-
-      {/* Mobile image placement */}
-      <div className="flex justify-center my-6 md:hidden">
-        <Mug />
       </div>
 
       {/* Let's build something together link - mobile only */}

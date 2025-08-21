@@ -135,7 +135,7 @@ Award-winning investigative journalist and full-stack developer specializing in 
 \\line
 \\b Professional Experience\\b0\\par
 \\b Web Developer & Digital Marketing\\b0\\par
-Keith Brown DDS, FAGD (2023 – Present)\\par
+Keith Brown DDS (2023 – Present)\\par
 • Build and maintain responsive dental practice website\\par
 • Manage advertising budget and triple new patient revenue\\par
 \\line
@@ -222,7 +222,7 @@ Oklahoma Watch (2016 – 2022)\\par
                         rel="noopener noreferrer"
                         className="org-link"
                       >
-                        Keith Brown DDS, FAGD
+                        Keith Brown DDS
                       </a>{" "}
                       (Naperville, Ill.)
                     </>

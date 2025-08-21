@@ -3,7 +3,7 @@
 export const webProjects = [
   {
     id: 1,
-    title: "Keith Brown DDS, FAGD",
+    title: "Keith Brown DDS",
     type: "Professional",
     tag: "SEO & Marketing",
     image: "/images/kabdds-screenshot-aug11.png",

@@ -10,8 +10,8 @@ import { SOCIAL_LINKS, PERSONAL_INFO } from "@/lib/constants";
 export default function HeroLinks() {
   return (
     <div className="space-y-6">
-      {/* Four section cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      {/* Three section cards */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Link
           href="#journalism"
           className="group p-4 border-b-2 border-gray-200 dark:border-gray-700 hover:border-blue-800 dark:hover:border-blue-300 transition-colors"
@@ -45,18 +45,6 @@ export default function HeroLinks() {
           </h3>
           <p className="text-sm text-gray-500 dark:text-gray-500">
             Analysis, visualization, open records
-          </p>
-        </Link>
-
-        <Link
-          href="/resume"
-          className="group p-4 border-b-2 border-gray-200 dark:border-gray-700 hover:border-blue-800 dark:hover:border-blue-300 transition-colors"
-        >
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">
-            Resume
-          </h3>
-          <p className="text-sm text-gray-500 dark:text-gray-500">
-            
           </p>
         </Link>
       </div>
