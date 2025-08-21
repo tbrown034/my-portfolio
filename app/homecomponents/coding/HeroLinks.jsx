@@ -10,7 +10,7 @@ import { SOCIAL_LINKS, PERSONAL_INFO } from "@/lib/constants";
 export default function HeroLinks() {
   return (
     <div className="space-y-6">
-      {/* Four section cards */}
+      {/* Navigation cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <Link
           href="#journalism"
@@ -61,7 +61,7 @@ export default function HeroLinks() {
         </Link>
       </div>
 
-      {/* Contact links */}
+      {/* Social links */}
       <div className="flex flex-wrap gap-6 justify-center md:justify-start">
         <a
           href={`mailto:${PERSONAL_INFO.email}`}

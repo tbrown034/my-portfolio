@@ -1,6 +1,6 @@
 export default function HeroHeader() {
   return (
-    <header className="mb-4 animate-gentleReveal">
+    <header className=" animate-gentleReveal">
       <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black font-montserrat text-gray-900 dark:text-gray-100 leading-tight mb-1">
         Trevor Brown
       </h1>
