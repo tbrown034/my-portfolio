@@ -1,7 +1,7 @@
 export default function Intro() {
   const milestones = [
     { year: "2001-2019", label: "Investigative Journalist", highlight: true },
-    { year: "2023", label: "Full-Stack Bootcamp Graduate", highlight: true },
+    { year: "2023", label: "Full-stack Bootcamp Graduate", highlight: true },
     {
       year: "2024-Present",
       label: "Developer & Data Visualizer",

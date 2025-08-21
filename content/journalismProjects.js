@@ -28,9 +28,6 @@ export const clips = [
     image: profling,
     publication: "Oklahoma Watch",
     date: "June 2, 2020",
-
-    description:
-      "Created this app that fetches weather information and displays it after a user enters their zipcode.",
     siteLink:
       "https://oklahomawatch.org/2020/06/02/twenty-years-after-it-became-a-crime-racial-profiling-charges-remain-scarce/",
   },
@@ -40,7 +37,7 @@ export const clips = [
       "Oklahoma Hospitals Sue Thousands Each Year Over Unpaid Medical Bills",
     text: "Oklahoma hospitals have sued thousands of patients over unpaid medical bills – who files the most cases and what that looks like for families on the other end.",
     image: hospitals,
-    date: "August 7, 2019",
+    date: "Aug. 7, 2019",
 
     publication: "Oklahoma Watch",
 
@@ -52,7 +49,7 @@ export const clips = [
     headline: "Where Dark Money Flowed in Oklahoma's Legislative Races",
     text: "Tracking nearly $1 million in dark-money spending in 2020 legislative races – who spent it, where it went and how it shaped close contests.",
     image: darkMoney,
-    date: "January 13, 2022",
+    date: "Jan. 13, 2022",
 
     publication: "Oklahoma Watch",
 
@@ -64,7 +61,7 @@ export const clips = [
     headline:
       "No Comment: In Oklahoma's Legislature, Public Rarely Given Chance to Weigh In",
     text: "Committees moved high-impact bills in minutes with little debate – a Sunshine Week look at how public comment gets sidelined at the Capitol.",
-    date: "February 11, 2022",
+    date: "Feb. 11, 2022",
 
     image: comment,
     publication: "Oklahoma Watch",
@@ -78,7 +75,7 @@ export const clips = [
       "In Remembering OKC Bombing Victims, Experts See Lessons for Grieving COVID Losses",
     text: "Lessons from the Oklahoma City bombing for grieving during COVID – how counselors apply what they learned when rituals and timelines are disrupted.",
     image: okcBombing,
-    date: "February 11, 2022",
+    date: "Feb. 11, 2022",
 
     publication: "Oklahoma Watch",
     siteLink:
