@@ -8,9 +8,9 @@ export default function Awards() {
   // Get unique years and sort them descending
   const years = [...new Set(awards.map(award => award.year))].sort((a, b) => b - a);
   
-  // Filter years to show (2022-2020 by default, all if showAll is true)
-  const visibleYears = showAll ? years : years.filter(year => year >= 2020 && year <= 2022);
-  const hiddenYears = years.filter(year => year < 2020);
+  // Filter years to show (2022-2021 by default, all if showAll is true)
+  const visibleYears = showAll ? years : years.filter(year => year >= 2021 && year <= 2022);
+  const hiddenYears = years.filter(year => year < 2021);
   
   return (
     <section className="pb-8">

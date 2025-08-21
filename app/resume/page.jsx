@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import ResumeComponentResponsive from "./resumecomponents/ResumeComponentResponsive.jsx";
-import SelectedWorksResponsive from "./resumecomponents/SelectedWorksResponsive.jsx";
+import ResumePage from "./components/ResumePage.jsx";
+import ClipsPage from "./components/ClipsPage.jsx";
 
-export default function ResumePage() {
+export default function ResumePageLayout() {
   return (
     <main className="min-h-screen bg-white text-black dark:bg-white dark:text-black">
       {/* Toolbar */}
@@ -25,10 +25,10 @@ export default function ResumePage() {
       </div>
 
       {/* Resume Component */}
-      <ResumeComponentResponsive showGuides={false} />
+      <ResumePage showGuides={false} />
 
       {/* Selected Works Component */}
-      <SelectedWorksResponsive showGuides={false} />
+      <ClipsPage showGuides={false} />
 
       {/* Editorial-inspired Resume Styles */}
       <style jsx global>{`

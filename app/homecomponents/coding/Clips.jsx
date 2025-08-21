@@ -22,7 +22,7 @@ export default function Clips() {
                 {/* Content */}
                 <div className="space-y-4 mb-6">
                   <div className="space-y-2">
-                    {/* Project type and feature tags */}
+                    {/* Project type tags */}
                     <div className="flex items-center gap-2 text-xs">
                       {/* Professional/Hobby tag */}
                       <span
@@ -33,10 +33,6 @@ export default function Clips() {
                         }`}
                       >
                         {project.type}
-                      </span>
-                      {/* Feature tag */}
-                      <span className="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-400 rounded font-medium">
-                        {project.tag}
                       </span>
                       {/* Work in Progress tag */}
                       {project.workInProgress && (
