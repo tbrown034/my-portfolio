@@ -35,7 +35,7 @@ export default function Clips() {
                     </div>
 
                     <Link 
-                      href={story.siteLink} 
+                      href={story.graphicLink && !Array.isArray(story.graphicLink) ? story.graphicLink : story.graphicLink?.[0] || story.siteLink} 
                       target="_blank"
                       className="inline-block hover:text-green-800 dark:hover:text-green-400 transition-colors duration-200"
                     >
@@ -48,8 +48,59 @@ export default function Clips() {
                     </p>
                   </div>
 
-                  {/* Link */}
-                  <div className="flex gap-4">
+                  {/* Links */}
+                  <div className="flex flex-wrap gap-4">
+                    {/* Visualization link(s) */}
+                    {story.graphicLink && (
+                      Array.isArray(story.graphicLink) ? (
+                        story.graphicLink.map((link, i) => (
+                          <Link
+                            key={i}
+                            className="inline-flex items-center gap-1.5 text-base font-medium text-gray-600 dark:text-gray-400 hover:text-green-800 dark:hover:text-green-400 transition-colors duration-200"
+                            href={link}
+                            target="_blank"
+                          >
+                            <svg
+                              className="w-5 h-5"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                              />
+                            </svg>
+                            View Graphic {story.graphicLink.length > 1 ? i + 1 : ''}
+                          </Link>
+                        ))
+                      ) : (
+                        <Link
+                          className="inline-flex items-center gap-1.5 text-base font-medium text-gray-600 dark:text-gray-400 hover:text-green-800 dark:hover:text-green-400 transition-colors duration-200"
+                          href={story.graphicLink}
+                          target="_blank"
+                        >
+                          <svg
+                            className="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                            />
+                          </svg>
+                          View Graphic
+                        </Link>
+                      )
+                    )}
+                    
+                    {/* Article link */}
                     <Link
                       className="inline-flex items-center gap-1.5 text-base font-medium text-gray-600 dark:text-gray-400 hover:text-green-800 dark:hover:text-green-400 transition-colors duration-200"
                       href={story.siteLink}
@@ -65,10 +116,10 @@ export default function Clips() {
                           strokeLinecap="round"
                           strokeLinejoin="round"
                           strokeWidth={2}
-                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                         />
                       </svg>
-                      View Visualization
+                      Read Article
                     </Link>
                   </div>
                 </div>
@@ -76,7 +127,7 @@ export default function Clips() {
                 {/* Smaller image with border - left aligned */}
                 <div className="relative">
                   <Link 
-                    href={story.siteLink} 
+                    href={story.graphicLink && !Array.isArray(story.graphicLink) ? story.graphicLink : story.graphicLink?.[0] || story.siteLink} 
                     target="_blank"
                     className="block w-2/3 cursor-pointer"
                   >

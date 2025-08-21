@@ -1,11 +1,12 @@
 "use client";
 
 import { useState, useRef } from "react";
+import { useDocumentScaling } from "@/app/hooks/useDocumentScaling";
 
 /* Component Library - Editorial Resume Style with Tailwind */
 const Section = ({ title, children }) => (
   <section>
-    <h3 className="text-[10px] sm:text-xs font-extrabold tracking-widest uppercase text-gray-900 border-b border-gray-300 pb-1 mb-2 mt-3 first:mt-0">
+    <h3 className="text-xs font-extrabold tracking-widest uppercase text-gray-900 border-b border-gray-300 pb-1 mb-2 mt-3 first:mt-0">
       {title}
     </h3>
     {children}
@@ -14,14 +15,14 @@ const Section = ({ title, children }) => (
 
 const Job = ({ title, org, period, highlights }) => (
   <div className="mb-2">
-    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1 gap-0.5 sm:gap-4">
+    <div className="flex justify-between items-start mb-1 gap-4">
       <div>
-        <div className="text-xs sm:text-sm font-bold text-gray-900 leading-tight">
+        <div className="text-sm font-bold text-gray-900 leading-tight">
           {title}
         </div>
         <div className="text-xs font-semibold text-gray-800 mt-0.5">{org}</div>
       </div>
-      <div className="text-[10px] sm:text-xs font-medium text-gray-600 sm:whitespace-nowrap sm:text-right">
+      <div className="text-xs font-medium text-gray-600 whitespace-nowrap text-right">
         {period}
       </div>
     </div>
@@ -29,7 +30,7 @@ const Job = ({ title, org, period, highlights }) => (
       {highlights.map((highlight, i) => (
         <li
           key={i}
-          className="mb-0.5 pl-3 relative text-[10px] sm:text-xs leading-relaxed text-justify before:content-['•'] before:absolute before:left-0 before:text-gray-600 before:font-bold"
+          className="mb-0.5 pl-3 relative text-xs leading-relaxed text-justify before:content-['•'] before:absolute before:left-0 before:text-gray-600 before:font-bold"
         >
           {highlight}
         </li>
@@ -44,7 +45,7 @@ const Credential = ({ degree, institution, detail, year }) => (
       {degree}
       {year && ` (${year})`}
     </div>
-    <div className="text-[10px] sm:text-xs font-semibold text-gray-700 mt-0.5">
+    <div className="text-xs font-semibold text-gray-700 mt-0.5">
       {institution}
     </div>
     {detail && (
@@ -55,10 +56,10 @@ const Credential = ({ degree, institution, detail, year }) => (
 
 const SkillGroup = ({ category, skills }) => (
   <div className="mb-1.5">
-    <div className="text-[10px] sm:text-xs font-bold text-gray-900 mb-0.5 border-b border-gray-200 pb-0.5">
+    <div className="text-xs font-bold text-gray-900 mb-0.5 border-b border-gray-200 pb-0.5">
       {category}
     </div>
-    <div className="text-[10px] sm:text-xs text-gray-700 leading-relaxed">
+    <div className="text-xs text-gray-700 leading-relaxed">
       {skills}
     </div>
   </div>
@@ -66,10 +67,10 @@ const SkillGroup = ({ category, skills }) => (
 
 const Award = ({ title, org, year, article }) => (
   <div className="mb-1.5">
-    <div className="text-[10px] sm:text-xs font-bold text-gray-900 leading-tight">
+    <div className="text-xs font-bold text-gray-900 leading-tight">
       {title} ({year})
     </div>
-    <div className="text-[10px] sm:text-xs font-medium text-gray-700 mt-0.5">
+    <div className="text-xs font-medium text-gray-700 mt-0.5">
       {org}
     </div>
     {article && (
@@ -82,6 +83,10 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
   const [isExporting, setIsExporting] = useState(false);
   const [exportType, setExportType] = useState("");
   const pageRef = useRef(null);
+  const containerRef = useRef(null);
+  const documentRef = useRef(null);
+  
+  const { scale, dimensions } = useDocumentScaling(containerRef, documentRef);
 
   const handleExportPDF = async () => {
     if (!pageRef.current) return;
@@ -141,49 +146,68 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
   };
 
   return (
-    <div className="resume-container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 flex flex-col items-center">
-      {/* Fixed letter-size resume container - 8.5 × 11 inches */}
-      <div
-        ref={pageRef}
-        className="bg-white shadow-xl print:shadow-none"
-        style={{ width: "8.5in", height: "11in" }}
+    <div 
+      ref={containerRef}
+      className="resume-container w-full min-h-screen flex flex-col items-center justify-center p-4 bg-gray-50 dark:bg-gray-900 print:bg-white"
+    >
+      {/* Scaling wrapper */}
+      <div 
+        className="relative"
+        style={{
+          width: dimensions.width,
+          height: dimensions.height,
+        }}
       >
-        {/* Resume content with responsive padding */}
-        <div className="p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 h-full overflow-auto print:overflow-visible">
-          {/* Header - Editorial masthead style */}
-          <header className="text-center mb-3 pb-2 border-b-2 border-gray-900">
-            <h1 className="text-xl sm:text-2xl font-black tracking-wider text-gray-900 mb-1 uppercase">
-              TREVOR BROWN
-            </h1>
-            <div className="text-sm font-medium text-gray-700 mb-2 tracking-wide">
-              Investigative Journalist & Full‑Stack Developer
-            </div>
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-1 sm:gap-4 text-xs text-gray-600 font-normal">
-              <span>630‑301‑0589</span>
-              <a
-                href="https://trevorthewebdeveloper.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-gray-800 transition-colors"
-              >
-                trevorthewebdeveloper.com
-              </a>
-              <a
-                href="mailto:trevorbrown.web@gmail.com"
-                className="text-gray-600 hover:text-gray-800 transition-colors"
-              >
-                trevorbrown.web@gmail.com
-              </a>
-            </div>
-          </header>
+        {/* Fixed letter-size resume container - 8.5 × 11 inches */}
+        <div
+          ref={(el) => {
+            pageRef.current = el;
+            documentRef.current = el;
+          }}
+          className="absolute top-0 left-0 bg-white shadow-xl print:shadow-none origin-top-left"
+          style={{ 
+            width: "8.5in", 
+            height: "11in",
+            transform: `scale(${scale})`,
+            transformOrigin: 'top left'
+          }}
+        >
+          {/* Resume content with fixed padding for consistent layout */}
+          <div className="p-12 h-full overflow-hidden print:overflow-visible" style={{ padding: "0.75in" }}>
+            {/* Header - Editorial masthead style */}
+            <header className="text-center mb-3 pb-2 border-b-2 border-gray-900">
+              <h1 className="text-2xl font-black tracking-wider text-gray-900 mb-1 uppercase">
+                TREVOR BROWN
+              </h1>
+              <div className="text-sm font-medium text-gray-700 mb-2 tracking-wide">
+                Investigative Journalist & Full‑Stack Developer
+              </div>
+              <div className="flex justify-center items-center gap-4 text-xs text-gray-600 font-normal">
+                <span>630‑301‑0589</span>
+                <a
+                  href="https://trevorthewebdeveloper.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-gray-800 transition-colors"
+                >
+                  trevorthewebdeveloper.com
+                </a>
+                <a
+                  href="mailto:trevorbrown.web@gmail.com"
+                  className="text-gray-600 hover:text-gray-800 transition-colors"
+                >
+                  trevorbrown.web@gmail.com
+                </a>
+              </div>
+            </header>
 
-          {/* Main content - Responsive grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
-            {/* Primary column - takes 2 columns on large screens */}
-            <div className="lg:col-span-2">
-              <div className="mb-2">
+            {/* Main content - Fixed 2-column grid */}
+            <div className="grid grid-cols-3 gap-8">
+              {/* Primary column - takes 2 columns */}
+              <div className="col-span-2">
+                <div className="mb-2">
                 <Section title="Summary">
-                  <p className="text-[10px] sm:text-xs text-gray-700 leading-relaxed text-justify">
+                  <p className="text-xs text-gray-700 leading-relaxed text-justify">
                     Award‑winning investigative journalist and full‑stack
                     developer specializing in data‑driven applications and
                     interactive storytelling. Builds dynamic visualizations and
@@ -455,13 +479,14 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                 />
               </Section>
             </div>
+            </div>
           </div>
-        </div>
 
-        {/* Guides overlay for print */}
-        {showGuides && (
-          <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_0_0.75in_rgba(59,130,246,0.08)] print:hidden" />
-        )}
+          {/* Guides overlay for print */}
+          {showGuides && (
+            <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_0_0.75in_rgba(59,130,246,0.08)] print:hidden" />
+          )}
+        </div>
       </div>
 
       {/* Download buttons below resume */}

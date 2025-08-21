@@ -17,6 +17,8 @@ export const graphics = [
       "Infographic displaying campaign financial statuses of Oklahoma lawmakers in anticipation of re-election.",
     siteLink:
       "https://oklahomawatch.org/2021/02/08/oklahoma-lawmakers-report-large-campaign-reserves-after-2020-races/",
+    graphicLink:
+      "https://public.tableau.com/app/profile/oklahoma.watch/viz/2020Legislature1/Dashboard1",
   },
 
   {
@@ -31,6 +33,7 @@ export const graphics = [
       "Chart showing trends of ICE detainers issued in Oklahoma from 2004, reflecting national trends.",
     siteLink:
       "https://oklahomawatch.org/2022/03/04/ice-holds-drop-as-immigrant-communities-law-enforcement-balance-policy-changes/",
+    graphicLink: "https://www.datawrapper.de/_/NDN7G/",
   },
   {
     id: 3,
@@ -44,6 +47,7 @@ export const graphics = [
       "Map visualizing vaccination rates across states, emphasizing Oklahoma's below-average rates.",
     siteLink:
       "https://oklahomawatch.org/2021/12/20/as-some-oklahoma-churches-push-vaccines-others-sow-misinformation-doubt/?utm_content=bufferff609&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer",
+    graphicLink: ["https://www.datawrapper.de/_/J9m2Z/", "https://www.datawrapper.de/_/RFBFU/"],
   },
   {
     id: 4,
@@ -58,6 +62,8 @@ export const graphics = [
       "Visual depiction of redistricting impacts on the Hispanic/Latino population in Oklahoma's 5th Congressional District.",
     siteLink:
       "https://oklahomawatch.org/2022/03/04/ice-holds-drop-as-immigrant-communities-law-enforcement-balance-policy-changes/",
+    graphicLink:
+      "https://public.tableau.com/app/profile/oklahoma.watch/viz/VaccinationTweets/Dashboard1",
   },
   {
     id: 5,
@@ -72,6 +78,7 @@ export const graphics = [
       "Graphic comparison of vaccination advocacy on Twitter between Governor Kevin Stitt and governors of surrounding states.",
     siteLink:
       "https://oklahomawatch.org/2021/07/30/as-other-governors-pull-out-vaccine-media-blitz-oklahomas-stitt-largely-silent/",
+    graphicLink: "https://www.datawrapper.de/_/NDN7G/",
   },
 
   {
@@ -87,5 +94,6 @@ export const graphics = [
       "Graphic illustrating the increase of mass shootings in Oklahoma, highlighting a surge in recent incidents.",
     siteLink:
       "https://oklahomawatch.org/2022/06/03/how-oklahoma-lawmakers-have-loosened-gun-regulations-the-past-decade%EF%BF%BC/",
+    graphicLink: "https://www.datawrapper.de/_/fMDc4/",
   },
 ];

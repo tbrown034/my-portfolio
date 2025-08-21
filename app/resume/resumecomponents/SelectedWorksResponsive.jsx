@@ -1,11 +1,16 @@
 "use client";
 
 import { useState, useRef } from "react";
+import { useDocumentScaling } from "@/app/hooks/useDocumentScaling";
 
 export default function SelectedWorksResponsive({ showGuides = false }) {
   const [isExporting, setIsExporting] = useState(false);
   const [exportType, setExportType] = useState("");
   const pageRef = useRef(null);
+  const containerRef = useRef(null);
+  const documentRef = useRef(null);
+  
+  const { scale, dimensions } = useDocumentScaling(containerRef, documentRef);
 
   const handleExportPDF = async () => {
     if (!pageRef.current) return;
@@ -65,18 +70,37 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
   };
 
   return (
-    <div className="selected-works-container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 flex flex-col items-center">
-      {/* Fixed letter-size container - 8.5 × 11 inches */}
-      <div
-        ref={pageRef}
-        className="shadow-xl print:shadow-none"
-        style={{ width: '8.5in', height: '11in', backgroundColor: '#ffffff' }}
+    <div 
+      ref={containerRef}
+      className="selected-works-container w-full min-h-screen flex flex-col items-center justify-center p-4 bg-gray-50 dark:bg-gray-900 print:bg-white"
+    >
+      {/* Scaling wrapper */}
+      <div 
+        className="relative"
+        style={{
+          width: dimensions.width,
+          height: dimensions.height,
+        }}
       >
-        {/* Content with responsive padding */}
-        <div className="p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 h-full overflow-auto print:overflow-visible">
-          {/* Header */}
-          <header className="text-center mb-4 pb-2 border-b border-gray-300">
-            <h1 className="text-lg sm:text-xl font-bold tracking-wider text-gray-900 mb-1 uppercase">
+        {/* Fixed letter-size container - 8.5 × 11 inches */}
+        <div
+          ref={(el) => {
+            pageRef.current = el;
+            documentRef.current = el;
+          }}
+          className="absolute top-0 left-0 bg-white shadow-xl print:shadow-none origin-top-left"
+          style={{ 
+            width: '8.5in', 
+            height: '11in',
+            transform: `scale(${scale})`,
+            transformOrigin: 'top left'
+          }}
+        >
+          {/* Content with fixed padding for consistent layout */}
+          <div className="p-12 h-full overflow-hidden print:overflow-visible" style={{ padding: "0.75in" }}>
+            {/* Header */}
+            <header className="text-center mb-4 pb-2 border-b border-gray-300">
+              <h1 className="text-xl font-bold tracking-wider text-gray-900 mb-1 uppercase">
               TREVOR BROWN
             </h1>
             <div className="text-sm font-medium text-gray-700 mb-1">
@@ -106,42 +130,42 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
               <div className="space-y-2">
                 <div className="pb-2 border-b border-gray-200">
                   <a href="https://oklahomawatch.org/2022/06/06/the-misinformation-election" target="_blank" rel="noopener noreferrer" className="block hover:bg-gray-50 transition-colors">
-                    <h3 className="text-xs sm:text-sm font-bold mb-0.5 hover:text-blue-600" style={{ color: '#111827' }}>
+                    <h3 className="text-sm font-bold mb-0.5 hover:text-blue-600" style={{ color: '#111827' }}>
                       The Misinformation Election: Lies, Conspiracy Theories Prominent in Many GOP Races
                     </h3>
                   </a>
-                  <div className="text-[10px] sm:text-xs italic mb-1" style={{ color: '#4b5563' }}>
+                  <div className="text-xs italic mb-1" style={{ color: '#4b5563' }}>
                     (June 2022) oklahomawatch.org/2022/06/06/the-misinformation-election
                   </div>
-                  <p className="text-[10px] sm:text-xs leading-relaxed" style={{ color: '#374151' }}>
+                  <p className="text-xs leading-relaxed" style={{ color: '#374151' }}>
                     Fact-checking investigation analyzing disinformation patterns across 50+ primary races. Shows ability to verify claims at scale – essential for wire service accuracy.
                   </p>
                 </div>
 
                 <div className="pb-2 border-b border-gray-200">
                   <a href="https://oklahomawatch.org/2020/06/02/racial-profiling-charges-remain-scarce" target="_blank" rel="noopener noreferrer" className="block hover:bg-gray-50 transition-colors">
-                    <h3 className="text-xs sm:text-sm font-bold mb-0.5 hover:text-blue-600" style={{ color: '#111827' }}>
+                    <h3 className="text-sm font-bold mb-0.5 hover:text-blue-600" style={{ color: '#111827' }}>
                       Twenty Years After It Became a Crime, Racial Profiling Charges Remain Scarce
                     </h3>
                   </a>
-                  <div className="text-[10px] sm:text-xs italic mb-1" style={{ color: '#4b5563' }}>
+                  <div className="text-xs italic mb-1" style={{ color: '#4b5563' }}>
                     (June 2020) oklahomawatch.org/2020/06/02/racial-profiling-charges-remain-scarce
                   </div>
-                  <p className="text-[10px] sm:text-xs leading-relaxed" style={{ color: '#374151' }}>
+                  <p className="text-xs leading-relaxed" style={{ color: '#374151' }}>
                     Analyzed 20 years of court data to reveal enforcement gaps. Combined FOIA requests, database queries, and interviews.
                   </p>
                 </div>
 
                 <div className="pb-2 border-b border-gray-200">
                   <a href="https://oklahomawatch.org/2019/08/07/oklahoma-hospitals-sue-thousands" target="_blank" rel="noopener noreferrer" className="block hover:bg-gray-50 transition-colors">
-                    <h3 className="text-xs sm:text-sm font-bold mb-0.5 hover:text-blue-600" style={{ color: '#111827' }}>
+                    <h3 className="text-sm font-bold mb-0.5 hover:text-blue-600" style={{ color: '#111827' }}>
                       Oklahoma Hospitals Sue Thousands Each Year Over Unpaid Medical Bills
                     </h3>
                   </a>
-                  <div className="text-[10px] sm:text-xs italic mb-1" style={{ color: '#4b5563' }}>
+                  <div className="text-xs italic mb-1" style={{ color: '#4b5563' }}>
                     (Aug. 2019) oklahomawatch.org/2019/08/07/oklahoma-hospitals-sue-thousands
                   </div>
-                  <p className="text-[10px] sm:text-xs leading-relaxed" style={{ color: '#374151' }}>
+                  <p className="text-xs leading-relaxed" style={{ color: '#374151' }}>
                     Scraped court records to expose medical debt crisis. Built database of 15,000+ cases revealing systemic issues.
                   </p>
                 </div>
@@ -158,16 +182,16 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
                 <div className="pb-2 border-b border-gray-200">
                   <div className="flex items-start justify-between mb-0.5">
                     <a href="https://keithbrowndds.com" target="_blank" rel="noopener noreferrer" className="hover:bg-gray-50 transition-colors">
-                      <h3 className="text-xs sm:text-sm font-bold hover:text-blue-600" style={{ color: '#111827' }}>
+                      <h3 className="text-sm font-bold hover:text-blue-600" style={{ color: '#111827' }}>
                         Keith Brown DDS – Production Next.js Application (2024)
                       </h3>
                     </a>
                     <span className="text-[10px] font-medium px-2 py-0.5 bg-blue-100 text-blue-700 rounded inline-block">Professional</span>
                   </div>
-                  <div className="text-[10px] sm:text-xs italic mb-1" style={{ color: '#4b5563' }}>
+                  <div className="text-xs italic mb-1" style={{ color: '#4b5563' }}>
                     keithbrowndds.com
                   </div>
-                  <p className="text-[10px] sm:text-xs leading-relaxed" style={{ color: '#374151' }}>
+                  <p className="text-xs leading-relaxed" style={{ color: '#374151' }}>
                     Professional practice website with appointment booking system. Built with Next.js, optimized for performance and search visibility.
                   </p>
                 </div>
@@ -175,16 +199,16 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
                 <div className="pb-2 border-b border-gray-200">
                   <div className="flex items-start justify-between mb-0.5">
                     <a href="https://my-expiry.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:bg-gray-50 transition-colors">
-                      <h3 className="text-xs sm:text-sm font-bold hover:text-blue-600" style={{ color: '#111827' }}>
+                      <h3 className="text-sm font-bold hover:text-blue-600" style={{ color: '#111827' }}>
                         My Expiry – AI-Integrated TypeScript Application (2024)
                       </h3>
                     </a>
                     <span className="text-[10px] font-medium px-2 py-0.5 bg-gray-100 text-gray-700 rounded inline-block">Hobby</span>
                   </div>
-                  <div className="text-[10px] sm:text-xs italic mb-1" style={{ color: '#4b5563' }}>
+                  <div className="text-xs italic mb-1" style={{ color: '#4b5563' }}>
                     my-expiry.vercel.app
                   </div>
-                  <p className="text-[10px] sm:text-xs leading-relaxed" style={{ color: '#374151' }}>
+                  <p className="text-xs leading-relaxed" style={{ color: '#374151' }}>
                     AI-powered food freshness tracker with receipt scanning, expiry alerts, and waste analytics. Uses the OpenAI API for intelligent shelf-life detection and personalized suggestions to reduce waste and save money.
                   </p>
                 </div>
@@ -192,16 +216,16 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
                 <div className="pb-2 border-b border-gray-200">
                   <div className="flex items-start justify-between mb-0.5">
                     <a href="https://restub.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:bg-gray-50 transition-colors">
-                      <h3 className="text-xs sm:text-sm font-bold hover:text-blue-600" style={{ color: '#111827' }}>
+                      <h3 className="text-sm font-bold hover:text-blue-600" style={{ color: '#111827' }}>
                         ReStub – Digital Collection Platform (2024)
                       </h3>
                     </a>
                     <span className="text-[10px] font-medium px-2 py-0.5 bg-gray-100 text-gray-700 rounded inline-block">Hobby</span>
                   </div>
-                  <div className="text-[10px] sm:text-xs italic mb-1" style={{ color: '#4b5563' }}>
+                  <div className="text-xs italic mb-1" style={{ color: '#4b5563' }}>
                     restub.vercel.app
                   </div>
-                  <p className="text-[10px] sm:text-xs leading-relaxed" style={{ color: '#374151' }}>
+                  <p className="text-xs leading-relaxed" style={{ color: '#374151' }}>
                     Modern platform for logging, enhancing, and sharing live sports game experiences. Built with Next.js 15, Tailwind CSS, and TypeScript. Features AI-assisted event completion, user authentication, and shareable digital collections.
                   </p>
                 </div>
@@ -217,54 +241,55 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
               <div className="space-y-2">
                 <div className="pb-2 border-b border-gray-200">
                   <a href="https://oklahomawatch.org/2021/02/08/campaign-reserves" target="_blank" rel="noopener noreferrer" className="block hover:bg-gray-50 transition-colors">
-                    <h3 className="text-xs sm:text-sm font-bold mb-0.5 hover:text-blue-600" style={{ color: '#111827' }}>
+                    <h3 className="text-sm font-bold mb-0.5 hover:text-blue-600" style={{ color: '#111827' }}>
                       Campaign Finance Interactive Dashboard (Feb. 2021)
                     </h3>
                   </a>
-                  <div className="text-[10px] sm:text-xs italic mb-1" style={{ color: '#4b5563' }}>
+                  <div className="text-xs italic mb-1" style={{ color: '#4b5563' }}>
                     oklahomawatch.org/2021/02/08/campaign-reserves
                   </div>
-                  <p className="text-[10px] sm:text-xs leading-relaxed" style={{ color: '#374151' }}>
+                  <p className="text-xs leading-relaxed" style={{ color: '#374151' }}>
                     Tableau visualization analyzing campaign reserves across Oklahoma legislature. Interactive data presentation for complex political finance.
                   </p>
                 </div>
 
                 <div className="pb-2 border-b border-gray-200">
                   <a href="https://oklahomawatch.org/2021/11/18/redistricting-impact" target="_blank" rel="noopener noreferrer" className="block hover:bg-gray-50 transition-colors">
-                    <h3 className="text-xs sm:text-sm font-bold mb-0.5 hover:text-blue-600" style={{ color: '#111827' }}>
+                    <h3 className="text-sm font-bold mb-0.5 hover:text-blue-600" style={{ color: '#111827' }}>
                       Redistricting Impact Visualization (March 2022)
                     </h3>
                   </a>
-                  <div className="text-[10px] sm:text-xs italic mb-1" style={{ color: '#4b5563' }}>
+                  <div className="text-xs italic mb-1" style={{ color: '#4b5563' }}>
                     oklahomawatch.org/2021/11/18/redistricting-impact
                   </div>
-                  <p className="text-[10px] sm:text-xs leading-relaxed" style={{ color: '#374151' }}>
+                  <p className="text-xs leading-relaxed" style={{ color: '#374151' }}>
                     Mapped demographic shifts showing 50% reduction in Hispanic representation. Census data + GIS analysis to explain political implications.
                   </p>
                 </div>
 
                 <div className="pb-2">
                   <a href="https://oklahomawatch.org/oklahoma-covid-legacy-project" target="_blank" rel="noopener noreferrer" className="block hover:bg-gray-50 transition-colors">
-                    <h3 className="text-xs sm:text-sm font-bold mb-0.5 hover:text-blue-600" style={{ color: '#111827' }}>
+                    <h3 className="text-sm font-bold mb-0.5 hover:text-blue-600" style={{ color: '#111827' }}>
                       COVID-19 Digital Memorial (2020)
                     </h3>
                   </a>
-                  <div className="text-[10px] sm:text-xs italic mb-1" style={{ color: '#4b5563' }}>
+                  <div className="text-xs italic mb-1" style={{ color: '#4b5563' }}>
                     oklahomawatch.org/oklahoma-covid-legacy-project
                   </div>
-                  <p className="text-[10px] sm:text-xs leading-relaxed" style={{ color: '#374151' }}>
+                  <p className="text-xs leading-relaxed" style={{ color: '#374151' }}>
                     Community Champion Award winner from Institute for Nonprofit News. Created memorial database combining data collection with human stories.
                   </p>
                 </div>
               </div>
             </section>
+            </div>
           </div>
-        </div>
 
-        {/* Guides overlay for print */}
-        {showGuides && (
-          <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_0_0.75in_rgba(59,130,246,0.08)] print:hidden" />
-        )}
+          {/* Guides overlay for print */}
+          {showGuides && (
+            <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_0_0.75in_rgba(59,130,246,0.08)] print:hidden" />
+          )}
+        </div>
       </div>
 
       {/* Download buttons */}
