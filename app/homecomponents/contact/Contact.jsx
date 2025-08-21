@@ -5,7 +5,7 @@ import Links from "./Links";
 
 export default function Contact() {
   return (
-    <section id="contact" className="bg-gray-50 dark:bg-gray-900 flex flex-col pb-16">
+    <section id="contact" className="flex flex-col">
       <Header />
       <div className="flex flex-col gap-8">
         <Intro />

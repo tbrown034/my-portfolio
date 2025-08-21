@@ -7,7 +7,7 @@ import React from "react";
 
 const Data = () => {
   return (
-    <section id="data" className="bg-gray-50 dark:bg-gray-900 flex flex-col">
+    <section id="data" className="flex flex-col">
       <Header />
       <div className="flex flex-col gap-8">
         <Intro />

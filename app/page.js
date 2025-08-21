@@ -6,12 +6,22 @@ import Contact from "./homecomponents/contact/Contact.jsx";
 
 export default function Page() {
   return (
-    <main className="flex flex-col gap-8 scroll-smooth">
-      <Hero />
-      <Code />
-      <Data />
-      <Journalism />
-      <Contact />
+    <main className="flex flex-col scroll-smooth">
+      <div className="bg-slate-100 dark:bg-blue-950 py-12">
+        <Hero />
+      </div>
+      <div className="bg-slate-200 dark:bg-gray-950 py-12">
+        <Code />
+      </div>
+      <div className="bg-slate-100 dark:bg-blue-950 py-12">
+        <Data />
+      </div>
+      <div className="bg-slate-200 dark:bg-gray-950 py-12">
+        <Journalism />
+      </div>
+      <div className="bg-slate-100 dark:bg-blue-950 py-12">
+        <Contact />
+      </div>
     </main>
   );
 }

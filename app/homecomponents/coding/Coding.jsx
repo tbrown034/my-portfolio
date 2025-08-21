@@ -7,7 +7,7 @@ import React from "react";
 
 const Coding = () => {
   return (
-    <section id="coding" className="bg-white dark:bg-blue-950 flex flex-col">
+    <section id="coding" className="flex flex-col">
       <Header />
       <div className="flex flex-col gap-8">
         <Intro />
