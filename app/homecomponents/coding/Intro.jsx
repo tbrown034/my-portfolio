@@ -1,132 +1,89 @@
-export default function CodingIntro() {
-  const skills = [
-    "Full-Stack Development",
-    "API Integration",
-    "Database Design",
-    "Responsive UI/UX",
-    "Performance Optimization",
-    "Testing & Debugging",
+export default function Intro() {
+  const milestones = [
+    { year: "2001-2019", label: "Investigative Journalist", highlight: true },
+    { year: "2023", label: "Full-Stack Bootcamp Graduate", highlight: true },
+    {
+      year: "2024-Present",
+      label: "Developer & Data Visualizer",
+      highlight: false,
+    },
   ];
 
   return (
-    <section className="min-h-[50vh] flex flex-col justify-center px-6 sm:px-8 lg:px-12 xl:px-16 subSection">
-      <div className="max-w-7xl mx-auto w-full animate-fadeInUp">
-        {/* Section header - indented on larger screens */}
-        <div className="md:pl-12 lg:pl-16 mb-6">
-          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400 border-b border-gray-200 dark:border-gray-700 pb-2 inline-block">
-            My Coding Journey
+    <section>
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
+        {/* Subsection header */}
+        <div className="border-b border-gray-200 dark:border-gray-700 pb-2 mb-6">
+          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400">
+            Background
           </h2>
         </div>
 
-        {/* Main content - indented on larger screens */}
-        <div className="md:pl-12 lg:pl-16 space-y-6 max-w-4xl">
-          <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100">
-            From Copy to Code
-          </h3>
 
+        {/* Main content */}
+        <div className="max-w-4xl">
           <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
-            <p>
-              I started as editor-in-chief of{" "}
-              <a
-                href="https://www.idsnews.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200"
-              >
-                Indiana University's student newspaper
-              </a>{" "}
-              and spent the next 18-plus years as a journalist in several
-              states. My most recent work was as the statehouse reporter for the{" "}
-              <a
-                href="https://www.wyomingnews.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200"
-              >
-                Wyoming Tribune Eagle
-              </a>{" "}
-              and as an investigative reporter with{" "}
-              <a
-                href="https://oklahomawatch.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200"
-              >
-                Oklahoma Watch
-              </a>
-              , a nonprofit newsroom based out of Oklahoma City.
-            </p>
+              <p>
+                I started as editor-in-chief of{" "}
+                <a
+                  href="https://www.idsnews.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200"
+                >
+                  Indiana University's student newspaper
+                </a>{" "}
+                and spent the next 15-plus years as a journalist in several
+                states. My most recent work was as the statehouse reporter for
+                the{" "}
+                <a
+                  href="https://www.wyomingnews.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200"
+                >
+                  Wyoming Tribune Eagle
+                </a>{" "}
+                and as an investigative reporter with{" "}
+                <a
+                  href="https://oklahomawatch.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200"
+                >
+                  Oklahoma Watch
+                </a>
+                , a nonprofit newsroom based out of Oklahoma City.
+              </p>
 
-            <p>
-              Looking to expand beyond reporting, I graduated from{" "}
-              <a
-                href="https://bootcamp.outreach.ou.edu/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200"
-              >
-                OU Outreach's Fullstack Academy Web Development Bootcamp
-              </a>
-              , a 260-hour program that honed my skills in modern, full-stack
-              web technologies.
-            </p>
+              <p>
+                Looking to expand beyond reporting, I graduated from{" "}
+                <a
+                  href="https://bootcamp.outreach.ou.edu/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200"
+                >
+                  OU Outreach's Fullstack Academy Web Development Bootcamp
+                </a>
+                , a 260-hour program that honed my skills in modern, full-stack
+                web technologies.
+              </p>
 
-            <p>
-              Now I'm working at the intersection of journalism, technology,
-              politics and AI. I'm particularly interested in LLM integration
-              and exploring use cases that could transform how we gather, verify
-              and distribute information in journalism and political
-              communications.
-            </p>
-          </div>
-
-          {/* Key achievements */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
-            <div className="border-l-2 border-blue-800 pl-4 transition-all duration-300 hover:pl-6 hover:border-blue-600 hover:scale-105 group cursor-default">
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors duration-300">
-                Award-winning
-              </h4>
-              <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">
-                State reporter, investigative journalist
+              <p>
+                Now I'm working at the intersection of journalism, technology,
+                politics and AI. I'm particularly interested in LLM integration
+                and exploring use cases that could transform how we gather,
+                verify and distribute information.
+              </p>
+              
+              <p>
+                My core stack includes React, Next.js, TypeScript and PostgreSQL. But I'm always 
+                eager to adopt emerging tools – AI integrations, new frameworks, whatever best 
+                serves the user.
               </p>
             </div>
-            <div className="border-l-2 border-blue-800 pl-4 transition-all duration-300 hover:pl-6 hover:border-blue-600 hover:scale-105 group cursor-default">
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors duration-300">
-                Technical Skills
-              </h4>
-              <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">
-                Full-stack development, SEO, PPC
-              </p>
-            </div>
-            <div className="border-l-2 border-blue-800 pl-4 transition-all duration-300 hover:pl-6 hover:border-blue-600 hover:scale-105 group cursor-default">
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 text-sm group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors duration-300">
-                Unique Perspective
-              </h4>
-              <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">
-                Journalist's eye for detail and story
-              </p>
-            </div>
-          </div>
-
-          {/* Skills & Technologies section */}
-          <div className="mt-10 pt-8 border-t border-gray-200 dark:border-gray-700">
-            {/* Skills Section */}
-            <div className="mb-8">
-              <h4 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400 mb-4">
-                Core Skills
-              </h4>
-              <div className="flex flex-wrap gap-2">
-                {skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1.5 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-400 rounded-lg text-sm font-medium"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
+            
         </div>
       </div>
     </section>

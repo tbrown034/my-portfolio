@@ -11,7 +11,7 @@ export default function Mug() {
         
         {/* Photo container with prominent framing */}
         <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 p-1 rounded-full bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 dark:from-gray-600 dark:via-gray-700 dark:to-gray-800 shadow-2xl">
-          <div className="relative w-full h-full rounded-full overflow-hidden ring-4 ring-white dark:ring-gray-900">
+          <div className="relative w-full h-full rounded-full overflow-hidden ring-4 ring-white">
             <Image
               className="h-full w-full object-cover"
               src={photo}
@@ -30,7 +30,7 @@ export default function Mug() {
         <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-blue-500/10 to-gray-500/10 dark:from-blue-950/20 dark:to-gray-800/20 blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-700 animate-pulse-slow" />
         
         {/* Photo container with strong architectural framing */}
-        <div className="relative w-72 h-72 xl:w-80 xl:h-80 rounded-3xl overflow-hidden ring-2 ring-gray-300 dark:ring-gray-700 shadow-2xl dark:shadow-black/30 group-hover:ring-4 group-hover:ring-blue-500/20 dark:group-hover:ring-blue-400/20 transition-all duration-500">
+        <div className="relative w-72 h-72 xl:w-80 xl:h-80 rounded-3xl overflow-hidden ring-2 ring-gray-300 dark:ring-gray-300 shadow-2xl dark:shadow-black/30 group-hover:ring-4 group-hover:ring-blue-500/20 dark:group-hover:ring-blue-400/20 transition-all duration-500">
           <Image
             className="h-full w-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out"
             src={photo}

@@ -3,14 +3,14 @@ import HeroHeader from "./HeroHeader.jsx";
 import Intro from "./Intro";
 import Mug from "./Mug.jsx";
 import HeroLinks from "./HeroLinks";
-import HeroCTA from "../coding/HeroCTA";
-import HeroBuildSomething from "../coding/HeroBuildSomething";
+import HeroCTA from "./HeroCTA";
+import HeroBuildSomething from "./HeroBuildSomething";
 
 //Instructions: on
 
 export default function Hero() {
   return (
-    <main className="flex flex-col px-6 pb-0 pt-4 sm:px-8 lg:px-12 xl:px-16 fullSubsection">
+    <main className="flex flex-col px-6 pb-0 pt-4 sm:px-8 lg:px-12 xl:px-16 ">
       {/* Mobile layout (below md breakpoint) */}
       <section className="flex flex-col gap-4 md:hidden max-w-3xl mx-auto pt-8">
         <HeroHeader />

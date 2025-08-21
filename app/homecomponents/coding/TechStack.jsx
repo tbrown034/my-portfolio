@@ -10,11 +10,13 @@ import {
 export default function TechStack() {
   const skills = [
     "LLM Integration",
-    "Analytics",
-    "Marketing",
-    "Full-Stack Dev",
+    "API Development",
+    "Database Design",
+    "Analytics & SEO",
     "Data Visualization",
-    "SEO/PPC",
+    "Responsive Design",
+    "Version Control",
+    "Testing & Debugging",
   ];
 
   const techs = [
@@ -57,39 +59,54 @@ export default function TechStack() {
   ];
 
   return (
-    <section className="max-w-7xl mx-auto px-6 py-8 sm:px-8 lg:px-12 xl:px-16">
-      <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-6">
-        {/* Section header */}
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-          Skills & Technologies
-        </h2>
-
-        {/* Skills tags */}
-        <div className="flex flex-wrap gap-3 mb-8">
-          {skills.map((skill) => (
-            <span
-              key={skill}
-              className="px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium"
-            >
-              {skill}
-            </span>
-          ))}
+    <section className="pb-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
+        {/* Subsection header */}
+        <div className="border-b border-gray-200 dark:border-gray-700 pb-2 mb-6">
+          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400">
+            Skills & Technologies
+          </h2>
         </div>
 
-        {/* Tech Icons Grid */}
-        <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
-          {techs.map((tech) => (
-            <div
-              key={tech.name}
-              className="group flex flex-col items-center justify-center p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-md transition-all duration-200"
-              title={tech.description}
-            >
-              <tech.Icon className="w-8 h-8 mb-2 text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200" />
-              <span className="text-xs font-medium text-center text-gray-600 dark:text-gray-400">
-                {tech.name}
-              </span>
+        {/* Main content container */}
+        <div className="space-y-10">
+          {/* Skills tags */}
+          <div>
+            <h3 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400 mb-4">
+              Core Competencies
+            </h3>
+            <div className="flex flex-wrap gap-3">
+              {skills.map((skill) => (
+                <span
+                  key={skill}
+                  className="px-3 py-1.5 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-400 rounded-lg text-sm font-medium"
+                >
+                  {skill}
+                </span>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Tech Icons Grid */}
+          <div>
+            <h3 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400 mb-4">
+              Technology Stack
+            </h3>
+            <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
+              {techs.map((tech) => (
+                <div
+                  key={tech.name}
+                  className="group flex flex-col items-center justify-center p-4 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-md transition-all duration-200"
+                  title={tech.description}
+                >
+                  <tech.Icon className="w-8 h-8 mb-2 text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200" />
+                  <span className="text-xs font-medium text-center text-gray-600 dark:text-gray-400">
+                    {tech.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

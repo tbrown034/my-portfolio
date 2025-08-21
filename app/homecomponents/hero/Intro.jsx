@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Mug from "./Mug";
-import HeroBuildSomething from "../coding/HeroBuildSomething";
+import HeroBuildSomething from "./HeroBuildSomething";
 
 export default function Intro({ showDesktopLayout }) {
   // Desktop layout for large screens (2 columns)
