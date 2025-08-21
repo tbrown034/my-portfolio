@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { SOCIAL_LINKS, PERSONAL_INFO } from "@/lib/constants";
 
-export default function ContactLinks() {
+export default function Links() {
   const [copiedItem, setCopiedItem] = useState("");
 
   const copyToClipboard = (text, item) => {
@@ -12,16 +12,17 @@ export default function ContactLinks() {
   };
 
   return (
-    <div className="mt-8">
-      {/* Direct contact header */}
-      <div className="border-b border-gray-200 dark:border-gray-700 pb-2 mb-6">
-        <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400">
-          Direct Contact
-        </h2>
-      </div>
-      <div className="grid gap-3 max-w-2xl">
+    <section className="pb-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
+        {/* Subsection header */}
+        <div className="border-b border-gray-200 dark:border-gray-700 pb-2 mb-6">
+          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400">
+            Direct Contact
+          </h2>
+        </div>
+        <div className="flex flex-wrap gap-6 max-w-4xl">
         {/* Email */}
-        <div className="flex items-center justify-between p-4 border-l-2 border-blue-800 bg-white dark:bg-gray-800 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:border-l-4 group">
+        <div className="flex-1 flex items-center justify-between p-4 border-l-2 border-blue-800 bg-white dark:bg-gray-800 rounded-lg transition-all duration-300 hover:shadow-md hover:border-l-4">
           <a
             href={`mailto:${PERSONAL_INFO.email}`}
             className="flex items-center gap-3 group"
@@ -86,7 +87,7 @@ export default function ContactLinks() {
         </div>
 
         {/* LinkedIn */}
-        <div className="flex items-center justify-between p-4 border-l-2 border-blue-800 bg-white dark:bg-gray-800 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:border-l-4 group">
+        <div className="flex-1 flex items-center justify-between p-4 border-l-2 border-blue-800 bg-white dark:bg-gray-800 rounded-lg transition-all duration-300 hover:shadow-md hover:border-l-4">
           <a
             href={SOCIAL_LINKS.linkedin}
             target="_blank"
@@ -149,7 +150,7 @@ export default function ContactLinks() {
         </div>
 
         {/* Bluesky */}
-        <div className="flex items-center justify-between p-4 border-l-2 border-blue-800 bg-white dark:bg-gray-800 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:border-l-4 group">
+        <div className="flex-1 flex items-center justify-between p-4 border-l-2 border-blue-800 bg-white dark:bg-gray-800 rounded-lg transition-all duration-300 hover:shadow-md hover:border-l-4">
           <a
             href={SOCIAL_LINKS.bluesky}
             target="_blank"
@@ -211,6 +212,7 @@ export default function ContactLinks() {
           </button>
         </div>
       </div>
-    </div>
+      </div>
+    </section>
   );
 }

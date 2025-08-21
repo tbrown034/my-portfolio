@@ -12,7 +12,7 @@ export const clips = [
     id: 1,
     headline:
       "The Misinformation Election: Lies, Conspiracy Theories Prominent in Many GOP Races",
-    text: "PRYOR — Devon Garly spoke up about halfway through Jackson Lahmeyer’s speech.",
+    text: "How election denial and conspiracy theories moved from the fringe into Oklahoma's 2022 GOP races – and what that meant for voters and democracy.",
     image: misinfo,
     publication: "Oklahoma Watch",
     date: "June 6, 2022",
@@ -24,7 +24,7 @@ export const clips = [
     id: 2,
     headline:
       "Twenty Years After It Became a Crime, Racial Profiling Charges Remain Scarce",
-    text: "Friday will mark the 20th anniversary of the passage of a state law that for the first time explicitly banned racial profiling by law enforcement agencies.",
+    text: "Twenty years after Oklahoma criminalized racial profiling, complaints rose yet none were substantiated – a look at the data gaps and accountability failures built into the system.",
     image: profling,
     publication: "Oklahoma Watch",
     date: "June 2, 2020",
@@ -38,7 +38,7 @@ export const clips = [
     id: 3,
     headline:
       "Oklahoma Hospitals Sue Thousands Each Year Over Unpaid Medical Bills",
-    text: "It was not a call that  Rabekah Crow expected. The Bartlesville resident was working  at her job as a Phillips 66 help-desk agent  in spring 2018 when an unfamiliar number  flashed across her  caller ID.",
+    text: "Oklahoma hospitals have sued thousands of patients over unpaid medical bills – who files the most cases and what that looks like for families on the other end.",
     image: hospitals,
     date: "August 7, 2019",
 
@@ -49,8 +49,8 @@ export const clips = [
   },
   {
     id: 4,
-    headline: "Where Dark Money Flowed in Oklahoma’s Legislative Races",
-    text: "In the days and weeks leading up to election day, dark money groups pumped hundreds of thousands of dollars into key Oklahoma legislative races, with the vast majority of the money helping Republican candidates.",
+    headline: "Where Dark Money Flowed in Oklahoma's Legislative Races",
+    text: "Tracking nearly $1 million in dark-money spending in 2020 legislative races – who spent it, where it went and how it shaped close contests.",
     image: darkMoney,
     date: "January 13, 2022",
 
@@ -62,8 +62,8 @@ export const clips = [
   {
     id: 5,
     headline:
-      "No Comment: In Oklahoma’s Legislature, Public Rarely Given Chance to Weigh In",
-    text: "It took one minute and 55 seconds for an Oklahoma House legislative committee to give the green light to a bill that would make it easier for teachers to carry guns in classrooms.",
+      "No Comment: In Oklahoma's Legislature, Public Rarely Given Chance to Weigh In",
+    text: "Committees moved high-impact bills in minutes with little debate – a Sunshine Week look at how public comment gets sidelined at the Capitol.",
     date: "February 11, 2022",
 
     image: comment,
@@ -76,7 +76,7 @@ export const clips = [
     id: 6,
     headline:
       "In Remembering OKC Bombing Victims, Experts See Lessons for Grieving COVID Losses",
-    text: "Robin Gurwitch knows all too well about loss. ",
+    text: "Lessons from the Oklahoma City bombing for grieving during COVID – how counselors apply what they learned when rituals and timelines are disrupted.",
     image: okcBombing,
     date: "February 11, 2022",
 

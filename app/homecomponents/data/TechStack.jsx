@@ -1,11 +1,11 @@
 import {
-  SiD3Dotjs,
+  SiMicrosoftexcel,
   SiPython,
   SiTableau,
-  SiObservable,
-  SiPostgresql,
-  SiR
+  SiChartdotjs,
+  SiPostgresql
 } from "react-icons/si";
+import { FaChartBar } from "react-icons/fa";
 
 export default function TechStack() {
   const skills = [
@@ -19,10 +19,10 @@ export default function TechStack() {
 
   const techs = [
     {
-      name: "D3.js",
-      Icon: SiD3Dotjs,
+      name: "Excel",
+      Icon: SiMicrosoftexcel,
       description:
-        "JavaScript library for creating dynamic, interactive data visualizations in web browsers.",
+        "Industry-standard spreadsheet tool for data analysis, pivot tables, and quick visualizations.",
     },
     {
       name: "Python",
@@ -37,10 +37,10 @@ export default function TechStack() {
         "Business intelligence tool for creating interactive dashboards and data stories.",
     },
     {
-      name: "Observable",
-      Icon: SiObservable,
+      name: "Chart.js",
+      Icon: SiChartdotjs,
       description:
-        "Collaborative platform for creating interactive data visualizations and notebooks.",
+        "Simple yet flexible JavaScript charting library for creating responsive data visualizations.",
     },
     {
       name: "SQL",
@@ -49,10 +49,10 @@ export default function TechStack() {
         "Query language for managing and analyzing relational databases efficiently.",
     },
     {
-      name: "R",
-      Icon: SiR,
+      name: "Datawrapper",
+      Icon: FaChartBar,
       description:
-        "Statistical computing language specialized for data analysis and visualization.",
+        "User-friendly tool for creating embeddable charts and maps for digital journalism.",
     },
   ];
 

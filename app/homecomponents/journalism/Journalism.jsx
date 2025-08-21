@@ -1,13 +1,17 @@
-import Intro from "./JournalismIntro.jsx";
-import TechStack from "./JournalismTechStack.jsx";
-import Clips from "./JournalismClips.jsx";
+import Header from "./Header";
+import Intro from "./Intro";
+import Awards from "./Awards";
+import Clips from "./Clips";
 
-export default function page() {
+export default function Journalism() {
   return (
-    <section className="bg-gray-100 dark:bg-gray-800/50">
-      <Intro />
-      <TechStack />
-      <Clips />
+    <section id="journalism" className="bg-white dark:bg-blue-950 flex flex-col">
+      <Header />
+      <div className="flex flex-col gap-8">
+        <Intro />
+        <Awards />
+        <Clips />
+      </div>
     </section>
   );
 }

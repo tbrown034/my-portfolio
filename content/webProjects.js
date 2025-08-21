@@ -16,7 +16,7 @@ export const webProjects = [
       "Vercel",
     ],
     description:
-      "Fully rebuilt and manage the website for a dental practice, including SEO, content, and $2K/month ad campaigns that doubled revenue over the past year. Built with Next.js and optimized for performance, search visibility, and lead conversion.",
+      "I took over a failing ad campaign and defunct website for a dentist in Naperville, IL. Built a modern Next.js site from scratch with a blog, practice highlights, and an appointment request form that instantly notifies the doctor. Took over $2K/month ad budget and more than tripled new patient revenue in the last year by leading Google Ads campaigns with Google Analytics and Google Tag Manager for detailed conversion tracking.",
     githubLink: "https://github.com/tbrown034/kab-dentist-2024",
     siteLink: "https://keithbrowndds.com/",
   },
@@ -35,7 +35,7 @@ export const webProjects = [
       "OpenAI API",
     ],
     description:
-      "AI-powered food freshness tracker with receipt scanning, expiry alerts, and waste analytics. Uses the OpenAI API for intelligent shelf-life detection and personalized suggestions to reduce waste and save money.",
+      "Tired of buying and wasting food, I developed My Expiry. It allows users to quickly track what food they have, get recommended shelf-life times and storage tips. Users can return to see if their food is still fresh, near deadline, or needs to go. Built with Next.js, TypeScript, PostgreSQL, and OpenAI API for intelligent food management.",
     githubLink: "https://github.com/tbrown034/my-expiry",
     siteLink: "https://my-expiry.vercel.app/",
   },
@@ -54,7 +54,7 @@ export const webProjects = [
       "TMDB API",
     ],
     description:
-      "A sleek platform for curating and sharing your favorite entertainment picks of the year. Create beautiful lists of movies, TV shows, and music with TMDB API integration. Built with Next.js 15, PostgreSQL, and Prisma for a seamless user experience.",
+      "This Letterboxd-inspired platform allows users to search, view, and add movies and TV shows to their personal lists. Recently added OpenAI integration so once you've built a list of shows or movies, you can get AI-powered recommendations for what to watch next. Features TMDB API for comprehensive media data, PostgreSQL for data persistence, and a sleek interface built with Next.js 15 and Prisma.",
     githubLink: "https://github.com/tbrown034/ReflectYr",
     siteLink: "https://reflectyr.vercel.app/",
   },
@@ -72,7 +72,7 @@ export const webProjects = [
       "React 19",
     ],
     description:
-      "Modern platform for logging, enhancing, and sharing live sports game experiences. Built with Next.js 15, Tailwind CSS, and TypeScript. Features AI-assisted event completion, user authentication, and shareable digital collections.",
+      "I was talking to a friend about a baseball game we went to a few years ago and we couldn't remember the score. That gave me the idea for ReStub – an app that lets users enter details of MLB, NBA, NFL, and NHL games they attended, no matter how far back. Uses Anthropic AI integration to automatically look up and fill in missing game details. Still a work in progress, hoping to add photo upload feature soon.",
     githubLink: "https://github.com/tbrown034/restub",
     siteLink: "https://restub.vercel.app/",
   },

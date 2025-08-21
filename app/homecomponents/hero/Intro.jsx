@@ -60,7 +60,7 @@ export default function Intro({ showDesktopLayout }) {
             <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mt-4">
               Whether I'm digging into public records or architecting a React
               application, my guiding principle is the same: make truth and
-              information accessible, and make the experience seamless.
+              information accessible and make the experience seamless.
             </p>
 
             {/* Let's build something together link - desktop only */}
@@ -141,7 +141,7 @@ export default function Intro({ showDesktopLayout }) {
             <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
               Whether I'm digging into public records or architecting a React
               application, my guiding principle is the same: make truth and
-              information accessible, and make the experience seamless.
+              information accessible and make the experience seamless.
             </p>
           </div>
         </div>

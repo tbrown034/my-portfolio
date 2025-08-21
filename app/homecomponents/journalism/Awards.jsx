@@ -1,0 +1,85 @@
+"use client";
+import { useState } from "react";
+import { awards } from "@content/awards.js";
+
+export default function Awards() {
+  const [showAll, setShowAll] = useState(false);
+  
+  // Get unique years and sort them descending
+  const years = [...new Set(awards.map(award => award.year))].sort((a, b) => b - a);
+  
+  // Filter years to show (2022-2020 by default, all if showAll is true)
+  const visibleYears = showAll ? years : years.filter(year => year >= 2020 && year <= 2022);
+  const hiddenYears = years.filter(year => year < 2020);
+  
+  return (
+    <section className="pb-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
+        {/* Subsection header */}
+        <div className="border-b border-gray-200 dark:border-gray-700 pb-2 mb-6">
+          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400">
+            Recognition & Awards
+          </h2>
+        </div>
+
+        {/* Awards by year */}
+        <div className="space-y-8">
+          {visibleYears.map(year => (
+            <div key={year}>
+              {/* Year header */}
+              <h3 className="text-sm font-bold text-gray-900 dark:text-gray-100 mb-4">
+                {year}
+              </h3>
+              
+              {/* Awards for this year */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {awards
+                  .filter(award => award.year === year)
+                  .map((award, index) => (
+                    <div 
+                      key={index}
+                      className="border-l-2 border-blue-800 dark:border-blue-400 pl-4 py-2 hover:pl-6 transition-all duration-300"
+                    >
+                      <div className="space-y-1">
+                        <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                          {award.award}
+                        </h4>
+                        <p className="text-xs text-gray-600 dark:text-gray-400">
+                          {award.article}
+                        </p>
+                        <p className="text-xs text-gray-500 dark:text-gray-500">
+                          {award.organization}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Show More/Less button */}
+        {hiddenYears.length > 0 && !showAll && (
+          <div className="flex justify-center mt-6">
+            <button
+              className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-blue-800 bg-gray-100 border border-gray-300 rounded-lg dark:text-blue-50 dark:bg-gray-700 dark:border-gray-600 hover:bg-gray-200 hover:border-gray-400 active:bg-gray-300 focus:bg-gray-200 dark:hover:bg-gray-600 dark:hover:border-gray-500 focus:outline-none focus:ring focus:ring-gray-400 cursor-pointer transition-colors duration-200"
+              onClick={() => setShowAll(true)}
+            >
+              Show More
+            </button>
+          </div>
+        )}
+        {showAll && (
+          <div className="flex justify-center mt-6">
+            <button
+              className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-blue-800 border border-blue-800 rounded-lg dark:text-blue-950 dark:bg-blue-50 dark:border-blue-50 hover:bg-blue-600 hover:border-blue-600 active:bg-blue-950 focus:bg-blue-500 dark:hover:bg-blue-200 dark:hover:border-blue-200 focus:outline-none focus:ring focus:ring-blue-400 cursor-pointer transition-colors duration-200"
+              onClick={() => setShowAll(false)}
+            >
+              Show Less
+            </button>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}

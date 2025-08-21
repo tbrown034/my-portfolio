@@ -23,7 +23,7 @@ export default function Footer() {
         {/* Bottom copyright */}
         <div className="mt-8 pt-8 border-t border-gray-100 dark:border-gray-800/50">
           <p className="text-xs text-gray-500 dark:text-gray-500 text-center md:text-left">
-            © {new Date().getFullYear()} Trevor Brown. Built with Next.js and Tailwind CSS.
+            © {new Date().getFullYear()} Trevor Brown.
           </p>
         </div>
       </div>

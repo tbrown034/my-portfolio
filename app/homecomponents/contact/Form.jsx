@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function ContactForm() {
+export default function Form() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -59,8 +59,10 @@ export default function ContactForm() {
   // Show success message after form submission
   if (status === "success") {
     return (
-      <div className="mt-8 max-w-2xl animate-fadeIn">
-        <div className="bg-green-50 dark:bg-green-900/20 p-8 rounded-2xl border-2 border-green-200 dark:border-green-800 animate-slideUp">
+      <section className="pb-8">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
+          <div className="max-w-4xl animate-fadeIn">
+            <div className="bg-green-50 dark:bg-green-900/20 p-8 rounded-2xl border-2 border-green-200 dark:border-green-800 animate-slideUp">
           <div className="flex items-start gap-4">
             <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900/40 animate-scaleIn">
               <svg
@@ -102,16 +104,27 @@ export default function ContactForm() {
             </div>
           </div>
         </div>
-      </div>
+          </div>
+        </div>
+      </section>
     );
   }
 
   return (
-    <form
-      id="contact-form"
-      onSubmit={handleSubmit}
-      className="mt-8 space-y-6 max-w-2xl"
-    >
+    <section className="pb-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
+        {/* Subsection header */}
+        <div className="border-b border-gray-200 dark:border-gray-700 pb-2 mb-6">
+          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400">
+            Send a Message
+          </h2>
+        </div>
+        
+        <form
+          id="contact-form"
+          onSubmit={handleSubmit}
+          className="space-y-6 max-w-4xl"
+        >
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
           <label
@@ -205,5 +218,7 @@ export default function ContactForm() {
         {status === "loading" ? "Sending..." : "Send Message"}
       </button>
     </form>
+      </div>
+    </section>
   );
 }

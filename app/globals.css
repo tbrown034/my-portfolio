@@ -9,6 +9,10 @@
     text-rendering: optimizeLegibility;
   }
   
+  html {
+    scroll-padding-top: 80px; /* Account for sticky header */
+  }
+  
   body {
     font-feature-settings: "kern" 1, "liga" 1;
   }
