@@ -37,7 +37,7 @@ export default function HeroLinks() {
         </Link>
 
         <Link
-          href="#dataviz"
+          href="#data"
           className="group p-4 border-b-2 border-gray-200 dark:border-gray-700 hover:border-blue-800 dark:hover:border-blue-300 transition-colors"
         >
           <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">

@@ -1,58 +1,58 @@
 import {
-  SiNextdotjs,
-  SiReact,
-  SiTypescript,
-  SiJavascript,
+  SiD3Dotjs,
+  SiPython,
+  SiTableau,
+  SiObservable,
   SiPostgresql,
-  SiTailwindcss,
+  SiR
 } from "react-icons/si";
 
 export default function TechStack() {
   const skills = [
-    "LLM Integration",
-    "API Development",
-    "Database Design",
-    "Analytics & SEO",
+    "Data Analysis",
+    "Statistical Modeling",
     "Data Visualization",
-    "Responsive Design",
+    "Public Records",
+    "Interactive Graphics",
+    "Database Queries",
   ];
 
   const techs = [
     {
-      name: "Next.js",
-      Icon: SiNextdotjs,
+      name: "D3.js",
+      Icon: SiD3Dotjs,
       description:
-        "Full-stack React framework with server-side rendering, routing, and optimal performance.",
+        "JavaScript library for creating dynamic, interactive data visualizations in web browsers.",
     },
     {
-      name: "React",
-      Icon: SiReact,
+      name: "Python",
+      Icon: SiPython,
       description:
-        "Component-based UI library for building interactive user interfaces with modern patterns.",
+        "Versatile programming language with powerful data analysis and visualization libraries.",
     },
     {
-      name: "TypeScript",
-      Icon: SiTypescript,
+      name: "Tableau",
+      Icon: SiTableau,
       description:
-        "Type-safe JavaScript that improves code quality and developer experience in larger projects.",
+        "Business intelligence tool for creating interactive dashboards and data stories.",
     },
     {
-      name: "JavaScript",
-      Icon: SiJavascript,
+      name: "Observable",
+      Icon: SiObservable,
       description:
-        "Dynamic programming language for building interactive web applications and server-side logic.",
+        "Collaborative platform for creating interactive data visualizations and notebooks.",
     },
     {
-      name: "PostgreSQL",
+      name: "SQL",
       Icon: SiPostgresql,
       description:
-        "Powerful relational database for complex data relationships and reliable data storage.",
+        "Query language for managing and analyzing relational databases efficiently.",
     },
     {
-      name: "Tailwind CSS",
-      Icon: SiTailwindcss,
+      name: "R",
+      Icon: SiR,
       description:
-        "Utility-first CSS framework for rapid UI development with consistent design systems.",
+        "Statistical computing language specialized for data analysis and visualization.",
     },
   ];
 
@@ -77,7 +77,7 @@ export default function TechStack() {
               {skills.map((skill) => (
                 <span
                   key={skill}
-                  className="px-3 py-1.5 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-400 rounded-lg text-sm font-medium"
+                  className="px-3 py-1.5 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-400 rounded-lg text-sm font-medium"
                 >
                   {skill}
                 </span>
@@ -94,10 +94,10 @@ export default function TechStack() {
               {techs.map((tech) => (
                 <div
                   key={tech.name}
-                  className="group flex flex-col items-center justify-center p-4 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-md transition-all duration-200"
+                  className="group flex flex-col items-center justify-center p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-md transition-all duration-200"
                   title={tech.description}
                 >
-                  <tech.Icon className="w-8 h-8 mb-2 text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200" />
+                  <tech.Icon className="w-8 h-8 mb-2 text-gray-700 dark:text-gray-300 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors duration-200" />
                   <span className="text-xs font-medium text-center text-gray-600 dark:text-gray-400">
                     {tech.name}
                   </span>
