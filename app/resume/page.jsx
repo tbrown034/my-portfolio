@@ -6,20 +6,42 @@ import ClipsPage from "./components/ClipsPage.jsx";
 
 export default function ResumePageLayout() {
   return (
-    <main className="min-h-screen bg-white text-black dark:bg-white dark:text-black">
+    <main className="min-h-screen bg-slate-100 dark:bg-blue-950">
       {/* Toolbar */}
-      <div className="no-print sticky top-0 z-10 bg-white/90 backdrop-blur border-b border-gray-200">
-        <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
+      <div className="no-print sticky top-0 z-10 bg-white/90 dark:bg-blue-950/90 backdrop-blur border-b border-gray-200 dark:border-gray-700">
+        <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <h1 className="text-sm font-medium tracking-wider uppercase text-gray-600 letter-spacing-wide">Experience & Highlights</h1>
+            <h1 className="text-sm font-medium tracking-wider uppercase text-gray-600 dark:text-gray-400 letter-spacing-wide">Experience & Highlights</h1>
           </div>
           <div className="flex items-center gap-3">
             <Link
               href="/"
-              className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+              className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
             >
               ← Back
             </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Header Section - Editorial Style */}
+      <div className="no-print px-6 sm:px-8 lg:px-12 xl:px-16 py-8 bg-white dark:bg-blue-900">
+        <div className="max-w-7xl mx-auto">
+          <div>
+            <div className="text-xs font-bold uppercase tracking-[0.15em] text-indigo-800 dark:text-indigo-400 mb-2">
+              Professional Documents
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-montserrat text-gray-900 dark:text-gray-100 mb-2">
+              Resume & Selected Works
+            </h2>
+            <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mb-6">
+              A comprehensive overview of my professional experience, showcasing journalism excellence, 
+              technical expertise, and visual storytelling capabilities.
+            </p>
+            <div className="space-y-1">
+              <div className="border-t-2 border-gray-900 dark:border-gray-100"></div>
+              <div className="border-t border-gray-900 dark:border-gray-100"></div>
+            </div>
           </div>
         </div>
       </div>

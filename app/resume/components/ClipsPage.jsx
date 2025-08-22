@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import { useDocumentScaling } from "@/app/hooks/useDocumentScaling";
+import { graphics } from "@/content/visualizations.js";
 
 export default function SelectedWorksResponsive({ showGuides = false }) {
   const [isExporting, setIsExporting] = useState(false);
@@ -97,7 +98,7 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
           }}
         >
           {/* Content with fixed padding for consistent layout */}
-          <div className="p-12 h-full overflow-hidden print:overflow-visible" style={{ padding: "0.75in" }}>
+          <div className="p-12 h-full overflow-hidden print:overflow-visible" style={{ padding: "0.3in 0.75in 0.75in 0.75in" }}>
             {/* Header */}
             <header className="text-center mb-4 pb-2 border-b border-gray-300">
               <h1 className="text-xl font-bold tracking-wider text-gray-900 mb-1 uppercase">
@@ -138,7 +139,7 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
                     (June 2022) oklahomawatch.org/2022/06/06/the-misinformation-election
                   </div>
                   <p className="text-xs leading-relaxed" style={{ color: '#374151' }}>
-                    Fact-checking investigation analyzing disinformation patterns across 50+ primary races. Shows ability to verify claims at scale – essential for wire service accuracy.
+                    Fact-checking investigation analyzing disinformation patterns across 50+ primary races.
                   </p>
                 </div>
 
@@ -152,7 +153,7 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
                     (June 2020) oklahomawatch.org/2020/06/02/racial-profiling-charges-remain-scarce
                   </div>
                   <p className="text-xs leading-relaxed" style={{ color: '#374151' }}>
-                    Analyzed 20 years of court data to reveal enforcement gaps. Combined FOIA requests, database queries, and interviews.
+                    Analyzed 20 years of court data to reveal enforcement gaps. Combined FOIA request and interviews.
                   </p>
                 </div>
 
@@ -239,47 +240,32 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
               </h2>
 
               <div className="space-y-2">
-                <div className="pb-2 border-b border-gray-200">
-                  <a href="https://oklahomawatch.org/2021/02/08/campaign-reserves" target="_blank" rel="noopener noreferrer" className="block hover:bg-gray-50 transition-colors">
-                    <h3 className="text-sm font-bold mb-0.5 hover:text-blue-600" style={{ color: '#111827' }}>
-                      Campaign Finance Interactive Dashboard (Feb. 2021)
-                    </h3>
-                  </a>
-                  <div className="text-xs italic mb-1" style={{ color: '#4b5563' }}>
-                    oklahomawatch.org/2021/02/08/campaign-reserves
-                  </div>
-                  <p className="text-xs leading-relaxed" style={{ color: '#374151' }}>
-                    Tableau visualization analyzing campaign reserves across Oklahoma legislature. Interactive data presentation for complex political finance.
-                  </p>
-                </div>
-
-                <div className="pb-2 border-b border-gray-200">
-                  <a href="https://oklahomawatch.org/2021/11/18/redistricting-impact" target="_blank" rel="noopener noreferrer" className="block hover:bg-gray-50 transition-colors">
-                    <h3 className="text-sm font-bold mb-0.5 hover:text-blue-600" style={{ color: '#111827' }}>
-                      Redistricting Impact Visualization (March 2022)
-                    </h3>
-                  </a>
-                  <div className="text-xs italic mb-1" style={{ color: '#4b5563' }}>
-                    oklahomawatch.org/2021/11/18/redistricting-impact
-                  </div>
-                  <p className="text-xs leading-relaxed" style={{ color: '#374151' }}>
-                    Mapped demographic shifts showing 50% reduction in Hispanic representation. Census data + GIS analysis to explain political implications.
-                  </p>
-                </div>
-
-                <div className="pb-2">
-                  <a href="https://oklahomawatch.org/oklahoma-covid-legacy-project" target="_blank" rel="noopener noreferrer" className="block hover:bg-gray-50 transition-colors">
-                    <h3 className="text-sm font-bold mb-0.5 hover:text-blue-600" style={{ color: '#111827' }}>
-                      COVID-19 Digital Memorial (2020)
-                    </h3>
-                  </a>
-                  <div className="text-xs italic mb-1" style={{ color: '#4b5563' }}>
-                    oklahomawatch.org/oklahoma-covid-legacy-project
-                  </div>
-                  <p className="text-xs leading-relaxed" style={{ color: '#374151' }}>
-                    Community Champion Award winner from Institute for Nonprofit News. Created memorial database combining data collection with human stories.
-                  </p>
-                </div>
+                {graphics.slice(0, 3).map((viz, index) => {
+                  const graphicLink = Array.isArray(viz.graphicLink) ? viz.graphicLink[0] : viz.graphicLink;
+                  return (
+                    <div key={viz.id} className={`pb-2 ${index < 2 ? 'border-b border-gray-200' : ''}`}>
+                      <a href={graphicLink} target="_blank" rel="noopener noreferrer" className="block hover:bg-gray-50 transition-colors">
+                        <h3 className="text-xs font-bold mb-0.5 hover:text-blue-600" style={{ color: '#111827' }}>
+                          {viz.headline}
+                        </h3>
+                      </a>
+                      <p className="text-xs leading-relaxed mb-1" style={{ color: '#374151' }}>
+                        {viz.summary || viz.text}
+                      </p>
+                      <div className="text-xs" style={{ color: '#4b5563' }}>
+                        <a href={graphicLink} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
+                          Visualization
+                        </a>
+                        {' • '}
+                        <a href={viz.siteLink} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
+                          Article
+                        </a>
+                        <span className="mx-2">|</span>
+                        {viz.publication}, {viz.date}
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </section>
             </div>
