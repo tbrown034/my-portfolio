@@ -78,14 +78,13 @@ export default function Intro({ showDesktopLayout }) {
     <section className="space-y-4">
       {/* About Me Section */}
       <div className="space-y-3">
-        <h2 className="text-xs font-bold uppercase tracking-[0.15em] text-gray-500 dark:text-gray-500">
-          About Me
-        </h2>
-
         {/* Mobile image placement */}
         <div className="flex justify-center my-6 md:hidden">
           <Mug />
         </div>
+        <h2 className="text-xs font-bold uppercase tracking-[0.15em] text-gray-500 dark:text-gray-500">
+          About Me
+        </h2>
 
         {/* Main content */}
         <div className="space-y-4 max-w-4xl">
