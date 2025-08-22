@@ -13,7 +13,7 @@ export default function Intro() {
     <section>
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* Subsection header */}
-        <div className="border-b border-gray-200 dark:border-gray-700 pb-2 mb-6">
+        <div className="border-b border-gray-300 dark:border-gray-600 pb-2 mb-6">
           <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400">
             Background
           </h2>

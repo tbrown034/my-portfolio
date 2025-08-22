@@ -59,18 +59,11 @@ export default function TechStack() {
   return (
     <section className="pb-8">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
-        {/* Subsection header */}
-        <div className="border-b border-gray-200 dark:border-gray-700 pb-2 mb-6">
-          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400">
-            Skills & Technologies
-          </h2>
-        </div>
-
         {/* Main content container */}
         <div className="space-y-10">
           {/* Skills tags */}
           <div>
-            <h3 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400 mb-4">
+            <h3 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400 pb-2 mb-4 border-b border-gray-300 dark:border-gray-600">
               Core Competencies
             </h3>
             <div className="flex flex-wrap gap-3">
@@ -87,7 +80,7 @@ export default function TechStack() {
 
           {/* Tech Icons Grid */}
           <div>
-            <h3 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400 mb-4">
+            <h3 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400 pb-2 mb-4 border-b border-gray-300 dark:border-gray-600">
               Technology Stack
             </h3>
             <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
