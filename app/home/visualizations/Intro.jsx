@@ -13,7 +13,7 @@ export default function Intro() {
         <div className="max-w-4xl">
           <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
           <p>
-            I've always thought of myself as a data-driven reporter through the years – whether teaching myself the cooler parts of Excel, or learning Datawrapper, Tableau and other visualization tools. Data storytelling has been a constant thread in my journalism career.
+            I've always thought of myself as a data-driven reporter through the years – whether teaching myself the cooler parts of Excel, or learning Datawrapper, Tableau and other visualization tools. Visual storytelling has been a constant thread in my journalism career.
           </p>
           
               <p>
@@ -21,7 +21,7 @@ export default function Intro() {
               </p>
               
               <p>
-                My approach centers on making complex data accessible through interactive visualizations, 
+                My approach centers on making complex information accessible through interactive visualizations, 
                 always with an eye toward clarity and user experience. Whether it's election results, 
                 budget analysis, or demographic trends, the goal is always the same: help people understand 
                 what the numbers actually mean.

@@ -4,9 +4,6 @@ import Intro from "./Intro";
 import Mug from "./Mug.jsx";
 import HeroLinks from "./HeroLinks";
 import HeroCTA from "./HeroCTA";
-import HeroBuildSomething from "./HeroBuildSomething";
-
-//Instructions: on
 
 export default function Hero() {
   return (

@@ -5,9 +5,9 @@ import TechStack from "./TechStack";
 
 import React from "react";
 
-const Data = () => {
+const Visualizations = () => {
   return (
-    <section id="data" className="flex flex-col">
+    <section id="visualizations" className="flex flex-col">
       <Header />
       <div className="flex flex-col gap-8">
         <Intro />
@@ -18,4 +18,4 @@ const Data = () => {
   );
 };
 
-export default Data;
+export default Visualizations;

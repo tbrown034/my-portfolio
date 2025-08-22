@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { clips } from "@content/journalismProjects.js";
+import { clips } from "@content/journalism.js";
 
 export default function Clips() {
   const [showAll, setShowAll] = useState(false);

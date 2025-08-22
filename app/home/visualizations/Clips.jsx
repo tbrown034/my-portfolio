@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { graphics } from "@content/dataProjects.js";
+import { graphics } from "@content/visualizations.js";
 
 export default function Clips() {
   return (
@@ -26,7 +26,7 @@ export default function Clips() {
                     <div className="flex items-center gap-2 text-xs">
                       {/* Program tag */}
                       <span className="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-400 rounded font-medium">
-                        {story.program || "Data Viz"}
+                        {story.program || "Visualization"}
                       </span>
                       {/* Publication and year */}
                       <span className="text-gray-500 dark:text-gray-400">
@@ -136,7 +136,7 @@ export default function Clips() {
                         className={`${index % 3 === 0 ? "h-48" : index % 3 === 1 ? "h-40" : "h-56"} overflow-hidden`}
                       >
                         <Image
-                          alt={story.headline || "Data visualization"}
+                          alt={story.headline || "Visualization"}
                           className="w-full h-auto object-top hover:scale-105 transition-transform duration-300"
                           src={story.image}
                           width={400}

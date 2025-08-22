@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { webProjects } from "@content/webProjects.js";
+import { webProjects } from "@content/coding.js";
 
 export default function Clips() {
   return (

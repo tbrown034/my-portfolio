@@ -9,9 +9,9 @@ import { FaChartBar } from "react-icons/fa";
 
 export default function TechStack() {
   const skills = [
-    "Data Analysis",
+    "Visual Analysis",
     "Statistical Modeling",
-    "Data Visualization",
+    "Interactive Visualizations",
     "Public Records",
     "Interactive Graphics",
     "Database Queries",
@@ -22,25 +22,25 @@ export default function TechStack() {
       name: "Excel",
       Icon: SiMicrosoftexcel,
       description:
-        "Industry-standard spreadsheet tool for data analysis, pivot tables, and quick visualizations.",
+        "Industry-standard spreadsheet tool for analysis, pivot tables, and quick visualizations.",
     },
     {
       name: "Python",
       Icon: SiPython,
       description:
-        "Versatile programming language with powerful data analysis and visualization libraries.",
+        "Versatile programming language with powerful analysis and visualization libraries.",
     },
     {
       name: "Tableau",
       Icon: SiTableau,
       description:
-        "Business intelligence tool for creating interactive dashboards and data stories.",
+        "Business intelligence tool for creating interactive dashboards and visual stories.",
     },
     {
       name: "Chart.js",
       Icon: SiChartdotjs,
       description:
-        "Simple yet flexible JavaScript charting library for creating responsive data visualizations.",
+        "Simple yet flexible JavaScript charting library for creating responsive visualizations.",
     },
     {
       name: "SQL",
