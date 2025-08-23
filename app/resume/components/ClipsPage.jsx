@@ -3,6 +3,8 @@
 import { useState, useRef } from "react";
 import { useDocumentScaling } from "@/app/hooks/useDocumentScaling";
 import { graphics } from "@/content/visualizations.js";
+import { clips } from "@/content/journalism.js";
+import { webProjects } from "@/content/coding.js";
 
 export default function SelectedWorksResponsive({ showGuides = false }) {
   const [isExporting, setIsExporting] = useState(false);
@@ -129,47 +131,30 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
               </h2>
 
               <div className="space-y-2">
-                <div className="pb-2 border-b border-gray-200">
-                  <a href="https://oklahomawatch.org/2022/06/06/the-misinformation-election" target="_blank" rel="noopener noreferrer" className="block hover:bg-gray-50 transition-colors">
-                    <h3 className="text-sm font-bold mb-0.5 hover:text-blue-600" style={{ color: '#111827' }}>
-                      The Misinformation Election: Lies, Conspiracy Theories Prominent in Many GOP Races
-                    </h3>
-                  </a>
-                  <div className="text-xs italic mb-1" style={{ color: '#4b5563' }}>
-                    (June 2022) oklahomawatch.org/2022/06/06/the-misinformation-election
+                {clips.slice(0, 3).map((item, index) => (
+                  <div key={item.id} className={`pb-2 ${index < 2 ? 'border-b border-gray-200' : ''}`}>
+                    <div className="flex items-start justify-between mb-0.5">
+                      <a href={item.siteLink} target="_blank" rel="noopener noreferrer" className="flex-1 hover:bg-gray-50 transition-colors">
+                        <h3 className="text-sm font-bold hover:text-blue-600" style={{ color: '#111827' }}>
+                          {item.headline}
+                        </h3>
+                      </a>
+                      <span className="text-[10px] font-medium px-2 py-0.5 rounded bg-gray-100 text-gray-700 ml-2">
+                        {item.publication}
+                      </span>
+                    </div>
+                    <p className="text-xs leading-relaxed mb-1" style={{ color: '#374151' }}>
+                      {item.text}
+                    </p>
+                    <div className="text-xs" style={{ color: '#4b5563' }}>
+                      <a href={item.siteLink} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
+                        View Article
+                      </a>
+                      <span className="mx-2">|</span>
+                      {item.publication}, {item.date}
+                    </div>
                   </div>
-                  <p className="text-xs leading-relaxed" style={{ color: '#374151' }}>
-                    Fact-checking investigation analyzing disinformation patterns across 50+ primary races.
-                  </p>
-                </div>
-
-                <div className="pb-2 border-b border-gray-200">
-                  <a href="https://oklahomawatch.org/2020/06/02/racial-profiling-charges-remain-scarce" target="_blank" rel="noopener noreferrer" className="block hover:bg-gray-50 transition-colors">
-                    <h3 className="text-sm font-bold mb-0.5 hover:text-blue-600" style={{ color: '#111827' }}>
-                      Twenty Years After It Became a Crime, Racial Profiling Charges Remain Scarce
-                    </h3>
-                  </a>
-                  <div className="text-xs italic mb-1" style={{ color: '#4b5563' }}>
-                    (June 2020) oklahomawatch.org/2020/06/02/racial-profiling-charges-remain-scarce
-                  </div>
-                  <p className="text-xs leading-relaxed" style={{ color: '#374151' }}>
-                    Analyzed 20 years of court data to reveal enforcement gaps. Combined FOIA request and interviews.
-                  </p>
-                </div>
-
-                <div className="pb-2 border-b border-gray-200">
-                  <a href="https://oklahomawatch.org/2019/08/07/oklahoma-hospitals-sue-thousands" target="_blank" rel="noopener noreferrer" className="block hover:bg-gray-50 transition-colors">
-                    <h3 className="text-sm font-bold mb-0.5 hover:text-blue-600" style={{ color: '#111827' }}>
-                      Oklahoma Hospitals Sue Thousands Each Year Over Unpaid Medical Bills
-                    </h3>
-                  </a>
-                  <div className="text-xs italic mb-1" style={{ color: '#4b5563' }}>
-                    (Aug. 2019) oklahomawatch.org/2019/08/07/oklahoma-hospitals-sue-thousands
-                  </div>
-                  <p className="text-xs leading-relaxed" style={{ color: '#374151' }}>
-                    Scraped court records to expose medical debt crisis. Built database of 15,000+ cases revealing systemic issues.
-                  </p>
-                </div>
+                ))}
               </div>
             </section>
 
@@ -180,56 +165,38 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
               </h2>
 
               <div className="space-y-2">
-                <div className="pb-2 border-b border-gray-200">
-                  <div className="flex items-start justify-between mb-0.5">
-                    <a href="https://keithbrowndds.com" target="_blank" rel="noopener noreferrer" className="hover:bg-gray-50 transition-colors">
-                      <h3 className="text-sm font-bold hover:text-blue-600" style={{ color: '#111827' }}>
-                        Keith Brown DDS – Production Next.js Application (2024)
-                      </h3>
-                    </a>
-                    <span className="text-[10px] font-medium px-2 py-0.5 bg-blue-100 text-blue-700 rounded inline-block">Professional</span>
+                {webProjects.slice(0, 3).map((item, index) => (
+                  <div key={item.id} className={`pb-2 ${index < 2 ? 'border-b border-gray-200' : ''}`}>
+                    <div className="flex items-start justify-between mb-0.5">
+                      <a href={item.siteLink} target="_blank" rel="noopener noreferrer" className="flex-1 hover:bg-gray-50 transition-colors">
+                        <h3 className="text-sm font-bold hover:text-blue-600" style={{ color: '#111827' }}>
+                          {item.title}
+                        </h3>
+                      </a>
+                      <span className="text-[10px] font-medium px-2 py-0.5 rounded bg-gray-100 text-gray-700 ml-2">
+                        {item.type}
+                      </span>
+                    </div>
+                    <p className="text-xs leading-relaxed mb-1" style={{ color: '#374151' }}>
+                      {item.description}
+                    </p>
+                    <div className="text-xs" style={{ color: '#4b5563' }}>
+                      <a href={item.siteLink} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
+                        Live Site
+                      </a>
+                      {item.githubLink && (
+                        <>
+                          {' • '}
+                          <a href={item.githubLink} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
+                            GitHub
+                          </a>
+                        </>
+                      )}
+                      <span className="mx-2">|</span>
+                      {item.createdDate}
+                    </div>
                   </div>
-                  <div className="text-xs italic mb-1" style={{ color: '#4b5563' }}>
-                    keithbrowndds.com
-                  </div>
-                  <p className="text-xs leading-relaxed" style={{ color: '#374151' }}>
-                    Professional practice website with appointment booking system. Built with Next.js, optimized for performance and search visibility.
-                  </p>
-                </div>
-
-                <div className="pb-2 border-b border-gray-200">
-                  <div className="flex items-start justify-between mb-0.5">
-                    <a href="https://my-expiry.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:bg-gray-50 transition-colors">
-                      <h3 className="text-sm font-bold hover:text-blue-600" style={{ color: '#111827' }}>
-                        My Expiry – AI-Integrated TypeScript Application (2024)
-                      </h3>
-                    </a>
-                    <span className="text-[10px] font-medium px-2 py-0.5 bg-gray-100 text-gray-700 rounded inline-block">Hobby</span>
-                  </div>
-                  <div className="text-xs italic mb-1" style={{ color: '#4b5563' }}>
-                    my-expiry.vercel.app
-                  </div>
-                  <p className="text-xs leading-relaxed" style={{ color: '#374151' }}>
-                    AI-powered food freshness tracker with receipt scanning, expiry alerts, and waste analytics. Uses the OpenAI API for intelligent shelf-life detection and personalized suggestions to reduce waste and save money.
-                  </p>
-                </div>
-
-                <div className="pb-2 border-b border-gray-200">
-                  <div className="flex items-start justify-between mb-0.5">
-                    <a href="https://restub.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:bg-gray-50 transition-colors">
-                      <h3 className="text-sm font-bold hover:text-blue-600" style={{ color: '#111827' }}>
-                        ReStub – Digital Collection Platform (2024)
-                      </h3>
-                    </a>
-                    <span className="text-[10px] font-medium px-2 py-0.5 bg-gray-100 text-gray-700 rounded inline-block">Hobby</span>
-                  </div>
-                  <div className="text-xs italic mb-1" style={{ color: '#4b5563' }}>
-                    restub.vercel.app
-                  </div>
-                  <p className="text-xs leading-relaxed" style={{ color: '#374151' }}>
-                    Modern platform for logging, enhancing, and sharing live sports game experiences. Built with Next.js 15, Tailwind CSS, and TypeScript. Features AI-assisted event completion, user authentication, and shareable digital collections.
-                  </p>
-                </div>
+                ))}
               </div>
             </section>
 
@@ -240,28 +207,33 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
               </h2>
 
               <div className="space-y-2">
-                {graphics.slice(0, 3).map((viz, index) => {
-                  const graphicLink = Array.isArray(viz.graphicLink) ? viz.graphicLink[0] : viz.graphicLink;
+                {graphics.slice(0, 3).map((item, index) => {
+                  const graphicLink = Array.isArray(item.graphicLink) ? item.graphicLink[0] : item.graphicLink;
                   return (
-                    <div key={viz.id} className={`pb-2 ${index < 2 ? 'border-b border-gray-200' : ''}`}>
-                      <a href={graphicLink} target="_blank" rel="noopener noreferrer" className="block hover:bg-gray-50 transition-colors">
-                        <h3 className="text-xs font-bold mb-0.5 hover:text-blue-600" style={{ color: '#111827' }}>
-                          {viz.headline}
-                        </h3>
-                      </a>
+                    <div key={item.id} className={`pb-2 ${index < 2 ? 'border-b border-gray-200' : ''}`}>
+                      <div className="flex items-start justify-between mb-0.5">
+                        <a href={graphicLink} target="_blank" rel="noopener noreferrer" className="flex-1 hover:bg-gray-50 transition-colors">
+                          <h3 className="text-sm font-bold hover:text-blue-600" style={{ color: '#111827' }}>
+                            {item.headline}
+                          </h3>
+                        </a>
+                        <span className="text-[10px] font-medium px-2 py-0.5 rounded bg-gray-100 text-gray-700 ml-2">
+                          {item.program}
+                        </span>
+                      </div>
                       <p className="text-xs leading-relaxed mb-1" style={{ color: '#374151' }}>
-                        {viz.summary || viz.text}
+                        {item.summary || item.text}
                       </p>
                       <div className="text-xs" style={{ color: '#4b5563' }}>
                         <a href={graphicLink} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
                           Visualization
                         </a>
                         {' • '}
-                        <a href={viz.siteLink} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
+                        <a href={item.siteLink} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
                           Article
                         </a>
                         <span className="mx-2">|</span>
-                        {viz.publication}, {viz.date}
+                        {item.publication}, {item.date}
                       </div>
                     </div>
                   );

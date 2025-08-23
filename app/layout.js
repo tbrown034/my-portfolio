@@ -61,6 +61,7 @@ export default function RootLayout({ children }) {
           <div className="text-blue-950 dark:bg-blue-950 dark:text-blue-50">
             <Header />
             {children}
+            <Footer />
           </div>
           <Analytics />
         </body>
