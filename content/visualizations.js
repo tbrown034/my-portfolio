@@ -4,6 +4,7 @@ import redistricting from "@/public/images/redistricting.png";
 import shootings from "@/public/images/shootings.png";
 import tweets from "@/public/images/tweets.png";
 import vaccination from "@/public/images/vaccination.png";
+import bills from "@/public/images/flourish1.png";
 export const graphics = [
   {
     id: 1,
@@ -101,5 +102,22 @@ export const graphics = [
     siteLink:
       "https://oklahomawatch.org/2022/06/03/how-oklahoma-lawmakers-have-loosened-gun-regulations-the-past-decade%EF%BF%BC/",
     graphicLink: "https://www.datawrapper.de/_/fMDc4/",
+  },
+  {
+    id: 7,
+    headline: "Bills Passed During the 58th Oklahoma Legislature (2021-2022 sessions)",
+    text: "Of the more than 3,600 bills introduced during Oklahoma's 58th Legislature, only 1,031 were sent to the governor. Democrats authored just 40 bills (14 in the House and 26 in the Senate) that passed – the GOP holds 81% of the 149 legislative seats. Compared to the 53rd Legislature (2011-2012), Democratic influence has significantly declined.",
+    image: bills,
+    publication: "Oklahoma Watch",
+    program: "Flourish",
+    date: "June 2, 2022",
+    summary: "Sankey diagram showing the legislative process flow and partisan breakdown of bills passed in the Oklahoma Legislature.",
+    siteLink: "https://oklahomawatch.org/2022/06/02/hundreds-of-bills-passed-the-legislature-just-a-dozen-were-authored-by-democrats/",
+    graphicLink: [
+      "https://www.datawrapper.de/_/WFo9H/",
+      "https://www.datawrapper.de/_/EncDs/",
+      "/images/flourish1.png",
+      "/images/flourish2.png"
+    ],
   },
 ];

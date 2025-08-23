@@ -15,7 +15,7 @@ export default function Intro({ showDesktopLayout }) {
               I spent 15+ years chasing public records and holding power
               accountable.
             </h3>
-            <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mt-4">
+            <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed mt-4">
               Now I build{" "}
               <Link
                 href="#journey"
@@ -31,7 +31,7 @@ export default function Intro({ showDesktopLayout }) {
 
           {/* Column 2: Nutgraph and body */}
           <div className="flex flex-col justify-between h-full">
-            <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+            <p className=" text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
               My work bridges{" "}
               <Link
                 href="#journalism"
@@ -53,14 +53,13 @@ export default function Intro({ showDesktopLayout }) {
               >
                 data visualizations
               </Link>{" "}
-              and applications that turn raw data into understanding. Each field
-              demands deep research, precision and an instinct for discovery.
+              and applications that turn raw data into useful informationm.
             </p>
 
-            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mt-4">
-              Whether I'm digging into public records or architecting a React
-              application, my guiding principle is the same: make truth and
-              information accessible and make the experience seamless.
+            <p className=" text-gray-600 dark:text-gray-400 leading-relaxed mt-4">
+              Whether I’m reporting or coding, my guiding principle is the same:
+              make truth and information accessible, keep the user experience
+              seamless and ensure the end product feels useful.
             </p>
 
             {/* Let's build something together link - desktop only */}

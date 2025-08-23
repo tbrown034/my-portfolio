@@ -6,6 +6,10 @@ import comment from "@/public/images/noComment.webp";
 import hospitals from "@/public/images/hospitals.webp";
 import darkMoney from "@/public/images/darkMoney.webp";
 import okcBombing from "@/public/images/BombingMemorial_11.webp";
+import nukeSite from "@/public/images/nukeSitePic.jpeg";
+import highwayPatrol from "@/public/images/highwayPatrolPic.jpg";
+import fallin from "@/public/images/fallinPic.jpg";
+import henry from "@/public/images/HenryPic.webp";
 
 export const clips = [
   {
@@ -93,5 +97,45 @@ export const clips = [
     publication: "Oklahoma Watch",
     siteLink:
       "https://oklahomawatch.org/2021/04/25/in-remembering-okc-bombing-victims-experts-see-lessons-for-grieving-covid-losses/",
+  },
+  {
+    id: 7,
+    headline: "Questions Remain Around Cleanup of Former Nuke Sites Near Cheyenne",
+    text: "The Army Corps of Engineers plans to spend tens of millions on a 100-year effort to remove TCE from groundwater after it seeped into the soil while cleaning missile launchers in the 1960s – one of 13 F.E. Warren sites with similar problems.",
+    oneLiner: "I investigated the decades-long contamination from Cold War missile sites affecting Cheyenne-area groundwater.",
+    image: nukeSite,
+    publication: "Wyoming Tribune Eagle",
+    date: "Dec. 13, 2015",
+    siteLink: "https://www.wyomingnews.com/news/local_news/questions-remain-around-cleanup-of-former-nuke-sites-near-cheyenne/article_cbc7ee82-a168-11e5-856a-0f03142089af.html",
+  },
+  {
+    id: 8,
+    headline: "Memo: Troopers Must Hit Numbers",
+    text: "Wyoming Highway Patrol requires troopers to meet citation quotas or risk missing raises and promotions, sparking concerns from law enforcement and civil liberties groups about questionable stops. The policy was later rescinded after public backlash.",
+    oneLiner: "I exposed a controversial quota system that was ultimately overturned following public and legislative pressure.",
+    image: highwayPatrol,
+    publication: "Wyoming Tribune Eagle", 
+    date: "Nov. 23, 2014",
+    siteLink: "https://www.wyomingnews.com/news/memo-troopers-must-hit-numbers/article_caf073e2-20e8-5b91-a720-262a72bfb1d2.html",
+  },
+  {
+    id: 9,
+    headline: "Republicans Rally with Conservative Wave",
+    text: "Oklahoma's Republican Party claimed unprecedented victories with Mary Fallin's gubernatorial win, marking the first time since statehood that the GOP controlled both legislative houses and the governor's mansion.",
+    oneLiner: "I covered the historic Republican sweep of Oklahoma's state government in the 2010 elections.",
+    image: fallin,
+    publication: "Norman Transcript",
+    date: "Nov. 2, 2010",
+    siteLink: "https://www.normantranscript.com/edmond/republicans-rally-with-conservative-wave/article_9c031602-7b00-52cb-9e60-6175552ba477.html",
+  },
+  {
+    id: 10,
+    headline: "Henry: Gambling Expansions Paid Off",
+    text: "Gov. Brad Henry defended his aggressive push to expand tribal gaming in Oklahoma, transforming it from a $466 million industry into a multibillion-dollar enterprise that generated over $366 million for education and state services.",
+    oneLiner: "I examined the impact of Oklahoma's gaming expansion and its transformation into a $2.8 billion industry.",
+    image: henry,
+    publication: "Cherokee Phoenix",
+    date: "Dec. 23, 2010",
+    siteLink: "https://www.cherokeephoenix.org/news/henry-gambling-expansions-paid-off/article_929806da-abeb-506c-b1bf-ba067fec7bf3.html",
   },
 ];

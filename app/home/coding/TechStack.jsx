@@ -9,20 +9,27 @@ import {
 
 export default function TechStack() {
   const skills = [
-    "LLM Integration",
+    "Modern Tech Stack",
     "API Development",
     "Database Design",
     "Analytics & SEO",
     "Data Visualization",
     "Responsive Design",
+    "LLM Integration",
   ];
 
   const techs = [
     {
-      name: "Next.js",
-      Icon: SiNextdotjs,
+      name: "JavaScript",
+      Icon: SiJavascript,
       description:
-        "Full-stack React framework with server-side rendering, routing, and optimal performance.",
+        "Dynamic programming language for building interactive web applications and server-side logic.",
+    },
+    {
+      name: "TypeScript/",
+      Icon: SiTypescript,
+      description:
+        "Type-safe JavaScript that improves code quality and developer experience in larger projects.",
     },
     {
       name: "React",
@@ -31,17 +38,12 @@ export default function TechStack() {
         "Component-based UI library for building interactive user interfaces with modern patterns.",
     },
     {
-      name: "TypeScript",
-      Icon: SiTypescript,
+      name: "Next.js",
+      Icon: SiNextdotjs,
       description:
-        "Type-safe JavaScript that improves code quality and developer experience in larger projects.",
+        "Full-stack React framework with server-side rendering, routing, and optimal performance.",
     },
-    {
-      name: "JavaScript",
-      Icon: SiJavascript,
-      description:
-        "Dynamic programming language for building interactive web applications and server-side logic.",
-    },
+
     {
       name: "PostgreSQL",
       Icon: SiPostgresql,
@@ -49,7 +51,7 @@ export default function TechStack() {
         "Powerful relational database for complex data relationships and reliable data storage.",
     },
     {
-      name: "Tailwind CSS",
+      name: "Tailwind",
       Icon: SiTailwindcss,
       description:
         "Utility-first CSS framework for rapid UI development with consistent design systems.",
@@ -81,7 +83,7 @@ export default function TechStack() {
           {/* Tech Icons Grid */}
           <div>
             <h3 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400 pb-2 mb-4 border-b border-gray-300 dark:border-gray-600">
-              Technology Stack
+              Core Technology Stack
             </h3>
             <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
               {techs.map((tech) => (

@@ -1,8 +1,26 @@
+"use client";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { graphics } from "@content/visualizations.js";
 
 export default function Clips() {
+  const [showAll, setShowAll] = useState(false);
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+  
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsLargeScreen(window.innerWidth >= 1024); // lg breakpoint
+    };
+    
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
+  
+  const defaultItemCount = isLargeScreen ? 6 : 4;
+  const visibleGraphics = showAll ? graphics : graphics.slice(0, defaultItemCount);
+  
   return (
     <section>
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
@@ -15,7 +33,7 @@ export default function Clips() {
 
         {/* Visualizations grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {graphics.map((story, index) => (
+          {visibleGraphics.map((story, index) => (
             <div key={story.id} className="group relative">
               {/* Card content - simplified */}
               <div className="relative bg-white dark:bg-gray-800 rounded-lg p-5 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-green-300 dark:hover:border-green-700">
@@ -129,11 +147,11 @@ export default function Clips() {
                   <Link 
                     href={story.graphicLink && !Array.isArray(story.graphicLink) ? story.graphicLink : story.graphicLink?.[0] || story.siteLink} 
                     target="_blank"
-                    className="block w-2/3 cursor-pointer"
+                    className="block w-1/2 cursor-pointer"
                   >
                     <div className="border-2 border-gray-200 dark:border-gray-600 rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition-shadow duration-300">
                       <div
-                        className={`${index % 3 === 0 ? "h-48" : index % 3 === 1 ? "h-40" : "h-56"} overflow-hidden`}
+                        className="h-32 overflow-hidden"
                       >
                         <Image
                           alt={story.headline || "Visualization"}
@@ -153,6 +171,28 @@ export default function Clips() {
             </div>
           ))}
         </div>
+
+        {/* Show More/Less button */}
+        {graphics.length > defaultItemCount && !showAll && (
+          <div className="flex justify-center mt-8">
+            <button
+              className="inline-flex items-center justify-center px-6 py-3 font-bold text-white bg-green-800 border-2 border-green-800 rounded-2xl dark:text-green-950 dark:bg-green-50 dark:border-green-50 hover:bg-green-600 hover:border-green-600 active:bg-green-950 focus:bg-green-500 dark:hover:bg-green-200 dark:hover:border-green-200 focus:outline-none focus:ring focus:ring-green-400 cursor-pointer"
+              onClick={() => setShowAll(true)}
+            >
+              Show More
+            </button>
+          </div>
+        )}
+        {showAll && (
+          <div className="flex justify-center mt-8">
+            <button
+              className="inline-flex items-center justify-center px-6 py-3 font-bold text-green-800 bg-gray-100 border-2 border-gray-300 rounded-2xl dark:text-green-50 dark:bg-gray-700 dark:border-gray-600 hover:bg-gray-200 hover:border-gray-400 active:bg-gray-300 focus:bg-gray-200 dark:hover:bg-gray-600 dark:hover:border-gray-500 focus:outline-none focus:ring focus:ring-gray-400 cursor-pointer"
+              onClick={() => setShowAll(false)}
+            >
+              Show Less
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

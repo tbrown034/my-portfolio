@@ -112,11 +112,11 @@ export default function Clips() {
                   <Link 
                     href={project.siteLink} 
                     target="_blank"
-                    className="block w-2/3 cursor-pointer"
+                    className="block w-1/2 cursor-pointer"
                   >
                     <div className="border-2 border-gray-200 dark:border-gray-600 rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition-shadow duration-300">
                       <div
-                        className={`${index % 3 === 0 ? "h-48" : index % 3 === 1 ? "h-40" : "h-56"} overflow-hidden`}
+                        className="h-32 overflow-hidden"
                       >
                         <Image
                           alt={`Screenshot of ${project.title}`}

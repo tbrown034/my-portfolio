@@ -1,12 +1,25 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { clips } from "@content/journalism.js";
 
 export default function Clips() {
   const [showAll, setShowAll] = useState(false);
-  const visibleClips = showAll ? clips : clips.slice(0, 6);
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+  
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsLargeScreen(window.innerWidth >= 1024); // lg breakpoint
+    };
+    
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
+  
+  const defaultItemCount = isLargeScreen ? 9 : 4;
+  const visibleClips = showAll ? clips : clips.slice(0, defaultItemCount);
   
   return (
     <section>
@@ -84,11 +97,11 @@ export default function Clips() {
                     <Link 
                       href={article.siteLink || "https://oklahomawatch.org"} 
                       target="_blank"
-                      className="block w-2/3 cursor-pointer"
+                      className="block w-1/2 cursor-pointer"
                     >
                       <div className="border-2 border-gray-200 dark:border-gray-600 rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition-shadow duration-300">
                         <div
-                          className={`${index % 3 === 0 ? "h-48" : index % 3 === 1 ? "h-40" : "h-56"} overflow-hidden`}
+                          className="h-32 overflow-hidden"
                         >
                           <Image
                             alt={`Screenshot for ${article.headline}`}
@@ -111,7 +124,7 @@ export default function Clips() {
         </div>
 
         {/* Show More/Less button */}
-        {clips.length > 6 && !showAll && (
+        {clips.length > defaultItemCount && !showAll && (
           <div className="flex justify-center mt-8">
             <button
               className="inline-flex items-center justify-center px-6 py-3 font-bold text-white bg-blue-800 border-2 border-blue-800 rounded-2xl dark:text-blue-950 dark:bg-blue-50 dark:border-blue-50 hover:bg-blue-600 hover:border-blue-600 active:bg-blue-950 focus:bg-blue-500 dark:hover:bg-blue-200 dark:hover:border-blue-200 focus:outline-none focus:ring focus:ring-blue-400 cursor-pointer"
