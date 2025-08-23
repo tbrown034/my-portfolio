@@ -6,7 +6,7 @@ import { clips } from "@content/journalism.js";
 
 export default function Clips() {
   const [showAll, setShowAll] = useState(false);
-  const visibleClips = showAll ? clips : clips.slice(0, 4);
+  const visibleClips = showAll ? clips : clips.slice(0, 6);
   
   return (
     <section>
@@ -19,7 +19,7 @@ export default function Clips() {
         </div>
 
         {/* Articles grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {visibleClips.map((article, index) => (
             <div key={index} className="group relative">
               {/* Card content - simplified */}
@@ -111,7 +111,7 @@ export default function Clips() {
         </div>
 
         {/* Show More/Less button */}
-        {clips.length > 4 && !showAll && (
+        {clips.length > 6 && !showAll && (
           <div className="flex justify-center mt-8">
             <button
               className="inline-flex items-center justify-center px-6 py-3 font-bold text-white bg-blue-800 border-2 border-blue-800 rounded-2xl dark:text-blue-950 dark:bg-blue-50 dark:border-blue-50 hover:bg-blue-600 hover:border-blue-600 active:bg-blue-950 focus:bg-blue-500 dark:hover:bg-blue-200 dark:hover:border-blue-200 focus:outline-none focus:ring focus:ring-blue-400 cursor-pointer"

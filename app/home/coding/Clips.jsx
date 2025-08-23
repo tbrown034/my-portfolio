@@ -14,7 +14,7 @@ export default function Clips() {
         </div>
 
         {/* Projects grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {webProjects.map((project, index) => (
             <div key={index} className="group relative">
               {/* Card content - simplified */}
