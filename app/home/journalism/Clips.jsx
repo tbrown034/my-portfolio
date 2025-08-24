@@ -18,8 +18,10 @@ export default function Clips() {
     return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
   
-  const defaultItemCount = isLargeScreen ? 9 : 4;
-  const visibleClips = showAll ? clips : clips.slice(0, defaultItemCount);
+  const defaultItemCount = isLargeScreen ? 6 : 4;
+  // Sort clips by ID to control display order
+  const sortedClips = [...clips].sort((a, b) => a.id - b.id);
+  const visibleClips = showAll ? sortedClips : sortedClips.slice(0, defaultItemCount);
   
   return (
     <section>
@@ -124,7 +126,7 @@ export default function Clips() {
         </div>
 
         {/* Show More/Less button */}
-        {clips.length > defaultItemCount && !showAll && (
+        {sortedClips.length > defaultItemCount && !showAll && (
           <div className="flex justify-center mt-8">
             <button
               className="inline-flex items-center justify-center px-6 py-3 font-bold text-white bg-blue-800 border-2 border-blue-800 rounded-2xl dark:text-blue-950 dark:bg-blue-50 dark:border-blue-50 hover:bg-blue-600 hover:border-blue-600 active:bg-blue-950 focus:bg-blue-500 dark:hover:bg-blue-200 dark:hover:border-blue-200 focus:outline-none focus:ring focus:ring-blue-400 cursor-pointer"

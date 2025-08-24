@@ -23,16 +23,16 @@ export default function Intro() {
         <div className="max-w-4xl">
           <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
             <p>
-              I started as editor-in-chief of{" "}
+              My journalism career began at{" "}
               <a
                 href="https://www.idsnews.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200"
               >
-                Indiana University's student newspaper
-              </a>{" "}
-              and spent the next 15-plus years as a journalist in several
+                Indiana University
+              </a>
+              , where I led the student newspaper. I then spent 15-plus years reporting in several
               states. My most recent work was as the statehouse reporter for the{" "}
               <a
                 href="https://www.wyomingnews.com/"
@@ -69,7 +69,7 @@ export default function Intro() {
             </p>
 
             <p>
-              Now I'm excited to work at the intersection of journalism,
+              Now I work at the intersection of journalism,
               technology, politics and AI.
             </p>
           </div>

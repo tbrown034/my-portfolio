@@ -16,7 +16,7 @@ export default function Header() {
 
           {/* Lede paragraph */}
           <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mb-6">
-            After 15+ years in journalism, I bring an investigative approach to
+            After 15-plus years in journalism, I bring an investigative approach to
             web development
           </p>
 

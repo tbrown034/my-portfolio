@@ -12,7 +12,7 @@ export default function Intro({ showDesktopLayout }) {
           {/* Column 1: Subhead and Lede */}
           <div className="flex flex-col justify-between h-full">
             <h3 className="text-3xl font-bold text-gray-900 dark:text-gray-100 leading-tight">
-              I spent 15+ years chasing public records and holding power
+              I spent 15-plus years chasing public records and holding power
               accountable.
             </h3>
             <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed mt-4">
@@ -53,7 +53,7 @@ export default function Intro({ showDesktopLayout }) {
               >
                 data visualizations
               </Link>{" "}
-              and applications that turn raw data into useful informationm.
+              and applications that turn raw data into useful information.
             </p>
 
             <p className=" text-gray-600 dark:text-gray-400 leading-relaxed mt-4">
@@ -131,8 +131,7 @@ export default function Intro({ showDesktopLayout }) {
               >
                 data visualizations
               </Link>{" "}
-              and applications that turn raw data into understanding. Each field
-              demands deep research, precision and an instinct for discovery.
+              and applications that turn raw data into understanding.
             </p>
 
             {/* Body */}

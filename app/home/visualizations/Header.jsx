@@ -8,18 +8,17 @@ export default function Header() {
           <div className="text-xs font-bold uppercase tracking-[0.15em] text-purple-800 dark:text-purple-400 mb-2">
             Visual Storytelling
           </div>
-          
+
           {/* Main headline */}
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-montserrat text-gray-900 dark:text-gray-100 mb-2">
             Visualizations
           </h2>
-          
+
           {/* Lede paragraph */}
           <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mb-6">
-            Transforming complex datasets into clear, interactive visualizations that reveal patterns 
-            and drive informed decisions.
+            Transforming complex datasets into clear, interactive visualizations
           </p>
-          
+
           {/* Section divider - newspaper style double rule */}
           <div className="space-y-1">
             <div className="border-t-2 border-gray-900 dark:border-gray-100"></div>

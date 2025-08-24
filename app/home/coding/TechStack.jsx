@@ -26,7 +26,7 @@ export default function TechStack() {
         "Dynamic programming language for building interactive web applications and server-side logic.",
     },
     {
-      name: "TypeScript/",
+      name: "TypeScript",
       Icon: SiTypescript,
       description:
         "Type-safe JavaScript that improves code quality and developer experience in larger projects.",

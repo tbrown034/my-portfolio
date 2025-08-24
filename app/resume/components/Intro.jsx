@@ -20,7 +20,7 @@ export default function Intro({ showDesktopLayout }) {
               >
                 professional resume
               </Link>{" "}
-              showcases 15+ years of investigative journalism experience alongside 
+              showcases 15-plus years of investigative journalism experience alongside 
               modern web development skills. From Python data analysis to React applications, 
               I bring a unique perspective to technical challenges.
             </p>

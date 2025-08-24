@@ -46,11 +46,18 @@ export default function ResumePageLayout() {
         </div>
       </div>
 
-      {/* Resume Component */}
-      <ResumePage showGuides={false} />
+      {/* Resume and Selected Works Container - Side by side on large screens */}
+      <div className="xl:flex xl:gap-8 xl:justify-center xl:px-8 xl:py-8">
+        {/* Resume Component */}
+        <div className="xl:flex-shrink-0">
+          <ResumePage showGuides={false} />
+        </div>
 
-      {/* Selected Works Component */}
-      <ClipsPage showGuides={false} />
+        {/* Selected Works Component */}
+        <div className="xl:flex-shrink-0">
+          <ClipsPage showGuides={false} />
+        </div>
+      </div>
 
       {/* Editorial-inspired Resume Styles */}
       <style jsx global>{`

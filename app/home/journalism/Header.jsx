@@ -15,7 +15,7 @@ export default function Header() {
           
           {/* Subtitle/description */}
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl">
-            From city halls to state capitols, I've spent 15+ years holding power accountable
+            From city halls to state capitols, I've spent 15-plus years holding power accountable
           </p>
           
           {/* Visual separator - double rule */}

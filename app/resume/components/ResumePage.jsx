@@ -59,9 +59,7 @@ const SkillGroup = ({ category, skills }) => (
     <div className="text-xs font-bold text-gray-900 mb-0.5 border-b border-gray-200 pb-0.5">
       {category}
     </div>
-    <div className="text-xs text-gray-700 leading-relaxed">
-      {skills}
-    </div>
+    <div className="text-xs text-gray-700 leading-relaxed">{skills}</div>
   </div>
 );
 
@@ -70,9 +68,7 @@ const Award = ({ title, org, year, article }) => (
     <div className="text-xs font-bold text-gray-900 leading-tight">
       {title} ({year})
     </div>
-    <div className="text-xs font-medium text-gray-700 mt-0.5">
-      {org}
-    </div>
+    <div className="text-xs font-medium text-gray-700 mt-0.5">{org}</div>
     {article && (
       <div className="text-[10px] text-gray-700 mt-0.5 italic">"{article}"</div>
     )}
@@ -85,7 +81,7 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
   const pageRef = useRef(null);
   const containerRef = useRef(null);
   const documentRef = useRef(null);
-  
+
   const { scale, dimensions } = useDocumentScaling(containerRef, documentRef);
 
   const handleExportPDF = async () => {
@@ -146,12 +142,12 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
   };
 
   return (
-    <div 
+    <div
       ref={containerRef}
       className="resume-container w-full min-h-screen flex flex-col items-center justify-center p-4 bg-gray-50 dark:bg-gray-900 print:bg-white"
     >
       {/* Scaling wrapper */}
-      <div 
+      <div
         className="relative"
         style={{
           width: dimensions.width,
@@ -165,15 +161,18 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
             documentRef.current = el;
           }}
           className="absolute top-0 left-0 bg-white shadow-xl print:shadow-none origin-top-left"
-          style={{ 
-            width: "8.5in", 
+          style={{
+            width: "8.5in",
             height: "11in",
             transform: `scale(${scale})`,
-            transformOrigin: 'top left'
+            transformOrigin: "top left",
           }}
         >
           {/* Resume content with fixed padding for consistent layout */}
-          <div className="p-12 h-full overflow-hidden print:overflow-visible" style={{ padding: "0.75in" }}>
+          <div
+            className="p-12 h-full overflow-hidden print:overflow-visible"
+            style={{ padding: "0.75in" }}
+          >
             {/* Header - Editorial masthead style */}
             <header className="text-center mb-3 pb-2 border-b-2 border-gray-900">
               <h1 className="text-2xl font-black tracking-wider text-gray-900 mb-1 uppercase">
@@ -206,279 +205,280 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
               {/* Primary column - takes 2 columns */}
               <div className="col-span-2">
                 <div className="mb-2">
-                <Section title="Summary">
-                  <p className="text-xs text-gray-700 leading-relaxed text-justify">
-                    Award‑winning investigative journalist and full‑stack
-                    developer specializing in data‑driven applications and
-                    interactive storytelling. Builds dynamic visualizations and
-                    tools by combining deep reporting expertise with modern
-                    development skills to deliver accurate, engaging information
-                    on complex issues.
-                  </p>
+                  <Section title="Summary">
+                    <p className="text-xs text-gray-700 leading-relaxed text-justify">
+                      Award‑winning investigative journalist and full‑stack
+                      developer specializing in data‑driven applications and
+                      interactive storytelling. Builds dynamic visualizations
+                      and tools by combining deep reporting expertise with
+                      modern development skills to deliver accurate, engaging
+                      information on complex issues.
+                    </p>
+                  </Section>
+                </div>
+
+                <Section title="Professional Experience">
+                  <Job
+                    title="Web Developer & Digital Marketing"
+                    org={
+                      <>
+                        <a
+                          href="https://keithbrowndds.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-inherit hover:text-gray-600"
+                        >
+                          Keith Brown DDS
+                        </a>{" "}
+                        (Naperville, Ill.)
+                      </>
+                    }
+                    period="2023 – Present"
+                    highlights={[
+                      "Built a responsive dental practice website with Next.js, including appointment booking, service pages and a blog. Manage SEO and a $2,000/month Google Ads budget, optimizing campaigns that tripled new patient bookings over the past year.",
+                    ]}
+                  />
+                  <Job
+                    title="Investigative Journalist"
+                    org={
+                      <>
+                        <a
+                          href="https://oklahomawatch.org/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-inherit hover:text-gray-600"
+                        >
+                          Oklahoma Watch
+                        </a>{" "}
+                        (Oklahoma City)
+                      </>
+                    }
+                    period="2016 – 2022"
+                    highlights={[
+                      "Conducted long‑form investigations into government corruption, public policy issues and legislative accountability using data analysis",
+                      "Launched Democracy Watch newsletter to 4,000+ subscribers covering voting, elections, redistricting and government transparency",
+                    ]}
+                  />
+                  <Job
+                    title="State Capitol Reporter"
+                    org={
+                      <>
+                        <a
+                          href="https://www.wyomingnews.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-inherit hover:text-gray-600"
+                        >
+                          Wyoming Tribune Eagle
+                        </a>{" "}
+                        (Cheyenne)
+                      </>
+                    }
+                    period="2011 – 2016"
+                    highlights={[
+                      "Reported on legislature, elections, governor and state agencies with focus on budget data and policy analysis",
+                    ]}
+                  />
+                  <Job
+                    title="State Government Reporter"
+                    org={
+                      <>
+                        <a
+                          href="https://www.cnhi.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-inherit hover:text-gray-600"
+                        >
+                          CNHI
+                        </a>{" "}
+                        (Oklahoma City)
+                      </>
+                    }
+                    period="2010 – 2011"
+                    highlights={[
+                      "Functioned as sole statehouse correspondent, creating enterprise and election coverage for 14 newspapers",
+                    ]}
+                  />
+                  <Job
+                    title="Reporter"
+                    org={
+                      <>
+                        <a
+                          href="https://www.newsleader.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-inherit hover:text-gray-600"
+                        >
+                          Staunton News Leader
+                        </a>{" "}
+                        (Staunton, Va.)
+                      </>
+                    }
+                    period="2008 – 2010"
+                    highlights={[
+                      "Wrote about local government, courts and breaking news for daily newspaper",
+                    ]}
+                  />
+                  <Job
+                    title="Editor‑in‑Chief"
+                    org={
+                      <>
+                        <a
+                          href="https://www.idsnews.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-inherit hover:text-gray-600"
+                        >
+                          Indiana Daily Student
+                        </a>{" "}
+                        (Bloomington, Ind.)
+                      </>
+                    }
+                    period="2007 – 2008"
+                    highlights={[
+                      "Directed newsroom of 100+ student journalists",
+                    ]}
+                  />
                 </Section>
               </div>
 
-              <Section title="Professional Experience">
-                <Job
-                  title="Web Developer & Digital Marketing"
-                  org={
-                    <>
-                      <a
-                        href="https://keithbrowndds.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-inherit hover:text-gray-600"
-                      >
-                        Keith Brown DDS
-                      </a>{" "}
-                      (Naperville, Ill.)
-                    </>
-                  }
-                  period="2023 – Present"
-                  highlights={[
-                    "Build and maintain responsive dental practice website with appointment booking system and search optimization using Next.js",
-                    "Manage $2,000 monthly advertising budget and triple new patient revenue through targeted search campaigns",
-                  ]}
-                />
-                <Job
-                  title="Investigative Journalist"
-                  org={
-                    <>
-                      <a
-                        href="https://oklahomawatch.org/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-inherit hover:text-gray-600"
-                      >
-                        Oklahoma Watch
-                      </a>{" "}
-                      (Oklahoma City)
-                    </>
-                  }
-                  period="2016 – 2022"
-                  highlights={[
-                    "Conducted long‑form investigations into government corruption, public policy issues and legislative accountability using data analysis",
-                    "Launched Democracy Watch newsletter to 4,000+ subscribers covering voting, elections, redistricting and government transparency",
-                  ]}
-                />
-                <Job
-                  title="State Capitol Reporter"
-                  org={
-                    <>
-                      <a
-                        href="https://www.wyomingnews.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-inherit hover:text-gray-600"
-                      >
-                        Wyoming Tribune Eagle
-                      </a>{" "}
-                      (Cheyenne)
-                    </>
-                  }
-                  period="2011 – 2016"
-                  highlights={[
-                    "Reported on legislature, elections, governor and state agencies with focus on budget data and policy analysis",
-                  ]}
-                />
-                <Job
-                  title="State Government Reporter"
-                  org={
-                    <>
-                      <a
-                        href="https://www.cnhi.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-inherit hover:text-gray-600"
-                      >
-                        CNHI
-                      </a>{" "}
-                      (Oklahoma City)
-                    </>
-                  }
-                  period="2010 – 2011"
-                  highlights={[
-                    "Functioned as sole statehouse correspondent, creating enterprise and election coverage for 14 newspapers",
-                  ]}
-                />
-                <Job
-                  title="Reporter"
-                  org={
-                    <>
-                      <a
-                        href="https://www.newsleader.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-inherit hover:text-gray-600"
-                      >
-                        Staunton News Leader
-                      </a>{" "}
-                      (Staunton, Va.)
-                    </>
-                  }
-                  period="2008 – 2010"
-                  highlights={[
-                    "Wrote about local government, courts and breaking news for daily newspaper",
-                  ]}
-                />
-                <Job
-                  title="Editor‑in‑Chief"
-                  org={
-                    <>
-                      <a
-                        href="https://www.idsnews.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-inherit hover:text-gray-600"
-                      >
-                        Indiana Daily Student
-                      </a>{" "}
-                      (Bloomington, Ind.)
-                    </>
-                  }
-                  period="2007 – 2008"
-                  highlights={["Directed newsroom of 100+ student journalists"]}
-                />
-              </Section>
-            </div>
+              {/* Secondary column */}
+              <div>
+                <Section title="Education">
+                  <Credential
+                    degree="Web Development Certificate"
+                    institution={
+                      <>
+                        <a
+                          href="https://bootcamp.outreach.ou.edu/programs/coding"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-inherit hover:text-gray-600"
+                        >
+                          University of Oklahoma
+                        </a>
+                      </>
+                    }
+                    detail="260-hour intensive program via FullStack Academy"
+                    year="2022"
+                  />
+                  <Credential
+                    degree="B.A. Journalism"
+                    institution={
+                      <>
+                        <a
+                          href="https://bloomington.iu.edu/index.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-inherit hover:text-gray-600"
+                        >
+                          Indiana University
+                        </a>
+                      </>
+                    }
+                    year="2008"
+                  />
+                  <Credential
+                    degree="B.A. Political Science"
+                    institution={
+                      <>
+                        <a
+                          href="https://bloomington.iu.edu/index.html"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-inherit hover:text-gray-600"
+                        >
+                          Indiana University
+                        </a>
+                      </>
+                    }
+                    year="2008"
+                  />
+                </Section>
 
-            {/* Secondary column */}
-            <div>
-              <Section title="Education">
-                <Credential
-                  degree="Web Development Certificate"
-                  institution={
-                    <>
-                      <a
-                        href="https://bootcamp.outreach.ou.edu/programs/coding"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-inherit hover:text-gray-600"
-                      >
-                        University of Oklahoma
-                      </a>
-                    </>
-                  }
-                  detail="Led by FullStack Academy"
-                  year="2022"
-                />
-                <Credential
-                  degree="B.A. Journalism"
-                  institution={
-                    <>
-                      <a
-                        href="https://bloomington.iu.edu/index.html"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-inherit hover:text-gray-600"
-                      >
-                        Indiana University
-                      </a>
-                    </>
-                  }
-                  year="2008"
-                />
-                <Credential
-                  degree="B.A. Political Science"
-                  institution={
-                    <>
-                      <a
-                        href="https://bloomington.iu.edu/index.html"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-inherit hover:text-gray-600"
-                      >
-                        Indiana University
-                      </a>
-                    </>
-                  }
-                  year="2008"
-                />
-              </Section>
+                <Section title="Technical Skills">
+                  <SkillGroup
+                    category="Core Web Technologies"
+                    skills="Next.js, React, TypeScript, Node.js, PostgreSQL, Tailwind"
+                  />
+                  <SkillGroup
+                    category="Data Visualization & Analysis"
+                    skills="Tableau, Datawrapper, D3.js, Chart.js, Excel, web scraping"
+                  />
+                  <SkillGroup
+                    category="AI & Automation"
+                    skills="OpenAI API, Anthropic API, ChatGPT, Claude, prompt engineering, AI workflow automation"
+                  />
+                </Section>
 
-              <Section title="Technical Skills">
-                <SkillGroup
-                  category="Core Web Technologies"
-                  skills="Next.js, React, TypeScript, Node.js, PostgreSQL, Tailwind"
-                />
-                <SkillGroup
-                  category="Data Visualization & Analysis"
-                  skills="Tableau, Datawrapper, D3.js, Chart.js, Excel, web scraping"
-                />
-                <SkillGroup
-                  category="AI & Automation"
-                  skills="OpenAI API, Anthropic API, ChatGPT, Claude, prompt engineering, AI workflow automation"
-                />
-              </Section>
-
-              <Section title="Awards & Recognition">
-                <Award
-                  title="Newspaper Writer of the Year"
-                  org={
-                    <>
-                      <a
-                        href="https://oklahomawatch.org/2021/05/10/oklahoma-watchs-trevor-brown-earns-writer-of-year-honors-in-great-plains-journalism-contest/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-inherit hover:text-gray-600"
-                      >
-                        Great Plains Journalism Awards
-                      </a>
-                    </>
-                  }
-                  year="2021"
-                />
-                <Award
-                  title="Reporter of the Year"
-                  org={
-                    <>
-                      <a
-                        href="https://okspj.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-inherit hover:text-gray-600"
-                      >
-                        Oklahoma Society of Professional Journalists
-                      </a>
-                    </>
-                  }
-                  year="2020"
-                />
-                <Award
-                  title="First Place, Investigative Reporting"
-                  org={
-                    <>
-                      <a
-                        href="https://okspj.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-inherit hover:text-gray-600"
-                      >
-                        Oklahoma Society of Professional Journalists
-                      </a>
-                    </>
-                  }
-                  year="2022"
-                />
-                <Award
-                  title="Community Champion Award"
-                  org={
-                    <>
-                      <a
-                        href="https://inn.org/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-inherit hover:text-gray-600"
-                      >
-                        Institute for Nonprofit News
-                      </a>
-                    </>
-                  }
-                  year="2020"
-                  article="A Digital Memorial to Oklahomans Who Died from COVID-19"
-                />
-              </Section>
-            </div>
+                <Section title="Awards & Recognition">
+                  <Award
+                    title="Newspaper Writer of the Year"
+                    org={
+                      <>
+                        <a
+                          href="https://oklahomawatch.org/2021/05/10/oklahoma-watchs-trevor-brown-earns-writer-of-year-honors-in-great-plains-journalism-contest/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-inherit hover:text-gray-600"
+                        >
+                          Great Plains Journalism Awards
+                        </a>
+                      </>
+                    }
+                    year="2021"
+                  />
+                  <Award
+                    title="Reporter of the Year"
+                    org={
+                      <>
+                        <a
+                          href="https://okspj.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-inherit hover:text-gray-600"
+                        >
+                          Oklahoma Society of Professional Journalists
+                        </a>
+                      </>
+                    }
+                    year="2020"
+                  />
+                  <Award
+                    title="First Place, Investigative Reporting"
+                    org={
+                      <>
+                        <a
+                          href="https://okspj.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-inherit hover:text-gray-600"
+                        >
+                          Oklahoma Society of Professional Journalists
+                        </a>
+                      </>
+                    }
+                    year="2022"
+                  />
+                  <Award
+                    title="Community Champion Award"
+                    org={
+                      <>
+                        <a
+                          href="https://inn.org/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-inherit hover:text-gray-600"
+                        >
+                          Institute for Nonprofit News
+                        </a>
+                      </>
+                    }
+                    year="2020"
+                    article="A Digital Memorial to Oklahomans Who Died from COVID-19"
+                  />
+                </Section>
+              </div>
             </div>
           </div>
 
