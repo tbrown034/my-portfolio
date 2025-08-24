@@ -48,7 +48,7 @@ export default function Intro({ showDesktopLayout }) {
               </Link>{" "}
               – building responsive sites,{" "}
               <Link
-                href="#data"
+                href="#visualizations"
                 className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200"
               >
                 data visualizations
@@ -126,7 +126,7 @@ export default function Intro({ showDesktopLayout }) {
               </Link>{" "}
               – building responsive sites,{" "}
               <Link
-                href="#data"
+                href="#visualizations"
                 className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200"
               >
                 data visualizations

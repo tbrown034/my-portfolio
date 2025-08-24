@@ -29,7 +29,7 @@ export default function HeroLinks() {
           className="group p-4 border-b-2 border-gray-200 dark:border-gray-700 hover:border-blue-800 dark:hover:border-blue-300 transition-colors"
         >
           <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">
-            Development
+            Web Development
           </h3>
           <p className="text-sm text-gray-500 dark:text-gray-500">
             Next.js, React, TypeScript
@@ -37,7 +37,7 @@ export default function HeroLinks() {
         </Link>
 
         <Link
-          href="#data"
+          href="#visualizations"
           className="group p-4 border-b-2 border-gray-200 dark:border-gray-700 hover:border-blue-800 dark:hover:border-blue-300 transition-colors"
         >
           <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">

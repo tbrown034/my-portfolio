@@ -3,7 +3,7 @@
 export const webProjects = [
   {
     id: 1,
-    title: "Keith Brown DDS",
+    title: "Keith Brown DDS: Dental Practice Website",
     type: "Professional",
     tag: "SEO & Marketing",
     workInProgress: false,
@@ -24,7 +24,7 @@ export const webProjects = [
   },
   {
     id: 3,
-    title: "My Expiry",
+    title: "My Expiry: Smart Food Waste Tracker",
     type: "Hobby",
     tag: "AI Integration",
     workInProgress: true,
@@ -39,13 +39,13 @@ export const webProjects = [
     ],
     createdDate: "2025",
     description:
-      "Tired of wasting food, I created My Expiry – a tracking app that lets users log groceries, get shelf-life estimates and storage tips via Anthropic AI's API, and check whether items are fresh or expiring.",
+      "Developed My Expiry to track food freshness – users log groceries, get AI-powered shelf-life estimates and storage tips, and check expiration status.",
     githubLink: "https://github.com/tbrown034/my-expiry",
     siteLink: "https://my-expiry.vercel.app/",
   },
   {
     id: 2,
-    title: "Reflectyr",
+    title: "ReflectYr: Social Platform for Film & TV",
     type: "Hobby",
     tag: "Auth & Database",
     workInProgress: true,
@@ -59,7 +59,7 @@ export const webProjects = [
     ],
     createdDate: "2024",
     description:
-      "Reflectyr is a Letterboxd-style platform where users build movie and TV lists with TMDB data and get AI-powered watch recommendations. Features NextAuth.js for authentication and a PostgreSQL database for persistence.",
+      "ReflectYr is a Letterboxd-style platform where users build movie and TV lists with TMDB data and get AI-powered watch recommendations. Features NextAuth.js for authentication and a PostgreSQL database for persistence.",
     githubLink: "https://github.com/tbrown034/refelectyr_project",
     siteLink: "https://reflectyr.vercel.app/",
   },

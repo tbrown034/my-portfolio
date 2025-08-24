@@ -13,11 +13,9 @@ export default function Intro() {
         <div className="max-w-4xl">
           <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
             <p>
-              I've always thought of myself as a data-driven reporter through
-              the years – whether teaching myself the cooler parts of Excel, or
-              learning Datawrapper, Tableau and other visualization tools.
-              Visual storytelling has been a constant thread in my journalism
-              career.
+              I've always been a data-driven reporter – from learning Excel 
+              to building visualizations in Datawrapper, Tableau and Flourish. 
+              Visual storytelling has been a constant thread in my journalism career.
             </p>
 
             <p>

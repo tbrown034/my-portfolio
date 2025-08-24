@@ -30,7 +30,7 @@ const Job = ({ title, org, period, highlights }) => (
       {highlights.map((highlight, i) => (
         <li
           key={i}
-          className="mb-0.5 pl-3 relative text-xs leading-relaxed text-justify before:content-['•'] before:absolute before:left-0 before:text-gray-600 before:font-bold"
+          className="mb-0.5 pl-3 relative text-xs leading-relaxed before:content-['•'] before:absolute before:left-0 before:text-gray-600 before:font-bold"
         >
           {highlight}
         </li>
@@ -144,7 +144,7 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
   return (
     <div
       ref={containerRef}
-      className="resume-container w-full min-h-screen flex flex-col items-center justify-center p-4 bg-gray-50 dark:bg-gray-900 print:bg-white"
+      className="resume-container w-full flex flex-col items-center p-4 bg-gray-50 dark:bg-gray-900 print:bg-white"
     >
       {/* Scaling wrapper */}
       <div
@@ -187,7 +187,7 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                   href="https://trevorthewebdeveloper.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-gray-800 transition-colors"
+                  className="text-gray-600 underline underline-offset-2 hover:text-gray-800 hover:no-underline transition-colors"
                 >
                   trevorthewebdeveloper.com
                 </a>
@@ -206,13 +206,13 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
               <div className="col-span-2">
                 <div className="mb-2">
                   <Section title="Summary">
-                    <p className="text-xs text-gray-700 leading-relaxed text-justify">
-                      Award‑winning investigative journalist and full‑stack
-                      developer specializing in data‑driven applications and
-                      interactive storytelling. Builds dynamic visualizations
-                      and tools by combining deep reporting expertise with
-                      modern development skills to deliver accurate, engaging
-                      information on complex issues.
+                    <p className="text-xs text-gray-700 leading-relaxed">
+                      Combines 15 years of award-winning investigative journalism with full-stack development. 
+                      Builds data-driven applications that require both technical skills and editorial judgment.
+                    </p>
+                    <p className="text-xs text-gray-700 leading-relaxed mt-2">
+                      Creates interactive visualizations and web tools that make complex information accessible. 
+                      Interested in exploring practical applications of AI and LLMs.
                     </p>
                   </Section>
                 </div>
@@ -402,12 +402,12 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                     skills="Next.js, React, TypeScript, Node.js, PostgreSQL, Tailwind"
                   />
                   <SkillGroup
-                    category="Data Visualization & Analysis"
-                    skills="Tableau, Datawrapper, D3.js, Chart.js, Excel, web scraping"
+                    category="Data Visualization"
+                    skills="Flourish, Datawrapper, Infogram, Tableau, Chart.js, Excel, web scraping"
                   />
                   <SkillGroup
                     category="AI & Automation"
-                    skills="OpenAI API, Anthropic API, ChatGPT, Claude, prompt engineering, AI workflow automation"
+                    skills="LLM Integrations, OpenAI API, Anthropic API"
                   />
                 </Section>
 
@@ -497,15 +497,6 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
           className="px-4 py-2 text-sm font-medium text-white bg-gray-900 hover:bg-gray-800 disabled:opacity-50 rounded-lg transition-colors"
         >
           {isExporting && exportType === "pdf" ? "Generating…" : "Download PDF"}
-        </button>
-        <button
-          onClick={handleExportImage}
-          disabled={isExporting}
-          className="px-4 py-2 text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50 rounded-lg border border-gray-300 transition-colors"
-        >
-          {isExporting && exportType === "image"
-            ? "Generating…"
-            : "Download Image"}
         </button>
       </div>
     </div>

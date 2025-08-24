@@ -1,7 +1,7 @@
 export default function HeroBuildSomething() {
   return (
     <a
-      href="#about"
+      href="/resume"
       className="flex items-center gap-3 text-gray-900 dark:text-gray-100 group cursor-pointer"
     >
       <span className="flex items-center gap-3 border-b-2 border-blue-800 dark:border-blue-300 group-hover:border-blue-900 dark:group-hover:border-blue-200 transition-colors duration-200">

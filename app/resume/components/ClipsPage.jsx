@@ -75,7 +75,7 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
   return (
     <div 
       ref={containerRef}
-      className="selected-works-container w-full min-h-screen flex flex-col items-center justify-center p-4 bg-gray-50 dark:bg-gray-900 print:bg-white"
+      className="selected-works-container w-full flex flex-col items-center p-4 bg-gray-50 dark:bg-gray-900 print:bg-white"
     >
       {/* Scaling wrapper */}
       <div 
@@ -100,9 +100,9 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
           }}
         >
           {/* Content with fixed padding for consistent layout */}
-          <div className="p-12 h-full overflow-hidden print:overflow-visible" style={{ padding: "0.3in 0.75in 0.75in 0.75in" }}>
+          <div className="p-12 h-full overflow-hidden print:overflow-visible" style={{ padding: "0.5in 0.75in 0.75in 0.75in" }}>
             {/* Header */}
-            <header className="text-center mb-4 pb-2 border-b border-gray-300">
+            <header className="text-center mb-3 pb-2 border-b border-gray-300">
               <h1 className="text-xl font-bold tracking-wider text-gray-900 mb-1 uppercase">
               TREVOR BROWN
             </h1>
@@ -115,7 +115,7 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
                 href="https://trevorthewebdeveloper.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-800"
+                className="text-gray-600 underline underline-offset-2 hover:text-gray-800 hover:no-underline"
               >
                 trevorthewebdeveloper.com
               </a>
@@ -123,10 +123,10 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
           </header>
 
           {/* Main content */}
-          <div className="max-w-2xl mx-auto space-y-3">
+          <div className="max-w-2xl mx-auto space-y-2">
             {/* Journalism Section */}
             <section>
-              <h2 className="text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-gray-300 pb-1 mb-2">
+              <h2 className="text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-gray-300 pb-1 mb-1">
                 Journalism
               </h2>
 
@@ -160,7 +160,7 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
 
             {/* Web Development Section */}
             <section>
-              <h2 className="text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-gray-300 pb-1 mb-2 mt-3">
+              <h2 className="text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-gray-300 pb-1 mb-1 mt-2">
                 Web Development
               </h2>
 
@@ -202,7 +202,7 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
 
             {/* Data Visualization Section */}
             <section>
-              <h2 className="text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-gray-300 pb-1 mb-2 mt-3">
+              <h2 className="text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-gray-300 pb-1 mb-1 mt-2">
                 Data Visualization
               </h2>
 
@@ -258,13 +258,6 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
           className="px-4 py-2 text-sm font-medium text-white bg-gray-900 hover:bg-gray-800 disabled:opacity-50 rounded-lg transition-colors"
         >
           {isExporting && exportType === "pdf" ? "Generating…" : "Download PDF"}
-        </button>
-        <button
-          onClick={handleExportImage}
-          disabled={isExporting}
-          className="px-4 py-2 text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50 rounded-lg border border-gray-300 transition-colors"
-        >
-          {isExporting && exportType === "image" ? "Generating…" : "Download Image"}
         </button>
       </div>
     </div>

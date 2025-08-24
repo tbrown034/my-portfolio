@@ -15,8 +15,8 @@ export const clips = [
   {
     id: 1,
     headline:
-      "The Misinformation Election: Lies, Conspiracy Theories Prominent in Many GOP Races",
-    text: "How election denial and conspiracy theories moved from the fringe into Oklahoma's 2022 GOP races – and what that meant for voters and democracy.",
+      "The Misinformation Election: Lies, Conspiracy Theories Prominent in Many Races",
+    text: "Exposed how election misinformation moved from margins to mainstream in Oklahoma's GOP races.",
     oneLiner:
       "In this deeply reported piece, I uncovered and wrote about the impact of misinformation on GOP races.",
     image: misinfo,
@@ -30,7 +30,7 @@ export const clips = [
     id: 2,
     headline:
       "Twenty Years After It Became a Crime, Racial Profiling Charges Remain Scarce",
-    text: "Twenty years after Oklahoma criminalized racial profiling, complaints rose yet none were substantiated – a look at the data gaps and accountability failures built into the system.",
+    text: "Found that every one of dozens of racial profiling complaints over the years was dismissed as unsubstantiated by the agencies investigating themselves.",
     oneLiner:
       "In this investigative piece, I examined the lack of accountability in Oklahoma's racial profiling laws.",
     image: profling,
@@ -42,8 +42,8 @@ export const clips = [
   {
     id: 3,
     headline:
-      "Oklahoma Hospitals Sue Thousands Each Year Over Unpaid Medical Bills",
-    text: "Oklahoma hospitals have sued thousands of patients over unpaid medical bills – who files the most cases and what that looks like for families on the other end.",
+      "With Little Notice, Hospitals Sue Thousands of Oklahomans Over Unpaid Bills",
+    text: "A first-of-its-kind investigation revealed several Oklahoma hospitals were pursuing litigation at rates far exceeding their peers, often targeting vulnerable patients struggling with medical debt.",
     oneLiner:
       "I reviewed hundreds of court records to uncover the extent of hospital lawsuits in Oklahoma.",
     image: hospitals,

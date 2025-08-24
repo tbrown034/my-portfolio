@@ -185,7 +185,7 @@ Code should read like well-organized journalism—clear hierarchy, logical flow,
   - Removed fabricated links and unnecessary constants
 
 - **Link corrections**:
-  - Fixed Reflectyr project links (site: `https://reflectyr.vercel.app/`, GitHub: `https://github.com/tbrown034/ReflectYr`)
+  - Fixed ReflectYr project links (site: `https://reflectyr.vercel.app/`, GitHub: `https://github.com/tbrown034/ReflectYr`)
 
 - **Background color consistency** – Fixed My Journey section background from `bg-gray-50 dark:bg-gray-900/50` to `bg-white dark:bg-blue-950` to match site theme
 
@@ -327,6 +327,15 @@ Today's session highlighted a fundamental tension in AI-assisted development –
 
 **The fundamental truth:** This portfolio has an intentional, opinionated design philosophy. Every line of code, every spacing decision, every typography choice is deliberate. The goal isn't to make it look like every other portfolio – it's to create something that reflects the unique intersection of journalism and development, with editorial sensibilities and architectural modernism as guiding principles.
 
+### CRITICAL BUG FIXES TO REMEMBER
+
+**Navigation Anchors:**
+- **Contact button MUST link to #contact** (NOT #about - there is no #about section)
+- The contact section exists at the bottom of the homepage with id="contact"
+- Never change navigation anchors without verifying the target section exists
+
+---
+
 ### August 21, 2025 - Hero Photo Enhancement
 
 **Tonight's refinement:**
@@ -348,6 +357,84 @@ Today's session highlighted a fundamental tension in AI-assisted development –
 **Technical approach:** Maintained editorial restraint while adding visual prominence through size, subtle animation, and careful use of shadows rather than decorative elements.
 
 **Status:** Hero photo now commands appropriate attention while respecting the overall design philosophy.
+
+---
+
+### August 24, 2025 - Major Portfolio Refinement Session
+
+**Session Overview:**
+Comprehensive portfolio refinement focusing on color scheme analysis, resume optimization, and UI consistency improvements.
+
+**Color Scheme Audit & Dark Mode Analysis:**
+- **Conducted full color audit** revealing disciplined Blue-Gray system with semantic color usage
+- **Identified dark mode issues:** Monochromatic blue overload (blue-950/900), poor depth hierarchy, cold feeling
+- **Documented color system:** Primary blue (blue-800/600), Gray scale hierarchy, Green for data/success, Red for errors
+- **Found minor inconsistencies:** Resume using indigo instead of blue, some gray-50 vs white backgrounds
+- **Proposed improvements:** Warmer slate system, true black with elevation, refined blue with warm accents
+
+**Resume & ClipsPage Optimizations:**
+
+**Content Improvements:**
+- **Resume summary rewritten multiple times** for authenticity:
+  - Started with corporate buzzword-heavy version
+  - Evolved to: "Combines 15 years of award-winning investigative journalism with full-stack development"
+  - Split into two paragraphs to fix text-justify spacing issues
+  - Made active voice, removed specific tech mentions, kept concise
+  
+- **Journalism clip descriptions refined:**
+  - Racial profiling: "Found that every one of dozens of racial profiling complaints over the years was dismissed"
+  - Election misinformation: "Exposed how election misinformation moved from margins to mainstream"
+  - Both shortened to fit on single lines
+
+- **Coding project descriptions updated:**
+  - My Expiry rewritten to active voice: "Developed My Expiry to track food freshness"
+  - Removed passive constructions throughout
+
+**Layout & Spacing Fixes:**
+- **Aligned Resume and ClipsPage dimensions:** Both now use padding: "0.75in"
+- **Fixed text-justify issues:** Removed from bullet points to eliminate weird word spacing
+- **Optimized ClipsPage spacing:** Reduced header margins, tightened sections to prevent content cutoff
+- **Added paragraph breaks** in resume summary for better readability
+
+**Navigation & UI Updates:**
+- **Redesigned resume page toolbar:**
+  - Removed "Experience & Highlights" text
+  - Created clean tab navigation with underlines (Resume | Selected Works)
+  - Moved Home link to "← Back to Portfolio" in top left
+  - Added "← Back to Homepage" button next to "↑ Back to Top" at bottom
+
+- **Header improvements:**
+  - Changed "Career Highlights" to "Quick View"
+  - Updated description to emphasize two-page summary nature
+  - Made "homepage" a hyperlink in description
+
+- **Button cleanup:**
+  - Fixed "Let's build something together" text in HeroBuildSomething
+  - Updated CTA to "View Resume + Selected Works"
+  - Removed "Download Image" buttons, kept only PDF export
+
+**Skills Section Updates:**
+- **AI & Automation:** Simplified to "LLM Integrations, OpenAI API, Anthropic API"
+- **Data Visualization:** Removed "& Analysis" from title, removed D3.js, added Flourish/Infogram
+
+**Critical Bug Fixes:**
+- **FIXED: Contact button linking to non-existent #about** - Now correctly links to #contact
+- **Added to CLAUDE.md memory** to prevent recurrence
+
+**Technical Improvements:**
+- **Consistent hyperlinking:** Made trevorthewebdeveloper.com blue in both Resume and Clips pages
+- **Proper en dash usage** throughout (–) instead of hyphens
+- **Fixed grammar** in multiple descriptions
+
+**Key Decisions Made:**
+- Keep resume summary professional but authentic
+- Remove all buzzwords and corporate speak
+- Use active voice throughout
+- Keep descriptions concise for one-line display
+- Maintain editorial newspaper design philosophy
+- Don't add features without explicit permission
+
+**Status:** Session completed successfully with all major issues resolved and improvements implemented.
 
 ---
 

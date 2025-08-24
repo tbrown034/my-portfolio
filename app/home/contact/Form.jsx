@@ -113,6 +113,22 @@ export default function Form() {
   return (
     <section className="pb-8">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
+        {/* Resume button - moved above header */}
+        <div className="mb-6 flex gap-4">
+          <a
+            href="/resume"
+            className="px-8 py-3 font-bold text-center text-blue-800 bg-white border-2 border-blue-800 rounded-2xl dark:text-blue-50 dark:bg-transparent dark:border-blue-50 hover:bg-blue-50 hover:border-blue-600 dark:hover:bg-blue-950 dark:hover:border-blue-200 focus:outline-none focus:ring focus:ring-blue-400 transition-all duration-200 inline-block"
+          >
+            Resume + Highlights
+          </a>
+          <a
+            href="#top"
+            className="px-8 py-3 font-bold text-center text-blue-800 bg-white border-2 border-blue-800 rounded-2xl dark:text-blue-50 dark:bg-transparent dark:border-blue-50 hover:bg-blue-50 hover:border-blue-600 dark:hover:bg-blue-950 dark:hover:border-blue-200 focus:outline-none focus:ring focus:ring-blue-400 transition-all duration-200 inline-flex items-center gap-2"
+          >
+            <span>↑</span> Back to Top
+          </a>
+        </div>
+        
         {/* Subsection header */}
         <div className="border-b border-gray-200 dark:border-gray-700 pb-2 mb-6">
           <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400">
@@ -210,13 +226,15 @@ export default function Form() {
         </div>
       )}
 
-      <button
-        type="submit"
-        disabled={status === "loading"}
-        className="w-full sm:w-auto px-8 py-3 font-bold text-white bg-blue-800 border-2 border-blue-800 rounded-2xl dark:text-blue-950 dark:bg-blue-50 dark:border-blue-50 hover:bg-blue-600 hover:border-blue-600 active:bg-blue-950 focus:bg-blue-500 dark:hover:bg-blue-200 dark:hover:border-blue-200 focus:outline-none focus:ring focus:ring-blue-400 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-        {status === "loading" ? "Sending..." : "Send Message"}
-      </button>
+      <div className="flex gap-4 flex-wrap">
+        <button
+          type="submit"
+          disabled={status === "loading"}
+          className="w-full sm:w-auto px-8 py-3 font-bold text-white bg-blue-800 border-2 border-blue-800 rounded-2xl dark:text-blue-950 dark:bg-blue-50 dark:border-blue-50 hover:bg-blue-600 hover:border-blue-600 active:bg-blue-950 focus:bg-blue-500 dark:hover:bg-blue-200 dark:hover:border-blue-200 focus:outline-none focus:ring focus:ring-blue-400 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          {status === "loading" ? "Sending..." : "Send Message"}
+        </button>
+      </div>
     </form>
       </div>
     </section>

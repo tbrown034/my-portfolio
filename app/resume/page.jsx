@@ -6,20 +6,31 @@ import ClipsPage from "./components/ClipsPage.jsx";
 
 export default function ResumePageLayout() {
   return (
-    <main className="min-h-screen bg-slate-100 dark:bg-blue-950">
+    <main className="min-h-screen bg-white dark:bg-blue-950">
       {/* Toolbar */}
       <div className="no-print sticky top-0 z-10 bg-white/90 dark:bg-blue-950/90 backdrop-blur border-b border-gray-200 dark:border-gray-700">
-        <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <h1 className="text-sm font-medium tracking-wider uppercase text-gray-600 dark:text-gray-400 letter-spacing-wide">Experience & Highlights</h1>
-          </div>
-          <div className="flex items-center gap-3">
+        <div className="mx-auto max-w-7xl px-6 py-4">
+          <div className="flex items-center justify-between mb-3">
             <Link
               href="/"
-              className="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+              className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
             >
-              ← Back
+              ← Back to Portfolio
             </Link>
+          </div>
+          <div className="flex gap-8 justify-center">
+            <a
+              href="#resume-section"
+              className="pb-2 text-sm font-medium text-gray-900 dark:text-gray-100 border-b-2 border-blue-800 dark:border-blue-300 transition-colors"
+            >
+              Resume
+            </a>
+            <a
+              href="#selected-works-section"
+              className="pb-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 border-b-2 border-transparent hover:border-gray-300 transition-colors"
+            >
+              Selected Works
+            </a>
           </div>
         </div>
       </div>
@@ -29,14 +40,17 @@ export default function ResumePageLayout() {
         <div className="max-w-7xl mx-auto">
           <div>
             <div className="text-xs font-bold uppercase tracking-[0.15em] text-indigo-800 dark:text-indigo-400 mb-2">
-              Professional Documents
+              Quick View
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-montserrat text-gray-900 dark:text-gray-100 mb-2">
-              Resume & Selected Works
+              Resume & Highlights
             </h2>
             <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mb-6">
-              A comprehensive overview of my professional experience, showcasing journalism excellence, 
-              technical expertise, and visual storytelling capabilities.
+              Quick summary of my professional experience and selected work. 
+              For full portfolio and detailed project information, visit the{" "}
+              <a href="/" className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200">
+                homepage
+              </a>.
             </p>
             <div className="space-y-1">
               <div className="border-t-2 border-gray-900 dark:border-gray-100"></div>
@@ -46,17 +60,34 @@ export default function ResumePageLayout() {
         </div>
       </div>
 
+
       {/* Resume and Selected Works Container - Side by side on large screens */}
       <div className="xl:flex xl:gap-8 xl:justify-center xl:px-8 xl:py-8">
         {/* Resume Component */}
-        <div className="xl:flex-shrink-0">
+        <div id="resume-section" className="xl:flex-shrink-0 scroll-mt-32">
           <ResumePage showGuides={false} />
         </div>
 
         {/* Selected Works Component */}
-        <div className="xl:flex-shrink-0">
+        <div id="selected-works-section" className="xl:flex-shrink-0 scroll-mt-32">
           <ClipsPage showGuides={false} />
         </div>
+      </div>
+
+      {/* Back to Top Button */}
+      <div className="no-print px-6 py-8 flex justify-center gap-4 bg-white dark:bg-blue-900">
+        <a
+          href="#resume-section"
+          className="px-6 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+        >
+          ↑ Back to Top
+        </a>
+        <Link
+          href="/"
+          className="px-6 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+        >
+          ← Back to Homepage
+        </Link>
       </div>
 
       {/* Editorial-inspired Resume Styles */}
