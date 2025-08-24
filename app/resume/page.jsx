@@ -48,9 +48,9 @@ export default function ResumePageLayout() {
             <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mb-6">
               Quick summary of my professional experience and selected work. 
               For full portfolio and detailed project information, visit the{" "}
-              <a href="/" className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200">
+              <Link href="/" className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200">
                 homepage
-              </a>.
+              </Link>.
             </p>
             <div className="space-y-1">
               <div className="border-t-2 border-gray-900 dark:border-gray-100"></div>
