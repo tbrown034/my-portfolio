@@ -3,7 +3,7 @@ import {
   EmailIcon,
   GitHubIcon,
   LinkedInIcon,
-  BlueskyIcon,
+  // BlueskyIcon,
 } from "@/components/Icons/SocialIcons";
 import { SOCIAL_LINKS, PERSONAL_INFO } from "@/lib/constants";
 
@@ -76,7 +76,7 @@ export default function HeroLinks() {
           <LinkedInIcon className="w-5 h-5" />
           <span className="text-sm">LinkedIn</span>
         </a>
-        <a
+        {/* <a
           href={SOCIAL_LINKS.bluesky}
           target="_blank"
           rel="noopener noreferrer"
@@ -84,7 +84,7 @@ export default function HeroLinks() {
         >
           <BlueskyIcon className="w-5 h-5" />
           <span className="text-sm">Bluesky</span>
-        </a>
+        </a> */}
       </div>
     </div>
   );

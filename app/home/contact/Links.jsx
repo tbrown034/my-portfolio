@@ -149,8 +149,8 @@ export default function Links() {
           </button>
         </div>
 
-        {/* Bluesky */}
-        <div className="flex-1 flex items-center justify-between p-4 border-l-2 border-blue-800 bg-white dark:bg-gray-800 rounded-lg transition-all duration-300 hover:shadow-md hover:border-l-4">
+        {/* Bluesky - Commented out until account is active */}
+        {/* <div className="flex-1 flex items-center justify-between p-4 border-l-2 border-blue-800 bg-white dark:bg-gray-800 rounded-lg transition-all duration-300 hover:shadow-md hover:border-l-4">
           <a
             href={SOCIAL_LINKS.bluesky}
             target="_blank"
@@ -210,7 +210,7 @@ export default function Links() {
               </svg>
             )}
           </button>
-        </div>
+        </div> */}
       </div>
       </div>
     </section>
