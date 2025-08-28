@@ -61,15 +61,15 @@ export default function ResumePageLayout() {
       </div>
 
 
-      {/* Resume and Selected Works Container - Side by side on large screens */}
-      <div className="xl:flex xl:gap-8 xl:justify-center xl:px-8 xl:py-8">
+      {/* Resume and Selected Works Container - Stacked vertically on all screens */}
+      <div className="flex flex-col items-center px-8 py-8">
         {/* Resume Component */}
-        <div id="resume-section" className="xl:flex-shrink-0 scroll-mt-32">
+        <div id="resume-section" className="scroll-mt-32">
           <ResumePage showGuides={false} />
         </div>
 
         {/* Selected Works Component */}
-        <div id="selected-works-section" className="xl:flex-shrink-0 scroll-mt-32">
+        <div id="selected-works-section" className="scroll-mt-32 mt-8">
           <ClipsPage showGuides={false} />
         </div>
       </div>
