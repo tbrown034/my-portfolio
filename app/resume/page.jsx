@@ -1,60 +1,85 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import ResumePage from "./components/ResumePage.jsx";
 import ClipsPage from "./components/ClipsPage.jsx";
 
 export default function ResumePageLayout() {
+  const [activeSection, setActiveSection] = useState("resume");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const resumeSection = document.getElementById("resume-section");
+      const worksSection = document.getElementById("selected-works-section");
+      
+      if (!resumeSection || !worksSection) return;
+      
+      const scrollPosition = window.scrollY + 150; // Offset for header
+      const resumeTop = resumeSection.offsetTop;
+      const worksTop = worksSection.offsetTop;
+      
+      if (scrollPosition >= worksTop) {
+        setActiveSection("works");
+      } else {
+        setActiveSection("resume");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Check initial position
+    
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <main className="min-h-screen bg-white dark:bg-blue-950">
-      {/* Toolbar */}
-      <div className="no-print sticky top-0 z-10 bg-white/90 dark:bg-blue-950/90 backdrop-blur border-b border-gray-200 dark:border-slate-600">
-        <div className="mx-auto max-w-7xl px-6 py-4">
-          <div className="flex items-center justify-between mb-3">
-            <Link
-              href="/"
-              className="text-sm font-medium text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-            >
-              ← Back to Portfolio
-            </Link>
-          </div>
-          <div className="flex gap-8 justify-center">
-            <a
-              href="#resume-section"
-              className="pb-2 text-sm font-medium text-gray-900 dark:text-white border-b-2 border-blue-800 dark:border-blue-400 transition-colors"
-            >
-              Resume
-            </a>
-            <a
-              href="#selected-works-section"
-              className="pb-2 text-sm font-medium text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white border-b-2 border-transparent hover:border-gray-300 transition-colors"
-            >
-              Selected Works
-            </a>
-          </div>
-        </div>
-      </div>
 
       {/* Header Section - Editorial Style */}
-      <div className="no-print px-6 sm:px-8 lg:px-12 xl:px-16 py-8 bg-white dark:bg-slate-900">
+      <div className="no-print px-6 sm:px-8 lg:px-12 xl:px-16 py-8 bg-white dark:bg-blue-950">
         <div className="max-w-7xl mx-auto">
           <div>
-            <div className="text-xs font-bold uppercase tracking-[0.15em] text-blue-800 dark:text-blue-400 mb-2">
-              Quick View
+            <div className="flex items-center justify-between mb-4">
+              <div>
+                <div className="text-xs font-bold uppercase tracking-[0.15em] text-blue-800 dark:text-blue-400 mb-2">
+                  Quick View
+                </div>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-montserrat text-gray-900 dark:text-white mb-2">
+                  Resume & Highlights
+                </h2>
+              </div>
+              <Link
+                href="/"
+                className="text-sm font-medium text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+              >
+                ← Back to Portfolio
+              </Link>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-montserrat text-gray-900 dark:text-white mb-2">
-              Resume & Highlights
-            </h2>
             <p className="text-lg text-gray-700 dark:text-slate-300 max-w-3xl mb-6">
-              Quick summary of my professional experience and selected work. 
-              For full portfolio and detailed project information, visit the{" "}
-              <Link href="/" className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200">
-                homepage
-              </Link>.
+              Quick summary of my professional experience and selected work.
             </p>
-            <div className="space-y-1">
-              <div className="border-t-2 border-gray-900 dark:border-gray-100"></div>
-              <div className="border-t border-gray-900 dark:border-gray-100"></div>
+            {/* Navigation tabs */}
+            <div className="flex gap-8 border-b-2 border-gray-900 dark:border-gray-100">
+              <a
+                href="#resume-section"
+                className={`pb-2 text-sm font-medium -mb-[2px] transition-colors ${
+                  activeSection === "resume"
+                    ? "text-gray-900 dark:text-white border-b-2 border-gray-900 dark:border-white"
+                    : "text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white border-b-2 border-transparent hover:border-gray-300"
+                }`}
+              >
+                Resume
+              </a>
+              <a
+                href="#selected-works-section"
+                className={`pb-2 text-sm font-medium -mb-[2px] transition-colors ${
+                  activeSection === "works"
+                    ? "text-gray-900 dark:text-white border-b-2 border-gray-900 dark:border-white"
+                    : "text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white border-b-2 border-transparent hover:border-gray-300"
+                }`}
+              >
+                Selected Works
+              </a>
             </div>
           </div>
         </div>
@@ -62,14 +87,14 @@ export default function ResumePageLayout() {
 
 
       {/* Resume and Selected Works Container - Stacked vertically on all screens */}
-      <div className="flex flex-col items-center px-8 py-8">
+      <div className="flex flex-col items-center px-2 sm:px-4 md:px-8 py-4 sm:py-8">
         {/* Resume Component */}
-        <div id="resume-section" className="scroll-mt-32">
+        <div id="resume-section" className="scroll-mt-24 w-full max-w-full overflow-x-auto">
           <ResumePage showGuides={false} />
         </div>
 
         {/* Selected Works Component */}
-        <div id="selected-works-section" className="scroll-mt-32 mt-8">
+        <div id="selected-works-section" className="scroll-mt-24 mt-8 w-full max-w-full overflow-x-auto">
           <ClipsPage showGuides={false} />
         </div>
       </div>

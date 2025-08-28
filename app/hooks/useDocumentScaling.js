@@ -20,12 +20,19 @@ export function useDocumentScaling(containerRef, documentRef) {
     const documentWidth = 8.5 * 96; // 816px
     const documentHeight = 11 * 96; // 1056px
     
+    // On mobile, add padding for better UX
+    const isMobile = containerWidth < 640;
+    const padding = isMobile ? 16 : 32; // 16px on mobile, 32px on desktop
+    const availableWidth = containerWidth - padding;
+    
     // Calculate scale to fit within container
-    const scaleX = containerWidth / documentWidth;
+    const scaleX = availableWidth / documentWidth;
     const scaleY = containerHeight / documentHeight;
     
-    // Use the smaller scale to ensure the entire document fits
-    const newScale = Math.min(scaleX, scaleY, 1); // Cap at 1 to prevent enlarging
+    // Use the width scale primarily for mobile, both for desktop
+    const newScale = isMobile ? 
+      Math.min(scaleX, 1) : // On mobile, prioritize width fit
+      Math.min(scaleX, scaleY, 1); // On desktop, fit both dimensions
     
     setScale(newScale);
     setDimensions({
