@@ -25,8 +25,8 @@ export default function Clips() {
     <section>
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* Subsection header */}
-        <div className="border-b border-gray-300 dark:border-gray-600 pb-2 mb-6">
-          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400">
+        <div className="border-b border-gray-300 dark:border-slate-600 pb-2 mb-6">
+          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-slate-400">
             Selected Visualizations
           </h2>
         </div>
@@ -47,7 +47,7 @@ export default function Clips() {
                         {story.program || "Visualization"}
                       </span>
                       {/* Publication and year */}
-                      <span className="text-gray-500 dark:text-gray-400">
+                      <span className="text-gray-500 dark:text-slate-400">
                         {story.publication} • {new Date(story.date).getFullYear()}
                       </span>
                     </div>
@@ -61,7 +61,7 @@ export default function Clips() {
                         {story.headline}
                       </h3>
                     </Link>
-                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
+                    <p className="text-gray-600 dark:text-slate-100 leading-relaxed text-sm">
                       {story.summary || story.text}
                     </p>
                   </div>
@@ -74,7 +74,7 @@ export default function Clips() {
                         story.graphicLink.map((link, i) => (
                           <Link
                             key={i}
-                            className="inline-flex items-center gap-1.5 text-base font-medium text-gray-600 dark:text-gray-400 hover:text-green-800 dark:hover:text-green-400 transition-colors duration-200"
+                            className="inline-flex items-center gap-1.5 text-base font-medium text-gray-600 dark:text-slate-400 hover:text-green-800 dark:hover:text-green-400 transition-colors duration-200"
                             href={link}
                             target="_blank"
                           >

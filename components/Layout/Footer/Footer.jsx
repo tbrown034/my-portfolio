@@ -8,10 +8,10 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
           {/* Left side - Branding */}
           <div className="flex flex-col gap-2">
-            <h3 className="text-lg font-semibold tracking-tight text-gray-900 dark:text-gray-100">
+            <h3 className="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">
               Trevor Brown
             </h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
+            <p className="text-sm text-gray-600 dark:text-slate-400">
               Investigative journalist + developer + data visualizer
             </p>
           </div>
@@ -21,8 +21,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom copyright */}
-        <div className="mt-8 pt-8 border-t border-gray-100 dark:border-gray-800/50">
-          <p className="text-xs text-gray-500 dark:text-gray-500 text-center md:text-left">
+        <div className="mt-8 pt-8 border-t border-gray-100 dark:border-slate-800/50">
+          <p className="text-xs text-gray-500 dark:text-slate-500 text-center md:text-left">
             © {new Date().getFullYear()} Trevor Brown.
           </p>
         </div>

@@ -13,22 +13,22 @@ export default function Intro() {
     <section>
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* Subsection header */}
-        <div className="border-b border-gray-300 dark:border-gray-600 pb-2 mb-6">
-          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400">
+        <div className="border-b border-gray-300 dark:border-slate-600 pb-2 mb-6">
+          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-slate-400">
             Background
           </h2>
         </div>
 
         {/* Main content */}
         <div className="max-w-4xl">
-          <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
+          <div className="space-y-4 text-gray-600 dark:text-slate-300 leading-relaxed">
             <p>
               My journalism career began at{" "}
               <a
                 href="https://www.idsnews.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200"
+                className="font-medium text-blue-800 dark:text-blue-400 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200"
               >
                 Indiana University
               </a>
@@ -38,7 +38,7 @@ export default function Intro() {
                 href="https://www.wyomingnews.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200"
+                className="font-medium text-blue-800 dark:text-blue-400 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200"
               >
                 Wyoming Tribune Eagle
               </a>{" "}
@@ -47,7 +47,7 @@ export default function Intro() {
                 href="https://oklahomawatch.org"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200"
+                className="font-medium text-blue-800 dark:text-blue-400 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200"
               >
                 Oklahoma Watch
               </a>
@@ -60,7 +60,7 @@ export default function Intro() {
                 href="https://bootcamp.outreach.ou.edu/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-blue-800 dark:text-blue-300 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200"
+                className="font-medium text-blue-800 dark:text-blue-400 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200"
               >
                 OU Outreach's Fullstack Academy Web Development Bootcamp
               </a>

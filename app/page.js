@@ -10,13 +10,13 @@ export default function Page() {
       <div className="bg-slate-100 dark:bg-blue-950 py-12">
         <Hero />
       </div>
-      <div className="bg-slate-200 dark:bg-blue-900 py-12">
+      <div className="bg-slate-200 dark:bg-slate-900 py-12">
         <Code />
       </div>
       <div className="bg-slate-100 dark:bg-blue-950 py-12">
         <Visualizations />
       </div>
-      <div className="bg-slate-200 dark:bg-blue-900 py-12">
+      <div className="bg-slate-200 dark:bg-slate-900 py-12">
         <Journalism />
       </div>
       <div className="bg-slate-100 dark:bg-blue-950 py-12">

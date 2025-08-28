@@ -8,7 +8,7 @@ export default function DesktopNav() {
         <Link
           key={link.href}
           href={link.href}
-          className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200 border-b-2 border-transparent hover:border-gray-300 dark:hover:border-gray-600 pb-1"
+          className="text-sm font-medium text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:underline transition-colors duration-200 border-b-2 border-transparent hover:border-gray-300 dark:hover:border-slate-600 pb-1"
         >
           {link.label}
         </Link>

@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <main className="flex flex-col px-6 pb-0 pt-4 sm:px-8 lg:px-12 xl:px-16 ">
       {/* Mobile layout (below md breakpoint) */}
-      <section className="flex flex-col gap-4 md:hidden max-w-3xl mx-auto pt-8">
+      <section className="flex flex-col gap-4 md:gap-5 md:hidden max-w-3xl mx-auto pt-8">
         <HeroHeader />
         <Intro />
         <HeroCTA />
@@ -17,19 +17,19 @@ export default function Hero() {
       </section>
 
       {/* Tablet layout (md to lg) - exactly like mobile but with 2-column About Me */}
-      <section className="hidden md:flex lg:hidden md:flex-col gap-4 max-w-3xl mx-auto md:pt-8">
+      <section className="hidden md:flex lg:hidden md:flex-col gap-4 md:gap-5 max-w-3xl mx-auto md:pt-8">
         <HeroHeader />
 
         {/* About Me section with 2-column intro */}
         <div className="space-y-3">
-          <h2 className="text-xs font-bold uppercase tracking-[0.15em] text-gray-500 dark:text-gray-500">
+          <h2 className="text-xs font-bold uppercase tracking-[0.15em] text-gray-500 dark:text-gray-500 inline-flex items-center px-1.5 py-0.5 rounded-md hover:bg-white/5">
             About Me
           </h2>
           <Intro showDesktopLayout="large" />
         </div>
 
         {/* Mug - centered like mobile */}
-        <div className="flex justify-center my-6">
+        <div className="flex justify-center mt-6 mb-6">
           <Mug />
         </div>
 
@@ -47,7 +47,7 @@ export default function Hero() {
             {/* Left column: About content */}
             <div className="col-span-2 space-y-6 order-1">
               <div className="space-y-3">
-                <h2 className="text-xs font-bold uppercase tracking-[0.15em] text-gray-500 dark:text-gray-500">
+                <h2 className="text-xs font-bold uppercase tracking-[0.15em] text-gray-500 dark:text-gray-500 inline-flex items-center px-1.5 py-0.5 rounded-md hover:bg-white/5">
                   About Me
                 </h2>
                 <Intro showDesktopLayout="large" />

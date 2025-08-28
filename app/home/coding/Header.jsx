@@ -10,20 +10,20 @@ export default function Header() {
           </div>
 
           {/* Main headline */}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-montserrat text-gray-900 dark:text-gray-100 mb-2">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-montserrat text-gray-900 dark:text-white mb-2">
             Coding & Development
           </h2>
 
           {/* Lede paragraph */}
-          <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mb-6">
+          <p className="text-lg text-gray-700 dark:text-slate-300 max-w-3xl mb-6">
             After 15-plus years in journalism, I bring an investigative approach to
             web development
           </p>
 
           {/* Section divider - newspaper style double rule */}
           <div className="space-y-1">
-            <div className="border-t-2 border-gray-900 dark:border-gray-100"></div>
-            <div className="border-t border-gray-900 dark:border-gray-100"></div>
+            <div className="border-t-2 border-gray-900 dark:border-white"></div>
+            <div className="border-t border-gray-900 dark:border-white"></div>
           </div>
         </div>
       </div>
