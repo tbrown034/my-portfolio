@@ -58,7 +58,7 @@ export default function RootLayout({ children }) {
         lang="en"
       >
         <body>
-          <div className="text-blue-950 dark:bg-blue-950 dark:text-blue-50">
+          <div className="text-blue-950 dark:bg-blue-950 dark:text-slate-100">
             <Header />
             {children}
             <Footer />

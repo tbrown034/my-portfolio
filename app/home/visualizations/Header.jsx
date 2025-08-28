@@ -5,24 +5,24 @@ export default function Header() {
         {/* Newspaper-style section header */}
         <div>
           {/* Kicker/eyebrow - editorial style */}
-          <div className="text-xs font-bold uppercase tracking-[0.15em] text-purple-800 dark:text-purple-400 mb-2">
+          <div className="text-xs font-bold uppercase tracking-[0.15em] text-purple-800 dark:text-blue-400 mb-2">
             Visual Storytelling
           </div>
 
           {/* Main headline */}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-montserrat text-gray-900 dark:text-gray-100 mb-2">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-montserrat text-gray-900 dark:text-white mb-2">
             Visualizations
           </h2>
 
           {/* Lede paragraph */}
-          <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mb-6">
+          <p className="text-lg text-gray-700 dark:text-slate-300 max-w-3xl mb-6">
             Transforming complex datasets into clear, interactive visualizations
           </p>
 
           {/* Section divider - newspaper style double rule */}
           <div className="space-y-1">
-            <div className="border-t-2 border-gray-900 dark:border-gray-100"></div>
-            <div className="border-t border-gray-900 dark:border-gray-100"></div>
+            <div className="border-t-2 border-gray-900 dark:border-white"></div>
+            <div className="border-t border-gray-900 dark:border-white"></div>
           </div>
         </div>
       </div>

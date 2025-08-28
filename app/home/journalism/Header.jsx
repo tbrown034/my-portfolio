@@ -9,19 +9,19 @@ export default function Header() {
           </div>
           
           {/* Main title */}
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 dark:text-gray-100">
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 dark:text-white">
             Journalism
           </h1>
           
           {/* Subtitle/description */}
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl">
+          <p className="text-lg text-gray-600 dark:text-slate-300 max-w-3xl">
             From city halls to state capitols, I've spent 15-plus years holding power accountable
           </p>
           
           {/* Visual separator - double rule */}
           <div className="pt-4">
-            <div className="border-t-4 border-gray-900 dark:border-gray-100 mb-1"></div>
-            <div className="border-t border-gray-900 dark:border-gray-100"></div>
+            <div className="border-t-4 border-gray-900 dark:border-white mb-1"></div>
+            <div className="border-t border-gray-900 dark:border-white"></div>
           </div>
         </div>
       </div>

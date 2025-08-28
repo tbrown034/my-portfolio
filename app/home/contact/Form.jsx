@@ -80,7 +80,7 @@ export default function Form() {
               </svg>
             </div>
             <div className="flex-1 animate-fadeInDelayed">
-              <h3 className="text-lg font-semibold text-green-900 dark:text-green-100 mb-2">
+              <h3 className="text-lg font-semibold text-green-900 dark:text-white mb-2">
                 Message Sent Successfully!
               </h3>
               <p className="text-green-800 dark:text-green-300 mb-4">
@@ -130,8 +130,8 @@ export default function Form() {
         </div>
         
         {/* Subsection header */}
-        <div className="border-b border-gray-200 dark:border-gray-700 pb-2 mb-6">
-          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400">
+        <div className="border-b border-gray-200 dark:border-slate-600 pb-2 mb-6">
+          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-slate-400">
             Send a Message
           </h2>
         </div>
@@ -145,7 +145,7 @@ export default function Form() {
         <div>
           <label
             htmlFor="name"
-            className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+            className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-2"
           >
             Name
           </label>
@@ -156,7 +156,7 @@ export default function Form() {
             required
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors"
+            className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 dark:border-slate-500 bg-white dark:bg-slate-800 text-gray-900 dark:text-slate-100 placeholder:text-gray-400 placeholder:dark:text-slate-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors"
             placeholder="Your name"
           />
         </div>
@@ -164,7 +164,7 @@ export default function Form() {
         <div>
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+            className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-2"
           >
             Email
           </label>
@@ -175,7 +175,7 @@ export default function Form() {
             required
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors"
+            className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 dark:border-slate-500 bg-white dark:bg-slate-800 text-gray-900 dark:text-slate-100 placeholder:text-gray-400 placeholder:dark:text-slate-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors"
             placeholder="your@email.com"
           />
         </div>

@@ -7,8 +7,8 @@ export default function Clips() {
     <section>
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* Subsection header */}
-        <div className="border-b border-gray-300 dark:border-gray-600 pb-2 mb-6">
-          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400">
+        <div className="border-b border-gray-300 dark:border-slate-600 pb-2 mb-6">
+          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-slate-400">
             Selected Projects
           </h2>
         </div>
@@ -18,7 +18,7 @@ export default function Clips() {
           {webProjects.map((project, index) => (
             <div key={index} className="group relative">
               {/* Card content - simplified */}
-              <div className="relative bg-white dark:bg-gray-800 rounded-lg p-5 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-700">
+              <div className="relative bg-white dark:bg-slate-800 rounded-lg p-5 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-600 transform hover:-translate-y-1 cursor-pointer">
                 {/* Content */}
                 <div className="space-y-4 mb-6">
                   <div className="space-y-2">
@@ -29,7 +29,7 @@ export default function Clips() {
                         className={`px-2 py-1 rounded font-medium ${
                           project.type === "Professional"
                             ? "bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-400"
-                            : "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300"
+                            : "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-slate-300"
                         }`}
                       >
                         {project.type}
@@ -47,11 +47,11 @@ export default function Clips() {
                       target="_blank"
                       className="inline-block hover:text-blue-800 dark:hover:text-blue-400 transition-colors duration-200"
                     >
-                      <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 cursor-pointer">
+                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white cursor-pointer">
                         {project.title}
                       </h3>
                     </Link>
-                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
+                    <p className="text-gray-600 dark:text-slate-100 leading-relaxed text-sm">
                       {project.description}
                     </p>
                   </div>
@@ -71,7 +71,7 @@ export default function Clips() {
                   {/* Links */}
                   <div className="flex gap-4">
                     <Link
-                      className="inline-flex items-center gap-1.5 text-base font-medium text-gray-600 dark:text-gray-400 hover:text-blue-800 dark:hover:text-blue-400 transition-colors duration-200"
+                      className="inline-flex items-center gap-1.5 text-base font-medium text-gray-600 dark:text-slate-400 hover:text-blue-800 dark:hover:text-blue-400 hover:underline underline-offset-2 transition-all duration-200"
                       href={project.githubLink}
                       target="_blank"
                     >
@@ -85,7 +85,7 @@ export default function Clips() {
                       Code
                     </Link>
                     <Link
-                      className="inline-flex items-center gap-1.5 text-base font-medium text-gray-600 dark:text-gray-400 hover:text-blue-800 dark:hover:text-blue-400 transition-colors duration-200"
+                      className="inline-flex items-center gap-1.5 text-base font-medium text-gray-600 dark:text-slate-400 hover:text-blue-800 dark:hover:text-blue-400 hover:underline underline-offset-2 transition-all duration-200"
                       href={project.siteLink}
                       target="_blank"
                     >
