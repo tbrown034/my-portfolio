@@ -63,23 +63,23 @@ export const webProjects = [
     githubLink: "https://github.com/tbrown034/refelectyr_project",
     siteLink: "https://reflectyr.vercel.app/",
   },
-  // {
-  //   id: 4,
-  //   title: "ReStub",
-  //   type: "Hobby",
-  //   tag: "Modern Stack",
-  //   workInProgress: true,
-  //   image: "/images/restub-screenshot-aug11.png",
-  //   technologies: [
-  //     "Next.js",
-  //     "React",
-  //     "TypeScript",
-  //     "PostgreSQL (Neon)",
-  //     "Tailwind CSS",
-  //   ],
-  //   description:
-  //     "I was talking to a friend about a baseball game we went to a few years ago and we couldn't remember the score. That gave me the idea for ReStub – an app that lets users enter details of MLB, NBA, NFL and NHL games they attended, no matter how far back. Uses Anthropic AI integration to automatically look up and fill in missing game details. Hoping to add photo upload feature soon.",
-  //   githubLink: "https://github.com/tbrown034/restub",
-  //   siteLink: "https://restub.vercel.app/",
-  // },
+  {
+    id: 4,
+    title: "ReStub",
+    type: "Hobby",
+    tag: "Modern Stack",
+    workInProgress: true,
+    image: "/images/restub-screenshot-aug11.png",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "PostgreSQL (Neon)",
+      "Tailwind CSS",
+    ],
+    description:
+      "Built ReStub to help sports fans preserve their game day memories – users log details from MLB, NBA, NFL and NHL games they've attended, with AI automatically filling in missing scores, stats and game information. Features ticket stub recreation, experience cataloging, and persistent localStorage for saving memories across sessions.",
+    githubLink: "https://github.com/tbrown034/restub",
+    siteLink: "https://restub.vercel.app/",
+  },
 ];
