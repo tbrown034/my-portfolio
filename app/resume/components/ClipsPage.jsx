@@ -255,7 +255,7 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
         <button
           onClick={handleExportPDF}
           disabled={isExporting}
-          className="px-4 py-2 text-sm font-medium text-white bg-gray-900 hover:bg-gray-800 disabled:opacity-50 rounded-lg transition-colors"
+          className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-blue-800 dark:bg-sky-500 dark:text-slate-900 rounded-xl hover:bg-blue-900 dark:hover:bg-sky-400 hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isExporting && exportType === "pdf" ? "Generating…" : "Download PDF"}
         </button>

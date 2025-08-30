@@ -57,6 +57,7 @@ export default function Clips() {
                     <Link 
                       href={article.siteLink || "https://oklahomawatch.org"} 
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-block hover:text-blue-800 dark:hover:text-blue-400 transition-colors duration-200"
                     >
                       <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 cursor-pointer">
@@ -74,6 +75,7 @@ export default function Clips() {
                       className="inline-flex items-center gap-1.5 text-base font-medium text-gray-600 dark:text-slate-400 hover:text-blue-800 dark:hover:text-blue-400 transition-colors duration-200"
                       href={article.siteLink || "https://oklahomawatch.org"}
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <svg
                         className="w-5 h-5"
@@ -99,6 +101,7 @@ export default function Clips() {
                     <Link 
                       href={article.siteLink || "https://oklahomawatch.org"} 
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="block w-1/2 cursor-pointer"
                     >
                       <div className="border-2 border-gray-200 dark:border-gray-600 rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition-shadow duration-300">
