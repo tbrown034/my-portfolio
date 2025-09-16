@@ -62,7 +62,7 @@ export default function Awards() {
         {hiddenYears.length > 0 && !showAll && (
           <div className="flex justify-center mt-6">
             <button
-              className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-blue-800 bg-gray-100 border border-gray-300 rounded-lg dark:text-blue-50 dark:bg-gray-700 dark:border-gray-600 hover:bg-gray-200 hover:border-gray-400 active:bg-gray-300 focus:bg-gray-200 dark:hover:bg-gray-600 dark:hover:border-gray-500 focus:outline-none focus:ring focus:ring-gray-400 cursor-pointer transition-colors duration-200"
+              className="inline-flex items-center justify-center px-5 py-2 text-sm font-semibold text-gray-800 dark:text-gray-100 bg-white dark:bg-gray-900 border-2 border-gray-400 dark:border-gray-500 rounded-lg shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-800 dark:hover:text-blue-400 hover:shadow-md hover:-translate-y-0.5 active:bg-gray-100 dark:active:bg-gray-950 active:shadow-none active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 cursor-pointer"
               onClick={() => setShowAll(true)}
             >
               Show More
@@ -72,7 +72,7 @@ export default function Awards() {
         {showAll && (
           <div className="flex justify-center mt-6">
             <button
-              className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-blue-800 border border-blue-800 rounded-lg dark:text-blue-950 dark:bg-blue-50 dark:border-blue-50 hover:bg-blue-600 hover:border-blue-600 active:bg-blue-950 focus:bg-blue-500 dark:hover:bg-blue-200 dark:hover:border-blue-200 focus:outline-none focus:ring focus:ring-blue-400 cursor-pointer transition-colors duration-200"
+              className="inline-flex items-center justify-center px-5 py-2 text-sm font-semibold text-white bg-blue-800 dark:bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 dark:hover:bg-blue-500 hover:shadow-lg hover:-translate-y-1 active:bg-blue-900 dark:active:bg-blue-700 active:shadow-sm active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 cursor-pointer"
               onClick={() => setShowAll(false)}
             >
               Show Less

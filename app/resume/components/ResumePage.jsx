@@ -494,7 +494,7 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
         <button
           onClick={handleExportPDF}
           disabled={isExporting}
-          className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-blue-800 dark:bg-sky-500 dark:text-slate-900 rounded-xl hover:bg-blue-900 dark:hover:bg-sky-400 hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent disabled:opacity-50 disabled:cursor-not-allowed"
+          className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white bg-blue-800 dark:bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 dark:hover:bg-blue-500 hover:shadow-lg hover:-translate-y-1 active:bg-blue-900 dark:active:bg-blue-700 active:shadow-sm active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isExporting && exportType === "pdf" ? "Generating…" : "Download PDF"}
         </button>

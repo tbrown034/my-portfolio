@@ -181,7 +181,7 @@ export default function Clips() {
         {graphics.length > defaultItemCount && !showAll && (
           <div className="flex justify-center mt-8">
             <button
-              className="inline-flex items-center justify-center px-6 py-3 font-bold text-white bg-green-800 border-2 border-green-800 rounded-2xl dark:text-green-950 dark:bg-green-50 dark:border-green-50 hover:bg-green-600 hover:border-green-600 active:bg-green-950 focus:bg-green-500 dark:hover:bg-green-200 dark:hover:border-green-200 focus:outline-none focus:ring focus:ring-green-400 cursor-pointer"
+              className="inline-flex items-center justify-center px-6 py-2.5 font-semibold text-white bg-blue-800 dark:bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 dark:hover:bg-blue-500 hover:shadow-lg hover:-translate-y-1 active:bg-blue-900 dark:active:bg-blue-700 active:shadow-sm active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 cursor-pointer"
               onClick={() => setShowAll(true)}
             >
               Show More
@@ -191,7 +191,7 @@ export default function Clips() {
         {showAll && (
           <div className="flex justify-center mt-8">
             <button
-              className="inline-flex items-center justify-center px-6 py-3 font-bold text-green-800 bg-gray-100 border-2 border-gray-300 rounded-2xl dark:text-green-50 dark:bg-gray-700 dark:border-gray-600 hover:bg-gray-200 hover:border-gray-400 active:bg-gray-300 focus:bg-gray-200 dark:hover:bg-gray-600 dark:hover:border-gray-500 focus:outline-none focus:ring focus:ring-gray-400 cursor-pointer"
+              className="inline-flex items-center justify-center px-6 py-2.5 font-semibold text-gray-800 dark:text-gray-100 bg-white dark:bg-gray-900 border-2 border-gray-400 dark:border-gray-500 rounded-lg shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-800 dark:hover:text-blue-400 hover:shadow-md hover:-translate-y-0.5 active:bg-gray-100 dark:active:bg-gray-950 active:shadow-none active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 cursor-pointer"
               onClick={() => setShowAll(false)}
             >
               Show Less

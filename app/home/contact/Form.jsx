@@ -97,7 +97,7 @@ export default function Form() {
                     message: "",
                   });
                 }}
-                className="text-sm font-medium text-green-800 dark:text-green-400 hover:text-green-900 dark:hover:text-green-300 underline transition-colors"
+                className="text-sm font-medium text-green-800 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 underline underline-offset-2 transition-colors duration-150"
               >
                 Send another message
               </button>
@@ -117,13 +117,13 @@ export default function Form() {
         <div className="mb-6 flex gap-4">
           <a
             href="/resume"
-            className="px-8 py-3 font-bold text-center text-blue-800 bg-white border-2 border-blue-800 rounded-2xl dark:text-blue-50 dark:bg-transparent dark:border-blue-50 hover:bg-blue-50 hover:border-blue-600 dark:hover:bg-blue-950 dark:hover:border-blue-200 focus:outline-none focus:ring focus:ring-blue-400 transition-all duration-200 inline-block"
+            className="px-6 py-2.5 font-semibold text-center text-white bg-blue-800 dark:bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 dark:hover:bg-blue-500 hover:shadow-lg hover:-translate-y-1 active:bg-blue-900 dark:active:bg-blue-700 active:shadow-sm active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 inline-block"
           >
             Resume + Highlights
           </a>
           <a
             href="#top"
-            className="px-8 py-3 font-bold text-center text-blue-800 bg-white border-2 border-blue-800 rounded-2xl dark:text-blue-50 dark:bg-transparent dark:border-blue-50 hover:bg-blue-50 hover:border-blue-600 dark:hover:bg-blue-950 dark:hover:border-blue-200 focus:outline-none focus:ring focus:ring-blue-400 transition-all duration-200 inline-flex items-center gap-2"
+            className="px-6 py-2.5 font-semibold text-center text-gray-800 dark:text-gray-100 bg-white dark:bg-gray-900 border-2 border-gray-400 dark:border-gray-500 rounded-lg shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-800 dark:hover:text-blue-400 hover:shadow-md hover:-translate-y-0.5 active:bg-gray-100 dark:active:bg-gray-950 active:shadow-none active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 inline-flex items-center gap-2"
           >
             <span>↑</span> Back to Top
           </a>
@@ -230,7 +230,7 @@ export default function Form() {
         <button
           type="submit"
           disabled={status === "loading"}
-          className="w-full sm:w-auto px-8 py-3 font-bold text-white bg-blue-800 border-2 border-blue-800 rounded-2xl dark:text-blue-950 dark:bg-blue-50 dark:border-blue-50 hover:bg-blue-600 hover:border-blue-600 active:bg-blue-950 focus:bg-blue-500 dark:hover:bg-blue-200 dark:hover:border-blue-200 focus:outline-none focus:ring focus:ring-blue-400 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full sm:w-auto px-6 py-2.5 font-semibold text-white bg-blue-800 dark:bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 dark:hover:bg-blue-500 hover:shadow-lg hover:-translate-y-1 active:bg-blue-900 dark:active:bg-blue-700 active:shadow-sm active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {status === "loading" ? "Sending..." : "Send Message"}
         </button>
