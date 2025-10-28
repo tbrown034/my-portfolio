@@ -11,7 +11,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">
               Trevor Brown
             </h3>
-            <p className="text-sm text-gray-600 dark:text-slate-400">
+            <p className="text-sm text-gray-600 dark:text-neutral-400">
               Investigative journalist + developer + data visualizer
             </p>
           </div>

@@ -19,7 +19,7 @@ export default function HeroLinks() {
           <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
             Investigations
           </h3>
-          <p className="text-sm text-gray-500 dark:text-slate-400">
+          <p className="text-sm text-gray-500 dark:text-neutral-400">
             Public records, data analysis
           </p>
         </Link>
@@ -31,7 +31,7 @@ export default function HeroLinks() {
           <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
             Web Development
           </h3>
-          <p className="text-sm text-gray-500 dark:text-slate-400">
+          <p className="text-sm text-gray-500 dark:text-neutral-400">
             Next.js, React, TypeScript
           </p>
         </Link>
@@ -43,7 +43,7 @@ export default function HeroLinks() {
           <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
             Data
           </h3>
-          <p className="text-sm text-gray-500 dark:text-slate-400">
+          <p className="text-sm text-gray-500 dark:text-neutral-400">
             Analysis, visualization, open records
           </p>
         </Link>
@@ -53,7 +53,7 @@ export default function HeroLinks() {
       <div className="flex flex-wrap gap-6 justify-center md:justify-start">
         <a
           href={`mailto:${PERSONAL_INFO.email}`}
-          className="flex items-center gap-2 px-1 py-0.5 text-gray-600 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 hover:underline transition-colors"
+          className="flex items-center gap-2 px-1 py-0.5 text-gray-600 dark:text-neutral-100 hover:text-blue-600 dark:hover:text-blue-400 hover:underline transition-colors"
         >
           <EmailIcon className="w-5 h-5" />
           <span className="text-sm">Email</span>
@@ -62,7 +62,7 @@ export default function HeroLinks() {
           href={SOCIAL_LINKS.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 px-1 py-0.5 text-gray-600 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 hover:underline transition-colors"
+          className="flex items-center gap-2 px-1 py-0.5 text-gray-600 dark:text-neutral-100 hover:text-blue-600 dark:hover:text-blue-400 hover:underline transition-colors"
         >
           <GitHubIcon className="w-5 h-5" />
           <span className="text-sm">GitHub</span>
@@ -71,7 +71,7 @@ export default function HeroLinks() {
           href={SOCIAL_LINKS.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 px-1 py-0.5 text-gray-600 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 hover:underline transition-colors"
+          className="flex items-center gap-2 px-1 py-0.5 text-gray-600 dark:text-neutral-100 hover:text-blue-600 dark:hover:text-blue-400 hover:underline transition-colors"
         >
           <LinkedInIcon className="w-5 h-5" />
           <span className="text-sm">LinkedIn</span>
@@ -80,7 +80,7 @@ export default function HeroLinks() {
           href={SOCIAL_LINKS.bluesky}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 px-1 py-0.5 text-gray-600 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 hover:underline transition-colors"
+          className="flex items-center gap-2 px-1 py-0.5 text-gray-600 dark:text-neutral-100 hover:text-blue-600 dark:hover:text-blue-400 hover:underline transition-colors"
         >
           <BlueskyIcon className="w-5 h-5" />
           <span className="text-sm">Bluesky</span>

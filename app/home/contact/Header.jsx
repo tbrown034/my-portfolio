@@ -14,7 +14,7 @@ export default function Header() {
           </h1>
           
           {/* Subtitle/description */}
-          <p className="text-lg text-gray-600 dark:text-slate-300 max-w-3xl">
+          <p className="text-lg text-gray-600 dark:text-neutral-200 max-w-3xl">
             Open to freelance projects, consulting, and full-time opportunities
           </p>
           

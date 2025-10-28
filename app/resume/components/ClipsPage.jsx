@@ -16,7 +16,7 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
   return (
     <div
       ref={containerRef}
-      className="selected-works-container w-full flex flex-col items-center p-4 bg-white dark:bg-blue-950 print:bg-white"
+      className="selected-works-container w-full flex flex-col items-center p-8 bg-slate-100 dark:bg-neutral-900 print:bg-white"
     >
       {/* Scaling wrapper */}
       <div 
@@ -32,9 +32,9 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
             pageRef.current = el;
             documentRef.current = el;
           }}
-          className="absolute top-0 left-0 bg-white shadow-xl print:shadow-none origin-top-left"
-          style={{ 
-            width: '8.5in', 
+          className="clips-page-paper absolute top-0 left-0 bg-white rounded-lg shadow-2xl dark:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.95)] print:shadow-none print:rounded-none origin-top-left"
+          style={{
+            width: '8.5in',
             height: '11in',
             transform: `scale(${scale})`,
             transformOrigin: 'top left'

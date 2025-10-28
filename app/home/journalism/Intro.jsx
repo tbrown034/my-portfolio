@@ -3,15 +3,15 @@ export default function Intro() {
     <section>
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* Subsection header */}
-        <div className="border-b border-gray-300 dark:border-slate-600 pb-2 mb-6">
-          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-slate-400">
+        <div className="border-b border-gray-300 dark:border-neutral-700 pb-2 mb-6">
+          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-neutral-400">
             Background
           </h2>
         </div>
 
         {/* Main content */}
         <div className="max-w-4xl">
-          <div className="space-y-4 text-gray-600 dark:text-slate-300 leading-relaxed">
+          <div className="space-y-4 text-gray-600 dark:text-neutral-200 leading-relaxed">
             <p>
               I was editor-in-chief of{" "}
               <a

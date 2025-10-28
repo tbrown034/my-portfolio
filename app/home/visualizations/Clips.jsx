@@ -25,8 +25,8 @@ export default function Clips() {
     <section>
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* Subsection header */}
-        <div className="border-b border-gray-300 dark:border-slate-600 pb-2 mb-6">
-          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-slate-400">
+        <div className="border-b border-gray-300 dark:border-neutral-700 pb-2 mb-6">
+          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-neutral-400">
             Selected Visualizations
           </h2>
         </div>
@@ -36,7 +36,7 @@ export default function Clips() {
           {visibleGraphics.map((story, index) => (
             <div key={story.id} className="group relative">
               {/* Card content - simplified */}
-              <div className="relative bg-white dark:bg-gray-800 rounded-lg p-5 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-green-300 dark:hover:border-green-700">
+              <div className="relative bg-white dark:bg-neutral-800 rounded-lg p-5 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-green-300 dark:hover:border-green-700">
                 {/* Content */}
                 <div className="space-y-4 mb-6">
                   <div className="space-y-2">
@@ -47,7 +47,7 @@ export default function Clips() {
                         {story.program || "Visualization"}
                       </span>
                       {/* Publication and year */}
-                      <span className="text-gray-500 dark:text-slate-400">
+                      <span className="text-gray-500 dark:text-neutral-400">
                         {story.publication} • {new Date(story.date).getFullYear()}
                       </span>
                     </div>
@@ -62,7 +62,7 @@ export default function Clips() {
                         {story.headline}
                       </h3>
                     </Link>
-                    <p className="text-gray-600 dark:text-slate-100 leading-relaxed text-sm">
+                    <p className="text-gray-600 dark:text-neutral-100 leading-relaxed text-sm">
                       {story.summary || story.text}
                     </p>
                   </div>
@@ -75,7 +75,7 @@ export default function Clips() {
                         story.graphicLink.map((link, i) => (
                           <Link
                             key={i}
-                            className="inline-flex items-center gap-1.5 text-base font-medium text-gray-600 dark:text-slate-400 hover:text-green-800 dark:hover:text-green-400 transition-colors duration-200"
+                            className="inline-flex items-center gap-1.5 text-base font-medium text-gray-600 dark:text-neutral-400 hover:text-green-800 dark:hover:text-green-400 transition-colors duration-200"
                             href={link}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -154,7 +154,7 @@ export default function Clips() {
                     rel="noopener noreferrer"
                     className="block w-1/2 cursor-pointer"
                   >
-                    <div className="border-2 border-gray-200 dark:border-gray-600 rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition-shadow duration-300">
+                    <div className="border-2 border-gray-200 dark:border-gray-600 rounded-lg overflow-hidden shadow-lg bg-white dark:bg-neutral-800 hover:shadow-xl transition-shadow duration-300">
                       <div
                         className="h-32 overflow-hidden"
                       >
@@ -191,7 +191,7 @@ export default function Clips() {
         {showAll && (
           <div className="flex justify-center mt-8">
             <button
-              className="inline-flex items-center justify-center px-6 py-2.5 font-semibold text-gray-800 dark:text-gray-100 bg-white dark:bg-gray-900 border-2 border-gray-400 dark:border-gray-500 rounded-lg shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-800 dark:hover:text-blue-400 hover:shadow-md hover:-translate-y-0.5 active:bg-gray-100 dark:active:bg-gray-950 active:shadow-none active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 cursor-pointer"
+              className="inline-flex items-center justify-center px-6 py-2.5 font-semibold text-gray-800 dark:text-gray-100 bg-white dark:bg-neutral-900 border-2 border-gray-400 dark:border-gray-500 rounded-lg shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-800 dark:hover:text-blue-400 hover:shadow-md hover:-translate-y-0.5 active:bg-gray-100 dark:active:bg-gray-950 active:shadow-none active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 cursor-pointer"
               onClick={() => setShowAll(false)}
             >
               Show Less

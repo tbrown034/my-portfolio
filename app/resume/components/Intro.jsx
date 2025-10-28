@@ -57,7 +57,7 @@ export default function Intro({ showDesktopLayout }) {
               </Link>
               <Link
                 href="/resume#clips"
-                className="px-6 py-2.5 border-2 border-gray-400 dark:border-gray-500 text-gray-800 dark:text-gray-100 bg-white dark:bg-gray-900 font-semibold rounded-lg shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-800 dark:hover:text-blue-400 hover:shadow-md hover:-translate-y-0.5 active:bg-gray-100 dark:active:bg-gray-950 active:shadow-none active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                className="px-6 py-2.5 border-2 border-gray-400 dark:border-gray-500 text-gray-800 dark:text-gray-100 bg-white dark:bg-neutral-900 font-semibold rounded-lg shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-800 dark:hover:text-blue-400 hover:shadow-md hover:-translate-y-0.5 active:bg-gray-100 dark:active:bg-gray-950 active:shadow-none active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
               >
                 Selected Works
               </Link>
@@ -133,7 +133,7 @@ export default function Intro({ showDesktopLayout }) {
         </Link>
         <Link
           href="/resume#clips"
-          className="px-6 py-2.5 border-2 border-gray-400 dark:border-gray-500 text-gray-800 dark:text-gray-100 bg-white dark:bg-gray-900 font-semibold rounded-lg shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-800 dark:hover:text-blue-400 hover:shadow-md hover:-translate-y-0.5 active:bg-gray-100 dark:active:bg-gray-950 active:shadow-none active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 text-center"
+          className="px-6 py-2.5 border-2 border-gray-400 dark:border-gray-500 text-gray-800 dark:text-gray-100 bg-white dark:bg-neutral-900 font-semibold rounded-lg shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-800 dark:hover:text-blue-400 hover:shadow-md hover:-translate-y-0.5 active:bg-gray-100 dark:active:bg-gray-950 active:shadow-none active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 text-center"
         >
           Selected Works
         </Link>

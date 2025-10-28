@@ -15,7 +15,7 @@ export default function Header() {
           </h2>
 
           {/* Lede paragraph */}
-          <p className="text-lg text-gray-700 dark:text-slate-300 max-w-3xl mb-6">
+          <p className="text-lg text-gray-700 dark:text-neutral-200 max-w-3xl mb-6">
             Transforming complex datasets into clear, interactive visualizations
           </p>
 

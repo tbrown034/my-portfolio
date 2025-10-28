@@ -15,7 +15,7 @@ export default function Intro({ showDesktopLayout }) {
               I spent 15-plus years chasing public records and holding power
               accountable.
             </h3>
-            <p className="text-xl text-gray-600 dark:text-slate-300 leading-relaxed mt-4">
+            <p className="text-xl text-gray-600 dark:text-neutral-200 leading-relaxed mt-4">
               Now I build{" "}
               <Link
                 href="#coding"
@@ -31,7 +31,7 @@ export default function Intro({ showDesktopLayout }) {
 
           {/* Column 2: Nutgraph and body */}
           <div className="flex flex-col justify-between h-full">
-            <p className=" text-lg text-gray-600 dark:text-slate-300 leading-relaxed">
+            <p className=" text-lg text-gray-600 dark:text-neutral-200 leading-relaxed">
               My work bridges{" "}
               <Link
                 href="#journalism"
@@ -56,7 +56,7 @@ export default function Intro({ showDesktopLayout }) {
               and applications that turn raw data into useful information.
             </p>
 
-            <p className=" text-gray-600 dark:text-slate-300 leading-relaxed mt-4">
+            <p className=" text-gray-600 dark:text-neutral-200 leading-relaxed mt-4">
               Whether I’m reporting or coding, my guiding principle is the same:
               make truth and information accessible, keep the user experience
               seamless and ensure the end product feels useful.
@@ -94,7 +94,7 @@ export default function Intro({ showDesktopLayout }) {
           </h3>
 
           {/* Lede */}
-          <p className="text-lg text-gray-600 dark:text-slate-300 leading-relaxed">
+          <p className="text-lg text-gray-600 dark:text-neutral-200 leading-relaxed">
             Now I build{" "}
             <Link
               href="#coding"
@@ -109,7 +109,7 @@ export default function Intro({ showDesktopLayout }) {
 
           {/* Nutgraph */}
           <div className="space-y-3">
-            <p className="text-base text-gray-600 dark:text-slate-300 leading-relaxed">
+            <p className="text-base text-gray-600 dark:text-neutral-200 leading-relaxed">
               My work bridges{" "}
               <Link
                 href="#journalism"
@@ -135,7 +135,7 @@ export default function Intro({ showDesktopLayout }) {
             </p>
 
             {/* Body */}
-            <p className="text-sm text-gray-600 dark:text-slate-300 leading-relaxed">
+            <p className="text-sm text-gray-600 dark:text-neutral-200 leading-relaxed">
               Whether I'm digging into public records or architecting a React
               application, my guiding principle is the same: make truth and
               information accessible and make the experience seamless.

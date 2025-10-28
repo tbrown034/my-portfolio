@@ -7,8 +7,8 @@ export default function Clips() {
     <section>
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* Subsection header */}
-        <div className="border-b border-gray-300 dark:border-slate-600 pb-2 mb-6">
-          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-slate-400">
+        <div className="border-b border-gray-300 dark:border-neutral-700 pb-2 mb-6">
+          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-neutral-400">
             Selected Projects
           </h2>
         </div>
@@ -29,7 +29,7 @@ export default function Clips() {
                         className={`px-2 py-1 rounded font-medium ${
                           project.type === "Professional"
                             ? "bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-400"
-                            : "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-slate-300"
+                            : "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-neutral-200"
                         }`}
                       >
                         {project.type}
@@ -52,7 +52,7 @@ export default function Clips() {
                         {project.title}
                       </h3>
                     </Link>
-                    <p className="text-gray-600 dark:text-slate-100 leading-relaxed text-sm">
+                    <p className="text-gray-600 dark:text-neutral-100 leading-relaxed text-sm">
                       {project.description}
                     </p>
                   </div>
@@ -72,7 +72,7 @@ export default function Clips() {
                   {/* Links */}
                   <div className="flex gap-4">
                     <Link
-                      className="inline-flex items-center gap-1.5 text-base font-medium text-gray-600 dark:text-slate-400 hover:text-blue-800 dark:hover:text-blue-400 hover:underline underline-offset-2 transition-all duration-200"
+                      className="inline-flex items-center gap-1.5 text-base font-medium text-gray-600 dark:text-neutral-400 hover:text-blue-800 dark:hover:text-blue-400 hover:underline underline-offset-2 transition-all duration-200"
                       href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -87,7 +87,7 @@ export default function Clips() {
                       Code
                     </Link>
                     <Link
-                      className="inline-flex items-center gap-1.5 text-base font-medium text-gray-600 dark:text-slate-400 hover:text-blue-800 dark:hover:text-blue-400 hover:underline underline-offset-2 transition-all duration-200"
+                      className="inline-flex items-center gap-1.5 text-base font-medium text-gray-600 dark:text-neutral-400 hover:text-blue-800 dark:hover:text-blue-400 hover:underline underline-offset-2 transition-all duration-200"
                       href={project.siteLink}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -118,7 +118,7 @@ export default function Clips() {
                     rel="noopener noreferrer"
                     className="block w-1/2 cursor-pointer"
                   >
-                    <div className="border-2 border-gray-200 dark:border-gray-600 rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-xl transition-shadow duration-300">
+                    <div className="border-2 border-gray-200 dark:border-gray-600 rounded-lg overflow-hidden shadow-lg bg-white dark:bg-neutral-800 hover:shadow-xl transition-shadow duration-300">
                       <div
                         className="h-32 overflow-hidden"
                       >

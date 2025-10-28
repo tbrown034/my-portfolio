@@ -64,7 +64,7 @@ export default function Form() {
           <div className="max-w-4xl animate-fadeIn">
             <div className="bg-green-50 dark:bg-green-900/20 p-8 rounded-2xl border-2 border-green-200 dark:border-green-800 animate-slideUp">
           <div className="flex items-start gap-4">
-            <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900/40 animate-scaleIn">
+            <div className="shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-green-100 dark:bg-green-900/40 animate-scaleIn">
               <svg
                 className="w-6 h-6 text-green-800 dark:text-green-400 animate-checkmark"
                 fill="none"
@@ -123,31 +123,44 @@ export default function Form() {
           </a>
           <a
             href="#top"
-            className="px-6 py-2.5 font-semibold text-center text-gray-800 dark:text-gray-100 bg-white dark:bg-gray-900 border-2 border-gray-400 dark:border-gray-500 rounded-lg shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-800 dark:hover:text-blue-400 hover:shadow-md hover:-translate-y-0.5 active:bg-gray-100 dark:active:bg-gray-950 active:shadow-none active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 inline-flex items-center gap-2"
+            className="px-6 py-2.5 font-semibold text-center text-gray-800 dark:text-gray-100 bg-white dark:bg-neutral-900 border-2 border-gray-400 dark:border-gray-500 rounded-lg shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-800 dark:hover:text-blue-400 hover:shadow-md hover:-translate-y-0.5 active:bg-gray-100 dark:active:bg-gray-950 active:shadow-none active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 inline-flex items-center gap-2"
           >
             <span>↑</span> Back to Top
           </a>
         </div>
         
         {/* Subsection header */}
-        <div className="border-b border-gray-200 dark:border-slate-600 pb-2 mb-6">
-          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-slate-400">
+        <div className="border-b border-gray-200 dark:border-neutral-700 pb-2 mb-6">
+          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-neutral-400">
             Send a Message
           </h2>
         </div>
-        
-        <form
-          id="contact-form"
-          onSubmit={handleSubmit}
-          className="space-y-6 max-w-4xl"
-        >
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <div>
+
+        {/* Form container with frosted glass effect */}
+        <div className="max-w-4xl p-8 md:p-10 rounded-2xl border-2 border-gray-300 dark:border-neutral-700 bg-linear-to-br from-white/80 to-white/60 dark:from-neutral-800/50 dark:to-neutral-800/30 backdrop-blur-md shadow-xl dark:shadow-2xl dark:shadow-black/40">
+
+          {/* Form title inside the card */}
+          <div className="mb-8 pb-6 border-b-2 border-gray-900 dark:border-white">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2">
+              Get in Touch
+            </h3>
+            <p className="text-sm text-gray-600 dark:text-neutral-300">
+              Let's discuss your project or how we can work together
+            </p>
+          </div>
+
+          <form
+            id="contact-form"
+            onSubmit={handleSubmit}
+            className="space-y-8"
+          >
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="space-y-2">
           <label
             htmlFor="name"
-            className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-2"
+            className="block text-xs uppercase tracking-wider font-bold text-gray-900 dark:text-white"
           >
-            Name
+            Your Name
           </label>
           <input
             type="text"
@@ -156,17 +169,17 @@ export default function Form() {
             required
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 dark:border-slate-500 bg-white dark:bg-slate-800 text-gray-900 dark:text-slate-100 placeholder:text-gray-400 placeholder:dark:text-slate-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors"
-            placeholder="Your name"
+            className="w-full px-5 py-4 rounded-xl border-2 border-gray-300 dark:border-neutral-600 bg-white dark:bg-neutral-900/80 backdrop-blur-sm text-gray-900 dark:text-neutral-100 text-base placeholder:text-gray-400 placeholder:dark:text-neutral-500 focus:border-blue-600 dark:focus:border-blue-400 focus:outline-none focus:ring-4 focus:ring-blue-500/20 dark:focus:ring-blue-400/20 focus:bg-white dark:focus:bg-neutral-900 shadow-md hover:shadow-lg transition-all duration-200"
+            placeholder="John Smith"
           />
         </div>
 
-        <div>
+        <div className="space-y-2">
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-2"
+            className="block text-xs uppercase tracking-wider font-bold text-gray-900 dark:text-white"
           >
-            Email
+            Email Address
           </label>
           <input
             type="email"
@@ -175,16 +188,16 @@ export default function Form() {
             required
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 dark:border-slate-500 bg-white dark:bg-slate-800 text-gray-900 dark:text-slate-100 placeholder:text-gray-400 placeholder:dark:text-slate-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors"
-            placeholder="your@email.com"
+            className="w-full px-5 py-4 rounded-xl border-2 border-gray-300 dark:border-neutral-600 bg-white dark:bg-neutral-900/80 backdrop-blur-sm text-gray-900 dark:text-neutral-100 text-base placeholder:text-gray-400 placeholder:dark:text-neutral-500 focus:border-blue-600 dark:focus:border-blue-400 focus:outline-none focus:ring-4 focus:ring-blue-500/20 dark:focus:ring-blue-400/20 focus:bg-white dark:focus:bg-neutral-900 shadow-md hover:shadow-lg transition-all duration-200"
+            placeholder="john@example.com"
           />
         </div>
       </div>
 
-      <div>
+      <div className="space-y-2">
         <label
           htmlFor="subject"
-          className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+          className="block text-xs uppercase tracking-wider font-bold text-gray-900 dark:text-white"
         >
           Subject
         </label>
@@ -195,27 +208,27 @@ export default function Form() {
           required
           value={formData.subject}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors"
-          placeholder="What is this about?"
+          className="w-full px-5 py-4 rounded-xl border-2 border-gray-300 dark:border-white/30 bg-white dark:bg-neutral-900/50 backdrop-blur-sm text-gray-900 dark:text-neutral-100 text-base placeholder:text-gray-400 placeholder:dark:text-slate-500 focus:border-blue-600 dark:focus:border-blue-400 focus:outline-none focus:ring-4 focus:ring-blue-500/20 dark:focus:ring-blue-400/20 focus:bg-white dark:focus:bg-gray-900/70 shadow-md hover:shadow-lg transition-all duration-200"
+          placeholder="Project collaboration, freelance inquiry, etc."
         />
       </div>
 
-      <div>
+      <div className="space-y-2">
         <label
           htmlFor="message"
-          className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+          className="block text-xs uppercase tracking-wider font-bold text-gray-900 dark:text-white"
         >
-          Message
+          Your Message
         </label>
         <textarea
           id="message"
           name="message"
-          rows={6}
+          rows={7}
           required
           value={formData.message}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors resize-none"
-          placeholder="Tell me about your project or how I can help..."
+          className="w-full px-5 py-4 rounded-xl border-2 border-gray-300 dark:border-neutral-600 bg-white dark:bg-neutral-900/80 backdrop-blur-sm text-gray-900 dark:text-neutral-100 text-base leading-relaxed placeholder:text-gray-400 placeholder:dark:text-neutral-500 focus:border-blue-600 dark:focus:border-blue-400 focus:outline-none focus:ring-4 focus:ring-blue-500/20 dark:focus:ring-blue-400/20 focus:bg-white dark:focus:bg-neutral-900 shadow-md hover:shadow-lg transition-all duration-200 resize-none"
+          placeholder="Tell me about your project, timeline, budget, and any specific requirements..."
         />
       </div>
 
@@ -226,16 +239,20 @@ export default function Form() {
         </div>
       )}
 
-      <div className="flex gap-4 flex-wrap">
+      <div className="pt-4 flex gap-4 flex-wrap items-center">
         <button
           type="submit"
           disabled={status === "loading"}
-          className="w-full sm:w-auto px-6 py-2.5 font-semibold text-white bg-blue-800 dark:bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 dark:hover:bg-blue-500 hover:shadow-lg hover:-translate-y-1 active:bg-blue-900 dark:active:bg-blue-700 active:shadow-sm active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="px-8 py-4 text-base font-bold uppercase tracking-wider text-white bg-blue-800 dark:bg-blue-600 rounded-xl shadow-lg hover:bg-blue-700 dark:hover:bg-blue-500 hover:shadow-xl hover:-translate-y-1 active:bg-blue-900 dark:active:bg-blue-700 active:shadow-md active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-500/50 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
         >
           {status === "loading" ? "Sending..." : "Send Message"}
         </button>
+        <p className="text-xs text-gray-500 dark:text-neutral-400">
+          I'll respond within 24 hours
+        </p>
       </div>
     </form>
+        </div>
       </div>
     </section>
   );
