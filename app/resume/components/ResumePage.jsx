@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import { useDocumentScaling } from "@/app/hooks/useDocumentScaling";
 
 /* Component Library - Editorial Resume Style with Tailwind */
@@ -30,7 +30,7 @@ const Job = ({ title, org, period, highlights }) => (
       {highlights.map((highlight, i) => (
         <li
           key={i}
-          className="mb-0.5 pl-3 relative text-xs leading-relaxed before:content-['•'] before:absolute before:left-0 before:text-gray-600 before:font-bold"
+          className="mb-0.5 pl-3 relative text-xs leading-relaxed text-gray-700 before:content-['•'] before:absolute before:left-0 before:text-gray-600 before:font-bold"
         >
           {highlight}
         </li>
@@ -76,75 +76,16 @@ const Award = ({ title, org, year, article }) => (
 );
 
 export default function ResumeComponentResponsive({ showGuides = false }) {
-  const [isExporting, setIsExporting] = useState(false);
-  const [exportType, setExportType] = useState("");
   const pageRef = useRef(null);
   const containerRef = useRef(null);
   const documentRef = useRef(null);
 
   const { scale, dimensions } = useDocumentScaling(containerRef, documentRef);
 
-  const handleExportPDF = async () => {
-    if (!pageRef.current) return;
-    setIsExporting(true);
-    setExportType("pdf");
-    try {
-      const html2pdf = (await import("html2pdf.js")).default;
-      await html2pdf()
-        .set({
-          margin: 0,
-          filename: "Trevor_Brown_Resume.pdf",
-          image: { type: "jpeg", quality: 1 },
-          html2canvas: { scale: 3, useCORS: true, letterRendering: true },
-          jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
-        })
-        .from(pageRef.current)
-        .save();
-    } catch (err) {
-      console.error(err);
-    } finally {
-      setIsExporting(false);
-      setExportType("");
-    }
-  };
-
-  const handleExportImage = async () => {
-    if (!pageRef.current) return;
-    setIsExporting(true);
-    setExportType("image");
-    try {
-      const html2canvas = (await import("html2canvas")).default;
-      const canvas = await html2canvas(pageRef.current, {
-        scale: 3,
-        useCORS: true,
-        letterRendering: true,
-        backgroundColor: "#ffffff",
-      });
-
-      canvas.toBlob(
-        (blob) => {
-          const url = URL.createObjectURL(blob);
-          const link = document.createElement("a");
-          link.download = "Trevor_Brown_Resume.png";
-          link.href = url;
-          link.click();
-          URL.revokeObjectURL(url);
-        },
-        "image/png",
-        1.0
-      );
-    } catch (err) {
-      console.error(err);
-    } finally {
-      setIsExporting(false);
-      setExportType("");
-    }
-  };
-
   return (
     <div
       ref={containerRef}
-      className="resume-container w-full flex flex-col items-center p-4 bg-gray-50 dark:bg-gray-900 print:bg-white"
+      className="resume-container w-full flex flex-col items-center p-4 bg-white dark:bg-blue-950 print:bg-white"
     >
       {/* Scaling wrapper */}
       <div
@@ -489,16 +430,17 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
         </div>
       </div>
 
-      {/* Download buttons below resume */}
-      <div className="mt-6 print:hidden flex gap-3">
-        <button
-          onClick={handleExportPDF}
-          disabled={isExporting}
-          className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white bg-blue-800 dark:bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 dark:hover:bg-blue-500 hover:shadow-lg hover:-translate-y-1 active:bg-blue-900 dark:active:bg-blue-700 active:shadow-sm active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+      {/* Download button below resume */}
+      <div className="mt-6 print:hidden flex justify-center">
+        <a
+          href="/pdfs/Trevor_Brown_Resume.pdf"
+          download
+          className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white bg-blue-800 dark:bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 dark:hover:bg-blue-500 hover:shadow-lg hover:-translate-y-1 active:bg-blue-900 dark:active:bg-blue-700 active:shadow-sm active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
         >
-          {isExporting && exportType === "pdf" ? "Generating…" : "Download PDF"}
-        </button>
+          Download Resume (PDF)
+        </a>
       </div>
+      {/* Note: To regenerate PDF after content changes, run: npm run generate-pdfs */}
     </div>
   );
 }

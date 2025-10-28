@@ -62,7 +62,7 @@ export default function ResumePageLayout() {
             <div className="flex gap-8 border-b-2 border-gray-900 dark:border-gray-100">
               <a
                 href="#resume-section"
-                className={`pb-2 text-sm font-medium -mb-[2px] transition-colors ${
+                className={`pb-2 text-sm font-medium -mb-0.5 transition-colors ${
                   activeSection === "resume"
                     ? "text-gray-900 dark:text-white border-b-2 border-gray-900 dark:border-white"
                     : "text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white border-b-2 border-transparent hover:border-gray-300"
@@ -72,7 +72,7 @@ export default function ResumePageLayout() {
               </a>
               <a
                 href="#selected-works-section"
-                className={`pb-2 text-sm font-medium -mb-[2px] transition-colors ${
+                className={`pb-2 text-sm font-medium -mb-0.5 transition-colors ${
                   activeSection === "works"
                     ? "text-gray-900 dark:text-white border-b-2 border-gray-900 dark:border-white"
                     : "text-gray-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white border-b-2 border-transparent hover:border-gray-300"
@@ -100,7 +100,7 @@ export default function ResumePageLayout() {
       </div>
 
       {/* Back to Top Button */}
-      <div className="no-print px-6 py-8 flex justify-center gap-4 bg-white dark:bg-blue-900">
+      <div className="no-print px-6 py-8 flex justify-center gap-4 bg-white dark:bg-blue-950">
         <a
           href="#resume-section"
           className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white bg-blue-800 dark:bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 dark:hover:bg-blue-500 hover:shadow-lg hover:-translate-y-1 active:bg-blue-900 dark:active:bg-blue-700 active:shadow-sm active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
@@ -128,10 +128,12 @@ export default function ResumePageLayout() {
           overflow: hidden;
         }
         
-        /* Dark mode override for resume page - always white background */
+        /* Dark mode override for resume page - always white background with dramatic shadow */
         @media (prefers-color-scheme: dark) {
           .resume-page {
             background: #ffffff;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 15px 30px rgba(0,0,0,0.4), 0 5px 15px rgba(0,0,0,0.3);
+            border: 1px solid #000000;
           }
         }
         

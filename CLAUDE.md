@@ -438,4 +438,126 @@ Comprehensive portfolio refinement focusing on color scheme analysis, resume opt
 
 ---
 
+### October 28, 2025 - PDF Generation System & Dark Mode Enhancements
+
+**Session Time:** 2:30 PM – 3:50 PM
+
+**Session Overview:**
+Implemented automated PDF generation system with working links and selectable text, resolved Next.js 16 image quality warnings, and enhanced dark mode paper effects for resume pages.
+
+**Major Accomplishments:**
+
+**1. PDF Generation System Implementation**
+- **Problem:** Need downloadable PDFs with working links and selectable text, not just image-based PDFs
+- **Solution:** Built Puppeteer-based PDF generation system with dedicated PDF-only routes
+
+**Technical Implementation:**
+- Created `/resume/pdf-only` and `/resume/selected-works-pdf-only` routes
+- Added custom layout files to bypass root layout's Header/Footer components
+- Configured CSS to hide site navigation header (`header.sticky`) while preserving resume masthead
+- Used `pageRanges: '1'` parameter to ensure exactly 1-page PDFs
+- Added `"use client"` directive for styled-jsx compatibility
+
+**Key Files Created/Modified:**
+- `app/resume/pdf-only/page.jsx` – Clean resume render for PDF capture
+- `app/resume/pdf-only/layout.jsx` – Minimal layout bypassing global nav
+- `app/resume/selected-works-pdf-only/page.jsx` – Clean clips render for PDF capture
+- `app/resume/selected-works-pdf-only/layout.jsx` – Minimal layout bypassing global nav
+- `scripts/generate-pdfs.js` – Updated to use new routes and enforce single-page output
+- `.env.local` – Added `NEXT_PUBLIC_BASE_URL='http://localhost:3001'` for PDF generation
+
+**PDF Features:**
+- ✅ Working, clickable links (e.g., article URLs, portfolio site, email)
+- ✅ Selectable, searchable text (true PDF, not image-based)
+- ✅ Exactly 1 page each (enforced via `pageRanges: '1'`)
+- ✅ Clean output with no site navigation or footer
+- ✅ Resume masthead and contact info preserved
+- ✅ 378KB (Resume) and 216KB (Selected Works) – optimized size
+
+**Critical Learning:**
+- Next.js layouts are **nested**, not replaceable – child layouts wrap inside parent layouts
+- Cannot "skip" root layout – must use CSS to hide unwanted elements
+- Targeting specific elements (e.g., `header.sticky`) prevents hiding resume headers
+- Puppeteer's `page.pdf()` always captures full page – use `pageRanges` to limit output
+
+**2. Next.js Image Quality Configuration**
+- **Problem:** Warnings about image quality 85 not being configured for Next.js 16
+- **Solution:** Added `qualities: [75, 85, 90, 95, 100]` to `next.config.js`
+- **Impact:** Silenced warnings and prepared codebase for Next.js 16 upgrade
+
+**3. Dark Mode Enhancement**
+- **Problem:** Resume/clips pages looked flat in dark mode – no 3D paper effect
+- **Solution:** Enhanced box-shadow for dark mode in `app/resume/page.jsx`
+- **Implementation:** `box-shadow: 0 25px 50px rgba(0,0,0,0.3), 0 10px 20px rgba(0,0,0,0.2);`
+- **Result:** Paper now pops off dark background with dramatic 3D effect
+
+**4. Puppeteer Script Improvements**
+- Fixed deprecated `page.waitForTimeout()` → `new Promise(resolve => setTimeout(resolve, 2000))`
+- Added element-specific screenshot capability for PNG previews
+- Implemented single-page PDF constraint
+- Added comprehensive error checking and status reporting
+
+**Workflow for Future Updates:**
+
+**When updating resume/clips content:**
+1. Edit content in `app/resume/components/ResumePage.jsx` or `ClipsPage.jsx`
+2. Ensure dev server is running: `pnpm run dev`
+3. Run PDF generation: `pnpm generate-pdfs`
+4. Verify output:
+   - Check page count: `file public/pdfs/Trevor_Brown_Resume.pdf`
+   - Open PDFs to verify links work and text is selectable
+   - Confirm no site navigation header appears
+5. Commit updated PDFs to repository
+
+**PDF Generation Script Details:**
+```bash
+# Generate PDFs from current dev server
+pnpm generate-pdfs
+
+# Script automatically:
+# - Checks if dev server is running on port 3001
+# - Navigates to PDF-only routes
+# - Generates PDFs with pageRanges: '1'
+# - Attempts PNG preview generation
+# - Saves to public/pdfs/
+```
+
+**Files Updated/Created:**
+- `next.config.js` – Added image qualities configuration
+- `app/resume/page.jsx` – Enhanced dark mode shadows
+- `scripts/generate-pdfs.js` – Updated timeout method, added pageRanges
+- `.env.local` – Added NEXT_PUBLIC_BASE_URL
+- Created 4 new files for PDF-only routes and layouts
+
+**Stretch Goal (Future Enhancement):**
+Build dashboard feature that:
+- Detects when ResumePage.jsx or ClipsPage.jsx content changes
+- Automatically triggers PDF regeneration via GitHub Actions or webhook
+- Replaces static PDFs in `public/pdfs/` without manual intervention
+
+**Technical Notes:**
+- PDFs are **static files** served from `public/pdfs/` – not generated on-the-fly
+- Puppeteer runs **locally during development** – not in production
+- PDF generation requires dev server running on localhost:3001
+- Links work because Puppeteer captures live HTML with anchor tags
+- Text is selectable because PDF contains actual text layers, not images
+
+**Challenges Overcome:**
+1. Initial confusion about screenshot approach vs. live PDF generation
+2. Next.js layout hierarchy – learned layouts nest instead of replace
+3. Header conflict – distinguished between site nav header and resume masthead header
+4. Page count issue – resolved with `pageRanges: '1'` parameter
+5. styled-jsx client component requirement – added `"use client"` directives
+
+**Key Decisions:**
+- Static PDF generation (not on-the-fly) for reliability and performance
+- Puppeteer-based approach for working links and selectable text
+- Dedicated PDF-only routes for clean, controlled rendering
+- CSS-based hiding of site navigation rather than layout replacement
+- Single-page constraint enforced at PDF generation level
+
+**Status:** PDF generation system fully operational. PDFs have working links, selectable text, clean formatting, and guaranteed single-page output. Ready for production use.
+
+---
+
 _Updated with core design philosophy, coding ethos, and development progress - reference this for all future work together._

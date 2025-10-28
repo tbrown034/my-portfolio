@@ -1,81 +1,22 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import { useDocumentScaling } from "@/app/hooks/useDocumentScaling";
 import { graphics } from "@/content/visualizations.js";
 import { clips } from "@/content/journalism.js";
 import { webProjects } from "@/content/coding.js";
 
 export default function SelectedWorksResponsive({ showGuides = false }) {
-  const [isExporting, setIsExporting] = useState(false);
-  const [exportType, setExportType] = useState("");
   const pageRef = useRef(null);
   const containerRef = useRef(null);
   const documentRef = useRef(null);
-  
+
   const { scale, dimensions } = useDocumentScaling(containerRef, documentRef);
 
-  const handleExportPDF = async () => {
-    if (!pageRef.current) return;
-    setIsExporting(true);
-    setExportType("pdf");
-    try {
-      const html2pdf = (await import("html2pdf.js")).default;
-      await html2pdf()
-        .set({
-          margin: 0,
-          filename: "Trevor_Brown_Selected_Works.pdf",
-          image: { type: "jpeg", quality: 1 },
-          html2canvas: { scale: 3, useCORS: true, letterRendering: true },
-          jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
-        })
-        .from(pageRef.current)
-        .save();
-    } catch (err) {
-      console.error(err);
-    } finally {
-      setIsExporting(false);
-      setExportType("");
-    }
-  };
-
-  const handleExportImage = async () => {
-    if (!pageRef.current) return;
-    setIsExporting(true);
-    setExportType("image");
-    try {
-      const html2canvas = (await import("html2canvas")).default;
-      const canvas = await html2canvas(pageRef.current, {
-        scale: 3,
-        useCORS: true,
-        letterRendering: true,
-        backgroundColor: "#ffffff",
-      });
-
-      canvas.toBlob(
-        (blob) => {
-          const url = URL.createObjectURL(blob);
-          const link = document.createElement("a");
-          link.download = "Trevor_Brown_Selected_Works.png";
-          link.href = url;
-          link.click();
-          URL.revokeObjectURL(url);
-        },
-        "image/png",
-        1.0
-      );
-    } catch (err) {
-      console.error(err);
-    } finally {
-      setIsExporting(false);
-      setExportType("");
-    }
-  };
-
   return (
-    <div 
+    <div
       ref={containerRef}
-      className="selected-works-container w-full flex flex-col items-center p-4 bg-gray-50 dark:bg-gray-900 print:bg-white"
+      className="selected-works-container w-full flex flex-col items-center p-4 bg-white dark:bg-blue-950 print:bg-white"
     >
       {/* Scaling wrapper */}
       <div 
@@ -135,7 +76,7 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
                   <div key={item.id} className={`pb-2 ${index < 2 ? 'border-b border-gray-200' : ''}`}>
                     <div className="flex items-start justify-between mb-0.5">
                       <a href={item.siteLink} target="_blank" rel="noopener noreferrer" className="flex-1 hover:bg-gray-50 transition-colors">
-                        <h3 className="text-sm font-bold hover:text-blue-600" style={{ color: '#111827' }}>
+                        <h3 className="text-sm font-bold text-gray-900 hover:text-blue-700 underline decoration-gray-300 decoration-1 underline-offset-2 hover:decoration-blue-400 transition-colors">
                           {item.headline}
                         </h3>
                       </a>
@@ -147,7 +88,7 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
                       {item.text}
                     </p>
                     <div className="text-xs" style={{ color: '#4b5563' }}>
-                      <a href={item.siteLink} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
+                      <a href={item.siteLink} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-700 underline decoration-gray-300 decoration-1 underline-offset-2 transition-colors">
                         View Article
                       </a>
                       <span className="mx-2">|</span>
@@ -169,7 +110,7 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
                   <div key={item.id} className={`pb-2 ${index < 2 ? 'border-b border-gray-200' : ''}`}>
                     <div className="flex items-start justify-between mb-0.5">
                       <a href={item.siteLink} target="_blank" rel="noopener noreferrer" className="flex-1 hover:bg-gray-50 transition-colors">
-                        <h3 className="text-sm font-bold hover:text-blue-600" style={{ color: '#111827' }}>
+                        <h3 className="text-sm font-bold text-gray-900 hover:text-blue-700 underline decoration-gray-300 decoration-1 underline-offset-2 hover:decoration-blue-400 transition-colors">
                           {item.title}
                         </h3>
                       </a>
@@ -181,13 +122,13 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
                       {item.description}
                     </p>
                     <div className="text-xs" style={{ color: '#4b5563' }}>
-                      <a href={item.siteLink} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
+                      <a href={item.siteLink} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-700 underline decoration-gray-300 decoration-1 underline-offset-2 transition-colors">
                         Live Site
                       </a>
                       {item.githubLink && (
                         <>
                           {' • '}
-                          <a href={item.githubLink} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
+                          <a href={item.githubLink} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-700 underline decoration-gray-300 decoration-1 underline-offset-2 transition-colors">
                             GitHub
                           </a>
                         </>
@@ -213,7 +154,7 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
                     <div key={item.id} className={`pb-2 ${index < 2 ? 'border-b border-gray-200' : ''}`}>
                       <div className="flex items-start justify-between mb-0.5">
                         <a href={graphicLink} target="_blank" rel="noopener noreferrer" className="flex-1 hover:bg-gray-50 transition-colors">
-                          <h3 className="text-sm font-bold hover:text-blue-600" style={{ color: '#111827' }}>
+                          <h3 className="text-sm font-bold text-gray-900 hover:text-blue-700 underline decoration-gray-300 decoration-1 underline-offset-2 hover:decoration-blue-400 transition-colors">
                             {item.headline}
                           </h3>
                         </a>
@@ -225,11 +166,11 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
                         {item.summary || item.text}
                       </p>
                       <div className="text-xs" style={{ color: '#4b5563' }}>
-                        <a href={graphicLink} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
+                        <a href={graphicLink} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-700 underline decoration-gray-300 decoration-1 underline-offset-2 transition-colors">
                           Visualization
                         </a>
                         {' • '}
-                        <a href={item.siteLink} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
+                        <a href={item.siteLink} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-700 underline decoration-gray-300 decoration-1 underline-offset-2 transition-colors">
                           Article
                         </a>
                         <span className="mx-2">|</span>
@@ -250,16 +191,17 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
         </div>
       </div>
 
-      {/* Download buttons */}
-      <div className="mt-6 print:hidden flex gap-3">
-        <button
-          onClick={handleExportPDF}
-          disabled={isExporting}
-          className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white bg-blue-800 dark:bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 dark:hover:bg-blue-500 hover:shadow-lg hover:-translate-y-1 active:bg-blue-900 dark:active:bg-blue-700 active:shadow-sm active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+      {/* Download button */}
+      <div className="mt-6 print:hidden flex justify-center">
+        <a
+          href="/pdfs/Trevor_Brown_Selected_Works.pdf"
+          download
+          className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white bg-blue-800 dark:bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 dark:hover:bg-blue-500 hover:shadow-lg hover:-translate-y-1 active:bg-blue-900 dark:active:bg-blue-700 active:shadow-sm active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
         >
-          {isExporting && exportType === "pdf" ? "Generating…" : "Download PDF"}
-        </button>
+          Download Selected Works (PDF)
+        </a>
       </div>
+      {/* Note: To regenerate PDF after content changes, run: npm run generate-pdfs */}
     </div>
   );
 }
