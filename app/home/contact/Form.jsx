@@ -8,6 +8,7 @@ export default function Form() {
     email: "",
     subject: "",
     message: "",
+    website: "", // honeypot field
   });
   const [status, setStatus] = useState("idle"); // idle, loading, success, error
   const [errorMessage, setErrorMessage] = useState("");
@@ -34,6 +35,7 @@ export default function Form() {
           name: formData.name,
           email: formData.email,
           message: `Subject: ${formData.subject}\n\n${formData.message}`,
+          website: formData.website, // honeypot
         }),
       });
 
@@ -48,6 +50,7 @@ export default function Form() {
         email: "",
         subject: "",
         message: "",
+        website: "",
       });
     } catch (error) {
       setStatus("error");
@@ -85,7 +88,7 @@ export default function Form() {
               </h3>
               <p className="text-green-800 dark:text-green-300 mb-4">
                 Thank you for reaching out. I've received your message and will
-                get back to you within 24 hours.
+                get back to you soon.
               </p>
               <button
                 onClick={() => {
@@ -95,6 +98,7 @@ export default function Form() {
                     email: "",
                     subject: "",
                     message: "",
+                    website: "",
                   });
                 }}
                 className="text-sm font-medium text-green-800 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 underline underline-offset-2 transition-colors duration-150"
@@ -154,6 +158,23 @@ export default function Form() {
             onSubmit={handleSubmit}
             className="space-y-8"
           >
+      {/* Honeypot field - hidden from real users, visible to bots */}
+      <div className="absolute -left-[9999px] opacity-0" aria-hidden="true">
+        <label htmlFor="website">
+          Website
+        </label>
+        <input
+          type="text"
+          id="website"
+          name="website"
+          tabIndex={-1}
+          autoComplete="off"
+          value={formData.website}
+          onChange={handleChange}
+          className="w-full px-5 py-4"
+        />
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="space-y-2">
           <label
@@ -247,9 +268,6 @@ export default function Form() {
         >
           {status === "loading" ? "Sending..." : "Send Message"}
         </button>
-        <p className="text-xs text-gray-500 dark:text-neutral-400">
-          I'll respond within 24 hours
-        </p>
       </div>
     </form>
         </div>

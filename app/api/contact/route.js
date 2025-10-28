@@ -5,7 +5,16 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request) {
   try {
-    const { name, email, message } = await request.json();
+    const { name, email, message, website } = await request.json();
+
+    // Honeypot check - reject if the hidden field is filled
+    if (website) {
+      console.log("Honeypot triggered - spam detected");
+      return Response.json(
+        { error: "Invalid submission" },
+        { status: 400 }
+      );
+    }
 
     const { data, error } = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>", // Use this for testing, or your verified domain
