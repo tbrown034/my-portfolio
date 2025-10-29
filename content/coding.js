@@ -7,7 +7,7 @@ export const webProjects = [
     type: "Professional",
     tag: "SEO & Marketing",
     workInProgress: false,
-    image: "/images/kabdds-screenshot-aug11.png",
+    image: "/images/kabdds-screenshot-oct25.png",
     technologies: [
       "Next.js",
       "React",
@@ -21,6 +21,26 @@ export const webProjects = [
       "Rebuilt a defunct dental practice site in Naperville with Next.js, adding a booking form, service information and a blog. Took over a $2,000/month Google Ads campaign and optimized it to more than triple new patient bookings.",
     githubLink: "https://github.com/tbrown034/kab-dentist-2024",
     siteLink: "https://keithbrowndds.com/",
+  },
+  {
+    id: 2,
+    title: "ReflectYr: Social Platform for Film & TV",
+    type: "Hobby",
+    tag: "Auth & Database",
+    workInProgress: true,
+    image: "/images/reflectyr-screenshot-aug11.png",
+    technologies: [
+      "Next.js",
+      "NextAuth.js",
+      "PostgreSQL",
+      "TMDB API",
+      "Anthropic AI API",
+    ],
+    createdDate: "2024",
+    description:
+      "ReflectYr is a Letterboxd-style platform where users build movie and TV lists with TMDB data and get AI-powered watch recommendations. Features NextAuth.js for authentication and a PostgreSQL database for persistence.",
+    githubLink: "https://github.com/tbrown034/refelectyr_project",
+    siteLink: "https://reflectyr.vercel.app/",
   },
   {
     id: 3,
@@ -44,26 +64,6 @@ export const webProjects = [
     siteLink: "https://my-expiry.vercel.app/",
   },
   {
-    id: 2,
-    title: "ReflectYr: Social Platform for Film & TV",
-    type: "Hobby",
-    tag: "Auth & Database",
-    workInProgress: true,
-    image: "/images/reflectyr-screenshot-aug11.png",
-    technologies: [
-      "Next.js",
-      "NextAuth.js",
-      "PostgreSQL",
-      "TMDB API",
-      "Anthropic AI API",
-    ],
-    createdDate: "2024",
-    description:
-      "ReflectYr is a Letterboxd-style platform where users build movie and TV lists with TMDB data and get AI-powered watch recommendations. Features NextAuth.js for authentication and a PostgreSQL database for persistence.",
-    githubLink: "https://github.com/tbrown034/refelectyr_project",
-    siteLink: "https://reflectyr.vercel.app/",
-  },
-  {
     id: 4,
     title: "ReStub",
     type: "Hobby",
@@ -81,5 +81,25 @@ export const webProjects = [
       "Built ReStub to help sports fans preserve their game day memories – users log details from MLB, NBA, NFL and NHL games they've attended, with AI automatically filling in missing scores, stats and game information. Features ticket stub recreation, experience cataloging, and persistent localStorage for saving memories across sessions.",
     githubLink: "https://github.com/tbrown034/restub",
     siteLink: "https://restub.vercel.app/",
+  },
+  {
+    id: 5,
+    title: "studdy-buddy: Personalized Coding Study Platform",
+    type: "Coding",
+    tag: "Coding/Learning",
+    workInProgress: false,
+    image: "/images/studdy-buddy-screenshot.png",
+    technologies: [
+      "Next.js 15",
+      "React 19",
+      "TypeScript",
+      "OpenAI API",
+      "Tailwind CSS",
+    ],
+    createdDate: "2025",
+    description:
+      "Built a personalized study platform for web developers – users select their tech stack and skill level to access interactive lessons, custom quizzes, flashcard decks and curated documentation for JavaScript, TypeScript, Python, React, Next.js and more.",
+    githubLink: "https://github.com/tbrown034/studdy-buddy",
+    siteLink: "https://studdy-buddy-rho.vercel.app/",
   },
 ];
