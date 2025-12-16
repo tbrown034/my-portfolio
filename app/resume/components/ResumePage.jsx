@@ -152,8 +152,8 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                       Builds data-driven applications that require both technical skills and editorial judgment.
                     </p>
                     <p className="text-xs text-gray-700 leading-relaxed mt-2">
-                      Creates interactive visualizations and web tools that make complex information accessible. 
-                      Interested in exploring practical applications of AI and LLMs.
+                      Creates interactive visualizations and web tools that make complex information accessible.
+                      Applies AI and LLMs to streamline workflows and solve practical problems.
                     </p>
                   </Section>
                 </div>
@@ -176,7 +176,7 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                     }
                     period="2023 – Present"
                     highlights={[
-                      "Built a responsive dental practice website with Next.js, including appointment booking, service pages and a blog. Manage SEO and a $2,000/month Google Ads budget, optimizing campaigns that tripled new patient bookings over the past year.",
+                      "Built a responsive dental practice website with Next.js, including appointment booking, service pages and a blog. Manage SEO and a $2,000/month Google Ads budget, increasing patient bookings while reducing ad spend.",
                     ]}
                   />
                   <Job
@@ -300,7 +300,7 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                         </a>
                       </>
                     }
-                    detail="260-hour intensive program via FullStack Academy"
+                    detail="260–hour intensive program via FullStack Academy"
                     year="2022"
                   />
                   <Credential
