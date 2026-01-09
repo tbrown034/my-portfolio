@@ -18,7 +18,7 @@ export const webProjects = [
     createdDate: "2024",
 
     description:
-      "Rebuilt a defunct dental practice site in Naperville with Next.js, adding a booking form, service information and a blog. Took over a $2,000/month Google Ads campaign and optimized it to more than triple new patient bookings.",
+      "Rebuilt a defunct dental practice site in Naperville with Next.js, adding a booking form, service information and a blog. Took over a $2,000/month Google Ads campaign and optimized it to more than triple new patient bookings. Added a custom dashboard with a Python API pipeline for practice finances.",
     githubLink: "https://github.com/tbrown034/kab-dentist-2024",
     siteLink: "https://keithbrowndds.com/",
   },
@@ -62,25 +62,6 @@ export const webProjects = [
       "Developed My Expiry to track food freshness – users log groceries, get AI-powered shelf-life estimates and storage tips, and check expiration status.",
     githubLink: "https://github.com/tbrown034/my-expiry",
     siteLink: "https://my-expiry.vercel.app/",
-  },
-  {
-    id: 4,
-    title: "ReStub",
-    type: "Hobby",
-    tag: "Modern Stack",
-    workInProgress: true,
-    image: "/images/restub-screenshot-aug11.png",
-    technologies: [
-      "Next.js",
-      "React",
-      "TypeScript",
-      "PostgreSQL (Neon)",
-      "Tailwind CSS",
-    ],
-    description:
-      "Built ReStub to help sports fans preserve their game day memories – users log details from MLB, NBA, NFL and NHL games they've attended, with AI automatically filling in missing scores, stats and game information. Features ticket stub recreation, experience cataloging, and persistent localStorage for saving memories across sessions.",
-    githubLink: "https://github.com/tbrown034/restub",
-    siteLink: "https://restub.vercel.app/",
   },
   {
     id: 5,
