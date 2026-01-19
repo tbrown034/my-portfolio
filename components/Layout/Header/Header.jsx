@@ -1,6 +1,14 @@
+"use client";
+
 import Link from "next/link.js";
 import ThemeToggle from "./ThemeToggle.jsx";
 import DesktopNav from "./DesktopNav.jsx";
+import {
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
 
 export default function Header() {
   return (
@@ -14,7 +22,17 @@ export default function Header() {
 
       <DesktopNav />
 
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-3">
+        <SignedOut>
+          <SignInButton mode="modal">
+            <button className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline">
+              Sign In
+            </button>
+          </SignInButton>
+        </SignedOut>
+        <SignedIn>
+          <UserButton afterSignOutUrl="/" />
+        </SignedIn>
         <ThemeToggle />
       </div>
     </header>
