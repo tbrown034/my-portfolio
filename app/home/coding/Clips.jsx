@@ -1,6 +1,18 @@
-import Image from "next/image";
 import Link from "next/link";
-import { webProjects } from "@content/coding.js";
+import { demoProjects } from "@content/demos.js";
+import HomeProjectCard from "./HomeProjectCard";
+
+const FEATURED_PROJECTS = [
+  { id: 1, type: "Professional" },
+  { id: 2, type: "Hobby" },
+  { id: 3, type: "Hobby" },
+  { id: 5, type: "Local" },
+];
+
+const featuredProjects = FEATURED_PROJECTS.map(({ id, type }) => {
+  const project = demoProjects.find((p) => p.id === id);
+  return project ? { ...project, type } : null;
+}).filter(Boolean);
 
 export default function Clips() {
   return (
@@ -13,132 +25,30 @@ export default function Clips() {
           </h2>
         </div>
 
-        {/* Projects grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {webProjects.map((project, index) => (
-            <div key={index} className="group relative">
-              {/* Card content - simplified */}
-              <div className="relative bg-white dark:bg-slate-800 rounded-lg p-5 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-600 transform hover:-translate-y-1 cursor-pointer">
-                {/* Content */}
-                <div className="space-y-4 mb-6">
-                  <div className="space-y-2">
-                    {/* Project type tags */}
-                    <div className="flex items-center gap-2 text-xs">
-                      {/* Professional/Hobby tag */}
-                      <span
-                        className={`px-2 py-1 rounded font-medium ${
-                          project.type === "Professional"
-                            ? "bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-400"
-                            : "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-neutral-200"
-                        }`}
-                      >
-                        {project.type}
-                      </span>
-                      {/* Work in Progress tag */}
-                      {project.workInProgress && (
-                        <span className="px-2 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-400 rounded font-medium">
-                          Work in Progress
-                        </span>
-                      )}
-                    </div>
-
-                    <Link 
-                      href={project.siteLink} 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block hover:text-blue-800 dark:hover:text-blue-400 transition-colors duration-200"
-                    >
-                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white cursor-pointer">
-                        {project.title}
-                      </h3>
-                    </Link>
-                    <p className="text-gray-600 dark:text-neutral-100 leading-relaxed text-sm">
-                      {project.description}
-                    </p>
-                  </div>
-
-                  {/* Tech stack */}
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-2 py-1 text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-400 rounded font-medium"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Links */}
-                  <div className="flex gap-4">
-                    <Link
-                      className="inline-flex items-center gap-1.5 text-base font-medium text-gray-600 dark:text-neutral-400 hover:text-blue-800 dark:hover:text-blue-400 hover:underline underline-offset-2 transition-all duration-200"
-                      href={project.githubLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <svg
-                        className="w-5 h-5"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-                      </svg>
-                      Code
-                    </Link>
-                    <Link
-                      className="inline-flex items-center gap-1.5 text-base font-medium text-gray-600 dark:text-neutral-400 hover:text-blue-800 dark:hover:text-blue-400 hover:underline underline-offset-2 transition-all duration-200"
-                      href={project.siteLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <svg
-                        className="w-5 h-5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                        />
-                      </svg>
-                      Visit
-                    </Link>
-                  </div>
-                </div>
-
-                {/* Smaller image with border - left aligned */}
-                <div className="relative">
-                  <Link 
-                    href={project.siteLink} 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-1/2 cursor-pointer"
-                  >
-                    <div className="border-2 border-gray-200 dark:border-gray-600 rounded-lg overflow-hidden shadow-lg bg-white dark:bg-neutral-800 hover:shadow-xl transition-shadow duration-300">
-                      <div
-                        className="h-32 overflow-hidden"
-                      >
-                        <Image
-                          alt={`Screenshot of ${project.title}`}
-                          className="w-full h-auto object-top hover:scale-105 transition-transform duration-300"
-                          src={project.image}
-                          width={400}
-                          height={500}
-                          sizes="(max-width: 768px) 66vw, (max-width: 1024px) 33vw, 25vw"
-                          loading="lazy"
-                          quality={85}
-                        />
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-              </div>
+        {/* Stacked project rows */}
+        <div>
+          {featuredProjects.map((project, index) => (
+            <div
+              key={project.id}
+              className={`py-10 lg:py-14 ${
+                index < featuredProjects.length - 1
+                  ? "border-b border-gray-300 dark:border-neutral-700"
+                  : ""
+              }`}
+            >
+              <HomeProjectCard project={project} index={index} />
             </div>
           ))}
+        </div>
+
+        {/* View all projects CTA */}
+        <div className="flex justify-center mt-12">
+          <Link
+            href="/demos"
+            className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-semibold text-white bg-blue-800 dark:bg-blue-600 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-500 transition-all duration-200"
+          >
+            View all projects &rarr;
+          </Link>
         </div>
       </div>
     </section>

@@ -4,9 +4,9 @@ import DemoCard from "./components/DemoCard";
 import { demoProjects } from "@content/demos.js";
 
 export const metadata = {
-  title: "Project Demos - Trevor Brown",
+  title: "Projects - Trevor Brown",
   description:
-    "Interactive walkthroughs and live links for Trevor Brown's development projects.",
+    "Screenshots, interactive walkthroughs and live links for Trevor Brown's development projects.",
 };
 
 export default function DemosPage() {

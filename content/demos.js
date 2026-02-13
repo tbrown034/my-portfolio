@@ -26,7 +26,7 @@ export const demoProjects = [
     displayUrl: "keithbrowndds.com",
     siteLink: "https://keithbrowndds.com/",
     githubLink: null,
-    arcadeLink: "https://demo.arcade.software/FcXiodYftNqFxzGt0AGY",
+    arcadeLink: "https://demo.arcade.software/MFfJGhg8szhJEzdXfKAl",
   },
   {
     id: 2,
@@ -51,7 +51,7 @@ export const demoProjects = [
     displayUrl: "news-alert-eta.vercel.app",
     siteLink: "https://news-alert-eta.vercel.app",
     githubLink: "https://github.com/tbrown034/news-alert",
-    arcadeLink: null,
+    arcadeLink: "https://demo.arcade.software/DQJYZcPvDYwwJgG9rnsn",
   },
   {
     id: 3,
@@ -76,7 +76,7 @@ export const demoProjects = [
     displayUrl: "ai-model-arena-umber.vercel.app",
     siteLink: "https://ai-model-arena-umber.vercel.app",
     githubLink: "https://github.com/tbrown034/ai-model-arena",
-    arcadeLink: null,
+    arcadeLink: "https://demo.arcade.software/s74PPWIPHAz3oqf084ZB",
   },
   {
     id: 4,
@@ -100,7 +100,7 @@ export const demoProjects = [
     displayUrl: "reflectyr.vercel.app",
     siteLink: "https://reflectyr.vercel.app/",
     githubLink: "https://github.com/tbrown034/reflect-yr",
-    arcadeLink: null,
+    arcadeLink: "https://demo.arcade.software/nj2UXJN7mHlsGnbwcO9l",
   },
   {
     id: 5,

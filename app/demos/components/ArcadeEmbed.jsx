@@ -39,7 +39,7 @@ export default function ArcadeEmbed({ arcadeId, title }) {
       style={{ paddingBottom: "calc(62.8195% + 41px)", height: 0, width: "100%" }}
     >
       <iframe
-        src={`https://demo.arcade.software/${arcadeId}?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true`}
+        src={`https://demo.arcade.software/${arcadeId}?embed&embed_mobile=inline&embed_desktop=inline&show_copy_link=true`}
         title={`Interactive demo of ${title}`}
         frameBorder="0"
         loading="lazy"

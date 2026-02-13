@@ -8,7 +8,8 @@ import {
   DevicePhoneMobileIcon,
   ComputerDesktopIcon,
   PlayIcon,
-  XMarkIcon,
+  PhotoIcon,
+  ArrowTopRightOnSquareIcon,
 } from "@heroicons/react/24/outline";
 
 export default function DemoCard({ project, index }) {
@@ -43,7 +44,7 @@ export default function DemoCard({ project, index }) {
             {/* Toolbar: view toggles */}
             <div className="flex items-center justify-end gap-2 mb-3">
               {/* Desktop / Mobile toggle */}
-              {hasMobile && (
+              {!showArcade && hasMobile && (
                 <div className="flex items-center rounded-full bg-gray-100 dark:bg-neutral-800 p-0.5">
                   <button
                     onClick={() => setMobileView(false)}
@@ -73,7 +74,7 @@ export default function DemoCard({ project, index }) {
               )}
 
               {/* Light / Dark toggle */}
-              {hasDarkVariants && (
+              {!showArcade && hasDarkVariants && (
                 <button
                   onClick={() => setDarkMode(!darkMode)}
                   className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-gray-100 dark:bg-neutral-800 text-gray-400 dark:text-neutral-500 hover:text-gray-900 dark:hover:text-white transition-all duration-200 text-xs font-medium"
@@ -92,22 +93,59 @@ export default function DemoCard({ project, index }) {
                   )}
                 </button>
               )}
+
+              {/* Demo toggle */}
+              {project.arcadeLink && (
+                <div className="flex items-center rounded-full bg-gray-100 dark:bg-neutral-800 p-0.5">
+                  <button
+                    onClick={() => setShowArcade(false)}
+                    className={`flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium transition-all duration-200 ${
+                      !showArcade
+                        ? "bg-white dark:bg-neutral-700 text-gray-900 dark:text-white shadow-sm"
+                        : "text-gray-400 dark:text-neutral-500 hover:text-gray-600 dark:hover:text-neutral-300"
+                    }`}
+                    aria-label="Show screenshots"
+                  >
+                    <PhotoIcon className="w-3 h-3" />
+                    <span>Screenshots</span>
+                  </button>
+                  <button
+                    onClick={() => setShowArcade(true)}
+                    className={`flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium transition-all duration-200 ${
+                      showArcade
+                        ? "bg-white dark:bg-neutral-700 text-gray-900 dark:text-white shadow-sm"
+                        : "text-gray-400 dark:text-neutral-500 hover:text-gray-600 dark:hover:text-neutral-300"
+                    }`}
+                    aria-label="Show demo"
+                  >
+                    <PlayIcon className="w-3 h-3" />
+                    <span>Demo</span>
+                  </button>
+                </div>
+              )}
+
+              {/* Open demo in new window */}
+              {showArcade && project.arcadeLink && (
+                <a
+                  href={project.arcadeLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-gray-100 dark:bg-neutral-800 text-gray-400 dark:text-neutral-500 hover:text-gray-900 dark:hover:text-white transition-all duration-200 text-xs font-medium"
+                  aria-label="Open demo in new window"
+                >
+                  <ArrowTopRightOnSquareIcon className="w-3 h-3" />
+                  <span>Open</span>
+                </a>
+              )}
             </div>
 
             {/* Screenshot or Arcade embed */}
             {showArcade && project.arcadeLink ? (
               <div className="relative rounded-2xl bg-gradient-to-br from-slate-100 via-slate-50 to-white dark:from-neutral-900 dark:via-neutral-800/80 dark:to-neutral-900 p-5 sm:p-6 ring-1 ring-black/[0.04] dark:ring-white/[0.06]">
-                <button
-                  onClick={() => setShowArcade(false)}
-                  className="absolute top-2 right-2 z-10 p-1 rounded-full bg-white/80 dark:bg-neutral-800/80 text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors"
-                  aria-label="Close demo"
-                >
-                  <XMarkIcon className="w-4 h-4" />
-                </button>
                 <div className="rounded-lg overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.2)] dark:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.6)]">
                   <div style={{ position: "relative", paddingBottom: "62.5%", height: 0 }}>
                     <iframe
-                      src={`${project.arcadeLink}?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true`}
+                      src={`${project.arcadeLink}?embed&embed_mobile=inline&embed_desktop=inline&show_copy_link=true`}
                       title={`${project.title} interactive demo`}
                       frameBorder="0"
                       loading="lazy"
@@ -195,15 +233,6 @@ export default function DemoCard({ project, index }) {
               Visit Site &rarr;
             </Link>
           )}
-          {project.arcadeLink && (
-            <button
-              onClick={() => setShowArcade(!showArcade)}
-              className="flex items-center gap-1.5 text-sm font-medium text-gray-500 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-            >
-              <PlayIcon className="w-3.5 h-3.5" />
-              {showArcade ? "Hide Demo" : "View Demo"}
-            </button>
-          )}
           {project.githubLink && (
             <Link
               className="text-sm font-medium text-gray-500 dark:text-neutral-400 hover:text-gray-900 dark:hover:text-white transition-colors"
@@ -214,7 +243,7 @@ export default function DemoCard({ project, index }) {
               GitHub
             </Link>
           )}
-          {!project.siteLink && !project.githubLink && !project.arcadeLink && (
+          {!project.siteLink && !project.githubLink && (
             <span className="text-sm text-gray-400 dark:text-neutral-500">
               Private / Local
             </span>

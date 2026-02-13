@@ -1,0 +1,16 @@
+[     449ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/demos:0
+[     524ms] Invalid or unexpected token
+[   11318ms] [WARNING] Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview @ https://pro-pony-9.clerk.accounts.dev/npm/@clerk/clerk-js@5/dist/clerk.browser.js:18
+[ 1386541ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr' failed:  @ webpack-internal:///(app-pages-browser)/./node_modules/.pnpm/next@15.5.7_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/client/dev/hot-reloader/app/use-websocket.js:41
+[ 2437818ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/images/demos/kab-dentist-mobile-light.png:0
+[ 2439980ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/images/demos/kab-dentist-desktop-light.png:0
+[ 2440968ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/images/demos/kab-dentist-desktop-dark.png:0
+[ 2443619ms] Error: Minified React error #418; visit https://react.dev/errors/418?args[]=HTML&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at rL (https://demo.arcade.software/_next/static/chunks/a7273e5fac40562f.js?dpl=dpl_99J1kRn6Z32Z413qgZcf4zQtBwMs:1:38470)
+    at oQ (https://demo.arcade.software/_next/static/chunks/a7273e5fac40562f.js?dpl=dpl_99J1kRn6Z32Z413qgZcf4zQtBwMs:1:88327)
+    at ib (https://demo.arcade.software/_next/static/chunks/a7273e5fac40562f.js?dpl=dpl_99J1kRn6Z32Z413qgZcf4zQtBwMs:1:119414)
+    at https://demo.arcade.software/_next/static/chunks/a7273e5fac40562f.js?dpl=dpl_99J1kRn6Z32Z413qgZcf4zQtBwMs:1:119259
+    at iv (https://demo.arcade.software/_next/static/chunks/a7273e5fac40562f.js?dpl=dpl_99J1kRn6Z32Z413qgZcf4zQtBwMs:1:119267)
+    at io (https://demo.arcade.software/_next/static/chunks/a7273e5fac40562f.js?dpl=dpl_99J1kRn6Z32Z413qgZcf4zQtBwMs:1:114642)
+    at iY (https://demo.arcade.software/_next/static/chunks/a7273e5fac40562f.js?dpl=dpl_99J1kRn6Z32Z413qgZcf4zQtBwMs:1:137774)
+    at MessagePort.L (https://demo.arcade.software/_next/static/chunks/a7273e5fac40562f.js?dpl=dpl_99J1kRn6Z32Z413qgZcf4zQtBwMs:1:1647)
