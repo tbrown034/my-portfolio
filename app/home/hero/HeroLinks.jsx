@@ -10,71 +10,84 @@ import { SOCIAL_LINKS, PERSONAL_INFO } from "@/lib/constants";
 export default function HeroLinks() {
   return (
     <div className="space-y-6">
-      {/* Three section cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      {/* Section cards */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         <Link
           href="#journalism"
-          className="group p-4 border-b-2 border-gray-200 dark:border-white/10 hover:border-blue-800 dark:hover:border-blue-300 transition-colors"
+          className="group p-3 bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-md transition-all"
         >
-          <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
-            Investigations
+          <h3 className="font-semibold text-sm text-gray-900 dark:text-white">
+            Journalism
           </h3>
-          <p className="text-sm text-gray-500 dark:text-neutral-400">
-            Public records, data analysis
+          <p className="text-sm text-gray-600 dark:text-neutral-300 mt-0.5">
+            Investigations, accountability
           </p>
         </Link>
 
         <Link
           href="#coding"
-          className="group p-4 border-b-2 border-gray-200 dark:border-white/10 hover:border-blue-800 dark:hover:border-blue-300 transition-colors"
+          className="group p-3 bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-md transition-all"
         >
-          <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
+          <h3 className="font-semibold text-sm text-gray-900 dark:text-white">
             Web Development
           </h3>
-          <p className="text-sm text-gray-500 dark:text-neutral-400">
+          <p className="text-sm text-gray-600 dark:text-neutral-300 mt-0.5">
             Next.js, React, TypeScript
           </p>
         </Link>
 
         <Link
           href="#visualizations"
-          className="group p-4 border-b-2 border-gray-200 dark:border-white/10 hover:border-blue-800 dark:hover:border-blue-300 transition-colors"
+          className="group p-3 bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-md transition-all"
         >
-          <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
-            Data
+          <h3 className="font-semibold text-sm text-gray-900 dark:text-white">
+            Data Visualization
           </h3>
-          <p className="text-sm text-gray-500 dark:text-neutral-400">
-            Analysis, visualization, open records
+          <p className="text-sm text-gray-600 dark:text-neutral-300 mt-0.5">
+            Charts, maps, analysis
           </p>
         </Link>
+
+        <Link
+          href="#coding"
+          className="group p-3 bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-md transition-all"
+        >
+          <h3 className="font-semibold text-sm text-gray-900 dark:text-white">
+            Full-Stack Apps
+          </h3>
+          <p className="text-sm text-gray-600 dark:text-neutral-300 mt-0.5">
+            Deployed, production projects
+          </p>
+        </Link>
+
       </div>
 
       {/* Contact links */}
-      <div className="flex flex-wrap gap-6 justify-center md:justify-start">
+      <div className="flex flex-wrap gap-4 justify-center md:justify-start">
         <a
           href={`mailto:${PERSONAL_INFO.email}`}
-          className="flex items-center gap-2 px-1 py-0.5 text-gray-600 dark:text-neutral-100 hover:text-blue-600 dark:hover:text-blue-400 hover:underline transition-colors"
+          className="flex items-center gap-2 px-3 py-2 min-h-[44px] text-gray-700 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors"
         >
           <EmailIcon className="w-5 h-5" />
-          <span className="text-sm">Email</span>
+          <span className="text-sm font-medium">Email</span>
         </a>
         <a
           href={SOCIAL_LINKS.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 px-1 py-0.5 text-gray-600 dark:text-neutral-100 hover:text-blue-600 dark:hover:text-blue-400 hover:underline transition-colors"
+          className="flex items-center gap-2 px-3 py-2 min-h-[44px] text-gray-700 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors"
         >
           <GitHubIcon className="w-5 h-5" />
-          <span className="text-sm">GitHub</span>
+          <span className="text-sm font-medium">GitHub</span>
         </a>
         <a
           href={SOCIAL_LINKS.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 px-1 py-0.5 text-gray-600 dark:text-neutral-100 hover:text-blue-600 dark:hover:text-blue-400 hover:underline transition-colors"
+          className="flex items-center gap-2 px-3 py-2 min-h-[44px] text-gray-700 dark:text-neutral-200 hover:text-blue-600 dark:hover:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors"
         >
           <LinkedInIcon className="w-5 h-5" />
-          <span className="text-sm">LinkedIn</span>
+          <span className="text-sm font-medium">LinkedIn</span>
         </a>
         {/* <a
           href={SOCIAL_LINKS.bluesky}

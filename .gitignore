@@ -36,6 +36,3 @@ next-env.d.ts
 
 # personal documentation and notes
 CLAUDE.md
-
-# clerk configuration (can include secrets)
-/.clerk/

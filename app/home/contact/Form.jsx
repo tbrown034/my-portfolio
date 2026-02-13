@@ -40,7 +40,11 @@ export default function Form() {
       });
 
       if (!response.ok) {
-        throw new Error("Failed to send message");
+        const data = await response.json().catch(() => ({}));
+        if (response.status === 429) {
+          throw new Error(data.error || "Too many attempts. Please wait a moment.");
+        }
+        throw new Error("Failed to send message. Please try again.");
       }
 
       setStatus("success");
@@ -135,7 +139,7 @@ export default function Form() {
         
         {/* Subsection header */}
         <div className="border-b border-gray-200 dark:border-neutral-700 pb-2 mb-6">
-          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-neutral-400">
+          <h2 className="text-sm uppercase tracking-wider font-semibold text-gray-600 dark:text-neutral-400">
             Send a Message
           </h2>
         </div>
@@ -179,7 +183,7 @@ export default function Form() {
         <div className="space-y-2">
           <label
             htmlFor="name"
-            className="block text-xs uppercase tracking-wider font-bold text-gray-900 dark:text-white"
+            className="block text-sm uppercase tracking-wider font-bold text-gray-900 dark:text-white"
           >
             Your Name
           </label>
@@ -198,7 +202,7 @@ export default function Form() {
         <div className="space-y-2">
           <label
             htmlFor="email"
-            className="block text-xs uppercase tracking-wider font-bold text-gray-900 dark:text-white"
+            className="block text-sm uppercase tracking-wider font-bold text-gray-900 dark:text-white"
           >
             Email Address
           </label>
@@ -218,7 +222,7 @@ export default function Form() {
       <div className="space-y-2">
         <label
           htmlFor="subject"
-          className="block text-xs uppercase tracking-wider font-bold text-gray-900 dark:text-white"
+          className="block text-sm uppercase tracking-wider font-bold text-gray-900 dark:text-white"
         >
           Subject
         </label>
@@ -237,7 +241,7 @@ export default function Form() {
       <div className="space-y-2">
         <label
           htmlFor="message"
-          className="block text-xs uppercase tracking-wider font-bold text-gray-900 dark:text-white"
+          className="block text-sm uppercase tracking-wider font-bold text-gray-900 dark:text-white"
         >
           Your Message
         </label>

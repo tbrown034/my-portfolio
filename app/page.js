@@ -7,7 +7,7 @@ import Contact from "./home/contact/Contact.jsx";
 export default function Page() {
   return (
     <main className="flex flex-col scroll-smooth">
-      <div className="bg-slate-100 dark:bg-neutral-900 py-12">
+      <div className="bg-slate-100 dark:bg-neutral-900 pt-0 pb-12">
         <Hero />
       </div>
       <div className="bg-slate-200 dark:bg-black py-12">

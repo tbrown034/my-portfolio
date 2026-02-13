@@ -26,16 +26,18 @@ const Job = ({ title, org, period, highlights }) => (
         {period}
       </div>
     </div>
-    <ul className="mt-1 pl-0 list-none">
-      {highlights.map((highlight, i) => (
-        <li
-          key={i}
-          className="mb-0.5 pl-3 relative text-xs leading-relaxed text-gray-700 before:content-['•'] before:absolute before:left-0 before:text-gray-600 before:font-bold"
-        >
-          {highlight}
-        </li>
-      ))}
-    </ul>
+    {highlights && highlights.length > 0 && (
+      <ul className="mt-1 pl-0 list-none">
+        {highlights.map((highlight, i) => (
+          <li
+            key={i}
+            className="mb-0.5 pl-3 relative text-xs leading-relaxed text-gray-700 before:content-['•'] before:absolute before:left-0 before:text-gray-600 before:font-bold"
+          >
+            {highlight}
+          </li>
+        ))}
+      </ul>
+    )}
   </div>
 );
 
@@ -75,6 +77,18 @@ const Award = ({ title, org, year, article }) => (
   </div>
 );
 
+const Project = ({ name, year, tech, description }) => (
+  <div className="mb-1.5">
+    <div className="text-xs font-bold text-gray-900 leading-tight">
+      {name} ({year})
+    </div>
+    <div className="text-[10px] text-gray-600 italic">{tech}</div>
+    <div className="text-xs text-gray-700 leading-relaxed mt-0.5">
+      {description}
+    </div>
+  </div>
+);
+
 export default function ResumeComponentResponsive({ showGuides = false }) {
   const pageRef = useRef(null);
   const containerRef = useRef(null);
@@ -95,7 +109,7 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
           height: dimensions.height,
         }}
       >
-        {/* Fixed letter-size resume container - 8.5 × 11 inches */}
+        {/* Fixed letter-size resume container - 8.5 x 11 inches */}
         <div
           ref={(el) => {
             pageRef.current = el;
@@ -120,10 +134,16 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                 TREVOR BROWN
               </h1>
               <div className="text-sm font-medium text-gray-700 mb-2 tracking-wide">
-                Investigative Journalist & Full‑Stack Developer
+                Full&#8209;Stack Developer & Investigative Data Journalist
               </div>
               <div className="flex justify-center items-center gap-4 text-xs text-gray-600 font-normal">
-                <span>630‑301‑0589</span>
+                <span>630&#8209;301&#8209;0589</span>
+                <a
+                  href="mailto:trevorbrown.web@gmail.com"
+                  className="text-gray-600 hover:text-gray-800 transition-colors"
+                >
+                  trevorbrown.web@gmail.com
+                </a>
                 <a
                   href="https://trevorthewebdeveloper.com"
                   target="_blank"
@@ -133,10 +153,12 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                   trevorthewebdeveloper.com
                 </a>
                 <a
-                  href="mailto:trevorbrown.web@gmail.com"
+                  href="https://github.com/tbrown034"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-600 hover:text-gray-800 transition-colors"
                 >
-                  trevorbrown.web@gmail.com
+                  github.com/tbrown034
                 </a>
               </div>
             </header>
@@ -148,39 +170,19 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                 <div className="mb-2">
                   <Section title="Summary">
                     <p className="text-xs text-gray-700 leading-relaxed">
-                      Combines 15 years of award-winning investigative journalism with full-stack development. 
-                      Builds data-driven applications that require both technical skills and editorial judgment.
-                    </p>
-                    <p className="text-xs text-gray-700 leading-relaxed mt-2">
-                      Creates interactive visualizations and web tools that make complex information accessible.
-                      Applies AI and LLMs to streamline workflows and solve practical problems.
+                      Investigative data journalist turned full-stack developer
+                      with 15 years of elections and political reporting
+                      experience. Builds production web applications and data
+                      pipelines in JavaScript, TypeScript and SQL, with deep
+                      domain expertise in voter data, campaign finance and
+                      election systems.
                     </p>
                   </Section>
                 </div>
 
-                <Section title="Professional Experience">
+                <Section title="Elections & Data Experience">
                   <Job
-                    title="Web Developer & Digital Marketing"
-                    org={
-                      <>
-                        <a
-                          href="https://keithbrowndds.com/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-inherit hover:text-gray-600"
-                        >
-                          Keith Brown DDS
-                        </a>{" "}
-                        (Naperville, Ill.)
-                      </>
-                    }
-                    period="2023 – Present"
-                    highlights={[
-                      "Built a responsive dental practice website with Next.js, including appointment booking, service pages and a blog. Manage SEO and a $2,000/month Google Ads budget, increasing patient bookings while reducing ad spend.",
-                    ]}
-                  />
-                  <Job
-                    title="Investigative Journalist"
+                    title="Investigative Reporter"
                     org={
                       <>
                         <a
@@ -196,8 +198,11 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                     }
                     period="2016 – 2022"
                     highlights={[
-                      "Conducted long‑form investigations into government corruption, public policy issues and legislative accountability using data analysis",
-                      "Launched Democracy Watch newsletter to 4,000+ subscribers covering voting, elections, redistricting and government transparency",
+                      "Analyzed 90,000+ voter registration records to identify systemic purge of inactive voters",
+                      "Built Tableau dashboards visualizing state lawmakers' campaign finance disclosures",
+                      "Analyzed 3,600+ bills across two legislative sessions and built Flourish and Datawrapper visualizations of partisan authorship patterns",
+                      "Structured 22,250+ court records into an analyzable dataset exposing hospital litigation patterns",
+                      "Published Democracy Watch newsletter (4,000 subscribers) on elections and democratic institutions",
                     ]}
                   />
                   <Job
@@ -217,11 +222,12 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                     }
                     period="2011 – 2016"
                     highlights={[
-                      "Reported on legislature, elections, governor and state agencies with focus on budget data and policy analysis",
+                      "Analyzed election results, voter turnout and registration trends across three election cycles",
+                      "Covered state legislature and agencies with a focus on budget and fiscal data",
                     ]}
                   />
                   <Job
-                    title="State Government Reporter"
+                    title="Reporter & Editor"
                     org={
                       <>
                         <a
@@ -230,20 +236,9 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                           rel="noopener noreferrer"
                           className="text-inherit hover:text-gray-600"
                         >
-                          CNHI
+                          Community Newspaper Holdings Inc.
                         </a>{" "}
-                        (Oklahoma City)
-                      </>
-                    }
-                    period="2010 – 2011"
-                    highlights={[
-                      "Functioned as sole statehouse correspondent, creating enterprise and election coverage for 14 newspapers",
-                    ]}
-                  />
-                  <Job
-                    title="Reporter"
-                    org={
-                      <>
+                        (14 papers),{" "}
                         <a
                           href="https://www.newsleader.com/"
                           target="_blank"
@@ -252,18 +247,7 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                         >
                           Staunton News Leader
                         </a>{" "}
-                        (Staunton, Va.)
-                      </>
-                    }
-                    period="2008 – 2010"
-                    highlights={[
-                      "Wrote about local government, courts and breaking news for daily newspaper",
-                    ]}
-                  />
-                  <Job
-                    title="Editor‑in‑Chief"
-                    org={
-                      <>
+                        (Virginia daily),{" "}
                         <a
                           href="https://www.idsnews.com/"
                           target="_blank"
@@ -272,14 +256,67 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                         >
                           Indiana Daily Student
                         </a>{" "}
-                        (Bloomington, Ind.)
+                        (Indiana University)
                       </>
                     }
-                    period="2007 – 2008"
+                    period="2007 – 2011"
                     highlights={[
-                      "Directed newsroom of 100+ student journalists",
+                      "Sole statehouse correspondent filing coverage for 14 newspapers across Oklahoma",
+                      "Editor-in-Chief of Indiana Daily Student",
                     ]}
                   />
+                </Section>
+
+                <Section title="Web Development">
+                  <Job
+                    title="Frontend & Backend Developer"
+                    org={
+                      <>
+                        <a
+                          href="https://keithbrowndds.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-inherit hover:text-gray-600"
+                        >
+                          Keith Brown DDS
+                        </a>
+                      </>
+                    }
+                    period="2023 – Present"
+                    highlights={[
+                      "Built public-facing Next.js site with appointment forms, call tracking and SEO \u2013 cut ad costs and increased new patient bookings by more than 33% in 2025",
+                      "Built data pipeline for financial reporting, Google Ads API and AI chat interface via Claude",
+                    ]}
+                  />
+                </Section>
+
+                <Section title="Technical Skills">
+                  <div className="grid grid-cols-2 gap-x-6 gap-y-1">
+                    <SkillGroup
+                      category="Languages"
+                      skills="JavaScript, TypeScript, SQL, Python"
+                    />
+                    <SkillGroup
+                      category="Data"
+                      skills="PostgreSQL, Excel, Playwright, web scraping, data pipelines"
+                    />
+                    <SkillGroup
+                      category="AI"
+                      skills="OpenAI API, Anthropic API, Claude Code, Ollama"
+                    />
+                    <SkillGroup
+                      category="Web"
+                      skills="Next.js, React, Node.js, REST APIs"
+                    />
+                    <SkillGroup
+                      category="Visualization"
+                      skills="Tableau, Datawrapper, Tailwind, Flourish, Chart.js"
+                    />
+                    <SkillGroup
+                      category="Domain"
+                      skills="Voter files, campaign finance, election results, public records (FOIA)"
+                    />
+                  </div>
                 </Section>
               </div>
 
@@ -289,134 +326,131 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                   <Credential
                     degree="Web Development Certificate"
                     institution={
-                      <>
-                        <a
-                          href="https://bootcamp.outreach.ou.edu/programs/coding"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-inherit hover:text-gray-600"
-                        >
-                          University of Oklahoma
-                        </a>
-                      </>
+                      <a
+                        href="https://bootcamp.outreach.ou.edu/programs/coding"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-inherit hover:text-gray-600"
+                      >
+                        University of Oklahoma / Fullstack Academy
+                      </a>
                     }
-                    detail="260–hour intensive program via FullStack Academy"
+                    detail="260-hour intensive program"
                     year="2022"
                   />
                   <Credential
                     degree="B.A. Journalism"
                     institution={
-                      <>
-                        <a
-                          href="https://bloomington.iu.edu/index.html"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-inherit hover:text-gray-600"
-                        >
-                          Indiana University
-                        </a>
-                      </>
+                      <a
+                        href="https://bloomington.iu.edu/index.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-inherit hover:text-gray-600"
+                      >
+                        Indiana University
+                      </a>
                     }
                     year="2008"
                   />
                   <Credential
                     degree="B.A. Political Science"
                     institution={
-                      <>
-                        <a
-                          href="https://bloomington.iu.edu/index.html"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-inherit hover:text-gray-600"
-                        >
-                          Indiana University
-                        </a>
-                      </>
+                      <a
+                        href="https://bloomington.iu.edu/index.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-inherit hover:text-gray-600"
+                      >
+                        Indiana University
+                      </a>
                     }
                     year="2008"
                   />
                 </Section>
 
-                <Section title="Technical Skills">
-                  <SkillGroup
-                    category="Core Web Technologies"
-                    skills="Next.js, React, TypeScript, Node.js, PostgreSQL, Tailwind"
-                  />
-                  <SkillGroup
-                    category="Data Visualization"
-                    skills="Flourish, Datawrapper, Infogram, Tableau, Chart.js, Excel, web scraping"
-                  />
-                  <SkillGroup
-                    category="AI & Automation"
-                    skills="LLM Integrations, OpenAI API, Anthropic API"
-                  />
-                </Section>
-
                 <Section title="Awards & Recognition">
                   <Award
-                    title="Newspaper Writer of the Year"
+                    title="Writer of the Year"
                     org={
-                      <>
-                        <a
-                          href="https://oklahomawatch.org/2021/05/10/oklahoma-watchs-trevor-brown-earns-writer-of-year-honors-in-great-plains-journalism-contest/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-inherit hover:text-gray-600"
-                        >
-                          Great Plains Journalism Awards
-                        </a>
-                      </>
+                      <a
+                        href="https://oklahomawatch.org/2021/05/10/oklahoma-watchs-trevor-brown-earns-writer-of-year-honors-in-great-plains-journalism-contest/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-inherit hover:text-gray-600"
+                      >
+                        Great Plains Journalism Awards
+                      </a>
                     }
                     year="2021"
                   />
                   <Award
                     title="Reporter of the Year"
                     org={
-                      <>
-                        <a
-                          href="https://okspj.com/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-inherit hover:text-gray-600"
-                        >
-                          Oklahoma Society of Professional Journalists
-                        </a>
-                      </>
+                      <a
+                        href="https://okspj.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-inherit hover:text-gray-600"
+                      >
+                        Oklahoma Society of Professional Journalists
+                      </a>
                     }
                     year="2020"
                   />
                   <Award
                     title="First Place, Investigative Reporting"
                     org={
-                      <>
-                        <a
-                          href="https://okspj.com/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-inherit hover:text-gray-600"
-                        >
-                          Oklahoma Society of Professional Journalists
-                        </a>
-                      </>
+                      <a
+                        href="https://okspj.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-inherit hover:text-gray-600"
+                      >
+                        Oklahoma Society of Professional Journalists
+                      </a>
                     }
                     year="2022"
                   />
                   <Award
                     title="Community Champion Award"
                     org={
-                      <>
-                        <a
-                          href="https://inn.org/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-inherit hover:text-gray-600"
-                        >
-                          Institute for Nonprofit News
-                        </a>
-                      </>
+                      <a
+                        href="https://inn.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-inherit hover:text-gray-600"
+                      >
+                        Institute for Nonprofit News
+                      </a>
                     }
                     year="2020"
-                    article="A Digital Memorial to Oklahomans Who Died from COVID-19"
+                  />
+                </Section>
+
+                <Section title="Projects">
+                  <Project
+                    name="Second Brain"
+                    year="2026"
+                    tech="TypeScript, Vector DB, Playwright, Anthropic API"
+                    description="Personal knowledge base processing 200,000+ records through data pipelines with AI-powered semantic search"
+                  />
+                  <Project
+                    name="AI Model Arena"
+                    year="2025"
+                    tech="TypeScript, Better Auth, Claude/GPT/Gemini/Grok APIs"
+                    description="4-way LLM comparison with OAuth authentication, AI judging system, response streaming and multi-provider API management"
+                  />
+                  <Project
+                    name="News Pulse"
+                    year="2025"
+                    tech="TypeScript, Next.js, PostgreSQL, REST APIs, Better Auth"
+                    description="Open-source intelligence dashboard pulling from Bluesky, Telegram, Mastodon, RSS and API feeds with caching optimizations"
+                  />
+                  <Project
+                    name="Food Xpiry"
+                    year="2025"
+                    tech="TypeScript, Next.js, PostgreSQL, OpenAI API"
+                    description="Grocery tracker with database-backed inventory, programmatic search, AI shelf-life estimates and receipt scanning"
                   />
                 </Section>
               </div>

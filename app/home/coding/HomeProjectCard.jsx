@@ -142,9 +142,19 @@ export default function HomeProjectCard({ project, index }) {
           {project.subtitle}
         </p>
 
-        <p className="text-base text-gray-600 dark:text-neutral-300 leading-relaxed mb-6">
-          {project.oneLiner}
-        </p>
+        <div className="space-y-3 mb-6">
+          {(Array.isArray(project.oneLiner)
+            ? project.oneLiner
+            : [project.oneLiner]
+          ).map((paragraph, i) => (
+            <p
+              key={i}
+              className="text-base text-gray-600 dark:text-neutral-300 leading-relaxed"
+            >
+              {paragraph}
+            </p>
+          ))}
+        </div>
 
         {/* Tech stack */}
         <div className="flex flex-wrap gap-2 mb-6">

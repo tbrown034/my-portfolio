@@ -4,14 +4,14 @@ export default function Intro() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* Subsection header */}
         <div className="border-b border-gray-200 dark:border-gray-700 pb-2 mb-6">
-          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400">
+          <h2 className="text-sm uppercase tracking-wider font-semibold text-gray-600 dark:text-neutral-400">
             About Working Together
           </h2>
         </div>
 
         {/* Main content */}
         <div className="max-w-4xl">
-          <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
+          <div className="space-y-4 text-gray-600 dark:text-neutral-300 leading-relaxed">
             <p>
               I'm available for freelance development projects, data visualization work and consulting on digital strategy. Whether you need a website built, data analyzed, or stories told through interactive graphics, I'd love to help bring your vision to life.
             </p>

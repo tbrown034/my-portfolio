@@ -5,7 +5,7 @@ export default function Header() {
         {/* Newspaper-style section header */}
         <div>
           {/* Kicker/eyebrow - editorial style */}
-          <div className="text-xs font-bold uppercase tracking-[0.15em] text-blue-800 dark:text-blue-400 mb-2">
+          <div className="text-sm font-bold uppercase tracking-[0.15em] text-blue-800 dark:text-blue-400 mb-2">
             From Copy to Code
           </div>
 

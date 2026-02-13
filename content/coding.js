@@ -18,7 +18,7 @@ export const webProjects = [
     createdDate: "2024",
 
     description:
-      "Rebuilt a defunct dental practice site in Naperville with Next.js, adding a booking form, service information and a blog. Took over a $2,000/month Google Ads campaign and optimized it to more than triple new patient bookings. Added a custom dashboard with a Python API pipeline for practice finances.",
+      "Rebuilt a defunct dental practice site in Naperville with Next.js, adding a booking form, service information and a blog. Took over and optimized a $2,000/month Google Ads campaign. Built an admin dashboard with real-time ad controls, integrated analytics across GA4, CallRail and Google Business Profile, a Python billing pipeline and AI-powered performance summaries.",
     githubLink: "https://github.com/tbrown034/kab-dentist-2024",
     siteLink: "https://keithbrowndds.com/",
   },
@@ -39,7 +39,7 @@ export const webProjects = [
     createdDate: "2024",
     description:
       "ReflectYr is a Letterboxd-style platform where users build movie and TV lists with TMDB data and get AI-powered watch recommendations. Features NextAuth.js for authentication and a PostgreSQL database for persistence.",
-    githubLink: "https://github.com/tbrown034/refelectyr_project",
+    githubLink: null,
     siteLink: "https://reflectyr.vercel.app/",
   },
   {

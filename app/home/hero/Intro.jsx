@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Mug from "./Mug";
 import HeroBuildSomething from "./HeroBuildSomething";
 
 export default function Intro({ showDesktopLayout }) {
@@ -19,7 +18,7 @@ export default function Intro({ showDesktopLayout }) {
               Now I build{" "}
               <Link
                 href="#coding"
-                className="font-medium text-blue-800 dark:text-blue-400 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200"
+                className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
               >
                 interactive tools
               </Link>{" "}
@@ -35,31 +34,25 @@ export default function Intro({ showDesktopLayout }) {
               My work bridges{" "}
               <Link
                 href="#journalism"
-                className="font-medium text-blue-800 dark:text-blue-400 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200"
+                className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
               >
                 investigative reporting
               </Link>{" "}
               and{" "}
               <Link
                 href="#coding"
-                className="font-medium text-blue-800 dark:text-blue-400 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200"
+                className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
               >
                 modern web development
               </Link>{" "}
               – building responsive sites,{" "}
               <Link
                 href="#visualizations"
-                className="font-medium text-blue-800 dark:text-blue-400 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200"
+                className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
               >
                 data visualizations
               </Link>{" "}
               and applications that turn raw data into useful information.
-            </p>
-
-            <p className=" text-gray-600 dark:text-neutral-200 leading-relaxed mt-4">
-              Whether I’m reporting or coding, my guiding principle is the same:
-              make truth and information accessible, keep the user experience
-              seamless and ensure the end product feels useful.
             </p>
 
             {/* Let's build something together link - desktop only */}
@@ -77,11 +70,7 @@ export default function Intro({ showDesktopLayout }) {
     <section className="space-y-4">
       {/* About Me Section */}
       <div className="space-y-3">
-        {/* Mobile image placement */}
-        <div className="flex justify-center my-6 md:hidden">
-          <Mug />
-        </div>
-        <h2 className="text-xs font-bold uppercase tracking-[0.15em] text-gray-500 dark:text-gray-500 inline-flex items-center px-1.5 py-0.5 rounded-md hover:bg-white/5">
+        <h2 className="text-sm font-bold uppercase tracking-[0.15em] text-gray-600 dark:text-neutral-400 inline-flex items-center px-1.5 py-0.5 rounded-md hover:bg-white/5">
           About Me
         </h2>
 
@@ -98,7 +87,7 @@ export default function Intro({ showDesktopLayout }) {
             Now I build{" "}
             <Link
               href="#coding"
-              className="font-medium text-blue-800 dark:text-blue-400 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200"
+              className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
             >
               interactive tools
             </Link>{" "}
@@ -108,39 +97,30 @@ export default function Intro({ showDesktopLayout }) {
           </p>
 
           {/* Nutgraph */}
-          <div className="space-y-3">
-            <p className="text-base text-gray-600 dark:text-neutral-200 leading-relaxed">
-              My work bridges{" "}
-              <Link
-                href="#journalism"
-                className="font-medium text-blue-800 dark:text-blue-400 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200"
-              >
-                investigative reporting
-              </Link>{" "}
-              and{" "}
-              <Link
-                href="#coding"
-                className="font-medium text-blue-800 dark:text-blue-400 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200"
-              >
-                modern web development
-              </Link>{" "}
-              – building responsive sites,{" "}
-              <Link
-                href="#visualizations"
-                className="font-medium text-blue-800 dark:text-blue-400 hover:underline hover:decoration-2 hover:underline-offset-2 transition-colors duration-200"
-              >
-                data visualizations
-              </Link>{" "}
-              and applications that turn raw data into understanding.
-            </p>
-
-            {/* Body */}
-            <p className="text-sm text-gray-600 dark:text-neutral-200 leading-relaxed">
-              Whether I'm digging into public records or architecting a React
-              application, my guiding principle is the same: make truth and
-              information accessible and make the experience seamless.
-            </p>
-          </div>
+          <p className="text-lg text-gray-600 dark:text-neutral-200 leading-relaxed">
+            My work bridges{" "}
+            <Link
+              href="#journalism"
+              className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
+            >
+              investigative reporting
+            </Link>{" "}
+            and{" "}
+            <Link
+              href="#coding"
+              className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
+            >
+              modern web development
+            </Link>{" "}
+            – building responsive sites,{" "}
+            <Link
+              href="#visualizations"
+              className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
+            >
+              data visualizations
+            </Link>{" "}
+            and applications that turn raw data into understanding.
+          </p>
         </div>
       </div>
 

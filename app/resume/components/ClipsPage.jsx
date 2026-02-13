@@ -19,14 +19,14 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
       className="selected-works-container w-full flex flex-col items-center p-8 bg-slate-100 dark:bg-neutral-900 print:bg-white"
     >
       {/* Scaling wrapper */}
-      <div 
+      <div
         className="relative"
         style={{
           width: dimensions.width,
           height: dimensions.height,
         }}
       >
-        {/* Fixed letter-size container - 8.5 × 11 inches */}
+        {/* Fixed letter-size container - 8.5 x 11 inches */}
         <div
           ref={(el) => {
             pageRef.current = el;
@@ -47,62 +47,34 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
               <h1 className="text-xl font-bold tracking-wider text-gray-900 mb-1 uppercase">
               TREVOR BROWN
             </h1>
-            <div className="text-sm font-medium text-gray-700 mb-1">
-              Selected Clips & Projects
-            </div>
-            <div className="text-xs text-gray-600">
-              See full portfolio at{" "}
+            <div className="flex justify-center items-center gap-4 text-xs text-gray-600 font-normal">
+              <span>630&#8209;301&#8209;0589</span>
+              <a
+                href="mailto:trevorbrown.web@gmail.com"
+                className="text-gray-600 hover:text-gray-800 transition-colors"
+              >
+                trevorbrown.web@gmail.com
+              </a>
               <a
                 href="https://trevorthewebdeveloper.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 underline underline-offset-2 hover:text-gray-800 hover:no-underline"
+                className="text-gray-600 underline underline-offset-2 hover:text-gray-800 hover:no-underline transition-colors"
               >
                 trevorthewebdeveloper.com
               </a>
+            </div>
+            <div className="text-sm font-medium text-gray-700 mt-2">
+              Selected Clips & Projects
             </div>
           </header>
 
           {/* Main content */}
           <div className="max-w-2xl mx-auto space-y-2">
-            {/* Journalism Section */}
-            <section>
-              <h2 className="text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-gray-300 pb-1 mb-1">
-                Journalism
-              </h2>
-
-              <div className="space-y-2">
-                {clips.slice(0, 3).map((item, index) => (
-                  <div key={item.id} className={`pb-2 ${index < 2 ? 'border-b border-gray-200' : ''}`}>
-                    <div className="flex items-start justify-between mb-0.5">
-                      <a href={item.siteLink} target="_blank" rel="noopener noreferrer" className="flex-1 hover:bg-gray-50 transition-colors">
-                        <h3 className="text-sm font-bold text-gray-900 hover:text-blue-700 underline decoration-gray-300 decoration-1 underline-offset-2 hover:decoration-blue-400 transition-colors">
-                          {item.headline}
-                        </h3>
-                      </a>
-                      <span className="text-[10px] font-medium px-2 py-0.5 rounded bg-gray-100 text-gray-700 ml-2">
-                        {item.publication}
-                      </span>
-                    </div>
-                    <p className="text-xs leading-relaxed mb-1" style={{ color: '#374151' }}>
-                      {item.text}
-                    </p>
-                    <div className="text-xs" style={{ color: '#4b5563' }}>
-                      <a href={item.siteLink} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-700 underline decoration-gray-300 decoration-1 underline-offset-2 transition-colors">
-                        View Article
-                      </a>
-                      <span className="mx-2">|</span>
-                      {item.publication}, {item.date}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </section>
-
             {/* Web Development Section */}
             <section>
-              <h2 className="text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-gray-300 pb-1 mb-1 mt-2">
-                Web Development
+              <h2 className="text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-gray-300 pb-1 mb-1">
+                Web Development & Data Engineering
               </h2>
 
               <div className="space-y-2">
@@ -127,7 +99,7 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
                       </a>
                       {item.githubLink && (
                         <>
-                          {' • '}
+                          {' \u2022 '}
                           <a href={item.githubLink} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-700 underline decoration-gray-300 decoration-1 underline-offset-2 transition-colors">
                             GitHub
                           </a>
@@ -169,7 +141,7 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
                         <a href={graphicLink} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-700 underline decoration-gray-300 decoration-1 underline-offset-2 transition-colors">
                           Visualization
                         </a>
-                        {' • '}
+                        {' \u2022 '}
                         <a href={item.siteLink} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-700 underline decoration-gray-300 decoration-1 underline-offset-2 transition-colors">
                           Article
                         </a>
@@ -181,6 +153,44 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
                 })}
               </div>
             </section>
+
+            {/* Journalism Section */}
+            <section>
+              <h2 className="text-xs font-bold uppercase tracking-wider text-gray-900 border-b border-gray-300 pb-1 mb-1 mt-2">
+                Journalism
+              </h2>
+
+              <div className="space-y-2">
+                {clips.slice(0, 3).map((item, index) => (
+                  <div key={item.id} className={`pb-2 ${index < 2 ? 'border-b border-gray-200' : ''}`}>
+                    <div className="flex items-start justify-between mb-0.5">
+                      <a href={item.siteLink} target="_blank" rel="noopener noreferrer" className="flex-1 hover:bg-gray-50 transition-colors">
+                        <h3 className="text-sm font-bold text-gray-900 hover:text-blue-700 underline decoration-gray-300 decoration-1 underline-offset-2 hover:decoration-blue-400 transition-colors">
+                          {item.headline}
+                        </h3>
+                      </a>
+                      <span className="text-[10px] font-medium px-2 py-0.5 rounded bg-gray-100 text-gray-700 ml-2">
+                        {item.publication}
+                      </span>
+                    </div>
+                    <p className="text-xs leading-relaxed mb-1" style={{ color: '#374151' }}>
+                      {item.text}
+                    </p>
+                    <div className="text-xs" style={{ color: '#4b5563' }}>
+                      <a href={item.siteLink} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-700 underline decoration-gray-300 decoration-1 underline-offset-2 transition-colors">
+                        View Article
+                      </a>
+                      <span className="mx-2">|</span>
+                      {item.publication}, {item.date}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <div className="text-xs text-gray-500 text-center mt-3 pt-2 border-t border-gray-200">
+              Live demos at trevorthewebdeveloper.com/demos
+            </div>
             </div>
           </div>
 

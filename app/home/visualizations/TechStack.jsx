@@ -9,12 +9,12 @@ import { FaChartBar } from "react-icons/fa";
 
 export default function TechStack() {
   const skills = [
-    "Visual Analysis",
+    "Data Analysis",
     "Statistical Modeling",
     "Interactive Visualizations",
     "Public Records",
-    "Interactive Graphics",
     "Database Queries",
+    "Data Cleaning",
   ];
 
   const techs = [
@@ -63,7 +63,7 @@ export default function TechStack() {
         <div className="space-y-10">
           {/* Skills tags */}
           <div>
-            <h3 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-neutral-400 pb-2 mb-4 border-b border-gray-300 dark:border-neutral-700">
+            <h3 className="text-sm uppercase tracking-wider font-semibold text-gray-600 dark:text-neutral-400 pb-2 mb-4 border-b border-gray-300 dark:border-neutral-700">
               Core Competencies
             </h3>
             <div className="flex flex-wrap gap-3">
@@ -80,7 +80,7 @@ export default function TechStack() {
 
           {/* Tech Icons Grid */}
           <div>
-            <h3 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-neutral-400 pb-2 mb-4 border-b border-gray-300 dark:border-neutral-700">
+            <h3 className="text-sm uppercase tracking-wider font-semibold text-gray-600 dark:text-neutral-400 pb-2 mb-4 border-b border-gray-300 dark:border-neutral-700">
               Technology Stack
             </h3>
             <div className="grid grid-cols-3 md:grid-cols-6 gap-4">

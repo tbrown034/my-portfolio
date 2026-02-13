@@ -1,18 +1,12 @@
 import Link from "next/link";
 import { demoProjects } from "@content/demos.js";
-import HomeProjectCard from "./HomeProjectCard";
+import DemoCard from "@/app/demos/components/DemoCard";
 
-const FEATURED_PROJECTS = [
-  { id: 1, type: "Professional" },
-  { id: 2, type: "Hobby" },
-  { id: 3, type: "Hobby" },
-  { id: 5, type: "Local" },
-];
+const FEATURED_IDS = [1, 2, 3, 5];
 
-const featuredProjects = FEATURED_PROJECTS.map(({ id, type }) => {
-  const project = demoProjects.find((p) => p.id === id);
-  return project ? { ...project, type } : null;
-}).filter(Boolean);
+const featuredProjects = FEATURED_IDS.map((id) =>
+  demoProjects.find((p) => p.id === id)
+).filter(Boolean);
 
 export default function Clips() {
   return (
@@ -20,7 +14,7 @@ export default function Clips() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* Subsection header */}
         <div className="border-b border-gray-300 dark:border-neutral-700 pb-2 mb-6">
-          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-neutral-400">
+          <h2 className="text-sm uppercase tracking-wider font-semibold text-gray-600 dark:text-neutral-400">
             Selected Projects
           </h2>
         </div>
@@ -36,7 +30,7 @@ export default function Clips() {
                   : ""
               }`}
             >
-              <HomeProjectCard project={project} index={index} />
+              <DemoCard project={project} index={index} />
             </div>
           ))}
         </div>

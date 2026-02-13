@@ -2,7 +2,6 @@ import "./globals.css";
 import Footer from "@/components/Layout/Footer/Footer";
 import Header from "@/components/Layout/Header/Header";
 import { DarkModeProvider } from "@/components/providers/DarkModeContext";
-import { ClerkProvider } from "@clerk/nextjs";
 import { Roboto_Slab, Montserrat } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -53,8 +52,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
-      <DarkModeProvider>
+    <DarkModeProvider>
         <html
           className={`scroll-smooth ${roboto_slab.variable} ${montserrat.variable}`}
           lang="en"
@@ -69,6 +67,5 @@ export default function RootLayout({ children }) {
           </body>
         </html>
       </DarkModeProvider>
-    </ClerkProvider>
   );
 }

@@ -17,7 +17,7 @@ export default function Awards() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* Subsection header */}
         <div className="border-b border-gray-300 dark:border-gray-600 pb-2 mb-6">
-          <h2 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-gray-400">
+          <h2 className="text-sm uppercase tracking-wider font-semibold text-gray-600 dark:text-neutral-400">
             Recognition & Awards
           </h2>
         </div>
@@ -47,7 +47,7 @@ export default function Awards() {
                         <p className="text-xs text-gray-600 dark:text-gray-400">
                           {award.article}
                         </p>
-                        <p className="text-xs text-gray-500 dark:text-gray-500">
+                        <p className="text-xs text-gray-600 dark:text-neutral-400">
                           {award.organization}
                         </p>
                       </div>

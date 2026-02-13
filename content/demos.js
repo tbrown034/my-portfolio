@@ -5,8 +5,10 @@ export const demoProjects = [
     id: 1,
     title: "Keith Brown DDS",
     subtitle: "Production Dental Practice Site + Admin Dashboard",
-    oneLiner:
-      "Built and manage a production dental practice website and its protected admin dashboard. The public site drives patient bookings through SEO and a $2K/month Google Ads campaign I optimized to triple new patient volume. The admin side is a custom finance and analytics dashboard behind Clerk auth.",
+    oneLiner: [
+      "Built and manage a production dental practice website and a protected admin dashboard. The public site drives patient bookings through SEO and a Google Ads campaign.",
+      "The admin side features real-time ad controls, integrated analytics across GA4, CallRail and Google Business Profile, a Python billing pipeline, AI-powered performance summaries and a blog CMS.",
+    ],
     technologies: [
       "Next.js",
       "React",
@@ -31,9 +33,11 @@ export const demoProjects = [
   {
     id: 2,
     title: "News Pulse",
-    subtitle: "OSINT Geopolitical Awareness Dashboard",
-    oneLiner:
-      "An OSINT-style geopolitical awareness dashboard that aggregates 478 verified sources across RSS, Bluesky, Telegram, Reddit and YouTube. Features map-based monitoring, surge detection and tiered AI summarization via Claude.",
+    subtitle: "Open-Source News Intelligence Dashboard",
+    oneLiner: [
+      "An open-source news intelligence dashboard that aggregates verified sources across RSS, Bluesky, Telegram, Reddit and YouTube.",
+      "Built on open-web principles, it features map-based monitoring, surge detection and tiered AI summarization via Claude.",
+    ],
     technologies: [
       "Next.js",
       "TypeScript",
@@ -57,8 +61,10 @@ export const demoProjects = [
     id: 3,
     title: "AI Model Arena",
     subtitle: "Side-by-Side AI Model Comparison Tool",
-    oneLiner:
-      "A side-by-side AI comparison tool that sends one prompt to Claude, GPT, Gemini and Grok simultaneously. Includes AI-powered peer ranking, real-time cost tracking and a Fast vs. Frontier mode toggle.",
+    oneLiner: [
+      "A side-by-side AI comparison tool that sends one prompt to Claude, GPT, Gemini and Grok simultaneously.",
+      "Includes AI-powered peer ranking, real-time cost tracking and a Fast vs. Frontier mode toggle.",
+    ],
     technologies: [
       "Next.js 16",
       "TypeScript",
@@ -82,8 +88,10 @@ export const demoProjects = [
     id: 4,
     title: "sort(id)",
     subtitle: "Media Ranking and Sharing Platform",
-    oneLiner:
-      "A media ranking platform where users create and share ranked lists of movies, TV, books, podcasts and anime. Built with drag-and-drop interfaces, TMDB and Open Library API integrations and PostgreSQL persistence.",
+    oneLiner: [
+      "A media ranking platform where users create and share ranked lists of movies, TV, books, podcasts and anime.",
+      "Built with drag-and-drop interfaces, TMDB and Open Library API integrations and PostgreSQL persistence.",
+    ],
     technologies: [
       "Next.js 16",
       "Tailwind CSS 4",
@@ -99,15 +107,17 @@ export const demoProjects = [
     },
     displayUrl: "reflectyr.vercel.app",
     siteLink: "https://reflectyr.vercel.app/",
-    githubLink: "https://github.com/tbrown034/reflect-yr",
+    githubLink: null,
     arcadeLink: "https://demo.arcade.software/nj2UXJN7mHlsGnbwcO9l",
   },
   {
     id: 5,
     title: "Second Brain v2",
     subtitle: "Local Knowledge Base with Vector Search",
-    oneLiner:
-      "A local knowledge base with 200K+ records built from texts, emails, articles, ChatGPT exports, photos and DNA data. TypeScript and Python pipelines handle ingestion, deduplication and vector search via LanceDB and Ollama.",
+    oneLiner: [
+      "A local knowledge base built from texts, emails, articles, ChatGPT exports, photos and DNA data.",
+      "TypeScript and Python pipelines handle ingestion, deduplication and vector search via LanceDB and Ollama.",
+    ],
     technologies: [
       "TypeScript",
       "Python",
@@ -119,8 +129,8 @@ export const demoProjects = [
     screenshots: {
       desktopLight: "/images/demos/second-brain-desktop-light.png",
       desktopDark: null,
-      mobileLight: null,
-      mobileDark: "/images/demos/second-brain-mobile-dark.png",
+      mobileLight: "/images/demos/second-brain-mobile-light.png",
+      mobileDark: null,
     },
     siteLink: null,
     githubLink: null,
@@ -130,8 +140,10 @@ export const demoProjects = [
     id: 6,
     title: "Food Xpiry",
     subtitle: "AI-Powered Grocery Expiration Tracker",
-    oneLiner:
-      "A grocery management app that helps reduce food waste. Users log groceries and get AI-powered shelf-life estimates, storage tips and expiration tracking via the Anthropic API.",
+    oneLiner: [
+      "A grocery management app that helps reduce food waste.",
+      "Users log groceries and get AI-powered shelf-life estimates, storage tips and expiration tracking via the Anthropic API.",
+    ],
     technologies: [
       "Next.js",
       "TypeScript",
@@ -154,8 +166,10 @@ export const demoProjects = [
     id: 7,
     title: "StuddyBuddy",
     subtitle: "AI Study Platform for Web Developers",
-    oneLiner:
-      "An AI-powered study platform for web developers. Pick a tech stack and skill level to get interactive quiz sessions powered by GPT-4o Mini alongside curated documentation links.",
+    oneLiner: [
+      "An AI-powered study platform for web developers.",
+      "Pick a tech stack and skill level to get interactive quiz sessions powered by GPT-4o Mini alongside curated documentation links.",
+    ],
     technologies: [
       "Next.js 16",
       "React 19",

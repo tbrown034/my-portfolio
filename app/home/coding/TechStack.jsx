@@ -5,19 +5,12 @@ import {
   SiJavascript,
   SiPostgresql,
   SiTailwindcss,
+  SiPython,
+  SiR,
+  SiMysql,
 } from "react-icons/si";
 
 export default function TechStack() {
-  const skills = [
-    "Modern Tech Stack",
-    "API Development",
-    "Database Design",
-    "Analytics & SEO",
-    "Data Visualization",
-    "Responsive Design",
-    "LLM Integration",
-  ];
-
   const techs = [
     {
       name: "JavaScript",
@@ -43,12 +36,29 @@ export default function TechStack() {
       description:
         "Full-stack React framework with server-side rendering, routing, and optimal performance.",
     },
-
     {
-      name: "PostgreSQL",
+      name: "Python",
+      Icon: SiPython,
+      description:
+        "Versatile programming language for data analysis, automation, and backend development.",
+    },
+    {
+      name: "R",
+      Icon: SiR,
+      description:
+        "Statistical computing language for data analysis and visualization.",
+    },
+    {
+      name: "Postgres",
       Icon: SiPostgresql,
       description:
         "Powerful relational database for complex data relationships and reliable data storage.",
+    },
+    {
+      name: "MySQL",
+      Icon: SiMysql,
+      description:
+        "Widely-used relational database for web applications and data storage.",
     },
     {
       name: "Tailwind",
@@ -61,44 +71,23 @@ export default function TechStack() {
   return (
     <section className="pb-8">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
-        {/* Main content container */}
-        <div className="space-y-10">
-          {/* Skills tags */}
-          <div>
-            <h3 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-neutral-400 pb-2 mb-4 border-b border-gray-300 dark:border-neutral-700">
-              Core Competencies
-            </h3>
-            <div className="flex flex-wrap gap-3">
-              {skills.map((skill) => (
-                <span
-                  key={skill}
-                  className="px-3 py-1.5 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-400 rounded-lg text-sm font-medium"
-                >
-                  {skill}
+        <div>
+          <h3 className="text-sm uppercase tracking-wider font-semibold text-gray-600 dark:text-neutral-400 pb-2 mb-4 border-b border-gray-300 dark:border-neutral-700">
+            Technology Stack
+          </h3>
+          <div className="grid grid-cols-3 md:grid-cols-9 gap-4">
+            {techs.map((tech) => (
+              <div
+                key={tech.name}
+                className="group flex flex-col items-center justify-center p-4 bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg hover:shadow-md transition-all duration-200"
+                title={tech.description}
+              >
+                <tech.Icon className="w-8 h-8 mb-2 text-gray-700 dark:text-neutral-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200" />
+                <span className="text-xs font-medium text-center text-gray-600 dark:text-neutral-400">
+                  {tech.name}
                 </span>
-              ))}
-            </div>
-          </div>
-
-          {/* Tech Icons Grid */}
-          <div>
-            <h3 className="text-xs uppercase tracking-wider font-semibold text-gray-500 dark:text-neutral-400 pb-2 mb-4 border-b border-gray-300 dark:border-neutral-700">
-              Core Technology Stack
-            </h3>
-            <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
-              {techs.map((tech) => (
-                <div
-                  key={tech.name}
-                  className="group flex flex-col items-center justify-center p-4 bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg hover:shadow-md transition-all duration-200"
-                  title={tech.description}
-                >
-                  <tech.Icon className="w-8 h-8 mb-2 text-gray-700 dark:text-neutral-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200" />
-                  <span className="text-xs font-medium text-center text-gray-600 dark:text-neutral-400">
-                    {tech.name}
-                  </span>
-                </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
