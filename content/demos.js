@@ -112,7 +112,7 @@ export const demoProjects = [
   },
   {
     id: 5,
-    title: "Second Brain v2",
+    title: "Second Brain",
     subtitle: "Local Knowledge Base with Vector Search",
     oneLiner: [
       "A local knowledge base built from texts, emails, articles, ChatGPT exports, photos and DNA data.",
