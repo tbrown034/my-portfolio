@@ -42,7 +42,7 @@ export default function DemoCard({ project, index }) {
         {hasScreenshots ? (
           <div>
             {/* Toolbar: view toggles */}
-            <div className="flex items-center justify-end gap-2 mb-3">
+            <div className="flex flex-wrap items-center justify-end gap-2 mb-3">
               {/* Desktop / Mobile toggle */}
               {!showArcade && hasMobile && (
                 <div className="flex items-center rounded-full bg-gray-100 dark:bg-neutral-800 p-0.5">
