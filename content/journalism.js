@@ -1,7 +1,7 @@
 // clips.js
 
 import misinfo from "@/public/images/misinfo.webp";
-import profling from "@/public/images/profling.webp";
+import profiling from "@/public/images/profling.webp";
 import comment from "@/public/images/noComment.webp";
 import hospitals from "@/public/images/hospitals.webp";
 import darkMoney from "@/public/images/darkMoney.webp";
@@ -33,7 +33,7 @@ export const clips = [
     text: "Found that every one of dozens of racial profiling complaints over the years was dismissed as unsubstantiated by the agencies investigating themselves.",
     oneLiner:
       "In this investigative piece, I examined the lack of accountability in Oklahoma's racial profiling laws.",
-    image: profling,
+    image: profiling,
     publication: "Oklahoma Watch",
     date: "June 2, 2020",
     siteLink:
@@ -57,11 +57,11 @@ export const clips = [
   {
     id: 8,
     headline: "Where Dark Money Flowed in Oklahoma's Legislative Races",
-    text: "Tracking nearly $1 million in dark-money spending in 2020 legislative races – who spent it, where it went and how it shaped close contests.",
+    text: "Tracking nearly $1 million in dark-money spending in 2020 legislative races — who spent it, where it went and how it shaped close contests.",
     oneLiner:
       "Using campaign finance data and investigative tools, I helped uncover the flow of dark money in Oklahoma.",
     image: darkMoney,
-    date: "Jan. 13, 2022",
+    date: "Nov. 16, 2020",
 
     publication: "Oklahoma Watch",
 
@@ -72,10 +72,10 @@ export const clips = [
     id: 5,
     headline:
       "No Comment: In Oklahoma's Legislature, Public Rarely Given Chance to Weigh In",
-    text: "Committees moved high-impact bills in minutes with little debate – a Sunshine Week look at how public comment gets sidelined at the Capitol.",
+    text: "Committees moved high-impact bills in minutes with little debate — a Sunshine Week look at how public comment gets sidelined at the Capitol.",
     oneLiner:
       "I looked at Oklahoma's open records and meetings laws to see how public input is often overlooked.",
-    date: "Feb. 11, 2022",
+    date: "March 15, 2021",
 
     image: comment,
     publication: "Oklahoma Watch",
@@ -87,9 +87,9 @@ export const clips = [
     id: 9,
     headline:
       "In Remembering OKC Bombing Victims, Experts See Lessons for Grieving COVID Losses",
-    text: "Lessons from the Oklahoma City bombing for grieving during COVID – how counselors apply what they learned when rituals and timelines are disrupted.",
+    text: "Lessons from the Oklahoma City bombing for grieving during COVID — how counselors apply what they learned when rituals and timelines are disrupted.",
     image: okcBombing,
-    date: "Feb. 11, 2022",
+    date: "April 25, 2021",
     oneLiner:
       "I explored the parallels between the Oklahoma City bombing and the grieving process during COVID.",
 
@@ -113,7 +113,7 @@ export const clips = [
   {
     id: 4,
     headline: "Memo: Troopers Must Hit Numbers",
-    text: "Wyoming Highway Patrol required troopers to meet citation quotas or face career consequences – policy rescinded after public backlash.",
+    text: "Wyoming Highway Patrol required troopers to meet citation quotas or face career consequences — policy rescinded after public backlash.",
     oneLiner:
       "I exposed a controversial quota system that was ultimately overturned following public and legislative pressure.",
     image: highwayPatrol,

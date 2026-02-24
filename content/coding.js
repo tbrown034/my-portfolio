@@ -24,7 +24,7 @@ export const webProjects = [
   },
   {
     id: 2,
-    title: "ReflectYr: Social Platform for Film & TV",
+    title: "sort(id): Media Ranking and Sharing Platform",
     type: "Hobby",
     tag: "Auth & Database",
     workInProgress: true,
@@ -38,13 +38,13 @@ export const webProjects = [
     ],
     createdDate: "2024",
     description:
-      "ReflectYr is a Letterboxd-style platform where users build movie and TV lists with TMDB data and get AI-powered watch recommendations. Features NextAuth.js for authentication and a PostgreSQL database for persistence.",
+      "sort(id) is a Letterboxd-style platform where users build movie and TV lists with TMDB data and get AI-powered watch recommendations. Features NextAuth.js for authentication and a PostgreSQL database for persistence.",
     githubLink: null,
     siteLink: "https://reflectyr.vercel.app/",
   },
   {
     id: 3,
-    title: "My Expiry: Smart Food Waste Tracker",
+    title: "Food Xpiry: AI-Powered Grocery Expiration Tracker",
     type: "Hobby",
     tag: "AI Integration",
     workInProgress: true,
@@ -59,13 +59,13 @@ export const webProjects = [
     ],
     createdDate: "2025",
     description:
-      "Developed My Expiry to track food freshness – users log groceries, get AI-powered shelf-life estimates and storage tips, and check expiration status.",
+      "Developed Food Xpiry to track food freshness — users log groceries, get AI-powered shelf-life estimates and storage tips, and check expiration status.",
     githubLink: "https://github.com/tbrown034/my-expiry",
-    siteLink: "https://my-expiry.vercel.app/",
+    siteLink: "https://food-xpiry.vercel.app/",
   },
   {
     id: 5,
-    title: "studdy-buddy: Personalized Coding Study Platform",
+    title: "StuddyBuddy: AI Study Platform for Web Developers",
     type: "Coding",
     tag: "Coding/Learning",
     workInProgress: false,
@@ -79,7 +79,7 @@ export const webProjects = [
     ],
     createdDate: "2025",
     description:
-      "Built a personalized study platform for web developers – users select their tech stack and skill level to access interactive lessons, custom quizzes, flashcard decks and curated documentation for JavaScript, TypeScript, Python, React, Next.js and more.",
+      "Built a personalized study platform for web developers — users select their tech stack and skill level to access interactive lessons, custom quizzes, flashcard decks and curated documentation for JavaScript, TypeScript, Python, React, Next.js and more.",
     githubLink: "https://github.com/tbrown034/studdy-buddy",
     siteLink: "https://studdy-buddy-rho.vercel.app/",
   },

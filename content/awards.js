@@ -69,7 +69,7 @@ export const awards = [
   {
     organization: "Oklahoma Society of Professional Journalists",
     award:
-      "Science, Technology, Health and Environmental Reporting Reporting (First Place)",
+      "Science, Technology, Health and Environmental Reporting (First Place)",
     article: "Multiple articles",
     year: 2020,
     link: "Read More",

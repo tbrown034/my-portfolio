@@ -106,7 +106,7 @@ export const graphics = [
   {
     id: 7,
     headline: "Bills Passed During the 58th Oklahoma Legislature (2021-2022 sessions)",
-    text: "Of the more than 3,600 bills introduced during Oklahoma's 58th Legislature, only 1,031 were sent to the governor. Democrats authored just 40 bills (14 in the House and 26 in the Senate) that passed – the GOP holds 81% of the 149 legislative seats. Compared to the 53rd Legislature (2011-2012), Democratic influence has significantly declined.",
+    text: "Of the more than 3,600 bills introduced during Oklahoma's 58th Legislature, only 1,031 were sent to the governor. Democrats authored just 40 bills (14 in the House and 26 in the Senate) that passed — the GOP holds 81% of the 149 legislative seats. Compared to the 53rd Legislature (2011-2012), Democratic influence has significantly declined.",
     image: bills,
     publication: "Oklahoma Watch",
     program: "Flourish",
