@@ -36,7 +36,6 @@ export const webProjects = [
       "NextAuth.js",
       "PostgreSQL",
       "TMDB API",
-      "Anthropic AI API",
     ],
     createdDate: "2024",
     description:
@@ -62,7 +61,7 @@ export const webProjects = [
     createdDate: "2025",
     description:
       "Grocery tracker that reduces food waste using USDA FoodKeeper data and Anthropic API shelf-life estimates. Users log items, get storage tips and track expiration dates with PostgreSQL persistence via Neon.",
-    githubLink: "https://github.com/tbrown034/my-expiry",
+    githubLink: "https://github.com/tbrown034/food-xpiry",
     siteLink: "https://food-xpiry.vercel.app/",
   },
   {

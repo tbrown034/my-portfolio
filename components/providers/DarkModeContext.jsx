@@ -1,24 +1,31 @@
 "use client";
 import React, { createContext, useState, useEffect } from "react";
 
-// Create a context
 export const DarkModeContext = createContext();
 
-// Create a provider component
 export const DarkModeProvider = ({ children }) => {
-  // State to keep track of dark mode
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isHydrated, setIsHydrated] = useState(false);
 
-  // useEffect to toggle the 'dark' class on the html element
+  // Initialize from localStorage or system preference
   useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark");
+    const stored = localStorage.getItem("darkMode");
+    if (stored !== null) {
+      setIsDarkMode(stored === "true");
     } else {
-      document.documentElement.classList.remove("dark");
+      setIsDarkMode(window.matchMedia("(prefers-color-scheme: dark)").matches);
     }
-  }, [isDarkMode]);
+    setIsHydrated(true);
+  }, []);
 
-  // Provide the state and setter function to the components wrapped within DarkModeProvider
+  // Apply dark class and persist preference
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", isDarkMode);
+    if (isHydrated) {
+      localStorage.setItem("darkMode", String(isDarkMode));
+    }
+  }, [isDarkMode, isHydrated]);
+
   return (
     <DarkModeContext.Provider value={{ isDarkMode, setIsDarkMode }}>
       {children}

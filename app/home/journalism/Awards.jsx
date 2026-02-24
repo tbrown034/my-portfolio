@@ -16,7 +16,7 @@ export default function Awards() {
     <section className="pb-8">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* Subsection header */}
-        <div className="border-b border-gray-300 dark:border-gray-600 pb-2 mb-6">
+        <div className="border-b border-gray-300 dark:border-neutral-700 pb-2 mb-6">
           <h2 className="text-sm uppercase tracking-wider font-semibold text-gray-600 dark:text-neutral-400">
             Recognition & Awards
           </h2>
@@ -62,7 +62,7 @@ export default function Awards() {
         {hiddenYears.length > 0 && !showAll && (
           <div className="flex justify-center mt-6">
             <button
-              className="inline-flex items-center justify-center px-5 py-2 text-sm font-semibold text-gray-800 dark:text-gray-100 bg-white dark:bg-neutral-900 border-2 border-gray-400 dark:border-gray-500 rounded-lg shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-800 dark:hover:text-blue-400 hover:shadow-md hover:-translate-y-0.5 active:bg-gray-100 dark:active:bg-gray-950 active:shadow-none active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 cursor-pointer"
+              className="inline-flex items-center justify-center px-5 py-2 text-sm font-semibold text-white bg-blue-800 dark:bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 dark:hover:bg-blue-500 hover:shadow-lg hover:-translate-y-1 active:bg-blue-900 dark:active:bg-blue-700 active:shadow-sm active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 cursor-pointer"
               onClick={() => setShowAll(true)}
             >
               Show More
@@ -72,7 +72,7 @@ export default function Awards() {
         {showAll && (
           <div className="flex justify-center mt-6">
             <button
-              className="inline-flex items-center justify-center px-5 py-2 text-sm font-semibold text-white bg-blue-800 dark:bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 dark:hover:bg-blue-500 hover:shadow-lg hover:-translate-y-1 active:bg-blue-900 dark:active:bg-blue-700 active:shadow-sm active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 cursor-pointer"
+              className="inline-flex items-center justify-center px-5 py-2 text-sm font-semibold text-gray-800 dark:text-gray-100 bg-white dark:bg-neutral-900 border-2 border-gray-400 dark:border-gray-500 rounded-lg shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-800 dark:hover:text-blue-400 hover:shadow-md hover:-translate-y-0.5 active:bg-gray-100 dark:active:bg-gray-950 active:shadow-none active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 cursor-pointer"
               onClick={() => setShowAll(false)}
             >
               Show Less

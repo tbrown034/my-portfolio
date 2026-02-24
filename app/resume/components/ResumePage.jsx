@@ -153,6 +153,14 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                   trevorthewebdeveloper.com
                 </a>
                 <a
+                  href="https://www.linkedin.com/in/trevorabrown/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-gray-800 transition-colors"
+                >
+                  linkedin.com/in/trevorabrown
+                </a>
+                <a
                   href="https://github.com/tbrown034"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -284,7 +292,7 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                     }
                     period="2023 – Present"
                     highlights={[
-                      "Built public-facing Next.js site with appointment forms, call tracking and SEO \u2013 cut ad costs and increased new patient bookings by more than 33% in 2025",
+                      "Built public-facing Next.js site with appointment forms, call tracking and SEO \u2014 cut ad costs and increased new patient bookings by more than 33% in 2025",
                       "Built data pipeline for financial reporting, Google Ads API and AI chat interface via Claude",
                     ]}
                   />

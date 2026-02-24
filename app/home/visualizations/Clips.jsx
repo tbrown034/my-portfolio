@@ -1,25 +1,13 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { graphics } from "@content/visualizations.js";
 
 export default function Clips() {
   const [showAll, setShowAll] = useState(false);
-  const [isLargeScreen, setIsLargeScreen] = useState(false);
-  
-  useEffect(() => {
-    const checkScreenSize = () => {
-      setIsLargeScreen(window.innerWidth >= 1024); // lg breakpoint
-    };
-    
-    checkScreenSize();
-    window.addEventListener('resize', checkScreenSize);
-    return () => window.removeEventListener('resize', checkScreenSize);
-  }, []);
-  
-  const defaultItemCount = isLargeScreen ? 6 : 4;
-  const visibleGraphics = showAll ? graphics : graphics.slice(0, defaultItemCount);
+
+  const visibleGraphics = showAll ? graphics : graphics.slice(0, 6);
   
   return (
     <section>
@@ -34,7 +22,7 @@ export default function Clips() {
         {/* Visualizations grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {visibleGraphics.map((story, index) => (
-            <div key={story.id} className="group relative">
+            <div key={story.id} className={`group relative${!showAll && index >= 4 ? " hidden lg:block" : ""}`}>
               {/* Card content - simplified */}
               <div className="relative bg-white dark:bg-neutral-800 rounded-lg p-5 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-green-300 dark:hover:border-green-700">
                 {/* Content */}
@@ -178,7 +166,7 @@ export default function Clips() {
         </div>
 
         {/* Show More/Less button */}
-        {graphics.length > defaultItemCount && !showAll && (
+        {graphics.length > 4 && !showAll && (
           <div className="flex justify-center mt-8">
             <button
               className="inline-flex items-center justify-center px-6 py-2.5 font-semibold text-white bg-blue-800 dark:bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 dark:hover:bg-blue-500 hover:shadow-lg hover:-translate-y-1 active:bg-blue-900 dark:active:bg-blue-700 active:shadow-sm active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 cursor-pointer"

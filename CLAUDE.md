@@ -1,5 +1,128 @@
 # Claude Code Preferences - Trevor Brown
 
+## Cross-Project References
+
+This portfolio does NOT exist in isolation. The **second-brain-v2** project tracks job applications, project metadata, and career positioning that must stay in sync with this portfolio.
+
+### Key files to cross-reference:
+- **Second Brain project root**: `~/Desktop/dev/active/second-brain-v2/`
+- **Second Brain CLAUDE.md**: `~/Desktop/dev/active/second-brain-v2/.claude/rules/` (project rules)
+- **Job applications**: `~/Desktop/dev/active/second-brain-v2/config/applications.json` — 72 tracked applications with prestige/hirability scores. Project descriptions used in applications should match this portfolio.
+- **Job profile**: `~/Desktop/dev/active/second-brain-v2/config/job-profile.json` — target roles, skills, career narrative
+- **Project tracking**: `~/Desktop/dev/active/second-brain-v2/config/projects.json` — internal project status, health, tech stacks
+- **Portfolio data mirror**: `~/Desktop/dev/active/second-brain-v2/raw/portfolio/portfolio.json` — scraped copy of this portfolio's content (last scraped 2026-02-02). When portfolio content changes here, this file becomes stale.
+- **AP application workspace**: `~/Desktop/dev/active/second-brain-v2/docs/ap-application-knowledge.md` — verified facts, interview prep, skill assessments
+
+### Consistency rules:
+- Project names, descriptions, and tech stacks in this portfolio should match what's in job applications
+- If a project description is updated here, flag that `second-brain-v2/raw/portfolio/portfolio.json` needs re-scraping
+- Python proficiency is SECONDARY (JavaScript/TypeScript is primary) — do not overstate Python in any content
+- The career narrative is "investigative journalist turned web developer" — both halves matter equally
+
+---
+
+## Current Priority Tasks (Feb 2026 Audit)
+
+These are verified issues from a cross-repo audit comparing the portfolio against the second-brain job tracking system, live site verification, and GitHub profile review. Work through these in order.
+
+### Phase 1: Quick Wins (Typos, Dates, Naming, Em Dashes)
+
+**1a. Fix "Reporting Reporting" typo in awards.js**
+- File: `/content/awards.js` line ~72
+- "Science, Technology, Health and Environmental Reporting Reporting (First Place)" — delete the duplicate "Reporting"
+
+**1b. Fix 3 wrong publication dates in journalism.js**
+- These show portfolio-update dates, not actual publication dates. Use the URL slugs as the source of truth:
+  - id 8 (Dark Money): Currently "Jan. 13, 2022" — should be "Nov. 16, 2020" (URL: `/2020/11/16/`)
+  - id 5 (No Comment): Currently "Feb. 11, 2022" — should be "March 15, 2021" (URL: `/2021/03/15/`)
+  - id 9 (OKC Bombing/COVID): Currently "Feb. 11, 2022" — should be "April 25, 2021" (URL: `/2021/04/25/`)
+
+**1c. Fix em dash usage across all content files**
+- Rule: ALWAYS use spaced em dashes: `word — word` (space, em dash U+2014, space)
+- NEVER use en dashes for parenthetical breaks
+- 7 instances to fix in: journalism.js (~4), visualizations.js (~1), coding.js (~2)
+- Search for ` – ` (spaced en dash) and replace with ` — ` (spaced em dash)
+
+**1d. Reconcile project naming across demos.js and coding.js**
+- The same projects have different names in different files. Pick ONE canonical name per project:
+
+| Canonical Name | demos.js (current) | coding.js (current) | Fix |
+|---------------|-------------------|---------------------|-----|
+| sort(id) | "sort(id)" | "ReflectYr" | Update coding.js to "sort(id)" |
+| Food Xpiry | "Food Xpiry" | "My Expiry" | Update coding.js to "Food Xpiry" |
+| StuddyBuddy | "StuddyBuddy" | "studdy-buddy" | Update coding.js to "StuddyBuddy" |
+
+- Also fix coding.js `siteLink` for Food Xpiry: change `my-expiry.vercel.app` to `food-xpiry.vercel.app`
+- Verify the studdy-buddy GitHub link resolves (repo may be named `study-buddy` not `studdy-buddy`)
+
+**1e. Fix variable name typo in journalism.js**
+- Import variable `profling` should be `profiling` (not user-facing but sloppy)
+
+### Phase 3: Content Rewrite (Match Job Application Quality)
+
+The portfolio dramatically undersells every project compared to what Trevor tells employers. Below is the gap and the target quality. When rewriting, use AP style (spaced em dashes, no Oxford comma in series, active voice).
+
+**IMPORTANT: Do NOT fabricate metrics, technologies, or capabilities. Only include claims that are verifiable from the codebase or that Trevor explicitly confirms.**
+
+**3a. Second Brain — Most undersold project**
+- Current (demos.js): "A local knowledge base built from texts, emails, articles, ChatGPT exports, photos and DNA data."
+- What it actually is: 200K+ records processed through TypeScript data pipelines, LanceDB vector embeddings with semantic search, streaming chat assistant with 30+ tools, Tauri desktop wrapper, Ollama LLM integration, eager execution optimization pattern
+- Rewrite to surface the data engineering and AI architecture. This is the most technically complex project in the portfolio.
+
+**3b. Keith Brown DDS — Reads like a static site**
+- Current: "Built and manage a production dental practice website and a protected admin dashboard..."
+- What's missing: Measurable business impact (33% booking increase), $2K/month Google Ads management, Python billing data pipeline, AI chat interface, CallRail/GA4/GBP analytics integration
+- Rewrite to lead with business outcomes and technical depth. This is the only production client project.
+
+**3c. All projects — Tech stacks are too generic**
+- Portfolio lists "Next.js, Tailwind CSS" for everything
+- Job applications list specific APIs, databases, auth systems, and integrations
+- For each project, surface the differentiating technologies:
+  - News Pulse: RSS/Bluesky/Telegram/Reddit aggregation, map-based monitoring, Claude AI summarization
+  - AI Model Arena: 4 LLM APIs (Claude, GPT, Gemini, Grok), real-time cost tracking, AI peer ranking
+  - sort(id): TMDB API, drag-and-drop ranking, NextAuth, PostgreSQL
+  - Food Xpiry: USDA FoodKeeper data, Anthropic API for shelf-life estimates
+  - StuddyBuddy: GPT-4o Mini, personalized curriculum generation
+
+**3d. Surface journalism credentials on the homepage**
+- The portfolio markets Trevor as a generic web developer
+- Job applications emphasize the journalism-tech intersection — that's the differentiator
+- Awards (Reporter of the Year, Writer of the Year) should be more prominent
+- 15 years of elections/investigative reporting is a unique selling point, not just background
+
+**3e. coding.js needs 3 missing projects**
+- Currently has 4 projects; demos.js has 7
+- Missing from homepage coding section: News Pulse, AI Model Arena, Second Brain
+- Either add them to coding.js or ensure the homepage coding section pulls from demos.js instead
+
+### Phase 4: Analytics & SEO
+
+**4a. Add @vercel/speed-insights**
+- Free, one-line addition. Gives Core Web Vitals (LCP, FID, CLS) in Vercel dashboard.
+- Install: `pnpm add @vercel/speed-insights`
+- In layout.js, add alongside existing Analytics:
+  ```js
+  import { SpeedInsights } from "@vercel/speed-insights/next";
+  // In the JSX:
+  <SpeedInsights />
+  ```
+
+**4b. Update @vercel/analytics**
+- Currently on v1.0.2 (initial release from 2023). Run `pnpm update @vercel/analytics` to get latest.
+
+**4c. Review OG image**
+- Current OG image is `/images/Aug17desktopview.png` — filename suggests August 2025
+- If the site design has changed since then, take a new screenshot for social sharing
+- OG images should be 1200x630px, show the current homepage design
+
+**4d. Consider GA4 (optional)**
+- Vercel Analytics gives page views but limited detail
+- GA4 would give: traffic sources, user demographics, session duration, bounce rate, conversion tracking
+- If Trevor wants to track whether employers are visiting from LinkedIn/GitHub/job applications, GA4 is worth adding
+- This is a decision for Trevor — don't add without explicit approval
+
+---
+
 ## Design Ethos & Mission
 
 **Three words: intuition, clarity, focus.**
@@ -46,7 +169,7 @@ Design experiences that are intuitive, clear, and focused—where every element 
 - **Canvas**: Adaptive contrast (light/dark mode) prioritizing readability
 - **Modules**: Frosted cards, rounded rectangles
 - **Type**: Modern sans, clear weights, generous leading
-- **Typography details**: Always use spaced en dash ( – ) not em dash or hyphen
+- **Typography details**: Always use spaced em dash ( — ) in AP style: `word — word`. Never use unspaced em dashes or en dashes for parenthetical breaks.
 - **Color**: Neutrals + one disciplined accent
 - **Rhythm**: Strict grid, consistent alignment, airy spacing
 

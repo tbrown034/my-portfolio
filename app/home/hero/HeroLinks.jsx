@@ -14,7 +14,7 @@ export default function HeroLinks() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         <Link
           href="#journalism"
-          className="group p-3 bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-md transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+          className="group p-3 bg-gray-50 dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-md transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
         >
           <h3 className="font-semibold text-sm text-gray-900 dark:text-white">
             Journalism
@@ -26,7 +26,7 @@ export default function HeroLinks() {
 
         <Link
           href="#coding"
-          className="group p-3 bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-md transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+          className="group p-3 bg-gray-50 dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-md transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
         >
           <h3 className="font-semibold text-sm text-gray-900 dark:text-white">
             Web Development
@@ -38,7 +38,7 @@ export default function HeroLinks() {
 
         <Link
           href="#visualizations"
-          className="group p-3 bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-md transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+          className="group p-3 bg-gray-50 dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-md transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
         >
           <h3 className="font-semibold text-sm text-gray-900 dark:text-white">
             Data Visualization
@@ -50,7 +50,7 @@ export default function HeroLinks() {
 
         <Link
           href="#coding"
-          className="group p-3 bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-md transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+          className="group p-3 bg-gray-50 dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-md transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
         >
           <h3 className="font-semibold text-sm text-gray-900 dark:text-white">
             Full-Stack Apps

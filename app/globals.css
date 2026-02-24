@@ -20,7 +20,7 @@
 
 @theme {
   --font-montserrat: var(--font-montserrat);
-  --font-roboto: var(--font-roboto);
+  --font-roboto-slab: var(--font-roboto-slab);
   
   --breakpoint-xs: 375px;
   --breakpoint-mdlg: 896px;
@@ -130,11 +130,6 @@
   }
 }
 
-@keyframes slowBounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(8px); }
-}
-
 @keyframes pulse-slow {
   0%, 100% { 
     opacity: 0.3;
@@ -164,12 +159,3 @@
   border-width: 3px;
 }
 
-@layer components {
-  .fullSubsection {
-    @apply bg-gray-50 dark:bg-neutral-900 py-16 sm:py-20;
-  }
-
-  .subSection {
-    @apply bg-white dark:bg-neutral-900 py-16 sm:py-20;
-  }
-}

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   SunIcon,
   MoonIcon,
@@ -16,8 +17,10 @@ export default function DemoCard({ project, index }) {
   const [darkMode, setDarkMode] = useState(false);
   const [mobileView, setMobileView] = useState(false);
   const [showArcade, setShowArcade] = useState(false);
+  const [galleryIndex, setGalleryIndex] = useState(0);
   const isEven = index % 2 === 0;
-  const hasScreenshots = project.screenshots?.desktopLight;
+  const hasGallery = project.gallery?.length > 0;
+  const hasScreenshots = hasGallery || project.screenshots?.desktopLight;
   const hasDarkVariants =
     project.screenshots?.desktopDark || project.screenshots?.mobileDark;
   const hasMobile =
@@ -43,8 +46,28 @@ export default function DemoCard({ project, index }) {
           <div>
             {/* Toolbar: view toggles */}
             <div className="flex flex-wrap items-center justify-end gap-2 mb-3">
+              {/* Gallery view selector */}
+              {hasGallery && (
+                <div className="flex items-center rounded-full bg-gray-100 dark:bg-neutral-800 p-0.5">
+                  {project.gallery.map((item, i) => (
+                    <button
+                      key={i}
+                      onClick={() => setGalleryIndex(i)}
+                      className={`px-2.5 py-1 rounded-full text-xs font-medium transition-all duration-200 ${
+                        galleryIndex === i
+                          ? "bg-white dark:bg-neutral-700 text-gray-900 dark:text-white shadow-sm"
+                          : "text-gray-400 dark:text-neutral-500 hover:text-gray-600 dark:hover:text-neutral-300"
+                      }`}
+                      aria-label={`View ${item.label}`}
+                    >
+                      {item.label}
+                    </button>
+                  ))}
+                </div>
+              )}
+
               {/* Desktop / Mobile toggle */}
-              {!showArcade && hasMobile && (
+              {!hasGallery && !showArcade && hasMobile && (
                 <div className="flex items-center rounded-full bg-gray-100 dark:bg-neutral-800 p-0.5">
                   <button
                     onClick={() => setMobileView(false)}
@@ -74,7 +97,7 @@ export default function DemoCard({ project, index }) {
               )}
 
               {/* Light / Dark toggle */}
-              {!showArcade && hasDarkVariants && (
+              {!hasGallery && !showArcade && hasDarkVariants && (
                 <button
                   onClick={() => setDarkMode(!darkMode)}
                   className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-gray-100 dark:bg-neutral-800 text-gray-400 dark:text-neutral-500 hover:text-gray-900 dark:hover:text-white transition-all duration-200 text-xs font-medium"
@@ -95,7 +118,7 @@ export default function DemoCard({ project, index }) {
               )}
 
               {/* Demo toggle */}
-              {project.arcadeLink && (
+              {!hasGallery && project.arcadeLink && (
                 <div className="flex items-center rounded-full bg-gray-100 dark:bg-neutral-800 p-0.5">
                   <button
                     onClick={() => setShowArcade(false)}
@@ -125,7 +148,7 @@ export default function DemoCard({ project, index }) {
               )}
 
               {/* Open demo in new window */}
-              {showArcade && project.arcadeLink && (
+              {!hasGallery && showArcade && project.arcadeLink && (
                 <a
                   href={project.arcadeLink}
                   target="_blank"
@@ -139,8 +162,23 @@ export default function DemoCard({ project, index }) {
               )}
             </div>
 
-            {/* Screenshot or Arcade embed */}
-            {showArcade && project.arcadeLink ? (
+            {/* Screenshot, Gallery, or Arcade embed */}
+            {hasGallery ? (
+              <div className="relative rounded-2xl bg-gradient-to-br from-slate-100 via-slate-50 to-white dark:from-neutral-900 dark:via-neutral-800/80 dark:to-neutral-900 p-5 sm:p-6 ring-1 ring-black/[0.04] dark:ring-white/[0.06]">
+                <div className="rounded-lg overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.2),0_0_0_1px_rgba(0,0,0,0.05)] dark:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.6),0_0_0_1px_rgba(255,255,255,0.05)]">
+                  <Image
+                    key={galleryIndex}
+                    src={project.gallery[galleryIndex].image}
+                    alt={`${project.title} — ${project.gallery[galleryIndex].label}`}
+                    className="block w-full h-auto"
+                    width={1200}
+                    height={750}
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    quality={85}
+                  />
+                </div>
+              </div>
+            ) : showArcade && project.arcadeLink ? (
               <div className="relative rounded-2xl bg-gradient-to-br from-slate-100 via-slate-50 to-white dark:from-neutral-900 dark:via-neutral-800/80 dark:to-neutral-900 p-5 sm:p-6 ring-1 ring-black/[0.04] dark:ring-white/[0.06]">
                 <div className="rounded-lg overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.2)] dark:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.6)]">
                   <div style={{ position: "relative", paddingBottom: "62.5%", height: 0 }}>
@@ -170,10 +208,14 @@ export default function DemoCard({ project, index }) {
                     mobileView ? "max-w-[220px] mx-auto" : ""
                   }`}
                 >
-                  <img
+                  <Image
                     src={getScreenshot()}
                     alt={`${project.title} ${mobileView ? "mobile" : "desktop"} screenshot`}
-                    className="block w-full"
+                    className="block w-full h-auto"
+                    width={1200}
+                    height={750}
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    quality={85}
                   />
                 </div>
               </div>
@@ -218,6 +260,20 @@ export default function DemoCard({ project, index }) {
             </p>
           ))}
         </div>
+
+        {/* Highlights */}
+        {project.highlights && project.highlights.length > 0 && (
+          <ul className="mb-6 space-y-1.5 pl-4">
+            {project.highlights.map((highlight, i) => (
+              <li
+                key={i}
+                className="text-sm text-gray-600 dark:text-neutral-400 leading-relaxed list-disc marker:text-gray-300 dark:marker:text-neutral-600"
+              >
+                {highlight}
+              </li>
+            ))}
+          </ul>
+        )}
 
         {/* Tech stack */}
         <div className="flex flex-wrap gap-2 mb-6">

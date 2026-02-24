@@ -9,6 +9,13 @@ export const demoProjects = [
       "Production dental practice site in Naperville that increased online bookings by 33%. I manage SEO and optimize a $2,000/month Google Ads campaign directly.",
       "Protected admin dashboard integrates GA4, CallRail and Google Business Profile analytics with real-time ad controls, a Python billing data pipeline, an AI chat interface and a blog CMS.",
     ],
+    highlights: [
+      "Increased new patient bookings by 33% after launch",
+      "Manage $2,000/month Google Ads campaign with real-time bid controls",
+      "Built Python billing data pipeline for automated financial reporting",
+      "Integrated CallRail, GA4 and Google Business Profile analytics into admin dashboard",
+      "AI chat interface powered by Claude for patient inquiries",
+    ],
     technologies: [
       "Next.js",
       "React",
@@ -38,6 +45,12 @@ export const demoProjects = [
       "An open-source news intelligence dashboard that aggregates verified sources across RSS, Bluesky, Telegram, Reddit and YouTube.",
       "Built on open-web principles, it features map-based monitoring, surge detection and tiered AI summarization via Claude.",
     ],
+    highlights: [
+      "Aggregates five source types — RSS, Bluesky, Telegram, Reddit and YouTube",
+      "Map-based monitoring with geographic surge detection",
+      "Tiered AI summarization via Anthropic Claude API",
+      "Built on open-source intelligence (OSINT) principles",
+    ],
     technologies: [
       "Next.js",
       "TypeScript",
@@ -64,6 +77,12 @@ export const demoProjects = [
     oneLiner: [
       "A side-by-side AI comparison tool that sends one prompt to Claude, GPT, Gemini and Grok simultaneously.",
       "Includes AI-powered peer ranking, real-time cost tracking and a Fast vs. Frontier mode toggle.",
+    ],
+    highlights: [
+      "Queries four LLM APIs simultaneously — Claude, GPT, Gemini and Grok",
+      "AI-powered peer ranking system where models evaluate each other",
+      "Real-time cost tracking per query across all providers",
+      "Fast vs. Frontier mode toggle for speed and quality tradeoffs",
     ],
     technologies: [
       "Next.js 16",
@@ -92,6 +111,12 @@ export const demoProjects = [
       "A media ranking platform where users create and share ranked lists of movies, TV, books, podcasts and anime.",
       "Built with drag-and-drop interfaces, TMDB and Open Library API integrations and PostgreSQL persistence.",
     ],
+    highlights: [
+      "TMDB and Open Library API integration for movies, TV, books and anime",
+      "Drag-and-drop ranking interfaces for custom list creation",
+      "NextAuth.js authentication with PostgreSQL persistence via Neon",
+      "Shareable ranked lists with public profile pages",
+    ],
     technologies: [
       "Next.js 16",
       "Tailwind CSS 4",
@@ -118,6 +143,13 @@ export const demoProjects = [
       "Processes 200,000+ personal records — texts, emails, articles, ChatGPT exports, photos and DNA data — through TypeScript data pipelines with deduplication and normalization.",
       "LanceDB vector embeddings power semantic search across the full archive. A streaming chat assistant with 30+ tools runs on local Ollama models inside a Tauri desktop wrapper.",
     ],
+    highlights: [
+      "Processes 200,000+ records from texts, emails, articles, photos and DNA data",
+      "TypeScript data pipelines with deduplication and normalization",
+      "LanceDB vector embeddings powering semantic search across the full archive",
+      "Streaming chat assistant with 30+ tools running on local Ollama models",
+      "Tauri desktop wrapper for native app experience",
+    ],
     technologies: [
       "TypeScript",
       "Python",
@@ -126,10 +158,16 @@ export const demoProjects = [
       "Ollama",
       "Playwright",
     ],
+    gallery: [
+      { label: "Data", image: "/images/demos/second-brain-data.png" },
+      { label: "About", image: "/images/demos/second-brain-about.png" },
+      { label: "Todos", image: "/images/demos/second-brain-todos.png" },
+      { label: "Calendar", image: "/images/demos/second-brain-calendar.png" },
+    ],
     screenshots: {
-      desktopLight: "/images/demos/second-brain-desktop-light.png",
+      desktopLight: "/images/demos/second-brain-data.png",
       desktopDark: null,
-      mobileLight: "/images/demos/second-brain-mobile-light.png",
+      mobileLight: null,
       mobileDark: null,
     },
     siteLink: null,
@@ -143,6 +181,12 @@ export const demoProjects = [
     oneLiner: [
       "Grocery management app that reduces food waste using USDA FoodKeeper data and Anthropic API shelf-life estimates.",
       "Users log items, get AI-powered storage tips and track expiration dates with PostgreSQL persistence via Neon.",
+    ],
+    highlights: [
+      "USDA FoodKeeper data for government-sourced shelf-life baselines",
+      "Anthropic API generates custom storage tips and expiration estimates",
+      "PostgreSQL persistence via Neon with Prisma ORM",
+      "Item logging with category-based expiration tracking",
     ],
     technologies: [
       "Next.js",
@@ -169,6 +213,12 @@ export const demoProjects = [
     oneLiner: [
       "An AI-powered study platform for web developers.",
       "Pick a tech stack and skill level to get interactive quiz sessions powered by GPT-4o Mini alongside curated documentation links.",
+    ],
+    highlights: [
+      "GPT-4o Mini powers interactive quiz generation",
+      "Tech stack selection — JavaScript, TypeScript, React, Next.js and more",
+      "Skill level personalization from beginner to advanced",
+      "Curated documentation links alongside each quiz session",
     ],
     technologies: [
       "Next.js 16",

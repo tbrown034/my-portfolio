@@ -10,7 +10,7 @@ const featuredProjects = FEATURED_IDS.map((id) =>
 
 export default function Clips() {
   return (
-    <section>
+    <section id="projects">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* Subsection header */}
         <div className="border-b border-gray-300 dark:border-neutral-700 pb-2 mb-6">

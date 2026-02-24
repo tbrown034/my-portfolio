@@ -195,12 +195,10 @@ export default function ResumePageLayout() {
         }
         
         /* Dark mode override for resume page - always white background with dramatic shadow */
-        @media (prefers-color-scheme: dark) {
-          .resume-page {
-            background: #ffffff;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 15px 30px rgba(0,0,0,0.4), 0 5px 15px rgba(0,0,0,0.3);
-            border: 1px solid #000000;
-          }
+        .dark .resume-page {
+          background: #ffffff;
+          box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 15px 30px rgba(0,0,0,0.4), 0 5px 15px rgba(0,0,0,0.3);
+          border: 1px solid #000000;
         }
         
         /* Content Area - Print-safe margins */
@@ -216,10 +214,8 @@ export default function ResumePageLayout() {
         }
         
         /* Dark mode override - ensure black text on white background */
-        @media (prefers-color-scheme: dark) {
-          .resume-content {
-            color: #111827;
-          }
+        .dark .resume-content {
+          color: #111827;
         }
 
         /* Header - Editorial masthead style */

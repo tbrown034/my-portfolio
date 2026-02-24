@@ -29,7 +29,7 @@ export default function Intro({ showDesktopLayout }) {
           </div>
 
           {/* Column 2: Nutgraph and body */}
-          <div className="flex flex-col justify-between h-full">
+          <div className="flex flex-col gap-4 h-full">
             <p className=" text-lg text-gray-600 dark:text-neutral-200 leading-relaxed">
               My work bridges{" "}
               <Link
@@ -55,8 +55,16 @@ export default function Intro({ showDesktopLayout }) {
               and applications that turn raw data into useful information.
             </p>
 
+            <p className="text-lg text-gray-600 dark:text-neutral-200 leading-relaxed">
+              I covered elections, dark money and criminal justice for newsrooms
+              in Oklahoma and Wyoming — earning Reporter of the Year and Writer
+              of the Year recognition. That instinct for digging through records
+              and holding systems accountable now drives how I approach every
+              application I build.
+            </p>
+
             {/* Let's build something together link - desktop only */}
-            <div className="mt-8 hidden lg:block">
+            <div className="mt-auto hidden lg:block">
               <HeroBuildSomething />
             </div>
           </div>

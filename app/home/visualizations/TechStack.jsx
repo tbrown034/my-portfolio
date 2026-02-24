@@ -87,7 +87,7 @@ export default function TechStack() {
               {techs.map((tech) => (
                 <div
                   key={tech.name}
-                  className="group flex flex-col items-center justify-center p-4 bg-white dark:bg-neutral-800 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-md transition-all duration-200"
+                  className="group flex flex-col items-center justify-center p-4 bg-gray-50 dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 rounded-lg hover:shadow-md transition-all duration-200"
                   title={tech.description}
                 >
                   <tech.Icon className="w-8 h-8 mb-2 text-gray-700 dark:text-gray-300 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors duration-200" />
