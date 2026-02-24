@@ -11,14 +11,16 @@ export const webProjects = [
     technologies: [
       "Next.js",
       "React",
-      "JavaScript",
+      "Tailwind CSS",
       "Google Ads",
+      "Python",
+      "Clerk Auth",
       "Nodemailer",
     ],
     createdDate: "2024",
 
     description:
-      "Rebuilt a defunct dental practice site in Naperville with Next.js, adding a booking form, service information and a blog. Took over and optimized a $2,000/month Google Ads campaign. Built an admin dashboard with real-time ad controls, integrated analytics across GA4, CallRail and Google Business Profile, a Python billing pipeline and AI-powered performance summaries.",
+      "Production dental practice site that increased online bookings by 33%. Manage SEO and a $2,000/month Google Ads campaign. Admin dashboard integrates GA4, CallRail and Google Business Profile with real-time ad controls, a Python billing pipeline and an AI chat interface.",
     githubLink: "https://github.com/tbrown034/kab-dentist-2024",
     siteLink: "https://keithbrowndds.com/",
   },
@@ -38,7 +40,7 @@ export const webProjects = [
     ],
     createdDate: "2024",
     description:
-      "sort(id) is a Letterboxd-style platform where users build movie and TV lists with TMDB data and get AI-powered watch recommendations. Features NextAuth.js for authentication and a PostgreSQL database for persistence.",
+      "Media ranking platform where users create and share ranked lists of movies, TV, books and anime. Built with drag-and-drop interfaces, TMDB API integration, NextAuth.js authentication and PostgreSQL persistence.",
     githubLink: null,
     siteLink: "https://reflectyr.vercel.app/",
   },
@@ -59,7 +61,7 @@ export const webProjects = [
     ],
     createdDate: "2025",
     description:
-      "Developed Food Xpiry to track food freshness — users log groceries, get AI-powered shelf-life estimates and storage tips, and check expiration status.",
+      "Grocery tracker that reduces food waste using USDA FoodKeeper data and Anthropic API shelf-life estimates. Users log items, get storage tips and track expiration dates with PostgreSQL persistence via Neon.",
     githubLink: "https://github.com/tbrown034/my-expiry",
     siteLink: "https://food-xpiry.vercel.app/",
   },
@@ -79,8 +81,8 @@ export const webProjects = [
     ],
     createdDate: "2025",
     description:
-      "Built a personalized study platform for web developers — users select their tech stack and skill level to access interactive lessons, custom quizzes, flashcard decks and curated documentation for JavaScript, TypeScript, Python, React, Next.js and more.",
-    githubLink: "https://github.com/tbrown034/studdy-buddy",
+      "AI study platform for web developers. Users select a tech stack and skill level to get interactive quiz sessions powered by GPT-4o Mini alongside curated documentation links.",
+    githubLink: "https://github.com/tbrown034/study-buddy",
     siteLink: "https://studdy-buddy-rho.vercel.app/",
   },
 ];

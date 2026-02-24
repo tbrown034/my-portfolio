@@ -6,8 +6,8 @@ export const demoProjects = [
     title: "Keith Brown DDS",
     subtitle: "Production Dental Practice Site + Admin Dashboard",
     oneLiner: [
-      "Built and manage a production dental practice website and a protected admin dashboard. The public site drives patient bookings through SEO and a Google Ads campaign.",
-      "The admin side features real-time ad controls, integrated analytics across GA4, CallRail and Google Business Profile, a Python billing pipeline, AI-powered performance summaries and a blog CMS.",
+      "Production dental practice site in Naperville that increased online bookings by 33%. I manage SEO and optimize a $2,000/month Google Ads campaign directly.",
+      "Protected admin dashboard integrates GA4, CallRail and Google Business Profile analytics with real-time ad controls, a Python billing data pipeline, an AI chat interface and a blog CMS.",
     ],
     technologies: [
       "Next.js",
@@ -115,8 +115,8 @@ export const demoProjects = [
     title: "Second Brain",
     subtitle: "Local Knowledge Base with Vector Search",
     oneLiner: [
-      "A local knowledge base built from texts, emails, articles, ChatGPT exports, photos and DNA data.",
-      "TypeScript and Python pipelines handle ingestion, deduplication and vector search via LanceDB and Ollama.",
+      "Processes 200,000+ personal records — texts, emails, articles, ChatGPT exports, photos and DNA data — through TypeScript data pipelines with deduplication and normalization.",
+      "LanceDB vector embeddings power semantic search across the full archive. A streaming chat assistant with 30+ tools runs on local Ollama models inside a Tauri desktop wrapper.",
     ],
     technologies: [
       "TypeScript",
@@ -141,8 +141,8 @@ export const demoProjects = [
     title: "Food Xpiry",
     subtitle: "AI-Powered Grocery Expiration Tracker",
     oneLiner: [
-      "A grocery management app that helps reduce food waste.",
-      "Users log groceries and get AI-powered shelf-life estimates, storage tips and expiration tracking via the Anthropic API.",
+      "Grocery management app that reduces food waste using USDA FoodKeeper data and Anthropic API shelf-life estimates.",
+      "Users log items, get AI-powered storage tips and track expiration dates with PostgreSQL persistence via Neon.",
     ],
     technologies: [
       "Next.js",

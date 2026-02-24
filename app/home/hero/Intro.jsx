@@ -17,7 +17,7 @@ export default function Intro({ showDesktopLayout }) {
             <p className="text-xl text-gray-600 dark:text-neutral-200 leading-relaxed mt-4">
               Now I build{" "}
               <Link
-                href="#coding"
+                href="#projects"
                 className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
               >
                 interactive tools
@@ -40,12 +40,12 @@ export default function Intro({ showDesktopLayout }) {
               </Link>{" "}
               and{" "}
               <Link
-                href="#coding"
+                href="#projects"
                 className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
               >
                 modern web development
               </Link>{" "}
-              – building responsive sites,{" "}
+              — building responsive sites,{" "}
               <Link
                 href="#visualizations"
                 className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
@@ -86,7 +86,7 @@ export default function Intro({ showDesktopLayout }) {
           <p className="text-lg text-gray-600 dark:text-neutral-200 leading-relaxed">
             Now I build{" "}
             <Link
-              href="#coding"
+              href="#projects"
               className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
             >
               interactive tools
@@ -107,12 +107,12 @@ export default function Intro({ showDesktopLayout }) {
             </Link>{" "}
             and{" "}
             <Link
-              href="#coding"
+              href="#projects"
               className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
             >
               modern web development
             </Link>{" "}
-            – building responsive sites,{" "}
+            — building responsive sites,{" "}
             <Link
               href="#visualizations"
               className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
