@@ -140,15 +140,17 @@ export const demoProjects = [
     title: "Second Brain",
     subtitle: "Local Knowledge Base with Vector Search",
     oneLiner: [
-      "Processes 200,000+ personal records — texts, emails, articles, ChatGPT exports, photos and DNA data — through TypeScript data pipelines with deduplication and normalization.",
+      "Processes 200,000+ personal records — texts, emails, articles, ChatGPT exports, photos and notes — through TypeScript data pipelines with deduplication and normalization.",
       "LanceDB vector embeddings power semantic search across the full archive. A streaming chat assistant with 30+ tools runs on local Ollama models inside a Tauri desktop wrapper.",
     ],
     highlights: [
-      "Processes 200,000+ records from texts, emails, articles, photos and DNA data",
+      "Processes 200,000+ records from texts, emails, articles, photos and notes",
       "TypeScript data pipelines with deduplication and normalization",
       "LanceDB vector embeddings powering semantic search across the full archive",
       "Streaming chat assistant with 30+ tools running on local Ollama models",
       "Tauri desktop wrapper for native app experience",
+      "Eager execution optimization pattern for sub-second query response",
+      "Playwright-based web scraping and automated data ingestion",
     ],
     technologies: [
       "TypeScript",
