@@ -9,9 +9,9 @@ export default function Header() {
           </div>
           
           {/* Main title */}
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 dark:text-white">
+          <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 dark:text-white">
             Journalism
-          </h1>
+          </h2>
           
           {/* Subtitle/description */}
           <p className="text-lg text-gray-600 dark:text-neutral-200 max-w-3xl">

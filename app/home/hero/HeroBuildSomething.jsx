@@ -2,7 +2,7 @@ export default function HeroBuildSomething() {
   return (
     <a
       href="#contact"
-      className="flex items-center gap-3 text-gray-900 dark:text-neutral-100 group cursor-pointer"
+      className="flex items-center gap-3 text-gray-900 dark:text-neutral-100 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 rounded-sm"
     >
       <span className="flex items-center gap-3 border-b-2 border-blue-800 dark:border-blue-400 group-hover:border-blue-900 dark:group-hover:border-blue-300 transition-colors duration-200">
         <span className="text-xl font-bold">

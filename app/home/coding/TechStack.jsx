@@ -6,7 +6,6 @@ import {
   SiPostgresql,
   SiTailwindcss,
   SiPython,
-  SiR,
   SiMysql,
 } from "react-icons/si";
 
@@ -43,12 +42,6 @@ export default function TechStack() {
         "Versatile programming language for data analysis, automation, and backend development.",
     },
     {
-      name: "R",
-      Icon: SiR,
-      description:
-        "Statistical computing language for data analysis and visualization.",
-    },
-    {
       name: "Postgres",
       Icon: SiPostgresql,
       description:
@@ -75,7 +68,7 @@ export default function TechStack() {
           <h3 className="text-sm uppercase tracking-wider font-semibold text-gray-600 dark:text-neutral-400 pb-2 mb-4 border-b border-gray-300 dark:border-neutral-700">
             Technology Stack
           </h3>
-          <div className="grid grid-cols-3 md:grid-cols-9 gap-4">
+          <div className="grid grid-cols-4 md:grid-cols-8 gap-4">
             {techs.map((tech) => (
               <div
                 key={tech.name}

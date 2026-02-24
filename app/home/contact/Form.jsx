@@ -259,7 +259,7 @@ export default function Form() {
 
       {/* Error Messages */}
       {status === "error" && (
-        <div className="text-sm text-red-700 dark:text-red-300 bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-200 dark:border-red-800">
+        <div role="alert" className="text-sm text-red-700 dark:text-red-300 bg-red-50 dark:bg-red-900/20 p-4 rounded-xl border border-red-200 dark:border-red-800">
           <p>{errorMessage}</p>
         </div>
       )}

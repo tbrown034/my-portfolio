@@ -7,7 +7,7 @@ import HeroCTA from "./HeroCTA";
 
 export default function Hero() {
   return (
-    <main className="flex flex-col px-6 pb-0 pt-2 sm:px-8 lg:px-12 xl:px-16 ">
+    <section className="flex flex-col px-6 pb-0 pt-2 sm:px-8 lg:px-12 xl:px-16 ">
       {/* Mobile layout (below md breakpoint) */}
       <section className="flex flex-col gap-4 md:gap-5 md:hidden max-w-3xl mx-auto pt-3">
         <HeroHeader />
@@ -68,6 +68,6 @@ export default function Hero() {
           <HeroLinks />
         </div>
       </section>
-    </main>
+    </section>
   );
 }
