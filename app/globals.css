@@ -159,3 +159,99 @@
   border-width: 3px;
 }
 
+/* TAB keycap — mechanical keyboard brand element */
+.tab-key {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 26px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  font-family: system-ui, -apple-system, sans-serif;
+  border-radius: 5px;
+  user-select: none;
+  cursor: pointer;
+  transition:
+    transform 0.1s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.1s cubic-bezier(0.34, 1.56, 0.64, 1),
+    filter 0.1s ease;
+  -webkit-tap-highlight-color: transparent;
+
+  /* Light mode: dark stone keycap */
+  background: linear-gradient(to bottom, #57534e, #44403c);
+  color: #d6d3d1;
+  border: 1px solid #6b6560;
+  box-shadow:
+    0 3px 0 0 #292524,
+    0 5px 8px -1px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 2px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* Concave dish surface */
+.tab-key::before {
+  content: '';
+  position: absolute;
+  inset: 2px 3px;
+  border-radius: 3px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.08) 0%,
+    rgba(0, 0, 0, 0.03) 50%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.tab-key:hover {
+  filter: brightness(1.08);
+  box-shadow:
+    0 3px 0 0 #292524,
+    0 6px 12px -1px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 2px 0 rgba(0, 0, 0, 0.15);
+}
+
+.tab-key:active {
+  transform: translateY(3px);
+  box-shadow:
+    0 0 0 0 #292524,
+    0 1px 2px 0 rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  filter: brightness(0.95);
+}
+
+/* Dark mode: lighter keycap for contrast */
+:where(.dark, .dark *) .tab-key {
+  background: linear-gradient(to bottom, #57534e, #44403c);
+  color: #d6d3d1;
+  border-color: #57534e;
+  box-shadow:
+    0 3px 0 0 #1c1917,
+    0 5px 8px -1px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+    inset 0 -1px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+:where(.dark, .dark *) .tab-key:hover {
+  filter: brightness(1.15);
+  box-shadow:
+    0 3px 0 0 #1c1917,
+    0 6px 12px -1px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+    inset 0 -1px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+:where(.dark, .dark *) .tab-key:active {
+  transform: translateY(3px);
+  box-shadow:
+    0 0 0 0 #1c1917,
+    0 1px 2px 0 rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+  filter: brightness(0.9);
+}
+
