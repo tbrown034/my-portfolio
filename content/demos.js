@@ -1,4 +1,4 @@
-// Demo projects for /demos page - prospective employer showcase
+// Demo projects for /projects page - prospective employer showcase
 
 export const demoProjects = [
   {
@@ -36,6 +36,48 @@ export const demoProjects = [
     siteLink: "https://keithbrowndds.com/",
     githubLink: null,
     arcadeLink: "https://demo.arcade.software/MFfJGhg8szhJEzdXfKAl",
+  },
+  {
+    id: 5,
+    title: "Second Brain",
+    slug: "second-brain",
+    subtitle: "Local Knowledge Base with Vector Search",
+    oneLiner: [
+      "Processes 200,000+ personal records — texts, emails, articles, ChatGPT exports, photos and notes — through TypeScript data pipelines with deduplication and normalization.",
+      "LanceDB vector embeddings power semantic search across the full archive. A streaming chat assistant with 30+ tools runs on local Ollama models inside a Tauri desktop wrapper.",
+    ],
+    highlights: [
+      "Processes 200,000+ records from texts, emails, articles, photos and notes",
+      "TypeScript data pipelines with deduplication and normalization",
+      "LanceDB vector embeddings powering semantic search across the full archive",
+      "Streaming chat assistant with 30+ tools running on local Ollama models",
+      "Tauri desktop wrapper for native app experience",
+      "Eager execution optimization pattern for sub-second query response",
+      "Playwright-based web scraping and automated data ingestion",
+    ],
+    technologies: [
+      "TypeScript",
+      "Python",
+      "PostgreSQL",
+      "LanceDB",
+      "Ollama",
+      "Playwright",
+    ],
+    gallery: [
+      { label: "Data", image: "/images/demos/second-brain-data.png" },
+      { label: "About", image: "/images/demos/second-brain-about.png" },
+      { label: "Todos", image: "/images/demos/second-brain-todos.png" },
+      { label: "Calendar", image: "/images/demos/second-brain-calendar.png" },
+    ],
+    screenshots: {
+      desktopLight: "/images/demos/second-brain-data.png",
+      desktopDark: null,
+      mobileLight: null,
+      mobileDark: null,
+    },
+    siteLink: null,
+    githubLink: null,
+    arcadeLink: null,
   },
   {
     id: 2,
@@ -134,47 +176,6 @@ export const demoProjects = [
     siteLink: "https://reflectyr.vercel.app/",
     githubLink: null,
     arcadeLink: "https://demo.arcade.software/nj2UXJN7mHlsGnbwcO9l",
-  },
-  {
-    id: 5,
-    title: "Second Brain",
-    subtitle: "Local Knowledge Base with Vector Search",
-    oneLiner: [
-      "Processes 200,000+ personal records — texts, emails, articles, ChatGPT exports, photos and notes — through TypeScript data pipelines with deduplication and normalization.",
-      "LanceDB vector embeddings power semantic search across the full archive. A streaming chat assistant with 30+ tools runs on local Ollama models inside a Tauri desktop wrapper.",
-    ],
-    highlights: [
-      "Processes 200,000+ records from texts, emails, articles, photos and notes",
-      "TypeScript data pipelines with deduplication and normalization",
-      "LanceDB vector embeddings powering semantic search across the full archive",
-      "Streaming chat assistant with 30+ tools running on local Ollama models",
-      "Tauri desktop wrapper for native app experience",
-      "Eager execution optimization pattern for sub-second query response",
-      "Playwright-based web scraping and automated data ingestion",
-    ],
-    technologies: [
-      "TypeScript",
-      "Python",
-      "PostgreSQL",
-      "LanceDB",
-      "Ollama",
-      "Playwright",
-    ],
-    gallery: [
-      { label: "Data", image: "/images/demos/second-brain-data.png" },
-      { label: "About", image: "/images/demos/second-brain-about.png" },
-      { label: "Todos", image: "/images/demos/second-brain-todos.png" },
-      { label: "Calendar", image: "/images/demos/second-brain-calendar.png" },
-    ],
-    screenshots: {
-      desktopLight: "/images/demos/second-brain-data.png",
-      desktopDark: null,
-      mobileLight: null,
-      mobileDark: null,
-    },
-    siteLink: null,
-    githubLink: null,
-    arcadeLink: null,
   },
   {
     id: 6,

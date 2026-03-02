@@ -39,7 +39,10 @@ export default function DemoCard({ project, index }) {
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+    <div
+      id={project.slug || undefined}
+      className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center"
+    >
       {/* Screenshot column */}
       <div className={isEven ? "lg:order-1" : "lg:order-2"}>
         {hasScreenshots ? (

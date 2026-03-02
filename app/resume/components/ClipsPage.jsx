@@ -189,7 +189,7 @@ export default function SelectedWorksResponsive({ showGuides = false }) {
             </section>
 
             <div className="text-xs text-gray-500 text-center mt-3 pt-2 border-t border-gray-200">
-              Live demos at trevorthewebdeveloper.com/demos
+              Live demos at trevorthewebdeveloper.com/projects
             </div>
             </div>
           </div>

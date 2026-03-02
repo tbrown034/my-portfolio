@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { demoProjects } from "@content/demos.js";
-import DemoCard from "@/app/demos/components/DemoCard";
+import DemoCard from "@/app/projects/components/DemoCard";
 
 const FEATURED_IDS = [1, 2, 3, 5];
 
@@ -38,7 +38,7 @@ export default function Clips() {
         {/* View all projects CTA */}
         <div className="flex justify-center mt-12">
           <Link
-            href="/demos"
+            href="/projects"
             className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-semibold text-white bg-blue-800 dark:bg-blue-600 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-500 transition-all duration-200"
           >
             View all projects &rarr;
