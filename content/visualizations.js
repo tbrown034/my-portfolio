@@ -24,17 +24,17 @@ export const graphics = [
 
   {
     id: 2,
-    headline: "ICE Detainers Issued in Oklahoma",
-    text: "Immigration and Customs Enforcement data shows that the immigration 'detainers' issued by the agency in Oklahoma increased from 2004 to 2012 before falling and then climbing again in 2016. The number of detainers since then has been on the decline. That trend mirrors the national data.",
+    headline: "Amid COVID-19, Some Hospitals Continue Suing Patients Over Unpaid Bills",
+    text: "Follow-up investigation showing that despite the pandemic, several Oklahoma hospitals continued filing lawsuits against patients over unpaid medical bills. Built an updated Tableau dashboard tracking which hospitals kept suing and at what rates.",
     image: ice,
     publication: "Oklahoma Watch",
-    program: "Datawrapper",
-    date: "March 4, 2022",
+    program: "Tableau",
+    date: "Aug. 4, 2020",
     summary:
-      "Chart showing trends of ICE detainers issued in Oklahoma from 2004, reflecting national trends.",
+      "Updated interactive dashboard showing hospital lawsuit patterns during the pandemic, building on the original 22,250-record investigation.",
     siteLink:
-      "https://oklahomawatch.org/2022/03/04/ice-holds-drop-as-immigrant-communities-law-enforcement-balance-policy-changes/",
-    graphicLink: "https://www.datawrapper.de/_/NDN7G/",
+      "https://oklahomawatch.org/2020/08/04/amid-covid-19-crisis-some-oklahoma-hospitals-continue-suing-patients-over-unpaid-bills/",
+    graphicLink: "https://public.tableau.com/app/profile/oklahoma.watch/viz/HospitalLawsuit2020/Dashboard1",
   },
   {
     id: 3,
@@ -47,7 +47,7 @@ export const graphics = [
     summary:
       "Map visualizing vaccination rates across states, emphasizing Oklahoma's below-average rates.",
     siteLink:
-      "https://oklahomawatch.org/2021/12/20/as-some-oklahoma-churches-push-vaccines-others-sow-misinformation-doubt/?utm_content=bufferff609&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer",
+      "https://oklahomawatch.org/2021/12/20/as-some-oklahoma-churches-push-vaccines-others-sow-misinformation-doubt/",
     graphicLink: [
       "https://www.datawrapper.de/_/J9m2Z/",
       "https://www.datawrapper.de/_/RFBFU/",
@@ -56,36 +56,38 @@ export const graphics = [
   {
     id: 4,
     headline:
-      "How The Proposed Redistricting Map Impacts OKC's Hispanic/Latino Population",
-    text: "In the current congressional map, 153,173 Hispanic or Latino Oklahomans live in Oklahoma's 5th Congressional District, making up 18.6% of the population. But if the GOP's proposed congressional redistricting plan is passed, only 78,218 Hispanic or Latino Oklahomans would remain in the 5th District. ",
+      "Nearly Half of Oklahoma Legislative Races Already Are Decided Without a Vote",
+    text: "Analysis of every legislative race in the 2022 cycle showing that nearly half were decided before voters ever cast a ballot -- uncontested seats where only one candidate filed. Four visualizations built in Flourish and Datawrapper showing how uncontested races predetermine legislative control.",
     image: redistricting,
-    date: "March 4, 2022",
+    date: "April 18, 2022",
     publication: "Oklahoma Watch",
-    program: "Tableau",
+    program: "Flourish",
     summary:
-      "Visual depiction of redistricting impacts on the Hispanic/Latino population in Oklahoma's 5th Congressional District.",
+      "Parliament charts and data tables showing uncontested races across the Oklahoma House and Senate, by party.",
     siteLink:
-      "https://oklahomawatch.org/2021/11/19/redistricting-weighing-the-impact-of-splitting-oklahomas-largest-hispanic-community/",
+      "https://oklahomawatch.org/2022/04/18/nearly-half-of-oklahoma-legislative-races-already-are-decided-without-a-vote/",
     graphicLink: [
-      "https://public.tableau.com/app/profile/oklahoma.watch/viz/BothMapsRedistricting/Dashboard1",
-      "https://public.tableau.com/app/profile/oklahoma.watch/viz/DualMaps_16366620253140/Dashboard1",
+      "https://flo.uri.sh/visualisation/9434901/embed",
+      "https://flo.uri.sh/visualisation/9435055/embed",
+      "https://datawrapper.dwcdn.net/edtag/7/",
+      "https://datawrapper.dwcdn.net/L0qvZ/3/",
     ],
   },
   {
     id: 5,
     headline:
-      "How Often Do Governors Tweet About Vaccination Benefits, Outreach Efforts?",
-    text: "Of the 181 tweets Gov. Kevin Stitt sent since he got his vaccination on March 28, the governor only urged residents to get a vaccine or touted the benefits in two of them. In contrast, governors of the six surrounding states have tweeted about vaccination at a much more frequent pace. ",
-    date: "Jul 30, 2021",
-    program: "Tableau",
+      "Lost in the Pandemic: Oklahoma COVID-19 Digital Memorial",
+    text: "Crowdsourced obituaries and family stories of Oklahomans lost to COVID-19, displayed as browsable, searchable memorial cards. Won Community Champion Award (Honorable Mention) from the Institute for Nonprofit News (2020).",
+    date: "2020",
+    program: "Flourish",
     image: tweets,
     publication: "Oklahoma Watch",
     summary:
-      "Graphic comparison of vaccination advocacy on Twitter between Governor Kevin Stitt and governors of surrounding states.",
+      "Interactive Flourish memorial visualizing individual lives lost to COVID-19 in Oklahoma through crowdsourced stories and obituaries.",
     siteLink:
-      "https://oklahomawatch.org/2021/07/30/as-other-governors-pull-out-vaccine-media-blitz-oklahomas-stitt-largely-silent/",
+      "https://oklahomawatch.org/oklahoma-covid-legacy-project/",
     graphicLink:
-      "https://public.tableau.com/app/profile/oklahoma.watch/viz/VaccinationTweets/Dashboard1",
+      "https://flo.uri.sh/visualisation/5834301/embed",
   },
 
   {

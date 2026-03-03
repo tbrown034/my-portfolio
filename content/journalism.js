@@ -10,8 +10,22 @@ import nukeSite from "@/public/images/nukeSitePic.jpeg";
 import highwayPatrol from "@/public/images/highwayPatrolPic.jpg";
 import fallin from "@/public/images/fallinPic.jpg";
 import henry from "@/public/images/HenryPic.webp";
+import vaccination from "@/public/images/vaccination.png";
 
 export const clips = [
+  {
+    id: 11,
+    headline:
+      "As Some Oklahoma Churches Push Vaccines, Others Sow Misinformation, Doubt",
+    text: "Investigation analyzing the relationship between county-level vaccination rates and church density in Oklahoma. Three data visualizations -- scatter plot with regression line plus two choropleth maps. Won 1st Place Investigative Reporting, Oklahoma SPJ (2022).",
+    oneLiner:
+      "I analyzed county-level vaccination and church density data to investigate the role of religious institutions in vaccine hesitancy.",
+    image: vaccination,
+    publication: "Oklahoma Watch",
+    date: "Dec. 20, 2021",
+    siteLink:
+      "https://oklahomawatch.org/2021/12/20/as-some-oklahoma-churches-push-vaccines-others-sow-misinformation-doubt/",
+  },
   {
     id: 1,
     headline:
