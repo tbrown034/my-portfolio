@@ -21,8 +21,8 @@ export default function SelectedWorksPDFOnly() {
         footer {
           display: none !important;
         }
-        /* Hide everything except the actual clips paper */
-        .resume-container {
+        /* Hide everything except the actual paper */
+        .selected-works-container {
           padding: 0 !important;
           background: white !important;
           min-height: 11in !important;

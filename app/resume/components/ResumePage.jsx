@@ -6,7 +6,7 @@ import { useDocumentScaling } from "@/app/hooks/useDocumentScaling";
 /* Component Library - Editorial Resume Style with Tailwind */
 const Section = ({ title, children }) => (
   <section>
-    <h3 className="text-xs font-extrabold tracking-widest uppercase text-gray-900 border-b border-gray-300 pb-1 mb-2 mt-3 first:mt-0">
+    <h3 className="text-[9px] font-extrabold tracking-widest uppercase text-gray-900 border-b border-gray-300 pb-0.5 mb-1.5 mt-2 first:mt-0">
       {title}
     </h3>
     {children}
@@ -14,24 +14,24 @@ const Section = ({ title, children }) => (
 );
 
 const Job = ({ title, org, period, highlights }) => (
-  <div className="mb-2">
-    <div className="flex justify-between items-start mb-1 gap-4">
+  <div className="mb-1.5">
+    <div className="flex justify-between items-start mb-0.5 gap-4">
       <div>
-        <div className="text-sm font-bold text-gray-900 leading-tight">
+        <div className="text-[11px] font-bold text-gray-900 leading-tight">
           {title}
         </div>
-        <div className="text-xs font-semibold text-gray-800 mt-0.5">{org}</div>
+        <div className="text-[10px] font-semibold text-gray-800 mt-0">{org}</div>
       </div>
-      <div className="text-xs font-medium text-gray-600 whitespace-nowrap text-right">
+      <div className="text-[10px] font-medium text-gray-600 whitespace-nowrap text-right">
         {period}
       </div>
     </div>
     {highlights && highlights.length > 0 && (
-      <ul className="mt-1 pl-0 list-none">
+      <ul className="mt-0.5 pl-0 list-none">
         {highlights.map((highlight, i) => (
           <li
             key={i}
-            className="mb-0.5 pl-3 relative text-xs leading-relaxed text-gray-700 before:content-['•'] before:absolute before:left-0 before:text-gray-600 before:font-bold"
+            className="mb-0 pl-2.5 relative text-[10px] leading-[1.35] text-gray-700 before:content-['•'] before:absolute before:left-0 before:text-gray-600 before:font-bold"
           >
             {highlight}
           </li>
@@ -42,55 +42,58 @@ const Job = ({ title, org, period, highlights }) => (
 );
 
 const Credential = ({ degree, institution, detail, year }) => (
-  <div className="mb-1.5">
-    <div className="text-xs font-bold text-gray-900 leading-tight">
+  <div className="mb-1">
+    <div className="text-[10px] font-bold text-gray-900 leading-tight">
       {degree}
       {year && ` (${year})`}
     </div>
-    <div className="text-xs font-semibold text-gray-700 mt-0.5">
+    <div className="text-[10px] font-semibold text-gray-700 mt-0">
       {institution}
     </div>
     {detail && (
-      <div className="text-[10px] text-gray-600 mt-0.5 italic">{detail}</div>
+      <div className="text-[9px] text-gray-600 mt-0 italic">{detail}</div>
     )}
   </div>
 );
 
-const SkillGroup = ({ category, skills }) => (
-  <div className="mb-1.5">
-    <div className="text-xs font-bold text-gray-900 mb-0.5 border-b border-gray-200 pb-0.5">
-      {category}
-    </div>
-    <div className="text-xs text-gray-700 leading-relaxed">{skills}</div>
-  </div>
-);
-
 const Award = ({ title, org, year, article }) => (
-  <div className="mb-1.5">
-    <div className="text-xs font-bold text-gray-900 leading-tight">
+  <div className="mb-1">
+    <div className="text-[10px] font-bold text-gray-900 leading-tight">
       {title} ({year})
     </div>
-    <div className="text-xs font-medium text-gray-700 mt-0.5">{org}</div>
+    <div className="text-[10px] font-medium text-gray-700 mt-0">{org}</div>
     {article && (
-      <div className="text-[10px] text-gray-700 mt-0.5 italic">"{article}"</div>
+      <div className="text-[9px] text-gray-700 mt-0 italic">"{article}"</div>
     )}
   </div>
 );
 
 const Project = ({ name, year, tech, description }) => (
-  <div className="mb-1.5">
-    <div className="text-xs font-bold text-gray-900 leading-tight">
+  <div className="mb-1">
+    <div className="text-[10px] font-bold text-gray-900 leading-tight">
       {name} ({year})
     </div>
-    <div className="text-[10px] text-gray-600 italic">{tech}</div>
-    <div className="text-xs text-gray-700 leading-relaxed mt-0.5">
+    <div className="text-[9px] text-gray-600 italic">{tech}</div>
+    <div className="text-[10px] text-gray-700 leading-[1.35] mt-0">
       {description}
     </div>
   </div>
 );
 
+const SkillPair = ({ leftLabel, leftSkills, rightLabel, rightSkills }) => (
+  <div className="grid grid-cols-2 gap-3 mb-0.5">
+    <div>
+      <span className="text-[10px] font-bold text-gray-900">{leftLabel}:</span>{" "}
+      <span className="text-[10px] text-gray-700">{leftSkills}</span>
+    </div>
+    <div>
+      <span className="text-[10px] font-bold text-gray-900">{rightLabel}:</span>{" "}
+      <span className="text-[10px] text-gray-700">{rightSkills}</span>
+    </div>
+  </div>
+);
+
 export default function ResumeComponentResponsive({ showGuides = false }) {
-  const pageRef = useRef(null);
   const containerRef = useRef(null);
   const documentRef = useRef(null);
 
@@ -111,10 +114,7 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
       >
         {/* Fixed letter-size resume container - 8.5 x 11 inches */}
         <div
-          ref={(el) => {
-            pageRef.current = el;
-            documentRef.current = el;
-          }}
+          ref={documentRef}
           className="absolute top-0 left-0 bg-white rounded-lg shadow-2xl dark:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.95)] print:shadow-none print:rounded-none origin-top-left"
           style={{
             width: "8.5in",
@@ -125,18 +125,15 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
         >
           {/* Resume content with fixed padding for consistent layout */}
           <div
-            className="p-12 h-full overflow-hidden print:overflow-visible"
-            style={{ padding: "0.75in" }}
+            className="h-full overflow-hidden print:overflow-visible"
+            style={{ padding: "0.5in 0.6in 0.4in 0.6in" }}
           >
             {/* Header - Editorial masthead style */}
-            <header className="text-center mb-3 pb-2 border-b-2 border-gray-900">
+            <header className="text-center mb-2 pb-1.5 border-b-2 border-gray-900">
               <h1 className="text-2xl font-black tracking-wider text-gray-900 mb-1 uppercase">
                 TREVOR BROWN
               </h1>
-              <div className="text-sm font-medium text-gray-700 mb-2 tracking-wide">
-                Full&#8209;Stack Developer & Investigative Data Journalist
-              </div>
-              <div className="flex justify-center items-center gap-4 text-xs text-gray-600 font-normal">
+              <div className="flex justify-center items-center gap-4 text-[10px] text-gray-600 font-normal">
                 <span>630&#8209;301&#8209;0589</span>
                 <a
                   href="mailto:trevorbrown.web@gmail.com"
@@ -152,43 +149,28 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                 >
                   trevorthewebdeveloper.com
                 </a>
-                <a
-                  href="https://www.linkedin.com/in/trevorabrown/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-gray-800 transition-colors"
-                >
-                  linkedin.com/in/trevorabrown
-                </a>
-                <a
-                  href="https://github.com/tbrown034"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-gray-800 transition-colors"
-                >
-                  github.com/tbrown034
-                </a>
               </div>
             </header>
 
             {/* Main content - Fixed 2-column grid */}
-            <div className="grid grid-cols-3 gap-8">
+            <div className="grid grid-cols-3 gap-6">
               {/* Primary column - takes 2 columns */}
               <div className="col-span-2">
-                <div className="mb-2">
+                <div className="mb-1">
                   <Section title="Summary">
-                    <p className="text-xs text-gray-700 leading-relaxed">
-                      Investigative data journalist turned full-stack developer
-                      with 15 years of elections and political reporting
-                      experience. Builds production web applications and data
-                      pipelines in JavaScript, TypeScript and SQL, with deep
-                      domain expertise in voter data, campaign finance and
-                      election systems.
+                    <p className="text-[10px] text-gray-700 leading-[1.4]">
+                      Award-winning investigative journalist with 15 years in
+                      newsrooms covering elections, government and public policy
+                      across four states. Turns public records and complex
+                      datasets into clear, accurate charts, maps and interactive
+                      graphics using Tableau, Datawrapper, Flourish and
+                      Chart.js. Now builds production web applications and data
+                      pipelines in JavaScript, TypeScript and SQL.
                     </p>
                   </Section>
                 </div>
 
-                <Section title="Elections & Data Experience">
+                <Section title="Data Journalism & Visualization">
                   <Job
                     title="Investigative Reporter"
                     org={
@@ -206,11 +188,10 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                     }
                     period="2016 – 2022"
                     highlights={[
-                      "Analyzed 90,000+ voter registration records to identify systemic purge of inactive voters",
-                      "Built Tableau dashboards visualizing state lawmakers' campaign finance disclosures",
-                      "Analyzed 3,600+ bills across two legislative sessions and built Flourish and Datawrapper visualizations of partisan authorship patterns",
-                      "Structured 22,250+ court records into an analyzable dataset exposing hospital litigation patterns",
-                      "Published Democracy Watch newsletter (4,000 subscribers) on elections and democratic institutions",
+                      "Investigated Oklahoma's legislative, executive and judicial branches for independent nonprofit newsroom — beats included elections, dark money, criminal justice, redistricting and public health",
+                      "Built Tableau dashboards, Datawrapper charts and Flourish visualizations for own investigations and for other reporters — work published under Creative Commons and republished by other outlets",
+                      "Published Democracy Watch newsletter (4,000 subscribers), ran newsroom Twitter with live coverage of elections and legislative sessions, appeared on TV, radio and podcasts",
+                      "Investigations included hospital billing practices (22,250 court records), voter registration purges (90,000+ records), partisan legislation (3,600+ bills), campaign finance, redistricting and election misinformation",
                     ]}
                   />
                   <Job
@@ -230,8 +211,8 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                     }
                     period="2011 – 2016"
                     highlights={[
-                      "Analyzed election results, voter turnout and registration trends across three election cycles",
-                      "Covered state legislature and agencies with a focus on budget and fiscal data",
+                      "Covered the governor's office, state legislature and state budget across three election cycles",
+                      "Broke story on Wyoming Highway Patrol using ticket quotas to evaluate troopers — practice rescinded after publication",
                     ]}
                   />
                   <Job
@@ -269,8 +250,9 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                     }
                     period="2007 – 2011"
                     highlights={[
-                      "Sole statehouse correspondent filing coverage for 14 newspapers across Oklahoma",
-                      "Editor-in-Chief of Indiana Daily Student",
+                      "Sole statehouse correspondent filing for 14 newspapers across Oklahoma",
+                      "Daily newspaper reporter at Staunton News Leader covering local government in Virginia",
+                      "Editor-in-Chief of Indiana Daily Student (Indiana University), directing 100+ student journalists",
                     ]}
                   />
                 </Section>
@@ -292,37 +274,34 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                     }
                     period="2023 – Present"
                     highlights={[
-                      "Built public-facing Next.js site with appointment forms, call tracking and SEO \u2014 cut ad costs and increased new patient bookings by more than 33% in 2025",
-                      "Built data pipeline for financial reporting, Google Ads API and AI chat interface via Claude",
+                      "Designed and built production Next.js site from scratch — responsive layout, typography, color system, appointment forms and call tracking",
+                      "Manages $2,000/month Google Ads campaign with API dashboard tracking spend and performance",
+                      "Increased new patient bookings by more than 33%",
+                      "Built data pipeline for financial reporting integrating GA4, CallRail and Google Business Profile",
                     ]}
                   />
                 </Section>
 
+                {/* Technical Skills - 2-column sub-grid at bottom of left column */}
                 <Section title="Technical Skills">
-                  <div className="grid grid-cols-2 gap-x-6 gap-y-1">
-                    <SkillGroup
-                      category="Languages"
-                      skills="JavaScript, TypeScript, SQL, Python"
+                  <div className="space-y-0.5">
+                    <SkillPair
+                      leftLabel="Visualization"
+                      leftSkills="Tableau, Datawrapper, Flourish, Chart.js, D3.js"
+                      rightLabel="Languages"
+                      rightSkills="JavaScript, TypeScript, Python, SQL, HTML, CSS"
                     />
-                    <SkillGroup
-                      category="Data"
-                      skills="PostgreSQL, Excel, Playwright, web scraping, data pipelines"
+                    <SkillPair
+                      leftLabel="Data Analysis"
+                      leftSkills="Spreadsheets, SQL queries, PostgreSQL, public records, FOIA"
+                      rightLabel="Web/Interactive"
+                      rightSkills="React, Next.js, Node.js, Tailwind CSS, responsive design"
                     />
-                    <SkillGroup
-                      category="AI"
-                      skills="OpenAI API, Anthropic API, Claude Code, Ollama"
-                    />
-                    <SkillGroup
-                      category="Web"
-                      skills="Next.js, React, Node.js, REST APIs"
-                    />
-                    <SkillGroup
-                      category="Visualization"
-                      skills="Tableau, Datawrapper, Tailwind, Flourish, Chart.js"
-                    />
-                    <SkillGroup
-                      category="Domain"
-                      skills="Voter files, campaign finance, election results, public records (FOIA)"
+                    <SkillPair
+                      leftLabel="Automation & AI"
+                      leftSkills="Playwright (scraping and data collection), AI agents (Claude Code, Anthropic API)"
+                      rightLabel="AI Tools"
+                      rightSkills="Claude Code, Anthropic API, OpenAI API, Gemini API, Ollama (local models)"
                     />
                   </div>
                 </Section>
@@ -435,30 +414,30 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                   />
                 </Section>
 
-                <Section title="Projects">
+                <Section title="Web Projects">
                   <Project
-                    name="Second Brain"
-                    year="2026"
-                    tech="TypeScript, Vector DB, Playwright, Anthropic API"
-                    description="Personal knowledge base processing 200,000+ records through data pipelines with AI-powered semantic search"
-                  />
-                  <Project
-                    name="AI Model Arena"
-                    year="2025"
-                    tech="TypeScript, Better Auth, Claude/GPT/Gemini/Grok APIs"
-                    description="4-way LLM comparison with OAuth authentication, AI judging system, response streaming and multi-provider API management"
+                    name="Oklahoma COVID-19 Legacy Project"
+                    year="2020"
+                    tech="Flourish, crowdsourced data, Oklahoma Watch"
+                    description="Interactive memorial visualizing individual lives lost to COVID-19 through crowdsourced stories and obituaries"
                   />
                   <Project
                     name="News Pulse"
                     year="2025"
-                    tech="TypeScript, Next.js, PostgreSQL, REST APIs, Better Auth"
-                    description="Open-source intelligence dashboard pulling from Bluesky, Telegram, Mastodon, RSS and API feeds with caching optimizations"
+                    tech="Next.js, React, PostgreSQL, REST APIs"
+                    description="Open-source news intelligence dashboard aggregating RSS, Bluesky, Telegram, Reddit and YouTube with AI summarization"
                   />
                   <Project
-                    name="Food Xpiry"
+                    name="Second Brain"
+                    year="2026"
+                    tech="TypeScript, React, Chart.js, Anthropic API"
+                    description="Personal data platform processing 200,000+ records through TypeScript pipelines with AI chat and semantic search"
+                  />
+                  <Project
+                    name="sort(id)"
                     year="2025"
-                    tech="TypeScript, Next.js, PostgreSQL, OpenAI API"
-                    description="Grocery tracker with database-backed inventory, programmatic search, AI shelf-life estimates and receipt scanning"
+                    tech="Next.js, PostgreSQL, TMDB API, drag-and-drop"
+                    description="Media ranking platform with drag-and-drop interfaces, TMDB integration and NextAuth authentication"
                   />
                 </Section>
               </div>
