@@ -3,7 +3,6 @@ import {
   EmailIcon,
   GitHubIcon,
   LinkedInIcon,
-  // BlueskyIcon,
 } from "@/components/Icons/SocialIcons";
 import { SOCIAL_LINKS, PERSONAL_INFO } from "@/lib/constants";
 
@@ -13,7 +12,7 @@ export default function HeroLinks() {
       {/* Section cards */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         <Link
-          href="#journalism"
+          href="/journalism"
           className="group p-3 bg-gray-50 dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-md transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
         >
           <h3 className="font-semibold text-sm text-gray-900 dark:text-white">
@@ -25,7 +24,7 @@ export default function HeroLinks() {
         </Link>
 
         <Link
-          href="#coding"
+          href="/projects"
           className="group p-3 bg-gray-50 dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-md transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
         >
           <h3 className="font-semibold text-sm text-gray-900 dark:text-white">
@@ -37,7 +36,7 @@ export default function HeroLinks() {
         </Link>
 
         <Link
-          href="#visualizations"
+          href="/journalism#data-viz"
           className="group p-3 bg-gray-50 dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-md transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
         >
           <h3 className="font-semibold text-sm text-gray-900 dark:text-white">
@@ -49,14 +48,14 @@ export default function HeroLinks() {
         </Link>
 
         <Link
-          href="#coding"
+          href="/resume"
           className="group p-3 bg-gray-50 dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 hover:shadow-md transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
         >
           <h3 className="font-semibold text-sm text-gray-900 dark:text-white">
-            Full-Stack Apps
+            Resume
           </h3>
           <p className="text-sm text-gray-600 dark:text-neutral-300 mt-0.5">
-            Deployed, production projects
+            Experience, skills, highlights
           </p>
         </Link>
 
@@ -89,15 +88,6 @@ export default function HeroLinks() {
           <LinkedInIcon className="w-5 h-5" />
           <span className="text-sm font-medium">LinkedIn</span>
         </a>
-        {/* <a
-          href={SOCIAL_LINKS.bluesky}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 px-1 py-0.5 text-gray-600 dark:text-neutral-100 hover:text-blue-600 dark:hover:text-blue-400 hover:underline transition-colors"
-        >
-          <BlueskyIcon className="w-5 h-5" />
-          <span className="text-sm">Bluesky</span>
-        </a> */}
       </div>
     </div>
   );

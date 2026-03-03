@@ -79,7 +79,7 @@ export default function DemoCard({ project, index }) {
         {hasScreenshots ? (
           <div>
             {/* Toolbar: view toggles */}
-            <div className="flex flex-wrap items-center justify-end gap-2 mb-3">
+            <div className="flex flex-wrap items-center justify-center sm:justify-end gap-2 mb-3">
               {/* Gallery view selector */}
               {hasGallery && (
                 <>
@@ -231,6 +231,7 @@ export default function DemoCard({ project, index }) {
                     height={750}
                     sizes="(min-width: 1024px) 50vw, 100vw"
                     quality={85}
+                    priority={index === 0}
                   />
                 </div>
                 {/* Hover overlay hint */}
@@ -281,6 +282,7 @@ export default function DemoCard({ project, index }) {
                     height={750}
                     sizes="(min-width: 1024px) 50vw, 100vw"
                     quality={85}
+                    priority={index === 0}
                   />
                 </div>
               </div>
@@ -308,7 +310,7 @@ export default function DemoCard({ project, index }) {
         <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white leading-tight">
           {project.title}
         </h3>
-        <p className="text-base text-gray-400 dark:text-neutral-500 mt-1 mb-4">
+        <p className="text-base text-gray-500 dark:text-neutral-400 mt-1 mb-4">
           {project.subtitle}
         </p>
 

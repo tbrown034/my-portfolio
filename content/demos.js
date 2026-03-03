@@ -43,41 +43,9 @@ export const demoProjects = [
     arcadeLink: null,
   },
   {
-    id: 8,
-    title: "Caught Up Yet",
-    subtitle: "Spoiler-Free Sports Chat for Delayed Viewers",
-    oneLiner: [
-      "Sports app for fans watching games on delay. Create rooms, invite friends and family and chat about games without scores being revealed.",
-      "Filters alerts by team and sport with Supabase authentication and real-time PostgreSQL persistence. Built because my dad watches Cubs games on delay and we wanted to react together without spoilers.",
-    ],
-    highlights: [
-      "Spoiler-free chat rooms for delayed game viewing",
-      "Team and sport filtering for personalized alerts",
-      "Supabase authentication with real-time PostgreSQL",
-      "Built for a real use case — watching Cubs games on delay with family",
-    ],
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "React",
-      "Tailwind CSS",
-      "Supabase",
-      "PostgreSQL",
-    ],
-    screenshots: {
-      desktopLight: null,
-      desktopDark: null,
-      mobileLight: null,
-      mobileDark: null,
-    },
-    displayUrl: "caught-up-yet.vercel.app",
-    siteLink: "https://caught-up-yet.vercel.app",
-    githubLink: "https://github.com/tbrown034/caught-up-yet",
-    arcadeLink: null,
-  },
-  {
     id: 1,
     title: "Keith Brown DDS",
+    slug: "keith-brown-dds",
     subtitle: "Production Dental Practice Site + Admin Dashboard",
     oneLiner: [
       "Production dental practice site in Naperville that increased online bookings by 33%. I manage SEO and optimize a $2,000/month Google Ads campaign directly.",
@@ -114,6 +82,7 @@ export const demoProjects = [
   {
     id: 2,
     title: "News Pulse",
+    slug: "news-pulse",
     subtitle: "Open-Source News Intelligence Dashboard",
     oneLiner: [
       "An open-source news intelligence dashboard that aggregates verified sources across RSS, Bluesky, Telegram, Reddit and YouTube.",
@@ -139,14 +108,15 @@ export const demoProjects = [
       mobileLight: "/images/demos/news-alert-mobile-light.png",
       mobileDark: "/images/demos/news-alert-mobile-dark.png",
     },
-    displayUrl: "news-alert-eta.vercel.app",
-    siteLink: "https://news-alert-eta.vercel.app",
+    displayUrl: "pulse-osint.vercel.app",
+    siteLink: "https://pulse-osint.vercel.app",
     githubLink: "https://github.com/tbrown034/news-alert",
     arcadeLink: "https://demo.arcade.software/DQJYZcPvDYwwJgG9rnsn",
   },
   {
     id: 3,
     title: "AI Model Arena",
+    slug: "ai-model-arena",
     subtitle: "Side-by-Side AI Model Comparison Tool",
     oneLiner: [
       "A side-by-side AI comparison tool that sends one prompt to Claude, GPT, Gemini and Grok simultaneously.",
@@ -174,12 +144,13 @@ export const demoProjects = [
     },
     displayUrl: "ai-model-arena-umber.vercel.app",
     siteLink: "https://ai-model-arena-umber.vercel.app",
-    githubLink: "https://github.com/tbrown034/ai-model-arena",
+    githubLink: null,
     arcadeLink: "https://demo.arcade.software/s74PPWIPHAz3oqf084ZB",
   },
   {
     id: 4,
     title: "sort(id)",
+    slug: "sort-id",
     subtitle: "Media Ranking and Sharing Platform",
     oneLiner: [
       "A media ranking platform where users create and share ranked lists of movies, TV, books, podcasts and anime.",
@@ -210,8 +181,43 @@ export const demoProjects = [
     arcadeLink: "https://demo.arcade.software/nj2UXJN7mHlsGnbwcO9l",
   },
   {
+    id: 8,
+    title: "Caught Up Yet",
+    slug: "caught-up-yet",
+    subtitle: "Spoiler-Free Sports Chat for Delayed Viewers",
+    oneLiner: [
+      "Sports app for fans watching games on delay. Create rooms, invite friends and family and chat about games without scores being revealed.",
+      "Filters alerts by team and sport with Supabase authentication and real-time PostgreSQL persistence. Built because my dad watches Cubs games on delay and we wanted to react together without spoilers.",
+    ],
+    highlights: [
+      "Spoiler-free chat rooms for delayed game viewing",
+      "Team and sport filtering for personalized alerts",
+      "Supabase authentication with real-time PostgreSQL",
+      "Built for a real use case — watching Cubs games on delay with family",
+    ],
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "React",
+      "Tailwind CSS",
+      "Supabase",
+      "PostgreSQL",
+    ],
+    screenshots: {
+      desktopLight: "/images/demos/caught-up-yet-desktop-light.png",
+      desktopDark: "/images/demos/caught-up-yet-desktop-dark.png",
+      mobileLight: "/images/demos/caught-up-yet-mobile-light.png",
+      mobileDark: "/images/demos/caught-up-yet-mobile-dark.png",
+    },
+    displayUrl: "caught-up-yet.vercel.app",
+    siteLink: "https://caught-up-yet.vercel.app",
+    githubLink: "https://github.com/tbrown034/caught-up-yet",
+    arcadeLink: null,
+  },
+  {
     id: 6,
     title: "Food Xpiry",
+    slug: "food-xpiry",
     subtitle: "AI-Powered Grocery Expiration Tracker",
     oneLiner: [
       "Grocery management app that reduces food waste using USDA FoodKeeper data and Anthropic API shelf-life estimates.",
@@ -244,6 +250,7 @@ export const demoProjects = [
   {
     id: 7,
     title: "StuddyBuddy",
+    slug: "studdy-buddy",
     subtitle: "AI Study Platform for Web Developers",
     oneLiner: [
       "An AI-powered study platform for web developers.",

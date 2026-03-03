@@ -1,7 +1,6 @@
 import Link from "next/link";
 import DemosHeader from "./components/DemosHeader";
 import DemoCard from "./components/DemoCard";
-import VizSection from "./components/VizSection";
 import { demoProjects } from "@content/demos.js";
 
 export const metadata = {
@@ -26,8 +25,26 @@ export default function DemosPage() {
         </div>
       </div>
 
-      {/* Projects - stacked full-width rows */}
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+      {/* Section navigation */}
+      <nav className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 pb-8">
+        <div className="inline-flex flex-wrap gap-1.5">
+          {demoProjects.map((project) => (
+            <a
+              key={project.id}
+              href={`#${project.slug}`}
+              className="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-neutral-800 text-gray-600 dark:text-neutral-300 hover:bg-gray-200 dark:hover:bg-neutral-700 hover:text-gray-900 dark:hover:text-white transition-colors"
+            >
+              {project.title}
+            </a>
+          ))}
+        </div>
+      </nav>
+
+      {/* Web Projects - stacked full-width rows */}
+      <div
+        id="web-projects"
+        className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12"
+      >
         {demoProjects.map((project, index) => (
           <div
             key={project.id}
@@ -42,18 +59,21 @@ export default function DemosPage() {
         ))}
       </div>
 
-      {/* Data Visualizations */}
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-16">
-        <VizSection />
-      </div>
-
       {/* Portfolio Navigation */}
       <div className="border-t border-gray-200 dark:border-slate-800 mt-8">
         <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-12">
           <p className="text-sm uppercase tracking-wider font-semibold text-gray-400 dark:text-neutral-500 mb-6 text-center">
             Explore the full portfolio
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto">
+          <div className="grid grid-cols-3 gap-3 max-w-2xl mx-auto">
+            <Link
+              href="/journalism"
+              className="group px-4 py-3 rounded-lg bg-gray-50 dark:bg-slate-900 border border-gray-100 dark:border-slate-800 hover:border-blue-200 dark:hover:border-blue-800 transition-all duration-200 text-center"
+            >
+              <span className="text-sm font-semibold text-gray-700 dark:text-neutral-200 group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors">
+                Journalism & Data
+              </span>
+            </Link>
             <Link
               href="/resume"
               className="group px-4 py-3 rounded-lg bg-gray-50 dark:bg-slate-900 border border-gray-100 dark:border-slate-800 hover:border-blue-200 dark:hover:border-blue-800 transition-all duration-200 text-center"
@@ -63,27 +83,11 @@ export default function DemosPage() {
               </span>
             </Link>
             <Link
-              href="/#journalism"
+              href="/#contact"
               className="group px-4 py-3 rounded-lg bg-gray-50 dark:bg-slate-900 border border-gray-100 dark:border-slate-800 hover:border-blue-200 dark:hover:border-blue-800 transition-all duration-200 text-center"
             >
               <span className="text-sm font-semibold text-gray-700 dark:text-neutral-200 group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors">
-                Investigations
-              </span>
-            </Link>
-            <Link
-              href="/#coding"
-              className="group px-4 py-3 rounded-lg bg-gray-50 dark:bg-slate-900 border border-gray-100 dark:border-slate-800 hover:border-blue-200 dark:hover:border-blue-800 transition-all duration-200 text-center"
-            >
-              <span className="text-sm font-semibold text-gray-700 dark:text-neutral-200 group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors">
-                Web Development
-              </span>
-            </Link>
-            <Link
-              href="/#visualizations"
-              className="group px-4 py-3 rounded-lg bg-gray-50 dark:bg-slate-900 border border-gray-100 dark:border-slate-800 hover:border-blue-200 dark:hover:border-blue-800 transition-all duration-200 text-center"
-            >
-              <span className="text-sm font-semibold text-gray-700 dark:text-neutral-200 group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors">
-                Data & Viz
+                Contact
               </span>
             </Link>
           </div>

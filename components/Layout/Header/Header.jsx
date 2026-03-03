@@ -3,6 +3,7 @@
 import Link from "next/link.js";
 import ThemeToggle from "./ThemeToggle.jsx";
 import DesktopNav from "./DesktopNav.jsx";
+import MobileNav from "./MobileNav.jsx";
 
 export default function Header() {
   return (
@@ -21,6 +22,7 @@ export default function Header() {
 
       <div className="flex items-center gap-3">
         <ThemeToggle />
+        <MobileNav />
       </div>
     </header>
   );

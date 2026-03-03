@@ -2,8 +2,8 @@
 import { useState } from "react";
 import { awards } from "@content/awards.js";
 
-export default function Awards() {
-  const [showAll, setShowAll] = useState(false);
+export default function Awards({ showAllByDefault = false }) {
+  const [showAll, setShowAll] = useState(showAllByDefault);
   
   // Get unique years and sort them descending
   const years = [...new Set(awards.map(award => award.year))].sort((a, b) => b - a);

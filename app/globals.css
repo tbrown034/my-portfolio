@@ -20,7 +20,6 @@
 
 @theme {
   --font-montserrat: var(--font-montserrat);
-  --font-roboto-slab: var(--font-roboto-slab);
   
   --breakpoint-xs: 375px;
   --breakpoint-mdlg: 896px;

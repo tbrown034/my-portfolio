@@ -233,7 +233,7 @@ export default function Form() {
           required
           value={formData.subject}
           onChange={handleChange}
-          className="w-full px-5 py-4 rounded-xl border-2 border-gray-300 dark:border-white/30 bg-white dark:bg-neutral-900/50 backdrop-blur-sm text-gray-900 dark:text-neutral-100 text-base placeholder:text-gray-400 placeholder:dark:text-slate-500 focus:border-blue-600 dark:focus:border-blue-400 focus:outline-none focus:ring-4 focus:ring-blue-500/20 dark:focus:ring-blue-400/20 focus:bg-white dark:focus:bg-gray-900/70 shadow-md hover:shadow-lg transition-all duration-200"
+          className="w-full px-5 py-4 rounded-xl border-2 border-gray-300 dark:border-neutral-600 bg-white dark:bg-neutral-900/80 backdrop-blur-sm text-gray-900 dark:text-neutral-100 text-base placeholder:text-gray-400 placeholder:dark:text-neutral-500 focus:border-blue-600 dark:focus:border-blue-400 focus:outline-none focus:ring-4 focus:ring-blue-500/20 dark:focus:ring-blue-400/20 focus:bg-white dark:focus:bg-neutral-900 shadow-md hover:shadow-lg transition-all duration-200"
           placeholder="Project collaboration, freelance inquiry, etc."
         />
       </div>

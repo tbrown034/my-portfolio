@@ -113,19 +113,19 @@ export default function ResumePageLayout() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
             <Link
-              href="/#journalism"
+              href="/journalism"
               className="group p-4 border-b-2 border-gray-300 dark:border-neutral-700 hover:border-blue-800 dark:hover:border-blue-400 transition-all duration-200"
             >
               <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors duration-200 mb-1">
-                Investigations
+                Journalism & Data
               </h3>
               <p className="text-sm text-gray-500 dark:text-neutral-400">
-                Public records, data analysis
+                Investigations, visualizations, public records
               </p>
             </Link>
 
             <Link
-              href="/#coding"
+              href="/projects"
               className="group p-4 border-b-2 border-gray-300 dark:border-neutral-700 hover:border-blue-800 dark:hover:border-blue-400 transition-all duration-200"
             >
               <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors duration-200 mb-1">
@@ -137,14 +137,14 @@ export default function ResumePageLayout() {
             </Link>
 
             <Link
-              href="/#visualizations"
+              href="/#contact"
               className="group p-4 border-b-2 border-gray-300 dark:border-neutral-700 hover:border-blue-800 dark:hover:border-blue-400 transition-all duration-200"
             >
               <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors duration-200 mb-1">
-                Data
+                Contact
               </h3>
               <p className="text-sm text-gray-500 dark:text-neutral-400">
-                Analysis, visualization, open records
+                Get in touch
               </p>
             </Link>
           </div>

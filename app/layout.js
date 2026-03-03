@@ -2,21 +2,14 @@ import "./globals.css";
 import Footer from "@/components/Layout/Footer/Footer";
 import Header from "@/components/Layout/Header/Header";
 import { DarkModeProvider } from "@/components/providers/DarkModeContext";
-import { Roboto_Slab, Montserrat } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-
-const roboto_slab = Roboto_Slab({
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-roboto-slab",
-});
 
 const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700", "800", "900"],
   variable: "--font-montserrat",
 });
 
@@ -55,7 +48,7 @@ export default function RootLayout({ children }) {
   return (
     <DarkModeProvider>
         <html
-          className={`scroll-smooth ${roboto_slab.variable} ${montserrat.variable}`}
+          className={`scroll-smooth ${montserrat.variable}`}
           lang="en"
         >
           <body>
