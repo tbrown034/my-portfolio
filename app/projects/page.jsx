@@ -1,6 +1,7 @@
 import Link from "next/link";
 import DemosHeader from "./components/DemosHeader";
 import DemoCard from "./components/DemoCard";
+import VizSection from "./components/VizSection";
 import { demoProjects } from "@content/demos.js";
 
 export const metadata = {
@@ -39,6 +40,11 @@ export default function DemosPage() {
             <DemoCard project={project} index={index} />
           </div>
         ))}
+      </div>
+
+      {/* Data Visualizations */}
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-16">
+        <VizSection />
       </div>
 
       {/* Portfolio Navigation */}
