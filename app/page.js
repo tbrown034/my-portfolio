@@ -1,7 +1,6 @@
 import Hero from "./home/hero/Hero.jsx";
-import Code from "./home/coding/Coding.jsx";
-import Visualizations from "./home/visualizations/Visualizations.jsx";
-import Journalism from "./home/journalism/Journalism.jsx";
+import ProjectsTeaser from "./home/sections/ProjectsTeaser.jsx";
+import JournalismTeaser from "./home/sections/JournalismTeaser.jsx";
 import Contact from "./home/contact/Contact.jsx";
 
 export default function Page() {
@@ -11,15 +10,12 @@ export default function Page() {
         <Hero />
       </div>
       <div className="bg-slate-200 dark:bg-black py-12">
-        <Code />
+        <ProjectsTeaser />
       </div>
       <div className="bg-slate-100 dark:bg-neutral-900 py-12">
-        <Visualizations />
+        <JournalismTeaser />
       </div>
       <div className="bg-slate-200 dark:bg-black py-12">
-        <Journalism />
-      </div>
-      <div className="bg-slate-100 dark:bg-neutral-900 py-12">
         <Contact />
       </div>
     </main>

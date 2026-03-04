@@ -100,7 +100,7 @@ async function main() {
     // Generate Resume PDF (single page)
     await generatePDF(
       page,
-      `${BASE_URL}/resume/pdf-only`,
+      `${BASE_URL}/about/pdf-only`,
       path.join(PDF_OUTPUT_DIR, 'Trevor_Brown_Resume.pdf'),
       {
         format: 'Letter', // 8.5 x 11 inches
@@ -111,7 +111,7 @@ async function main() {
     // Generate Selected Works PDF (can be multiple pages)
     await generatePDF(
       page,
-      `${BASE_URL}/resume/selected-works-pdf-only`,
+      `${BASE_URL}/about/selected-works-pdf-only`,
       path.join(PDF_OUTPUT_DIR, 'Trevor_Brown_Selected_Works.pdf'),
       {
         format: 'Letter',

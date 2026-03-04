@@ -8,10 +8,6 @@ export default function HeroHeader() {
       <p className="text-xl sm:text-2xl font-light text-blue-800 dark:text-blue-400 leading-relaxed">
         Investigative journalist + developer + data visualizer
       </p>
-
-      <p className="text-xs font-mono text-gray-500 dark:text-gray-300 tracking-wide mt-1">
-        Building and delivering whether it's from the newsroom or terminal
-      </p>
     </header>
   );
 }

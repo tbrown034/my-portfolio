@@ -1,7 +1,9 @@
 import VizCard from "./VizCard";
-import { graphics } from "@content/visualizations.js";
+import { graphics as allGraphics } from "@content/visualizations.js";
 
-export default function VizSection() {
+export default function VizSection({ graphics }) {
+  const items = graphics || allGraphics;
+
   return (
     <section>
       {/* Section header — matches DemosHeader pattern */}
@@ -24,11 +26,11 @@ export default function VizSection() {
       </div>
 
       {/* Stacked viz cards with border separators */}
-      {graphics.map((item, index) => (
+      {items.map((item, index) => (
         <div
           key={item.id}
           className={`py-12 lg:py-16 ${
-            index < graphics.length - 1
+            index < items.length - 1
               ? "border-b border-gray-200 dark:border-slate-800"
               : ""
           }`}

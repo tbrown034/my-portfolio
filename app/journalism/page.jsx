@@ -263,15 +263,15 @@ export default function JournalismPage() {
               </span>
             </Link>
             <Link
-              href="/resume"
+              href="/about"
               className="group px-4 py-3 rounded-lg bg-gray-50 dark:bg-slate-900 border border-gray-100 dark:border-slate-800 hover:border-blue-200 dark:hover:border-blue-800 transition-all duration-200 text-center"
             >
               <span className="text-sm font-semibold text-gray-700 dark:text-neutral-200 group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors">
-                Resume
+                About
               </span>
             </Link>
             <Link
-              href="/#contact"
+              href="/about#contact"
               className="group px-4 py-3 rounded-lg bg-gray-50 dark:bg-slate-900 border border-gray-100 dark:border-slate-800 hover:border-blue-200 dark:hover:border-blue-800 transition-all duration-200 text-center"
             >
               <span className="text-sm font-semibold text-gray-700 dark:text-neutral-200 group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors">
@@ -299,7 +299,7 @@ export default function JournalismPage() {
               &larr; Homepage
             </Link>
             <Link
-              href="/#contact"
+              href="/about#contact"
               className="px-4 py-2 text-xs font-medium text-blue-700 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-300 transition-colors"
             >
               Get in touch &rarr;

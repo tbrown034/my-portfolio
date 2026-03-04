@@ -3,7 +3,13 @@ import DemosHeader from "./components/DemosHeader";
 import DemoCard from "./components/DemoCard";
 import VizSection from "./components/VizSection";
 import { demoProjects } from "@content/demos.js";
-import { graphics } from "@content/visualizations.js";
+import { graphics as allGraphics } from "@content/visualizations.js";
+
+// Cherry-picked data viz: COVID Memorial (5), Churches & Vaccines (3), Hospital Lawsuits (2)
+const CHERRY_PICKED_VIZ_IDS = [5, 3, 2];
+const graphics = CHERRY_PICKED_VIZ_IDS.map((id) =>
+  allGraphics.find((g) => g.id === id)
+).filter(Boolean);
 
 export const metadata = {
   title: "Projects - Trevor Brown",
@@ -92,7 +98,7 @@ export default function DemosPage() {
         id="data-viz"
         className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-16"
       >
-        <VizSection />
+        <VizSection graphics={graphics} />
       </div>
 
       {/* Portfolio Navigation */}
@@ -111,15 +117,15 @@ export default function DemosPage() {
               </span>
             </Link>
             <Link
-              href="/resume"
+              href="/about"
               className="group px-4 py-3 rounded-lg bg-gray-50 dark:bg-slate-900 border border-gray-100 dark:border-slate-800 hover:border-blue-200 dark:hover:border-blue-800 transition-all duration-200 text-center"
             >
               <span className="text-sm font-semibold text-gray-700 dark:text-neutral-200 group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors">
-                Resume
+                About
               </span>
             </Link>
             <Link
-              href="/#contact"
+              href="/about#contact"
               className="group px-4 py-3 rounded-lg bg-gray-50 dark:bg-slate-900 border border-gray-100 dark:border-slate-800 hover:border-blue-200 dark:hover:border-blue-800 transition-all duration-200 text-center"
             >
               <span className="text-sm font-semibold text-gray-700 dark:text-neutral-200 group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors">
@@ -147,7 +153,7 @@ export default function DemosPage() {
               &larr; Homepage
             </Link>
             <Link
-              href="/#contact"
+              href="/about#contact"
               className="px-4 py-2 text-xs font-medium text-blue-700 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-300 transition-colors"
             >
               Get in touch &rarr;

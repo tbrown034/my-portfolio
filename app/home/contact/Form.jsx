@@ -124,10 +124,10 @@ export default function Form() {
         {/* Resume button - moved above header */}
         <div className="mb-6 flex gap-4">
           <a
-            href="/resume"
+            href="/about"
             className="px-6 py-2.5 font-semibold text-center text-white bg-blue-800 dark:bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 dark:hover:bg-blue-500 hover:shadow-lg hover:-translate-y-1 active:bg-blue-900 dark:active:bg-blue-700 active:shadow-sm active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 inline-block"
           >
-            Resume + Highlights
+            About + Resume
           </a>
           <a
             href="#top"
