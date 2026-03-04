@@ -38,7 +38,7 @@ export default function DemosPage() {
       <section className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 pb-8">
         <div className="columns-1 md:columns-2 gap-x-10 text-gray-600 dark:text-neutral-200 leading-relaxed [&>p]:mb-4 [&>p]:break-inside-avoid">
           <p>
-            The same instincts that drove investigative reporting — digging
+            The same instincts that drove my investigative reporting — digging
             through complexity, finding structure in chaos, telling a clear
             story — now shape how I architect applications. After completing{" "}
             <a
@@ -61,7 +61,7 @@ export default function DemosPage() {
             >
               dental practice site
             </a>{" "}
-            that increased bookings by 33% — to open-source intelligence tools,
+            that increased bookings by more than 33% — to open-source intelligence tools,
             AI model comparisons and a personal data platform processing
             200,000-plus records.
           </p>

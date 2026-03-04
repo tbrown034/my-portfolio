@@ -4,7 +4,7 @@ export default function Intro() {
       {/* Subsection header */}
       <div className="border-b border-gray-200 dark:border-gray-700 pb-2 mb-6">
         <h2 className="text-sm uppercase tracking-wider font-semibold text-gray-600 dark:text-neutral-400">
-          About Working Together
+          Let's Work Together
         </h2>
       </div>
 

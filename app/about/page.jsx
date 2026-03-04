@@ -86,8 +86,8 @@ export default function AboutPage() {
               </p>
 
               <p>
-                The transition wasn't a pivot away from journalism — it was a
-                pivot deeper into the tools. I'd been building Tableau
+                The transition wasn't a departure from journalism — it was a
+                move deeper into the tools. I'd been building Tableau
                 dashboards and Datawrapper charts for years; learning React and
                 TypeScript let me build the whole product, not just the graphic.
               </p>
@@ -121,10 +121,10 @@ export default function AboutPage() {
             <div className="hidden lg:block w-64 xl:w-72 shrink-0">
               <div className="relative aspect-[4/5] rounded-lg overflow-hidden ring-1 ring-gray-200 dark:ring-neutral-700">
                 <Image
-                  src="/images/trevor-puppy-selfie.jpeg"
+                  src="/images/trevor-puppy-car.jpeg"
                   alt="Trevor and his dog"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                   sizes="288px"
                 />
               </div>
@@ -179,7 +179,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
           <div className="mb-8">
             <div className="text-sm font-bold uppercase tracking-[0.15em] text-blue-800 dark:text-blue-400 mb-2">
-              Let's Build Something Together
+              Let's Work Together
             </div>
             <h2 className="text-2xl sm:text-3xl font-black font-montserrat text-gray-900 dark:text-white mb-2">
               Contact
@@ -195,17 +195,21 @@ export default function AboutPage() {
               <Form />
             </div>
             {/* Sidebar — photo + links */}
-            <div className="w-full lg:w-80 xl:w-96 shrink-0 flex flex-col gap-8">
-              <div className="relative w-40 h-40 sm:w-48 sm:h-48 mx-auto lg:mx-0 rounded-full overflow-hidden ring-2 ring-gray-200 dark:ring-neutral-700">
-                <Image
-                  src="/images/trevor-puppy-selfie.jpeg"
-                  alt="Trevor and his dog"
-                  fill
-                  className="object-cover"
-                  sizes="192px"
-                />
+            <div className="w-full lg:w-80 xl:w-96 shrink-0">
+              <div className="flex flex-row items-center gap-6 lg:flex-col lg:items-start lg:gap-8 p-6 lg:p-0 rounded-lg border border-gray-200 dark:border-neutral-700 lg:border-0 bg-gray-50 dark:bg-neutral-900 lg:bg-transparent dark:lg:bg-transparent">
+                <div className="relative w-24 h-24 sm:w-32 sm:h-32 lg:w-48 lg:h-48 shrink-0 rounded-full overflow-hidden ring-2 ring-gray-200 dark:ring-neutral-700">
+                  <Image
+                    src="/images/trevor-puppy-selfie.jpeg"
+                    alt="Trevor and his dog"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 128px, 192px"
+                  />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <Links />
+                </div>
               </div>
-              <Links />
             </div>
           </div>
         </div>

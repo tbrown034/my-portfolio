@@ -70,16 +70,23 @@ export default function MobileNav() {
           ref={menuRef}
           className="absolute top-full right-0 mt-2 w-48 bg-white dark:bg-neutral-900 border border-gray-200 dark:border-neutral-700 rounded-lg shadow-lg z-[70] py-2"
         >
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className="block px-4 py-2.5 text-sm font-medium text-gray-700 dark:text-neutral-200 hover:text-blue-800 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-neutral-800 transition-colors"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {NAV_LINKS.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className={`block px-4 py-2.5 text-sm font-medium transition-colors ${
+                  isActive
+                    ? "bg-gray-100 text-gray-900 dark:bg-neutral-800 dark:text-white"
+                    : "text-gray-700 dark:text-neutral-200 hover:text-blue-800 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-neutral-800"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
       )}
     </div>
