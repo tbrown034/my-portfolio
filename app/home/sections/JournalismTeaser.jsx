@@ -16,8 +16,8 @@ const topAwards = awards
 // Featured articles (first 3)
 const featuredClips = [...clips].sort((a, b) => a.id - b.id).slice(0, 3);
 
-// Featured viz (first 2)
-const featuredViz = graphics.slice(0, 2);
+// Featured viz (first 3)
+const featuredViz = graphics.slice(0, 3);
 
 export default function JournalismTeaser() {
   return (
@@ -31,6 +31,11 @@ export default function JournalismTeaser() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-montserrat text-gray-900 dark:text-white mb-2">
             Data Journalism
           </h2>
+          <p className="text-lg text-gray-600 dark:text-neutral-300 max-w-3xl mt-3">
+            15-plus years of investigative reporting across Oklahoma and Wyoming
+            — from statehouse coverage to data-driven investigations that
+            changed state policy.
+          </p>
           <div className="space-y-1 mt-4">
             <div className="border-t-2 border-gray-900 dark:border-white"></div>
             <div className="border-t border-gray-900 dark:border-white"></div>
@@ -108,7 +113,7 @@ export default function JournalismTeaser() {
           <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-neutral-500 mb-3">
             Data Visualizations
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {featuredViz.map((item) => (
               <Link
                 key={item.id}
@@ -153,7 +158,7 @@ export default function JournalismTeaser() {
             href="/journalism"
             className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-semibold text-white bg-blue-800 dark:bg-blue-600 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-500 transition-all duration-200"
           >
-            See all investigations and visualizations &rarr;
+            View all clips and visualizations &rarr;
           </Link>
         </div>
       </div>

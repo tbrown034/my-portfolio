@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { demoProjects } from "@content/demos.js";
 
-const FEATURED_IDS = [1, 2, 5, 3, 8];
+const FEATURED_IDS = [1, 2, 5, 3, 8, 4];
 const featuredProjects = FEATURED_IDS.map((id) =>
   demoProjects.find((p) => p.id === id)
 ).filter(Boolean);
@@ -19,6 +19,9 @@ export default function ProjectsTeaser() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-montserrat text-gray-900 dark:text-white mb-2">
             Web Projects
           </h2>
+          <p className="text-lg text-gray-600 dark:text-neutral-300 max-w-3xl mt-3">
+            After 15-plus years in journalism, I bring an investigative approach to web development — the same instinct for digging through records and making sense of complexity now drives how I build applications.
+          </p>
           <div className="space-y-1 mt-4">
             <div className="border-t-2 border-gray-900 dark:border-white"></div>
             <div className="border-t border-gray-900 dark:border-white"></div>
@@ -89,7 +92,7 @@ export default function ProjectsTeaser() {
             href="/projects"
             className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-semibold text-white bg-blue-800 dark:bg-blue-600 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-500 transition-all duration-200"
           >
-            See all projects &rarr;
+            View all projects &rarr;
           </Link>
         </div>
       </div>
