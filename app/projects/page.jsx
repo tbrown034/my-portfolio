@@ -1,7 +1,9 @@
 import Link from "next/link";
 import DemosHeader from "./components/DemosHeader";
 import DemoCard from "./components/DemoCard";
+import VizSection from "./components/VizSection";
 import { demoProjects } from "@content/demos.js";
+import { graphics } from "@content/visualizations.js";
 
 export const metadata = {
   title: "Projects - Trevor Brown",
@@ -25,18 +27,44 @@ export default function DemosPage() {
         </div>
       </div>
 
-      {/* Section navigation */}
+      {/* Section navigation — full table of contents */}
       <nav className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 pb-8">
-        <div className="inline-flex flex-wrap gap-1.5">
-          {demoProjects.map((project) => (
-            <a
-              key={project.id}
-              href={`#${project.slug}`}
-              className="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-neutral-800 text-gray-600 dark:text-neutral-300 hover:bg-gray-200 dark:hover:bg-neutral-700 hover:text-gray-900 dark:hover:text-white transition-colors"
-            >
-              {project.title}
-            </a>
-          ))}
+        <div className="space-y-3">
+          {/* Web Projects */}
+          <div>
+            <span className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-neutral-500 mr-3">
+              Web Projects
+            </span>
+            <div className="inline-flex flex-wrap gap-1.5 mt-1">
+              {demoProjects.map((project) => (
+                <a
+                  key={project.id}
+                  href={`#${project.slug}`}
+                  className="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-neutral-800 text-gray-600 dark:text-neutral-300 hover:bg-gray-200 dark:hover:bg-neutral-700 hover:text-gray-900 dark:hover:text-white transition-colors"
+                >
+                  {project.title}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Data Visualizations */}
+          <div>
+            <span className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-neutral-500 mr-3">
+              Data Viz
+            </span>
+            <div className="inline-flex flex-wrap gap-1.5 mt-1">
+              {graphics.map((item) => (
+                <a
+                  key={item.id}
+                  href={`#${item.slug}`}
+                  className="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-neutral-800 text-gray-600 dark:text-neutral-300 hover:bg-gray-200 dark:hover:bg-neutral-700 hover:text-gray-900 dark:hover:text-white transition-colors"
+                >
+                  {item.navLabel}
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
       </nav>
 
@@ -57,6 +85,14 @@ export default function DemosPage() {
             <DemoCard project={project} index={index} />
           </div>
         ))}
+      </div>
+
+      {/* Data Visualizations */}
+      <div
+        id="data-viz"
+        className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-16"
+      >
+        <VizSection />
       </div>
 
       {/* Portfolio Navigation */}
