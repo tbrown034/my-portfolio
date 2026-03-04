@@ -17,6 +17,20 @@ import {
   ChevronRightIcon,
 } from "@heroicons/react/24/outline";
 
+function ScreenshotWrapper({ href, children }) {
+  if (!href) return children;
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block cursor-pointer group/screenshot"
+    >
+      {children}
+    </a>
+  );
+}
+
 export default function DemoCard({ project, index }) {
   const [darkMode, setDarkMode] = useState(false);
   const [mobileView, setMobileView] = useState(false);
@@ -268,24 +282,26 @@ export default function DemoCard({ project, index }) {
                 </div>
               </div>
             ) : (
-              <div className="relative rounded-2xl bg-gradient-to-br from-slate-100 via-slate-50 to-white dark:from-neutral-900 dark:via-neutral-800/80 dark:to-neutral-900 p-5 sm:p-6 ring-1 ring-black/[0.04] dark:ring-white/[0.06]">
-                <div
-                  className={`rounded-lg overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.2),0_0_0_1px_rgba(0,0,0,0.05)] dark:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.6),0_0_0_1px_rgba(255,255,255,0.05)] ${
-                    mobileView ? "max-w-[220px] mx-auto" : ""
-                  }`}
-                >
-                  <Image
-                    src={getScreenshot()}
-                    alt={`${project.title} ${mobileView ? "mobile" : "desktop"} screenshot`}
-                    className="block w-full h-auto"
-                    width={1200}
-                    height={750}
-                    sizes="(min-width: 1024px) 50vw, 100vw"
-                    quality={85}
-                    priority={index === 0}
-                  />
+              <ScreenshotWrapper href={project.siteLink}>
+                <div className="relative rounded-2xl bg-gradient-to-br from-slate-100 via-slate-50 to-white dark:from-neutral-900 dark:via-neutral-800/80 dark:to-neutral-900 p-5 sm:p-6 ring-1 ring-black/[0.04] dark:ring-white/[0.06]">
+                  <div
+                    className={`rounded-lg overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.2),0_0_0_1px_rgba(0,0,0,0.05)] dark:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.6),0_0_0_1px_rgba(255,255,255,0.05)] ${
+                      mobileView ? "max-w-[220px] mx-auto" : ""
+                    }`}
+                  >
+                    <Image
+                      src={getScreenshot()}
+                      alt={`${project.title} ${mobileView ? "mobile" : "desktop"} screenshot`}
+                      className="block w-full h-auto"
+                      width={1200}
+                      height={750}
+                      sizes="(min-width: 1024px) 50vw, 100vw"
+                      quality={85}
+                      priority={index === 0}
+                    />
+                  </div>
                 </div>
-              </div>
+              </ScreenshotWrapper>
             )}
           </div>
         ) : (
