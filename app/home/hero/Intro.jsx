@@ -19,20 +19,27 @@ export default function Intro() {
               href="/projects"
               className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
             >
-              interactive tools
+              production web applications
             </Link>{" "}
-            that transform complex data into clear insights. I turn government
-            databases, public records and raw information into stories people
-            can actually understand and use.
+            that turn complex data into clear, usable tools — from client
+            dashboards and news aggregators to a personal data platform
+            processing 200,000-plus records.
           </p>
 
           <p className="text-lg text-gray-600 dark:text-neutral-200 leading-relaxed">
-            My work bridges{" "}
+            My work sits at the intersection of{" "}
             <Link
               href="/journalism"
               className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
             >
               investigative reporting
+            </Link>
+            ,{" "}
+            <Link
+              href="/journalism#data-viz"
+              className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
+            >
+              data visualization
             </Link>{" "}
             and{" "}
             <Link
@@ -40,15 +47,8 @@ export default function Intro() {
               className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
             >
               modern web development
-            </Link>{" "}
-            — building responsive sites,{" "}
-            <Link
-              href="/journalism#data-viz"
-              className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
-            >
-              data visualizations
-            </Link>{" "}
-            and applications that turn raw data into understanding.
+            </Link>
+            . The reporting trained the instincts; the code gives them reach.
           </p>
         </div>
       </div>

@@ -7,6 +7,7 @@ import ResumePage from "./components/ResumePage.jsx";
 
 import Form from "@/app/home/contact/Form";
 import Links from "@/app/home/contact/Links";
+import SectionNav from "@/components/SectionNav";
 
 export default function AboutPage() {
   const [activeSection, setActiveSection] = useState("narrative");
@@ -48,7 +49,7 @@ export default function AboutPage() {
                 The Intersection
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black font-montserrat text-gray-900 dark:text-white mb-2">
-                About Me
+                About Me & Resume
               </h1>
             </div>
             <Link
@@ -64,21 +65,7 @@ export default function AboutPage() {
           </p>
 
           {/* Navigation tabs */}
-          <div className="flex gap-8 border-b-2 border-gray-900 dark:border-white pt-4">
-            {navTabs.map((tab) => (
-              <a
-                key={tab.id}
-                href={`#${tab.id}`}
-                className={`pb-2 text-sm font-medium -mb-0.5 transition-colors duration-200 ${
-                  activeSection === tab.id
-                    ? "text-gray-900 dark:text-white border-b-2 border-gray-900 dark:border-white"
-                    : "text-gray-500 dark:text-neutral-400 border-b-2 border-transparent hover:text-gray-900 dark:hover:text-white hover:border-gray-900 dark:hover:border-white"
-                }`}
-              >
-                {tab.label}
-              </a>
-            ))}
-          </div>
+          <SectionNav tabs={navTabs} activeSection={activeSection} />
         </div>
       </div>
 
@@ -89,84 +76,56 @@ export default function AboutPage() {
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 py-12">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
-            <div className="max-w-4xl flex-1 space-y-4 text-gray-600 dark:text-neutral-200 leading-relaxed">
+            <div className="max-w-4xl flex-1 columns-1 md:columns-2 gap-x-10 text-gray-600 dark:text-neutral-200 leading-relaxed [&>p]:mb-4 [&>p]:break-inside-avoid">
               <p>
-                My journalism career began at{" "}
+                I spent 15 years as an investigative reporter — covering
+                statehouses, analyzing public records and building data
+                visualizations at newsrooms in Indiana, Virginia, Oklahoma and
+                Wyoming. I left journalism voluntarily in 2022 to pursue web
+                development full time.
+              </p>
+
+              <p>
+                The transition wasn't a pivot away from journalism — it was a
+                pivot deeper into the tools. I'd been building Tableau
+                dashboards and Datawrapper charts for years; learning React and
+                TypeScript let me build the whole product, not just the graphic.
+              </p>
+
+              <p>
+                I'm looking for roles where journalism, data and technology
+                overlap — news applications, election tools, AI-assisted
+                reporting platforms, civic tech or any product that helps people
+                understand complex information. I'm also open to general
+                frontend and fullstack work, especially at mission-driven
+                companies.
+              </p>
+
+              <p>
+                Outside of work, I follow AI policy closely. I live in
+                Bloomington, Indiana, with my dog. I'm a lifelong Cubs fan, a
+                distance runner and an IU alum who still reads the{" "}
                 <a
                   href="https://www.idsnews.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
                 >
-                  Indiana University
+                  Indiana Daily Student
                 </a>
-                , where I was editor-in-chief of The Indiana Daily Student and
-                graduated with bachelor's degrees in political science and
-                journalism. I then spent 15-plus years reporting in several states,
-                most recently as the statehouse reporter for the{" "}
-                <a
-                  href="https://www.wyomingnews.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
-                >
-                  Wyoming Tribune Eagle
-                </a>{" "}
-                and as an investigative reporter with{" "}
-                <a
-                  href="https://oklahomawatch.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
-                >
-                  Oklahoma Watch
-                </a>
-                , a nonprofit newsroom based out of Oklahoma City.
-              </p>
-
-              <p>
-                My reporting has led to policy changes, legislative reforms and
-                increased government transparency. From uncovering gaps in
-                racial profiling enforcement to investigating hospital billing
-                practices, I've
-                specialized in stories that serve the public interest and hold
-                institutions accountable.
-              </p>
-
-              <p>
-                I've always been a data-driven reporter — from learning Excel
-                to building visualizations in Datawrapper, Tableau and Flourish.
-                Visual storytelling has been a constant thread in my journalism career.
-                Now I use tools, including JavaScript and Python libraries, to
-                transform datasets into stories that reveal patterns, trends and
-                insights.
-              </p>
-
-              <p>
-                Looking to expand beyond reporting, I graduated from{" "}
-                <a
-                  href="https://bootcamp.outreach.ou.edu/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
-                >
-                  OU Outreach's Fullstack Academy Web Development Bootcamp
-                </a>
-                , a 260-hour program that honed my skills in modern, full-stack
-                web technologies. Now I work at the intersection of journalism,
-                technology, politics and AI.
+                .
               </p>
             </div>
 
-            {/* Photo */}
-            <div className="w-48 sm:w-56 lg:w-72 shrink-0">
-              <div className="relative aspect-[4/5] rounded-lg overflow-hidden">
+            {/* Photo — desktop only */}
+            <div className="hidden lg:block w-64 xl:w-72 shrink-0">
+              <div className="relative aspect-[4/5] rounded-lg overflow-hidden ring-1 ring-gray-200 dark:ring-neutral-700">
                 <Image
                   src="/images/trevor-puppy-selfie.jpeg"
                   alt="Trevor and his dog"
                   fill
                   className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 288px"
+                  sizes="288px"
                 />
               </div>
             </div>
@@ -225,14 +184,29 @@ export default function AboutPage() {
             <h2 className="text-2xl sm:text-3xl font-black font-montserrat text-gray-900 dark:text-white mb-2">
               Contact
             </h2>
-            <p className="text-lg text-gray-700 dark:text-neutral-200 max-w-3xl mb-6">
+            <p className="text-lg text-gray-700 dark:text-neutral-200 max-w-3xl">
               Open to freelance projects, consulting and full-time opportunities
             </p>
-            <div className="border-t-2 border-gray-900 dark:border-white w-full" />
           </div>
-          <div className="flex flex-col gap-8">
-            <Form />
-            <Links />
+          <div className="border-t-2 border-gray-900 dark:border-white w-full mb-8" />
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-12">
+            {/* Form — primary */}
+            <div className="flex-1 min-w-0">
+              <Form />
+            </div>
+            {/* Sidebar — photo + links */}
+            <div className="w-full lg:w-80 xl:w-96 shrink-0 flex flex-col gap-8">
+              <div className="relative w-40 h-40 sm:w-48 sm:h-48 mx-auto lg:mx-0 rounded-full overflow-hidden ring-2 ring-gray-200 dark:ring-neutral-700">
+                <Image
+                  src="/images/trevor-puppy-selfie.jpeg"
+                  alt="Trevor and his dog"
+                  fill
+                  className="object-cover"
+                  sizes="192px"
+                />
+              </div>
+              <Links />
+            </div>
           </div>
         </div>
       </section>

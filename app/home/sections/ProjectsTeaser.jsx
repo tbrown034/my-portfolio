@@ -20,7 +20,9 @@ export default function ProjectsTeaser() {
             Web Projects
           </h2>
           <p className="text-lg text-gray-600 dark:text-neutral-300 max-w-3xl mt-3">
-            After 15-plus years in journalism, I bring an investigative approach to web development — the same instinct for digging through records and making sense of complexity now drives how I build applications.
+            Production sites, open-source tools and experimental builds — from
+            a dental practice that boosted bookings by 33% to a personal data
+            platform processing 200,000-plus records.
           </p>
           <div className="space-y-1 mt-4">
             <div className="border-t-2 border-gray-900 dark:border-white"></div>

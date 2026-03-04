@@ -4,6 +4,7 @@ import DemoCard from "./components/DemoCard";
 import VizSection from "./components/VizSection";
 import { demoProjects } from "@content/demos.js";
 import { graphics as allGraphics } from "@content/visualizations.js";
+import SectionNav from "@/components/SectionNav";
 
 // Cherry-picked data viz: COVID Memorial (5), Churches & Vaccines (3), Hospital Lawsuits (2)
 const CHERRY_PICKED_VIZ_IDS = [5, 3, 2];
@@ -33,46 +34,62 @@ export default function DemosPage() {
         </div>
       </div>
 
-      {/* Section navigation — full table of contents */}
-      <nav className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 pb-8">
-        <div className="space-y-4">
-          {/* Web Projects */}
-          <div>
-            <span className="text-xs font-semibold uppercase tracking-wider text-gray-900 dark:text-white underline underline-offset-4 decoration-1 mr-3">
-              Web Projects
-            </span>
-            <div className="inline-flex flex-wrap gap-x-4 gap-y-1 mt-2">
-              {demoProjects.map((project) => (
-                <a
-                  key={project.id}
-                  href={`#${project.slug}`}
-                  className="text-sm text-gray-600 dark:text-neutral-300 hover:text-blue-800 dark:hover:text-blue-400 underline decoration-gray-300 dark:decoration-neutral-600 underline-offset-2 hover:decoration-blue-400 transition-colors"
-                >
-                  {project.title}
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* Data Journalism */}
-          <div>
-            <span className="text-xs font-semibold uppercase tracking-wider text-gray-900 dark:text-white underline underline-offset-4 decoration-1 mr-3">
-              Data Journalism
-            </span>
-            <div className="inline-flex flex-wrap gap-x-4 gap-y-1 mt-2">
-              {graphics.map((item) => (
-                <a
-                  key={item.id}
-                  href={`#${item.slug}`}
-                  className="text-sm text-gray-600 dark:text-neutral-300 hover:text-blue-800 dark:hover:text-blue-400 underline decoration-gray-300 dark:decoration-neutral-600 underline-offset-2 hover:decoration-blue-400 transition-colors"
-                >
-                  {item.navLabel}
-                </a>
-              ))}
-            </div>
-          </div>
+      {/* Intro — mirrors journalism lede */}
+      <section className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 pb-8">
+        <div className="columns-1 md:columns-2 gap-x-10 text-gray-600 dark:text-neutral-200 leading-relaxed [&>p]:mb-4 [&>p]:break-inside-avoid">
+          <p>
+            The same instincts that drove investigative reporting — digging
+            through complexity, finding structure in chaos, telling a clear
+            story — now shape how I architect applications. After completing{" "}
+            <a
+              href="https://bootcamp.outreach.ou.edu/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
+            >
+              OU Outreach's Fullstack Academy
+            </a>
+            , I now build with Next.js, React, TypeScript and PostgreSQL.
+          </p>
+          <p>
+            These projects range from production client work — a{" "}
+            <a
+              href="https://keithbrowndds.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
+            >
+              dental practice site
+            </a>{" "}
+            that increased bookings by 33% — to open-source intelligence tools,
+            AI model comparisons and a personal data platform processing
+            200,000-plus records.
+          </p>
         </div>
-      </nav>
+      </section>
+
+      {/* Section navigation — full table of contents */}
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 pb-8">
+        <SectionNav
+          variant="grouped"
+          groups={[
+            {
+              label: "Web Projects",
+              items: demoProjects.map((p) => ({
+                id: p.slug,
+                label: p.title,
+              })),
+            },
+            {
+              label: "Data Journalism",
+              items: graphics.map((g) => ({
+                id: g.slug,
+                label: g.navLabel,
+              })),
+            },
+          ]}
+        />
+      </div>
 
       {/* Web Projects - stacked full-width rows */}
       <div
@@ -121,7 +138,7 @@ export default function DemosPage() {
               className="group px-4 py-3 rounded-lg bg-gray-50 dark:bg-slate-900 border border-gray-100 dark:border-slate-800 hover:border-blue-200 dark:hover:border-blue-800 transition-all duration-200 text-center"
             >
               <span className="text-sm font-semibold text-gray-700 dark:text-neutral-200 group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors">
-                About
+                About & Resume
               </span>
             </Link>
             <Link

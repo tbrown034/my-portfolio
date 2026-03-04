@@ -6,6 +6,7 @@ import VizCard from "@/app/projects/components/VizCard";
 import { clips } from "@content/journalism.js";
 import { graphics } from "@content/visualizations.js";
 import { awards } from "@content/awards.js";
+import SectionNav from "@/components/SectionNav";
 
 export const metadata = {
   title: "Journalism & Data Visualization - Trevor Brown",
@@ -96,23 +97,15 @@ export default function JournalismPage() {
       </section>
 
       {/* ───── TOC NAV ───── */}
-      <nav className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-8">
-        <div className="inline-flex flex-wrap gap-1.5">
-          {[
-            { href: "#awards", label: "Awards" },
-            { href: "#investigations", label: "Investigations" },
-            { href: "#data-viz", label: "Data Visualizations" },
-          ].map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-neutral-800 text-gray-600 dark:text-neutral-300 hover:bg-gray-200 dark:hover:bg-neutral-700 hover:text-gray-900 dark:hover:text-white transition-colors"
-            >
-              {item.label}
-            </a>
-          ))}
-        </div>
-      </nav>
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-8">
+        <SectionNav
+          tabs={[
+            { id: "awards", label: "Awards" },
+            { id: "investigations", label: "Investigations" },
+            { id: "data-viz", label: "Data Visualizations" },
+          ]}
+        />
+      </div>
 
       {/* ───── AWARDS ───── */}
       <section
