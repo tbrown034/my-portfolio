@@ -1,8 +1,8 @@
 import Link from "next/link";
+import Image from "next/image";
 import { awards } from "@content/awards.js";
 import { clips } from "@content/journalism.js";
 import { graphics } from "@content/visualizations.js";
-import Image from "next/image";
 
 // Top awards to feature
 const topAwards = awards
@@ -29,7 +29,7 @@ export default function JournalismTeaser() {
             Holding Power Accountable
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-montserrat text-gray-900 dark:text-white mb-2">
-            Journalism & Data Visualization
+            Data Journalism
           </h2>
           <div className="space-y-1 mt-4">
             <div className="border-t-2 border-gray-900 dark:border-white"></div>
@@ -56,65 +56,82 @@ export default function JournalismTeaser() {
           </div>
         )}
 
-        {/* Featured articles */}
+        {/* Featured articles — same card style as projects */}
         <div className="mb-8">
           <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-neutral-500 mb-3">
             Selected Investigations
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {featuredClips.map((article, i) => (
               <Link
                 key={i}
                 href={article.siteLink || "https://oklahomawatch.org"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group block p-4 bg-white dark:bg-neutral-800 rounded-lg border border-gray-200 dark:border-neutral-700 hover:border-blue-300 dark:hover:border-blue-700 hover:shadow-md transition-all duration-200"
+                className="group block bg-white dark:bg-neutral-800 rounded-lg border border-gray-200 dark:border-neutral-700 hover:border-blue-300 dark:hover:border-blue-700 hover:shadow-md transition-all duration-200 overflow-hidden"
               >
-                <div className="flex items-center gap-2 text-xs mb-2">
-                  <span className="px-2 py-0.5 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-400 rounded font-medium">
-                    {article.publication || "Oklahoma Watch"}
-                  </span>
-                  <span className="text-gray-500 dark:text-neutral-400">
-                    {article.date}
-                  </span>
+                {/* Image if available */}
+                {article.image && (
+                  <div className="aspect-[16/10] overflow-hidden bg-gray-100 dark:bg-neutral-900">
+                    <Image
+                      src={article.image}
+                      alt={article.headline}
+                      className="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-300"
+                      width={800}
+                      height={500}
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      loading="lazy"
+                      quality={85}
+                    />
+                  </div>
+                )}
+                <div className="p-4">
+                  <div className="flex items-center gap-2 text-xs mb-2">
+                    <span className="px-2 py-0.5 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-400 rounded font-medium">
+                      {article.publication || "Oklahoma Watch"}
+                    </span>
+                    <span className="text-gray-500 dark:text-neutral-400">
+                      {article.date}
+                    </span>
+                  </div>
+                  <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors leading-snug">
+                    {article.headline}
+                  </h4>
                 </div>
-                <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors leading-snug">
-                  {article.headline}
-                </h4>
               </Link>
             ))}
           </div>
         </div>
 
-        {/* Featured data viz thumbnails */}
+        {/* Featured data viz — same card style */}
         <div className="mb-8">
           <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-neutral-500 mb-3">
             Data Visualizations
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {featuredViz.map((item) => (
               <Link
                 key={item.id}
                 href={`/journalism#${item.slug}`}
                 className="group block bg-white dark:bg-neutral-800 rounded-lg border border-gray-200 dark:border-neutral-700 hover:border-blue-300 dark:hover:border-blue-700 hover:shadow-md transition-all duration-200 overflow-hidden"
               >
-                <div className="h-40 overflow-hidden">
+                <div className="aspect-[16/10] overflow-hidden bg-gray-100 dark:bg-neutral-900">
                   <Image
                     src={item.image}
                     alt={item.headline}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    width={600}
-                    height={300}
+                    className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                    width={800}
+                    height={500}
                     sizes="(max-width: 640px) 100vw, 50vw"
                     loading="lazy"
                     quality={85}
                   />
                 </div>
                 <div className="p-4">
-                  <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors leading-snug">
+                  <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors leading-snug mb-2">
                     {item.headline}
                   </h4>
-                  <div className="flex flex-wrap gap-1.5 mt-2">
+                  <div className="flex flex-wrap gap-1.5">
                     {item.tools.map((tool, j) => (
                       <span
                         key={j}

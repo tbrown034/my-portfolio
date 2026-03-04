@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { demoProjects } from "@content/demos.js";
 
-const FEATURED_IDS = [1, 2, 3, 5];
+const FEATURED_IDS = [1, 2, 5, 3, 8];
 const featuredProjects = FEATURED_IDS.map((id) =>
   demoProjects.find((p) => p.id === id)
 ).filter(Boolean);
@@ -17,7 +17,7 @@ export default function ProjectsTeaser() {
             From Copy to Code
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-montserrat text-gray-900 dark:text-white mb-2">
-            Web Development
+            Web Projects
           </h2>
           <div className="space-y-1 mt-4">
             <div className="border-t-2 border-gray-900 dark:border-white"></div>

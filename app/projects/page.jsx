@@ -35,18 +35,18 @@ export default function DemosPage() {
 
       {/* Section navigation — full table of contents */}
       <nav className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 pb-8">
-        <div className="space-y-3">
+        <div className="space-y-4">
           {/* Web Projects */}
           <div>
-            <span className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-neutral-500 mr-3">
+            <span className="text-xs font-semibold uppercase tracking-wider text-gray-900 dark:text-white underline underline-offset-4 decoration-1 mr-3">
               Web Projects
             </span>
-            <div className="inline-flex flex-wrap gap-1.5 mt-1">
+            <div className="inline-flex flex-wrap gap-x-4 gap-y-1 mt-2">
               {demoProjects.map((project) => (
                 <a
                   key={project.id}
                   href={`#${project.slug}`}
-                  className="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-neutral-800 text-gray-600 dark:text-neutral-300 hover:bg-gray-200 dark:hover:bg-neutral-700 hover:text-gray-900 dark:hover:text-white transition-colors"
+                  className="text-sm text-gray-600 dark:text-neutral-300 hover:text-blue-800 dark:hover:text-blue-400 underline decoration-gray-300 dark:decoration-neutral-600 underline-offset-2 hover:decoration-blue-400 transition-colors"
                 >
                   {project.title}
                 </a>
@@ -54,17 +54,17 @@ export default function DemosPage() {
             </div>
           </div>
 
-          {/* Data Visualizations */}
+          {/* Data Journalism */}
           <div>
-            <span className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-neutral-500 mr-3">
-              Data Viz
+            <span className="text-xs font-semibold uppercase tracking-wider text-gray-900 dark:text-white underline underline-offset-4 decoration-1 mr-3">
+              Data Journalism
             </span>
-            <div className="inline-flex flex-wrap gap-1.5 mt-1">
+            <div className="inline-flex flex-wrap gap-x-4 gap-y-1 mt-2">
               {graphics.map((item) => (
                 <a
                   key={item.id}
                   href={`#${item.slug}`}
-                  className="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-neutral-800 text-gray-600 dark:text-neutral-300 hover:bg-gray-200 dark:hover:bg-neutral-700 hover:text-gray-900 dark:hover:text-white transition-colors"
+                  className="text-sm text-gray-600 dark:text-neutral-300 hover:text-blue-800 dark:hover:text-blue-400 underline decoration-gray-300 dark:decoration-neutral-600 underline-offset-2 hover:decoration-blue-400 transition-colors"
                 >
                   {item.navLabel}
                 </a>
@@ -113,7 +113,7 @@ export default function DemosPage() {
               className="group px-4 py-3 rounded-lg bg-gray-50 dark:bg-slate-900 border border-gray-100 dark:border-slate-800 hover:border-blue-200 dark:hover:border-blue-800 transition-all duration-200 text-center"
             >
               <span className="text-sm font-semibold text-gray-700 dark:text-neutral-200 group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors">
-                Journalism & Data
+                Data Journalism
               </span>
             </Link>
             <Link
