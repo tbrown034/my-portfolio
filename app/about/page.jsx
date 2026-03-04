@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import ResumePage from "./components/ResumePage.jsx";
-import ClipsPage from "./components/ClipsPage.jsx";
+
 import Form from "@/app/home/contact/Form";
 import Links from "@/app/home/contact/Links";
 
@@ -12,7 +13,7 @@ export default function AboutPage() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["narrative", "resume", "selected-works", "contact"];
+      const sections = ["narrative", "resume", "contact"];
       const scrollPosition = window.scrollY + 150;
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -33,7 +34,6 @@ export default function AboutPage() {
   const navTabs = [
     { id: "narrative", label: "Background" },
     { id: "resume", label: "Resume" },
-    { id: "selected-works", label: "Selected Works" },
     { id: "contact", label: "Contact" },
   ];
 
@@ -69,10 +69,10 @@ export default function AboutPage() {
               <a
                 key={tab.id}
                 href={`#${tab.id}`}
-                className={`pb-2 text-sm font-medium -mb-0.5 transition-colors duration-200 hover:underline ${
+                className={`pb-2 text-sm font-medium -mb-0.5 transition-colors duration-200 ${
                   activeSection === tab.id
                     ? "text-gray-900 dark:text-white border-b-2 border-gray-900 dark:border-white"
-                    : "text-gray-600 dark:text-neutral-200 border-b-2 border-transparent hover:border-neutral-700 dark:hover:border-neutral-600"
+                    : "text-gray-500 dark:text-neutral-400 border-b-2 border-transparent hover:text-gray-900 dark:hover:text-white hover:border-gray-900 dark:hover:border-white"
                 }`}
               >
                 {tab.label}
@@ -88,72 +88,88 @@ export default function AboutPage() {
         className="no-print scroll-mt-24 bg-slate-100 dark:bg-neutral-900"
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 py-12">
-          <div className="max-w-4xl space-y-4 text-gray-600 dark:text-neutral-200 leading-relaxed">
-            <p>
-              My journalism career began at{" "}
-              <a
-                href="https://www.idsnews.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
-              >
-                Indiana University
-              </a>
-              , where I was editor-in-chief of The Indiana Daily Student and
-              graduated with bachelor's degrees in political science and
-              journalism. I then spent 15-plus years reporting in several states,
-              most recently as the statehouse reporter for the{" "}
-              <a
-                href="https://www.wyomingnews.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
-              >
-                Wyoming Tribune Eagle
-              </a>{" "}
-              and as an investigative reporter with{" "}
-              <a
-                href="https://oklahomawatch.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
-              >
-                Oklahoma Watch
-              </a>
-              , a nonprofit newsroom based out of Oklahoma City.
-            </p>
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+            <div className="max-w-4xl flex-1 space-y-4 text-gray-600 dark:text-neutral-200 leading-relaxed">
+              <p>
+                My journalism career began at{" "}
+                <a
+                  href="https://www.idsnews.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
+                >
+                  Indiana University
+                </a>
+                , where I was editor-in-chief of The Indiana Daily Student and
+                graduated with bachelor's degrees in political science and
+                journalism. I then spent 15-plus years reporting in several states,
+                most recently as the statehouse reporter for the{" "}
+                <a
+                  href="https://www.wyomingnews.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
+                >
+                  Wyoming Tribune Eagle
+                </a>{" "}
+                and as an investigative reporter with{" "}
+                <a
+                  href="https://oklahomawatch.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
+                >
+                  Oklahoma Watch
+                </a>
+                , a nonprofit newsroom based out of Oklahoma City.
+              </p>
 
-            <p>
-              My reporting has led to policy changes, legislative reforms and
-              increased government transparency. From exposing racial profiling
-              patterns to investigating hospital billing practices, I've
-              specialized in stories that serve the public interest and hold
-              institutions accountable.
-            </p>
+              <p>
+                My reporting has led to policy changes, legislative reforms and
+                increased government transparency. From uncovering gaps in
+                racial profiling enforcement to investigating hospital billing
+                practices, I've
+                specialized in stories that serve the public interest and hold
+                institutions accountable.
+              </p>
 
-            <p>
-              I've always been a data-driven reporter — from learning Excel
-              to building visualizations in Datawrapper, Tableau and Flourish.
-              Visual storytelling has been a constant thread in my journalism career.
-              Now I use tools, including JavaScript and Python libraries, to
-              transform datasets into stories that reveal patterns, trends and
-              insights.
-            </p>
+              <p>
+                I've always been a data-driven reporter — from learning Excel
+                to building visualizations in Datawrapper, Tableau and Flourish.
+                Visual storytelling has been a constant thread in my journalism career.
+                Now I use tools, including JavaScript and Python libraries, to
+                transform datasets into stories that reveal patterns, trends and
+                insights.
+              </p>
 
-            <p>
-              Looking to expand beyond reporting, I graduated from{" "}
-              <a
-                href="https://bootcamp.outreach.ou.edu/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
-              >
-                OU Outreach's Fullstack Academy Web Development Bootcamp
-              </a>
-              , a 260-hour program that honed my skills in modern, full-stack
-              web technologies. Now I work at the intersection of journalism,
-              technology, politics and AI.
-            </p>
+              <p>
+                Looking to expand beyond reporting, I graduated from{" "}
+                <a
+                  href="https://bootcamp.outreach.ou.edu/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-blue-800 dark:text-blue-400 underline decoration-1 underline-offset-2 hover:decoration-2 transition-colors duration-200"
+                >
+                  OU Outreach's Fullstack Academy Web Development Bootcamp
+                </a>
+                , a 260-hour program that honed my skills in modern, full-stack
+                web technologies. Now I work at the intersection of journalism,
+                technology, politics and AI.
+              </p>
+            </div>
+
+            {/* Photo */}
+            <div className="w-48 sm:w-56 lg:w-72 shrink-0">
+              <div className="relative aspect-[4/5] rounded-lg overflow-hidden">
+                <Image
+                  src="/images/trevor-puppy-selfie.jpeg"
+                  alt="Trevor and his dog"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 288px"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -165,10 +181,6 @@ export default function AboutPage() {
           <ResumePage showGuides={false} />
         </div>
 
-        {/* Selected Works */}
-        <div id="selected-works" className="scroll-mt-24 mt-8 w-full max-w-full overflow-x-auto">
-          <ClipsPage showGuides={false} />
-        </div>
       </div>
 
       {/* Portfolio Navigation */}

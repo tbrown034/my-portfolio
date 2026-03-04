@@ -48,8 +48,9 @@ export default function Intro() {
 
             <p>
               My reporting has led to policy changes, legislative reforms and
-              increased government transparency. From exposing racial profiling
-              patterns to investigating hospital billing practices, I've
+              increased government transparency. From uncovering gaps in
+              racial profiling enforcement to investigating hospital billing
+              practices, I've
               specialized in stories that serve the public interest and hold
               institutions accountable.
             </p>

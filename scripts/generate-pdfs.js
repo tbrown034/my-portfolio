@@ -108,17 +108,6 @@ async function main() {
       }
     );
 
-    // Generate Selected Works PDF (can be multiple pages)
-    await generatePDF(
-      page,
-      `${BASE_URL}/about/selected-works-pdf-only`,
-      path.join(PDF_OUTPUT_DIR, 'Trevor_Brown_Selected_Works.pdf'),
-      {
-        format: 'Letter',
-        preferCSSPageSize: false
-      }
-    );
-
     console.log('\n✓ All PDFs generated successfully!');
   } catch (error) {
     console.error('\n✗ Error generating PDFs:', error);

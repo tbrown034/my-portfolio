@@ -6,7 +6,7 @@ import { useDocumentScaling } from "@/app/hooks/useDocumentScaling";
 /* Component Library - Editorial Resume Style with Tailwind */
 const Section = ({ title, children }) => (
   <section>
-    <h3 className="text-[9px] font-extrabold tracking-widest uppercase text-gray-900 border-b border-gray-300 pb-0.5 mb-1.5 mt-2 first:mt-0">
+    <h3 className="text-[9px] font-extrabold tracking-widest uppercase text-gray-900 border-b border-gray-300 pb-0.5 mb-1 mt-1.5 first:mt-0">
       {title}
     </h3>
     {children}
@@ -14,7 +14,7 @@ const Section = ({ title, children }) => (
 );
 
 const Job = ({ title, org, period, highlights }) => (
-  <div className="mb-1.5">
+  <div className="mb-1">
     <div className="flex justify-between items-start mb-0.5 gap-4">
       <div>
         <div className="text-[11px] font-bold text-gray-900 leading-tight">
@@ -80,16 +80,10 @@ const Project = ({ name, year, tech, description }) => (
   </div>
 );
 
-const SkillPair = ({ leftLabel, leftSkills, rightLabel, rightSkills }) => (
-  <div className="grid grid-cols-2 gap-3 mb-0.5">
-    <div>
-      <span className="text-[10px] font-bold text-gray-900">{leftLabel}:</span>{" "}
-      <span className="text-[10px] text-gray-700">{leftSkills}</span>
-    </div>
-    <div>
-      <span className="text-[10px] font-bold text-gray-900">{rightLabel}:</span>{" "}
-      <span className="text-[10px] text-gray-700">{rightSkills}</span>
-    </div>
+const SkillGroup = ({ label, items }) => (
+  <div>
+    <div style={{ fontSize: '8.5pt', fontWeight: 700, marginBottom: '0.5pt' }}>{label}</div>
+    <div style={{ fontSize: '8pt', color: '#444', lineHeight: 1.35 }}>{items}</div>
   </div>
 );
 
@@ -126,10 +120,10 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
           {/* Resume content with fixed padding for consistent layout */}
           <div
             className="h-full overflow-hidden print:overflow-visible"
-            style={{ padding: "0.5in 0.6in 0.4in 0.6in" }}
+            style={{ padding: "0.4in 0.5in 0.3in 0.5in" }}
           >
             {/* Header - Editorial masthead style */}
-            <header className="text-center mb-2 pb-1.5 border-b-2 border-gray-900">
+            <header className="text-center mb-1.5 pb-1 border-b-2 border-gray-900">
               <h1 className="text-2xl font-black tracking-wider text-gray-900 mb-1 uppercase">
                 TREVOR BROWN
               </h1>
@@ -153,12 +147,12 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
             </header>
 
             {/* Main content - Fixed 2-column grid */}
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-3 gap-4">
               {/* Primary column - takes 2 columns */}
               <div className="col-span-2">
                 <div className="mb-1">
                   <Section title="Summary">
-                    <p className="text-[10px] text-gray-700 leading-[1.4]">
+                    <p className="text-[10px] text-gray-700 leading-[1.35]">
                       Award-winning investigative journalist with 15 years in
                       newsrooms covering elections, government and public policy
                       across four states. Turns public records and complex
@@ -282,27 +276,15 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                   />
                 </Section>
 
-                {/* Technical Skills - 2-column sub-grid at bottom of left column */}
+                {/* Technical Skills - SB-style grid with labels above items */}
                 <Section title="Technical Skills">
-                  <div className="space-y-0.5">
-                    <SkillPair
-                      leftLabel="Visualization"
-                      leftSkills="Tableau, Datawrapper, Flourish, Chart.js, D3.js"
-                      rightLabel="Languages"
-                      rightSkills="JavaScript, TypeScript, Python, SQL, HTML, CSS"
-                    />
-                    <SkillPair
-                      leftLabel="Data Analysis"
-                      leftSkills="Spreadsheets, SQL queries, PostgreSQL, public records, FOIA"
-                      rightLabel="Web/Interactive"
-                      rightSkills="React, Next.js, Node.js, Tailwind CSS, responsive design"
-                    />
-                    <SkillPair
-                      leftLabel="Automation & AI"
-                      leftSkills="Playwright (scraping and data collection), AI agents (Claude Code, Anthropic API)"
-                      rightLabel="AI Tools"
-                      rightSkills="Claude Code, Anthropic API, OpenAI API, Gemini API, Ollama (local models)"
-                    />
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', rowGap: '2pt', columnGap: '8pt' }}>
+                    <SkillGroup label="Visualization" items="Tableau, Datawrapper, Flourish, Chart.js, D3.js" />
+                    <SkillGroup label="Languages" items="JavaScript, TypeScript, Python, SQL, HTML, CSS" />
+                    <SkillGroup label="Data Analysis" items="Spreadsheets, SQL queries, PostgreSQL, public records, FOIA" />
+                    <SkillGroup label="Web Frameworks" items="React, Next.js, Node.js, Tailwind CSS, responsive design" />
+                    <SkillGroup label="AI & Automation" items="Claude Code, Anthropic/OpenAI/Gemini APIs, Ollama, Playwright" />
+                    <SkillGroup label="Tools & Workflow" items="Git, Vercel, REST APIs, CI/CD, SSR/SSG" />
                   </div>
                 </Section>
               </div>
@@ -439,6 +421,9 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                     tech="Next.js, PostgreSQL, TMDB API, drag-and-drop"
                     description="Media ranking platform with drag-and-drop interfaces, TMDB integration and NextAuth authentication"
                   />
+                  <div className="text-[9px] text-gray-500 italic border-t border-gray-200 pt-1 mt-1.5">
+                    Full portfolio at trevorthewebdeveloper.com/projects
+                  </div>
                 </Section>
               </div>
             </div>
@@ -451,17 +436,16 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
         </div>
       </div>
 
-      {/* Download button below resume */}
+      {/* Save as PDF button */}
       <div className="mt-6 print:hidden flex justify-center">
         <a
           href="/pdfs/Trevor_Brown_Resume.pdf"
           download
           className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white bg-blue-800 dark:bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 dark:hover:bg-blue-500 hover:shadow-lg hover:-translate-y-1 active:bg-blue-900 dark:active:bg-blue-700 active:shadow-sm active:translate-y-0 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
         >
-          Download Resume (PDF)
+          Save as PDF
         </a>
       </div>
-      {/* Note: To regenerate PDF after content changes, run: npm run generate-pdfs */}
     </div>
   );
 }
