@@ -3,9 +3,8 @@ import Image from "next/image";
 import JournalismHeader from "./components/JournalismHeader";
 import Awards from "@/app/home/journalism/Awards";
 import VizCard from "@/app/projects/components/VizCard";
-import { clips } from "@content/journalism.js";
+import { dataClips, reportingClips } from "@content/journalism.js";
 import { graphics } from "@content/visualizations.js";
-import { awards } from "@content/awards.js";
 import SectionNav from "@/components/SectionNav";
 
 export const metadata = {
@@ -15,8 +14,6 @@ export const metadata = {
 };
 
 export default function JournalismPage() {
-  const sortedClips = [...clips].sort((a, b) => b.id - a.id);
-
   return (
     <main className="min-h-screen bg-white dark:bg-neutral-950">
       {/* ───── HEADER ───── */}
@@ -24,7 +21,7 @@ export default function JournalismPage() {
         <JournalismHeader />
       </div>
 
-      {/* ───── LEDE — Background bio, establishes credibility ───── */}
+      {/* ───── LEDE ───── */}
       <section className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 pb-10">
         <div className="columns-1 md:columns-2 gap-x-10 text-gray-600 dark:text-neutral-200 leading-relaxed [&>p]:mb-4 [&>p]:break-inside-avoid">
           <p>
@@ -65,9 +62,8 @@ export default function JournalismPage() {
             My reporting has led to policy changes, legislative reforms and
             increased government transparency. From uncovering gaps in racial
             profiling enforcement to investigating hospital billing practices,
-            I&apos;ve
-            specialized in stories that serve the public interest and hold
-            institutions accountable.
+            I&apos;ve specialized in stories that serve the public interest and
+            hold institutions accountable.
           </p>
 
           <p>
@@ -100,35 +96,62 @@ export default function JournalismPage() {
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-8">
         <SectionNav
           tabs={[
-            { id: "awards", label: "Awards" },
-            { id: "investigations", label: "Investigations" },
             { id: "data-viz", label: "Data Visualizations" },
+            { id: "investigations", label: "Data Investigations" },
+            { id: "reporting", label: "More Reporting" },
+            { id: "awards", label: "Awards" },
           ]}
         />
       </div>
 
-      {/* ───── AWARDS ───── */}
+      {/* ───── DATA VISUALIZATIONS (leads the page) ───── */}
       <section
-        id="awards"
-        className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 pb-12"
+        id="data-viz"
+        className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-12"
       >
-        <Awards showAllByDefault={true} />
+        <div className="mb-8">
+          <h2 className="text-2xl sm:text-3xl font-black font-montserrat text-gray-900 dark:text-white mb-2">
+            Data Visualizations
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-neutral-300 max-w-3xl mb-4">
+            Interactive graphics and data analysis built with Tableau,
+            Datawrapper and Flourish at Oklahoma Watch
+          </p>
+          <div className="border-t-2 border-gray-900 dark:border-white w-full" />
+        </div>
+
+        {graphics.map((item, index) => (
+          <div
+            key={item.id}
+            className={`py-12 lg:py-16 ${
+              index < graphics.length - 1
+                ? "border-b border-gray-200 dark:border-slate-800"
+                : ""
+            }`}
+          >
+            <VizCard item={item} index={index} />
+          </div>
+        ))}
       </section>
 
-      {/* ───── INVESTIGATIONS ───── */}
+      {/* ───── DATA INVESTIGATIONS ───── */}
       <section
         id="investigations"
         className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-12 border-t border-gray-200 dark:border-slate-800"
       >
         <div className="mb-8">
           <h2 className="text-2xl sm:text-3xl font-black font-montserrat text-gray-900 dark:text-white mb-2">
-            Selected Investigations
+            Data Investigations
           </h2>
+          <p className="text-lg text-gray-600 dark:text-neutral-300 max-w-3xl mb-4">
+            Public records work, accountability reporting and data-driven
+            investigations
+          </p>
           <div className="border-t-2 border-gray-900 dark:border-white w-full mt-4" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 lg:gap-x-8">
-          {sortedClips.map((article) => (
+          {dataClips.map((article) => (
             <article key={article.id} className="group">
               <a
                 href={article.siteLink || "https://oklahomawatch.org"}
@@ -171,6 +194,20 @@ export default function JournalismPage() {
                     {article.text}
                   </p>
 
+                  {/* Data points badges */}
+                  {article.dataPoints && (
+                    <div className="flex flex-wrap gap-1.5 pt-1">
+                      {article.dataPoints.map((point, i) => (
+                        <span
+                          key={i}
+                          className="px-2 py-0.5 text-[11px] font-medium rounded bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-400 ring-1 ring-amber-200/50 dark:ring-amber-700/30"
+                        >
+                          {point}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+
                   <span className="inline-block text-sm font-medium text-blue-800 dark:text-blue-400 pt-1">
                     Read Article &rarr;
                   </span>
@@ -181,34 +218,71 @@ export default function JournalismPage() {
         </div>
       </section>
 
-      {/* ───── DATA VISUALIZATIONS ───── */}
+      {/* ───── MORE REPORTING (compact layout) ───── */}
       <section
-        id="data-viz"
+        id="reporting"
         className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-12 border-t border-gray-200 dark:border-slate-800"
       >
         <div className="mb-8">
           <h2 className="text-2xl sm:text-3xl font-black font-montserrat text-gray-900 dark:text-white mb-2">
-            Data Visualizations
+            More Reporting
           </h2>
-          <p className="text-lg text-gray-600 dark:text-neutral-300 max-w-3xl mb-4">
-            Interactive graphics and data analysis built with Tableau,
-            Datawrapper and Flourish at Oklahoma Watch
-          </p>
-          <div className="border-t-2 border-gray-900 dark:border-white w-full" />
+          <div className="border-t-2 border-gray-900 dark:border-white w-full mt-4" />
         </div>
 
-        {graphics.map((item, index) => (
-          <div
-            key={item.id}
-            className={`py-12 lg:py-16 ${
-              index < graphics.length - 1
-                ? "border-b border-gray-200 dark:border-slate-800"
-                : ""
-            }`}
-          >
-            <VizCard item={item} index={index} />
-          </div>
-        ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {reportingClips.map((article) => (
+            <article key={article.id} className="group">
+              <a
+                href={article.siteLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex gap-4"
+              >
+                {/* Compact image */}
+                {article.image && (
+                  <div className="w-24 h-24 flex-shrink-0 overflow-hidden rounded-lg bg-gray-100 dark:bg-neutral-900">
+                    <Image
+                      src={article.image}
+                      alt={article.headline}
+                      width={96}
+                      height={96}
+                      className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                      loading="lazy"
+                      quality={75}
+                    />
+                  </div>
+                )}
+
+                {/* Text */}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 text-xs mb-1">
+                    <span className="text-gray-500 dark:text-neutral-400 font-medium">
+                      {article.publication}
+                    </span>
+                    <span className="text-gray-300 dark:text-neutral-600">
+                      {article.date}
+                    </span>
+                  </div>
+                  <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors leading-snug line-clamp-2">
+                    {article.headline}
+                  </h3>
+                  <p className="text-xs text-gray-500 dark:text-neutral-400 mt-1 line-clamp-2">
+                    {article.text}
+                  </p>
+                </div>
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* ───── AWARDS (bottom, collapsed by default) ───── */}
+      <section
+        id="awards"
+        className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-12 border-t border-gray-200 dark:border-slate-800"
+      >
+        <Awards showAllByDefault={false} />
       </section>
 
       {/* ───── PORTFOLIO NAV ───── */}

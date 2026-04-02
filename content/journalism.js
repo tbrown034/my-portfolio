@@ -1,4 +1,6 @@
-// clips.js
+// clips.js — categorized for portfolio display
+// "data" = data-driven investigations (lead the page)
+// "reporting" = strong journalism without data/viz component (supporting section)
 
 import misinfo from "@/public/images/misinfo.webp";
 import profiling from "@/public/images/profling.webp";
@@ -12,12 +14,27 @@ import fallin from "@/public/images/fallinPic.jpg";
 import henry from "@/public/images/HenryPic.webp";
 import vaccination from "@/public/images/vaccination.png";
 
-export const clips = [
+// Data-driven investigations — public records, data analysis, visualizations
+export const dataClips = [
+  {
+    id: 3,
+    headline:
+      "With Little Notice, Hospitals Sue Thousands of Oklahomans Over Unpaid Bills",
+    text: "A first-of-its-kind investigation that compiled 22,250 court records to reveal several Oklahoma hospitals were pursuing litigation at rates far exceeding their peers, often targeting vulnerable patients struggling with medical debt.",
+    oneLiner:
+      "I reviewed hundreds of court records to uncover the extent of hospital lawsuits in Oklahoma.",
+    image: hospitals,
+    date: "Aug. 7, 2019",
+    publication: "Oklahoma Watch",
+    siteLink:
+      "https://oklahomawatch.org/2019/08/07/oklahoma-hospitals-sue-thousands-each-year-over-unpaid-medical-bills/",
+    dataPoints: ["22,250 court records compiled", "Tableau dashboard", "SPJ 1st Place General News (2020)"],
+  },
   {
     id: 11,
     headline:
       "As Some Oklahoma Churches Push Vaccines, Others Sow Misinformation, Doubt",
-    text: "Investigation analyzing the relationship between county-level vaccination rates and church density in Oklahoma. Three data visualizations -- scatter plot with regression line plus two choropleth maps. Won 1st Place Investigative Reporting, Oklahoma SPJ (2022).",
+    text: "Investigation analyzing the relationship between county-level vaccination rates and church density in Oklahoma. Three data visualizations — scatter plot with regression line plus two choropleth maps. Won 1st Place Investigative Reporting, Oklahoma SPJ (2022).",
     oneLiner:
       "I analyzed county-level vaccination and church density data to investigate the role of religious institutions in vaccine hesitancy.",
     image: vaccination,
@@ -25,20 +42,20 @@ export const clips = [
     date: "Dec. 20, 2021",
     siteLink:
       "https://oklahomawatch.org/2021/12/20/as-some-oklahoma-churches-push-vaccines-others-sow-misinformation-doubt/",
+    dataPoints: ["3 Datawrapper visualizations", "Scatter plot with regression", "SPJ 1st Place Investigative (2022)"],
   },
   {
-    id: 1,
-    headline:
-      "The Misinformation Election: Lies, Conspiracy Theories Prominent in Many Races",
-    text: "Exposed how election misinformation moved from margins to mainstream in Oklahoma's GOP races.",
+    id: 8,
+    headline: "Where Dark Money Flowed in Oklahoma's Legislative Races",
+    text: "Tracking nearly $1 million in dark-money spending in 2020 legislative races — who spent it, where it went and how it shaped close contests.",
     oneLiner:
-      "In this deeply reported piece, I uncovered and wrote about the impact of misinformation on GOP races.",
-    image: misinfo,
+      "Using campaign finance data and investigative tools, I helped uncover the flow of dark money in Oklahoma.",
+    image: darkMoney,
+    date: "Nov. 16, 2020",
     publication: "Oklahoma Watch",
-    date: "June 6, 2022",
-
     siteLink:
-      "https://oklahomawatch.org/2022/06/06/the-misinformation-election-lies-conspiracy-theories-prominent-in-many-gop-races/",
+      "https://oklahomawatch.org/2020/11/16/where-dark-money-flowed-in-oklahomas-legislative-races/",
+    dataPoints: ["~$1M in dark money traced", "Campaign finance cross-referencing"],
   },
   {
     id: 2,
@@ -52,35 +69,7 @@ export const clips = [
     date: "June 2, 2020",
     siteLink:
       "https://oklahomawatch.org/2020/06/02/twenty-years-after-it-became-a-crime-racial-profiling-charges-remain-scarce/",
-  },
-  {
-    id: 3,
-    headline:
-      "With Little Notice, Hospitals Sue Thousands of Oklahomans Over Unpaid Bills",
-    text: "A first-of-its-kind investigation revealed several Oklahoma hospitals were pursuing litigation at rates far exceeding their peers, often targeting vulnerable patients struggling with medical debt.",
-    oneLiner:
-      "I reviewed hundreds of court records to uncover the extent of hospital lawsuits in Oklahoma.",
-    image: hospitals,
-    date: "Aug. 7, 2019",
-
-    publication: "Oklahoma Watch",
-
-    siteLink:
-      "https://oklahomawatch.org/2019/08/07/oklahoma-hospitals-sue-thousands-each-year-over-unpaid-medical-bills/",
-  },
-  {
-    id: 8,
-    headline: "Where Dark Money Flowed in Oklahoma's Legislative Races",
-    text: "Tracking nearly $1 million in dark-money spending in 2020 legislative races — who spent it, where it went and how it shaped close contests.",
-    oneLiner:
-      "Using campaign finance data and investigative tools, I helped uncover the flow of dark money in Oklahoma.",
-    image: darkMoney,
-    date: "Nov. 16, 2020",
-
-    publication: "Oklahoma Watch",
-
-    siteLink:
-      "https://oklahomawatch.org/2020/11/16/where-dark-money-flowed-in-oklahomas-legislative-races/",
+    dataPoints: ["20-year systematic review", "SPJ 1st Place Criminal Justice (2021)"],
   },
   {
     id: 5,
@@ -90,26 +79,41 @@ export const clips = [
     oneLiner:
       "I looked at Oklahoma's open records and meetings laws to see how public input is often overlooked.",
     date: "March 15, 2021",
-
     image: comment,
     publication: "Oklahoma Watch",
-
     siteLink:
       "https://oklahomawatch.org/2021/03/15/no-comment-in-oklahomas-legislature-public-rarely-given-chance-to-weigh-in/",
+    dataPoints: ["Systematic analysis of committee procedures", "SPJ 1st Place Government (2022)"],
   },
   {
-    id: 9,
+    id: 1,
     headline:
-      "In Remembering OKC Bombing Victims, Experts See Lessons for Grieving COVID Losses",
-    text: "Lessons from the Oklahoma City bombing for grieving during COVID — how counselors apply what they learned when rituals and timelines are disrupted.",
-    image: okcBombing,
-    date: "April 25, 2021",
+      "The Misinformation Election: Lies, Conspiracy Theories Prominent in Many Races",
+    text: "Exposed how election misinformation moved from margins to mainstream in Oklahoma's GOP races.",
     oneLiner:
-      "I explored the parallels between the Oklahoma City bombing and the grieving process during COVID.",
-
+      "In this deeply reported piece, I uncovered and wrote about the impact of misinformation on GOP races.",
+    image: misinfo,
     publication: "Oklahoma Watch",
+    date: "June 6, 2022",
     siteLink:
-      "https://oklahomawatch.org/2021/04/25/in-remembering-okc-bombing-victims-experts-see-lessons-for-grieving-covid-losses/",
+      "https://oklahomawatch.org/2022/06/06/the-misinformation-election-lies-conspiracy-theories-prominent-in-many-gop-races/",
+    dataPoints: ["Database of misinformation claims across races"],
+  },
+];
+
+// Strong journalism without a primary data/viz component
+export const reportingClips = [
+  {
+    id: 4,
+    headline: "Memo: Troopers Must Hit Numbers",
+    text: "Wyoming Highway Patrol required troopers to meet citation quotas or face career consequences — policy rescinded after public backlash.",
+    oneLiner:
+      "I exposed a controversial quota system that was ultimately overturned following public and legislative pressure.",
+    image: highwayPatrol,
+    publication: "Wyoming Tribune Eagle",
+    date: "Nov. 23, 2014",
+    siteLink:
+      "https://www.wyomingnews.com/news/memo-troopers-must-hit-numbers/article_caf073e2-20e8-5b91-a720-262a72bfb1d2.html",
   },
   {
     id: 7,
@@ -125,16 +129,17 @@ export const clips = [
       "https://www.wyomingnews.com/news/local_news/questions-remain-around-cleanup-of-former-nuke-sites-near-cheyenne/article_cbc7ee82-a168-11e5-856a-0f03142089af.html",
   },
   {
-    id: 4,
-    headline: "Memo: Troopers Must Hit Numbers",
-    text: "Wyoming Highway Patrol required troopers to meet citation quotas or face career consequences — policy rescinded after public backlash.",
+    id: 9,
+    headline:
+      "In Remembering OKC Bombing Victims, Experts See Lessons for Grieving COVID Losses",
+    text: "Lessons from the Oklahoma City bombing for grieving during COVID — how counselors apply what they learned when rituals and timelines are disrupted.",
+    image: okcBombing,
+    date: "April 25, 2021",
     oneLiner:
-      "I exposed a controversial quota system that was ultimately overturned following public and legislative pressure.",
-    image: highwayPatrol,
-    publication: "Wyoming Tribune Eagle",
-    date: "Nov. 23, 2014",
+      "I explored the parallels between the Oklahoma City bombing and the grieving process during COVID.",
+    publication: "Oklahoma Watch",
     siteLink:
-      "https://www.wyomingnews.com/news/memo-troopers-must-hit-numbers/article_caf073e2-20e8-5b91-a720-262a72bfb1d2.html",
+      "https://oklahomawatch.org/2021/04/25/in-remembering-okc-bombing-victims-experts-see-lessons-for-grieving-covid-losses/",
   },
   {
     id: 6,
@@ -161,3 +166,6 @@ export const clips = [
       "https://www.cherokeephoenix.org/news/henry-gambling-expansions-paid-off/article_929806da-abeb-506c-b1bf-ba067fec7bf3.html",
   },
 ];
+
+// Combined export for backward compat
+export const clips = [...dataClips, ...reportingClips];

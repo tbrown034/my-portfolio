@@ -1,10 +1,12 @@
-import ice from "@/public/images/ice.png";
+import hospitalDashboard from "@/public/images/hospital-lawsuits-tableau.png";
 import donations from "@/public/images/donations.png";
-import redistricting from "@/public/images/redistricting.png";
-import shootings from "@/public/images/shootings.png";
-import tweets from "@/public/images/tweets.png";
+import covidMemorial from "@/public/images/covid-memorial.png";
+import financialDisclosures from "@/public/images/financial-disclosures.png";
 import vaccination from "@/public/images/vaccination.png";
 import bills from "@/public/images/flourish1.png";
+
+// Curated: award-winners and multi-viz packages only
+// Removed: Legislative Races, Competitive Races, ICE Detainers, Mass Shootings (supporting-tier single-chart pieces)
 export const graphics = [
   {
     id: 3,
@@ -82,59 +84,13 @@ export const graphics = [
     ],
   },
   {
-    id: 4,
-    slug: "viz-legislative-races",
-    navLabel: "Legislative Races",
-    headline:
-      "Nearly Half of Oklahoma Legislative Races Already Are Decided Without a Vote",
-    text: "Analysis of every legislative race in the 2022 cycle showing that nearly half were decided before voters ever cast a ballot — uncontested seats where only one candidate filed. Four visualizations built in Flourish and Datawrapper showing how uncontested races predetermine legislative control.",
-    image: redistricting,
-    date: "April 18, 2022",
-    publication: "Oklahoma Watch",
-    program: "Flourish",
-    tools: ["Flourish", "Datawrapper"],
-    award: null,
-    summary:
-      "Four visualizations built in Flourish and Datawrapper showing how uncontested races predetermine who controls the Oklahoma legislature before voters cast a ballot.",
-    siteLink:
-      "https://oklahomawatch.org/2022/04/18/nearly-half-of-oklahoma-legislative-races-already-are-decided-without-a-vote/",
-    graphicLink: [
-      "https://flo.uri.sh/visualisation/9434901/embed",
-      "https://flo.uri.sh/visualisation/9435055/embed",
-      "https://datawrapper.dwcdn.net/edtag/7/",
-      "https://datawrapper.dwcdn.net/L0qvZ/3/",
-    ],
-    vizUrls: [
-      {
-        label: "House seats",
-        url: "https://flo.uri.sh/visualisation/9434901/embed",
-        tool: "Flourish",
-      },
-      {
-        label: "Senate seats",
-        url: "https://flo.uri.sh/visualisation/9435055/embed",
-        tool: "Flourish",
-      },
-      {
-        label: "Candidates by party",
-        url: "https://datawrapper.dwcdn.net/L0qvZ/3/",
-        tool: "Datawrapper",
-      },
-      {
-        label: "Uncontested winners",
-        url: "https://datawrapper.dwcdn.net/edtag/7/",
-        tool: "Datawrapper",
-      },
-    ],
-  },
-  {
     id: 2,
     slug: "viz-hospital-lawsuits",
     navLabel: "Hospital Lawsuits",
     headline:
       "Amid COVID-19, Some Hospitals Continue Suing Patients Over Unpaid Bills",
     text: "Follow-up investigation showing that despite the pandemic, several Oklahoma hospitals continued filing lawsuits against patients over unpaid medical bills. Built an updated Tableau dashboard tracking which hospitals kept suing and at what rates.",
-    image: ice,
+    image: hospitalDashboard,
     publication: "Oklahoma Watch",
     program: "Tableau",
     date: "Aug. 4, 2020",
@@ -160,33 +116,6 @@ export const graphics = [
     ],
   },
   {
-    id: 1,
-    slug: "viz-campaign-finance",
-    navLabel: "Campaign Finance",
-    headline:
-      "Which State Lawmakers Have the Biggest Campaign War Chests?",
-    text: "Many Oklahoma lawmakers will be in a good position financially come re-election time. State lawmakers reported an average of $32,800.",
-    image: donations,
-    date: "Jan. 13, 2022",
-    program: "Tableau",
-    publication: "Oklahoma Watch",
-    tools: ["Tableau"],
-    award: null,
-    summary:
-      "Infographic displaying campaign financial statuses of Oklahoma lawmakers in anticipation of re-election.",
-    siteLink:
-      "https://oklahomawatch.org/2021/02/08/oklahoma-lawmakers-report-large-campaign-reserves-after-2020-races/",
-    graphicLink:
-      "https://public.tableau.com/app/profile/oklahoma.watch/viz/2020Legislature1/Dashboard1",
-    vizUrls: [
-      {
-        label: "Finance dashboard",
-        url: "https://public.tableau.com/app/profile/oklahoma.watch/viz/2020Legislature1/Dashboard1",
-        tool: "Tableau",
-      },
-    ],
-  },
-  {
     id: 5,
     slug: "viz-covid-memorial",
     navLabel: "COVID Memorial",
@@ -195,7 +124,7 @@ export const graphics = [
     text: "Crowdsourced obituaries and family stories of Oklahomans lost to COVID-19, displayed as browsable, searchable memorial cards.",
     date: "2020",
     program: "Flourish",
-    image: tweets,
+    image: covidMemorial,
     publication: "Oklahoma Watch",
     tools: ["Flourish"],
     award: "Community Champion Award, Institute for Nonprofit News (2020)",
@@ -214,122 +143,63 @@ export const graphics = [
     ],
   },
   {
-    id: 6,
-    slug: "viz-mass-shootings",
-    navLabel: "Mass Shootings",
+    id: 1,
+    slug: "viz-campaign-finance",
+    navLabel: "Campaign Finance",
     headline:
-      "In Three Days, Oklahoma Sees Number of Mass Shooting Since 2009 Increase from Five to Seven",
-    text: "Since 2009, there have been 7 mass shootings in Oklahoma, resulting in 27 people shot and killed and 12 people shot and wounded, according to the Everytown Research & Policy Group, a gun-control advocacy group. Two of those shootings have occurred since Monday.",
-    image: shootings,
-    publication: "Oklahoma Watch",
-    program: "Datawrapper",
-    date: "June 3, 2022",
-    tools: ["Datawrapper"],
-    award: null,
-    summary:
-      "Graphic illustrating the increase of mass shootings in Oklahoma, highlighting a surge in recent incidents.",
-    siteLink:
-      "https://oklahomawatch.org/2022/06/03/how-oklahoma-lawmakers-have-loosened-gun-regulations-the-past-decade%EF%BF%BC/",
-    graphicLink: "https://www.datawrapper.de/_/fMDc4/",
-    vizUrls: [
-      {
-        label: "Shootings timeline",
-        url: "https://www.datawrapper.de/_/fMDc4/",
-        tool: "Datawrapper",
-      },
-    ],
-  },
-  {
-    id: 8,
-    slug: "viz-redistricting",
-    navLabel: "Redistricting",
-    headline:
-      "Redistricting: Weighing the Impact of Splitting Oklahoma's Largest Hispanic Community",
-    text: "Analysis of how Oklahoma's congressional redistricting reshaped political boundaries, with dual Tableau maps comparing before-and-after district lines and demographic shifts.",
-    image: redistricting,
-    date: "Nov. 19, 2021",
-    publication: "Oklahoma Watch",
+      "Which State Lawmakers Have the Biggest Campaign War Chests?",
+    text: "Many Oklahoma lawmakers will be in a good position financially come re-election time. State lawmakers reported an average of $32,800.",
+    image: donations,
+    date: "Jan. 13, 2022",
     program: "Tableau",
+    publication: "Oklahoma Watch",
     tools: ["Tableau"],
     award: null,
     summary:
-      "Dual Tableau maps comparing before-and-after congressional district boundaries and demographic composition after Oklahoma's 2021 redistricting.",
+      "Interactive Tableau dashboard tracking campaign financial statuses of Oklahoma lawmakers heading into re-election.",
     siteLink:
-      "https://oklahomawatch.org/2021/11/19/redistricting-weighing-the-impact-of-splitting-oklahomas-largest-hispanic-community/",
-    graphicLink: [
-      "https://public.tableau.com/views/BothMapsRedistricting/Dashboard1",
-      "https://public.tableau.com/views/DualMaps_16366620253140/Dashboard1",
-    ],
+      "https://oklahomawatch.org/2021/02/08/oklahoma-lawmakers-report-large-campaign-reserves-after-2020-races/",
+    graphicLink:
+      "https://public.tableau.com/app/profile/oklahoma.watch/viz/2020Legislature1/Dashboard1",
     vizUrls: [
       {
-        label: "Before/after map",
-        url: "https://public.tableau.com/views/BothMapsRedistricting/Dashboard1",
-        tool: "Tableau",
-      },
-      {
-        label: "Demographic comparison",
-        url: "https://public.tableau.com/views/DualMaps_16366620253140/Dashboard1",
+        label: "Finance dashboard",
+        url: "https://public.tableau.com/app/profile/oklahoma.watch/viz/2020Legislature1/Dashboard1",
         tool: "Tableau",
       },
     ],
   },
   {
-    id: 9,
-    slug: "viz-competitive-races",
-    navLabel: "Competitive Races",
+    id: 11,
+    slug: "viz-financial-disclosures",
+    navLabel: "Financial Disclosures",
     headline:
-      "Expect Fewer Competitive Oklahoma Legislative Races After Redistricting",
-    text: "Datawrapper choropleth maps showing which House and Senate districts were likely to see competitive races after Oklahoma redrew its legislative boundaries.",
-    image: redistricting,
-    date: "Dec. 6, 2021",
+      "Oklahoma Candidate & Legislator Financial Disclosures",
+    text: "The state's financial disclosure forms ask officeholders to list their stakes and spouses' stakes in private businesses, investments worth more than $20,000, and income of more than $20,000 outside of officeholder pay.",
+    image: financialDisclosures,
+    date: "2018-2022",
     publication: "Oklahoma Watch",
-    program: "Datawrapper",
-    tools: ["Datawrapper"],
+    program: "Flourish",
+    tools: ["Flourish", "Tableau", "DocumentCloud"],
     award: null,
     summary:
-      "Paired Datawrapper choropleth maps showing competitive House and Senate races after Oklahoma's 2021 redistricting reshaped legislative districts.",
+      "4-year investigative series exposing gaps in Oklahoma's candidate financial disclosure system. Digitized handwritten legislator ethics forms into a searchable database and built a Tableau map of disclosure compliance by district. Exposed a rule change that concealed candidates' personal finances.",
     siteLink:
-      "https://oklahomawatch.org/2021/12/06/expect-fewer-competitive-oklahoma-legislative-races-after-redistricting/",
+      "https://oklahomawatch.org/2018/07/06/rule-change-conceals-statewide-candidates-personal-finances/",
     graphicLink: [
-      "https://datawrapper.dwcdn.net/otcEs/2/",
-      "https://datawrapper.dwcdn.net/YW1No/2/",
+      "https://flo.uri.sh/visualisation/8481541/embed",
+      "https://public.tableau.com/views/Map1_180/Dashboard1",
     ],
     vizUrls: [
       {
-        label: "House races map",
-        url: "https://datawrapper.dwcdn.net/otcEs/2/",
-        tool: "Datawrapper",
+        label: "Searchable disclosures database",
+        url: "https://flo.uri.sh/visualisation/8481541/embed",
+        tool: "Flourish",
       },
       {
-        label: "Senate races map",
-        url: "https://datawrapper.dwcdn.net/YW1No/2/",
-        tool: "Datawrapper",
-      },
-    ],
-  },
-  {
-    id: 10,
-    slug: "viz-ice-detainers",
-    navLabel: "ICE Detainers",
-    headline:
-      "ICE Holds Drop as Immigrant Communities, Law Enforcement Balance Policy Changes",
-    text: "Datawrapper chart tracking the decline in ICE detainer requests to Oklahoma law enforcement agencies as immigration enforcement policies shifted.",
-    image: ice,
-    date: "March 4, 2022",
-    publication: "Oklahoma Watch",
-    program: "Datawrapper",
-    tools: ["Datawrapper"],
-    award: null,
-    summary:
-      "Datawrapper chart tracking the decline in ICE detainer requests to Oklahoma law enforcement as federal immigration enforcement policies shifted.",
-    siteLink:
-      "https://oklahomawatch.org/2022/03/04/ice-holds-drop-as-immigrant-communities-law-enforcement-balance-policy-changes/",
-    graphicLink: "https://datawrapper.dwcdn.net/NDN7G/7/",
-    vizUrls: [
-      {
-        label: "ICE holds chart",
-        url: "https://datawrapper.dwcdn.net/NDN7G/7/",
-        tool: "Datawrapper",
+        label: "Compliance map by district",
+        url: "https://public.tableau.com/views/Map1_180/Dashboard1",
+        tool: "Tableau",
       },
     ],
   },
