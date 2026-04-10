@@ -63,7 +63,7 @@ export const webProjects = [
     description:
       "Open-source news intelligence dashboard aggregating verified sources across RSS, Bluesky, Telegram, Reddit and YouTube. Features map-based monitoring, surge detection and tiered AI summarization via Claude.",
     githubLink: "https://github.com/tbrown034/news-alert",
-    siteLink: "https://pulse-osint.vercel.app",
+    siteLink: "https://news-alert-eta.vercel.app",
   },
   {
     id: 4,
