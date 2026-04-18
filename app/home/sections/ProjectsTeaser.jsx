@@ -20,9 +20,9 @@ export default function ProjectsTeaser() {
             Web Projects
           </h2>
           <p className="text-lg text-gray-600 dark:text-neutral-300 max-w-3xl mt-3">
-            Production sites, open-source tools and experimental builds — from
-            a dental practice that boosted bookings by 33% to a personal data
-            platform processing 200,000-plus records.
+            Production sites and open-source tools — from tracking $2.7B in
+            executive branch stock trades to monitoring press releases from
+            all 100 U.S. senators.
           </p>
           <div className="space-y-1 mt-4">
             <div className="border-t-2 border-gray-900 dark:border-white"></div>

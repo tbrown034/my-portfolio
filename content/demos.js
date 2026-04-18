@@ -24,7 +24,7 @@ export const demoProjects = [
       "D3.js",
     ],
     screenshots: {
-      desktopLight: null,
+      desktopLight: "/images/demos/open-cabinet-desktop-light.png",
       desktopDark: null,
       mobileLight: null,
       mobileDark: null,
@@ -55,7 +55,7 @@ export const demoProjects = [
       "Tailwind CSS",
     ],
     screenshots: {
-      desktopLight: null,
+      desktopLight: "/images/demos/capitol-releases-desktop-light.png",
       desktopDark: null,
       mobileLight: null,
       mobileDark: null,
