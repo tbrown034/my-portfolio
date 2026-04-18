@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { demoProjects } from "@content/demos.js";
 
-const FEATURED_IDS = [1, 2, 5, 3, 8, 4];
+const FEATURED_IDS = [9, 10, 2, 1, 8, 5];
 const featuredProjects = FEATURED_IDS.map((id) =>
   demoProjects.find((p) => p.id === id)
 ).filter(Boolean);
