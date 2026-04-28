@@ -35,7 +35,7 @@ export default function JournalismTeaser() {
             Data Journalism
           </h2>
           <p className="text-lg text-gray-600 dark:text-neutral-300 max-w-3xl mt-3">
-            15-plus years of investigative reporting across Oklahoma and Wyoming
+            15-plus years of investigative reporting across Oklahoma, Wyoming, Indiana and Virginia
             — from statehouse coverage to data-driven investigations that
             changed state policy.
           </p>
@@ -133,7 +133,7 @@ export default function JournalismTeaser() {
             ].map((pub) => (
               <div
                 key={pub}
-                className="inline-flex items-center px-3 py-1.5 text-xs font-semibold rounded-md bg-blue-50 dark:bg-blue-900/20 text-blue-800 dark:text-blue-400 ring-1 ring-blue-200/50 dark:ring-blue-700/30"
+                className="inline-flex items-center px-3 py-1.5 text-xs font-semibold rounded-md bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-400 ring-1 ring-amber-200/50 dark:ring-amber-700/30"
               >
                 {pub}
               </div>

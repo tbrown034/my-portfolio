@@ -119,11 +119,11 @@ export const demoProjects = [
     slug: "keith-brown-dds",
     subtitle: "Production Dental Practice Site + Admin Dashboard",
     oneLiner: [
-      "Production dental practice site in Naperville that increased online bookings by 33%. I manage SEO and optimize a $2,000/month Google Ads campaign directly.",
+      "Production dental practice site in Naperville that more than tripled new patient bookings. I manage SEO and optimize a $2,000/month Google Ads campaign directly.",
       "Protected admin dashboard integrates GA4, CallRail and Google Business Profile analytics with real-time ad controls, a Python billing data pipeline, an AI chat interface and a blog CMS.",
     ],
     highlights: [
-      "Increased new patient bookings by 33% after launch",
+      "More than tripled new patient bookings after launch — verified by the practice",
       "Manage $2,000/month Google Ads campaign with real-time bid controls",
       "Built Python billing data pipeline for automated financial reporting",
       "Integrated CallRail, GA4 and Google Business Profile analytics into admin dashboard",
@@ -154,7 +154,7 @@ export const demoProjects = [
     id: 2,
     title: "News Pulse",
     slug: "news-pulse",
-    subtitle: "Real-Time Global Intelligence Dashboard",
+    subtitle: "Open-Source News Monitor",
     oneLiner: [
       "Real-time global news monitor for journalists and OSINT analysts — 475 vetted sources across Bluesky, RSS, Telegram, Reddit, YouTube and Mastodon, surfaced through frequency-based surge detection rather than engagement ranking.",
       "Six-region world clock with independent activity baselines. Three-tier Claude summaries (Haiku / Sonnet / Opus) clearly labeled, with prompts published openly.",

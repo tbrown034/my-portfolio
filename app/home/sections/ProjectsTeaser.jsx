@@ -67,7 +67,7 @@ export default function ProjectsTeaser() {
                   <p className="text-sm text-gray-500 dark:text-neutral-400 mb-3">
                     {project.subtitle}
                   </p>
-                  <p className="text-sm text-gray-600 dark:text-neutral-300 leading-relaxed mb-3 line-clamp-2">
+                  <p className="text-sm text-gray-600 dark:text-neutral-300 leading-relaxed mb-3">
                     {Array.isArray(project.oneLiner)
                       ? project.oneLiner[0]
                       : project.oneLiner}

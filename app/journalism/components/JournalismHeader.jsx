@@ -18,7 +18,7 @@ export default function JournalismHeader() {
           {/* Dek */}
           <p className="text-lg text-gray-600 dark:text-neutral-300 max-w-3xl mb-6">
             15 years of investigative reporting, public records analysis and
-            visual storytelling across Oklahoma and Wyoming
+            visual storytelling across Oklahoma, Wyoming, Indiana and Virginia
           </p>
         </div>
 

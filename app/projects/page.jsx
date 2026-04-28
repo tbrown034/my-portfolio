@@ -106,7 +106,7 @@ export default function DemosPage() {
           </h2>
           <p className="text-gray-600 dark:text-neutral-300 max-w-2xl mx-auto mb-6 leading-relaxed">
             Award-winning investigations, interactive visualizations and 15
-            years of public-records reporting from Oklahoma and Wyoming live on
+            years of public-records reporting from Oklahoma, Wyoming, Indiana and Virginia live on
             the journalism page.
           </p>
           <Link

@@ -166,7 +166,7 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                     period="2023 – Present"
                     highlights={[
                       "Built production Next.js site from scratch — layout, forms, call tracking, full design system",
-                      "Manages $2,000/month Google Ads campaign with API dashboard integrating GA4, CallRail and Google Business Profile; increased new patient bookings by 33%",
+                      "Manages $2,000/month Google Ads campaign with API dashboard integrating GA4, CallRail and Google Business Profile; more than tripled new patient bookings since launch",
                       "Built admin dashboard with Clerk authentication, role-based access, Python billing pipeline and AI chat interface via Anthropic API",
                     ]}
                   />
@@ -273,24 +273,24 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                 <div>
                   <SectionHeading>Web Projects</SectionHeading>
                   <Project
-                    name="Second Brain — Personal Data Platform (2026)"
-                    tech="TypeScript, React, Next.js, Node.js, PostgreSQL, Anthropic API"
-                    description="Fullstack application with TypeScript data pipelines processing 200,000+ records from 14 sources, React frontend with search and visualization dashboards, API route handlers, and Tauri desktop wrapper"
+                    name="Open Cabinet (2026)"
+                    tech="Next.js, TypeScript, PostgreSQL, D3.js, Anthropic API"
+                    description="Public tracker for executive-branch stock trades. 34 cabinet officials, 3,300+ transactions, $2.7B parsed from OGE filings with Claude vision and rendered as D3 timelines"
                   />
                   <Project
-                    name="Keith Brown DDS — Admin Dashboard (2024)"
-                    tech="Next.js, Google Ads API, Clerk Auth, Python"
-                    description="Authenticated admin dashboard with role-based access, financial reporting pipeline, and real-time Google Ads performance metrics"
+                    name="Delegation Decoded (2026)"
+                    tech="Next.js, TypeScript, PostgreSQL, Drizzle ORM, Anthropic API"
+                    description="Congressional accountability platform tracking all 538 members across six federal data sources. AI-vision parsing of House STOCK Act PDFs at 99.95% confidence"
                   />
                   <Project
-                    name="News Pulse (2025)"
-                    tech="TypeScript, Next.js, PostgreSQL, REST APIs, Better Auth"
-                    description="News monitoring dashboard aggregating live feeds from Bluesky, Telegram, Mastodon, RSS and API sources with OAuth authentication and AI briefings"
+                    name="Capitol Releases (2025–2026)"
+                    tech="Next.js, TypeScript, PostgreSQL, Python, Playwright"
+                    description="Archival-grade Senate press release database. 35,000+ records from all 100 senators, four daily updates, deletion tombstones, public run history"
                   />
                   <Project
-                    name="AI Model Arena (2025)"
-                    tech="TypeScript, React, Claude/GPT/Gemini/Grok APIs"
-                    description="4-way LLM comparison tool with concurrent API calls, response streaming, error recovery and real-time cost tracking"
+                    name="News Pulse (2025–2026)"
+                    tech="Next.js, TypeScript, PostgreSQL, Anthropic API"
+                    description="Open-source news monitor. 475 vetted sources across Bluesky, RSS, Telegram, Reddit, YouTube and Mastodon, surfaced through frequency-based surge detection"
                   />
                   <div style={{ fontSize: '8pt', color: '#555', fontStyle: 'italic', borderTop: '1px solid #ccc', paddingTop: '2pt', marginTop: '1pt' }}>
                     Full portfolio at trevorthewebdeveloper.com/projects

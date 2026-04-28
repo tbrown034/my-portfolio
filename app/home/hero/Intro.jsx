@@ -48,7 +48,8 @@ export default function Intro() {
             >
               modern web development
             </Link>
-            . The reporting trained the instincts; the code gives them reach.
+            . My goal is to tell important stories and build tools to make
+            public records more public.
           </p>
         </div>
       </div>

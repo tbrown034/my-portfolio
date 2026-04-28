@@ -40,7 +40,7 @@ export const webProjects = [
   },
   {
     id: 3,
-    title: "News Pulse: Real-Time News Intelligence Dashboard",
+    title: "News Pulse: Open-Source News Monitor",
     type: "Professional",
     tag: "OSINT & Aggregation",
     workInProgress: false,
@@ -72,7 +72,7 @@ export const webProjects = [
     ],
     createdDate: "2024",
     description:
-      "Production dental practice website driving real patient traffic via active Google Ads campaigns. Increased online bookings by 33%. Admin dashboard integrates GA4, CallRail and Google Business Profile analytics.",
+      "Production dental practice website driving real patient traffic via active Google Ads campaigns. More than tripled new patient bookings since launch. Admin dashboard integrates GA4, CallRail and Google Business Profile analytics.",
     githubLink: "https://github.com/tbrown034/kab-dentist",
     siteLink: "https://keithbrowndds.com/",
   },

@@ -10,7 +10,7 @@ import SectionNav from "@/components/SectionNav";
 export const metadata = {
   title: "Journalism & Data Visualization - Trevor Brown",
   description:
-    "15 years of investigative reporting, public records analysis and visual storytelling across Oklahoma and Wyoming.",
+    "15 years of investigative reporting, public records analysis and visual storytelling across Oklahoma, Wyoming, Indiana and Virginia.",
 };
 
 export default function JournalismPage() {
