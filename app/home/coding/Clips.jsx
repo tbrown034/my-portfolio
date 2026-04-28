@@ -2,7 +2,7 @@ import Link from "next/link";
 import { demoProjects } from "@content/demos.js";
 import DemoCard from "@/app/projects/components/DemoCard";
 
-const FEATURED_IDS = [9, 10, 2, 1, 8];
+const FEATURED_IDS = [9, 11, 10, 2, 1];
 
 const featuredProjects = FEATURED_IDS.map((id) =>
   demoProjects.find((p) => p.id === id)

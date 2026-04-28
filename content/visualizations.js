@@ -116,33 +116,6 @@ export const graphics = [
     ],
   },
   {
-    id: 5,
-    slug: "viz-covid-memorial",
-    navLabel: "COVID Memorial",
-    headline:
-      "Lost in the Pandemic: Oklahoma COVID-19 Digital Memorial",
-    text: "Crowdsourced obituaries and family stories of Oklahomans lost to COVID-19, displayed as browsable, searchable memorial cards.",
-    date: "2020",
-    program: "Flourish",
-    image: covidMemorial,
-    publication: "Oklahoma Watch",
-    tools: ["Flourish"],
-    award: "Community Champion Award, Institute for Nonprofit News (2020)",
-    summary:
-      "Interactive Flourish memorial visualizing individual lives lost to COVID-19 in Oklahoma through crowdsourced stories and obituaries.",
-    siteLink:
-      "https://oklahomawatch.org/oklahoma-covid-legacy-project/",
-    graphicLink:
-      "https://flo.uri.sh/visualisation/5834301/embed",
-    vizUrls: [
-      {
-        label: "Memorial cards",
-        url: "https://flo.uri.sh/visualisation/5834301/embed",
-        tool: "Flourish",
-      },
-    ],
-  },
-  {
     id: 1,
     slug: "viz-campaign-finance",
     navLabel: "Campaign Finance",
@@ -166,6 +139,33 @@ export const graphics = [
         label: "Finance dashboard",
         url: "https://public.tableau.com/app/profile/oklahoma.watch/viz/2020Legislature1/Dashboard1",
         tool: "Tableau",
+      },
+    ],
+  },
+  {
+    id: 5,
+    slug: "viz-covid-memorial",
+    navLabel: "COVID Memorial",
+    headline:
+      "Lost in the Pandemic: Oklahoma COVID-19 Digital Memorial",
+    text: "Crowdsourced obituaries and family stories of Oklahomans lost to COVID-19, displayed as browsable, searchable memorial cards.",
+    date: "2020",
+    program: "Flourish",
+    image: covidMemorial,
+    publication: "Oklahoma Watch",
+    tools: ["Flourish"],
+    award: "Community Champion Award, Institute for Nonprofit News (2020)",
+    summary:
+      "Interactive Flourish memorial visualizing individual lives lost to COVID-19 in Oklahoma through crowdsourced stories and obituaries.",
+    siteLink:
+      "https://oklahomawatch.org/oklahoma-covid-legacy-project/",
+    graphicLink:
+      "https://flo.uri.sh/visualisation/5834301/embed",
+    vizUrls: [
+      {
+        label: "Memorial cards",
+        url: "https://flo.uri.sh/visualisation/5834301/embed",
+        tool: "Flourish",
       },
     ],
   },

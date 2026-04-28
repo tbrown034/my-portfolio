@@ -1,16 +1,8 @@
 import Link from "next/link";
 import DemosHeader from "./components/DemosHeader";
 import DemoCard from "./components/DemoCard";
-import VizSection from "./components/VizSection";
 import { demoProjects } from "@content/demos.js";
-import { graphics as allGraphics } from "@content/visualizations.js";
 import SectionNav from "@/components/SectionNav";
-
-// Cherry-picked data viz: COVID Memorial (5), Churches & Vaccines (3), Hospital Lawsuits (2)
-const CHERRY_PICKED_VIZ_IDS = [5, 3, 2];
-const graphics = CHERRY_PICKED_VIZ_IDS.map((id) =>
-  allGraphics.find((g) => g.id === id)
-).filter(Boolean);
 
 export const metadata = {
   title: "Projects - Trevor Brown",
@@ -80,13 +72,6 @@ export default function DemosPage() {
                 label: p.title,
               })),
             },
-            {
-              label: "Data Journalism",
-              items: graphics.map((g) => ({
-                id: g.slug,
-                label: g.navLabel,
-              })),
-            },
           ]}
         />
       </div>
@@ -110,12 +95,27 @@ export default function DemosPage() {
         ))}
       </div>
 
-      {/* Data Visualizations */}
-      <div
-        id="data-viz"
-        className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-16"
-      >
-        <VizSection graphics={graphics} />
+      {/* Bridge to journalism */}
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-12">
+        <div className="rounded-xl border border-gray-200 dark:border-slate-800 bg-gray-50 dark:bg-slate-900/50 p-8 sm:p-10 text-center">
+          <p className="text-sm uppercase tracking-wider font-semibold text-blue-800 dark:text-blue-400 mb-2">
+            Holding Power Accountable
+          </p>
+          <h2 className="text-2xl sm:text-3xl font-black font-montserrat text-gray-900 dark:text-white mb-3">
+            Looking for the data journalism?
+          </h2>
+          <p className="text-gray-600 dark:text-neutral-300 max-w-2xl mx-auto mb-6 leading-relaxed">
+            Award-winning investigations, interactive visualizations and 15
+            years of public-records reporting from Oklahoma and Wyoming live on
+            the journalism page.
+          </p>
+          <Link
+            href="/journalism"
+            className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-semibold text-white bg-blue-800 dark:bg-blue-600 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-500 transition-all duration-200"
+          >
+            See data journalism &rarr;
+          </Link>
+        </div>
       </div>
 
       {/* Portfolio Navigation */}

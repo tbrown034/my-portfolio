@@ -13,11 +13,14 @@ const topAwards = awards
   )
   .slice(0, 3);
 
-// Featured articles (first 3)
-const featuredClips = [...clips].sort((a, b) => a.id - b.id).slice(0, 3);
+// Featured articles — six leads: three data-driven + three reporting clips
+const FEATURED_CLIP_IDS = [1, 2, 3, 4, 7, 8];
+const featuredClips = FEATURED_CLIP_IDS
+  .map((id) => clips.find((c) => c.id === id))
+  .filter(Boolean);
 
-// Featured viz (first 3)
-const featuredViz = graphics.slice(0, 3);
+// Featured viz (six leads — the awards-tier set, including War Chests)
+const featuredViz = graphics.slice(0, 6);
 
 export default function JournalismTeaser() {
   return (
@@ -77,7 +80,7 @@ export default function JournalismTeaser() {
                   <Image
                     src={item.image}
                     alt={item.headline}
-                    className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                    className="w-full h-full object-cover object-left-top group-hover:scale-[1.02] transition-transform duration-300"
                     width={800}
                     height={500}
                     sizes="(max-width: 640px) 100vw, 50vw"
@@ -86,6 +89,14 @@ export default function JournalismTeaser() {
                   />
                 </div>
                 <div className="p-4">
+                  <div className="flex items-center gap-2 text-xs mb-2">
+                    <span className="px-2 py-0.5 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-400 rounded font-medium">
+                      {item.publication || "Oklahoma Watch"}
+                    </span>
+                    <span className="text-gray-500 dark:text-neutral-400">
+                      {item.date}
+                    </span>
+                  </div>
                   <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-800 dark:group-hover:text-blue-400 transition-colors leading-snug mb-2">
                     {item.headline}
                   </h4>
@@ -101,6 +112,31 @@ export default function JournalismTeaser() {
                   </div>
                 </div>
               </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Experience — newsroom history, breaks up the page */}
+        <div className="mb-8">
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-neutral-500 mb-3">
+            Experience
+          </h3>
+          <div className="flex flex-wrap gap-3">
+            {[
+              "Oklahoma Watch",
+              "Wyoming Tribune Eagle",
+              "CNHI Newspapers",
+              "Staunton News Leader",
+              "Indianapolis Star",
+              "Evansville Courier and Press",
+              "Indiana Daily Student",
+            ].map((pub) => (
+              <div
+                key={pub}
+                className="inline-flex items-center px-3 py-1.5 text-xs font-semibold rounded-md bg-blue-50 dark:bg-blue-900/20 text-blue-800 dark:text-blue-400 ring-1 ring-blue-200/50 dark:ring-blue-700/30"
+              >
+                {pub}
+              </div>
             ))}
           </div>
         </div>
@@ -158,7 +194,7 @@ export default function JournalismTeaser() {
             href="/journalism"
             className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-semibold text-white bg-blue-800 dark:bg-blue-600 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-500 transition-all duration-200"
           >
-            View all clips and visualizations &rarr;
+            View more news articles and data journalism &rarr;
           </Link>
         </div>
       </div>

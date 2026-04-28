@@ -13,7 +13,7 @@ export default function Header() {
         className="header-brand flex items-center gap-2.5 text-lg font-semibold tracking-tight text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-200"
       >
         <span className="tab-key" aria-hidden="true">
-          <span className="relative z-10 select-none">tab</span>
+          <span className="relative z-10 select-none">TB</span>
         </span>
         Trevor Brown
       </Link>

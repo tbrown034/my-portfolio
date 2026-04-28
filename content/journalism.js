@@ -126,7 +126,7 @@ export const reportingClips = [
     publication: "Wyoming Tribune Eagle",
     date: "Dec. 13, 2015",
     siteLink:
-      "https://www.wyomingnews.com/news/local_news/questions-remain-around-cleanup-of-former-nuke-sites-near-cheyenne/article_cbc7ee82-a168-11e5-856a-0f03142089af.html",
+      "https://www.militarytimes.com/news/your-military/2015/12/13/progress-slow-on-cleaning-up-former-f-e-warren-afb-nuke-sites/",
   },
   {
     id: 9,

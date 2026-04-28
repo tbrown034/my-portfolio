@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { demoProjects } from "@content/demos.js";
 
-const FEATURED_IDS = [9, 10, 2, 1, 8, 5];
+const FEATURED_IDS = [9, 11, 10, 2, 1, 3];
 const featuredProjects = FEATURED_IDS.map((id) =>
   demoProjects.find((p) => p.id === id)
 ).filter(Boolean);
@@ -94,7 +94,7 @@ export default function ProjectsTeaser() {
             href="/projects"
             className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-semibold text-white bg-blue-800 dark:bg-blue-600 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-500 transition-all duration-200"
           >
-            View all projects &rarr;
+            View more web projects &rarr;
           </Link>
         </div>
       </div>
