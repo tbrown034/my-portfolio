@@ -44,7 +44,7 @@ export const demoProjects = [
     slug: "open-cabinet",
     subtitle: "Financial Disclosure Tracker for U.S. Executive Branch",
     oneLiner: [
-      "First public tracker for U.S. executive-branch stock trades — 34 cabinet officials, 3,300+ transactions, $2.7B in trade volume parsed from OGE filings into searchable, structured data.",
+      "Public tracker for U.S. executive-branch stock trades — 34 cabinet officials, 3,300+ transactions, $2.7B in trade volume parsed from OGE filings into searchable, structured data.",
       "D3.js timelines mark each official's confirmation date and 90-day divestiture deadline so compliance gaps become visible at a glance. Built for journalists and accountability researchers.",
     ],
     highlights: [
@@ -402,12 +402,12 @@ export const demoProjects = [
     subtitle: "Oklahoma COVID-19 Digital Memorial",
     oneLiner: [
       "Interactive digital memorial honoring Oklahomans lost to COVID-19. Crowdsourced obituaries and family stories displayed as browsable, searchable cards. A hybrid project — part visualization, part reporting, part public archive.",
-      "Won the Community Champion Award from the Institute for Nonprofit News (2020). Built in Flourish, embedded into Oklahoma Watch's site as the Oklahoma COVID Legacy Project.",
+      "Honorable Mention for the Community Champion Award from the Institute for Nonprofit News (2020). Built in Flourish, embedded into Oklahoma Watch's site as the Oklahoma COVID Legacy Project.",
     ],
     highlights: [
       "Crowdsourced hundreds of obituaries from Oklahoma families",
       "Browsable, searchable memorial cards built in Flourish",
-      "Community Champion Award, Institute for Nonprofit News (2020)",
+      "Community Champion Award, Honorable Mention — Institute for Nonprofit News (2020)",
       "Hybrid project combining visualization, reporting and public archive",
     ],
     technologies: [

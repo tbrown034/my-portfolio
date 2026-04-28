@@ -151,7 +151,7 @@ export default function JournalismPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 lg:gap-x-8">
-          {dataClips.map((article) => (
+          {dataClips.map((article, idx) => (
             <article key={article.id} className="group">
               <a
                 href={article.siteLink || "https://oklahomawatch.org"}
@@ -169,7 +169,7 @@ export default function JournalismPage() {
                       height={375}
                       className="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-300"
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      loading="lazy"
+                      loading={idx < 3 ? "eager" : "lazy"}
                       quality={85}
                     />
                   </div>
@@ -284,6 +284,29 @@ export default function JournalismPage() {
       >
         <Awards showAllByDefault={false} />
       </section>
+
+      {/* ───── BRIDGE TO PROJECTS ───── */}
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-12">
+        <div className="rounded-xl border border-gray-200 dark:border-slate-800 bg-gray-50 dark:bg-slate-900/50 p-8 sm:p-10 text-center">
+          <p className="text-sm uppercase tracking-wider font-semibold text-blue-800 dark:text-blue-400 mb-2">
+            From Copy to Code
+          </p>
+          <h2 className="text-2xl sm:text-3xl font-black font-montserrat text-gray-900 dark:text-white mb-3">
+            Looking for the web projects?
+          </h2>
+          <p className="text-gray-600 dark:text-neutral-300 max-w-2xl mx-auto mb-6 leading-relaxed">
+            Production sites and open-source civic tools — Open Cabinet,
+            Delegation Decoded, Capitol Releases and more — live on the
+            projects page.
+          </p>
+          <Link
+            href="/projects"
+            className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-semibold text-white bg-blue-800 dark:bg-blue-600 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-500 transition-all duration-200"
+          >
+            See web projects &rarr;
+          </Link>
+        </div>
+      </div>
 
       {/* ───── PORTFOLIO NAV ───── */}
       <div className="border-t border-gray-200 dark:border-slate-800 mt-8">

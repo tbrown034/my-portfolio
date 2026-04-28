@@ -47,7 +47,7 @@ export const awards = [
   },
   {
     organization: "Oklahoma Society of Professional Journalists",
-    award: "Best of the Best: Reporter of the Year",
+    award: "Reporter of the Year",
     article: "Multiple Articles",
     year: 2020,
     link: null,

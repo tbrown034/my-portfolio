@@ -60,8 +60,8 @@ export default function AboutPage() {
             </Link>
           </div>
           <p className="text-lg text-gray-700 dark:text-neutral-200 max-w-3xl mb-6">
-            Award-winning investigative journalist turned web developer —
-            15 years in newsrooms, now building tools that turn data into understanding.
+            Investigative journalist turned web developer — 15 years in
+            newsrooms, now building tools that turn data into understanding.
           </p>
 
           {/* Navigation tabs */}

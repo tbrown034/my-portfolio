@@ -154,7 +154,7 @@ export const graphics = [
     image: covidMemorial,
     publication: "Oklahoma Watch",
     tools: ["Flourish"],
-    award: "Community Champion Award, Institute for Nonprofit News (2020)",
+    award: "Community Champion Award, Honorable Mention — Institute for Nonprofit News (2020)",
     summary:
       "Interactive Flourish memorial visualizing individual lives lost to COVID-19 in Oklahoma through crowdsourced stories and obituaries.",
     siteLink:

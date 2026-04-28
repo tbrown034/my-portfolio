@@ -38,7 +38,7 @@ export default function SectionNav({
   }
 
   return (
-    <nav className="flex gap-8 border-b-2 border-gray-900 dark:border-white pt-4">
+    <nav className="flex flex-wrap gap-x-8 gap-y-2 border-b-2 border-gray-900 dark:border-white pt-4">
       {(tabs || []).map((tab) => (
         <a
           key={tab.id}

@@ -6,37 +6,27 @@ import HeroCTA from "./HeroCTA";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col px-6 pb-0 pt-2 sm:px-8 lg:px-12 xl:px-16">
-      {/* Mobile layout (below md) */}
-      <section className="flex flex-col gap-4 md:hidden max-w-3xl mx-auto pt-3">
-        <HeroHeader />
-        <div className="flex justify-center">
+    <section className="flex flex-col px-6 pb-0 pt-2 sm:px-8 lg:px-12 xl:px-16 max-w-7xl mx-auto w-full md:pb-8 md:pt-2">
+      <HeroHeader />
+
+      {/* On mobile: photo between header and intro. On desktop: photo right column. */}
+      <div className="flex justify-center mt-4 md:hidden">
+        <Mug />
+      </div>
+
+      <div className="md:grid md:grid-cols-3 md:gap-8 md:mt-8">
+        <div className="md:col-span-2">
+          <Intro />
+        </div>
+        <div className="hidden md:flex md:col-span-1 items-start justify-center">
           <Mug />
         </div>
-        <Intro />
+      </div>
+
+      <div className="flex flex-col gap-4 mt-4 md:flex-row md:mt-8 md:items-center md:gap-8">
         <HeroCTA />
         <HeroLinks />
-      </section>
-
-      {/* Desktop layout (md and up) */}
-      <section className="hidden md:flex md:flex-col max-w-7xl mx-auto md:pb-8 md:pt-2 w-full">
-        <HeroHeader />
-
-        {/* Two-column: text + photo */}
-        <div className="grid grid-cols-3 gap-8 mt-8">
-          <div className="col-span-2">
-            <Intro />
-          </div>
-          <div className="col-span-1 flex items-start justify-center">
-            <Mug />
-          </div>
-        </div>
-
-        <div className="flex mt-8 items-center gap-8">
-          <HeroCTA />
-          <HeroLinks />
-        </div>
-      </section>
+      </div>
     </section>
   );
 }
