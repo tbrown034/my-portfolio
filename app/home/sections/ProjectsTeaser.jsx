@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { demoProjects } from "@content/demos.js";
 
-const FEATURED_IDS = [9, 11, 10, 2, 1, 3];
+const FEATURED_IDS = [9, 11, 10, 2, 1, 14];
 const featuredProjects = FEATURED_IDS.map((id) =>
   demoProjects.find((p) => p.id === id)
 ).filter(Boolean);
@@ -20,9 +20,9 @@ export default function ProjectsTeaser() {
             Web Projects
           </h2>
           <p className="text-lg text-gray-600 dark:text-neutral-300 max-w-3xl mt-3">
-            Production sites and open-source tools — from tracking $2.7B in
-            executive branch stock trades to monitoring press releases from
-            all 100 U.S. senators.
+            Production sites and open-source tools — from tracking $4.2B in
+            executive branch stock trades to archiving press releases from
+            all 535 members of Congress.
           </p>
           <div className="space-y-1 mt-4">
             <div className="border-t-2 border-gray-900 dark:border-white"></div>

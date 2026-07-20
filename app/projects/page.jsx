@@ -53,7 +53,7 @@ export default function DemosPage() {
             >
               dental practice site
             </a>{" "}
-            that increased bookings by more than 33% — to open-source intelligence tools,
+            that more than tripled new patient bookings — to open-source intelligence tools,
             AI model comparisons and a personal data platform processing
             200,000-plus records.
           </p>

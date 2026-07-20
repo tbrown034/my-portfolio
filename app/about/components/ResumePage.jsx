@@ -275,17 +275,17 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                   <Project
                     name="Open Cabinet (2026)"
                     tech="Next.js, TypeScript, PostgreSQL, D3.js, Anthropic API"
-                    description="Public tracker for executive-branch stock trades. 34 cabinet officials, 3,300+ transactions, $2.7B parsed from OGE filings with Claude vision and rendered as D3 timelines"
+                    description="Public tracker for executive-branch stock trades. 34 cabinet officials, 9,800+ transactions, $4.2B parsed from OGE filings with Claude vision and rendered as D3 timelines"
                   />
                   <Project
                     name="Delegation Decoded (2026)"
                     tech="Next.js, TypeScript, PostgreSQL, Drizzle ORM, Anthropic API"
-                    description="Congressional accountability platform tracking all 538 members across six federal data sources. AI-vision parsing of House STOCK Act PDFs at 99.95% confidence"
+                    description="Congressional accountability platform tracking all 535 voting members by state delegation. AI-vision parsing of House STOCK Act PDFs at 99.95% confidence"
                   />
                   <Project
                     name="Capitol Releases (2025–2026)"
                     tech="Next.js, TypeScript, PostgreSQL, Python, Playwright"
-                    description="Archival-grade Senate press release database. 35,000+ records from all 100 senators, four daily updates, deletion tombstones, public run history"
+                    description="Archival-grade congressional press release database. 90,000+ records from all 535 members of Congress, four daily updates, deletion tombstones, public run history"
                   />
                   <Project
                     name="News Pulse (2025–2026)"

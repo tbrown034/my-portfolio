@@ -17,16 +17,16 @@ export const metadata = {
   metadataBase: new URL("https://trevorthewebdeveloper.com"),
   title: "Trevor Brown: Copy + Code",
   description:
-    "Investigative journalist turned developer. Building thoughtful digital experiences with editorial precision and technical expertise.",
+    "Investigative journalist turned developer. I build open-government tools — Open Cabinet, Capitol Releases, FOIA Tracker — plus production sites and an AI-assisted newsroom.",
   openGraph: {
     title: "Trevor Brown: Copy + Code",
     description:
-      "Investigative journalist turned developer. Building thoughtful digital experiences with editorial precision and technical expertise.",
+      "Investigative journalist turned developer. I build open-government tools — Open Cabinet, Capitol Releases, FOIA Tracker — plus production sites and an AI-assisted newsroom.",
     url: "https://trevorthewebdeveloper.com",
     siteName: "Trevor Brown Portfolio",
     images: [
       {
-        url: "/images/Aug17desktopview.png",
+        url: "/images/og-home.png",
         width: 1200,
         height: 630,
         alt: "Trevor Brown Portfolio - Copy + Code",
@@ -39,8 +39,8 @@ export const metadata = {
     card: "summary_large_image",
     title: "Trevor Brown: Copy + Code",
     description:
-      "Investigative journalist turned developer. Building thoughtful digital experiences with editorial precision and technical expertise.",
-    images: ["/images/Aug17desktopview.png"],
+      "Investigative journalist turned developer. I build open-government tools — Open Cabinet, Capitol Releases, FOIA Tracker — plus production sites and an AI-assisted newsroom.",
+    images: ["/images/og-home.png"],
   },
 };
 

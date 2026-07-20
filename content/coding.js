@@ -16,7 +16,7 @@ export const webProjects = [
     ],
     createdDate: "2026",
     description:
-      "Financial disclosure tracker for U.S. executive branch officials. 617 pages of OGE filings parsed into searchable data with $2.9B in assets tracked. Interactive D3.js visualizations for asset breakdowns.",
+      "Financial disclosure tracker for U.S. executive branch officials. 9,800+ stock transactions parsed from OGE filings with $4.2B in trade volume tracked. Interactive D3.js visualizations for asset breakdowns.",
     githubLink: "https://github.com/tbrown034/open-cabinet",
     siteLink: "https://open-cabinet.org",
   },
@@ -34,7 +34,7 @@ export const webProjects = [
     ],
     createdDate: "2026",
     description:
-      "Congressional press release tracker and analyzer monitoring all 100 U.S. senators. Aggregates official communications into per-senator intelligence reports with trend analysis.",
+      "Congressional press release tracker and analyzer covering all 535 members of Congress. Aggregates official communications into per-member intelligence reports with trend analysis.",
     githubLink: "https://github.com/tbrown034/capitol-releases",
     siteLink: "https://capitolreleases.com",
   },
