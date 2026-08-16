@@ -275,7 +275,7 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                   <Project
                     name="Open Cabinet (2026)"
                     tech="Next.js, TypeScript, PostgreSQL, D3.js, Anthropic API"
-                    description="Public tracker for executive-branch stock trades. 34 cabinet officials, 9,800+ transactions, $4.2B parsed from OGE filings with Claude vision and rendered as D3 timelines"
+                    description="Public tracker for executive-branch stock trades. 36 cabinet officials, 10,000+ transactions, $4.3B parsed from OGE filings with Claude vision and rendered as D3 timelines"
                   />
                   <Project
                     name="Delegation Decoded (2026)"
