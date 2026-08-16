@@ -280,17 +280,17 @@ export default function ResumeComponentResponsive({ showGuides = false }) {
                   <Project
                     name="Delegation Decoded (2026)"
                     tech="Next.js, TypeScript, PostgreSQL, Drizzle ORM, Anthropic API"
-                    description="Congressional accountability platform tracking all 535 voting members by state delegation. AI-vision parsing of House STOCK Act PDFs at 99.95% confidence"
+                    description="Congressional accountability platform tracking all 535 voting members by state delegation. Grounded Ask assistant answers from the site's own records with server-validated citations"
                   />
                   <Project
                     name="Capitol Releases (2025–2026)"
                     tech="Next.js, TypeScript, PostgreSQL, Python, Playwright"
-                    description="Archival-grade congressional press release database. 90,000+ records from all 535 members of Congress, four daily updates, deletion tombstones, public run history"
+                    description="Archival-grade congressional press release database. 90,000+ records from all 535 members of Congress, RAG-grounded Ask the record Q&A with cited answers, four daily updates"
                   />
                   <Project
                     name="News Pulse (2025–2026)"
                     tech="Next.js, TypeScript, PostgreSQL, Anthropic API"
-                    description="Open-source news monitor. 475 vetted sources across Bluesky, RSS, Telegram, Reddit, YouTube and Mastodon, surfaced through frequency-based surge detection"
+                    description="Open-source news monitor. 668 vetted sources across Bluesky, RSS, Telegram, Reddit, YouTube and Mastodon, surfaced through frequency-based surge detection"
                   />
                   <div style={{ fontSize: '8pt', color: '#555', fontStyle: 'italic', borderTop: '1px solid #ccc', paddingTop: '2pt', marginTop: '1pt' }}>
                     Full portfolio at trevorthewebdeveloper.com/projects
