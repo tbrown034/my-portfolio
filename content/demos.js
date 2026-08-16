@@ -7,8 +7,8 @@ export const demoProjects = [
     slug: "delegation-decoded",
     subtitle: "Congressional Accountability, Organized by State Delegation",
     oneLiner: [
-      "Congressional tracker for all 535 voting members organized by state delegation — votes, bills, committees, campaign money, stock trades and 2026 races pulled from official federal data into one Postgres schema.",
-      "Ask, a grounded AI assistant, fronts the homepage and lives on every state, member and race page. It answers only from the site's own database, and every claim carries a citation validated server-side against the records actually retrieved.",
+      "Congressional tracker for all 535 voting members organized by state delegation, fronted by Ask — a grounded AI assistant that answers only from the site's own records and cites every claim.",
+      "Votes, bills, committees, campaign money, stock trades and 2026 races pulled from official federal data into one Postgres schema. Ask's citations are validated server-side against the records actually retrieved.",
     ],
     highlights: [
       "Ask — grounded Q&A on the homepage and every state, member and race page, with server-validated citations",
@@ -46,7 +46,7 @@ export const demoProjects = [
     slug: "open-cabinet",
     subtitle: "Financial Disclosure Tracker for U.S. Executive Branch",
     oneLiner: [
-      "Public tracker for U.S. executive-branch stock trades — 36 cabinet officials, 10,000+ transactions, $4.3B in trade volume parsed from OGE filings into searchable, structured data.",
+      "Public tracker for U.S. executive-branch stock trades — 36 cabinet officials, 10,000+ transactions, $4.3B in trade volume parsed from OGE filings with Claude vision into searchable, structured data.",
       "D3.js timelines mark each official's confirmation date and 90-day divestiture deadline so compliance gaps become visible at a glance. Built for journalists and accountability researchers.",
     ],
     highlights: [
@@ -83,8 +83,8 @@ export const demoProjects = [
     slug: "capitol-releases",
     subtitle: "Congressional Press Release Archive — Updated 4x Daily",
     oneLiner: [
-      "Archival-grade database of every press release from all 535 members of Congress since January 2025 — 90,000+ records, four daily updates, deletion tombstones, public run history.",
-      "Ask the record, retrieval-augmented Q&A grounded in each member's own releases, fronts the homepage — alongside an AI-drafted daily brief where every claim cites back to a source record.",
+      "Archival-grade database of every press release from all 535 members of Congress since January 2025 — 90,000+ records, four daily updates and Ask the record, RAG Q&A grounded in each member's own releases.",
+      "An AI-drafted daily brief cites every claim back to a source record. Mixed-collector pipeline (httpx + Playwright + RSS) handles hundreds of different congressional web setups.",
     ],
     highlights: [
       "Ask the record — RAG Q&A over a member's collected releases with server-validated citations; an answer that cites outside its retrieval set is discarded, not repaired",
@@ -229,8 +229,8 @@ export const demoProjects = [
     slug: "news-pulse",
     subtitle: "Open-Source News Monitor",
     oneLiner: [
-      "Real-time global news monitor for journalists and OSINT analysts — 668 vetted sources across Bluesky, RSS, Telegram, Reddit, YouTube and Mastodon, surfaced through frequency-based surge detection rather than engagement ranking.",
-      "Six-region world clock with independent activity baselines. Three-tier Claude summaries (Haiku / Sonnet / Opus) clearly labeled, with methodology documented openly.",
+      "Real-time global news monitor for journalists and OSINT analysts — 668 vetted sources across six platforms, with AI summaries at three clearly labeled Claude tiers and frequency-based surge detection rather than engagement ranking.",
+      "Sources span Bluesky, RSS, Telegram, Reddit, YouTube and Mastodon. Six-region world clock with independent activity baselines and methodology documented openly.",
     ],
     highlights: [
       "668 vetted sources across six platforms",
