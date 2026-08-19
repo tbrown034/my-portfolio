@@ -20,7 +20,7 @@ export default function ProjectsTeaser() {
             Web Projects
           </h2>
           <p className="text-lg text-gray-600 dark:text-neutral-300 max-w-3xl mt-3">
-            Production sites and open-source tools — from tracking $4.2B in
+            Production sites and open-source tools — from tracking $4.3B in
             executive branch stock trades to archiving press releases from
             all 535 members of Congress.
           </p>
